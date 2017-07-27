@@ -13,13 +13,13 @@ from collections import OrderedDict
 # to be converted back to image pixel locs
 
 # file containing actual GCP locs in WGS84
-gcpGeoLocFile = "C:/Data/Development/Projects/MSc GeoInformatics/Docs/Misc/Baviaanskloof/BaviiaansPeCorrectedGcpMay2017Combined.shp"
+gcpGeoLocFile = "C:/Data/Development/Projects/PhD GeoInformatics/Docs/Misc/Baviaanskloof/BaviiaansPeCorrectedGcpMay2017Combined.shp"
 
 # file containing image locations of GCP locs in UTM 35S
-gcpImLocFile = "C:/Data/Development/Projects/MSc GeoInformatics/Docs/Misc/Baviaanskloof/QuickbirdGcpUtmZ35SZ.shp"
+gcpImLocFile = "C:/Data/Development/Projects/PhD GeoInformatics/Docs/Misc/Baviaanskloof/QuickbirdGcpUtmZ35SZ.shp"
 
-# imFile = "D:/Data/Development/Projects/MSc GeoInformatics/Data/Digital Globe/056549293010_01/PanSharpen/03NOV18082012-P2AS_R1C12-056549293010_01_P001_GdalPanSharp.tif"
-imFile = "D:/Data/Development/Projects/MSc GeoInformatics/Data/Digital Globe/056549293010_01/056549293010_01_P001_PAN/03NOV18082012-P2AS_R1C1-056549293010_01_P001.TIF"
+# imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056549293010_01/PanSharpen/03NOV18082012-P2AS_R1C12-056549293010_01_P001_GdalPanSharp.tif"
+imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056549293010_01/056549293010_01_P001_PAN/03NOV18082012-P2AS_R1C1-056549293010_01_P001.TIF"
 # read in Geo CoOrds of GCP's (and height!)
 ds = gdal.OpenEx(gcpGeoLocFile, gdal.OF_VECTOR)
 if ds is None:
@@ -157,7 +157,7 @@ for f in imGcpDict.values():
 
 
 #pci format
-gcpFile = open("C:/Data/Development/Projects/MSc GeoInformatics/Docs/Misc/Baviaanskloof/QuickbirdGcp2.txt", 'w')
+gcpFile = open("C:/Data/Development/Projects/PhD GeoInformatics/Docs/Misc/Baviaanskloof/QuickbirdGcp2.txt", 'w')
 gcpFile.write("I\tP\tL\tX\tY\tE\n")
 id = 1
 for key in imGcpDict:
@@ -173,7 +173,7 @@ gcpFile.close()
 
 #arcmap format
 transform = osr.CoordinateTransformation(spatialRef, spatialRefIm)
-gcpFile = open("C:/Data/Development/Projects/MSc GeoInformatics/Docs/Misc/Baviaanskloof/QuickbirdGcp_Arcmap.txt", 'w')
+gcpFile = open("C:/Data/Development/Projects/PhD GeoInformatics/Docs/Misc/Baviaanskloof/QuickbirdGcp_Arcmap.txt", 'w')
 for key in imGcpDict:
     # key = f['Comment']
     fgcp = gcpDict[key]
