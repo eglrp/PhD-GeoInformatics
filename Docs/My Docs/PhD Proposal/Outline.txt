@@ -1,0 +1,64 @@
+------------------------------
+Outline
+-------
+
+Background
+-------------
+Subtropical thicket & spekboom
+importance of spekboom both is carbon storage and restorability
+Degradation
+Restoration
+Carbon trading (Kyoto, CDM, VCS)
+Need for canopy cover and cs rs
+Thompsons paper
+MP's research and ground truth
+
+NGI imagery?  Calibration?
+
+Problem Statement
+-----------------
+
+
+Aims and objectives
+--------------------
+Lit review
+Calib
+Sb Canopy cover
+Carbon stocks regression
+
+Significance and Rationale (related to into)
+--------------------------
+Carbon trading (Kyoto, CDM, VCS), the significance of biomass / cs meas?
+CC - 
+   - sb cc strongly correlated with tagc therefore nb var to measure.  also useful in isolation for planning restoration etc etc esp since it is the target species.!!  correlated with agc (mp), required for restoration planning, ecological understanding etc
+   - finding cc over large area like lk simplifies site specific regressions for cs i.e. rs method runs once and regression applied afterwards
+How are CS measurements currently done & issues
+Benefits of restoration
+Technical challenges
+ - Variation in veg
+ - Size of plots
+ - NGI imagery!!!
+ - large area vhr
+ - arid
+xxx - why only agc & not bgc?
+ 
+Research Methodology 
+--------------------
+??? see msc
+
+Research Methods (what data, & specifics of techniques)
+----------------
+- study areas 
+ - (tgicket varies hugely.  to est feasibility of larger area vhr cs rs with practical amm of gt: cc gt easy/cheap, cs gt time/exp.  therefore cc over large continuous area.  then regression on cc++ in cs gt areas. =practical way of est if cs rs can work over large areas at vhr)
+- field study + gt, (canopy cover - larger area, reason for 2 study areas, )
+- image calibration
+- canopy cover mapping
+- cs rs
+  - regression non-lin, multi-var, vi, cc (useful predictor for biomass), possibly dem from stereo im
+
+Linkages to Dept Progs
+-----------------------
+
+Timeline
+--------
+???

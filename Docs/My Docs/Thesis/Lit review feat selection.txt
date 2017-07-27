@@ -1,0 +1,362 @@
+
+to do
+ refs we need
+   - high dim spaces contain redundancy - cukur, tolosi, yu&liu, 
+   - correlation of im bands results in redundancy - cukur, 
+   - redundancy causes instability - guyon 2003, tolosi, li&harner, guyon 2002, park
+   - redundancy causes suboptimality - yousef, yu&liu, guyon 2002, strobl, park
+   - overlapping problems create feat sel instability 
+ summarise tolosi and others
+ ref source data for dmc rsr? - no other xcalib papers showing rsrs dont do this
+ 
+-----------------------
+intro:  - make a note of filtering and wrapping, exlude descriptions of branch and bound, fs, be etc
+		- note limitations of ranking and that features in combination may be informative while component features individually are not.  The best individual k features are not necessarily the best k features.  
+		- what is naive bayes criterion actually doing?  does it make sense?  make a note that it is a histogram approach and not gaussian etc.  what about correlation with class labels or some other generic measure of relevance that does not assume a class distribution.
+		 - we should note that correlations leads not only to instability but aso to suboptimality see tolosi referencing strobl
+		- Other papers to ref: - kalousis on stability and relieff, tanimoto distance 
+                        - kononeko, relieff, "How- ever, all these measures assume that attributes are con- ditionally independent given the class and therefore in domains with strong conditional dependencies be- tween attributes the greedy search has poor chances of revealing a good hypothesis" & they use similar boostrap testing approach to us.  also they say sub-optimal approaches do fine in real world
+						- 
+		 
+- method: - Naive bayes can be tested on independent data, what about some sort of correlation with class label measure?  there is no fitting happening with "unsupervised" measure, 	so it is not necessary to test on independent data.  but the classifier should be trained independently...  ?  one of the mutual info / correlation with class label type measures would be neater / more sensible measures of feature importance than naivebc.  but naivebc does extend easily to multiclass.
+		- NB correlation does not equal redundancy (Guyon 2006, Brown et al) - if features within classes are correlated but between classes are not - that is a good thing.
+		- note that the clusters can tell you more about the nature of your problem
+		- briefly desribe data sets but not individual features, 
+		- exclude description of features and their cluster companions.  rather put this in the classifcation chapter where it makes more sense.  
+		- exclude sensitivity to selection criterion etc make results a comparison of std and my approach on different data bootstraps.  make comparison criterion include variance  in performance and or features selected.
+		- note the classifiers and parameters used, 
+		- note prior selection of cluster thresh, num features (and preferred features)
+		- note stability and consistency measures 
+		- note feature selection methods used including JMI + reference
+		- Use 3NN as generic classification performance ??
+		- Any approach using histogram approx to entropy or MI also suffers from a kind of curse of dimensionality i.e. N needs to be large relative to num of features to accurately estimate MI.  See Brown et al 2012.  We should test methods in this situation or at least differentiate our situation as large N, large features not small N large features.		
+		- Include RELIEFF 
+- results: - table per data set for stability and accuracy per fs method 		   
+           - summary table of overall stability and accuracy and stability*accuracy performance 
+		   - discuss and try to justify performance of different measures 
+- concl - note use of mi clustering for non-linear and mi cluster eval and JMI cluster selection process. prelim exp's did not show any improvement over presented method ...bs
+ 
+ 
+ -----------------------
+Paper summaries:
+ - Cukur 2015: similar approach to me - clusters based on corrrelation then a generic relvancy meaure mRMR. their clustering method is a biit weird and manual.  results are weak.  uses a ranking approach once clusters are formed. 
+   Results: - 2 public hyperspec datasets
+            - Use SVM to eval feature sets 
+			- they compare proposed method with clustering to plain ranking with mRMR (i.e. not the hardest comparison)
+			- Allegedly classification accuracy is significantly improved with clustering.  its not that significant from what i can see.  
+			- they don't check for statistical significance
+ 
+ - Guyon 2003: 
+   Method:  modified SVM approach that uses BE type procedure that removes worst feature at each iteration.  uses SVM weight as ranking criterion.  simply trains on all feats (no clustering) then ranks and eliminates one or more feats based on ranking.  repeat. slow
+   Results: - considers confidence intervals when comparing clfr accuracy
+            - they use weird metrics to compare clfrs
+			- Nice hex visualisation for different clfr accuracy metrics 
+			- They find the features matter more than the clfr
+			- Then they compare various fs methods with the same clfr 
+			- etc etc 
+  
+ - Li et al 2011: 
+	 Method: Uses a random "forest" of knn's to rank feature importance based on their own criterion based on "support".  Uses a recursive BE type method to eliminate features with this measurement of feature importance.  Probably slow.  Actual algorithm is somewhat more involved but in principal is BE on full feature set with ranking based on a criterion.  
+	 Results: - Eval RKNN accuracy on a number of data sets.  Compare to random forest accuracy.
+			  - Also included the variation of clfr accuracy over bootstraps above to quantify "stability".  
+			  - And the variation in size of final selected gene set.
+			  - Computation time.
+			  
+ - Mitra et al: strong paper.  
+	 Method: unconventional clustering approach based on kmeans.  then a custom and rigorously formulated similarity measure (is actually just the smallest eigenvalue) to cluster features.  a single feature is chosen from each cluster and this forms the final selected set i.e. no further ranking or search is performed on the final clusters as best as I can tell.  it is v fast but does performs similar accuracy to search methods like fs etc.  is unsupervised - (most feature clustering steps are eg based on correlation).  
+	 Results: - Features selected from a number of public data sets are measured using a number of different measures (eg naivebc, separability).  Common methods such as FS are compared against presented method using above data and metrics.  CPU time also included.     
+			  - Redundancy reduction (rather than eg clfr accuracy) of proposed method evaluated against other methods (uses modified entropy).  Effect of number of clusters investigated.
+			  
+x - Sahu et al 2011: kmeans clsutering followed by t stat / snr criterion.  
+	Method: kmeans clustering with correlation.  snr ratio and t stat ranking for each cluster.  single features taken from each cluster.
+	Results: compare proposed feat sel with plain ranking based on tstat and snr using clfr accuracy for a few different clfrs and data sets.
+x - Yu & Liu (2004)
+	Method: - relevant features selected with ranking on a crtiterion called symmetrical uncertainty (SU) (kind of nonlin correlation measure based on entropy and info gain and then normalised)?
+	- redundant features removed from the above set using "markov blanket filtering" which is a procedure related to BE.  they use SU measures betw features and betw feat and class to find markov blankets.  
+	Results: - they use a synthetic data set where the optimal feature set is known.  and then compare selected features to optimal features.
+	- they compare proposed algorithm to other good filter based fs approaches by comparing clfr accuracy for 2 clfrs.
+	- they do this on a number of genetic and text data sets (UCI benchmark data) that we should also use.
+	- they compare running times.  the proposed method is v fast.
+	- they include t-test on clfr accuracy for stat significance.
+	- their accuracy is similar or better than slower methods
+x - Strobl et al 2008: 
+    Method: show that random forests permutation fs method is biased to select correlated vars.  develop a new conditional permutation scheme that avoids correlation bias.  
+	Results: - synthetic data
+	         - they show their variable importance measure better reflects real importance than traditional random forests
+			 - then a similar thing on real genetic data 
+x - Tolosi & Lengauer 2011: 
+	Method: they show a number of classifiers / regressors suffer from correlation bias (Lasso, Lasso logistic regression, group Lasso, fused SVM, random forests ). they also show that clustering method such as Park 2007 compensates successfully for this. they give a theoretical background for this.
+
+	Results: - methods tested on a number of synthetic and 2 real biological datasets
+	- NB not only compare clfr accuracy but also measure feature stability using variance / correlation of feature weight vector over bootstraps
+	- they compare Park 2007 to other methods including random forests and SVM
+	- accuracy of clustering approach is not always superior to other methods but usually is
+	- feature stability is improved by clustering
+	- they eval clustering modifications of the same clfrs eval'd in traditional mode
+
+x - Yousef et al:
+	Method: - similar to my feature selection invention. 
+	- group genes into clusters with Kmeans using correlation as metric
+	- Linear SVM used to rank clusters
+	- Clusters eliminated with BE type procedure (on which feats - all or a representative). Clsutering is repeated at each iteration i.e. it must be slow
+	- The cluster score is the accuracy of an SVM trained on that cluster
+	- It is SLOW and not the most rigorously thought out method IMO.
+
+	Results:  - Include time to execute different feat selection procedures in results? 
+	- there's norhing wrong with including MI method... so long as naivebc is still there, we can go back 
+	- Proposed method compared to SVM and PDA (also with BE but no clustering i.e. BE on features not clusters) (?) using clfr accuracy
+	- they use a number of public genetic data sets. 
+	- clfr performance is slightly better than non-clustering variants
+	- their method took 9 hrs!!!! to execute on the one dataset
+	- the accuracy improvement is marginal
+
+ - Park et al:  clusters from hierarchical clustering are taken at mult levels. the average of the cluster is used as a feature in a lasso regression. then lasso regression performs further feature selection.  the optimal level in the cluster hierarchy is found with cross-validation i.e. I assume evaluation on a test set of some form or another.  i.e. this is a regression method.  clustering is based on correlation?
+ 
+ Other notes
+ - Summary of lit:
+   - cukur, mitra, sahu adopt a clustering + ranking approach
+   - park, yousef also use clustering but not straight ranking
+   - yu & liu: unique custom approach
+   - strobl, guyon, li et al: modified random forests and or SVM approaches
+   - tolosi: park clustering and SVM, random forest, etc 
+ - rather than use naivebc to select from clusters, use mRMR of Cukur - (maybe not as excluding redundancy twice (once in clustering and once with mRMR) is redundant :))
+ - give classification results on std fs selected features! - well they're not that much worse...
+ - based on guyon, choosing a single feat from each corre, lated cluster is ok, but choosing clusters based on ranking is dodge
+ - in the end, my method is kind of ranking but it ranks clusters rather than individual features.  thus it still suffers from the shortcomings of ranking in this sense.  i do make a note of another possibility.  i think i should either just implement this other possibility or leave out the suggestion and note only the ranking shortcoming 
+ - we should note that correlations leads not only to instability but aso to suboptimality see tolosi referencing strobl
+ - see tolosi for a more statistically rigorous way of evaluating feature stability i.e. by bootstrapping the data - nb "Overall model stability is given by the average of all pairwise Pearson correlations between feature weight vectors provided by the models fitted on the 10 variations of the training set. The"
+ - we should/could eval on more than 1 data set, including perhaps simulated ones as in Tolosi and public rs ones if suitable
+ - perhaps if the whole cs thing doesn't work out, we can come back to this paper and address some of the above issues.  
+ - discriminate between filter, wrapper and internal type feature selection
+ - Li&Harner uses std dev of clfr accuracy to measure stability.  we should do something similar.  but tolosi feature weight correlation is a more direct measure of feature stability.  clfr accuracy variance could be useful too.
+ - Include time to execute different feat selection procedures in results? 
+ - NB A basic explanation of the method is included in the classification chapter as well as descriptions of the features and feature clusters i.e. it is not necessary to include this in the feature clustering and ranking paper.  
+ - How do other approaches select relevant but not redundant features without evaluating a clfr on the entire feature set?  
+ - Naive bayes can be tested on independent data, what about some sort of correlation with class label measure?  there is no fitting happening with "unsupervised" measure, so it is not necessary to test on independent data.  but the classifier should be trained independently...  ?  one of the mutual info / correlation with class label type measures would be neater / more sensible measures of feature importance than naivebc.  but naivebc does extend easily to multiclass.
+ - We should first come up with a better way of testing and comparing feature selection approaches.  Then we can try and compare different algorithms.  
+ - Stability and optimality are separate (but related) issues 
+ - Note that ranking of clusters assumes the clusters are uncorrelated which is not necessarily true.
+ - How do approaches similar to mine deal with the issue that ranking clusters is sub-optimal and clusters should be eval in combination 
+ - To measure stability in selected features, one could examine variation in a feature weight vector that has zeros for features not selected.  Also to look at: "Overall model stability is given by the average of all pairwise Pearson correlations between feature weight vectors provided by the models fitted on the 10 variations of the training set." from Tolosi & Lengauer 
+ - as a general observation: the clfr accuracy of methods designed to deal with correlation is sometimes similar or only marginally better than traditional methods 
+ - take a look at: "principal component as cluster centroid" [as in Huang et al. (2003a): "Gene expression predictors of breast cancer outcomes"
+ - mention that speed is an important consideration for remote sensing because of large data volumes 
+ - NB correlation does not equal redundancy (Guyon 2006, Brown et al) - if features within classes are correlated but between classes are not - that is a good thing.
+
+						
+ 
+---------------------------------
+Further research
+---------------------------------
+- Take a look at the wikipedia page on FS: https://en.wikipedia.org/wiki/Feature_selection it is good 
+- First get a testing infrastructure in place 
+  - Develop a feature stability measure 
+    - This is not so easy as it is with RF, where the importance or weights can be used.  Or perhaps it is: we assign each feature in the cluster that clusters importance score and find correlation between these importance vectors for different bootstraps as in Tolosi et al.  The importance will have to calibrated / normalised in some way.  This we could use with the ranking approach as is.  If we end up using a BE or other approach that chooses a feature subset, we should still be eliminating whole clusters and can hopefully come up with an importance score in this way for each cluster.  
+	- Correlation of importances may be difficult to compare with fs approaches as they wont necessarily have sensible importances (eg fs and be).  We could compare ranks i.e. features are given an ordinal ranking of importance.  Feature rankings are then compared with Spearman's rank corr coefficient.  This can be done with most approaches i.e. mine=feature clustering and ranking, fs, be, plain ranking.  See https://statistics.laerd.com/statistical-guides/spearmans-rank-order-correlation-statistical-guide.php.  If feats share same rank as they do in my method, ranks must be set in a particular way as above.
+	- How to fit Feature clustering and ranking into existing stability measures as implemented in BootstrapFsEval
+	    - Importance measure correlation: the cluster importance scores can be assigned to each component feature.  Then the whole clustering and ranking thing is bootstrapped, getting different importances per feature.  The full feature vectors can then be correlated together.
+		- Tanimoto's feature index stability: for each cluster, label the component features with that cluster's index.  Then bootstrap the whole clustering and ranking method and find stability from dist between cluster indices of the top n features.  The problem is the clusters and their indices can change between bootstraps.  If they do, this measure is not v meaningful.  In practice they seem not to though (check this more thoroughly) so perhaps is ok.  Otherwise do the clustering once off.  Then bootstrap the ranking procedure and find tanimoto between resulting selected cluster indices.  Neither option is ideal.
+        - Spearmans rank correlation.  Do clustering and ranking.  Assign each cluster a rank number based on how many features it contains (see paper or other Spearmans help page). Assign each component feature the rank of its containing cluster.  Then find the Spearmans rank correlation.  This is probably the best option as it allows comparison with std fs approaches and is flexible enough to provide adequate description of variations in clustering and ranking eg cluster composition (this affects the cluster rank via num feats) and cluster ranking.  We should do fractional ranking - see wikipedia.  From one perspective, assigning multiple features the same rank or score as will always be done in feature clustering and ranking (FCR), should tend work out to be more stable than assigning individual features their own ranks.  At least with fractional ranking, the ranks will be sensitive to the size of the cluster.  
+	- Implement the Kuncheva 2007 consistency index in the bootstrap fn - see Brown et al.  & possibly "information consistency"
+    - How in sw to make feature clustering and ranking fit into BootstrapFsEval and others?  We need to make a trainable mapping.  The mapping takes the same params as FeatureClusterRank on training, it does the clustering and ranking and stores the cluster indices and ranks to make a trained mapping.  This is as far as we need to go for stability eval as we can then assign cluster ranks, find spearmans rank correlation and the stability.  The problem is testing on actual data where we would like to allow hand selection of features... ???  This is also done in BootstrapFsEval for clfr eval.  Perhaps we auto select best or priority features and train on these, or ask for user input?
+  - Make a synthetic data set
+    - Simple eg: 2 class multidim gaussian.  Correlated features generated from true features by adding noise.  Spurious features can be added too.
+	- Complex eg: Try and create a situation where best features are a combination but there are some other spurious isolated features that are better independently than any of the optimal features individually.  Perhaps the optimal features could be projected onto a kind of diagonal or principal component to generate a new feature.  
+	- COuld generate redundant feats by using class labels (eg add noise)
+	- There are many approaches to synthesising these sort of dat sets in the literature.  Strobl's method may also be a decent place to start 
+  - Get public rs data eg hyperspec data may be good as it should naturally contain correlation 
+  - Include accuracy of std set of clfrs - how do they set params for clfrs for different data sets in the ref'd papers 
+  - Include some form of confidence interval if possible
+  - For sythetic data make a measure of how close to optimal the feature set is
+  - i.e.  we want to plug in different feature selectors into this "infrastructure"
+  - Use 3NN as generic classification performance
+  
+- Start experimenting with feature selection methods 
+  - Implement some of the other better ones, this could include ReliefF
+  - Improve mine
+  - And then test and compare 
+  - Sythetic data could be particularly informative  
+  - Variable hierarchical clustering levels? 
+
+To put in the paper
+--------------------  
+- Results presentation
+  - Look into stability profiles as with Kalousis 
+  - Hypothesis testing / confidence intervals 
+- Mention that the clusters stay stable ?
+- Mention that we are presenting a general approach for any clfr, not tied to random forests etc as in boruta etc
+- Also speed is NB 
+- Any approach using histogram approx to entropy or MI also suffers from a kind of curse of dimensionality i.e. N needs to be large relative to num of features to accurately estimate MI.  See Brown et al 2012.  We should test methods in this situation or at least differentiate our situation as large N, large features not small N large features.
+- Correlation does not imply redundancy - see Guyon 2006 and Brown et al.  
+- Brown et al 4.3 - each FS method makes its own assumptions.  Its success will depend on how well the data meets these assumptions i.e. it is specific.   
+
+
+Notes on experiments with FEAST toolbox and ideas to improve FCR 
+---------------------------------------
+- JMI is something like:
+  for each remaining feature Xk:
+	for each feature already in the model Xj: 
+       JMI+=Pair Xk and Xj and find MI with Y (the labels)
+  Add the Xk that gave the highest JMI
+
+- While it works well in practice, it is still sub-optimal.  It only considers the effects of combination in pairs. In many dims, it may be that >>2 features in combination are needed to be informative.  It also starts with one feature i.e it assumes that a single individual feature on its own can be the best which may not be the case.  It does probably deal well with excluding redundancy as this is part of the measure.  It is also stable in practice.  Quite how it achieves stability compared to eg normal forward selection that I have tested, I'm not too sure.  Maybe because it somehow incorporates everything in one measure i.e. redundancy, relevance, non-lin relations.   And it achieves noise insensitivity (?) / smoothing by using histogram which effectively smooths things making it less sensitive to minor changes in the data.  I'm speculating.  Also as in Brown et al, the JMI is an "average" over the current feature set i.e. the sum of pairwise combinations of Xj with every Xk in the model.  
+- JMI is attractive as it combines everything in one measure and does not need any weighting / threshold params.  
+- JMI is a lot faster than FCR as it doesn't have to find a distance matrix i.e. doesn't have to find the distance between all objects.  And then do the actual clustering.  I don't think it is less optimal as a result of this either.  It still 
+- There can be no control of which similar features get selected with JMI.  Unless we made a heuristic that at each step of FS, certain features of similar ones can be preferred.  
+- Clustering is not really going to be practical for huge feature spaces as the distance matrix calc becomes too time consuming.  
+- But remote sensing spaces should never be that ridiculously huge as eg for genetics.  
+- They are somewhat different problems, in genetics the feature computation cost is probably the same for all features while the same is not true in remote sensing.  
+- So we should actually compare and evaluate methods using rs data sets.  
+- TO DO based on these experiments:
+  - To make a better algorithm that can allow hand picking of features and work on high dim feature spaces:
+  A) - Reduce the dim using a plain ranking with eg MI/correlation with labels.  Then apply FCR.
+  B) - Cluster based on MI rather than correlation to pick up non-lin relationships.  This doesn't actually address the real issue but is worth experimenting with.
+  C) - Relook at Mitra paper to see their relevancy measure and clustering method.  Maybe implement this as a reference algorithm.
+  D) - Rewrite JMI to include "custom" selection of features by eg including a computational cost for each feature.  Then at each step of the algorithm, similar features are grouped based on their JMI measure and the one with the lowest computational cost is selected.  "Similar" will probably have to be defined with a threshold.  I'm not too sure how well JMI will measure similarity in this context though.  This is true based on an experiment - similar jmi's mean features add similar value to the model not that they are similar and this is seen in the "clusters" that this approach produces.  Perhaps it doesn't matter though?
+  E) - A new FCR may start by ranking based on correlation/MI with labels i.e. relevance.  Discarding irrelevant feats.  Then clustering with pairwise MI or correlation and hand selecting from resulting clusters.  But what about a clustering on the fly approach like a modified JMI? i.e. it is foward selection where the clsutering occurs only with the selected features.  
+  F) - Can/should we cluster on JMI?  JMI measures relevance but considering combination i.e. if features are similar they don't get a high JMI score (I'm assuming).  Or if they're irrelevant they wont get a high JMI score.  The JMI is not telling us if feats are similar but if in combination with exisitng feats, they would add something to the model.  So JMI is not a good choice.  One should rather cluster on plain MI or on something like what Mitra et al do.  
+  G) - If getting rid of computationally expensive features is our goal, we could do a preprocessing step where we identify the slow features and find similar (faster) ones to them.
+- If we redo JMI, it may be just as fast to write it in Matlab as most of the computation time is probably in the MI calc not looping through features.  It will certainly be a lot easier to debug.
+- If we stick to a clustering approach in FCR, how might we make it better?  We can use information theoretic criteria instead of correlation and naive bayes.  So use MI for clustering.  Then JMI to choose best clusters.  Pre-process by ranking according to relevance i.e. MI with labels and discarding clearly irrelevant features - maybe not as a variable that is irrelevant on its own may be relevant in combination with another.  Look at Park again to see how they processed the tree.  
+- I dont see JMI improving on wrapper FS - only in terms of speed obviously.  
+
+Issues
+ - JMI works fine but doesn't allow hand selection of feats
+ - My current paper needs to be improved to publish
+ - I would like to not change the selected features if possible as this will mean having to change the classification paper too
+ - If I can improve on the actual method of JMI or FCR, it will most likely mean I need to change the classification paper
+ - The way I can improve JMI does not really deserve a paper AFAIK
+ - The way I can improve FCR may make more classification work for me
+ - DOes any of this actually improve classification performance on images?
+ 
+Options
+ - A) Just improve the results presentation of FCR as is i.e. stability measures and other data sets (check how it works with other data sets)
+ - B) Try improve FCR in basic ways and compare its performance to prev method and to JMI on various data.  How would we want to improve it?  
+      - Perhaps the most obvious and least disruptive would be to lose the naive bayes cluster ranking and use something like JMI or forward selection with relevancy or ...?  Would this affect our chosen features?  In a good way?  
+	  - Another important aspect is the choice of the cluster threshold and the number of features.  
+	  - Non-lin correlation measure like MI - can we get the same features?
+      - Speed and stability to deal with high dims - preproc by ranking feats on relevancy and eliminating - suspect though as it only considers individual performance. 
+ - C) Improve JMI by allowing hand picking
+ - D) Invent a FS type method that does similarity clustering as it goes.  
+ 
+ 
+To Do (latest)
+--------------
+x- seed randomizer
+- reread park 
+- stopping criterion
+x- try different mi norms
+x - why FCR go unstable on the last gendatv feature? - because it is insignifcant and noisy
+x - why does JMI reselect the same 2 features  - these 2 feats are enough to classify accurately - still a bit weird though.
+- relook at MI clustering 
+- compare results on image ground truth 
+  - Possibilities are ValidateClfrAgainstJvGroundTruth in ClassifierDesign3 line 492 (Classify image only in areas of ground truth to save time + includes morphology)
+     also used ExtractFeaturesIm2 as for pt after next one.  Also see ClassifierDesign2 line 821
+  - Run SpekboomClassifier and check results in Matlab eg ClassifierDesign3 line 593+ (must c++ code for features and convert clfr to opencv)
+  - Run blockprocim with ClassifyIm and ExtractFeaturesIm2 also as in ClassifierDesign3 line 593+ - this can use custom clfrs and feats (runs on whole ims and does not do morphology)
+     see also line 1461 in ClassifierDesign2
+    - Make opencv config file containing clfr etc - ClassifierDesign3 line 828
+  ? - +get mexopencv working again +find all files +make more sensible dirs   
+x - make the ordering of preferred features like a rank
+- try fs with cross val instead of bootstrapping? as 
+
+
+Notes
+-------
+- Use ThesisClassification.m to reproduce thesis results
+- JMI formulation with mi cannot be made to select the same features as what I originally had
+- The features that it does select do not improve classifier performance on field ground truth 
+- naivebc criterion +  JMI formulation does not help.  Nor does MI criterion with ranking formulation.
+- Depending on how it is tested, the features that it does select do not improve classifier performance on image ground truth (and if they do, only marginally)
+- It does not seem worth the trouble to write a paper on the MI/ JMI formulation as I can't/shouldn't use those results.  Or at least, it complicates things horribly.
+- Rather compare the correlation / cluster ranking approach with std approaches.  Then mention JMI formulation as a possibility in the conclusion?
+- So most sensible seems: compare the original method with other standard methods (maybe also generate results for JMI formulation and plain JMI).  But use >1 dataset and stability measures too i.e. use BootstrapFsEval
+- Other things that can cause instability in FCR: numFeatures is too big, so final features are noisy and unstable.  Ranking of features withing clusters is unstable so even if clusters are stable, features end up being unstable.  CLusters may be identical from one bootstrap to the next but but cluster numbers change thereby making it appear unstable. We could do a couple of things to get around this: specify preferredFeatures, reduce numFeatures, order the cluster numbers in a way that will hopefully make them consistent across bootstraps, adjust the algorithm to make preferredFeatures equal to the features selected on the first bootstrap when preferredFeatures == []
+
+More to do and thoughts on paper
+--------------------------------
+- Got presentable results on FCR with naivebc on four datasets.  
+- The best method overall is FCR with MI and JMI off, with FCR-naivebc second
+- Weirdly JMI doesn't do that great overall 
+- As a vague generalisation, naivebc criterion does better for accuracy and MI does better for stability.  This is weird but is a suspect conclusion as there is a lot of variation from one dataset to another.
+- The good performance of FCR is due to careful seleciton of numFeatures, clusterThresh and preferredFeatures.  We need to kind of justify this in the paper.  
+  - numFeatures can be decoupled from FS i.e. FS selects "all" features (may be 1 feature from each cluster).  Then a grid search on clf accuracy finds best numFeatures. 
+  - clusterThresh is tricky because there wont always be an obvious place to put it and it will affect the stability of the clusters over bootstraps.  As in park, we could take clusters from each level, rank those, choose features and evaluate.  Then choose a best level.  This could/would affect stability and we may also not end up with the same features we selected for the Spekboom classifier.  
+  - preferredFeatures should not affect classifier accuracy but would have a big effect on stability.  We could eval stability on cluster idx rather but then there are those numbering issues over bootstraps that need to be
+  sorted...  Just did a rough check and it comes out similar to using FeatIdx.  Still need to make sure on cluster numbers though because it could be overestimating stability.
+- NB: when finding clfr accuracy, think about tr, ts partitioning (train on more) AND think about selection of params for each classifier.  what clfr do Brown et al use for comparison?  What is more important than obtaining the best clfr is comparing apples with apples i.e. making sure the clfr params are the same for same data.  this is suspect too though as the features may change thus warranting other params eg in scaling of RBF  
+- Note that clustering is only really appropriate for medium dim problems.  For problems where hand picking is not req and or v high dim, something like JMI would be more appropriate
+- Note that ranking by naivebc is how the method would work without clustering
+
+Yet more notes and to do
+-------------------------
+- Why is it that JMI does so poorly on some sets and featself-mi does well?  The forumalation of the two is similar but details under the hood of feast library.  We need to understand the differences better.
+- Can we make a featself-mi formulation of FCR rather than a JMI formulation.  This may select better clusters, but could also hopefully be used to get around the problem of instability of best features within clusters.  JMI formulation only ranks clusters, does not affect which feat in each cluster is selected.  
+- Why does naivebc perform so much worse than mi or JMI when they are conceptually similar?  Can we maybe find a faster implementation of naivebc for a better speed comparison?
+  For one thing, the JMI / mi approaches don't consider features to be independent.  Also, it may be that the feast library does a better/more adaptive estimation of the histogram.  Then while both approaches using histograms, the mi approach finds a continuous correlation type measurement.  The naivebc approach finds a threshold, gives hard labels to the data and then calculates accuracy.  In that quantisation (10 bin hist) + hard labels + right/wrong labels, perhaps contains some bias or instability that the more elegant approach of MI does not.
+- I think a joint histogram is like a 2d or higher histogram i.e. curse of dimensionality must be important.  But feast lib seems to have a good way of doing this.  The JMI approach does not use a true "joint" histogram but sums the pairwise JMI scores between the candidate feature and each feature already in the model.    
+- featself-mi is very consistent, we could exploit this in FCR, by 
+  (1) ranking clusters (2) choosing the best x feat using MI(model+x, labels) from each cluster in order of ranking
+  This would not necessarily affect the Spekboom features - we could have two modes: preferredFeatures and featself-mi.  To some degree this is maybe just complicating things - we want FCR to allow hand selection of features.  featself-mi hybrid approach may improve performance in cases where we dont have preferred features.  But in these cases, it should in theory be better to use a straight JMI or featself-mi formulation.  Perhaps this warrants investigation.  
+- Which methods and data sets should we bother to present?  If the JMI formulation doesn't add anything, we should leave it out.  Likewise 
+- NB note featself-mi will be ok for curse of dim so long as number of features is small.  The same can not be said for featselb-mi - joint probabilities are not practical for large feature spaces.  That is why featselb-naivebc performs better than featselb-mi.  Which is a sort of justification for including both naivebc and mi criteria.  
+- featself-mi does very well for consistency but not great for accuracy.  Accuracy is probably the more important measure.  weirdly, featlself-naivebc does better for accuracy.  lets check if this also applies to all clfrs rather than just 3nn - the method ranking is pretty much the same under 3nn of MeanClfrAcc.  
+- the naivebc criterion is seemingly not irrelevant as while it is v inconsistent, it is more accurate than others.  
+- How can we compare accuracies more fairly - i.e. with boxplots or the like?  
+- NB: feast toolbox only accepts integers (and rounds down if inputs are not integers).  This means we may need to scale features.  For some datasets, features are already integer.  This could also explain the good consistency and bad accuracy of some of the MI version feature selection routines....
+18 dec 2014, 
+- It is worthwhile looking at things per dataset to see for MI binning issues vs naivebc etc  
+- Low number of subjects / objects is less of an issue for remote sensing than it is for bioinformatics where they need actual humans
+- In brown et al they see how fs behaves for different features, our comparison is biased as it chooses the best num of feats for FCR and compares all FS based on this. 
+- In Brown et al, they compare stability based on measure that accounts for correlation betw features rather than the precise same feature.  If I used this, iut would improve the stability scores for JMI relative to FCR.  Since FCR uses cluster index rather than feature index for stability, it will naturally outperform things like JMI (there are fewer clusters than features so there must be fewer cluster errors than  feature errors).  
+- In Brown et al, they use the LOO error to compare accuracy.  This is a similar thing to crossval error just with the max number of folds possible.  They do not use error bars to compare accuracy, just the sum of the LOO errors.  When comparing errors on the same data of the same folds/bootstraps, it probably doesn't make sense to use ci / error bars etc as you are already comparing apples with apples.  If comparing accuracy/consistency over all data, then use error bars.  Remember that we have bootstraps to test stability and then crossval clfr acc on each bootstrap.  
+- NB Brown et al "The marginal mutual information, MIM, is as expected the most stable, given that it has the lowest dimensional distribution to approximate. The next most stable is JMI which includes the relevancy/redundancy terms, but averages over the current feature set; this averaging process might therefore be interpreted empirically as a form of ‘smoothing’, enabling the criteria overall to be resistant to poor estimation of probability distributions"
+- NB Brown et al "Experimental protocolwas to take 50 bootstraps fromthe data set, each time calculating the out-of-bag error using the 3-nn. The stability measure was Kuncheva’s stability index calculated from the 50 feature sets, and the accuracy was the mean out-of-bag accuracy across the 50 bootstraps"
+- NOTE that JMI does not do well for small number of features (in Brown et al ).  pg 55.  Note that consistency is biased to prefer cluster index but is a necessary shortcoming.   
+- Brown et al do a proper stat significance and methodical way of ranking methods with 2 fitness measures.  We could do the same but am dubious of the value thereof.  The individual acc and stability rankings for my data, make the best method pretty obvious.  
+- I have tried some significance testing with friedman and multcompare.  There is very little meaningful statistically significant difference between the methods.  Therefore we are not doing ourselves any favours by showing the stat signficant stuff.  Just show what we have, say that one methods average rank is > than anothers.  Then say more data / bootstraps is reqd for stat significance testing.  By increasing the num of samples of eg acc, the variance dec signficantly and it is possible to show difference eg in 3nn Acc over both data and bootstraps.  The consistency is a scalar value fn of all boostraps though, so we can only measure over data, not over bootstraps.  Are bootstraps a valid thing to measure variance over for multcompare and friedman?  ???  What happens if we bootstrap the featidx bootstraps to get more consistency measures?  
+- In Brown et al, they only ever check significance over data sets, not over bootstraps.  Accuracy is mean over boostraps and consistency is fn(bootstraps).  
+- It seems that the "right" way to compare clfrs on different data is to rank for each data set and then average / test for significance the rank over all data sets.
+- NB To do: why does FS-MI give such good consistency but FCR-MI does not (when using feat idx rather than cluster idx).  This does not make sense.  FCR-MI will choose the best MI feature from each cluster which is like the first step of FS-MI.  Or is it?  Maybe, it should both be a FS-MI formulation of cluster selection and a MI feature selection from each cluster (we're only choosing one feature from each cluster, so we don't need FS-MI, only MI).  
+  A) Is there a consistent way of numbering clusters
+  B) Why does resFci{8,6}.FeatIdx have a repeated cluster in the last bootstrap.  
+- Note that in situations where the features do not form nice distinct clusters, FCR may be inappropriate as clusters will be unstable.  
+- In Brown, they check clfr acc for different num of features which reveals the rel betw FS algorithms better than at a single pt = specific num features 
+
+- What has changed to allow fs-naivebc to beat fcr-mi in accuracy?  scalem of features for mi - maybe too few bins -  or some bug?  or preferredFeatures is biasing things?  
+  scalem(variance) is better for clfrs like knn - but this is being done.  
+
+  
+2017 TO Do
+-----------
+- Look at brown's box plots - we could do the same - they also dont have significance - mention something about this 
+- Expand on hierarchical clustering description
+- Expand on pareto fronts 
+- Talk about computation 
+  
+  
+17447585
+51388693
+
+
+http://landval.gsfc.nasa.gov/ProductStatus.php?ProductID=MOD43
+
+Alfalfa
+Corn-notill
+Corn-mintill
+Corn
+Grass-pasture
+Grass-trees
+Grass-pasture-mowed
+Hay-windrowed
+Oats
+Soybean-notill
+Soybean-mintill
+Soybean-clean
+Wheat
+Woods
+Buildings-Grass-Trees-Drives
+Stone-Steel-Towers
+
+https://aeon.co/essays/can-retrocausality-solve-the-puzzle-of-action-at-a-distance
+http://www.ehu.eus/ccwintco/index.php?title=Hyperspectral_Remote_Sensing_Scenes

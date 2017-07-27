@@ -1,0 +1,196 @@
+MP's thesis:
+-----------------------------------
+
+Carbon dioxide is a dominant GHG – hence the evolution of the carbon economy, governed by emission targets and carbon credits. The Kyoto Protocol has set emission reduction targets (in metric tonnes of CO2 equivalent, or CO2e) for all developed countries listed in annex one to the Kyoto Protocol. Where countries and institutions are able to surpass these targets, each ton of CO2e below the set target equates to a carbon credit. Similarly, every ton of CO2e that can successfully be sequestered may qualify for a carbon credit, subject to a number of conditions. Article 12 of the Kyoto Protocol articulates the rules of the Clean Development Mechanism (CDM), whereby developing countries (annex 2) that are able to reduce emissions or sequester CO2e may qualify for carbon credits. In principle, this allows for developed countries that are unable to meet their reduction targets (or wish to continue to pollute) to purchase carbon credits from developing countries through funding afforestation, reforestation and restoration initiatives. Biosequestration in soils and vegetation has a significant role to play in the carbon economy (Lal 2002); however, Lackner (2003) argues compellingly that, in the short term, a more effective solution to the GHG problem lies in utilising existing technologies. Lackner (2003) demonstrates the issues of sequestration time (101 to 105 yrs) and sequestration capacity (101 to 105 GtC) in the context of terrestrial carbon sinks, through use of the currently approved CDM methodologies. This possibly implies a limited window of opportunity for restoration ecologists to employ the carbon economy in financing large restoration projects
+
+* Barriers have been cited to be high transaction costs (Knowles 2005, Marais et at a l.2007); complex and costly accounting (Schlamadinger el . 2007, Lippke & Perez-Garcia 2008); and bureaucracy, leading to the marginalisation of the very communities for which CDM was designed in terms of the carbon markets (Corbera et a l . 2009).
+
+The voluntary carbon market has experienced growth as a consequence of the impediments to the CDM process (Corbera et a l. 2009). Certification is provided by projects such as Plan Vivo (www.planvivo.org) and the Voluntary Carbon Standard (www.v-c-s.org), with functional projects in Mexico, Uganda and Mozambique.
+
+We are in the Kyoto 2nd commitment period - what does that mean?  and that land use activities will still play a prominent role in the second commitment period (post 2012). There
+
+The physiognomy and growth forms within subtropical thickets are highly variable (Hoffman & Everard 1987, Hoffman 1989). N
+
+estimated that 60.3 % of original surface area of the inland semi-arid subtropical thickets have been severely degraded, with 88.3 % of the associated mosaics having been severely degraded. Within
+
+The launch of the Subtropical Thicket Restoration Programme (STRP) in 2004, through Working-for-Woodlands within the Department of Water Affairs and Forestry (DWAF), seeks to demonstrate that a bioregional restoration programme is feasible (Powell e t a l . 2004, 2006, Mills e t a l . 2007).
+
+The key question for the first component of the study was: Is there significant differential in total carbon stocks between the various subtropical thickets in the intact state, and in total carbon stocks between the intact and degraded states?
+
+The dominant land use for the Baviaanskloof area has been pastoralism (Teague
+e t a l . 1989). Consequently, the subtropical thickets have been extensively degraded in
+many areas (Euston-Brown 1995). From Figure 2.2 it becomes clear that the vast majority of highly degraded subtropical thicket falls outside of the BNR border, especially north of the Baviaanskloof Mountains. Nevertheless, a considerable surface area of degradation within the subtropical thickets of the BNR still exists (see Tables 2.2 and 2.3).
+29
+
+Generally speaking, the BNR is a semi-arid region with a Mediterranean climate (Teague et a l. 1989) although daily summer temperatures can be extreme ~45º C
+
+Table Mountain quartzites provide nutrient poor soils, while Bokkeveld shales provide nutrient richer soils
+
+The vegetation of the BNR is a complex mix of phytochoria, which changes rapidly over short distances (Vlok 1989) with species diversity being a function of the climatic and edaphic variability of the area (Boshoff 2005).
+
+The subtropical thickets of the BNR core area occupy approximately nine percent and five percent of the surface area (adapted from Euston-Brown 2006) in the form of solid thickets and thicket mosaics respectively
+
+With P . a fa r being a principal browse component in semi-arid subtropical thickets (in excess of 50 % of the phytomass (Aucamp 1979)
+
+Article 12 of the Kyoto Protocol makes allowance for the reforestation of degraded forest areas (degradation prior to 1990), whereby metric tonnes of carbon sequestered can be verified and traded as carbon credits. Thus, the carbon economy could hypothetically provide the funding for large-scale restoration of semi-arid subtropical thickets. The work completed by the Subtropical Thicket Ecosystem Planning (STEP) team greatly advanced knowledge in terms of the spatial distribution of thickets (Vlok & Euston Brown 2002, Vlok e t a l . 2003), as well as the levels of degradation (Lloyd et a l. 2002). The results and publications from the Conservation Farming Project funded by the World Bank, laid much of the foundation for the results presented below (Lechmere-Oertel 2003, Lechmere-Oertel ...
+
+The primary objective of the South African Government’s Subtropical Thicket Restoration Programme (STRP) has been to develop cost-effective baseline methodologies, and to calculate the carbon stocks. In
+
+Old lands (OL), degraded subtropical thicket (DST) and intact subtropical thicket (ST). in 3 thicket types.  A total of 65, 50 and 76 grids were selected for old lands, degraded subtropical thicket and intact subtropical thicket, respectively.  
+
+Grids were marked out in a nested plot design (all corners and all plots marked with permanent steel pegs and danger tape) with the 25 m2 and 625 m2 being the outer grid for the DST/ST and OL, respectively. The outer grid was used to employ allometry, within which 4 m2 grids were laid for sampling all herbaceous biomass, and a 0.25 m2 plot was laid out for litter sampling. All herbaceous and litter material was collected on site, labelled and sent for drying to constant mass, and then converted to C by a 0.48 conversion ratio. Tree fall and large dead wood on the forest floor is not a feature of semi-arid thickets and all dead wood encountered was deemed negligible and incorporated into the litter fraction. All woody and succulent tree and shrub species were measured indirectly in field (canopy dimensions, stem number and stem diameters), and guild specific regressions (Table 3.3) employed to estimate standing carbon stocks, hereafter referred to as “woody C”. All carbon stocks were calculated for 25 m2 (ST and DST) and 625 m2 for OL, and extrapolated to one hectare.
+
+Allometric data were obtained from 14 species in the Cambria area of the BNR. The species were chosen as representatives from the dominant guilds found in the intact subtropical thickets (Table 3.1). 
+
+The C (kg) data for each species was tested in a range of regression models using combinations of canopy and stem dimensions for suitably robust relationships using Statistica 8.0 (StatSoft Inc. 2008). The independent variables included: log10 canopy height, log10 mean canopy diameter, log10 canopy area, log10 stem number, and log10 cumulative basal stem area (CBSA). With multiple regressions, all independent variables were first tested for correlations, and the multiple regression discarded where correlations >0.5. In all cases single regressions were eventually employed. Species (not harvested) encountered in the field were allocated to a specific guild based on growth form and the appropriate regression analyses employed to predict the standing C according
+
+BGC: Methods used are those of Mills & Cowling (submitted). Sampling sites were randomly selected using Arcview software (ESRI 2004). Seventy sites were selected in intact thicket, 47 in degraded thicket and 104 in old lands.
+
+Log10 cumulative basal stem area (m2) and Log10 canopy area (m2) were equally distributed between the species in terms of precision, for regression purposes. Log10 stem number, Log10 stem diameter, Log10 canopy height, and Log10 mean canopy diameter for all species did not provide the effective suitable allometric predictor of above ground biomass C.
+55 (so canopy area is useful predictor which is important for remote sensing)
+
+The intact BNR subtropical thickets (four vegetation types pooled) partition carbon 37.5 % above ground and 62.6 % below ground. Root C and soil C account for TCS in the ratio of 5.6 % and 57.0 % respectively, whereas litter C, herb C and woody C reflect TCS as 4.4 %, 1.1 % and 32 % respectively. All (also relevant from rs perspective)
+
+The three intact subtropical thickets sampled (Table 3.5) showed significant differences in all carbon pools, except for soil C (p=0.58) and TCS (p=0.14). Litter
+
+NNB In this study I found P. afra presence (percentage canopy cover) for pooled intact subtropical thickets to be positively correlated with litter C (R2 = 0.387), woody C (R2 = 0.537), TAGC (R2 = 0.516), (so already what I have in terms of canopy cover should be a reasonably good predictor of TAGC - the question is how does R2 translate into an accuracy measure)
+
+A major limiting factor for allometric techniques to determine carbon stocks is the complicated vegetation structure in subtropical thickets. Many species co-habit the same canopy volume, or have peculiar growth forms
+62
+
+NB Regional carbon stock assessments will require the employment of remote sensing techniques to speed up the process and reduce transaction costs. Until recently, remote sensing techniques for the estimation of biomass C have not been reliable (Mitchard et a l. submitted). The authors have found favourable results using radar (R2 = 0.84) for prediction of biomass C in the forest-savanna boundary of central Africa, with accuracy decreasing towards the 200+ t C ha-1 range. Challenges may still exist to establishing robust relationships with the other carbon pools that will negate intensive field sampling.
+
+Incorporating data from Mills & Cowling (submitted), TCS losses (to a soil depth of 110 cm) in the Baviaanskloof are ~67 t C ha-1 (old lands vs. intact) and 84 t C ha-1 (degraded vs. intact) for Baviaanskloof spekboom thickets. These
+
+NB In summary, the potential to restore lost carbon in degraded spekboom thickets may be as high as 85 t C ha-1, albeit not all in the form of
+P . a fa r alone.
+
+The potential cumulative margins for error outlined above, need to be recognised and accounted for (conservatively) in carbon accounting, where restoration hopes to restore lost carbon pools. If active restoration can recoup the lost carbon  (RS will be locally less accurate than allometry but regionally more accurate as it does not require extrapolation)
+
+Variability in the reported carbon stocks for subtropical thickets indicate the need for site specific, not bioregional, carbon stock assessments (so canopy cover done reginally and relation of canopy cover to CS done locally)
+
+The duration of the field work and financial costs in this study have largely indicated that allometric techniques have limitations in estimating woody and succulent biomass C in intact subtropical thicket vegetation, but do become more practical further down the degradation gradient. The employment of these allometric relationships as a technique for quantifying woody and succulent biomass C stocks in other subtropical thicket areas on a large scale (as required by the carbon economy) is unlikely. The cost and time factors are considerable. There is possibly scope for using these data as ground-truthing for remote sensing techniques such
+
+The local P . a fa r recorded a carbon accrual rate of 2.4 t C ha-1 yr-1 vs. the 4 t C ha-1 yr-1 of the Steytlerville geno/phenotype, and is closer to the Great Fish River P. a fr a geno/phenotype (1.2 t C ha-1 yr-1) (Mills & Cowling 2006). This variability in carbon accrual rates is unfortunate for engendering confidence in the carbon investment community, and will require adopting the lowest rates less SE, (currently approximating 0.9 t C ha-1 yr-1), unless more site specific case studies can be produced. Ultimately there is a need for a spatially explicit dataset (GIS layer) of the carbon accrual rates across the Albany Thicket Biome. (this is another useful contribution my research can make)
+
+I predict that 35 % survivorship, coupled with the lower carbon stocks and accrual rates (relative to subtropical forests) will render degraded subtropical thickets unattractive to the carbon offsetting fraternity.
+The
+
+Eisfelder et al
+------------------
+ Most studies were based on low- and medium-resolution optical or radar data and applied empirical relationships between the remote-sensing-derived indices and biomass field measurements. The influence of soil background on the remote-sensing signals is a major challenge. The biggest challenge, however, seems to be the transferability of the methods in time and space
+ 
+ Obtaining information onAGB has several benefits with regard to the effort to under- stand the climate system and can help to validate carbon-cycle models (GlobalClimate Observing System (GCOS) 2006). Vegetation and biomass are also important fac- tors influencing the biodiversity and environmental processes such as the hydrological cycle, soil erosion and degradation (e.g. Fabricius et al. 2003, Lu 2006). There are also strong relations with other important factors, such as ecosystem variability and resilience
+
+ Reporting on carbon stock levels is needed, for example, for Kyoto protocol commitments including Clean Development Mechanism (CDM) projects, Reducing Emissions from Deforestation and Forest Degradation in Developing Countries (REDD) projects and Payment for Environmental Services (PES) projects (e.g. Costanza et al. 1997, Millennium EcosystemAssessment Board (MEAB) 2005,World Resources Institute (WRI) 2008). To be successful in voluntary carbon markets or via the post-Kyoto climate change agreement, a universal, robust and low-cost technique to measure and monitor carbon stocks over large areas and through time is essential
+ 
+ Traditional techniques for measuring the amount of biomass are based on field data collection (e.g. Tucker 1980, Etienne 1989, Parresol 1999, Brown 2002, Radloff and Mucina 2007). These methods are accurate, but time and labour intensive, often diffi- cult to implement and only practicable for small areas (e.g. Lu 2006, Chen et al. 2009, García et al. 2010). Therefore, remote-sensing-based techniques became an alterna- tive to obtain such data. The main advantages of remote sensors are the possibility to monitor large areas and to capture the spatial variability of the land surface, as well as the repeatability of data collection that offers the possibility for time-series analy- ses. Moreover, remote sensing has the capacity for systematic observations at different scales from global to local and the potential of using historical data.
+ 
+ A common problem for the validation of remote-sensing-based biomass estimates is the mismatch between the spatial resolution of satellite data and the field plot size. According to Justice andTownshend (1981), the minimumsize of a field plot should be a = p (1+2L), where a is the size of the field plot, p the pixel size and L the geometric accuracy.
+
+ For example, Tucker et al. (1985) found a strong correlation between the integrated normalized difference vegetation index (I-NDVI=sum of NDVI (normalized difference vegetation index) values over time) as well as the maximum NDVI (NDVImax) and end-of-growing sea-son herbaceous AGB. 
+ 
+ integrated VI approaches reached significantly better correlation coefficients than the single-date approach indices (see table 5).  (i.e. multi-temporal is helpful)
+ 
+ For thewhole of China, the best model had exponential form
+ 
+ One of the few studies that cover large study areas is that by Baccini et al. (2008), who used MODIS data for the mapping of AGB of tropical Africa. Large parts of the study area were covered by tropical forest, but the range of ecosystems also included xeric shrubland. A random forest (Breiman 2001) regression tree model was developedwith spectral bands and field biomass training data.Comparisonwith a tra- ditional multiple regression model showed better results for the random forest model. Combinations of spectral bands, other MODIS products (NDVI, enhanced vegetation index (EVI), leaf area index (LAI)), climate data and topography datawere also tested, but the gain of adding this information was limited and accompanied by negative effects
+
+ empirical regression using vi's is most common approach
+ 
+ using plot sizes close to pixel size is fairly common
+ 
+ The studies summarized so far were based on the use of VIs. An alternative to VIs might be the use of stand structural attributes, such as stand basal area (SBA), canopy coverage (CC) and LAI. Suganuma et al. (2006) analysed the suitability of these parameters for biomass estimation in open woodlands. The study is included in this review although no remote-sensing data are used, because its findings are rel- evant for application to remote-sensing data. The biomass estimation accuracy was slightly higher by using SBA than CC or LAI, but only CC and LAI are considered to be applicable for a remote-sensing-based estimation. The authors suggest utilizing biomass estimation regression equations with vegetation classifications on the domi- nant species level. Medium-resolution or more detailed spatial resolution data could be used for the CC and, thus, biomass estimation (Suganuma et al. 2006).
+ 
+ In contrast to low- and medium-resolution optical data, rather little research on biomass estimation based on high-resolution imagery has been published so far. A summary of the studies is given in table 7. One
+ 
+ The best empirical models between field data and IKONOS imagery were exponential and involved the red band or normal- ized indices with the red and blue bands using dry season images. The best model for the pooled data of two study sites was based on the NDVI
+ 
+ SAR is used but is 7m res best case.  even airborne SAR is used on 30x30m plots although the actual res is not given
+ 
+ There are advantages to using both SAR and imagery together
+ 
+ Moreover, the phenomenon of vegetative darkening has been repeatedly observed and seems to be a common effect on theNIR reflectance in semi-arid and arid ecosys- tems (e.g.Musick 1984, Graetz et al. 1988, Otterman 1996, Moleele et al. 2001, Calvão and Palmeirim 2004). Vegetation shadows may also contribute to this effect (Graetz and Gentle 1982, Jakubauskas et al. 2001, Okin et al. 2001) and, in case of bright soils, the overall brightness may be influenced more by shadowing effects than by radiation directly reflected by the vegetation (Garcìa-Haro et al. 1996). Thus, changes in fractional vegetation cover might have a stronger influence on the optical signal than changes in the thickness of the canopy (Verstraete and Pinty 1991, Calvão and Palmeirim 2004)\
+ 
+ Different remote-sensing observations are more or less sensitive to the AGB in specific environments or for different AGB densities. Due to the lower vegetation height, density and biomass in semi-arid regions, optical data are especially use- ful, while some other methods that are frequently applied for biomass estimation of forests, such as light detection and ranging (LiDAR) and polarimetric SAR inter- ferometry, have not been applied to semi-arid zones. Some
+ 
+ The above results show that large challenges and problems exist regarding the trans-ferability of models for biomass estimation. Especially, empirical relationships seem to provide weak results when applied to another point in time or to another study area.
+ 
+ 
+Goetz et al
+-----------
+ We conclude that while satellite remote sensing has often been discounted as inadequate for the task, attempts to map AGB without satellite imagery are insufficient. Moreover, the direct remote sensing approach provided more coherent maps of AGB relative to traditional approaches. We demonstrate this with a case study focused on continental Africa and discuss the work in the context of reducing uncertainty for carbon monitoring and markets.
+
+
+ Mapping and monitoring of carbon stocks, on the other hand, has often been regarded as beyond the current capability of satellite remote sensing technology, despite great need [8], partly because much of the research on this topic has historically focused on field sampling approaches [9]. Nonetheless, mapping carbon stocks over large areas without satellite data is clearly problematic [10].
+
+ In the remainder of this overview we use carbon stock and above-ground biomass terminology interchangeably (biomass is typically 50% carbon). 
+ 
+ Each of the approaches relies on calibrat- ing the satellite measurements to in situ estimates of AGB at field study plots.  AGB is often determined using a com- bination of well documented allometric relationships between simple plot-level measurements (e.g. stem diam- eter, density and sometimes canopy height and/or depth) and AGB, where the latter is determined from trees that have been dissected, oven-dried and weighed [9,24,25]. This type of allometry has a long history and is used in daily forestry operations worldwide, although refine- ments are always needed and ongoing. We
+ 
+ The comparisons to inde- pendent GLAS lidar metrics, which are closely related to field estimates of AGB [11,17,20] show a narrower range of variability within each AGB value in the DR approach, indicating less uncertainty at any given location in the DR map. (DR = direct rs approach is favoured)
+ 
+ 
+Frolking et al
+--------------
+ Therefore, accurate global biomass retrievals will depend on substan- tial, high-quality ground-based biomass or allometry data, accurate at the spatial scale of the sensor footprint, from forest biomes around the world (see section 3.3). 
+ 
+ however statistical rela- tionships between biomass and vegetation indices devel- oped in a single Landsat scene generally do not transfer well to other scenes [e.g., Foody et al., 2003].
+ 
+ Aside from clouds and shadows, these instruments are most sensitive to aggregate canopy foliage and soil within their footprint, and so they are very sensitive to the regrowth of canopy leaf area, which generally occurs during the initial years of recovery [Asner et al., 2004b].
+ 
+ Although passive optical/NIR instruments continue to improve, and data analysis methods improve as well, the information is still coming from sunlight reflected from complex forest canopies, passing through a variable atmo- sphere, and so will always have inherent limitations.
+
+ Manual methods tend to be time consuming, nonreplicable, and prone to human error [Asner et al., 2002a, 2002b].
+ 
+ Stereoscopic imaging with high-resolution imagery can provide detailed information about canopy geometry. Brown et al. [2005] processed airborne stereo video imagery (pixel size 0.1 m) collected over a pine-savannah ecosystem in Belize to map individual trees and shrubs, identify them to plant type, measure height and crown area, and create a virtual 3-D forest. They could then estimate stand biomass from field-based allometry data.
+ 
+ The importance of fieldwork must be stressed because ground-based measurements are the only means to understand and evaluate remotely sensed estimates of forest biomass and structure and attempt to quantify uncer- tainty and errors of such estimates. A limiting feature in a remote sensing analysis of forest disturbance is often the lack of adequate field-derived biometric data collected at the plot level (so its good we have mp's data)
+ 
+ [80] It is also important to note that while some field data is directly measured, such as basal area, DBH, stem density, species richness, and wood density, most field data on biomass are modeled from allometric relationships between biomass and variables like DBH and estimated wood density. Allometrically derived biomass estimates are likely to be correct in a relative sense from site to site as long as the same allometric equations are used (within one life zone but not across life zones), but there is no way of knowing how accurate they are in absolute terms without direct measures of biomass, i.e., cutting and weighing the forest [e.g., Fearnside et al., 1993], which is not a common practice.
+ 
+ 
+My Notes
+--------
+ MP's thesis points to the usefulness of RS a no of times
+ That canopy cover is a useful predictor for biomass per species is encouraging for aerial imagery
+ Also P afra canopy cover is correlated with overall biomass, so this is also nice
+ Choice of sensor...  given 5x5m gt, vhr is required which exlucdes radar and Landsat etc.  is vhr required for restoration in general
+ Essentially we only have ~70? data points, we dont and wont have per-pixel gt.  Unless it is a tiered clfr where we make some per-pixel image based gt as part of the first tier.  
+ The above means we will be v limited as to the complexity of models we can apply.  We should have roughly 10x the amm of data as params, if we go per-habitat it will need to be v simple
+ Radar is not an option for 5x5m plots
+ What is LAI and can it rs'ed
+ space time xferability is a concern.  we know from the start that the rel betw rs vars like canopy cover and biomass for specific habitats will be local.  however the meas of canopy cover may be xferable
+ Can BGB be inferred from allometry?  How well is it correlated with AGB?
+ Are there >1 sites per habitat so that results/models can be validated.  Are sites with same habitat correlated?
+ CAnopy cover can be one of the vars we try for CS regression
+ using plot sizes close to pixel size is fairly common
+ Rather than looking for correlation with AGB directly, it may work better if we look for correlations with basal area and canopy cover (which are the 2 most significant vars) and then use Mike's allometric eq's to work out biomass.  This way the allometric eq's deal with habitat variations and the rs method may be able to stay consistent over large areas.  The only problem is that the allometric eq's are per species and rs is not going to work per species....
+ Using the NGI stereo imagery to extract a DEM could provide a substitute for radar and would be novel.  even just counting bushes or some kind of height based texture would be useful.
+ Freq problems with soil mixing in arid zone biomass est is also good reason to go for vhr
+ Biomass = carbon stock * some factor
+ Radar/lidar will/could be less sensitive to phenological variations
+ Optical radar/lidar data can be combined eg to use optical to quantify canopy density and radar/lidar to quantify canopy height/basal area etc
+
+ 
+Ref's to check:
+ timelines, size of sinks, the carbon cycle
+ Lackner, K.S. 2003. A guide to CO2 sequestration. S c i e n c e 300: 1677–1678
+ "Carbon colonialism"
+ Bond, P., Dada, R. & Erion, G. 2007. Climate Change, Carbon Trading and Civil Society. Negative Returns on South African Investments. University of Natal Press. Scottsville. 
+ 
+ Knowles, T. 2005. Developing the carbon trading economy through the rehabilitation of subtropical thicket, Baviaanskloof Mega-Reserve. Unpublished report for the Working-for-Water Programme, Department of Water Affairs and Forestry. Cape Town, South Africa.
+ 
+ Mitchard, E.T.A., Saatchi, S.S., Woodhouse, I.H., Feldpausch, T.R., Lewis, S.L., Sonké, B., Rowland, C. & Meir, P. Measuring biomass changes from woody encroachment and deforestation in the forest-savanna boundary region of central Africa from multi-temporal L-band radar backscatter. J o u r n a l o f G e o p h y s ia c l R e s e a r c h - B i o g e o s c i e n c e s . In review
+ 
+ 
+Questions for Mike
+ - Expl grids, 5x5m intact and outside that sampling?  What is the "outer grid"?
+ - Your thesis speaks of many more plots than you gave me data for?
+ - How well is BGB correlated with AGB?  Can it be inferred?
+ - Are sites with same habitat correlated?
+ - What happened to their LIDAR and hyperspectral data?
+ - does an allometric eq for one habitat type + degradation level plot fit the data from other similar plots
+ - The hymap data of A Bayer - where was it and can we have it?
+ 
+Kazantzakis 

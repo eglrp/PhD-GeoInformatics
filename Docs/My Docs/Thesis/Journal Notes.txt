@@ -1,0 +1,64 @@
+By ranking
+
+Remote Sensing of Environment
+International Journal of Applied Earth Observation and Geoinformation 
+Remote Sensing 
+GIScience and Remote Sensing
+IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing
+International Journal of Geographical Information Science
+
+International Journal of Remote Sensing
+
+Photogrammetric Engineering and Remote Sensing
+
+-----------------------------------
+Remote Sensing of Environment
+- "Remote Sensing of Environment serves the remote sensing community with the publication of results on theory, science, applications and technology of remote sensing of Earth resources and environment. Thoroughly interdisciplinary, this journal publishes on terrestrial, oceanic, and atmospheric sensing. The emphasis of the journal is on biophysical and quantitative approaches to remote sensing at local to global scales."
+- Elsevier so your paper your way ...
+
+
+-------------------------
+International Journal of Applied Earth Observation and Geoinformation 
+- Is focused on applied papers but "Contributions that expand existing methodology in image analysis, spatial statistics and logic are welcome. "
+- As scope is v broad, quality needs to be excellent 
+- Your paper your way! (I think same Elsevier thing as ISPRS)
+
+---------------------------
+Remote Sensing  
+- is open access so publishers pay 
+- all aspects of remote sensing 
+- NNB "The full experimental details must be provided so that the results can be reproduced. "  
+
+------------------------------
+GIScience and Remote Sensing
+- "GIScience & Remote Sensing publishes original, peer-reviewed articles associated with geographic information systems (GIS), remote sensing of the environment (including digital image processing), geocomputation, spatial data mining, and geographic environmental modelling. Papers reflecting both basic and applied research are published."
+- Fairly loose style guides
+
+
+-----------------------------------
+IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing
+- "provides a venue for the rapidly expanding special issues that are being sponsored by the IEEE Geosciences and Remote Sensing Society. The journal draws upon the experience of the highly successful" “IEEE Transactions on Geoscience and Remote Sensing” and provide a complementary medium for the wide range of topics in applied earth observations"
+- seems to require a specific style 
+- I think TGARS and not this is the firt point for any of my papers 
+
+-----------------------------------
+International Journal of Geographical Information Science
+- "International Journal of Geographical Information Science provides a forum for the exchange of original ideas, approaches, methods and experiences in the rapidly growing field of geographical information science (GIScience). It is intended to interest those who research fundamental and computational issues of geographic information, as well as issues related to the design, implementation and use of geographical information for monitoring, prediction and decision making."
+- more GIS than RS?  YES! 
+- Requires template / formatting 
+
+-----------------------------------
+International Journal of Remote Sensing
+- "The International Journal of Remote Sensing ( IJRS) is concerned with the theory, science and technology of remote sensing and novel applications of remotely sensed data.  "
+- "Papers may be submitted in any standard format, including Word and LaTeX. Figures should be saved separately from the text. To assist you in preparing your paper, we provide formattsing templates."
+- I think they require a specific style
+- references need to be in a specific style but there is a mendeley template 
+- "You will need to format your article ready for submission. To make this easier, Word templates are available for many of our journals, ready for you to download and apply to your document. "
+
+
+---------------------------------------
+Photogrammetric Engineering and Remote Sensing (PERS)
+
+- "The American Society for Photogrammetry and Remote Sensing (ASPRS) seeks to publish in Photogrammetric Engineering & Remote Sensing (PE&RS) theoretical and applied papers that address topics in photogrammetry, remote sensing, geographic information systems (GIS), the Global Positioning System (GPS) and/or other geospatial information technologies. Contributions that deal with technical advancements in instrumentation, novel or improved modes of analysis, or innovative applications of these technologies in natural and cultural resources assessment, environmental modeling, or the Earth sciences (atmosphere, hydrosphere, lithosphere, biosphere, or geosphere) are especially encouraged."
+- Our goal is to provide authors with completed reviews within 90 days of receipt of a manuscript by the Editor. 
+- Fairly loose style req's 

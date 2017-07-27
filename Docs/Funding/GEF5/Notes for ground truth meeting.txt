@@ -1,0 +1,204 @@
+months planted in 2005: 'February', 'February', 'October', 'October', 'October', 'March',
+       'March', 'March', 'March', 'May', 'May', 'May', 'May', 'May', 'May',
+       'March', 'March', 'March', 'March', 'March', 'August', 'August',
+       'August'
+
+Portion of MP's CS plots in quickbird images:
+
+	Portion of plots in QB2003: 0.445026
+	Portion, num of All plots in QB2003: 0.445026, 85
+	Portion, num of ST plots in QB2003: 0.183246, 35
+	Portion, num of DST plots in QB2003: 0.130890, 25
+	Portion, num of OL plots in QB2003: 0.130890, 25
+	Portion of plots in QB2005: 0.261780
+	Portion, num of All plots in QB2005: 0.261780, 50
+	Portion, num of ST plots in QB2005: 0.157068, 30
+	Portion, num of DST plots in QB2005: 0.104712, 20
+	Portion, num of OL plots in QB2005: 0.000000, 0
+	
+Portion of MP's CS plots not planted (ever)
+	Class	N	% Planted	% Blanked
+	ST		76	0.00		0.00
+	DST		50	58.00		26.00
+	OL		65	15.38		0.00
+	All		191	20.42		6.81
+
+	So there are 76 ST and ~(1-0.5-0.26)*50 = 12 DST unplanted plots which is 88 in total, plus OL gives 88+65 = 153 in total 
+	
+- So there are more	possible usable plots in the later images but these obviously have the issue of unknown changes.
+	
+Notes on lit survey of VHR veg mapping
+    Image and field ground truth are often acquired at same time or within a year or at most two of each other.  
+	Field ground truth typically consists of at leasr 10s of samples per class and 100s in total.  Separate training and validation data are common.  ~500 sites are common
+	
+	"In order to avoid the problems of auto-correlation and collinearity, randomly stratified samples were selected from the plots included in the study area. For" We need to understand this.
+	
+Notes on limited biomass mapping papers
+    Singh et al 200 25x25m plots with linear regression (5m spot)
+	1 paper has both challenges with year differences and number of sites (~4 years, ~50 sites)
+	Poisy et al 10+16 plots of 200m2 to 1ha each 
+	Bastin 1 paper uses mutliple windows in large (1ha) plots to give 16x the original number of 26 plots = ~400 data points (I think)
+	Maak use roughly 100 sites of 12m diameter (varying sample intenisty) per study area 
+	
+GEF5 contract
+	specifies a series of progress reports for developing carbon methodology with no completion date
+	"Develop a new methodology for quantifying carbon stocks for carbon offsetting rehabilitation projects specific to Sub-tropical Thicket vegetation in South Africa. The new methodology should align with national government policy and planning related to the development of a local carbon taxation and carbon offsetting system. The new methodology should also provide a relatively simple yet rigorous means of quantifying carbon stocks for Sub-tropical Thicket rehabilitation projects, drawing from other local and international based methodologies that have already been developed for quantifying carbon stocks.	"
+
+SOP	
+	10x10m plot, all SB sampled for allometry (possible destructive)
+	50x50m transect for biodiversity (species cover) but not allometry (non destructive - mostly)
+	2x2m quadrat in 10x10m plot for grass and forbes (non destructive)
+	.5 x .5 for leaf litter removal () (destructive)
+	.1 x .1 for soil sampling (destructive)
+
+Questions:
+	Is this a technique for intact thicket or restored thicket or both - which model is preferable
+	How many plots are being gt'd now - these are being planted?  Are they comparable to MP GT (eg in DST and ST and involve all species or just SB)?
+	Timelines (for gt and my work)
+	When did 2005 gt start? 
+
+Recommendations
+	SOP 10x10m
+	DGPS of plot extents
+	Make sure there is a WV2 image available or obtained before any destructive sampling and planting 
+	Possibly capture drone images of plots at same time as GT
+	Remeasure a representative sample of orig ST and DST plots to see how much they've changed 
+	Try to make new GT usable or comparable to old GT - in similar areas and all species 
+	Limit destructive sampling inside plots 
+	
+	Start with feasibility study using 2003 QB 
+	SOP - minimise destructive samples inside 10x10m plot eg do the 2x2m quadrats outside 
+	! We are limited to simple approaches with data we have.  
+
+What are my points
+	I mostly looked at veg mapping - ~500 sites 
+    Very few biomass papers using vhr - 25-100 sites but typically at least 20x20m 
+    Time lag betw image and gt creates uncertainty
+
+	QB images at good time but only cover part of study area - details
+	WV images cover all study area but later so added uncertainty 
+
+    Limited num of plots limits the complexity of the regression model
+    Limited size of plots limits the features that can be extracted
+
+	Initial study on early QB images is a sensible place to start
+	Perhaps additional one using later WV when existing sites re-sampled 
+
+	---------------------------------------------------------------------
+	Notes on meeting
+	--------------------
+	- Bulk of sampling is for baseline sampling (planting sites) - 100 plots - ~ 1 year - start feb/march.  originally this was planned for sb only allometry but could be extended to other species. Mostly DST areas.
+	- some budget for additional sampling for my work i.e like MP's 2005 sampling - maybe 50 additional sites 
+	- DST CS estimation is more important than ST estimation as this is where restoration is going to take place 
+	mostly dst will be planted 
+	- Rooihoek areas are best to use from MP's data.  The work started in W in Kolesky, Cambria, Goedhoop?  where MP found things weren't ideal.  Then he later moved on to Rooihoek.
+	- OL dont change much over the years so using later imagery is ok, maybe 
+	- Degradation remains over long periods so DST plots may also not have changed that much
+
+-----------------------------------------------------------------------------
+Notes on consulting work
+
+SU will have IP for the first study
+I can only work 12 hrs/wk according to my NRF funding
+Lets say I work 10 months, so there are 15*4*10 = 600 hrs in a year 
+At their budget of 120000, that is R200/hr, Adriaan suggested R300/hr 
+
+
+------------------------------------------------------------------------------------
+Further notes on deliverables meeting 
+-------------------------------------
+
+from rebecca's email "The only thing I am concerned of is we need to make sure we attempt (and hopefully succeed) in developing the new methodology for quantifying carbon stocks, as part of the GEF5 project. Are you willing to work at this as a consultant over the next year or so? Even if the methodology doesn't work we need to show we have comprehensively attempted to do so. If you are not willing to work at this deliverable then we need to find someone else to do so asap. "
+me: 
+from james' email: "With respect to achieving the deliverables for the GEF5 work, I agree that the first year’s work was primarily reporting on progress, and the assumption was that we would only really see significant outcomes in the second year. Of course, the sooner we can get our teeth into it the better, because the actual integration of the methodology into national policy/relevant standards could be an arduous process. Dugal, let’s chat later in the week about achieving the rest of the deliverables and your time availability. I’d suggest Wednesday afternoon if that works for you?"
+
+My position
+------------
+- I don't have the experience or capacity (or desire) to be involved in the policy integration.  
+- I have understood the carbon methodology to mean a method to measure carbon - not that I am responsible for policy integration 
+- I'm not experienced in the policy side, just developing the technical side is substantial volume of work (research is difficult to plan, usually there are unforseen challenges that take time to work out).  
+- If the initial study is promising - we will already have an idea of the basic method so policy integration work could start.  I could also do the 3 months of GEF5 more or less full time say 4 days/wk so that this is finished in 4 months - leaving 2 months for policy integration.  Also I will probably have a good idea of the method before I am completely done, so policy integration could begin in the interim
+- I'm not sure about time for the drone - would be great but there is a lot to get through
+- Funding for images - if I do a study on the GEF5 ground truth, I will need images 
+- Nowhere in deliverables does it say anything about policy integration it is only remote sensing stuff 
+
+
+--------------------------------------------------------------------------------
+Workshop April 2017
+--------------------------------------------------------------------------------
+To do  
+---------------------- 
+- imagery - available archived sets that cover sewefontein and tchugadu 
+          - cost of archive (WV2 $14/km² min of 25km2?) and cost of new  (WV2 $30/km2 with min 100km2)
+		  - my budget is $1900 for imagery, 
+		  - get quote for 2003 qb image or portion thereof 
+		  - get quote for sewefontein & tchugadu (this area is ~50km2 so it will be roughly 50*14 = 700$ ~ R10000) 
+x - 2005 GT - imagery and stats of what is covered 
+x - GIS map with all shapefiles  
+x - GET NGI imagery? 3323DB, 3324CA, 3324CB, 3324DA,  
+x - Familiarity with SOP, plan for what needs to be GT'd 
+x - random stratified sampling, how important is it for the methodology vs just choosing practical sites 
+x - Check python scripts work 
+x - Recommendations for SOP (get imagery, dgps, no destructive sampling in 10x10, drone?? )
+x - Get baviaans wide area backdrop image eg landsat 
+- Bring my 3g modem
+- what is dgps 
+- my plan for work 
+x - install arcmap
+- GPS App
+- Put gt locs in GPS / phone 
+--------------------------
+logistics
+self cater mon, tues, weds morning
+
+--------------------------------------------------------------------------------------
+Notes on QB 2003 image
+--------------------------------------------------------------------------------------
+- One can apply for an imagery grant from DG
+- Should I apply for a sewefontein tchuganu image at the same time?
+  - I porbably have a better chance of getting both images in one but the GEF stuff is uncertain both in terms of location and in terms of if it is going to happen at all.
+  - If I specify the wrong location, I will probably have shot myself in the foot so rather just apply for the 2005 area now...
+- What AOI should I choose?  
+  - The smallest possible one will give me probably the best chance of getting the grant but would be missing some trig beacons
+  - Looking at the NGI imagery, it is not that easy to find trig beacons.  Only one of them is fairly clear.  
+  - I think I will have to collect actual GCP's anyway at least to do an accuracy assessment of the rectification.  So the trig beacons are perhaps not that crucial.  Esp seeing as there is only one (clearly vis one) of them anyway.  
+  
+- Orthorect:
+  - RCP's are available and delivered with the image.  
+  - Actual ground GCP's obtained with a DGPS are ideal for orthorect.  About 3 for working with RCP's but the more the better and more can be used for accuracy assessment when the rectification is done.
+  - As a second prize, one can rectify with NGI (prefer to google) imagery as a ref.  
+  - A bunch of actual GCP's will be good.  This will hopefully circumvent the problem of visiting the sites and taking aerial images by allowing a v accurate <1m rectification using actual DGPS GCP's.  The accuracy can then also be quantified using a test set of GCP's which is also a good thing for the paper and for my own insight.
+  
+---------------------------------------------------------------------------------------
+ISRSE 37 Presentation
+----------------------------------------------------------------------------------------
+- Talk about regional - "large scale" aspects like computation issues, calibration
+- Remember about ground truth terminology and radiometric calibration claims
+- List references for claims...
+
+---------------------------------------------------------------------------------------------
+Methodology planning 2017
+----------------------------------------------------------------------------------------------
+- 10x10m ~100 plots 
+- Best current image is Feb 2016 
+- DGPS of plot extents
+- Drone of plots 
+- Make sure there is a WV2 image available or obtained before any destructive sampling and planting 
+	Possibly capture drone images of plots at same time as GT
+- If there could be no destructive sampling it would allow more flexibility 
+- ! We are limited to simple approaches with data we have.  
+- Use M vdV's allometry method 
+- Limit sites to same area same image 
+- X Can the grass /forbes / soil sampling be moved outside the 10x10m area ?	
+
+Options for spreads for plots:
+- 
+
+Standard sampling 
+
+me - Provide prelim results 17 August 
+Prelim baselines in Sept to get idea of costs 
+Then actual baselines start in Oct
+
+me - identify platning areas including pristine  
+

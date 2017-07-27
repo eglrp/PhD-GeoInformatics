@@ -1,0 +1,72 @@
+YR1: 48hrs/mnth for 10 months (Feb to November 2017) @ R300/hr = R 144 000
+YR2: 76hrs/month for 7 months (Mid-Jan to Mid-August 2018) @ R300/hr = R159 600
+Total: R 303 600
+
+They have budgeted on 12 hrs/wk for 2017 & 19 hrs/wk (~2.5 days) for 2018
+They for budgeted for 3 months / 12 weeks full time work in 2017
+and 3.5 months (13 wks) in 2018
+
+
+In terms of time to do something useful:
+Initial study
+- Acquire and calibrate imagery: 2 wks 
+- Do feature and regression study: 6 wks 
+- Field work to delineate sites: 50*3hrs= 150hrs ~ 4 wks
+- Repeat study: 2 wks 
+- Write report: 4 wks 
+--------------------------
+Total - 16 wks = 4 months 
+
+Repeat study with other imagery and other (new?) ground truth
+-----------------------------------------------------
+- Calibration: 2 wks
+- Do feature and regression study: 2 wks 
+- Field work (???): 2 wks 
+--------------------------------------------
+Total: 6 wks
+
+Investigate extension over space and time
+-----------------------------------------
+- 4 wks 
+
+Investigate plant height from drone imagery 
+-----------------------------------------
+- 4 wks 
+
+PhD timelines:
+----------------
+Revise calibration paper: 4 wks
+Revise feat sel paper: 4 wks
+Revise mapping paper: 4 wks
+Write into and concluding chapters: 4 wks 
+----------------------------------------------
+Total: 4 months 
+
+Questions
+---------
+Is that the total budget for me?
+Do I charge for the initial study that is part of my phd - if not I can only begin invoicing late in year / next year?
+So I don't charge for work already completed?  
+
+
+Notes
+--------
+- So my PhD + initial cs time is 8 months - (+ tamboo at 2 months) call it 10 - which takes me to october 
+- I have enough time to finish my phd and do the initial study this year, I dont want to commit to anything else. 
+- I am likely to work in chunks that averages out to 48hrs/month rather than 12 hrs/wk religiously
+- How do I separate out the "free" initial study from the rest of the work?  
+- And what about the work I've done?
+- Do I bill them for time on the initial study?
+
+- If I don't, do I have enough time in the year to do both their work and my study work?  I would need to complete the initial study before starting any other GEF work, so if I don't bill them for that initial study, I can only start other GEF work well into the year - 
+- If I do bill them for the initial study, the timelines are reasonable as we should have the new gt in 2018 to start work on that.  
+- Legally, is this ok? - I am being paid for my study time 12 hrs/wk with no IP blabla agreement?  I see nothing wrong.  It does not even qualify as external work - it is more like funding without any IP obligations.  
+
+------------------------------
+May AWP budget 
+
+R/$ = 13.5 
+12 hrs/wk 
+r300/hr 
+
+$266.57 / wk 

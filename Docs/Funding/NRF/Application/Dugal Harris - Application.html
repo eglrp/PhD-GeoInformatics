@@ -1,0 +1,1108 @@
+<head> <style> *
+{
+	margin: 0;
+	/*padding: 0;*/
+}
+
+body
+{
+	padding: 0 0 20px;
+	/*background:#fff url("images/body_bg.gif") repeat-x fixed center bottom;*/
+	color: #333;
+	/*font: 83%/1.5 arial,tahoma,verdana,sans-serif;*/
+	font: 12px verdana;
+	/*font: regular 10px Arial;*/
+	vertical-align : bottom;		 
+}
+
+#headerStrip
+{
+	height:160px;
+	z-index:0;
+}
+
+#banner
+{
+    /*background-color: #5c7db3;*/
+	background-image: url("images/NRF Online.jpg");
+	background-repeat:no-repeat;
+	background-position: center center;
+	height:150px;
+	width:100%;
+	z-index:1;
+}
+
+
+/* LAYOUT - main body of page */
+#wrap
+{
+	min-width: 770px;
+	max-width: 1200px;
+	margin: 0 auto;
+	position: relative;
+}
+
+#content-wrap
+{
+	background:url("images/content_wrap_bg.gif") repeat-y scroll 30px 0 transparent;
+	position:relative;
+	width:100%;
+}
+
+#content
+{
+	margin:0 23px 0 235px;
+	position: relative;
+}
+
+.support
+{
+	text-align: right;
+	font-family: Arial;
+	font-size: 10px;
+	font-weight: bold;
+	margin-right: 20px;	
+}
+
+/*Menu on left*/
+#utility
+{
+	/*
+	border-left: 15px solid #DCDCDC;
+	border-top: 15px solid #DCDCDC;
+	background:none repeat scroll 0 0 #DCDCDC;
+	*/
+	left:25px;
+	padding-bottom:40px;
+	position:absolute;
+	top:0;
+	width:160px;
+	z-index: 100;
+	
+}
+
+#divNotification
+{
+    position: absolute;
+    top: 5px;
+    left: 0px;
+    text-align: left;
+    width: 90%;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Arial;
+    color: crimson;
+    float:left;
+    
+}
+
+#tblUserLinks 
+{
+    padding: 70px 0px 0px 0px;
+}
+
+#tblUserLinks td
+{
+    font: bold 15px/23px "Segoe UI", Arial, sans-serif;
+}
+
+#divUserLinks ul 
+{
+    display: block;
+    margin-left: 20px;
+    padding: 0px 0px 0px 0px;
+    list-style-type: none;
+    font: bold 12px/23px "Segoe UI", Arial, sans-serif;
+}
+
+#divUserLinks li 
+{
+    padding-left: 0em; text-indent: -2em;
+}
+
+#divUserLinks li:before 
+{
+    margin: 0px 0px 0px 0px;
+    padding: 0px 5px 0px 0px;
+    content:"■"; 
+    font-size: 8px;
+}
+
+#divUserLinks a:link
+{
+    color: #c00;    
+}
+
+#divUserLinks a:visited
+{
+    color: #c00;    
+}
+
+.RadUpload .ruInputs, .RadUploadProgressArea .ruProgress 
+{
+    list-style: none;
+}
+
+
+.RadTreeView .rtLI 
+{
+    list-style: none !important;
+    list-style: none !important;
+}
+
+.RadTreeView_Default .rtPlus, .RadTreeView_Default .rtMinus 
+{
+    background-image: url('WebResource.axd?d=pEGgSSntE9169-GmttSxmyqaudzAd1FdInDNU9bPdFRwWgOXewKXky_A2ziqHgmFO3pPv9G8zlp2VRoRWKXZ_aCDBXQWxCIsODsbHUWAYiP5zJTgFCTBChxtMUWHqOk6qXRjNu4tMHCuenCiP1MnmGPGBTEwt1Ii0ihIU3YvJQo1&t=634578129925620763');
+}
+
+.RadTreeView .rtPlus, .RadTreeView .rtMinus 
+{
+    margin-right: 7px;
+    margin-left: -18px;
+}
+
+.RadTreeView .rtMinus 
+{
+    background-position: 0 -11px;
+}
+
+.RadTreeView .rtPlus, .RadTreeView .rtMinus 
+{
+    font-size: 0;
+    padding: 0;
+    display: -moz-inline-box;
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    margin: 6px 7px 0 -18px;
+    width: 11px;
+    height: 11px;
+    background-repeat: no-repeat;
+}
+
+/* FORMS */
+fieldset
+{
+	border: none;
+}
+
+fieldset.f-wrap-1
+{	
+	padding: .5em 0 0 .9em;
+	/*background: #f6f6f6 url(  "images/featurebox_bg.gif" ) no-repeat 100% 100%;*/
+	background: #f6f6f6;
+	border-top: 1px solid #d7d7d7;
+	position: relative;
+	min-height: 600px;
+}
+
+/* LAYOUT - FOOTER */
+#footer
+{
+	clear: both;
+	border-top: 1px solid #E3E8EE;
+	padding: 10px 0 30px;
+	font-size: 86%;
+	color: #999;
+
+}
+#footer p
+{
+	margin: 0;
+}
+#footer a:link
+{
+	color: #999;
+}
+
+/*Remove border from splitter box*/
+.RadSplitter, .RadSplitter .rspSlideZone, .RadSplitter .rspSlideContainer, .RadSplitter .rspPaneTabContainer, .RadSplitter .rspPane, .RadSplitter .rspResizeBar, .RadSplitter .rspSlideContainerResize, .RadSplitter .rspPaneHorizontal, .RadSplitter .rspResizeBarHorizontal, .RadSplitter .rspSlideContainerResizeHorizontal 
+{
+    border-width: 0px !important;
+    border-style: none !important;
+}
+
+/*LINKS*/
+a, a:link, a:link, a:link, a:hover
+{
+	background: transparent;
+	text-decoration: underline;
+	cursor: pointer;
+}
+a:link
+{
+	color: #c00;
+}
+a:visited
+{
+	color: #999;
+}
+a:hover, a:active
+{
+	color: #069;
+}
+/*user for register link etc. */
+a.morelink:link, a.morelink:visited, a.morelink:hover, a.morelink:active
+{
+	background: transparent url(  "images/sprites.gif" ) no-repeat 5px -500px;
+	padding-left: 21px;
+}
+a.morelink:hover
+{
+	background: transparent url(  "images/sprites.gif" ) 5px -400px;
+}
+.morelink span
+{
+	position: absolute;
+	left: -9999px;
+	width: 900px;
+}
+
+/* TABLES */
+.tableHeading
+{
+	border-collapse: collapse;
+	width: 100%;	
+	background-color:Transparent;
+}
+
+.table1
+{
+	border-collapse: collapse !important;
+	width: 95% !important;	
+	background-color:Transparent !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	page-break-inside: avoid !important;
+}
+.table1 tr
+{
+	page-break-inside : avoid !important;	
+}
+
+.table1 td
+{
+	background-color:transparent !important; 
+	font-weight: normal !important;
+	padding-left:5px;
+}
+
+
+tr.border td
+{
+	border-color:#D0D7E5 !important;
+	border-style:solid solid solid solid !important;
+	border-width: 0px 1px 1px 1px !important;  
+ }
+ 
+ tr.border2 td
+{
+	border-color:#D0D7E5 !important;
+	border-style:solid solid solid solid !important;
+	border-width: 1px 1px 1px 1px !important;  
+ }
+
+tr.borderBottom td
+{
+	border-color:#D0D7E5 !important;
+	border-bottom-style: dashed !important;
+	border-width:1px !important;  
+ }
+ 
+tr.borderTop td
+{
+	border-color:#D0D7E5 !important;
+	border-top-style: dashed !important;
+	border-width:1px !important;  
+}
+ 
+tr.borderTopAndBottom td
+{
+	border-color:#D0D7E5 !important;
+	border-top-style: dashed !important;
+	border-bottom-style: dashed !important;
+	border-width:1px !important;  
+}
+
+
+td input[type=text] 
+{
+    width: 75%;
+    font: 12px verdana;
+    padding: 0px 3px 0px 0px;
+}
+
+td input[type=password] 
+{
+    width: 75%;
+    font: 12px verdana !important;
+    padding: 0px 3px 0px 0px;
+}
+
+.table1 th
+{
+	text-align: left !important;
+	border: 1px solid #fff !important;
+}
+
+.table1 thead tr th
+{
+	border:solid #5d8cc9 !important;
+	border-width:1px 1px 1px 1px !important;
+	background:0 -2300px repeat-x #c3d8f1 url('Images/gridSprite.gif') !important;
+	color:#00156e !important;	
+	padding: 5px 7px 4px !important;
+	font-weight:normal !important;
+	text-align:center !important;
+}
+
+.tableHeadLeft
+{
+	border:solid #5d8cc9 !important;
+	border-width:1px 1px 1px 1px !important;
+	background:0 -2300px repeat-x #c3d8f1 url('Images/gridSprite.gif') !important;
+	color:#00156e !important;	
+	
+	font-weight:normal !important;
+	text-align:left !important;
+}
+
+/*Highlight row on mouse over*/
+.table1 tr:hover 
+{
+	 background-color: #E6E6E6 !important;
+}
+
+.table1 table tr:hover 
+{
+    background-color: transparent !important;
+}
+
+.table2
+{
+    border-collapse: collapse !important;
+	width: 95% !important;	
+	background-color:Transparent !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	page-break-inside: avoid !important;
+	border-bottom:1px solid #5d8cc9 !important;
+	border-left:1px solid #5d8cc9 !important;
+	border-right:1px solid #5d8cc9 !important;
+}
+
+.table2 tr
+{
+	page-break-inside : avoid !important;	
+}
+
+.table2 td
+{
+	background-color:transparent !important; 
+	font-weight: normal !important;
+	padding-left:5px;
+}
+
+.table2 th
+{
+	text-align: left !important;
+	border: 1px solid #fff !important;
+}
+
+.table2 thead th
+{
+	border:solid #5d8cc9 !important;
+	border-width:1px 1px 1px 1px !important;
+	background:0 -2300px repeat-x #c3d8f1 url('Images/gridSprite.gif') !important;
+	color:#00156e !important;	
+	padding: 5px 7px 4px !important;
+	font-weight:normal !important;
+	text-align:center !important;
+}
+
+/*Highlight row on mouse over*/
+.table2 tr:hover 
+{
+	 /*background:url("images/main-bannerbg.jpg") repeat-x scroll center top transparent;*/
+	 background-color: #E6E6E6 !important;
+}
+
+textarea
+{
+    width: 74.5% !important;
+    font: 12px verdana !important;
+}
+
+.fullTextArea
+{
+    width: 95% !important;
+    font: 12px verdana !important;
+}
+
+.RadInput textarea
+{
+    width: 75% !important;
+    font: 12px verdana !important;
+}
+
+.RadComboBoxDefault
+{
+   width: 76% !important;   
+}
+
+
+/*
+div.RadComboBox 
+{
+   width: 76% !important;   
+}
+div.rcbSlide  
+{
+   z-index : 9000 !important; 
+}
+*/
+
+.RadMenu 
+{
+    white-space: nowrap !important;
+    float: left !important;
+    position: relative !important;
+    z-index : 2500 !important;
+}
+
+input[type=button], input[type=submit]
+{
+    padding : 1px 5px 1px 5px !important;
+    margin: 0px 0px 0px 0px !important;
+    vertical-align:bottom !important;
+}
+
+/*
+
+.contentText
+{
+   font: regular 10px Arial;
+}
+*/
+/*
+.table1 thead th
+{
+
+	color:Black;
+	font-size: 100%;
+
+	background-color: #DCDCDC;
+	padding: 10px 6px;
+	text-align: center;
+}
+
+*/
+
+/*Error highlighting*/
+.error
+{
+	color: #c00;
+	background-color: #c00;
+}
+
+/*CONTROL - BUTTON*/
+/*
+Adaan
+Not applicable...
+29 Oct 2010
+.button
+{
+	background:none repeat scroll 0 0 #666666;
+	color:#FFFFFF;
+	font-size:96%;
+	font-weight:bold;
+	padding:1px 3px;
+	cursor: hand;
+}
+*/
+/*Indicates required field*/
+.required
+{
+	color:Red;
+	padding-left: 0px;
+	padding-right:0px;
+	background-position:right;
+	background-repeat: no-repeat;
+	z-index: 1000;
+	vertical-align:middle;
+}
+
+/*Print Preview Headerings*/
+.printPreview
+{
+	font-family: arial;
+	color: #5c7db3 !important;
+  
+}
+
+li.tableOfContent
+{
+    padding-bottom : 0px;
+    color: #5c7db3;
+    list-style-type : none;
+}
+
+ul.tableOfContent
+{
+    padding-bottom : 0px;
+    color: #5c7db3;
+    list-style-type : none;
+}
+
+.printPreview a
+{
+    text-decoration: none; 
+    color: #5c7db3 !important;   
+	font-family: arial;
+	font-size: 110%;
+}
+
+.tableOfContent a
+{
+    text-decoration: none; 
+    color: #5c7db3 !important;   
+	font-family: arial;
+	font-size: 110%;
+}
+
+h2.tableOfContent
+{
+   color: #5c7db3 !important;   
+   margin: 0.1em !important;   
+}
+
+.printPreviewTable 
+{
+    font-family: arial !important;
+    font-size: 13px !important;
+    border: 1px solid #000000 !important;
+}
+
+.printPreviewTable
+{
+	border-collapse: collapse !important;
+	width: 95% !important;	
+	background-color:Transparent !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	page-break-inside: avoid !important;	
+}
+.printPreviewTable tr
+{
+	page-break-inside : avoid !important;	
+}
+
+.printPreviewTable td
+{
+	background-color:transparent !important; 
+	font-weight: normal !important;
+	padding-left:5px;
+	font-size: 13px !important;
+    font-family: arial !important;
+}
+
+.printPreviewTable th
+{
+	text-align: left !important;
+	border: 1px solid #fff !important;
+}
+
+.printPreviewTable thead tr th
+{
+	border:solid #5d8cc9 !important;
+	border-width:1px 1px 1px 1px !important;
+	background:0 -2300px repeat-x #c3d8f1 url('Images/gridSprite.gif') !important;
+	color:#00156e !important;	
+	padding: 5px 7px 4px !important;
+	font-weight:normal !important;
+	text-align:center !important;
+}
+
+.printPreviewTable tr:hover 
+{
+	 background-color: #E6E6E6 !important;
+}
+
+.printPreviewTable table tr:hover 
+{
+    background-color: transparent !important;
+}
+
+.printPreviewTable.rgMasterTable.rgClipCells tr
+{
+	page-break-inside : avoid !important;		
+	font: 13px arial !important;
+}
+
+.printPreviewTable table.printPreviewTable.rgMasterTable.rgClipCells tr:hover td
+{
+     background-color: #E6E6E6 !important;
+}
+
+.printPreviewMemo 
+{
+    border: 1px solid #000000 !important;
+    font-size: 13px !important;
+    font-family: arial !important;    
+    width: 95% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left:5px;
+}
+
+.printPreviewInstruction
+{
+    border: 1px solid #000000 !important;
+    font-size: 13px !important;
+    font-family: arial !important;    
+    width: 95% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left:5px;
+}
+
+/*HEADINGS*/
+h1, h2, h3, h4, h5, h6
+{
+	letter-spacing: -1px;
+	font-family: arial,verdana,sans-serif;
+	margin: 1.2em 0 .3em;
+	color: #000;
+	padding-bottom: .1em;
+}
+h1
+{
+	font-size: 196%;
+	margin-top: .6em;
+}
+h2
+{
+	font-size: 136%;
+}
+h3
+{
+	font-size: 126%;
+}
+h4
+{
+	font-size: 116%;
+}
+h5
+{
+	font-size: 106%;
+}
+h6
+{
+	font-size: 96%;
+}
+
+/*BREAD CRUMB*/
+.breadcrumb
+{
+	list-style:none;
+	padding:0;
+	margin: 30px 0 0 0;
+	height:14px;
+}
+
+.breadcrumb .first
+{
+	width:10px;
+	margin-right: 10px;
+}
+
+.breadcrumb .separator
+{
+	padding: 0 4px;
+}
+
+.breadcrumb li
+{
+	float:left;
+	line-height: 14px;
+	color: #000;
+}
+
+.breadcrumb li a,
+.breadcrumb li a:hover
+{
+	font: 12px 'Segoe UI', Arial, 'sans-serif';
+	color: #000;
+	text-decoration:underline;
+}
+
+/*OTHER*/
+.divLogin
+{
+	float:left;
+	width: 49%;
+}
+
+.divCalls
+{
+	text-align:left;
+	float:right;
+	width: 49%;
+	padding-bottom: 20px;
+}
+
+.divMessage
+{
+	width:99%;
+	height:100%;
+}
+
+.ulCalls
+{
+	height: 100px;
+	border: 1px solid #828282;
+	background-color: white;
+	margin-left: 5%;
+	overflow-y: scroll; /* CSS 3 */
+}
+
+.ulCalls li
+{
+	border: 1px solid #D0D7E5;
+	border-style: none none solid none;
+	padding: 4px 7px 3px 7px
+}
+
+.ulCalls li:hover
+{
+	background-color: #E6E6E6;
+}
+
+/*
+NEW FROM NRF.AC.ZA
+*/
+.tab_heading{
+/*background:url("Images/tab_header_center.gif") repeat-x scroll 0 0 transparent;*/
+background:0 -2300px repeat-x #c3d8f1 url('Images/gridSprite.gif');
+color: #00156e;
+font-family:Trebuchet MS,Verdana,Arial;
+font-size:14px;
+font-weight:bold;
+padding-left:6px;
+padding-right:8px;
+text-align:center;
+border:solid #5d8cc9;
+border-width:1px 1px 1px 1px;
+padding:0;
+}
+
+.tab_heading_center {
+background:url("Images/tab_header_center.gif") repeat-x scroll 0 0 transparent;
+color:#FFFFFF;
+font-family:Trebuchet MS,Verdana,Arial;
+font-size:19px;
+font-weight:bold;
+height:30px;
+padding-bottom:6px;
+padding-left:6px;
+padding-right:8px;
+text-align:left;
+padding:0;
+}
+
+.tab_heading_left {
+background:url("Images/tab_header_left.gif") no-repeat scroll 0 0 transparent;
+height:30px;
+width:24px;
+padding:0;
+}
+
+.tab_heading_right {
+background:url("Images/tab_header_right.gif") no-repeat scroll 0 0 transparent;
+height:30px;
+width:5px;
+padding-right:10px;
+padding:0;
+}
+
+.customSupportButton
+{
+	background-image: url(Images/help.png) !important;
+	background-repeat: no-repeat;
+	background-position: left;
+}
+
+.NewListItem
+{    
+    padding: 0px 0px 0px 0px;
+    margin : 0px 0px 0px 0px;
+    border-spacing: 0px;
+}
+
+.tableAlign td
+{
+    white-space:nowrap;
+}
+
+.Instruction /* HTML content style for the instructions...*/
+{
+    padding: 5px;    
+}
+
+.labelColumn /* Edit form's control label column width */
+{
+    width: 40% !important;
+}
+
+.controlColumn /* Edit form's control column width */
+{
+    width: 60% !important;
+}
+
+.table4 
+{
+    width: 50%;
+    border-collapse: collapse !important;
+	background-color:Transparent !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	page-break-inside: avoid !important;
+    margin-left: 30px !important;
+}
+
+.Column1
+{
+    width: 30px !important;    
+}
+
+.Column2
+{
+    width: 20px !important;
+}
+
+
+/* Modal form table */
+.modalTable
+{
+	border-collapse: collapse !important;
+	width: 97% !important;	
+	background-color:Transparent !important;
+	page-break-inside: avoid !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+
+.divider tr
+{	
+    border-bottom-width : 1px;
+    border-bottom-style : dotted;
+    background-position : center;
+    border-bottom-color : #E6E6E6;
+}
+
+.modalTable td
+{
+	background-color:transparent !important; 
+	font-weight: normal !important;
+	padding-left: 5px !important;
+	margin-bottom: 5px!important;
+}
+
+.modalTable tr:hover 
+{
+	background-color: #E6E6E6 !important;
+}
+
+
+/* table without tr hover style*/
+.table3
+{
+	border-collapse: collapse !important;
+	width: 95% !important;	
+	background-color:Transparent !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	page-break-inside: avoid !important;
+}
+.table3 tr
+{
+	page-break-inside : avoid !important;	
+}
+
+.table3 td
+{
+	background-color:transparent !important; 
+	font-weight: normal !important;
+	padding-left:5px;
+}
+/* overrides the default 75% width for textbox */
+.textboxLonger 
+{
+    width: 200px !important;
+}
+
+.textboxLongest
+{
+    width: 400px !important;
+}
+
+
+/* overrides for the RadGrid styling to make it look like .table1 */
+/*.table1.rgMasterTable
+{
+	border-collapse: collapse !important;
+	width: 100% !important;	
+	background-color:Transparent !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	page-break-inside: avoid !important;
+	
+}
+
+.table1.rgMasterTable tr
+{
+	page-break-inside : avoid !important;	
+}
+
+.table1.rgMasterTable td
+{
+	background-color:transparent !important; 
+	font-weight: normal !important;
+	padding-left:5px !important;
+}
+
+.table1.th.rgHeader 
+{
+     font: 12px verdana  !important;
+    border:solid #5d8cc9 !important;
+	border-width:1px 1px 1px 1px !important;
+	background:0 -2300px repeat-x #c3d8f1 url('Images/gridSprite.gif') !important;
+	color:#00156e !important;	
+	padding: 5px 7px 4px !important;
+	font-weight:normal !important;
+	text-align:center !important;
+}
+
+.table1.th.rgHeader a
+{	
+    font-weight: normal !important;
+	text-align:center !important;
+	color:#00156e !important;	
+}
+
+.table1.tr.rgRow td
+{
+    font: 12px verdana  !important;
+    font-weight: normal !important;
+    border-color:#D0D7E5 !important;
+	border-style:solid solid solid solid !important;
+	border-width: 0px 1px 1px 1px !important;  
+	padding-left: 5px !important;
+	padding-right: inherit !important;
+	padding-top: inherit !important;
+	padding-bottom: inherit !important;
+}
+
+.table1.tr.rgRow:hover 
+{
+	 background-color: #E6E6E6 !important;
+}*/
+
+/* overrides for the RadGrid styling to make it look like .table1 */
+.table1.rgMasterTable.rgClipCells tr
+{
+	page-break-inside : avoid !important;		
+	font: 12px verdana  !important;
+}
+
+tr.rgFooter td
+{
+    font-weight: 900 !important;    
+}
+
+.table1 table.table1.rgMasterTable.rgClipCells tr:hover td
+{
+     background-color: #E6E6E6 !important;
+}
+
+.resultsHeader 
+{
+   float: left; 
+   border:1px; 
+   width:900px; 
+   height:20px; 
+   padding-top:2px;
+   padding-left:7px; 
+   vertical-align:middle; 
+   text-align: left; 
+   font-size:13px;
+   font-weight:bold;
+}
+
+.textOverFlow 
+{
+    margin: 0 20px;
+	text-overflow:ellipsis;
+	overflow:hidden;
+	white-space:nowrap;	
+	width: 100px;
+	padding: 10px;
+}
+
+
+.textOverFlowLong
+{
+    margin: 0 20px;
+	text-overflow:ellipsis;
+	overflow:hidden;
+	white-space:nowrap;	
+	width: 200px;
+	padding: 10px;
+}
+.rgSelectedRow td
+{
+    color:#000 !important;    
+}
+
+.textBoxSmall 
+{
+    width:60px !important;
+}
+
+.div_hidden
+{
+    display:none;
+  
+}
+
+.div_shown 
+{
+   display:block;
+}
+
+.msoText 
+{
+  mso-number-format:@;   
+}
+@media print 
+{
+  .noprint 
+  {
+      display:none;
+  }  
+    
+}
+
+.GridSelectedRow 
+{
+    background-color: transparent !important;
+    background-image: none !important;
+    background-repeat: no-repeat  !important;
+    background-position: top right  !important;
+}</style> </head><table class="tableHeading"><tr><td><h1 class="printPreview"><a class="tableOfContent" id="tagTableOfContents" name="tagTableOfContents">
+            Table of Contents
+          </a></h1></td></tr></table><ul><li class="tableOfContent"><h2 class="tableOfContent"><a class="tableOfContent" id="TOCEntry_52_ID" href="#tagApplication">Application</a></h2><ul class="tableOfContent"><li class="tableOfContent"><h2 class="tableOfContent"><a class="tableOfContent" id="TOCEntry_51_ID" href="#Disability">Disability</a></h2></li><li class="tableOfContent"><h2 class="tableOfContent"><a class="tableOfContent" id="TOCEntry_55_ID" href="#DegreetobeFunded">Degree to be Funded</a></h2></li><li class="tableOfContent"><h2 class="tableOfContent"><a class="tableOfContent" id="TOCEntry_54_ID" href="#ProposedResearchInformation">Research Project Information</a></h2></li><li class="tableOfContent"><h2 class="tableOfContent"><a class="tableOfContent" id="TOCEntry_138_ID" href="#PreferredPanel">Preferred Panel</a></h2></li><li class="tableOfContent"><h2 class="tableOfContent"><a class="tableOfContent" id="TOCEntry_56_ID" href="#AcademicAchievement">Academic Achievements</a></h2></li><li class="tableOfContent"><h2 class="tableOfContent"><a class="tableOfContent" id="TOCEntry_61_ID" href="#DetailsOfResearch">Details of Research</a></h2></li><li class="tableOfContent"><h2 class="tableOfContent"><a class="tableOfContent" id="TOCEntry_216_ID" href="#ResearchRationaleAndMotivation">Details of Research: Research Rationale and Motivation</a></h2></li><li class="tableOfContent"><h2 class="tableOfContent"><a class="tableOfContent" id="TOCEntry_62_ID" href="#ProblemIdentification">Details of Research: Problem Identification</a></h2></li><li class="tableOfContent"><h2 class="tableOfContent"><a class="tableOfContent" id="TOCEntry_218_ID" href="#ResearchAimsAndObjectives">Details of Research: Research Aims and Objectives</a></h2></li><li class="tableOfContent"><h2 class="tableOfContent"><a class="tableOfContent" id="TOCEntry_219_ID" href="#ResearchActivitiesPlanIncludeApproachMethodsTechniques">Details of Research: Research Activities/Plan which include(s) the research approach/methods/techniques</a></h2></li><li class="tableOfContent"><h2 class="tableOfContent"><a class="tableOfContent" id="TOCEntry_114_ID" href="#ApplicationDocument">Attachments</a></h2></li><li class="tableOfContent"><h2 class="tableOfContent"><a class="tableOfContent" id="TOCEntry_57_ID" href="#Reference">References</a></h2></li><li class="tableOfContent"><h2 class="tableOfContent"><a class="tableOfContent" id="TOCEntry_113_ID" href="#Declaration">Declaration</a></h2></li><li class="tableOfContent"><h2 class="tableOfContent"><a class="tableOfContent" id="TOCEntry_166_ID" href="#Checklist">Checklist</a></h2></li></ul></li><li class="tableOfContent"><h2 class="tableOfContent"><a class="tableOfContent" id="TOCEntry_9_ID" href="#tagCv">CV</a></h2><ul class="tableOfContent"><li class="tableOfContent"><h2 class="tableOfContent"><a class="tableOfContent" id="TOCEntry_4_ID" href="#UpdateUser">Registration Details</a></h2></li><li class="tableOfContent"><h2 class="tableOfContent"><a class="tableOfContent" id="TOCEntry_6_ID" href="#ContactDetails">Contact Details	</a></h2></li><li class="tableOfContent"><h2 class="tableOfContent"><a class="tableOfContent" id="TOCEntry_12_ID" href="#Qualification">Qualifications</a></h2></li><li class="tableOfContent"><h2 class="tableOfContent"><a class="tableOfContent" id="TOCEntry_16_ID" href="#ResearchExpertise">Research Expertise</a></h2></li><li class="tableOfContent"><h2 class="tableOfContent"><a class="tableOfContent" id="TOCEntry_18_ID" href="#PersonalProfile">Personal Profile</a></h2></li><li class="tableOfContent"><h2 class="tableOfContent"><a class="tableOfContent" id="TOCEntry_14_ID" href="#CareerProfile">Career Profile</a></h2></li><li class="tableOfContent"><h2 class="tableOfContent"><a class="tableOfContent" id="TOCEntry_547_ID" href="#ResearchOutputSummary">Research Outputs</a></h2></li><li class="tableOfContent"><h2 class="tableOfContent"><a class="tableOfContent" id="TOCEntry_34_ID" href="#Books">Books</a></h2></li><li class="tableOfContent"><h2 class="tableOfContent"><a class="tableOfContent" id="TOCEntry_35_ID" href="#BookChapters">Chapters in Books</a></h2></li><li class="tableOfContent"><h2 class="tableOfContent"><a class="tableOfContent" id="TOCEntry_37_ID" href="#RefereedPeerReviewedConferenceOutput">Refereed/Peer-reviewed Conference Outputs</a></h2></li><li class="tableOfContent"><h2 class="tableOfContent"><a class="tableOfContent" id="TOCEntry_45_ID" href="#JournalRefereedPeerReviewedArticles">Articles in Refereed/Peer-reviewed Journals</a></h2></li><li class="tableOfContent"><h2 class="tableOfContent"><a class="tableOfContent" id="TOCEntry_20_ID" href="#Patent">Patents</a></h2></li><li class="tableOfContent"><h2 class="tableOfContent"><a class="tableOfContent" id="TOCEntry_26_ID" href="#KeynotePlenaryAddresses">Keynote/Plenary Addresses </a></h2></li><li class="tableOfContent"><h2 class="tableOfContent"><a class="tableOfContent" id="TOCEntry_27_ID" href="#ArticlesInNonRefereedNonPeerReviewedJournals">Articles in Non-refereed/Non-peer Reviewed Journals</a></h2></li><li class="tableOfContent"><h2 class="tableOfContent"><a class="tableOfContent" id="TOCEntry_28_ID" href="#OtherSignificantConferenceOutputs">Other Significant Conference Outputs</a></h2></li><li class="tableOfContent"><h2 class="tableOfContent"><a class="tableOfContent" id="TOCEntry_29_ID" href="#ReportTechnicalPolicy">Technical/Policy Reports</a></h2></li><li class="tableOfContent"><h2 class="tableOfContent"><a class="tableOfContent" id="TOCEntry_30_ID" href="#Products">Products</a></h2></li><li class="tableOfContent"><h2 class="tableOfContent"><a class="tableOfContent" id="TOCEntry_31_ID" href="#Artefacts">Artefacts</a></h2></li><li class="tableOfContent"><h2 class="tableOfContent"><a class="tableOfContent" id="TOCEntry_32_ID" href="#Prototypes">Prototypes</a></h2></li><li class="tableOfContent"><h2 class="tableOfContent"><a class="tableOfContent" id="TOCEntry_33_ID" href="#OtherRecognisedResearchOutputs">Other Recognised Research Outputs</a></h2></li></ul></li></ul><table class="table1"><tr class="borderBottom"><td><br /></td></tr><tr style="page-break-after: always;"><td /></tr></table><table class="tableHeading" style="page-break-before:always"><tr><td><h1 class="printPreview"><a id="TOCEntry_52_Target_ID" name="tagApplication" href="#tagTableOfContents">Application</a></h1></td></tr></table><table class="tableHeading"><tr><td><h2 class="printPreview"><a id="TOCEntry_51_Target_ID" href="#tagTableOfContents" name="Disability" class="sectionHeader" data-bookmark-enabled="true" data-bookmark-level="1">Disability</a></h2></td></tr></table><table class="printPreviewTable"><tr class="borderTopAndBottom"><td valign="top"><b>Are you disabled in any way?</b></td><td width="600px">No </td></tr></table><table class="tableHeading"><tr><td><h2 class="printPreview"><a id="TOCEntry_55_Target_ID" href="#tagTableOfContents" name="DegreetobeFunded" class="sectionHeader" data-bookmark-enabled="true" data-bookmark-level="1">Degree to be Funded</a></h2></td></tr></table><table class="printPreviewTable"><tr class="borderTopAndBottom"><td valign="top"><b>Degree for which you are applying</b></td><td width="600px">Doctoral degree</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Date of first registration for this degree</b></td><td width="600px">February 2015</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Full-time</b></td><td width="600px">Yes </td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Will Master's registration be upgraded to doctoral status?</b></td><td width="600px">No </td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Does any financial support received for previous studies bind you to a service contract?</b></td><td width="600px">No </td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Are you currently enrolled for the degree/research for which you are applying for support?</b></td><td width="600px">Yes </td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Year of study in 2016 for the degree for which you are applying</b></td><td width="600px">2</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Student Number (if currently registered at a university)</b></td><td width="600px">17447585</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Discipline (of degree to be funded)</b></td><td width="600px">Earth Sciences</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Department/School (of degree to be funded)</b></td><td width="600px">Department of Geography and Environmental Studies</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Faculty (of degree to be funded)</b></td><td width="600px">Science</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Indicate what you are doing presently</b></td><td width="600px">I have begun work on my PhD and am also working part-time as a software engineer. (Please note that if I am awarded a scholarship, I will resign from my job to focus full-time on my studies)</td></tr></table><table class="tableHeading"><tr><td><h2 class="printPreview"><a id="TOCEntry_54_Target_ID" href="#tagTableOfContents" name="ProposedResearchInformation" class="sectionHeader" data-bookmark-enabled="true" data-bookmark-level="1">Research Project Information</a></h2></td></tr></table><table class="printPreviewTable"><tr class="borderTopAndBottom"><td valign="top"><b>Applicant's Proposed Institution</b></td><td width="600px">Stellenbosch University</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Short Title of Proposed Research</b></td><td width="600px">Very high resolution remote sensing of carbon stocks in Subtropical Thicket</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Project Start Year</b></td><td width="600px">2015</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Project End Year</b></td><td width="600px">2017</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Budget Start Year</b></td><td width="600px">2016</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Required Funding Period</b></td><td width="600px">2</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Budget End Year</b></td><td width="600px">2017</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Descriptive Title of Proposed Research</b></td><td width="600px">Automated high resolution image analysis for mapping total above-ground carbon and P. afra (Spekboom) canopy cover over large areas in the Subtropical Thicket biome.</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Has this project previously been funded by the NRF?</b></td><td width="600px">No </td></tr></table><table class="tableHeading"><tr><td><h2 class="printPreview"><a id="TOCEntry_138_Target_ID" href="#tagTableOfContents" name="PreferredPanel" class="sectionHeader" data-bookmark-enabled="true" data-bookmark-level="1">Preferred Panel</a></h2></td></tr></table><table class="printPreviewTable"><tr class="borderTopAndBottom"><td valign="top"><b>Primary Panel</b></td><td width="600px">Earth Sciences</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Secondary Panel</b></td><td width="600px">Engineering</td></tr></table><table class="tableHeading"><tr><td><h2 class="printPreview"><a id="TOCEntry_56_Target_ID" href="#tagTableOfContents" name="AcademicAchievement" class="sectionHeader" data-bookmark-enabled="true" data-bookmark-level="1">Academic Achievements</a></h2></td></tr></table><table class="printPreviewTable"><tr class="borderTopAndBottom"><td valign="top"><b>Cumulative grade point average percentage for all subjects of previous degree (e.g 65 or pass)</b></td><td width="600px">81</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Cumulative grade point average percentage for major subjects in the final year of previous degree (e.g 65 or pass)</b></td><td width="600px">80</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Year in which previous degree was completed</b></td><td width="600px">2001</td></tr></table><table class="tableHeading"><tr><td><h2 class="printPreview"><a id="TOCEntry_61_Target_ID" href="#tagTableOfContents" name="DetailsOfResearch" class="sectionHeader" data-bookmark-enabled="true" data-bookmark-level="1">Details of Research</a></h2></td></tr></table><table class="tableHeading"><tr><td><h2 class="printPreview"><a id="TOCEntry_216_Target_ID" href="#tagTableOfContents" name="ResearchRationaleAndMotivation" class="sectionHeader" data-bookmark-enabled="true" data-bookmark-level="1">Details of Research: Research Rationale and Motivation</a></h2></td></tr></table><div class="printPreviewMemo">The Subtropical Thicket biome is found in the Eastern Cape and Little Karoo.  Poorly managed livestock browsing, particularly by goats, has resulted in substantial degradation of thicket habitat throughout much of its range (Thompson et al. 2009; Powell et al. 2005).  Severely degraded thicket is not able to recover spontaneously if livestock pressure is removed (Mills et al. 2007; Vlok, Cowling &amp; Wolf 2005).   <br /><br />Portulacaria afra (Spekboom) is an important species in the Subtropical Thicket biome.  It is an attractive browse plant for indigenous herbivores but is highly susceptible to over-browsing by goats (Marais, Cowling &amp; Powell 2009; Sigwela et al. 2009; Mills et al. 2007; Mills et al. 2005).   P.afra appears to act as a nurse plant, creating a favourable environment for the establishment of other species (Mills &amp; Cowling 2010).  It has been observed that over a period of 40 years, woody canopy and other species re-establish in P. afra restoration areas to a degree that restored thicket is compositionally identical to intact thicket (Vyver et al. 2012).  Comparison of degraded and intact sites has shown that P. afra restoration could sequester up to 85 t C ha-1 (Powell 2009; Marais, Cowling &amp; Powell 2009; Mills et al. 2005).  This number competes with the carbon storage capacity of mesic forests (Mills et al. 2005).  <br /><br />There is considerable interest in actively restoring degraded thicket habitat.  Subtropical Thicket provides an important source of food for many herbivores, including domesticated livestock (Thompson et al. 2009; Vlok, Cowling &amp; Wolf 2005).  Re-establishment of P. afra in degraded areas will help prevent soil erosion and reduce flood severity (Mills &amp; Cowling 2006).  It is also attractive from an employment perspective; potentially creating thousands of jobs in impoverished areas, if implemented on a large scale.  Increased biodiversity could help improve income from tourism and provide sustained access to wood, fruit, and medicines for local communities (Mills et al. 2007).  Carbon captured through restoration of P. afra can be traded as credits on the international carbon market.  Using this as a source of funding for landscape-scale restoration has been shown to be economically viable (Mills et al. 2007; Marais, Cowling &amp; Powell 2009).  <br /><br />Carbon stock measurements are generally performed using field-based allometric techniques which are extremely time consuming and costly when performed manually and are not practical on a large scale (Eisfelder, Kuenzer &amp; Dech 2012; Powell 2009; Lu 2006).  The impracticality of allometry for large areas is confounded in the Subtropical Thicket biome due to its density, heterogeneous nature and complex growth forms (Powell 2009).<br /><br />A means for the accurate remote sensing of carbon stocks would allow restoration projects to qualify for income generation through the generation of carbon credits.  Such a method would provide a substantial improvement in cost effectiveness over manual allometry and is probably the only practical way of satisfying carbon accounting requirements on a landscape scale.  <br /><br />In the context of climate change, carbon stocks (directly related to biomass) are important for monitoring ecosystem carbon dynamics.  Improved biomass is related to increased biodiversity (Lu 2006; Fabricius, Burger, and Hockey 2003), reduced erosion and improved soil fertility and water-holding ability (Eisfelder, Kuenzer &amp; Dech 2012; Mills &amp; Cowling 2010; Lechmere-Oertel et al. 2008; Mills &amp; Fey 2004).  Mapping of P. afra canopy cover represents a practical first step towards a technique for remote sensing of Subtropical Thicket carbon stocks.  Powell (2009) found that P. afra canopy cover was strongly correlated with above-ground carbon stocks (R2=0.516).  <br /><br />A technique for automated mapping of carbon stocks would present a number of challenges from a technical remote sensing perspective.  While receiving increasing attention, use of very high resolution (VHR) imagery for estimation of environmental variables is still fairly uncommon, especially over large areas such as the Little Karoo or Eastern Cape (Eisfelder, Kuenzer &amp; Dech 2012; Lu 2006).  <br /><br />Dealing with sources of unwanted variation is a recurring difficulty reported in the remote sensing literature (Eisfelder, Kuenzer &amp; Dech 2012; Baraldi et al. 2010; Lu 2006).  Achieving accurate canopy cover and carbon stock mappings over a large spatial scale and using a mosaic of images acquired at different times will require algorithms that are robust to many of the variations commonly encountered.  These will include varying topography and thicket habitats, possible phenological changes and shadow variations.  Results of dealing with these challenges will be of interest to the remote sensing community.<br /><br />----<br />Please see a list of references under "attachments".</div><table class="tableHeading"><tr><td><h2 class="printPreview"><a id="TOCEntry_62_Target_ID" href="#tagTableOfContents" name="ProblemIdentification" class="sectionHeader" data-bookmark-enabled="true" data-bookmark-level="1">Details of Research: Problem Identification</a></h2></td></tr></table><div class="printPreviewMemo">Subtropical Thicket has been degraded by overgrazing over much its range.  There is significant interest and a growing body of research in thicket restoration through the planting of Portulacaria afra (Spekboom).  Restoration projects will generate employment, restore ecosystem services and produce carbon credits that can be traded to offset restoration costs.  There is a need for spatial information, in the form of total above-ground carbon (TAGC) stock and P. afra canopy cover maps, to support the planning and monitoring of restoration projects.  <br /><br />Restoration is planned for large areas of the Little Karoo and Eastern Cape.  Map scales of at least 1:10000 are required to provide sufficient accuracy for farm-level restoration planning.  The production of detailed, carbon stock and canopy cover maps using manual methods at these scales is prohibitively time-consuming and expensive, particularly for large areas.  <br /><br />The South African government, specifically the Chief Directorate: National Geo-spatial information (NGI), routinely acquires very high resolution (VHR) (i.e. 0.5m resolution) multi-spectral data with national coverage. This imagery represents a rich source of information, but to date it has only been used for topographical mapping and photo-interpretation, and has not been exploited for automated vegetation monitoring.  While receiving increasing attention, use of VHR imagery for estimation of environmental variables is still fairly uncommon, especially over large areas such as the Little Karoo or Eastern Cape. <br /><br />An automated or semi-automated image analysis technique that is robust to the inherent temporal, topographic and radiometric variations in VHR aerial imagery is needed to monitor TAGC and P. afra canopy cover dynamics in the Subtropical Thicket biome.  </div><table class="tableHeading"><tr><td><h2 class="printPreview"><a id="TOCEntry_218_Target_ID" href="#tagTableOfContents" name="ResearchAimsAndObjectives" class="sectionHeader" data-bookmark-enabled="true" data-bookmark-level="1">Details of Research: Research Aims and Objectives</a></h2></td></tr></table><div class="printPreviewMemo">The research aim is to develop an automated or semi-automated image analysis technique to accurately estimate P. afra canopy cover and total above-ground carbon (TAGC) in pristine and transformed Subtropical Thicket, over large areas.  A secondary aim is for the mapping techniques to make use of freely available, uncalibrated, very high resolution (VHR) aerial imagery from Chief Directorate: National Geospatial Information (NGI).<br /><br />To achieve the research aims, the following objectives have been set:<br />1. Review the literature on P. afra restoration, canopy cover and carbon stock mapping in arid environments, as well as canopy cover and carbon stock mapping using VHR imagery.<br />2. Carry out a field study to establish suitable reference sites and determine the actual (ground truth) canopy cover for each site.<br />3. Source and rectify raw aerial imagery of the study area from NGI.   Develop a technique for radiometric correction of the NGI aerial imagery.  <br />4. Design a canopy cover mapping algorithm that uses a classifier to accurately distinguish P. afra from surrounding vegetation.  <br />5. Apply the classifier to imagery of the study area and interpret and evaluate the results.<br />6. Conduct a second field study to accurately locate the BNR carbon stock ground truth plots in the aerial imagery.<br />7. Using the available Baviaanskloof Nature Reserve (BNR) carbon stock ground truth, develop a regression technique to determine TAGC from aerial imagery.  Evaluate and interpret the carbon stock results. <br /></div><table class="tableHeading"><tr><td><h2 class="printPreview"><a id="TOCEntry_219_Target_ID" href="#tagTableOfContents" name="ResearchActivitiesPlanIncludeApproachMethodsTechniques" class="sectionHeader" data-bookmark-enabled="true" data-bookmark-level="1">Details of Research: Research Activities/Plan which include(s) the research approach/methods/techniques</a></h2></td></tr></table><div class="printPreviewMemo">This research investigates the use of quantitative remote sensing methods for estimating Portulacaria afra canopy cover and total above-ground carbon (TAGC) stocks in Subtropical Thicket.  Remote sensing methods are common for carbon stock estimation and will help facilitate cost-effective canopy cover and carbon stock estimation of large areas at repeated intervals.  This research can be regarded as a methodological study that is experimental in nature.  The work is intended to be applied research.  Emphasis will be placed on producing maps that are both useful and usable.  <br /><br />The study area is divided into two portions for the two main components of the research.  The first portion is in the Little Karoo, as defined in Vlok, Cowling &amp; Wolf (2005), and will be used for testing and implementing the P. afra canopy cover mapping technique.  The second portion is in the Baviaanskloof, where the carbon stock ground truth of Powell (2009) is located.  The TAGC mapping technique will be developed and applied to this data. <br /><br />The P. afra canopy cover portion of research will be undertaken in collaboration with a botanist, Jan Vlok, who has a wealth of experience in the Little Karoo (Thompson et al. 2009; Forsyth, Vlok &amp; Reyers 2008; Vlok, Cowling &amp; Wolf 2005) and with P. afra in particular.  The carbon stock estimation work will be done in collaboration with an ecologist, Mike Powell, who has been deeply involved in thicket restoration work and co-ordination of related research for many years.<br /><br />Little Karoo Field Study and Ground Truthing (Objective 2):<br /><br />In collaboration with Jan Vlok, a number of field sites will be identified to encompass the various thicket habitat types and levels of degradation.  Canopy cover ground truth will be established for each site using the current system of visual inspection.  <br /><br />Image Calibration (Objective 3):<br /><br />The NGI imagery will be sourced in a raw four-band format and orthorectified.  Existing radiometric calibration techniques for aerial imagery (Collings et al. 2011; Laliberte et al. 2011; Chandelier &amp; Martinoty 2009; Lelong et al. 2008) will be researched and applied if appropriate.  In addition, the feasibility of a technique based on the concept of cross-calibration will be investigated.  In this approach, a well-calibrated collocated and concurrent satellite image is used as a reference to which the aerial imagery is calibrated.<br /><br />Canopy Cover Mapping Algorithm (Objective 4):<br /><br />A comprehensive feature study will be conducted.  Particular attention will be given to texture features in an attempt to make the most of the high spatial resolution.  In conjunction with the feature study, feature selection and dimensionality reduction techniques will be evaluated for their effectiveness (Jain et al. 2000).  The performance of a set of typical classifiers on the feature set will be compared. <br /><br />Canopy Cover Mapping Application (Objective 5):<br /><br />A canopy cover map will be produced for the Little Karoo study area using the developed methods.  This map will be interpreted in collaboration with Jan Vlok.  Results will be validated through visual photo-interpretation and comparison with the field acquired ground truth.  <br /><br />Baviaanskloof Nature Reserve (BNR) Field Study (Objective 6):<br /><br />A field trip to the BNR will be undertaken to accurately locate the 5x5m carbon stock ground truth plots in the aerial imagery and to develop familiarity with the area.<br /><br />Carbon Stock Mapping (Objective 7):<br /><br />A multivariate nonlinear regression approach will be adopted to model the relationship between TAGC and features derived from the aerial imagery.  A variety of popular regression models such as random forests and support vector machines will be compared based on their ability to predict TAGC from the derived features.  The transferability of models between different habitat types and different levels of degradation will be investigated.  Finally, a carbon stock map will be produced for the study area using the available map of habitat types (SANBI 2007) as ancillary information.  <br /><br />Timeframes:<br /><br />Significant portions of objectives 1-5 have been successfully completed as part of previous research.  The outstanding work is planned as follows:<br /><br />2015/8-2015/9: Complete a paper on the radiometric calibration technique.<br /><br />2015/10-2015/12: Finalise the P. afra canopy cover mapping technique and application.<br /><br />2016/01-2016/03: Write a paper on the canopy cover mapping technique and application.<br /><br />2016/04-2016/06: Conduct a literature survey on mapping environmental variables in arid environments and carbon stock mapping using very high resolution (VHR) imagery.<br /><br />2016/07: Acquire and calibrate imagery of the BNR study area.<br /><br />2016/08: Perform the BNR field study to accurately locate the carbon stock ground truth plots in the imagery.<br /><br />2016/09-2017/02: Develop and evaluate the carbon stock mapping technique.<br /><br />2017/03-2017/9: Write up the development and application of the carbon stock mapping technique.<br /><br />----<br />Please see a list of references under "attachments"</div><table class="tableHeading"><tr><td><h2 class="printPreview"><a id="TOCEntry_114_Target_ID" href="#tagTableOfContents" name="ApplicationDocument" class="sectionHeader" data-bookmark-enabled="true" data-bookmark-level="1">Attachments</a></h2></td></tr></table><table class="printPreviewTable"><tr class="borderTopAndBottom"><td valign="top"><b>Description</b></td><td width="600px">ID, academic transcript and proof of registration</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Document Type</b></td><td width="600px">PDF Format</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>File Name</b></td><td width="600px">Dugal Harris - ID - Academic - Registration.pdf</td></tr></table><br /><br /><table class="printPreviewTable"><tr class="borderTopAndBottom"><td valign="top"><b>Description</b></td><td width="600px">References</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Document Type</b></td><td width="600px">PDF Format</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>File Name</b></td><td width="600px">Dugal Harris - References.pdf</td></tr></table><br /><br /><table class="tableHeading"><tr><td><h2 class="printPreview"><a id="TOCEntry_57_Target_ID" href="#tagTableOfContents" name="Reference" class="sectionHeader" data-bookmark-enabled="true" data-bookmark-level="1">References</a></h2></td></tr></table><table class="printPreviewTable"><tr class="borderTopAndBottom"><td valign="top"><b>Title</b></td><td width="600px">Prof</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Initials</b></td><td width="600px">A</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Surname</b></td><td width="600px">Van Niekerk</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Name</b></td><td width="600px">Adriaan</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Department</b></td><td width="600px">Geography and Environmental Studies</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Institution</b></td><td width="600px">Stellenbosch University</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Email Address</b></td><td width="600px">avn@sun.co.za</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Role</b></td><td width="600px">Doctoral Supervisor</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Responded</b></td><td width="600px">No </td></tr></table><br /><br /><table class="printPreviewTable"><tr class="borderTopAndBottom"><td valign="top"><b>Title</b></td><td width="600px">Mr</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Initials</b></td><td width="600px">J</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Surname</b></td><td width="600px">Vlok</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Name</b></td><td width="600px">Jan</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Department</b></td><td width="600px">Botany</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Institution</b></td><td width="600px">Nelson Mandela Metropolitan University</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Email Address</b></td><td width="600px">janvlok@mweb.co.za</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Role</b></td><td width="600px">Referee</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Responded</b></td><td width="600px">No </td></tr></table><br /><br /><table class="printPreviewTable"><tr class="borderTopAndBottom"><td valign="top"><b>Title</b></td><td width="600px">Mr</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Initials</b></td><td width="600px">MJ</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Surname</b></td><td width="600px">Powell</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Name</b></td><td width="600px">Mike</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Department</b></td><td width="600px">Environmental Science</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Institution</b></td><td width="600px">Rhodes University</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Email Address</b></td><td width="600px">m.powell@ru.ac.za</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Role</b></td><td width="600px">Referee</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Responded</b></td><td width="600px">No </td></tr></table><br /><br /><table class="tableHeading"><tr><td><h2 class="printPreview"><a id="TOCEntry_113_Target_ID" href="#tagTableOfContents" name="Declaration" class="sectionHeader" data-bookmark-enabled="true" data-bookmark-level="1">Declaration</a></h2></td></tr></table><table class="table1"><thead><th>Declaration Statement</th><th>Response</th></thead><tr class="border"><td align="left">
+		  I declare that the information given in this application form is complete and accurate to the best of my knowledge. I understand that the awarded is made on a provisional basis subject to meeting all the programme criteria and conditions of grant.
+		</td><td align="center">Yes</td></tr><tr class="border"><td align="left">
+		  I accept that if I do not comply with the programme criteria and requirements for award, the NRF reserves the right to cancel my scholarship and reclaim the grant. I shall 	inform the NRF of all changes immediately. I shall not receive any other funds without giving proper notice to NRF.
+		</td><td align="center">Yes</td></tr></table><br /><table class="tableHeading"><tr><td><h2 class="printPreview"><a id="TOCEntry_166_Target_ID" href="#tagTableOfContents" name="Checklist" class="sectionHeader" data-bookmark-enabled="true" data-bookmark-level="1">Checklist</a></h2></td></tr></table><table class="table1"><thead><th>Checklist</th><th>Response</th></thead><tr class="border"><td align="left">ID or Passport Document Attached</td><td align="center">Yes </td></tr><tr class="border"><td align="left">Certified copy of academic transcript attached </td><td align="center">Yes </td></tr><tr class="border"><td align="left">Permanent residency (if applicable)</td><td align="center">No </td></tr><tr class="border"><td align="left">Proof of registration (if available)</td><td align="center">Yes </td></tr></table><br /><table class="tableHeading" style="page-break-before:always"><tr><td><h1 class="printPreview"><a id="TOCEntry_9_Target_ID" name="tagCv" href="#tagTableOfContents">CV</a></h1></td></tr></table><table class="tableHeading"><tr><td><h2 class="printPreview"><a id="TOCEntry_4_Target_ID" href="#tagTableOfContents" name="UpdateUser" class="sectionHeader" data-bookmark-enabled="true" data-bookmark-level="1">Registration Details</a></h2></td></tr></table><table class="printPreviewTable"><tr class="borderTopAndBottom"><td valign="top"><b>Title</b></td><td width="600px">Mr</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Surname</b></td><td width="600px">Harris</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Initials</b></td><td width="600px">DJ</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>First Name</b></td><td width="600px">Dugal</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Citizenship</b></td><td width="600px">South Africa</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>ID Type</b></td><td width="600px">SA ID Number</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>ID/Passport/Unique Number</b></td><td width="600px">7511115069089</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Race</b></td><td width="600px">White</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Gender</b></td><td width="600px">Male</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Date of Birth</b></td><td width="600px">11 November 1975</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Primary Email Address</b></td><td width="600px">dugalh@gmail.com</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Alternate Email Address</b></td><td width="600px">17447585@sun.ac.za</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Mobile Number</b></td><td width="600px">0828439679</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Please tick for sms notifications</b></td><td width="600px">Yes </td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Are you a full-time student?</b></td><td width="600px">Yes </td></tr></table><table class="tableHeading"><tr><td><h2 class="printPreview"><a id="TOCEntry_6_Target_ID" href="#tagTableOfContents" name="ContactDetails" class="sectionHeader" data-bookmark-enabled="true" data-bookmark-level="1">Contact Details	</a></h2></td></tr></table><table class="printPreviewTable"><tr class="borderTopAndBottom"><td valign="top"><b>Is this the organisation which funds your salary?</b></td><td width="600px">No </td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Department/School/Institute</b></td><td width="600px">Department of Geography and Environmental Studies</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Student Number</b></td><td width="600px">17447585</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Faculty</b></td><td width="600px">Science</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Work Postal Address (excluding department)</b></td><td width="600px">Private Bag X1<br />Matieland<br /></td></tr><tr class="borderTopAndBottom"><td valign="top"><b>City/Town</b></td><td width="600px">Stellenbosch</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Code</b></td><td width="600px">7602</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Primary Telephone Number</b></td><td width="600px">082 8439679</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Mobile Number</b></td><td width="600px">0828439679</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Primary Email Address</b></td><td width="600px">dugalh@gmail.com</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Alternate Email Address</b></td><td width="600px">17447585@sun.ac.za</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Country</b></td><td width="600px">South Africa</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Province/State</b></td><td width="600px">Western Cape</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Province of Origin</b></td><td width="600px">Gauteng</td></tr></table><table class="tableHeading"><tr><td><h2 class="printPreview"><a id="TOCEntry_12_Target_ID" href="#tagTableOfContents" name="Qualification" class="sectionHeader" data-bookmark-enabled="true" data-bookmark-level="1">Qualifications</a></h2></td></tr></table><table class="printPreviewTable"><tr class="borderTopAndBottom"><td valign="top"><b>Level</b></td><td width="600px">Masters</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Name of Degree/Diploma (e.g. BSc)</b></td><td width="600px">MSc</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Field of Study</b></td><td width="600px">Electrical  engineering</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Institution</b></td><td width="600px">University of the Witwatersrand</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Full-time</b></td><td width="600px">Yes </td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Distinction</b></td><td width="600px">Yes</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Date of First Registration</b></td><td width="600px">January 1998</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Completed</b></td><td width="600px">Yes </td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Highest Completed Qualification</b></td><td width="600px">Yes </td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Date Obtained</b></td><td width="600px">October 2001</td></tr></table><br /><br /><table class="printPreviewTable"><tr class="borderTopAndBottom"><td valign="top"><b>Level</b></td><td width="600px">Honours</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Name of Degree/Diploma (e.g. BSc)</b></td><td width="600px">BSc</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Field of Study</b></td><td width="600px">Electrical  engineering</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Institution</b></td><td width="600px">University of the Witwatersrand</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Full-time</b></td><td width="600px">Yes </td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Distinction</b></td><td width="600px">Yes</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Date of First Registration</b></td><td width="600px">January 1994</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Completed</b></td><td width="600px">Yes </td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Highest Completed Qualification</b></td><td width="600px">No </td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Date Obtained</b></td><td width="600px">November 1997</td></tr></table><br /><br /><table class="tableHeading"><tr><td><h2 class="printPreview"><a id="TOCEntry_16_Target_ID" href="#tagTableOfContents" name="ResearchExpertise" class="sectionHeader" data-bookmark-enabled="true" data-bookmark-level="1">Research Expertise</a></h2></td></tr></table><table class="printPreviewTable"><tr class="borderTopAndBottom"><td valign="top"><b>Scientific Domain</b></td><td width="600px">Engineering</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Primary Research Field</b></td><td width="600px">Engineering sciences</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Secondary Research Field</b></td><td width="600px">Electronic engineering</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Fields of Specialisation</b></td><td width="600px">Remote Sensing and GIS</td></tr><tr class="borderTopAndBottom"><td valign="top"><b /></td><td width="600px">Pattern recognition and image processing</td></tr><tr class="borderTopAndBottom"><td valign="top"><b /></td><td width="600px">Software engineering</td></tr></table><table class="tableHeading"><tr><td><h2 class="printPreview"><a id="TOCEntry_18_Target_ID" href="#tagTableOfContents" name="PersonalProfile" class="sectionHeader" data-bookmark-enabled="true" data-bookmark-level="1">Personal Profile</a></h2></td></tr></table><div class="printPreviewMemo">In my undergraduate and masters studies as an Electrical Engineer, I developed a strong interest in image processing and pattern recognition.  I enjoy applying theory to practical problems in these fields i.e. "making things work".  Following a masters that looked at non-linear system identification, I worked in the commercial sector, developing a wide range of image processing, data analysis and pattern recognition systems.  Significant projects I have been responsible for include a license plate recognition system, a hyperspectral mineral identifier, a diamond colour and quality classifier and a sub-seafloor seismic volume generator.  For the past seven years, I have worked in research environments at DebTech and De Beers Marine R&amp;D.  I have had a passion for developing technical software since my undergraduate years and through my career I have gained a wealth of experience in this area.  I believe a software engineering background is an advantage in my research field.  Recently, I have been involved in some exciting remote sensing work, including the processing and visualisation of seismic data captured by an Autonomous Underwater Vehicle (AUV).  <br /><br />While I have thoroughly enjoyed the challenge of the technical work I have done, a growing concern for the sustainability of humanity's current relationship with the natural environment, and a love of research, has inspired me to start a PhD in earth observation.  I believe my background and experience are well-suited to this field.  Specifically, I am interested in quantifying the amount of carbon absorbed by vegetation and soil over large areas.  This is of particular importance in monitoring and mitigating the development of future climate change.</div><table class="tableHeading"><tr><td><h2 class="printPreview"><a id="TOCEntry_14_Target_ID" href="#tagTableOfContents" name="CareerProfile" class="sectionHeader" data-bookmark-enabled="true" data-bookmark-level="1">Career Profile</a></h2></td></tr></table><table class="printPreviewTable"><tr class="borderTopAndBottom"><td valign="top"><b>Position</b></td><td width="600px">Electronics Engineer</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Organisation</b></td><td width="600px">De Beers Marine</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Sector</b></td><td width="600px">Business Sector and Commercial Research Houses</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Type</b></td><td width="600px">Contract</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Full-time</b></td><td width="600px">No </td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Appointed From</b></td><td width="600px">March 2012</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Current</b></td><td width="600px">Yes </td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Appointed To</b></td><td width="600px">May 2016</td></tr></table><br /><br /><table class="printPreviewTable"><tr class="borderTopAndBottom"><td valign="top"><b>Position</b></td><td width="600px">Software Engineer</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Organisation</b></td><td width="600px">DebTech</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Sector</b></td><td width="600px">Business Sector and Commercial Research Houses</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Type</b></td><td width="600px">Permanent</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Full-time</b></td><td width="600px">Yes </td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Appointed From</b></td><td width="600px">August 2007</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Current</b></td><td width="600px">No </td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Appointed To</b></td><td width="600px">December 2011</td></tr></table><br /><br /><table class="printPreviewTable"><tr class="borderTopAndBottom"><td valign="top"><b>Position</b></td><td width="600px">Software Engineer</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Organisation</b></td><td width="600px">Protoclea Advanced Image Engineering</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Sector</b></td><td width="600px">Business Sector and Commercial Research Houses</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Type</b></td><td width="600px">Permanent</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Full-time</b></td><td width="600px">Yes </td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Appointed From</b></td><td width="600px">May 2000</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Current</b></td><td width="600px">No </td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Appointed To</b></td><td width="600px">July 2007</td></tr></table><br /><br /><table class="tableHeading"><tr><td><h2 class="printPreview"><a id="TOCEntry_547_Target_ID" href="#tagTableOfContents" name="ResearchOutputSummary" class="sectionHeader" data-bookmark-enabled="true" data-bookmark-level="1">Research Outputs</a></h2></td></tr></table><table class="table2"><thead><tr><th><b>Year</b></th></tr></thead><tr><td><b>TOTAL</b></td></tr></table><table class="tableHeading"><tr><td><h2 class="printPreview"><a id="TOCEntry_34_Target_ID" href="#tagTableOfContents" name="Books" class="sectionHeader" data-bookmark-enabled="true" data-bookmark-level="1">Books</a></h2></td></tr></table><table class="tableHeading"><tr><td><h2 class="printPreview"><a id="TOCEntry_35_Target_ID" href="#tagTableOfContents" name="BookChapters" class="sectionHeader" data-bookmark-enabled="true" data-bookmark-level="1">Chapters in Books</a></h2></td></tr></table><table class="tableHeading"><tr><td><h2 class="printPreview"><a id="TOCEntry_37_Target_ID" href="#tagTableOfContents" name="RefereedPeerReviewedConferenceOutput" class="sectionHeader" data-bookmark-enabled="true" data-bookmark-level="1">Refereed/Peer-reviewed Conference Outputs</a></h2></td></tr></table><table class="tableHeading"><tr><td><h2 class="printPreview"><a id="TOCEntry_45_Target_ID" href="#tagTableOfContents" name="JournalRefereedPeerReviewedArticles" class="sectionHeader" data-bookmark-enabled="true" data-bookmark-level="1">Articles in Refereed/Peer-reviewed Journals</a></h2></td></tr></table><table class="tableHeading"><tr><td><h2 class="printPreview"><a id="TOCEntry_20_Target_ID" href="#tagTableOfContents" name="Patent" class="sectionHeader" data-bookmark-enabled="true" data-bookmark-level="1">Patents</a></h2></td></tr></table><table class="tableHeading"><tr><td><h2 class="printPreview"><a id="TOCEntry_26_Target_ID" href="#tagTableOfContents" name="KeynotePlenaryAddresses" class="sectionHeader" data-bookmark-enabled="true" data-bookmark-level="1">Keynote/Plenary Addresses </a></h2></td></tr></table><table class="tableHeading"><tr><td><h2 class="printPreview"><a id="TOCEntry_27_Target_ID" href="#tagTableOfContents" name="ArticlesInNonRefereedNonPeerReviewedJournals" class="sectionHeader" data-bookmark-enabled="true" data-bookmark-level="1">Articles in Non-refereed/Non-peer Reviewed Journals</a></h2></td></tr></table><table class="tableHeading"><tr><td><h2 class="printPreview"><a id="TOCEntry_28_Target_ID" href="#tagTableOfContents" name="OtherSignificantConferenceOutputs" class="sectionHeader" data-bookmark-enabled="true" data-bookmark-level="1">Other Significant Conference Outputs</a></h2></td></tr></table><table class="printPreviewTable"><tr class="borderTopAndBottom"><td valign="top"><b>Title of Proceeding</b></td><td width="600px">3rd Robotics and Mechatronics Symposium (ROBMECH 2009)</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Title of Contribution</b></td><td width="600px">Integrating two spectral imaging systems in an automated mineralogy application </td></tr><tr class="borderTopAndBottom"><td valign="top"><b>All Authors in Order Appearing on Output</b></td><td width="600px">Harris D.J., Viranna N., Hill G. and Green J.</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Status</b></td><td width="600px">Published/produced</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Year</b></td><td width="600px">2009</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Applicant's Contribution</b></td><td width="600px">Development and implementation of image processing techniques</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Page From</b></td><td width="600px">1</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Page To</b></td><td width="600px">5</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>City/Country</b></td><td width="600px">Pretoria, South Africa</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Web Address</b></td><td width="600px">http://researchspace.csir.co.za/dspace/bitstream/10204/4114/1/Harris_2009.pdf</td></tr></table><br /><br /><table class="printPreviewTable"><tr class="borderTopAndBottom"><td valign="top"><b>Title of Proceeding</b></td><td width="600px">3rd International Conference on Control Theory and Applications (ICCTA'01)</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Title of Contribution</b></td><td width="600px">Development of a nonlinear structure identification methodology</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>All Authors in Order Appearing on Output</b></td><td width="600px">Harris D.J. and Wigdorowitz B.</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Status</b></td><td width="600px">Published/produced</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Year</b></td><td width="600px">2001</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Applicant's Contribution</b></td><td width="600px">Development and application of methodology</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>City/Country</b></td><td width="600px">Pretoria, South Africa</td></tr></table><br /><br /><table class="tableHeading"><tr><td><h2 class="printPreview"><a id="TOCEntry_29_Target_ID" href="#tagTableOfContents" name="ReportTechnicalPolicy" class="sectionHeader" data-bookmark-enabled="true" data-bookmark-level="1">Technical/Policy Reports</a></h2></td></tr></table><table class="tableHeading"><tr><td><h2 class="printPreview"><a id="TOCEntry_30_Target_ID" href="#tagTableOfContents" name="Products" class="sectionHeader" data-bookmark-enabled="true" data-bookmark-level="1">Products</a></h2></td></tr></table><table class="printPreviewTable"><tr class="borderTopAndBottom"><td valign="top"><b>Description</b></td><td width="600px">Sub-seafloor 3D seismic data acquisition system.  Seismic and positioning data captured with an Autonomous Underwater Vehicle (AUV) and in-house developed sensor hardware.  Data subsequently processed into a 3D volume for visualisation and attribute generation.</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>All Authors in Order Appearing on Output</b></td><td width="600px">Makrygiannis E. and Harris D.J.</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Status</b></td><td width="600px">Published/produced</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Year</b></td><td width="600px">2015</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Applicant's Contribution</b></td><td width="600px">Developed software for beamforming and binning raw acoustic and positioning data into 3D volumes.  Created software tools for visualising 3D volumes.  Designed and developed an algorithm for detecting and delineating a target geological layer in the seismic data.</td></tr></table><br /><br /><table class="printPreviewTable"><tr class="borderTopAndBottom"><td valign="top"><b>Description</b></td><td width="600px">Real-time seismic beamforming, recording and visualisation software for use during trials of a prototype seismic system.</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>All Authors in Order Appearing on Output</b></td><td width="600px">Harris D.J and Makrygiannis E.</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Status</b></td><td width="600px">Published/produced</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Year</b></td><td width="600px">2013</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Applicant's Contribution</b></td><td width="600px">Designed and developed the software.</td></tr></table><br /><br /><table class="printPreviewTable"><tr class="borderTopAndBottom"><td valign="top"><b>Description</b></td><td width="600px">Sub-seafloor seismic modelling and simulation.</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>All Authors in Order Appearing on Output</b></td><td width="600px">Harris D.J.</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Status</b></td><td width="600px">Published/produced</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Year</b></td><td width="600px">2013</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Applicant's Contribution</b></td><td width="600px">Researched and tested available models and produced simulations of typical geologies.</td></tr></table><br /><br /><table class="printPreviewTable"><tr class="borderTopAndBottom"><td valign="top"><b>Description</b></td><td width="600px">Mining visualisation tool.  Integration and presentation of bathymetry, positional and audio data for monitoring of marine drillship mining efficiency.</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>All Authors in Order Appearing on Output</b></td><td width="600px">Harris D.J. and Eccles E.</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Status</b></td><td width="600px">Published/produced</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Year</b></td><td width="600px">2012</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Applicant's Contribution</b></td><td width="600px">Algorithm design and software development.</td></tr></table><br /><br /><table class="printPreviewTable"><tr class="borderTopAndBottom"><td valign="top"><b>Description</b></td><td width="600px">Diamond sorting machine using ultraviolet fluorescence imaging.  </td></tr><tr class="borderTopAndBottom"><td valign="top"><b>All Authors in Order Appearing on Output</b></td><td width="600px">High G., Harris D.J., Steyn T. and Voigt A.</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Status</b></td><td width="600px">Published/produced</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Year</b></td><td width="600px">2011</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Applicant's Contribution</b></td><td width="600px">Designed and implemented the diamond/waste classifier and image calibration method.</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Web Address</b></td><td width="600px">http://www.debtech.com/prod9.htm</td></tr></table><br /><br /><table class="printPreviewTable"><tr class="borderTopAndBottom"><td valign="top"><b>Description</b></td><td width="600px">Hyperspectral mineral identification machine.  Trays of fine mineral grains are scanned with separate visible and infra-red range spectral sensors.  Using the spectral data, target grains are identified and accurately located for picking with a robotic arm.</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>All Authors in Order Appearing on Output</b></td><td width="600px">Hill G., Landgrebe T., Harris D.J., Viranna N. and Green J.</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Status</b></td><td width="600px">Published/produced</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Year</b></td><td width="600px">2010</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Applicant's Contribution</b></td><td width="600px">Designed and developed image registration and distortion correction algorithms.  Created the classifier for the infra-red portion of the data.</td></tr></table><br /><br /><table class="printPreviewTable"><tr class="borderTopAndBottom"><td valign="top"><b>Description</b></td><td width="600px">Diamond colour and quality measurement system.  Images from multiple cameras with consistent back-lighting are used to derive typical diamond characteristics.</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>All Authors in Order Appearing on Output</b></td><td width="600px">Harris D.J., Morrison G. and Viranna N.</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Status</b></td><td width="600px">Published/produced</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Year</b></td><td width="600px">2009</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Applicant's Contribution</b></td><td width="600px">Conceptualised and developed the classification and calibration software.</td></tr></table><br /><br /><table class="printPreviewTable"><tr class="borderTopAndBottom"><td valign="top"><b>Description</b></td><td width="600px">License plate recognition system for monitoring the N2 bus lane in Cape Town.</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>All Authors in Order Appearing on Output</b></td><td width="600px">Harris D.J.</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Status</b></td><td width="600px">Published/produced</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Year</b></td><td width="600px">2007</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Applicant's Contribution</b></td><td width="600px">Software design, development and system deployment.</td></tr></table><br /><br /><table class="printPreviewTable"><tr class="borderTopAndBottom"><td valign="top"><b>Description</b></td><td width="600px">License plate recognition system for improved security in parking areas.  Operational at the O.R. Tambo International airport.</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>All Authors in Order Appearing on Output</b></td><td width="600px">Harris D.J., Dredge A. and Tiplady K.</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Status</b></td><td width="600px">Published/produced</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Year</b></td><td width="600px">2005</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Applicant's Contribution</b></td><td width="600px">Designed the system and managed the development team and deployment process.  Developed the image processing and hardware interfacing software.</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Web Address</b></td><td width="600px">http://www.protoclea.co.za/index.php?option=com_content&amp;view=article&amp;id=42&amp;Itemid=105</td></tr></table><br /><br /><table class="printPreviewTable"><tr class="borderTopAndBottom"><td valign="top"><b>Description</b></td><td width="600px">Digital video recorder for the security industry.  High quality and frame-rate video recorder with motion detection capability.</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>All Authors in Order Appearing on Output</b></td><td width="600px">Tiplady K., Harris D.J. and Moore G.</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Status</b></td><td width="600px">Published/produced</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Year</b></td><td width="600px">2004</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Applicant's Contribution</b></td><td width="600px">Embedded software development.</td></tr></table><br /><br /><table class="printPreviewTable"><tr class="borderTopAndBottom"><td valign="top"><b>Description</b></td><td width="600px">Forest fire detection system.  Use of remote cameras for the early detection of smoke plumes.</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>All Authors in Order Appearing on Output</b></td><td width="600px">Harris D.J.</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Status</b></td><td width="600px">Not relevant</td></tr><tr class="borderTopAndBottom"><td valign="top"><b>Applicant's Contribution</b></td><td width="600px">Designed and developed the image processing and pattern recognition software.</td></tr></table><br /><br /><table class="tableHeading"><tr><td><h2 class="printPreview"><a id="TOCEntry_31_Target_ID" href="#tagTableOfContents" name="Artefacts" class="sectionHeader" data-bookmark-enabled="true" data-bookmark-level="1">Artefacts</a></h2></td></tr></table><table class="tableHeading"><tr><td><h2 class="printPreview"><a id="TOCEntry_32_Target_ID" href="#tagTableOfContents" name="Prototypes" class="sectionHeader" data-bookmark-enabled="true" data-bookmark-level="1">Prototypes</a></h2></td></tr></table><table class="tableHeading"><tr><td><h2 class="printPreview"><a id="TOCEntry_33_Target_ID" href="#tagTableOfContents" name="OtherRecognisedResearchOutputs" class="sectionHeader" data-bookmark-enabled="true" data-bookmark-level="1">Other Recognised Research Outputs</a></h2></td></tr></table>

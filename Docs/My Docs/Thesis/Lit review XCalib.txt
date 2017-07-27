@@ -1,0 +1,197 @@
+A quick relook at some of the literature just to pick up any relevant pts esp about sensor spectral sensitivity & ways of validating
+
+Important points to make
+XX  - It is per-image while xcalib (and other recent uav calib papers) are sensor calibs.  i.e. once the sensor is calibrated, that is valid for a bunch of images.  (Perhaps mention that traditional sensor-sensor xcalib, calibrates for toa irrandiance (? correct terminology), whereas we are calibrating for surf reflectance. Yes - NB.)  But you must still do atcor and brdf per-image which req knowledge of atmospheric conditions, complex methods, many options to choose from, BRDF kernel selection, auditing results (i.e. insight into these algorithms, access to expensive implementations, time-consuming optimisations) etc. Then it requires a post-proc step to normalise and remove seamlines from mosaic, which is error-prone.  My method makes assumptions that may not hold in practive but is faster, cheaper, simpler and seemingly about the same accuracy.  Also, my method includes a sort of implicit validation whereas blind atcor and brdf correction should really be checked.
+- "Reflectance" and "radiance" are at specific wavelengths.  "Spectral reflectance" or "spectral radiance" are averaged over a spectral band.
+- We are calibrating to surface reflectance no toa radiance etc etc.
+
+General
+  - Me: If you're calibrating sensors as opposed to images, it is obviously important that the viewing geom is the same or at least compensated for.  If you're calibrating images,   (esp in a per-pixel way), then I think part of  the calibration can account for viewing geom differences.  The advantage of calib sensors is that it is done in a more controlled way with a consistent target with less BRDF & Atmospheric effects i.e. more ind of these effects.  Calib images assumes the ref BRDF and atcor is everywhere correct which is not true.  But then your own BRDF and atcor is also not going to be everyhwere correct... 
+  - "Reflectance" and "radiance" are at specific wavelengths.  "Spectral reflectance" or "spectral radiance" are averaged over a spectral band.
+  
+  
+  
+General To Do:
+  - See if we can incl sensor spectral sensitivity in model, then how we can factor that out (or in) to the linear simplified model.  Also how we can separate out just the sensor effect, assuming brdf and atmos are =1, then if we can show that this sensor is linear in reality, then its ok to incl in the lin simplified model (see Lopez eq 2)
+  - Make plot of simulated ngi, modis (&spot) responses
+  - Show before and after calib scatters (modis vs ngi), will make more sense than adriaans idea.  Also show before and after r2 to give another measure of calib effectiveness.... 
+  - Perhaps mention that traditional sensor-sensor xcalib, calibrates for toa irrandiance (? correct terminology), whereas we are calibrating for surf reflectance.  Yes - NB.
+  - Reference error vals (teillet et al x2 from Kamei et al)
+  - Ref (Kamei et al) on spectral band difference effects
+  - Plot the spectral sens (& surf refl?)
+  - Ref xcalib error 3.5% in teillet.  This is % of range though not refl % i.e. probably quite a bit more accurate than my SPOT error.
+  - When ref Jiang and Li qualify that sensor spectral sens need to be similar
+  - Decide on terminology: - "cross calibration", "vicarious calibration", ?? - something that indicates it is full radiometric calib
+                           - mosaic / collection image
+						   - photographs vs images vs rasters
+						   - error image vs difference image
+  - Mention that this can be considered a form of data fusion
+  - Our method avoids, in situ ground meas, complex models
+  - Call it "image cross calibration" and "sensor xcalib" rather than "image to image xcalib" and ...
+  - Mention that most aerial tri methods have no abs error measures
+  - as In Lopez: make 2x y axis figure of sensor sens and eg surf refl
+  - ref Lopez and Collings results!
+  - just using overlap to fit model is a localised relative correction and can result in gradients across the image.  then using actual ground refl meas gives an absolute calibration.
+  - compare histograms of modis and calib ims - why does the modis appear hazier?
+
+  - check how the ngi ds mosaics are formed.  is it the same as for spot?  is there something fishy going on
+  - try do the same correlation plot but for maps exported from arcmap using full res ngi mosaic...
+  - Rerun xcalib with latest algorithm
+  - Regen downsampled mosaics to use with SPOT and MODIS validations
+  - Covert accuracy results to same units as references eg % of range 
+  - Cross calib paper results are for TOA radiance and calib coeff variation and thus only roughly of interest to our problem which is a reflectance difference
+  
+  - another thing: radiometric calibration is seeming used to refer to different things in literature which is again confusing - we mean calibration to surf reflectance.  is there a standard terminology for this?  
+  - terminology is "cross calib" used elsewhere, is "tandem data" used elsewhere - in what contexts?  
+  - Ref ESTARFM as using local lin rel of reflectance !
+  
+Plots to make:
+  - Orientation of study area (LK outline)  
+  - New hotspot + seamline image
+  - DMC at modis res before and after with MODIS 
+  - Regression scatter before and after of DMC calib (before and after per band with r2)
+  - Histograms before and after (all on one plot?)
+  - DMC, MODIS spec sens.  DMC, MODIS, SPOT spec sens.  + Typical land covers
+  - DMC-MODIS rel betw land cover DNs
+  
+Editing To Do
+  - Discuss other results 
+  - Mention fusion
+  
+  
+Defns/Terminology
+- Image/raster/photograph:
+	Use image - it is far more common than raster and they mean the same thing as far as I can tell.  Photograph is ambiguous.
+    Image: Pictorial representation of data acquired by satellite systems, such as direct readout images from environmental satellites. An image is not a photograph. An image is composed of two-dimensional grids of individual picture elements (pixels). Each pixel has a numeric value that corresponds to the radiance or temperature of the specific ground area it depicts. See gray scale.
+	Raster: Generally seems to be used to differentiate a "raster image" i.e. scalar pixel image from a "vector image" i.e. an image created from vector data like a block diagram.  So raster = array of pixels.
+- Mosaic/image colllection/image block/ block of ims
+    Mosaic is often used in the context of a collection of images in current / relevant research but is ambiguous as historically it has referred to the end product of combining many images and smoothing the result
+	So lets prefer "block of images" as it is the clearest.  "image block" or "image collection" are also options
+- Smoothness/seamless 
+    Seamless is used more often than smooth and corresponds to the historical use in image mosaicing, so lets prefer this
+- Cross calibration / radiometric calibration / radiometric correction / vicarious calibration
+    "cross calibration" refers to the calibration of one sensor to another using images of the same area.  What we are a doing is more a per-image cross calibration rather than a sensor cross calibration.  it is not a well known term however and perhaps should not be used in the title.  
+	"in situ" can be used to refer to actual meas on the ground 
+	"vicarious" calibration refers to post launch calibration of sensors that dont have onboard calibration usually using ground measurements. so i think vicarious refers to the fact that it is not a lab calibration but through the vicarious perspective of a ground based measurement. it is na to my technique.
+- error vs difference
+    In Lopez, fig 5, they call a similar measure to my "error" "reflectance difference" - let's use this too
+- title: "radiometric cross calibration of aerial imagery using satellite reference"
+		 "radiometric cross calibration of VHR imagery"
+		 "radiometric cross calibration of aerial and satellite imagery (using tandem data)"
+		 "radiometric cross calibration of aerial and satellite imagery (using image pairs)"	
+		 "radiometric cross calibration of aerial image mosaics with a satellite reflectance image"	
+		 * "a straightforward cross calibration approach to the radiometric correction of aerial imagery"
+		 * "a straightforward method for radiometric correction of aerial imagery using tandem data"
+		 * "a straightforward approach for the conversion of aerial imagery to surface reflectance using tandem satellite data"
+		 * "a straightforward approach for the conversion of aerial imagery to surface reflectance using collocated and concurrent satellite data"
+		 * "an approach for the retrieval of surface reflectance from aerial imagery using collocated and concurrent satellite data"
+		 * "an approach for the retrieval of surface reflectance from aerial imagery using a fusion with collocated and concurrent satellite data"
+		 * "a fusion approach for the retrieval of surface reflectance from aerial imagery using tandem satellite data"
+		 * "retrieval of surface reflectance from aerial imagery using collocated and concurrent satellite data"
+		 * "retrieval of surface reflectance from aerial imagery by fusing with satellite data"
+		 * "retrieval of surface reflectance by fusing aerial imagery and satellite reference data"
+- colour balancing
+		 
+- Worldview uses "radiometric correction" to refer to a kind of flatfield correction and uses "conversion to surface reflectance" to refer to "calibration" to surface reflectance i.e. is "calibration" the right term at all?  calibration refers more to factoring out sensor variabilities rather than conversion to some other quantity
+- another paper uses the term "radiometric processing" to include atcor and brdf.  another paper uses the term refletance calibration.  another paper uses radiometric calibration.
+- "tandem" is not used often at all it seems 
+- "retrieval of reflectance" from eg landsat data is also used 
+- "cross calibration" is seemingly always used in context of xcalib of satellite sensors 
+- "linear regression" vs "least squares"
+  
+XCalib
+-------
+- Jiang, G. -M. Li, Z. -L.
+  - Mention sensor spectral effects a few times
+  - "The above approaches can be categorized into the Ray-Matching (RM) method; however, this method does not take into account the spectral differences between two sensors, and leads to unacceptable errors when spectral differences are large."
+  - NB ref accuracy: "Liu and Li (2004) implemented the calibration of the Multi-channel Visible and Infra-Red Scanning radiometer (MVIRS) onboard China’s polar-orbiting meteorological satellite (FY- 1D) against MODIS using the 6S radiative transfer model and a bidirectional reflectance distribution function (BRDF) model, and obtained a calibration accuracy of 5%. "
+  - "and validated it against in situ measurements of sea surface temperature (SST)"
+  - "which will validate the results of Doelling et al. (2004a,b), highlighting the strong effects caused by the spectral differences"
+  - allegedly rm does not account for spectral sens while rtm does
+  - NB eg graphs of RTM simulated temp meas for 2 sensors with linear fit & R coeff
+  - NB calib results showed against ref as scatter plot with R.  i.e. used as validation.  This could be more useful than adriaans spectra idea i.e. show before and after calib scatters
+  - They don't actually plot the lin rel betw the sim responses, they just give R2 which is fair enough - we all know how a straight line looks
+  - NB (I think) - they have a big spectral sens sensor discrepancy for one ch (which covers mult ch in the tgt sensor).  For this they say RTM is best.  So to ref this paper and say one doesn't need to consider sensor spectral sens needs qualification.
+  - Their concl
+  
+- Kamei, Nkamuru
+  - Uses ASTER as ref which is high res - this is a "to do" for the discussion.  Apparently ASTER is calibrated. 
+  - No scatter graphs, just gain coefficient and how it changes for different images (and different RTM params).  i.e. good RTM (brdf etc) means the calib gain should stay consistent.
+  - "The precision of cross calibration is est to be 5-6%" reference - [this is not a refl difference but a variance in the calib coeff which only roughly corresponds to my refl difference]
+  - "Spectral band difference effects" SBDE have little effect.  Although their bands are v different.
+- Teillet\
+  - Also sims effect of spectral sensitivities ("The effects these spectral band differences have on measured TOA reflectances depend on spectral variations in the exo-atmo- spheric solar illumination, the atmospheric transmittance, and the surface reflectance").  They infer from this what are good ground covers to use for calib.    
+  - ims gridded and avg vals of grid cells used for staright line fit.  grids are shifted to see effect of misregistration 
+  - Residuals measured by how much data deviates from straight line fit (similar to r2).  also by how well same calib coeff applied to different im works. 
+  - "The jitter analysis indicated a misregistration effect on the order of 0.24% and, although no corroborative analyses have been carried out, experience suggests that the other uncertainties are also well within 1%. If these additional sources of uncertainty amount to a 1–2% effect, the overall root-sum-squared uncertainty for the cross-calibration method is approxi- mately ± 3.5%. The"
+- Gao and Jiang
+  - Again simulate effect of spectral sens with 6S.  again linear.  I think ("spectral matching")
+  - Error is analyses as relative difference of cross calib gains vs vicarious calib gains.
+  - "To account for discrepancies in the spectral coverage between the two sensors, spectralmatching factors are estimated via the regression method instead of using synchronous measurements"
+
+
+Aerial calib
+-------
+- Chandelier
+  - very clear and simple presentation
+  - "seamless mosaics" = smooth mosaic
+  - "These constraints rule out one way of performing the corrections, which is to use physically-based methods (for example, ATCOR; Richter and Schläpfer, 2002), or relying on radiative transfer models (for example, MODTRAN; Berk et al., 1998)."
+  - presents a simplified 3 param model for refl to radiance/DN.  Params solved using the fact that overlapping regions have same refl.  "Tie points" gen on 100m grid to find overlapping regions.  then LS fit (non-lin).
+  - terminology: "blocks of images" = image collection, "image/images", "hot spot model" = gain raster, "mosaic"/"orthoimage" = mosaic, 
+  - results: eg images with gain raster, orig and calib mosiac, also separate ir orig and calib greyscale, close-up of gradients before and after. no abs measures.
+  - it is purely a relative techniqe i.e. images are corrected to others in local vicinity.  gradients could exist over mosaic.  no abs val.
+  - simple non lin in params model
+  - BRDF only models hot-spot
+- COllings
+  - "mosaics" = image collections, "digital aerial frame" = image, 
+  - "based on a combined model that uses kernel-based techniques for BRDF correction and incorporates additive and multiplicative terms for correcting other effects, such as variations due to the sensor and atmosphere."
+  - "We demonstrate estimates of ground reflectance that are accurate to approximately 10%, 5%, and 3%absolute reflectances for ground targets having reflectances of 90%, 40%, and 4%, respectively".  these are manually placed targets or known refl
+  - "Empirical" = data fitting calibration
+  - "We also scale the data to ground reflectance by employing laboratory-measured calibration targets deployed throughout the region of interest at the time of photograph acquisition."
+  - "spatial smoothness" = seamless = smooth
+  - "calibration moddel"
+  - "Physical models" = atcor / modtran
+  - Fitting is quite different to Chandelier in that part of the cost fn is not making overlap= but making image=known ground refl target
+  - lin in params model
+  - VERY COMPLICATED MODEL
+  - BRDF is kernel based
+  - Results shown as images.  
+  - Results also rms refl errors to known targets: "The final row of Table VII shows the total rms difference between our corrected DNs and the laboratory-measured re- flectance values of the targets. The white targets have been corrected to within approximately 10% absolute reflectance, the gray values to approximately 5% reflectance, and the black to approximately 4%"
+- Gehrke
+  - "image block" = mosiac/image collection, "imagery", "image"
+  - "seamless" = smooth, "blending"
+  - RRN (smoothing)  fitted on overlapping areas.  Polynomial gradient adjustment across ims.
+  - seemingly simple but 216 unknowns per band so actually not...
+  - results: image mosaics, refl differences betw adjacent images in overlapping areas, images of how synthetic checkerboard pattern is reduced in overlap areas
+- Lopez
+  - Also DMC! ref
+  - Also applied to LUT images as one approach
+  - "physical models" 
+  - results:images, quant compared with "homogenization factor" i.e. how smooth the corrected im is rel to orig im. NO actually this is an rms error of points in the overlapping areas.  not the most objective error measure.
+  - NB results: mean refl difference to actual meas refl in the field.  see fig 5 in context of: "radio- metric control points which were measured in the field and involved in the calibration process; radiometric check points which were mea- sured in the field and not used in the calibration process and test points which are located in spectrally well-known targets measured in field but in different spatial locations to those where radiometric measurements were done, these test points serve as alternative points to evaluate prediction error in terms of reflectanc" 
+- Markelin et al\
+  - Also presents a number of results - for single ims but relevant !!!!
+
+terminology: collection of ims
+  
+  Radiometric processing of ads imagery : using atmospheric and brdf corrections in production
+
+  
+Paper layout
+  - Leave as is DN = Mp+C 
+  - Say p is in fact p = integral(pR)/...  and that we cannot strictly subs in the refl from another sensor.  But if we can show the rel between 2 sensors is linear for real situations (eg p1=ap2+b) then we can still substitute into the above equation and maintain lin.  In general this lin does seem to hold for different sensors, we do show for our specific sensors in next section.   
+  
+
+Radiometric formulation
+ 
+ dylan wyer
+ 
+ 
+check fusion paper , maybe use words in some places instead of eqs, also recheck wv-2 paper for std practice with band avg and spectral vars 
+
+
+
+Looking at journals, related articles have been published in:
+  IEEE Transactions on Geoscience and Remote Sensing
+
+  

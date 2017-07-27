@@ -1,0 +1,24 @@
+This was an attempt to see if there are systematic differences in colour with time of capture and job
+-------------------------------------------------------------------------------------------------------
+
+- Images v close in time generally match up
+- Sometimes images in the same job have different colours.  They can be fairly close together in time but not sequential.
+A rough look suggests this happens more with vegetated land than bare land.
+- There are real colour differences in the land (due to topography/geology?).  
+This can be a little deceptive as being image differences when the image boundaries are close to the border of the real land change.
+- Earlier images (lower sun angle) appear to be greener
+- There can be significant colour diffs betw images fairly close in time that are difficult to imagine being only BDRF.
+- The N-S bordering lines between 318 and 319 match up remarkably well (better than interspersed images within 
+1 of these 2 jobs).  There are 1 or 2 weird colour diffs betw sequential images but on the whole it looks good.
+
+- The above suggests that 318 and 319 did indeed use the same LUT.
+- The above also suggests that BRDF is a significant contributing factor to colour differences in a job.
+The problem is that these differences seem to be land cover dependent. 
+
+Questions
+- Do calibrated images show colour differences over time / betw images
+- Do we have precise image capture times?  DMCAngles.log contains times but they are at night ....
+  The "photo" file contains "GPS_TimeStamp:	34687.313"
+  
+  
+gdal_translate -ot UInt16 -of GTiff -co "TILED=YES" -co "COMPRESS=DEFLATE" 3321A_2010_316_01_0003_RGB.tif 3321A_2010_316_01_0003_RGB_16b.tif

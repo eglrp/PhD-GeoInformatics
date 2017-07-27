@@ -1,0 +1,65 @@
+Submit:         Wednesday, April 10, 2013 20:55:38
+Start:          Wednesday, April 10, 2013 20:55:55
+End:            Thursday, April 11, 2013 18:21:17
+Closed:         Thursday, April 11, 2013 18:22:40
+
+Status:         Processing completed
+Database:       D:\CGA\Users\Dugal\MSc GeoInformatics\Docs\ZIPPS\GeospaceAll.mdb
+Mission(s):     2
+
+
+*****************************************************************************************************
+Mission: 3322c_322 completed
+RPP log: D:\CGA\Users\Dugal\MSc GeoInformatics\Data\NGI\Flight Plans\3322C_2010_322\Project_Data\logfiles\RPP_3322c_322_10Apr2013_2055.log
+GPP log: D:\CGA\Users\Dugal\MSc GeoInformatics\Data\NGI\Flight Plans\3322C_2010_322\Project_Data\logfiles\GPP_3322c_322_10Apr2013_2234.log
+
+Strip    Strip name                 Host                                    RPP              GPP
+01       V10_2010-02-06_11-16_3443  SUNGIS08                             36 of    36      36 of    36
+02       V10_2010-02-06_11-27_3044  SUNGIS08                             36 of    36      36 of    36
+03       V10_2010-02-06_12-23_8006  SUNGIS08                             36 of    36      36 of    36
+04       V10_2010-02-06_12-36_7263  SUNGIS08                             36 of    36      36 of    36
+05       V10_2010-02-07_07-58_2919  SUNGIS08                             36 of    36      36 of    36
+06       V10_2010-02-06_11-43_0830  SUNGIS08                             36 of    36      36 of    36
+07       V10_2010-02-06_11-54_2810  SUNGIS08                             36 of    36      36 of    36
+08       V10_2010-02-06_12-08_5046  SUNGIS08                             36 of    36      36 of    36
+09       V10_2010-02-07_08-10_5293  SUNGIS08                             37 of    37      37 of    37
+10       V10_2010-02-07_08-24_1829  SUNGIS08                             37 of    37      37 of    37
+11       V10_2010-02-05_14-42_0076  SUNGIS08                             36 of    36      36 of    36
+12       V10_2010-02-05_14-30_1600  SUNGIS08                             36 of    36      36 of    36
+13       V10_2010-02-05_14-19_6121  SUNGIS08                             36 of    36      36 of    36
+14       V10_2010-02-05_13-54_9525  SUNGIS08                             16 of    16      16 of    16
+15       V10_2010-02-05_13-45_9414  SUNGIS08                             14 of    14      14 of    14
+16       V10_2010-02-05_13-38_2020  SUNGIS08                             15 of    15      15 of    15
+17       V10_2010-02-05_13-30_2289  SUNGIS08                             15 of    15      15 of    15
+18       V10_2010-02-07_09-00_1168  SUNGIS08                             56 of    56      56 of    56
+19       V10_2010-02-07_08-38_3947  SUNGIS08                             44 of    44      44 of    44
+20       V10_2010-02-05_14-00_9139  SUNGIS08                             20 of    20      20 of    20
+21       V10_2010-02-05_14-10_6025  SUNGIS08                             18 of    18      18 of    18
+
+Summary: 3322c_322                                                      668 of   668     668 of   668
+
+
+*****************************************************************************************************
+Mission: 3321d_319 completed
+RPP log: D:\CGA\Users\Dugal\MSc GeoInformatics\Data\NGI\Flight Plans\3321D_2010_319\Project_Data\logfiles\RPP_3321d_319_10Apr2013_2055.log
+GPP log: D:\CGA\Users\Dugal\MSc GeoInformatics\Data\NGI\Flight Plans\3321D_2010_319\Project_Data\logfiles\GPP_3321d_319_11Apr2013_0941.log
+
+Strip    Strip name                 Host                                    RPP              GPP
+01       V10_2010-02-07_09-32_9420  SUNGIS08                             36 of    36      36 of    36
+02       V10_2010-02-07_09-46_0311  SUNGIS08                             36 of    36      36 of    36
+03       V10_2010-02-07_09-56_7429  SUNGIS08                             36 of    36      36 of    36
+04       V10_2010-02-07_10-10_5514  SUNGIS08                             37 of    37      37 of    37
+05       V10_2010-02-07_10-21_3644  SUNGIS08                             36 of    36      36 of    36
+06       V10_2010-02-07_10-34_0544  SUNGIS08                             36 of    36      36 of    36
+07       V10_2010-02-08_08-32_2034  SUNGIS08                             36 of    36      36 of    36
+08       V10_2010-02-08_07-23_2060  SUNGIS08                             36 of    36      36 of    36
+09       V10_2010-02-08_07-37_7493  SUNGIS08                             36 of    36      36 of    36
+10       V10_2010-02-08_07-52_6414  SUNGIS08                             36 of    36      36 of    36
+11       V10_2010-02-08_08-07_2911  SUNGIS08                             37 of    37      37 of    37
+12       V10_2010-02-08_08-46_7566  SUNGIS08                             36 of    36      36 of    36
+13       V10_2010-02-08_09-06_7640  SUNGIS08                             43 of    43      43 of    43
+14       V10_2010-02-07_09-17_6237  SUNGIS08                             41 of    41      41 of    41
+
+Summary: 3321d_319                                                      518 of   518     518 of   518
+Mission 3322c_322: No mission scripts to execute
+Mission 3321d_319: No mission scripts to execute

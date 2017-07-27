@@ -1,0 +1,51 @@
+Major effects to calibrate for
+ - Haze
+ - Sun angle / BRDF
+ - Related to above are hotspots which are specular reflections of the sun (< incidence = < refl).  
+   A wide FOV makes it more likely that the hot spot will be in the image.
+ - Exposure time! According to bernhard we have varying exposures.  
+   
+- Shadowed areas receive scattered blue light, while hot spots are more yellow   
+- The BDRF depends on viewing geom + sun angle. It should also incl optical properties of the objects in the scene.
+  It is different for different land covers
+- The BRDF exhibits spectral variation for vegetated surfaces
+- The BRDF used in the aero-triangulation papers is a simplified version that probably only caters for viewing geom
+- "In recent years, semiempirical, kernel-driven models have become key factors in normalizing bidirectional effects 
+in remote sensing data and, more recently, in photogrammetry, due largely to a lower computational cost compared to more 
+complex models. As explained below, they are based on linear combinations of kernels, with each kernel being a function 
+that takes into account the angular dependence of various surfaces, based on the surfaces’ composition or the architecture 
+of the target."
+- The BRDF is expanded in to a linear sum of terms ?the so?called k ernels? c haracterizing di?eren t scattering modes? 
+The superposition assumes that these modes are either spatially distinct within the scene view ed with little cross?coupling? 
+ph ysically distinct within a uniform canop y with negligible in teraction? or empirically justi?ed? The resulting BRDF model 
+is called a k ernel?based BRDF model
+
+- Haze is an additive effect (additional scattered light enters the camera, from sources other than the target one)
+  Blue light is scattered more easility, therefore haze tends to be blue
+  
+- The aero-triang paper uses a BRDF with 3 nonlin params + addtive haze param 
+
+- The use of radiometric tie-points is based on the assumption that they should be identical after full correction.
+  If you are not correcting full (as is the case in the paper), this assumption could lead to you making things worse
+  rather than better
+- If both the transformations from DN to at-sensor radiance and from at-sensor radiance to reflectance are assumed to be linear, 
+then these two transformations can be combined into one linear model.  
+
+- How does a typical colour balancing work - maybe that's what we need
+
+-----------------------------------
+
+Strategy
+- DN = FR+G (F,G are spatially and temporally varying BRDF, atmos etc params, R is the surf refl)
+- Dodging DNd = FdFR+FdG (assuming multiplicative only dodge Fd that varies spatially)
+- Applying BRDF to dodged data is pointless.
+- X calibrating between MODIS and NGI should be OK if a spatially varying (per pixel linear fit) is made.  
+  Essentially the linear mx+c fit would be m=FdF, c=FdG.  
+  This assumes Fd constant throughout the MODIS pixel (actually pixels - we will need > 1 to fit 2 params).
+  Fd applies to a small tile/grid so far as I understand that is likely a lot smaller than the MODIS pixel (250m) = 250000 NGI pixels
+- Doing an aero-triang type approach (i.e. making overlapping areas match each other with a per image linear model rather
+  than a per image BRDF model)? Does this have any validity?  Assuming a dodging only changes intensity then a per image
+  linear model should be sufficient to calibrate for colour only.  The question is how do we arrive at the linear model.  
+  If the overlapping pixels of the 2 images have been dodged in similar ways then we can do a LS fit betw the overlapping sets of pixels
+  to get the lin model (this incl intensity...?).  Or if they haven't been dodged the same (eg different times and shadows) then
+  perhaps we could make a colour only xform.  This would need to be multiplicative only I think.  This needs more attention. 

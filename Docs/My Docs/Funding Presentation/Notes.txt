@@ -1,0 +1,66 @@
+Tradiational methods of allometry are impractical for thicket due to complex growth forms, diversity of plant composition, density etc
+CDM, VCS, C, carbon tax
+
+The production of detailed, carbon stock and canopy cover maps using manual methods is prohibitively time-consuming and expensive, particularly for large areas.  
+
+The impracticality of allometry for large areas is confounded in the Subtropical Thicket biome due to its density, heterogeneous nature and complex growth forms (Powell 2009).
+STRP
+
+Having achieved good canopy cover bodes well as it is the best predictor of AGC: Canopy cover is also an important predictor of biomass and carbon stocks (Eisfelder, Kuenzer & Dech 2012; Powell 2009; Suganuma et al. 2006), and can thus serve as a first step towards a method for the direct mapping of AGC.  Ultimately, maps of carbon stocks are required to qualify for trading under the CDM and similar schemes.  These maps would also help indicate the economic feasibility of restoration for candidate sites.  In addition, canopy cover and AGC maps would be useful as research tools for deepening the present understanding of the Subtropical Thicket biome. 
+
+Powell (2009) found that P. afra canopy cover was strongly correlated with TAGC (R2=0.516).  While carbon stock mapping typically uses vegetation indices, such as the Normalised Difference Vegetation Index (NDVI), for building regression models (Eisfelder, Kuenzer & Dech 2012; Goetz et al. 2009; Lu 2006), one can conclude from the results of Powell (2009) that P. afra canopy cover will potentially be a more informative variable for determining TAGC.  P. afra canopy cover measurements are also useful in isolation as P. afra is the target species for planting and is also a significant contributor to carbon storage.
+
+Need for VHR: Currently, there is an initiative to involve private land-owners in the restoration project in order to broaden its impact (Curran et al. 2012; Mills et al. 2010).  Restoration planning at farm-level will require map scales of 1:10000 or better to provide sufficient spatial detail for working with expected stand sizes of the order of 50 hectares.  
+
+Existing data: Allometric AGC relationships for fourteen common thicket species in the Baviaanskloof Nature Reserve (BNR) were established through the extensive work of Powell (2009) and colleagues.  These relationships were used to produce detailed carbon stock ground truth for 191 5x5m grids covering various thicket habitat types and levels of degradation.  The availability of this data will be invaluable to the development of an automated remote sensing technique for carbon stock measurement.
+
+A free source of VHR imagery is available - very valuable: A secondary aim is for the mapping techniques to make use of freely available, uncalibrated, very high resolution (VHR) aerial imagery from Chief Directorate: National Geospatial Information (NGI).
+
+Nevertheless, commercial imagery has IR detail that would be of interest: pricing??
+
+Objectives: calibrate, field trip for accurate image location, apply canopy cover mapping, model (regression technique) + feature study, apply and interpret
+
+carbon, cc help inform: Improved biomass is related to increased biodiversity (Lu 2006; Fabricius, Burger, and Hockey 2003), reduced erosion and improved soil fertility and water-holding ability. understanding environmental processes and ecosystem services. 
+
+This research presents a number of challenges from a technical remote sensing perspective: NGI unused, While receiving increasing attention, use of VHR imagery for estimation of environmental variables is still fairly uncommon, especially over large areas such as the Little Karoo or Eastern Cape, 
+
+Sucessful calibration in stage 1 is NNB and opens up use of imagery: Dealing with sources of unwanted variation is a recurring difficulty reported in the remote sensing literature (Eisfelder, Kuenzer & Dech 2012; Baraldi et al. 2010; Lu 2006).  Achieving accurate canopy cover and carbon stock mappings over a large spatial scale and using a mosaic of images acquired at different times will require algorithms that are robust to many of the variations commonly encountered.  These will include varying topography and thicket habitats, possible phenological changes and shadow variations.  Results of dealing with these challenges will likely be of interest to the remote sensing community.
+
+I want something practical, to have a real impact: The work is intended to be applied research.  Emphasis will be placed on producing maps that are both useful and usable (Pierce et al. 2005). This will require interaction and communication with stake-holders (Knight et al. 2011), specifically environmental practitioners currently involved in thicket restoration, the STRP and the GIB, who are the restoration implementing agents (Mills et al. 2010).  
+
+Collabaritive as I have little ecological understanding
+
+Study area:
+The Little Karoo is a semi-arid region of great biodiversity lying between two mountain ranges.  Three biomes considered to be biodiversity hotspots of global significance intersect in the Little Karoo (Thompson et al. 2009).  A total of 54 habitat types were identified by Vlok, Cowling & Wolf (2005) in their vegetation map, of which ten support P. afra.  The Subtropical Thicket biome makes up 35.3% of the Little Karoo which has a total area of 2 343 900 ha (Vlok, Cowling & Wolf 2005).  It was found that 89.3% of the P. afra thicket was degraded to some extent in a study area comprising roughly half the area of the Little Karoo (Thompson et al. 2009).  The Little Karoo was chosen as a study area because it contains a significant portion of P. afra suited and degraded habitat and has been targeted for restoration.  It is also beneficial that a number of relevant studies have been performed in the area (Thompson et al. 2009; Forsyth, Vlok & Reyers 2008; Vlok, Cowling & Wolf 2005).  
+
+To expedite computing times and reduce storage space required for the VHR imagery, a smaller portion of the Little Karoo was chosen as the study area.  This area was chosen to be as representative of the variation in the Little Karoo as possible.  It consists of four different aerial survey jobs flown at different times and thus still poses a challenge from a remote sensing perspective.  It also includes examples of all the different biomes and nine of the ten habitat types supporting P. afra as defined by Vlok, Cowling & Wolf (2005).  
+
+The Baviaanskloof “is arguably one of the most bio diverse areas within Southern Africa with representation of all seven of South Africa’s biomes in the planning domain of the mega-reserve. It is at the convergence of 2 of the world’s top 25 biodiversity hotspots (Cape Floristic Region and the Succulent Karoo). A further biodiversity rich area, the Subtropical Thicket Biome also converges in the area.” (Baviaanskloof Mega-reserve Project 2006: 2)  The carbon stock ground truth was restricted to sites within the Baviaanskloof Nature Reserve (BNR) as indicated in Figure 6 2.  The BNR consists of 19 000 ha of Subtropical Thicket of which 95% is degraded, making this a suitable restoration area (Powell 2009).
+
+Methodology:
+While the pixel resolution of the aerial imagery is 0.5m, the positional accuracy (accuracy of orthorectification) may be of the order of 6m, which is typical for commercially available VHR imagery such as WorldView-2 (Satellite Imaging Corporation 2014).  Accurate location of the 5x5m carbon stock ground truth plots in the aerial imagery will be problematic with this amount of positional variation.  The ground truth plots are demarcated with metal stakes and danger tape but unfortunately the tape is not visible in the aerial imagery.  If necessary, high resolution images of the demarcated ground truth plots will be captured in the field to facilitate the accurate location of the plots in the aerial imagery.  This would be done by matching surrounding coarse-scale landscape and vegetation features.  Field images will be captured using a remotely controlled GoPro camera, suspended from a helium balloon, to achieve a near vertical viewing angle for easier comparison to the aerial imagery. 
+
+A multivariate nonlinear regression approach will be adopted to model the relationship between TAGC and features derived from the aerial imagery.  A comprehensive set of spectral features, texture features, vegetation indices and secondary measures (such as P. afra canopy cover) will be evaluated for their predictive ability.  Given the limited number of 191 ground truth plots, it will be necessary to apply dimensionality reduction and feature selection techniques to reduce the full feature set to an informative minimum.  A variety of popular regression models such as random forests and support vector machines will be compared based on their ability to predict TAGC from the derived features.  The transferability of models between different habitat types and different levels of degradation will be investigated.  Finally, a carbon stock map will be produced for the study area using the available map of habitat types (SANBI 2007) as ancillary information.  
+
+Presentation
+
+PhD proposal
+
+Problem statement, aims & objectives
+
+Rationale nb
+
+Brief methodology
+
+Existing canopy cover work 
+
+Calibration
+
+Classification
+
+
+A Maskanda, a mainly guitar-based urban Zulu music form that has evolved from a solo style to incorporate concertina and violin as well as bass and drums, got its name as a slang derivation of the Afrikaans word musikant (musician). The tunings vary from guitarist to guitarist; many invent their own and become fiercely protective of them. As I've learned from such friends as Syd Kitchen (www.sydkitchen.com) and Madala Keneni, there are some widely shared tunings.
+
+The most common drops the first treble E string down to D. One variation on this replaces the D fourth string with a nylon first string and tunes it in unison to the D first string. This is known as "double first" tuning, pronounced dabul fersi. While growing up in Natal, South Africa, I learned a tuning that I still use: the high E is dropped to D, then a wooden homemade capo, with a notch cut out at the end so that it stops all the strings except the low E, is placed on the second fret.
+
+The maskanda guitar technique involves the thumb and index finger—the thumb plays double-time staccato bass runs, while the index finger picks out a countermelody. I recall the first time I "got it"; when my thumb (with a thumbpick) played independently from the other fingers, something seemed to separate in my head. No wonder I took to making guitars with the aim of making the separation of notes, overtones, and harmonics very evident. For prime examples of maskanda, check out the music of Phuzekhemisi and Mfaz Omnyama.  —Marc Maingard - See more at: http://www.guitarforum.co.za/general-discussion/maskandi/#sthash.ibIHKits.dpuf

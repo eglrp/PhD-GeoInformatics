@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LocalDebuggerCommandArguments>"F:\MSc GeoInformatics\Data\NGI\Cross Calibration\SmallTest\MCD43A4.A2010025.h19v12.005.2010043064233.RGBN.tif" "F:\MSc GeoInformatics\Data\NGI\Cross Calibration\SmallTest\3321b_3172_05_0159_rgbn_INIT.tif" -o</LocalDebuggerCommandArguments>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LocalDebuggerCommandArguments>"F:\MSc GeoInformatics\Data\NGI\Cross Calibration\SmallTest\MCD43A4.A2010025.h19v12.005.2010043064233.RGBN.tif" "F:\MSc GeoInformatics\Data\NGI\Cross Calibration\SmallTest\3321b_3172_05_0159_rgbn_INIT.tif" -o</LocalDebuggerCommandArguments>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LocalDebuggerCommandArguments>-o "F:\MSc GeoInformatics\Data\NGI\Temp\MCD43A4.A2010025.h19v12.005.2010043064233.Lo21.RGBN.tif" "F:\MSc GeoInformatics\Data\NGI\Temp\3321b_3172_12_0415_rgbn.tif"</LocalDebuggerCommandArguments>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LocalDebuggerCommandArguments>-o "F:\MSc GeoInformatics\Data\NGI\Temp\MCD43A4.A2010025.h19v12.005.2010043064233.Lo21.RGBN.tif" "F:\MSc GeoInformatics\Data\NGI\Temp\3321b_3172_12_0415_rgbn.tif"</LocalDebuggerCommandArguments>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+</Project>

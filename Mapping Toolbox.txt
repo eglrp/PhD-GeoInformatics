@@ -1,0 +1,25 @@
+geoshow, projects lat and long data
+
+The worldmap function chooses map projections and parameters appropriate to the region specified to it and sets up default values for the rest of the mstruct
+
+[X, Y] = mfwdtran(LAT, LON) applies the forward transformation defined by the map projection in the current map axes
+
+- axesm implies an ellipsoid, this can be a unit sphere i.e. axesm contains a projection that will project from lat long to the unit sphere
+ (in whatever projection is specified) or it could be a geoid specifying a proper earth radius in which case the projection will be modified to
+ cater for this ???
+
+- wgs84 = almanac('earth','wgs84','meters');
+
+- As is explained in Working with Distances on the Sphere, you can convert angular distance on a sphere to linear distance. This is different from working on an ellipsoid, where one can only speak of linear distances between points, and to compute them one must specify which reference ellipsoid to use.
+
+- distInMeters = distance(latL, lonL, latK, lonK, earthRadiusInMeters),  distInRadians = distInMeters / earthRadiusInMeters
+
+- When it does, many applications—particularly map display—cannot make direct use of geographic coordinates, and must transform them in some way to plane coordinates. This transformation process, called map projection, is both algorithmic and the core of the cartographer's art.
+- A map projection is a procedure that unwraps a sphere or ellipsoid to flatten it onto a plane. Usually this is done through an intermediate surface such as a cylinder or a cone, which is then unwrapped to lie flat. Consequently, map projections are classified as cylindrical, conical, and azimuthal (a direct transformation of the surface of part of a spheroid to a circle).
+- Mapping Toolbox map projection libraries feature dozens of map projections, which you principally control with axesm
+- When geospatial data has plane coordinates (i.e., it comes preprojected, as do many satellite images and municipal map data sets), it is usually possible to recover geographic coordinates if the projection parameters and datum are known. Using this information, you can perform an inverse projection, running the projection backward to solve for latitude and longitude.
+- Most map projections in the toolbox are implemented as MATLAB functions; however, these are only used by certain calling functions (such as geoshow and axesm), and thus have no documented public API.
+- You can retrieve projected data from a map axes, but you can also obtain it without having to plot the data or even creating a map axes
+- The UTM system divides the world into a regular nonoverlapping grid of quadrangles, called zones, each 8 by 6 degrees in extent. Each zone uses formulas for a transverse version of the Mercator projection, with projection and ellipsoid parameters designed to limit distortion. The Transverse Mercator projection is defined between 80 degrees south and 84 degrees north. Beyond these limits, the Universal Polar Stereographic (UPS) projection applies. 
+- See notes on UTM in help
+
