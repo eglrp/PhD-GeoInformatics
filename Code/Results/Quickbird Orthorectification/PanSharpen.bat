@@ -1,3 +1,4 @@
+echo off
 SET OSGEO4W_ROOT=C:\OSGeo4W64\
 SET OTB=%OSGEO4W_ROOT%apps\orfeotoolbox
  
@@ -5,17 +6,17 @@ CALL %OSGEO4W_ROOT%bin\o4w_env.bat
  
 SET PATH=%PATH%;%OTB%\applications
 REM SET PYTHONPATH=%QGIS%\python;%OTB%\python;%PYTHONPATH%
-echo off 
+
 setlocal enabledelayedexpansion
 
-set data=%1
-set search=%2
-set replace=%3
-set "data=!data:%search%=%replace%!"
-echo %data%
+REM set data=%1
+REM set search=%2
+REM set replace=%3
+REM set "data=!data:%search%=%replace%!"
+REM echo %data%
 
-Set Pattern="P2AS"
-Set Replace="M2AS"
+REM Set Pattern="P2AS"
+REM Set Replace="M2AS"
 
 REM For %%a in (*.jpg) Do (
 REM     Ren "%%a" "!File:%Pattern%=%Replace%!"
@@ -23,7 +24,12 @@ REM )
 
 REM Pause&Exit
 D:
-cd "D:\Data\Development\Projects\MSc GeoInformatics\Data\Digital Globe\056549293010_01"
+cd "D:\Data\Development\Projects\PhD GeoInformatics\Data\Digital Globe\056549293010_01"
+
+gdal_pansharpen.py -w 0.85 -w 0.7 -w 0.35 -w 1.0 .\056549293010_01_P001_PAN\Assembled\03NOV18082012-P2AS_R1C12-056549293010_01_P001.tif .\056549293010_01_P001_MUL\Assembled\03NOV18082012-M2AS_R1C12-056549293010_01_P001.TIF .\PanSharpen\R1C12-GdalPanSharp.tif
+gdaladdo -ro --config COMPRESS_OVERVIEW JPEG .\PanSharpen\R1C12-GdalPanSharp.tif 4 8 16 32 64
+pause
+exit
 
 REM With GDAL 
 for /r %%i in (.\056549293010_01_P001_PAN\*P001.tif) do (
