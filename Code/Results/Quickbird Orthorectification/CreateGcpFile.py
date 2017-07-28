@@ -120,7 +120,7 @@ def world2Pixel(geoMatrix, x, y):
   rtnX = geoMatrix[2]
   rtnY = geoMatrix[4]
   pixel = ((x - ulX) / xDist)
-  line = ((ulY - y) / xDist)
+  line = ((y - ulY) / yDist)
   return (pixel, line)
 
 for f in imGcpDict.values():
@@ -157,7 +157,7 @@ for f in imGcpDict.values():
 
 
 #pci format
-gcpFile = open("C:/Data/Development/Projects/PhD GeoInformatics/Docs/Misc/Baviaanskloof/QuickbirdGcp2.txt", 'w')
+gcpFile = open("C:/Data/Development/Projects/PhD GeoInformatics/Docs/Misc/Baviaanskloof/QuickbirdGcp3.txt", 'w')
 gcpFile.write("I\tP\tL\tX\tY\tE\n")
 id = 1
 for key in imGcpDict:
