@@ -160,6 +160,7 @@ if not geotransform is None:
     print 'Origin = (',geotransform[0], ',',geotransform[3],')'
     print 'Pixel Size = (',geotransform[1], ',',geotransform[5],')'
 
+#
 
 transform = osr.CoordinateTransformation(csGtSpatialRef, osr.SpatialReference(ds.GetProjection()))
 i = 0
