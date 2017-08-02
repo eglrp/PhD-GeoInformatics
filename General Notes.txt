@@ -1,5 +1,3 @@
-sdfsfd
-
 Block Labelling
 - The 3 digit NGI numbers like "320" I think are job numbers.
   They dont relate to the 4 digit (like 3320) numbers
@@ -1131,6 +1129,10 @@ Other Orthorect Notes
 - The GCP warping in both PCI and Arcmap does not use height as best I can tell.  It is purely horizontal.  So height above sea level or ellipsoid is NA?  
 NNB - DG sent me Level2A "standard" imagery as best I can tell - which is "Projected to a plane using map projection and datum, coarse DEM applied to normalize for topographic relief" i.e. it has been warped in a way that is not reversible or suited to accurate orthorectification.  There is then "ortho-ready standard" aka "Orthoready Standard 2A" imagery which has been "Projected to a plane using map projection and datum, projected to a constant base elevation to allow for orthorectifcation".  I dont think you can rigorous toutin type modelling with this.  For that you need "basic" imagery with no georef.  So we need to go back to digital globe and get this sorted.  
 1 0.1508;2 0.1809;3 0.302;4 0.3664
+- NB All the above notes are for level 2a, "standard" QB imagery.  This imagery has been coarsely orthorectified using a DEM and cannot be orthorectified further.  Hence the issues we have had. 
+- With level 1B, the MS and pan images are no longer overlaid and need co-registration.  It states in QB faq (mendeley) "As a result, proper registration of these bands is dependent on placing the image in an accurate terrain mode".  Co-reg is a little tricky becuase the MS image is too low a resolution to recognise features used for GCP's.  I noticed that in arcmap using the on-fly orthorect (RPC + const elev or DEM) results in the MS and Pan images superimposing exactly.  But we can't use a DEM warp because then we cant orthorectify further (same problem as standard imagery).  And if we use a const elev rectification, technically this can still have offsets between pan and ms in variable terrain.  So we can't use arcmap type RPC projection to co-register the images I don't think.  And we wont find the GCP's in the MS image I don't think.  Perhaps the best option is to orthorectify the pan image, then use this a reference to orthorectify the MS image by choosing other GCP's that can be seen in both images.  I had another idea but I can't remember what now... 
+- Dont forget about the ellipsoid to mean sea level conversion for GCP's 
+
 
 
 Notes on pan-sharpening quickbird 
