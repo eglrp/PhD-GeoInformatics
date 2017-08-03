@@ -1134,6 +1134,20 @@ NNB - DG sent me Level2A "standard" imagery as best I can tell - which is "Proje
 - Dont forget about the ellipsoid to mean sea level conversion for GCP's 
 
 
+Vertical Datum Practicalities
+-----------------------------
+- The available sw / stds for transforming are flakey
+- ArcGIS claims to be able convert vertical datums but when I use the "Project Data" tool, it cannot load the datum grid file.  Then on subsequent runs of the same tool it reports success but makes no change to heights.
+- ArcGIS can be used to define the vertical datum in a 3d shapefile (the shapefile produced from Trimble is 3d but ref to ellipsoid wgs84).  Use the "define projection" tool for this.  
+- Proj.4 has recent additions for doing vertical datum xformations.  I had to specifically install these with Osgeo4w.  Then I manually downloaded the egm2008.gtx file (the geoid grid) as this was missing and put it with the rest of the gtx files in the osgeo4w tree
+- GDAL uses proj.4 and ogr2ogr can be used to convert shapefiles including the vertical datum eg "ogr2ogr -t_srs EPSG:4326+5773 tst.shp BaviiaansPeCorrectedGcpMay2017CombinedZ.shp"
+- "testepsg 4326+5773" will give other strings, like proj.4, that can be used for specifying t_srs 
+- GDAL does successfully make the conversion - the height values are shifted by -30m though which seems like a lot - to be checked 
+- GDAL loses the vertical datum definiton in the target file though so this needs to be manually added with ArcGIS or possibly GDAL itself 
+- The SA GEOID is available from NGI but not in gtx format.  gtx is a regular grid while ngi's sageoid2010 is not.  
+- For the approx lat lon of my study area, the SAGEOID.dat entry is " -33.666667  24.458333  28.165330".  SO it is ~30m and I guess -ve if you're going from wgs84.  I think the 28.16... is relative to wgs84 more or less (i.e IRTF2005??) - see the pdf with the sageoid.    
+- I dont think SAGEOID2010 varies by more than 2m within my study area and maybe less.
+
 
 Notes on pan-sharpening quickbird 
 ----------------------------------
