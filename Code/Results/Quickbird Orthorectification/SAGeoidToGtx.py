@@ -76,12 +76,12 @@ if True:
     # ds_gtx.SetGeoTransform( (-180 - ps_25,ps_25,0,90 + ps_25,0,-1 * ps_25) )
 
     # the below needs checking/fixing
-    ds_gtx.SetGeoTransform((np.min(dat[:,1]) - lat_delta, lat_delta, 0, np.min(dat[:, 0]) - long_delta, 0, 1 * long_delta))
+    ds_gtx.SetGeoTransform((np.min(dat[:,1]) - lat_delta, lat_delta, 0, np.max(dat[:, 0]) + long_delta, 0, -1 * long_delta))
 
     # east = egm_m[:,:4320] * 1.0
     # west = egm_m[:,4320:] * 1.0
 
-    ds_gtx.GetRasterBand(1).WriteArray(heights) #( east, 4320, 0 )
+    ds_gtx.GetRasterBand(1).WriteArray(np.flipud(heights)) #( east, 4320, 0 )
     #ds_gtx.GetRasterBand(1).WriteArray( west, 0, 0 )
     
     ds_gtx = None
