@@ -10,8 +10,11 @@ import osr
 # to be converted back to image pixel locs
 
 # file containing actual GCP locs in WGS84
-gcpGeoLocFile = "C:/Data/Development/Projects/PhD GeoInformatics/Docs/Misc/Baviaanskloof/BaviiaansPeCorrectedGcpMay2017Combined.shp"
-
+doEllipsoidalHeight = True
+if doEllipsoidalHeight:  # ellipsoidal heights
+    gcpGeoLocFile = "C:/Data/Development/Projects/PhD GeoInformatics/Docs/Misc/Baviaanskloof/BaviiaansPeCorrectedGcpMay2017Combined.shp"
+else:
+    gcpGeoLocFile = "C:/Data/Development/Projects/PhD GeoInformatics/Docs/Misc/Baviaanskloof/BaviiaansPeCorrectedGcpMay2017Combined_SaGeoid2010.shp"
 # file containing image locations of GCP locs in UTM 35S
 gcpImLocFile = "C:/Data/Development/Projects/PhD GeoInformatics/Docs/Misc/Baviaanskloof/Quickbird-056844553010_01-Gcp.shp"
 
@@ -49,7 +52,11 @@ for (i, feat) in enumerate(lyr):
         f['geom'] = geom
         f['X'] = geom.GetX()
         f['Y'] = geom.GetY()
-        f['Z'] = f['GNSS_Heigh']   #? - should be able to get this from geom
+        if doEllipsoidalHeight:
+            f['Z'] = f['GNSS_Heigh']   #? - should be able to get this from geom
+        else:
+            f['Z'] = geom.GetZ()        # this has been xformed from elippsoidal to Sa Geoid 2010
+
     else:
         print "no point geometry/n"
     # gcpList.append(f)
@@ -173,7 +180,10 @@ for f in imGcpDict.values():
 
 
 #pci format
-gcpFile = open("C:/Data/Development/Projects/PhD GeoInformatics/Docs/Misc/Baviaanskloof/Quickbird-056844553010-Gcp.txt", 'w')
+if doEllipsoidalHeight:
+    gcpFile = open("C:/Data/Development/Projects/PhD GeoInformatics/Docs/Misc/Baviaanskloof/Quickbird-056844553010-Gcp.txt", 'w')
+else:
+    gcpFile = open("C:/Data/Development/Projects/PhD GeoInformatics/Docs/Misc/Baviaanskloof/Quickbird-056844553010-Gcp-SaGeoid2010.txt", 'w')
 gcpFile.write("I\tP\tL\tX\tY\tE\n")
 id = 1
 for key in imGcpDict:
@@ -187,18 +197,24 @@ for key in imGcpDict:
 gcpFile.close()
 
 
-#arcmap format
-transform = osr.CoordinateTransformation(spatialRef, spatialRefIm)
-gcpFile = open("C:/Data/Development/Projects/PhD GeoInformatics/Docs/Misc/Baviaanskloof/Quickbird-056844553010-Gcp-Arcmap.txt", 'w')
-for key in imGcpDict:
-    # key = f['Comment']
-    fgcp = gcpDict[key]
-    fim = imGcpDict[key]
-    # print "%s %.6f, %.6f" % (f['Comment'], geom.GetX(), geom.GetY())
-    point = ogr.Geometry(ogr.wkbPoint)
-    point.AddPoint(fgcp['X'], fgcp['Y'])
-    point.Transform(transform)
-    gcpFile.write("%.3f %.3f %.3f %.3f\n" % (fim['X'], fim['Y'], point.GetX(), point.GetY()))
-    id = id + 1
-    print "%s" % (key)
-gcpFile.close()
+
+if False:
+    #arcmap format
+    transform = osr.CoordinateTransformation(spatialRef, spatialRefIm)
+    if doEllipsoidalHeight:
+        gcpFile = open("C:/Data/Development/Projects/PhD GeoInformatics/Docs/Misc/Baviaanskloof/Quickbird-056844553010-Gcp-Arcmap.txt", 'w')
+    else:
+        gcpFile = open("C:/Data/Development/Projects/PhD GeoInformatics/Docs/Misc/Baviaanskloof/Quickbird-056844553010-Gcp-Arcmap-SaGeoid2010.txt", 'w')
+
+    for key in imGcpDict:
+        # key = f['Comment']
+        fgcp = gcpDict[key]
+        fim = imGcpDict[key]
+        # print "%s %.6f, %.6f" % (f['Comment'], geom.GetX(), geom.GetY())
+        point = ogr.Geometry(ogr.wkbPoint)
+        point.AddPoint(fgcp['X'], fgcp['Y'])
+        point.Transform(transform)
+        gcpFile.write("%.3f %.3f %.3f %.3f\n" % (fim['X'], fim['Y'], point.GetX(), point.GetY()))
+        id = id + 1
+        print "%s" % (key)
+    gcpFile.close()

@@ -76,10 +76,13 @@
       <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="QuickbirdGcp20170720173032402" source="C:/Data/Development/Projects/PhD GeoInformatics/Docs/Misc/Baviaanskloof/QuickbirdGcp.shp" name="QuickbirdGcp">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="ZAF_adm020170804001415892" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/SA ShapeFiles/ZAF_adm0.shp" name="ZAF_adm0">
+      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="ZAF_adm120170804001858449" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/SA ShapeFiles/ZAF_adm1.shp" name="ZAF_adm1">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="sageoid2010_2520170804001223310" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/SA Geoid/sageoid2010_25.gtx" name="sageoid2010_25">
+      <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="sageoid2010_2520170804111052472" source="C:/OSGeo4W64/share/proj/sageoid2010_25.gtx" name="sageoid2010_25">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="egm08_2520170804111018436" source="C:/OSGeo4W64/share/proj/egm08_25.gtx" name="egm08_25">
         <customproperties/>
       </layer-tree-layer>
       <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="BaviiaansPeCorrectedGcpMay2017Combined20170720173845991" source="C:/Data/Development/Projects/PhD GeoInformatics/Docs/Misc/Baviaanskloof/BaviiaansPeCorrectedGcpMay2017Combined.shp" name="BaviiaansPeCorrectedGcpMay2017Combined">
@@ -1096,10 +1099,10 @@
   <mapcanvas>
     <units>degrees</units>
     <extent>
-      <xmin>12.38082199413363682</xmin>
-      <ymin>-35.84539024749865632</ymin>
-      <xmax>35.97476300504500557</xmax>
-      <ymax>-21.1254607678044124</ymax>
+      <xmin>24.31225252387006108</xmin>
+      <ymin>-33.73186917072594326</ymin>
+      <xmax>24.49655088339393316</xmax>
+      <ymax>-33.59082910585803461</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
@@ -1138,6 +1141,8 @@
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_17_2009_224_RGB_RECT20170330122052933"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_25_2009_225_RGB_RECT20170330122123099"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_14_2009_225_RGB_RECT20170330122123981"/>
+      <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="ZAF_adm120170804001858449"/>
+      <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="egm08_2520170804111018436"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_05_2009_224_RGB_RECT20170330122021560"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_22_2009_225_RGB_RECT20170330122122875"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_21_2009_225_RGB_RECT20170330122122819"/>
@@ -1153,8 +1158,11 @@
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_10_2009_224_RGB_RECT20170330122021947"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_19_2009_224_RGB_RECT20170330122020584"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_01_2009_225_RGB_RECT20170330122123159"/>
+      <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="sageoid2010_2520170804110011927"/>
+      <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="sageoid2010_2520170804001822394"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_06_2009_224_RGB_RECT20170330122021657"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_10_2009_224_RGB_RECT20170330122052583"/>
+      <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="sageoid2010_2520170804105616457"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="ZAF_adm020170804001415892"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_19_2009_221_RGB_RECT20170330121924350"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_12_2009_224_RGB_RECT20170330122052671"/>
@@ -1180,6 +1188,7 @@
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_17_2009_225_RGB_RECT20170330122122571"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_03_2009_224_RGB_RECT20170330122052225"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_25_2009_221_RGB_RECT20170330121924750"/>
+      <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="sageoid2010_2520170804003947255"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_07_2009_225_RGB_RECT20170330122123551"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_06_2009_224_RGB_RECT20170330122052377"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_12_2009_224_RGB_RECT20170330122022052"/>
@@ -1207,6 +1216,7 @@
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="03NOV18082012_P1BS_056844553010_01_P00120170802213212551"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_16_2009_221_RGB_RECT20170330121924135"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_05_2009_224_RGB_RECT20170330122052336"/>
+      <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="sageoid2010_2520170804111052472"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_04_2009_224_RGB_RECT20170330122052285"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_04_2009_221_RGB_RECT20170330121923370"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="BaviiaansPeCorrectedGcpMay2017Combined20170720173845991"/>
@@ -1563,8 +1573,9 @@
       <item>gps_coords_191plots20170727205628077</item>
       <item>03NOV18082012_P1BS_056844553010_01_P00120170802213212551</item>
       <item>Quickbird_056844553010_01_Gcp20170802213252670</item>
-      <item>sageoid2010_2520170804001223310</item>
-      <item>ZAF_adm020170804001415892</item>
+      <item>ZAF_adm120170804001858449</item>
+      <item>egm08_2520170804111018436</item>
+      <item>sageoid2010_2520170804111052472</item>
     </custom-order>
   </layer-tree-canvas>
   <legend updateDrawingOrder="true">
@@ -1681,14 +1692,19 @@
           <legendlayerfile isInOverview="0" layerid="QuickbirdGcp20170720173032402" visible="0"/>
         </filegroup>
       </legendlayer>
-      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="ZAF_adm0" showFeatureCount="0">
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="ZAF_adm1" showFeatureCount="0">
         <filegroup open="true" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="ZAF_adm020170804001415892" visible="1"/>
+          <legendlayerfile isInOverview="0" layerid="ZAF_adm120170804001858449" visible="1"/>
         </filegroup>
       </legendlayer>
-      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="sageoid2010_25" showFeatureCount="0">
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="sageoid2010_25" showFeatureCount="0">
         <filegroup open="true" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="sageoid2010_2520170804001223310" visible="1"/>
+          <legendlayerfile isInOverview="0" layerid="sageoid2010_2520170804111052472" visible="0"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="egm08_25" showFeatureCount="0">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" layerid="egm08_2520170804111018436" visible="0"/>
         </filegroup>
       </legendlayer>
       <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="BaviiaansPeCorrectedGcpMay2017Combined" showFeatureCount="0">
@@ -26271,12 +26287,12 @@ def my_form_open(dialog, layer, feature):
       <previewExpression></previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
-      <id>ZAF_adm020170804001415892</id>
-      <datasource>D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/SA ShapeFiles/ZAF_adm0.shp</datasource>
+      <id>ZAF_adm120170804001858449</id>
+      <datasource>D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/SA ShapeFiles/ZAF_adm1.shp</datasource>
       <keywordList>
         <value></value>
       </keywordList>
-      <layername>ZAF_adm0</layername>
+      <layername>ZAF_adm1</layername>
       <srs>
         <spatialrefsys>
           <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
@@ -26297,208 +26313,46 @@ def my_form_open(dialog, layer, feature):
         <map-layer-style name=""/>
       </map-layer-style-manager>
       <edittypes>
-        <edittype widgetv2type="TextEdit" name="GADMID">
+        <edittype widgetv2type="TextEdit" name="ID_0">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="ISO">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
-        <edittype widgetv2type="TextEdit" name="NAME_ENGLI">
+        <edittype widgetv2type="TextEdit" name="NAME_0">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
-        <edittype widgetv2type="TextEdit" name="NAME_ISO">
+        <edittype widgetv2type="TextEdit" name="ID_1">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
-        <edittype widgetv2type="TextEdit" name="NAME_FAO">
+        <edittype widgetv2type="TextEdit" name="NAME_1">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
-        <edittype widgetv2type="TextEdit" name="NAME_LOCAL">
+        <edittype widgetv2type="TextEdit" name="VARNAME_1">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
-        <edittype widgetv2type="TextEdit" name="NAME_OBSOL">
+        <edittype widgetv2type="TextEdit" name="NL_NAME_1">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
-        <edittype widgetv2type="TextEdit" name="NAME_VARIA">
+        <edittype widgetv2type="TextEdit" name="HASC_1">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
-        <edittype widgetv2type="TextEdit" name="NAME_NONLA">
+        <edittype widgetv2type="TextEdit" name="CC_1">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
-        <edittype widgetv2type="TextEdit" name="NAME_FRENC">
+        <edittype widgetv2type="TextEdit" name="TYPE_1">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
-        <edittype widgetv2type="TextEdit" name="NAME_SPANI">
+        <edittype widgetv2type="TextEdit" name="ENGTYPE_1">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
-        <edittype widgetv2type="TextEdit" name="NAME_RUSSI">
+        <edittype widgetv2type="TextEdit" name="VALIDFR_1">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
-        <edittype widgetv2type="TextEdit" name="NAME_ARABI">
+        <edittype widgetv2type="TextEdit" name="VALIDTO_1">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
-        <edittype widgetv2type="TextEdit" name="NAME_CHINE">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="WASPARTOF">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="CONTAINS">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="SOVEREIGN">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="ISO2">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="WWW">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="FIPS">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="ISON">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="VALIDFR">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="VALIDTO">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="AndyID">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="POP2000">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="SQKM">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="POPSQKM">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="UNREGION1">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="UNREGION2">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="DEVELOPING">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="CIS">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Transition">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="OECD">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="WBREGION">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="WBINCOME">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="WBDEBT">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="WBOTHER">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="CEEAC">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="CEMAC">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="CEPLG">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="COMESA">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="EAC">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="ECOWAS">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="IGAD">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="IOC">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="MRU">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="SACU">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="UEMOA">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="UMA">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="PALOP">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="PARTA">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="CACM">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="EurAsEC">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Agadir">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="SAARC">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="ASEAN">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="NAFTA">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="GCC">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="CSN">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="CARICOM">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="EU">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="CAN">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="ACP">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Landlocked">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="AOSIS">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="SIDS">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Islands">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="LDC">
+        <edittype widgetv2type="TextEdit" name="REMARKS_1">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="Shape_Leng">
@@ -26513,7 +26367,7 @@ def my_form_open(dialog, layer, feature):
           <symbol alpha="1" clip_to_extent="1" type="fill" name="0">
             <layer pass="0" class="SimpleFill" locked="0">
               <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="color" v="64,177,181,255"/>
+              <prop k="color" v="136,223,207,255"/>
               <prop k="joinstyle" v="bevel"/>
               <prop k="offset" v="0,0"/>
               <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
@@ -26676,7 +26530,7 @@ def my_form_open(dialog, layer, feature):
       <blendMode>0</blendMode>
       <featureBlendMode>0</featureBlendMode>
       <layerTransparency>0</layerTransparency>
-      <displayfield>NAME_ENGLI</displayfield>
+      <displayfield>NAME_0</displayfield>
       <label>0</label>
       <labelattributes>
         <label fieldname="" text="Label"/>
@@ -26728,150 +26582,42 @@ def my_form_open(dialog, layer, feature):
       <DiagramLayerSettings yPosColumn="-1" showColumn="-1" linePlacementFlags="10" placement="0" dist="0" xPosColumn="-1" priority="0" obstacle="0" zIndex="0" showAll="1"/>
       <annotationform></annotationform>
       <aliases>
-        <alias field="GADMID" index="0" name=""/>
+        <alias field="ID_0" index="0" name=""/>
         <alias field="ISO" index="1" name=""/>
-        <alias field="NAME_ENGLI" index="2" name=""/>
-        <alias field="NAME_ISO" index="3" name=""/>
-        <alias field="NAME_FAO" index="4" name=""/>
-        <alias field="NAME_LOCAL" index="5" name=""/>
-        <alias field="NAME_OBSOL" index="6" name=""/>
-        <alias field="NAME_VARIA" index="7" name=""/>
-        <alias field="NAME_NONLA" index="8" name=""/>
-        <alias field="NAME_FRENC" index="9" name=""/>
-        <alias field="NAME_SPANI" index="10" name=""/>
-        <alias field="NAME_RUSSI" index="11" name=""/>
-        <alias field="NAME_ARABI" index="12" name=""/>
-        <alias field="NAME_CHINE" index="13" name=""/>
-        <alias field="WASPARTOF" index="14" name=""/>
-        <alias field="CONTAINS" index="15" name=""/>
-        <alias field="SOVEREIGN" index="16" name=""/>
-        <alias field="ISO2" index="17" name=""/>
-        <alias field="WWW" index="18" name=""/>
-        <alias field="FIPS" index="19" name=""/>
-        <alias field="ISON" index="20" name=""/>
-        <alias field="VALIDFR" index="21" name=""/>
-        <alias field="VALIDTO" index="22" name=""/>
-        <alias field="AndyID" index="23" name=""/>
-        <alias field="POP2000" index="24" name=""/>
-        <alias field="SQKM" index="25" name=""/>
-        <alias field="POPSQKM" index="26" name=""/>
-        <alias field="UNREGION1" index="27" name=""/>
-        <alias field="UNREGION2" index="28" name=""/>
-        <alias field="DEVELOPING" index="29" name=""/>
-        <alias field="CIS" index="30" name=""/>
-        <alias field="Transition" index="31" name=""/>
-        <alias field="OECD" index="32" name=""/>
-        <alias field="WBREGION" index="33" name=""/>
-        <alias field="WBINCOME" index="34" name=""/>
-        <alias field="WBDEBT" index="35" name=""/>
-        <alias field="WBOTHER" index="36" name=""/>
-        <alias field="CEEAC" index="37" name=""/>
-        <alias field="CEMAC" index="38" name=""/>
-        <alias field="CEPLG" index="39" name=""/>
-        <alias field="COMESA" index="40" name=""/>
-        <alias field="EAC" index="41" name=""/>
-        <alias field="ECOWAS" index="42" name=""/>
-        <alias field="IGAD" index="43" name=""/>
-        <alias field="IOC" index="44" name=""/>
-        <alias field="MRU" index="45" name=""/>
-        <alias field="SACU" index="46" name=""/>
-        <alias field="UEMOA" index="47" name=""/>
-        <alias field="UMA" index="48" name=""/>
-        <alias field="PALOP" index="49" name=""/>
-        <alias field="PARTA" index="50" name=""/>
-        <alias field="CACM" index="51" name=""/>
-        <alias field="EurAsEC" index="52" name=""/>
-        <alias field="Agadir" index="53" name=""/>
-        <alias field="SAARC" index="54" name=""/>
-        <alias field="ASEAN" index="55" name=""/>
-        <alias field="NAFTA" index="56" name=""/>
-        <alias field="GCC" index="57" name=""/>
-        <alias field="CSN" index="58" name=""/>
-        <alias field="CARICOM" index="59" name=""/>
-        <alias field="EU" index="60" name=""/>
-        <alias field="CAN" index="61" name=""/>
-        <alias field="ACP" index="62" name=""/>
-        <alias field="Landlocked" index="63" name=""/>
-        <alias field="AOSIS" index="64" name=""/>
-        <alias field="SIDS" index="65" name=""/>
-        <alias field="Islands" index="66" name=""/>
-        <alias field="LDC" index="67" name=""/>
-        <alias field="Shape_Leng" index="68" name=""/>
-        <alias field="Shape_Area" index="69" name=""/>
+        <alias field="NAME_0" index="2" name=""/>
+        <alias field="ID_1" index="3" name=""/>
+        <alias field="NAME_1" index="4" name=""/>
+        <alias field="VARNAME_1" index="5" name=""/>
+        <alias field="NL_NAME_1" index="6" name=""/>
+        <alias field="HASC_1" index="7" name=""/>
+        <alias field="CC_1" index="8" name=""/>
+        <alias field="TYPE_1" index="9" name=""/>
+        <alias field="ENGTYPE_1" index="10" name=""/>
+        <alias field="VALIDFR_1" index="11" name=""/>
+        <alias field="VALIDTO_1" index="12" name=""/>
+        <alias field="REMARKS_1" index="13" name=""/>
+        <alias field="Shape_Leng" index="14" name=""/>
+        <alias field="Shape_Area" index="15" name=""/>
       </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
       <attributeactions default="-1"/>
-      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="-1">
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="345404712">
         <columns>
-          <column width="-1" hidden="0" type="field" name="GADMID"/>
+          <column width="-1" hidden="0" type="field" name="ID_0"/>
           <column width="-1" hidden="0" type="field" name="ISO"/>
-          <column width="-1" hidden="0" type="field" name="NAME_ENGLI"/>
-          <column width="-1" hidden="0" type="field" name="NAME_ISO"/>
-          <column width="-1" hidden="0" type="field" name="NAME_FAO"/>
-          <column width="-1" hidden="0" type="field" name="NAME_LOCAL"/>
-          <column width="-1" hidden="0" type="field" name="NAME_OBSOL"/>
-          <column width="-1" hidden="0" type="field" name="NAME_VARIA"/>
-          <column width="-1" hidden="0" type="field" name="NAME_NONLA"/>
-          <column width="-1" hidden="0" type="field" name="NAME_FRENC"/>
-          <column width="-1" hidden="0" type="field" name="NAME_SPANI"/>
-          <column width="-1" hidden="0" type="field" name="NAME_RUSSI"/>
-          <column width="-1" hidden="0" type="field" name="NAME_ARABI"/>
-          <column width="-1" hidden="0" type="field" name="NAME_CHINE"/>
-          <column width="-1" hidden="0" type="field" name="WASPARTOF"/>
-          <column width="-1" hidden="0" type="field" name="CONTAINS"/>
-          <column width="-1" hidden="0" type="field" name="SOVEREIGN"/>
-          <column width="-1" hidden="0" type="field" name="ISO2"/>
-          <column width="-1" hidden="0" type="field" name="WWW"/>
-          <column width="-1" hidden="0" type="field" name="FIPS"/>
-          <column width="-1" hidden="0" type="field" name="ISON"/>
-          <column width="-1" hidden="0" type="field" name="VALIDFR"/>
-          <column width="-1" hidden="0" type="field" name="VALIDTO"/>
-          <column width="-1" hidden="0" type="field" name="AndyID"/>
-          <column width="-1" hidden="0" type="field" name="POP2000"/>
-          <column width="-1" hidden="0" type="field" name="SQKM"/>
-          <column width="-1" hidden="0" type="field" name="POPSQKM"/>
-          <column width="-1" hidden="0" type="field" name="UNREGION1"/>
-          <column width="-1" hidden="0" type="field" name="UNREGION2"/>
-          <column width="-1" hidden="0" type="field" name="DEVELOPING"/>
-          <column width="-1" hidden="0" type="field" name="CIS"/>
-          <column width="-1" hidden="0" type="field" name="Transition"/>
-          <column width="-1" hidden="0" type="field" name="OECD"/>
-          <column width="-1" hidden="0" type="field" name="WBREGION"/>
-          <column width="-1" hidden="0" type="field" name="WBINCOME"/>
-          <column width="-1" hidden="0" type="field" name="WBDEBT"/>
-          <column width="-1" hidden="0" type="field" name="WBOTHER"/>
-          <column width="-1" hidden="0" type="field" name="CEEAC"/>
-          <column width="-1" hidden="0" type="field" name="CEMAC"/>
-          <column width="-1" hidden="0" type="field" name="CEPLG"/>
-          <column width="-1" hidden="0" type="field" name="COMESA"/>
-          <column width="-1" hidden="0" type="field" name="EAC"/>
-          <column width="-1" hidden="0" type="field" name="ECOWAS"/>
-          <column width="-1" hidden="0" type="field" name="IGAD"/>
-          <column width="-1" hidden="0" type="field" name="IOC"/>
-          <column width="-1" hidden="0" type="field" name="MRU"/>
-          <column width="-1" hidden="0" type="field" name="SACU"/>
-          <column width="-1" hidden="0" type="field" name="UEMOA"/>
-          <column width="-1" hidden="0" type="field" name="UMA"/>
-          <column width="-1" hidden="0" type="field" name="PALOP"/>
-          <column width="-1" hidden="0" type="field" name="PARTA"/>
-          <column width="-1" hidden="0" type="field" name="CACM"/>
-          <column width="-1" hidden="0" type="field" name="EurAsEC"/>
-          <column width="-1" hidden="0" type="field" name="Agadir"/>
-          <column width="-1" hidden="0" type="field" name="SAARC"/>
-          <column width="-1" hidden="0" type="field" name="ASEAN"/>
-          <column width="-1" hidden="0" type="field" name="NAFTA"/>
-          <column width="-1" hidden="0" type="field" name="GCC"/>
-          <column width="-1" hidden="0" type="field" name="CSN"/>
-          <column width="-1" hidden="0" type="field" name="CARICOM"/>
-          <column width="-1" hidden="0" type="field" name="EU"/>
-          <column width="-1" hidden="0" type="field" name="CAN"/>
-          <column width="-1" hidden="0" type="field" name="ACP"/>
-          <column width="-1" hidden="0" type="field" name="Landlocked"/>
-          <column width="-1" hidden="0" type="field" name="AOSIS"/>
-          <column width="-1" hidden="0" type="field" name="SIDS"/>
-          <column width="-1" hidden="0" type="field" name="Islands"/>
-          <column width="-1" hidden="0" type="field" name="LDC"/>
+          <column width="-1" hidden="0" type="field" name="NAME_0"/>
+          <column width="-1" hidden="0" type="field" name="ID_1"/>
+          <column width="-1" hidden="0" type="field" name="NAME_1"/>
+          <column width="-1" hidden="0" type="field" name="VARNAME_1"/>
+          <column width="-1" hidden="0" type="field" name="NL_NAME_1"/>
+          <column width="-1" hidden="0" type="field" name="HASC_1"/>
+          <column width="-1" hidden="0" type="field" name="CC_1"/>
+          <column width="-1" hidden="0" type="field" name="TYPE_1"/>
+          <column width="-1" hidden="0" type="field" name="ENGTYPE_1"/>
+          <column width="-1" hidden="0" type="field" name="VALIDFR_1"/>
+          <column width="-1" hidden="0" type="field" name="VALIDTO_1"/>
+          <column width="-1" hidden="0" type="field" name="REMARKS_1"/>
           <column width="-1" hidden="0" type="field" name="Shape_Leng"/>
           <column width="-1" hidden="0" type="field" name="Shape_Area"/>
           <column width="-1" hidden="1" type="actions"/>
@@ -26906,74 +26652,20 @@ def my_form_open(dialog, layer, feature):
         <fieldstyles/>
       </conditionalstyles>
       <defaults>
-        <default field="GADMID" expression=""/>
+        <default field="ID_0" expression=""/>
         <default field="ISO" expression=""/>
-        <default field="NAME_ENGLI" expression=""/>
-        <default field="NAME_ISO" expression=""/>
-        <default field="NAME_FAO" expression=""/>
-        <default field="NAME_LOCAL" expression=""/>
-        <default field="NAME_OBSOL" expression=""/>
-        <default field="NAME_VARIA" expression=""/>
-        <default field="NAME_NONLA" expression=""/>
-        <default field="NAME_FRENC" expression=""/>
-        <default field="NAME_SPANI" expression=""/>
-        <default field="NAME_RUSSI" expression=""/>
-        <default field="NAME_ARABI" expression=""/>
-        <default field="NAME_CHINE" expression=""/>
-        <default field="WASPARTOF" expression=""/>
-        <default field="CONTAINS" expression=""/>
-        <default field="SOVEREIGN" expression=""/>
-        <default field="ISO2" expression=""/>
-        <default field="WWW" expression=""/>
-        <default field="FIPS" expression=""/>
-        <default field="ISON" expression=""/>
-        <default field="VALIDFR" expression=""/>
-        <default field="VALIDTO" expression=""/>
-        <default field="AndyID" expression=""/>
-        <default field="POP2000" expression=""/>
-        <default field="SQKM" expression=""/>
-        <default field="POPSQKM" expression=""/>
-        <default field="UNREGION1" expression=""/>
-        <default field="UNREGION2" expression=""/>
-        <default field="DEVELOPING" expression=""/>
-        <default field="CIS" expression=""/>
-        <default field="Transition" expression=""/>
-        <default field="OECD" expression=""/>
-        <default field="WBREGION" expression=""/>
-        <default field="WBINCOME" expression=""/>
-        <default field="WBDEBT" expression=""/>
-        <default field="WBOTHER" expression=""/>
-        <default field="CEEAC" expression=""/>
-        <default field="CEMAC" expression=""/>
-        <default field="CEPLG" expression=""/>
-        <default field="COMESA" expression=""/>
-        <default field="EAC" expression=""/>
-        <default field="ECOWAS" expression=""/>
-        <default field="IGAD" expression=""/>
-        <default field="IOC" expression=""/>
-        <default field="MRU" expression=""/>
-        <default field="SACU" expression=""/>
-        <default field="UEMOA" expression=""/>
-        <default field="UMA" expression=""/>
-        <default field="PALOP" expression=""/>
-        <default field="PARTA" expression=""/>
-        <default field="CACM" expression=""/>
-        <default field="EurAsEC" expression=""/>
-        <default field="Agadir" expression=""/>
-        <default field="SAARC" expression=""/>
-        <default field="ASEAN" expression=""/>
-        <default field="NAFTA" expression=""/>
-        <default field="GCC" expression=""/>
-        <default field="CSN" expression=""/>
-        <default field="CARICOM" expression=""/>
-        <default field="EU" expression=""/>
-        <default field="CAN" expression=""/>
-        <default field="ACP" expression=""/>
-        <default field="Landlocked" expression=""/>
-        <default field="AOSIS" expression=""/>
-        <default field="SIDS" expression=""/>
-        <default field="Islands" expression=""/>
-        <default field="LDC" expression=""/>
+        <default field="NAME_0" expression=""/>
+        <default field="ID_1" expression=""/>
+        <default field="NAME_1" expression=""/>
+        <default field="VARNAME_1" expression=""/>
+        <default field="NL_NAME_1" expression=""/>
+        <default field="HASC_1" expression=""/>
+        <default field="CC_1" expression=""/>
+        <default field="TYPE_1" expression=""/>
+        <default field="ENGTYPE_1" expression=""/>
+        <default field="VALIDFR_1" expression=""/>
+        <default field="VALIDTO_1" expression=""/>
+        <default field="REMARKS_1" expression=""/>
         <default field="Shape_Leng" expression=""/>
         <default field="Shape_Area" expression=""/>
       </defaults>
@@ -28352,6 +28044,56 @@ def my_form_open(dialog, layer, feature):
         <default field="PROVINCE" expression=""/>
       </defaults>
       <previewExpression></previewExpression>
+    </maplayer>
+    <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+      <extent>
+        <xmin>-180.02083333333334281</xmin>
+        <ymin>-90.0208333333333286</ymin>
+        <xmax>179.97916666666665719</xmax>
+        <ymax>90.0208333333333286</ymax>
+      </extent>
+      <id>egm08_2520170804111018436</id>
+      <datasource>../../../../../../OSGeo4W64/share/proj/egm08_25.gtx</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>egm08_25</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+          <srsid>3452</srsid>
+          <srid>4326</srid>
+          <authid>EPSG:4326</authid>
+          <description>WGS 84</description>
+          <projectionacronym>longlat</projectionacronym>
+          <ellipsoidacronym>WGS84</ellipsoidacronym>
+          <geographicflag>true</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="1"/>
+      </noData>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer gradient="BlackToWhite" opacity="1" alphaBand="-1" type="singlebandgray" grayBand="1">
+          <rasterTransparency/>
+          <contrastEnhancement>
+            <minValue>-60.13152166748047</minValue>
+            <maxValue>59.36097662353515</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </contrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <id>gps_coords_191plots20170727205628077</id>
@@ -30664,13 +30406,13 @@ def my_form_open(dialog, layer, feature):
     </maplayer>
     <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
       <extent>
-        <xmin>15.95833206176757812</xmin>
-        <ymin>-35.000396728515625</ymin>
-        <xmax>33.000518798828125</xmax>
-        <ymax>-21.95833206176757812</ymax>
+        <xmin>15.97916666666666607</xmin>
+        <ymin>-35.0208333333333357</ymin>
+        <xmax>33.0208333333333286</xmax>
+        <ymax>-21.97916666666666785</ymax>
       </extent>
-      <id>sageoid2010_2520170804001223310</id>
-      <datasource>D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/SA Geoid/sageoid2010_25.gtx</datasource>
+      <id>sageoid2010_2520170804111052472</id>
+      <datasource>../../../../../../OSGeo4W64/share/proj/sageoid2010_25.gtx</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -32299,8 +32041,10 @@ def my_form_open(dialog, layer, feature):
         <value>sewefontein_tchuganu_bound_wgs8420170304123226893</value>
         <value>vlokveg2010_Tm2520170304123226893</value>
         <value>vlokveg2010_Tm25_Degr_copy20170304124946370</value>
+        <value>ZAF_adm120170804001858449</value>
       </LayerSnappingList>
       <LayerSnappingEnabledList type="QStringList">
+        <value>disabled</value>
         <value>disabled</value>
         <value>disabled</value>
         <value>disabled</value>
@@ -32361,8 +32105,10 @@ def my_form_open(dialog, layer, feature):
         <value>2</value>
         <value>2</value>
         <value>2</value>
+        <value>2</value>
       </LayerSnappingToleranceUnitList>
       <LayerSnapToList type="QStringList">
+        <value>to_vertex_and_segment</value>
         <value>to_vertex_and_segment</value>
         <value>to_vertex_and_segment</value>
         <value>to_vertex_and_segment</value>
@@ -32395,6 +32141,7 @@ def my_form_open(dialog, layer, feature):
       <DefaultSnapType type="QString">off</DefaultSnapType>
       <DefaultSnapTolerance type="double">0</DefaultSnapTolerance>
       <LayerSnappingToleranceList type="QStringList">
+        <value>0.000000</value>
         <value>0.000000</value>
         <value>0.000000</value>
         <value>0.000000</value>

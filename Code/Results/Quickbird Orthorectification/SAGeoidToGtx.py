@@ -69,14 +69,16 @@ if True:
 #     egm_m = ds_vrt.GetRasterBand(1).ReadAsArray()
 #     ds_vrt = None
 
+    gtx_file = 'D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/SA Geoid/sageoid2010_25.gtx'
     drv = gdal.GetDriverByName('GTX')
-    ds_gtx = drv.Create('D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/SA Geoid/sageoid2010_25.gtx',
+    ds_gtx = drv.Create(gtx_file,
                         ncols, nrows, 1, gdal.GDT_Float32 )
     ps_25 = 2.5 / 60.0
     # ds_gtx.SetGeoTransform( (-180 - ps_25,ps_25,0,90 + ps_25,0,-1 * ps_25) )
 
     # the below needs checking/fixing
-    ds_gtx.SetGeoTransform((np.min(dat[:,1]) - lat_delta, lat_delta, 0, np.max(dat[:, 0]) + long_delta, 0, -1 * long_delta))
+    # ds_gtx.SetGeoTransform((np.min(dat[:,1]) - lat_delta, lat_delta, 0, np.max(dat[:, 0]) + long_delta, 0, -1 * long_delta))
+    ds_gtx.SetGeoTransform((np.min(dat[:,1]) - ps_25/2, ps_25, 0, np.max(dat[:, 0]) + ps_25/2, 0, -1 * ps_25))
 
     # east = egm_m[:,:4320] * 1.0
     # west = egm_m[:,4320:] * 1.0
@@ -86,3 +88,5 @@ if True:
     
     ds_gtx = None
     
+    import shutil
+    shutil.copy2(gtx_file, 'C:/OSGeo4W64/share/proj/')
