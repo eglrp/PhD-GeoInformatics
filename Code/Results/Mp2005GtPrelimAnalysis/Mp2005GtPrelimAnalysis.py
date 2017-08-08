@@ -16,9 +16,9 @@ csGtFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/BMR Carbon
 csGtGpsFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/BMR Carbon Stocks/gps_coords_191plots.shp"
 
 # file containing image locations of GCP locs in UTM 35S
-imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056549293010_01/Ortho/R1C12-GdalPanSharp-ArcGcpWarp.tif"
-
-
+# imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056549293010_01/Ortho/R1C12-GdalPanSharp-ArcGcpWarp.tif"
+# imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/PCI Output/TOA and Haze/TOACorrected_056844553010_01_P001_OrthoPanSharpen_05644015.tif"
+imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/PCI Output\ATCOR1/ATCORCorrected_056844553010_01_P001_OrthoPanSharpen_05644032.tif"
 # read in cs gt
 ds = gdal.OpenEx(csGtFile, gdal.OF_VECTOR)
 if ds is None:
@@ -179,6 +179,12 @@ for plot in csGtDict.values():
             imbuf[:, :, b-1] = ds.GetRasterBand(b).ReadAsArray(np.int(np.round(pixel))-(winSize[0]-1)/2,
                                                                np.int(np.round(line))-(winSize[1]-1)/2,
                                                                winSize[0], winSize[1])
+            # imbuf[:, :, b-1] = ds.GetRasterBand(b).ReadAsArray(np.int(np.round(pixel))-(winSize[0]-1),
+            #                                                    np.int(np.round(line))-(winSize[1]-1),
+            #                                                    winSize[0], winSize[1])
+            # imbuf[:, :, b-1] = ds.GetRasterBand(b).ReadAsArray(np.int(np.round(pixel)),
+            #                                                    np.int(np.round(line)),
+            #                                                    winSize[0], winSize[1])
             if np.all(imbuf==0):
                 print "imbuf zero"
             feat = extract_features(imbuf)
@@ -191,15 +197,52 @@ for plot in csGtDict.values():
         print "x-" + plot['PLOT']
 print i
 
-ds = None
 
 ndvi = np.array([plot['NDVI'] for plot in plotDict.values()])
 gn = np.array([plot['g_n'] for plot in plotDict.values()])
 std = np.array([plot['i_std'] for plot in plotDict.values()])
+ir_rat = np.array([plot['ir_rat'] for plot in plotDict.values()])
 tagc = np.array([plot['TAGC'] for plot in plotDict.values()])
 plotNames = plotDict.keys()
-idx = np.array(['OL' in str(s) for s in plotNames])
 
 pylab.figure()
-pylab.plot(ndvi[idx], tagc[idx], 'kx')
+pylab.subplot(2,2,1)
+pylab.plot(ndvi, tagc, 'kx')
+pylab.xlabel('NDVI')
+pylab.ylabel('TAGC')
+pylab.subplot(2,2,2)
+pylab.plot(gn, tagc, 'kx')
+pylab.xlabel('gn')
+pylab.ylabel('TAGC')
+pylab.subplot(2,2,3)
+pylab.plot(std, tagc, 'kx')
+pylab.xlabel('i_std')
+pylab.ylabel('TAGC')
+pylab.subplot(2,2,4)
+pylab.plot(ir_rat, tagc, 'kx')
+pylab.xlabel('ir_rat')
+pylab.ylabel('TAGC')
 
+
+idx = np.array(['ST' in str(s) and not 'DST' in str(s) for s in plotNames])
+
+pylab.figure()
+pylab.subplot(2,2,1)
+pylab.plot(ndvi[idx], tagc[idx], 'kx')
+pylab.xlabel('NDVI')
+pylab.ylabel('TAGC')
+pylab.subplot(2,2,2)
+pylab.plot(gn[idx], tagc[idx], 'kx')
+pylab.xlabel('gn')
+pylab.ylabel('TAGC')
+pylab.subplot(2,2,3)
+pylab.plot(std[idx], tagc[idx], 'kx')
+pylab.xlabel('i_std')
+pylab.ylabel('TAGC')
+pylab.subplot(2,2,4)
+pylab.plot(ir_rat[idx], tagc[idx], 'kx')
+pylab.xlabel('ir_rat')
+pylab.ylabel('TAGC')
+
+
+ds = None
