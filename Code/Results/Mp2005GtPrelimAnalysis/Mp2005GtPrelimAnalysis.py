@@ -133,13 +133,17 @@ def extract_features(imbuf):
     imbuf = np.float64(imbuf)
     s = np.sum(imbuf, 2)
     cn = imbuf/np.tile(s[:,:,None], (1, 1, imbuf.shape[2]))
-    ndvi = (imbuf[:,:,3] - imbuf[:,:,0])/(imbuf[:,:,3] + imbuf[:,:,0])
-    ir_rat = imbuf[:,:,3]/imbuf[:,:,0]
+    b_i = 0
+    g_i = 1
+    r_i = 2
+    ir_i = 3
+    ndvi = (imbuf[:,:,ir_i] - imbuf[:,:,r_i])/(imbuf[:,:,ir_i] + imbuf[:,:,r_i])
+    ir_rat = imbuf[:,:,ir_i]/imbuf[:,:,r_i]
     feat = {}
-    feat['r_n'] = cn[:,:,0].mean()
-    feat['g_n'] = cn[:,:,1].mean()
-    feat['b_n'] = cn[:,:,2].mean()
-    feat['ir_n'] = cn[:,:,3].mean()
+    feat['r_n'] = cn[:,:,r_i].mean()
+    feat['g_n'] = cn[:,:,g_i].mean()
+    feat['b_n'] = cn[:,:,b_i].mean()
+    feat['ir_n'] = cn[:,:,ir_i].mean()
     feat['NDVI'] = ndvi.mean()
     feat['ir_rat'] = ir_rat.mean()
     feat['i'] = (s/np.prod(s.shape[0:2])).mean()
@@ -164,7 +168,7 @@ if not geotransform is None:
 
 transform = osr.CoordinateTransformation(csGtSpatialRef, osr.SpatialReference(ds.GetProjection()))
 i = 0
-winSize = (5, 5)
+winSize = (8, 8)
 plotDict = {}
 plotTagcDict = {}
 for plot in csGtDict.values():
@@ -176,15 +180,21 @@ for plot in csGtDict.values():
     if pixel >= 0 and line >=0 and pixel < ds.RasterXSize and line < ds.RasterYSize:
         imbuf = np.zeros((winSize[0], winSize[1], 4), dtype=float)
         for b in range(1,5):
-            imbuf[:, :, b-1] = ds.GetRasterBand(b).ReadAsArray(np.int(np.round(pixel))-(winSize[0]-1)/2,
-                                                               np.int(np.round(line))-(winSize[1]-1)/2,
-                                                               winSize[0], winSize[1])
+            # imbuf[:, :, b-1] = ds.GetRasterBand(b).ReadAsArray(np.int(np.round(pixel))-(winSize[0]-1)/2,
+            #                                                    np.int(np.round(line))-(winSize[1]-1)/2,
+            #                                                    winSize[0], winSize[1])
             # imbuf[:, :, b-1] = ds.GetRasterBand(b).ReadAsArray(np.int(np.round(pixel))-(winSize[0]-1),
             #                                                    np.int(np.round(line))-(winSize[1]-1),
             #                                                    winSize[0], winSize[1])
             # imbuf[:, :, b-1] = ds.GetRasterBand(b).ReadAsArray(np.int(np.round(pixel)),
             #                                                    np.int(np.round(line)),
             #                                                    winSize[0], winSize[1])
+            # imbuf[:, :, b-1] = ds.GetRasterBand(b).ReadAsArray(np.int(np.round(pixel))-(winSize[0]-1),
+            #                                                    np.int(np.round(line)),
+            #                                                    winSize[0], winSize[1])
+            imbuf[:, :, b-1] = ds.GetRasterBand(b).ReadAsArray(np.int(np.round(pixel)),
+                                                               np.int(np.round(line))-(winSize[0]-1),
+                                                               winSize[0], winSize[1])
             if np.all(imbuf==0):
                 print "imbuf zero"
             feat = extract_features(imbuf)
@@ -224,8 +234,8 @@ pylab.xlabel('ir_rat')
 pylab.ylabel('TAGC')
 
 
-idx = np.array(['ST' in str(s) and not 'DST' in str(s) for s in plotNames])
-
+idx = np.array(['ST' in str(s) in str(s) for s in plotNames])
+# and not 'DST'
 pylab.figure()
 pylab.subplot(2,2,1)
 pylab.plot(ndvi[idx], tagc[idx], 'kx')
