@@ -160,6 +160,7 @@ def extract_features(imbuf):
 
     return feat
 
+
 ds = gdal.OpenEx(imFile, gdal.OF_RASTER)
 if ds is None:
     print "Open failed./n"
@@ -178,10 +179,11 @@ if not geotransform is None:
 
 transform = osr.CoordinateTransformation(csGtSpatialRef, osr.SpatialReference(ds.GetProjection()))
 i = 0
-winSize = (8, 8)
+winSize = (16, 16)
 plotDict = {}
 plotTagcDict = {}
 class_labels = ['OL','DST','ST']
+max_im_vals = np.zeros((4))
 for plot in csGtDict.values():
     point = ogr.Geometry(ogr.wkbPoint)
     point.AddPoint(plot['X'], plot['Y'])
@@ -191,9 +193,9 @@ for plot in csGtDict.values():
     if pixel >= 0 and line >=0 and pixel < ds.RasterXSize and line < ds.RasterYSize:
         imbuf = np.zeros((winSize[0], winSize[1], 4), dtype=float)
         for b in range(1,5):
-            # imbuf[:, :, b-1] = ds.GetRasterBand(b).ReadAsArray(np.int(np.round(pixel))-(winSize[0]-1)/2,
-            #                                                    np.int(np.round(line))-(winSize[1]-1)/2,
-            #                                                    winSize[0], winSize[1])
+            imbuf[:, :, b-1] = ds.GetRasterBand(b).ReadAsArray(np.int(np.round(pixel))-(winSize[0]-1)/2,
+                                                               np.int(np.round(line))-(winSize[1]-1)/2,
+                                                               winSize[0], winSize[1])
             # imbuf[:, :, b-1] = ds.GetRasterBand(b).ReadAsArray(np.int(np.round(pixel))-(winSize[0]-1),
             #                                                    np.int(np.round(line))-(winSize[1]-1),
             #                                                    winSize[0], winSize[1])
@@ -204,32 +206,37 @@ for plot in csGtDict.values():
             #                                                    np.int(np.round(line)),
             #                                                    winSize[0], winSize[1])
             # this option performs best
-            imbuf[:, :, b-1] = ds.GetRasterBand(b).ReadAsArray(np.int(np.round(pixel)),
-                                                               np.int(np.round(line))-(winSize[0]-1),
-                                                               winSize[0], winSize[1])
-            if np.all(imbuf==0):
-                print "imbuf zero"
-            feat = extract_features(imbuf)
-            fields = ['TAGC', 'Z_P_AFRA', 'ALLOMETRY', 'HERB', 'LITTER']
-            for f in fields:
-                feat[f] = csGtDict[plot['PLOT']][f]
-            if 'DST' in plot['PLOT']:
-                ci = 1
-            elif 'ST' in plot['PLOT']:
-                ci = 2
-            elif 'OL' in plot['PLOT']:
-                ci = 0
-            else:
-                ci = 2
-            feat['classi'] = ci
-            feat['class'] = class_labels[ci]
-            feat['thumbnail'] = imbuf
-            plotDict[plot['PLOT']] = feat
+            # imbuf[:, :, b-1] = ds.GetRasterBand(b).ReadAsArray(np.int(np.round(pixel)),
+            #                                                    np.int(np.round(line))-(winSize[0]-1),
+            #                                                    winSize[0], winSize[1])
+        if np.all(imbuf==0):
+            print "imbuf zero"
+        feat = extract_features(imbuf)
+        fields = ['TAGC', 'Z_P_AFRA', 'ALLOMETRY', 'HERB', 'LITTER']
+        for f in fields:
+            feat[f] = csGtDict[plot['PLOT']][f]
+        if 'DST' in plot['PLOT']:
+            ci = 1
+        elif 'ST' in plot['PLOT']:
+            ci = 2
+        elif 'OL' in plot['PLOT']:
+            ci = 0
+        else:
+            ci = 2
+        feat['classi'] = ci
+        feat['class'] = class_labels[ci]
+        feat['thumbnail'] = imbuf
+        plotDict[plot['PLOT']] = feat
             # plotTagcDict[plot['PLOT']] = csGtDict[plot['PLOT']]['TAGC']
+        tmp = np.reshape(imbuf, (np.prod(winSize), 4))
+        # max_tmp = tmp.max(axis=0)
+        max_tmp = np.percentile(tmp, 98., axis=0)
+        max_im_vals[max_tmp > max_im_vals] = max_tmp[max_tmp > max_im_vals]
         print plot['PLOT']
         i = i +1
     else:
         print "x-" + plot['PLOT']
+
 print i
 
 #
@@ -327,22 +334,23 @@ for yi, yf in enumerate(['TAGC']):
         # pylab.plot(x[class_idx], y[class_idx], col + 'x')
         for xx,yy,ll in zip(x[class_idx], y[class_idx], np.array(plot_names)[class_idx]):
             imbuf = plotDict[ll]['thumbnail'].copy()
-            imbuf[:,:,3] = imbuf[:,:,3]/1.5
+            for b in range(0, 4):
+                imbuf[:,:,b] = imbuf[:,:,b]/max_im_vals[b]
 
-            # pylab.text(xx+.001, yy+.001, ll, fontdict={'size':6, 'color': col})
+            pylab.text(xx-.001, yy-.001, ll, fontdict={'size':6, 'color': col})
             ims = 20.
             extent = [xx-xd/(2*ims), xx+xd/(2*ims), yy-yd/(2*ims), yy + yd/(2*ims)]
-            pylab.imshow(imbuf[:,:,[2,1,0]]/30., extent=extent, aspect='auto') #zorder=-1,
+            pylab.imshow(imbuf[:,:,[3,2,1]], extent=extent, aspect='auto') #zorder=-1,
             ax.add_patch(patches.Rectangle((xx-xd/(2*ims), yy-yd/(2*ims)), xd/ims, yd/ims, fill=False, edgecolor=col, linewidth=2.))
     # pylab.plot(mPixels[::step], dRawPixels[::step], color='k', marker='.', linestyle='', markersize=.5)
 
-    xl = pylab.gca().get_xlim
+    xl = pylab.gca().get_xlim()
     yl = pylab.gca().get_ylim()
     pylab.text((xl[0] + np.diff(xl)*0.05)[0], (yl[0] + np.diff(yl)*0.8)[0], str.format('$R^2$ = {0:.2f}',
                                                                                        np.round(r**2, 2)))
     pylab.xlabel('NDVI')
     pylab.ylabel(yf)
-    pylab.legend(class_labels)
+    # pylab.legend(class_labels)
 
 #todo x check if atcor refl vals are in % - yes they are
 #todo x define ol, dst, st classes and visualise
@@ -353,6 +361,8 @@ for yi, yf in enumerate(['TAGC']):
 #todo brownness or soil index
 #todo make features that use classification within window eg perhaps ttl vegetation pixels, or mean soil colour and mean veg colour
 #todo investigate visualisation with qgis/arc python libraries
+#todo FETCH MY PKG FROM PATTI
+#todo what about xects?  were they used in calculating TAGC?
 #kko, kq are pristine
 
 #
