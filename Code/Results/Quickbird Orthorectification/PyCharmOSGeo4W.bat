@@ -11,3 +11,4 @@ SET PATH=%PATH%;%QGIS%\bin;%OTB%\applications
 SET PYTHONPATH=%QGIS%\python;%OTB%\python;%PYTHONPATH%
  
 start "PyCharm aware of QGIS & OSGeo4W" /B %PYCHARM% %*
+

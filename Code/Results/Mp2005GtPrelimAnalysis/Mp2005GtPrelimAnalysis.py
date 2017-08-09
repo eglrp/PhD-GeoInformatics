@@ -4,6 +4,8 @@ import numpy as np
 import osr
 import pylab
 from scipy import stats as stats
+from matplotlib import patches
+
 from collections import OrderedDict
 
 # take a rough first look for feature correlations with cs
@@ -17,8 +19,12 @@ csGtGpsFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/BMR Car
 
 # file containing image locations of GCP locs in UTM 35S
 # imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056549293010_01/Ortho/R1C12-GdalPanSharp-ArcGcpWarp.tif"
-# imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/PCI Output/TOA and Haze/TOACorrected_056844553010_01_P001_OrthoPanSharpen_05644015.tif"
-imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/PCI Output\ATCOR1/ATCORCorrected_056844553010_01_P001_OrthoPanSharpen_05644032.tif"
+# imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/PCI Output/ATCOR1/ATCORCorrected_056844553010_01_P001_OrthoPanSharpen_05644032.tif"
+imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/PCI Output/TOA and Haze/TOACorrected_056844553010_01_P001_OrthoPanSharpen_05644015.tif"
+# imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/PCI Output/Separate Pan and MS/TOA/PanSharpToaOrtho.tif"
+# imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/PCI Output/Separate Pan and MS/ATCOR1/PansharpAtcorOrtho.tif"
+# imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/PCI Output/056844553010_01_P001_OrthoPanSharpen.tif"
+
 # read in cs gt
 ds = gdal.OpenEx(csGtFile, gdal.OF_VECTOR)
 if ds is None:
@@ -112,7 +118,6 @@ for k in csGtDict.keys():
 np.array(csGtGpsDict.keys())[np.logical_not(gpsInd[0])]
 
 # Read in the image
-
 def world2Pixel(geoMatrix, x, y):
     """
     Uses a gdal geomatrix (gdal.GetGeoTransform()) to calculate
@@ -130,7 +135,7 @@ def world2Pixel(geoMatrix, x, y):
 
 
 def extract_features(imbuf):
-    imbuf = np.float64(imbuf)
+    imbuf = np.float64(imbuf)/100.   # values are in percent?
     s = np.sum(imbuf, 2)
     cn = imbuf/np.tile(s[:,:,None], (1, 1, imbuf.shape[2]))
     b_i = 0
@@ -139,15 +144,20 @@ def extract_features(imbuf):
     ir_i = 3
     ndvi = (imbuf[:,:,ir_i] - imbuf[:,:,r_i])/(imbuf[:,:,ir_i] + imbuf[:,:,r_i])
     ir_rat = imbuf[:,:,ir_i]/imbuf[:,:,r_i]
+    L = 0.02
+    savi = (1 + L)*(imbuf[:,:,ir_i] - imbuf[:,:,r_i])/(L + imbuf[:,:,ir_i] + imbuf[:,:,r_i])
     feat = {}
     feat['r_n'] = cn[:,:,r_i].mean()
     feat['g_n'] = cn[:,:,g_i].mean()
     feat['b_n'] = cn[:,:,b_i].mean()
     feat['ir_n'] = cn[:,:,ir_i].mean()
     feat['NDVI'] = ndvi.mean()
+    feat['SAVI'] = savi.mean()
     feat['ir_rat'] = ir_rat.mean()
     feat['i'] = (s/np.prod(s.shape[0:2])).mean()
     feat['i_std'] = (s/np.prod(s.shape[0:2])).std()
+    feat['NDVI_std'] = ndvi.std()
+
     return feat
 
 ds = gdal.OpenEx(imFile, gdal.OF_RASTER)
@@ -171,6 +181,7 @@ i = 0
 winSize = (8, 8)
 plotDict = {}
 plotTagcDict = {}
+class_labels = ['OL','DST','ST']
 for plot in csGtDict.values():
     point = ogr.Geometry(ogr.wkbPoint)
     point.AddPoint(plot['X'], plot['Y'])
@@ -192,13 +203,27 @@ for plot in csGtDict.values():
             # imbuf[:, :, b-1] = ds.GetRasterBand(b).ReadAsArray(np.int(np.round(pixel))-(winSize[0]-1),
             #                                                    np.int(np.round(line)),
             #                                                    winSize[0], winSize[1])
+            # this option performs best
             imbuf[:, :, b-1] = ds.GetRasterBand(b).ReadAsArray(np.int(np.round(pixel)),
                                                                np.int(np.round(line))-(winSize[0]-1),
                                                                winSize[0], winSize[1])
             if np.all(imbuf==0):
                 print "imbuf zero"
             feat = extract_features(imbuf)
-            feat['TAGC'] = csGtDict[plot['PLOT']]['TAGC']
+            fields = ['TAGC', 'Z_P_AFRA', 'ALLOMETRY', 'HERB', 'LITTER']
+            for f in fields:
+                feat[f] = csGtDict[plot['PLOT']][f]
+            if 'DST' in plot['PLOT']:
+                ci = 1
+            elif 'ST' in plot['PLOT']:
+                ci = 2
+            elif 'OL' in plot['PLOT']:
+                ci = 0
+            else:
+                ci = 2
+            feat['classi'] = ci
+            feat['class'] = class_labels[ci]
+            feat['thumbnail'] = imbuf
             plotDict[plot['PLOT']] = feat
             # plotTagcDict[plot['PLOT']] = csGtDict[plot['PLOT']]['TAGC']
         print plot['PLOT']
@@ -207,52 +232,141 @@ for plot in csGtDict.values():
         print "x-" + plot['PLOT']
 print i
 
-
-ndvi = np.array([plot['NDVI'] for plot in plotDict.values()])
-gn = np.array([plot['g_n'] for plot in plotDict.values()])
-std = np.array([plot['i_std'] for plot in plotDict.values()])
-ir_rat = np.array([plot['ir_rat'] for plot in plotDict.values()])
-tagc = np.array([plot['TAGC'] for plot in plotDict.values()])
+#
+# ndvi = np.array([plot['NDVI'] for plot in plotDict.values()])
+# gn = np.array([plot['g_n'] for plot in plotDict.values()])
+# std = np.array([plot['i_std'] for plot in plotDict.values()])
+# ir_rat = np.array([plot['ir_rat'] for plot in plotDict.values()])
+# tagc = np.array([plot['TAGC'] for plot in plotDict.values()])
 plotNames = plotDict.keys()
 
+
+yfields = ['TAGC', 'Z_P_AFRA', 'ALLOMETRY', 'HERB', 'LITTER']
+xfields = ['NDVI', 'g_n', 'b_n', 'ir_n', 'ir_rat', 'NDVI_std']
+
 pylab.figure()
-pylab.subplot(2,2,1)
-pylab.plot(ndvi, tagc, 'kx')
-pylab.xlabel('NDVI')
-pylab.ylabel('TAGC')
-pylab.subplot(2,2,2)
-pylab.plot(gn, tagc, 'kx')
-pylab.xlabel('gn')
-pylab.ylabel('TAGC')
-pylab.subplot(2,2,3)
-pylab.plot(std, tagc, 'kx')
-pylab.xlabel('i_std')
-pylab.ylabel('TAGC')
-pylab.subplot(2,2,4)
-pylab.plot(ir_rat, tagc, 'kx')
-pylab.xlabel('ir_rat')
-pylab.ylabel('TAGC')
+x = np.array([plot['NDVI'] for plot in plotDict.values()])
+for yi, yf in enumerate(yfields):
+    pylab.subplot(2, 3, yi+1)
+    y = np.array([plot[yf] for plot in plotDict.values()])
+    (slope, intercept, r, p, stde) = stats.linregress(x, y)
+    pylab.plot(x, y, 'kx')
+    # pylab.plot(mPixels[::step], dRawPixels[::step], color='k', marker='.', linestyle='', markersize=.5)
+    xl = pylab.gca().get_xlim()
+    yl = pylab.gca().get_ylim()
+    pylab.text((xl[0] + np.diff(xl)*0.05)[0], (yl[0] + np.diff(yl)*0.8)[0], str.format('$R^2$ = {0:.2f}',
+                                                                                       np.round(r**2, 2)))
+    pylab.xlabel('NDVI')
+    pylab.ylabel(yf)
 
 
-idx = np.array(['ST' in str(s) in str(s) for s in plotNames])
-# and not 'DST'
 pylab.figure()
-pylab.subplot(2,2,1)
-pylab.plot(ndvi[idx], tagc[idx], 'kx')
-pylab.xlabel('NDVI')
-pylab.ylabel('TAGC')
-pylab.subplot(2,2,2)
-pylab.plot(gn[idx], tagc[idx], 'kx')
-pylab.xlabel('gn')
-pylab.ylabel('TAGC')
-pylab.subplot(2,2,3)
-pylab.plot(std[idx], tagc[idx], 'kx')
-pylab.xlabel('i_std')
-pylab.ylabel('TAGC')
-pylab.subplot(2,2,4)
-pylab.plot(ir_rat[idx], tagc[idx], 'kx')
-pylab.xlabel('ir_rat')
-pylab.ylabel('TAGC')
+y = np.log10([plot['TAGC'] for plot in plotDict.values()])
+for xi, xf in enumerate(xfields):
+    pylab.subplot(2, 3, xi+1)
+    x = np.array([plot[xf] for plot in plotDict.values()])
+    (slope, intercept, r, p, stde) = stats.linregress(x, y)
+    pylab.plot(x, y, 'kx')
+    # pylab.plot(mPixels[::step], dRawPixels[::step], color='k', marker='.', linestyle='', markersize=.5)
+    xl = pylab.gca().get_xlim()
+    yl = pylab.gca().get_ylim()
+    pylab.text((xl[0] + np.diff(xl)*0.05)[0], (yl[0] + np.diff(yl)*0.8)[0], str.format('$R^2$ = {0:.2f}',
+                                                                                       np.round(r**2, 2)))
+    pylab.xlabel(xf)
+    pylab.ylabel('TAGC')
 
 
-ds = None
+pylab.figure()
+x = np.array([plot['NDVI'] for plot in plotDict.values()])
+classi = np.array([plot['classi'] for plot in plotDict.values()])
+class_lab = np.array([plot['class'] for plot in plotDict.values()])
+colours = ['r','m','b']
+plot_names = plotDict.keys()
+for yi, yf in enumerate(yfields):
+    pylab.subplot(2, 3, yi+1)
+    y = np.array([plot[yf] for plot in plotDict.values()])
+    (slope, intercept, r, p, stde) = stats.linregress(x, y)
+    for idx,col in enumerate(colours):
+        class_idx = classi == idx
+        pylab.plot(x[class_idx], y[class_idx], col + 'x')
+
+        for xx,yy,ll in zip(x[class_idx], y[class_idx], np.array(plot_names)[class_idx]):
+            pylab.text(xx+.001, yy+.001, ll, fontdict={'size':6, 'color': col})
+    # pylab.plot(mPixels[::step], dRawPixels[::step], color='k', marker='.', linestyle='', markersize=.5)
+
+    xl = pylab.gca().get_xlim()
+    yl = pylab.gca().get_ylim()
+    pylab.text((xl[0] + np.diff(xl)*0.05)[0], (yl[0] + np.diff(yl)*0.8)[0], str.format('$R^2$ = {0:.2f}',
+                                                                                       np.round(r**2, 2)))
+    pylab.xlabel('NDVI')
+    pylab.ylabel(yf)
+    pylab.legend(class_labels)
+
+
+#with images
+pylab.figure()
+x = np.array([plot['NDVI'] for plot in plotDict.values()])
+classi = np.array([plot['classi'] for plot in plotDict.values()])
+class_lab = np.array([plot['class'] for plot in plotDict.values()])
+colours = ['r','m','b']
+plot_names = plotDict.keys()
+for yi, yf in enumerate(['TAGC']):
+    ax = pylab.subplot(1, 1, yi+1)
+    y = np.log10(np.array([plot[yf] for plot in plotDict.values()]))
+    (slope, intercept, r, p, stde) = stats.linregress(x, y)
+    ylim = [np.min(y), np.max(y)]
+    xlim = [np.min(x), np.max(x)]
+    xd = np.diff(xlim)[0]
+    yd = np.diff(ylim)[0]
+    pylab.axis([np.min(x), np.max(x), np.min(y), np.max(y)])
+    pylab.hold('on')
+    #pylab.plot(x, y, 'k.')
+
+    for idx,col in enumerate(colours):
+        class_idx = classi == idx
+        # pylab.plot(x[class_idx], y[class_idx], col + 'x')
+        for xx,yy,ll in zip(x[class_idx], y[class_idx], np.array(plot_names)[class_idx]):
+            imbuf = plotDict[ll]['thumbnail'].copy()
+            imbuf[:,:,3] = imbuf[:,:,3]/1.5
+
+            # pylab.text(xx+.001, yy+.001, ll, fontdict={'size':6, 'color': col})
+            ims = 20.
+            extent = [xx-xd/(2*ims), xx+xd/(2*ims), yy-yd/(2*ims), yy + yd/(2*ims)]
+            pylab.imshow(imbuf[:,:,[2,1,0]]/30., extent=extent, aspect='auto') #zorder=-1,
+            ax.add_patch(patches.Rectangle((xx-xd/(2*ims), yy-yd/(2*ims)), xd/ims, yd/ims, fill=False, edgecolor=col, linewidth=2.))
+    # pylab.plot(mPixels[::step], dRawPixels[::step], color='k', marker='.', linestyle='', markersize=.5)
+
+    xl = pylab.gca().get_xlim
+    yl = pylab.gca().get_ylim()
+    pylab.text((xl[0] + np.diff(xl)*0.05)[0], (yl[0] + np.diff(yl)*0.8)[0], str.format('$R^2$ = {0:.2f}',
+                                                                                       np.round(r**2, 2)))
+    pylab.xlabel('NDVI')
+    pylab.ylabel(yf)
+    pylab.legend(class_labels)
+
+#todo x check if atcor refl vals are in % - yes they are
+#todo x define ol, dst, st classes and visualise
+#todo research "regression analysis" in general and in python
+#todo plot with labels and or images to try and figure out what are problem plots and patterns
+#todo show pattern of correlation with spatial accuracy and window size - somehow simulate different accuracy and plot size conditions
+#todo make a separate feature of area around window - should give some insight into eg soil condition
+#todo brownness or soil index
+#todo make features that use classification within window eg perhaps ttl vegetation pixels, or mean soil colour and mean veg colour
+#todo investigate visualisation with qgis/arc python libraries
+#kko, kq are pristine
+
+#
+# import sys
+# sys.path.append("C:/OSGeo4W64/apps/Python27/Lib/site-packages")
+# sys.path.append("C:/OSGeo4W64/apps/qgis/python/qgis")
+# sys.path.append("C:/OSGeo4W64/apps/qgis/python/")
+# sys.path.append("C:/OSGeo4W64/bin/")
+
+# start pycharm with batch file
+if False:
+    %gui qt
+    import qgis.core
+    import qgis.gui
+
+    app = qgis.core.QgsApplication()
+    canvas = qgis.gui.QgsMapCanvas()

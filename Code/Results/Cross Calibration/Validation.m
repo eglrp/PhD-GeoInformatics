@@ -226,8 +226,8 @@ end
 
 %% Round 2: Full georef images
 close all; clear all;
-spotFileName = 'G:\MSc GeoInformatics\Data\NGI\My Rectified\AATCORCorrected_oS131022114824832b_278400201_Uint16.tif';
-ngiFileName = 'G:\MSc GeoInformatics\Data\NGI\My Rectified\StudyAreaXCalibMosaicSpotExtent.tif';
+spotFileName = 'D:\Data\Development\Projects\PhD GeoInformatics\Data\NGI\My Rectified\AATCORCorrected_oS131022114824832b_278400201_Uint16.tif';
+ngiFileName = 'D:\Data\Development\Projects\PhD GeoInformatics\Data\NGI\My Rectified\StudyAreaXCalibMosaicSpotExtent.tif';
 
 spotIm = int16(imread(spotFileName));
 ngiIm = int16(imread(ngiFileName));
