@@ -161,6 +161,56 @@ def extract_features(imbuf):
     return feat
 
 
+def scatterd(x, y, labels=None, class_labels=None, thumbnails=None, regress=True, xlabel=None, ylabel=None):
+
+    if class_labels is None:
+        class_labels = np.zeros(x.__len__())
+    classes = np.unique(class_labels)
+    colours = ['r','m','b','g','y','k','o']
+    ylim = [np.min(y), np.max(y)]
+    xlim = [np.min(x), np.max(x)]
+    xd = np.diff(xlim)[0]
+    yd = np.diff(ylim)[0]
+    pylab.axis([np.min(x), np.max(x), np.min(y), np.max(y)])
+    pylab.hold('on')
+    ax = pylab.gca()
+
+    for ci, (class_label, colour) in enumerate(zip(classes, colours[:classes.__len__()])):
+        class_idx = class_labels == class_label
+        if thumbnails is None:
+            pylab.plot(x[class_idx], y[class_idx], colour + 'x')
+
+        for xyi, (xx, yy) in enumerate(zip(x[class_idx], y[class_idx])):    #, np.array(plot_names)[class_idx]):
+            if labels is not None:
+                pylab.text(xx-.0015, yy-.0015, np.array(labels)[class_idx][xyi], fontdict={'size':8, 'color': colour})
+
+            if thumbnails is not None:
+                imbuf = np.array(thumbnails)[class_idx][xyi]
+                ims = 20.
+                extent = [xx - xd / (2 * ims), xx + xd / (2 * ims), yy - yd / (2 * ims), yy + yd / (2 * ims)]
+                pylab.imshow(imbuf[:, :, 2::-1], extent=extent, aspect='auto')  # zorder=-1,
+                ax.add_patch(
+                    patches.Rectangle((xx - xd / (2 * ims), yy - yd / (2 * ims)), xd / ims, yd / ims, fill=False,
+                                      edgecolor=colour, linewidth=1.5))
+                # pylab.plot(mPixels[::step], dRawPixels[::step], color='k', marker='.', linestyle='', markersize=.5)
+        if regress and classes.__len__() > 1:
+            (slope, intercept, r, p, stde) = stats.linregress(x[class_idx], y[class_idx])
+            pylab.text(xlim[0] + xd*0.7, ylim[0] + yd*0.05*(ci + 2),
+                       str.format('{1}: $R^2$ = {0:.2f}', np.round(r**2, 2), classes[ci]), fontdict={'size':10, 'color': colour})
+
+    if regress:
+        (slope, intercept, r, p, stde) = stats.linregress(x, y)
+        pylab.text((xlim[0] + xd*0.7), (ylim[0] + yd*0.05), str.format('All: $R^2$ = {0:.2f}', np.round(r**2, 2)))
+
+    if xlabel is not None:
+        pylab.xlabel(xlabel)
+    if ylabel is not None:
+        pylab.ylabel(ylabel)
+    # pylab.ylabel(yf)
+    if classes.__len__() > 1:
+        pylab.legend(classes)
+
+
 ds = gdal.OpenEx(imFile, gdal.OF_RASTER)
 if ds is None:
     print "Open failed./n"
@@ -179,7 +229,6 @@ if not geotransform is None:
 
 transform = osr.CoordinateTransformation(csGtSpatialRef, osr.SpatialReference(ds.GetProjection()))
 i = 0
-winSize = (16, 16)
 plotDict = {}
 plotTagcDict = {}
 class_labels = ['OL','DST','ST']
@@ -191,7 +240,18 @@ for plot in csGtDict.values():
     (pixel, line) = world2Pixel(geotransform, point.GetX(), point.GetY())
     # not all the point fall inside the image
     if pixel >= 0 and line >=0 and pixel < ds.RasterXSize and line < ds.RasterYSize:
+        winSize = (16, 16)
+        if 'DST' in plot['PLOT']:
+            ci = 1
+        elif 'ST' in plot['PLOT']:
+            ci = 2
+        elif 'OL' in plot['PLOT']:
+            ci = 0
+            winSize = (32, 32)
+        else:
+            ci = 2
         imbuf = np.zeros((winSize[0], winSize[1], 4), dtype=float)
+
         for b in range(1,5):
             imbuf[:, :, b-1] = ds.GetRasterBand(b).ReadAsArray(np.int(np.round(pixel))-(winSize[0]-1)/2,
                                                                np.int(np.round(line))-(winSize[1]-1)/2,
@@ -205,26 +265,18 @@ for plot in csGtDict.values():
             # imbuf[:, :, b-1] = ds.GetRasterBand(b).ReadAsArray(np.int(np.round(pixel))-(winSize[0]-1),
             #                                                    np.int(np.round(line)),
             #                                                    winSize[0], winSize[1])
-            # this option performs best
+            # this option performs best (bottom left / SW cnrs)
             # imbuf[:, :, b-1] = ds.GetRasterBand(b).ReadAsArray(np.int(np.round(pixel)),
             #                                                    np.int(np.round(line))-(winSize[0]-1),
             #                                                    winSize[0], winSize[1])
         if np.all(imbuf==0):
             print "imbuf zero"
         feat = extract_features(imbuf)
+        feat['classi'] = ci
+        feat['class'] = class_labels[ci]
         fields = ['TAGC', 'Z_P_AFRA', 'ALLOMETRY', 'HERB', 'LITTER']
         for f in fields:
             feat[f] = csGtDict[plot['PLOT']][f]
-        if 'DST' in plot['PLOT']:
-            ci = 1
-        elif 'ST' in plot['PLOT']:
-            ci = 2
-        elif 'OL' in plot['PLOT']:
-            ci = 0
-        else:
-            ci = 2
-        feat['classi'] = ci
-        feat['class'] = class_labels[ci]
         feat['thumbnail'] = imbuf
         plotDict[plot['PLOT']] = feat
             # plotTagcDict[plot['PLOT']] = csGtDict[plot['PLOT']]['TAGC']
@@ -238,6 +290,11 @@ for plot in csGtDict.values():
         print "x-" + plot['PLOT']
 
 print i
+thumbs = np.array([plot['thumbnail'] for plot in plotDict.values()])
+for thumb in thumbs:
+    for b in range(0, 4):
+        thumb[:,:,b] = thumb[:,:,b]/max_im_vals[b]
+    thumb[:, :, 0] = thumb[:, :, 0] / 1.5
 
 #
 # ndvi = np.array([plot['NDVI'] for plot in plotDict.values()])
@@ -256,15 +313,7 @@ x = np.array([plot['NDVI'] for plot in plotDict.values()])
 for yi, yf in enumerate(yfields):
     pylab.subplot(2, 3, yi+1)
     y = np.array([plot[yf] for plot in plotDict.values()])
-    (slope, intercept, r, p, stde) = stats.linregress(x, y)
-    pylab.plot(x, y, 'kx')
-    # pylab.plot(mPixels[::step], dRawPixels[::step], color='k', marker='.', linestyle='', markersize=.5)
-    xl = pylab.gca().get_xlim()
-    yl = pylab.gca().get_ylim()
-    pylab.text((xl[0] + np.diff(xl)*0.05)[0], (yl[0] + np.diff(yl)*0.8)[0], str.format('$R^2$ = {0:.2f}',
-                                                                                       np.round(r**2, 2)))
-    pylab.xlabel('NDVI')
-    pylab.ylabel(yf)
+    scatterd(x, y, regress=True, xlabel='NDVI', ylabel=yf)
 
 
 pylab.figure()
@@ -272,97 +321,76 @@ y = np.log10([plot['TAGC'] for plot in plotDict.values()])
 for xi, xf in enumerate(xfields):
     pylab.subplot(2, 3, xi+1)
     x = np.array([plot[xf] for plot in plotDict.values()])
-    (slope, intercept, r, p, stde) = stats.linregress(x, y)
-    pylab.plot(x, y, 'kx')
-    # pylab.plot(mPixels[::step], dRawPixels[::step], color='k', marker='.', linestyle='', markersize=.5)
-    xl = pylab.gca().get_xlim()
-    yl = pylab.gca().get_ylim()
-    pylab.text((xl[0] + np.diff(xl)*0.05)[0], (yl[0] + np.diff(yl)*0.8)[0], str.format('$R^2$ = {0:.2f}',
-                                                                                       np.round(r**2, 2)))
-    pylab.xlabel(xf)
-    pylab.ylabel('TAGC')
+    scatterd(x, y, regress=True, xlabel=xf, ylabel='log10(TAGC)')
 
 
 pylab.figure()
 x = np.array([plot['NDVI'] for plot in plotDict.values()])
-classi = np.array([plot['classi'] for plot in plotDict.values()])
 class_lab = np.array([plot['class'] for plot in plotDict.values()])
-colours = ['r','m','b']
 plot_names = plotDict.keys()
 for yi, yf in enumerate(yfields):
     pylab.subplot(2, 3, yi+1)
     y = np.array([plot[yf] for plot in plotDict.values()])
-    (slope, intercept, r, p, stde) = stats.linregress(x, y)
-    for idx,col in enumerate(colours):
-        class_idx = classi == idx
-        pylab.plot(x[class_idx], y[class_idx], col + 'x')
-
-        for xx,yy,ll in zip(x[class_idx], y[class_idx], np.array(plot_names)[class_idx]):
-            pylab.text(xx+.001, yy+.001, ll, fontdict={'size':6, 'color': col})
-    # pylab.plot(mPixels[::step], dRawPixels[::step], color='k', marker='.', linestyle='', markersize=.5)
-
-    xl = pylab.gca().get_xlim()
-    yl = pylab.gca().get_ylim()
-    pylab.text((xl[0] + np.diff(xl)*0.05)[0], (yl[0] + np.diff(yl)*0.8)[0], str.format('$R^2$ = {0:.2f}',
-                                                                                       np.round(r**2, 2)))
-    pylab.xlabel('NDVI')
-    pylab.ylabel(yf)
-    pylab.legend(class_labels)
+    scatterd(x, y, labels=plot_names, class_labels=class_lab, regress=True, xlabel='NDVI', ylabel=yf)
 
 
 #with images
 pylab.figure()
 x = np.array([plot['NDVI'] for plot in plotDict.values()])
-classi = np.array([plot['classi'] for plot in plotDict.values()])
 class_lab = np.array([plot['class'] for plot in plotDict.values()])
-colours = ['r','m','b']
 plot_names = plotDict.keys()
+thumbs = np.array([plot['thumbnail'] for plot in plotDict.values()])
+
 for yi, yf in enumerate(['TAGC']):
     ax = pylab.subplot(1, 1, yi+1)
     y = np.log10(np.array([plot[yf] for plot in plotDict.values()]))
-    (slope, intercept, r, p, stde) = stats.linregress(x, y)
-    ylim = [np.min(y), np.max(y)]
-    xlim = [np.min(x), np.max(x)]
-    xd = np.diff(xlim)[0]
-    yd = np.diff(ylim)[0]
-    pylab.axis([np.min(x), np.max(x), np.min(y), np.max(y)])
-    pylab.hold('on')
-    #pylab.plot(x, y, 'k.')
+    scatterd(x, y, labels=plot_names,class_labels=class_lab, thumbnails=thumbs, xlabel='NDVI', ylabel='log10(TAGC)')
 
-    for idx,col in enumerate(colours):
-        class_idx = classi == idx
-        # pylab.plot(x[class_idx], y[class_idx], col + 'x')
-        for xx,yy,ll in zip(x[class_idx], y[class_idx], np.array(plot_names)[class_idx]):
-            imbuf = plotDict[ll]['thumbnail'].copy()
-            for b in range(0, 4):
-                imbuf[:,:,b] = imbuf[:,:,b]/max_im_vals[b]
 
-            pylab.text(xx-.001, yy-.001, ll, fontdict={'size':6, 'color': col})
-            ims = 20.
-            extent = [xx-xd/(2*ims), xx+xd/(2*ims), yy-yd/(2*ims), yy + yd/(2*ims)]
-            pylab.imshow(imbuf[:,:,[3,2,1]], extent=extent, aspect='auto') #zorder=-1,
-            ax.add_patch(patches.Rectangle((xx-xd/(2*ims), yy-yd/(2*ims)), xd/ims, yd/ims, fill=False, edgecolor=col, linewidth=2.))
-    # pylab.plot(mPixels[::step], dRawPixels[::step], color='k', marker='.', linestyle='', markersize=.5)
-
-    xl = pylab.gca().get_xlim()
-    yl = pylab.gca().get_ylim()
-    pylab.text((xl[0] + np.diff(xl)*0.05)[0], (yl[0] + np.diff(yl)*0.8)[0], str.format('$R^2$ = {0:.2f}',
-                                                                                       np.round(r**2, 2)))
-    pylab.xlabel('NDVI')
-    pylab.ylabel(yf)
-    # pylab.legend(class_labels)
 
 #todo x check if atcor refl vals are in % - yes they are
 #todo x define ol, dst, st classes and visualise
 #todo research "regression analysis" in general and in python
-#todo plot with labels and or images to try and figure out what are problem plots and patterns
+#todo x plot with labels and or images to try and figure out what are problem plots and patterns
 #todo show pattern of correlation with spatial accuracy and window size - somehow simulate different accuracy and plot size conditions
 #todo make a separate feature of area around window - should give some insight into eg soil condition
 #todo brownness or soil index
 #todo make features that use classification within window eg perhaps ttl vegetation pixels, or mean soil colour and mean veg colour
 #todo investigate visualisation with qgis/arc python libraries
-#todo FETCH MY PKG FROM PATTI
-#todo what about xects?  were they used in calculating TAGC?
+#todo x FETCH MY PKG FROM PATTI
+#todo x what about xects?  were they used in calculating TAGC?
+#todo consider other no visual variables like altitude and slope, ttl sun hours.
+#todo what about finding the ttl amount of sun various areas receive based on DEM?
+#todo try doing this with aeral imagery - need NIR though...
+#todo x regress on individual classes
+#todo refactor code to have functions like scatterd for general scattering
+
+# Notes on MP's gt
+#- OL plots are 25x25m, ST and DST are 5x5m
+#- Allometry was done inside these plots - no transects
+#- "All C data and tree architecture data was log10 transformed."
+
+# Looking at anomalous plots
+#- RHST21 med low NDVI, high TAGC
+#  It is on UL of a big tree that is probably missed in feature extraction but not MP GT.  Spatial issues again.
+#- RHDST23 mostly bare ground (low NDVI) but high TAGC
+#  similar to RHDST6 - there are med dense number of bushes/trees in the vicinity but prob not in the image block.  Again
+#  this points to a spatial error and the possibility of improving with a feature that considers surrounding veg.
+#- RHDST5-6 med/high TAGC but mostly bare ground / low NDVI
+#  RHDST5 has some little low NDVI bossies around - does not make sense that NDVI is so low.  Again this suggests we need
+#  other measures than just NDVI
+#  RHDST6 has quite a few bushes and trees in the vicinity but perhaps not in its block therefore lowish NDVI.  This could
+#  be due to spatial error and could also be improved with a feature that considers the surrounding veg.
+#- RHOL15, RHOL21 - high TAGC, low NDVI
+#  RHOL15 sits on the UR edge of a big tree which is prob excluded from my analysis but not from MP GT i.e. spatial error
+#  RHOL21 sits near big tree but it has lowish NDVI.  There also appear to be some little shrubby things which are prob
+#  not picked up in image analysis i.e. we need to look at more than just NDVI and perhaps include texture which would show
+#  shrubby things
+#- RHST17 - high NDVI, med/low TAGC
+#  its not clear from the image why it should have low TAGC, it is covered in veg
+#- To summarise: spatial accuracy is NB and part of the cause of our inaccuracies.  Including other features in the
+#  regression may help improve things.
+
 #kko, kq are pristine
 
 #
