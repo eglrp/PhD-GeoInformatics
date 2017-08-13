@@ -25,99 +25,7 @@ imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056
 # imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/PCI Output/Separate Pan and MS/ATCOR1/PansharpAtcorOrtho.tif"
 # imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/PCI Output/056844553010_01_P001_OrthoPanSharpen.tif"
 
-# read in cs gt
-ds = gdal.OpenEx(csGtFile, gdal.OF_VECTOR)
-if ds is None:
-    print "Open failed./n"
 
-lyr = ds.GetLayerByIndex(0)
-lyr.ResetReading()
-csGtSpatialRef = lyr.GetSpatialRef()
-
-# gcpList = []
-csGtDict = {}
-for (i, feat) in enumerate(lyr):
-    if i > 190:
-        break
-    print '.',
-    feat_defn = lyr.GetLayerDefn()
-    f = {}
-    for i in range(feat_defn.GetFieldCount()):
-        field_defn = feat_defn.GetFieldDefn(i)
-        f[field_defn.GetName()] = feat.GetField(i)
-    geom = feat.GetGeometryRef()
-    if geom is not None and (geom.GetGeometryType() == ogr.wkbPoint or geom.GetGeometryType() == ogr.wkbPoint25D):
-        print "%s %.6f, %.6f" % (f['PLOT'], geom.GetX(), geom.GetY())
-        f['geom'] = geom
-        f['X'] = geom.GetX()
-        f['Y'] = geom.GetY()
-    else:
-        print "no point geometry/n"
-    # gcpList.append(f)
-    csGtDict[f['PLOT']] = f
-print ' '
-
-ds = None
-
-# read in cs gt locations
-ds = gdal.OpenEx(csGtGpsFile, gdal.OF_VECTOR)
-if ds is None:
-    print "Open failed./n"
-
-lyr = ds.GetLayerByIndex(0)
-lyr.ResetReading()
-csGtSpatialRef = lyr.GetSpatialRef()
-
-csGtGpsDict = {}
-for (i, feat) in enumerate(lyr):
-    if i > 190:
-        break
-    print '.',
-    feat_defn = lyr.GetLayerDefn()
-    f = {}
-    for i in range(feat_defn.GetFieldCount()):
-        field_defn = feat_defn.GetFieldDefn(i)
-        f[field_defn.GetName()] = feat.GetField(i)
-    geom = feat.GetGeometryRef()
-    if geom is not None and (geom.GetGeometryType() == ogr.wkbPoint or geom.GetGeometryType() == ogr.wkbPoint25D):
-        print "%s %.6f, %.6f" % (f['CODE'], geom.GetX(), geom.GetY())
-        f['geom'] = geom
-        f['X'] = geom.GetX()
-        f['Y'] = geom.GetY()
-    else:
-        print "no point geometry/n"
-    # gcpList.append(f)
-    csGtGpsDict[f['CODE']] = f
-print ' '
-
-ds = None
-
-# copy across gps locs to csGtDict
-# [s for s in csGtGpsDict.keys() if "GH" in str(s)]
-# [s for s in csGtDict.keys() if "GH" in str(s)]
-# [s for s in csGtGpsDict.keys() if "RHOL" in str(s)]
-#
-gpsInd = (np.zeros((1, csGtGpsDict.__len__())))
-
-for k in csGtDict.keys():
-    # fixing some quirks in the keys
-    gpsK = k
-    gpsK = str(gpsK).replace('KADSS', 'KASS')
-    gpsK = str(gpsK).replace('GHOL1_', 'RHOL1_')
-    if gpsK == 'GHOL3_5':
-        gpsK = 'GHOL3_'
-    # gpsK = str(gpsK).replace('GHOL3_', 'GHOL3_5')
-    if csGtGpsDict.has_key(gpsK):
-        csGtDict[k]['X'] = csGtGpsDict[gpsK]['X']
-        csGtDict[k]['Y'] = csGtGpsDict[gpsK]['Y']
-        # print k
-        gpsInd[0, csGtGpsDict.keys().index(gpsK)] = True
-    else:
-        print k + " not found in gps locs - " + gpsK
-
-np.array(csGtGpsDict.keys())[np.logical_not(gpsInd[0])]
-
-# Read in the image
 def world2Pixel(geoMatrix, x, y):
     """
     Uses a gdal geomatrix (gdal.GetGeoTransform()) to calculate
@@ -134,7 +42,7 @@ def world2Pixel(geoMatrix, x, y):
     return (pixel, line)
 
 
-def extract_features(imbuf):
+def extract_patch_features(imbuf):
     imbuf = np.float64(imbuf)/100.   # values are in percent?
     s = np.sum(imbuf, 2)
     cn = imbuf/np.tile(s[:,:,None], (1, 1, imbuf.shape[2]))
@@ -144,7 +52,7 @@ def extract_features(imbuf):
     ir_i = 3
     ndvi = (imbuf[:,:,ir_i] - imbuf[:,:,r_i])/(imbuf[:,:,ir_i] + imbuf[:,:,r_i])
     ir_rat = imbuf[:,:,ir_i]/imbuf[:,:,r_i]
-    L = 0.02
+    L = 0.05
     savi = (1 + L)*(imbuf[:,:,ir_i] - imbuf[:,:,r_i])/(L + imbuf[:,:,ir_i] + imbuf[:,:,r_i])
     feat = {}
     feat['r_n'] = cn[:,:,r_i].mean()
@@ -159,6 +67,83 @@ def extract_features(imbuf):
     feat['NDVI_std'] = ndvi.std()
 
     return feat
+
+
+def extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array((8, 8)), np.array((42, 42))],
+                     win_offset=np.array([0, 0])):
+
+    transform = osr.CoordinateTransformation(cs_gt_spatial_ref, osr.SpatialReference(ds.GetProjection()))
+    i = 0
+    plot_dict = {}
+    plotTagcDict = {}
+    class_labels = ['OL','DST','ST']
+    max_im_vals = np.zeros((4))
+    for plot in cs_gt_dict.values():
+        point = ogr.Geometry(ogr.wkbPoint)
+        point.AddPoint(plot['X'], plot['Y'])
+        point.Transform(transform)  # xform into im projection
+        (pixel, line) = world2Pixel(geotransform, point.GetX(), point.GetY())
+        # not all the point fall inside the image
+        if pixel >= 0 and line >=0 and pixel < ds.RasterXSize and line < ds.RasterYSize:
+            win_size = win_sizes[0]
+            if 'DST' in plot['PLOT']:
+                ci = 1
+            elif 'ST' in plot['PLOT']:
+                ci = 2
+            elif 'OL' in plot['PLOT']:
+                ci = 0
+                win_size = win_sizes[1]
+            else:
+                ci = 2
+            imbuf = np.zeros((win_size[0], win_size[1], 4), dtype=float)
+    
+            for b in range(1,5):
+                # imbuf[:, :, b-1] = ds.GetRasterBand(b).ReadAsArray(np.int(np.round(pixel))-(win_size[0]-1)/2,
+                #                                                    np.int(np.round(line))-(win_size[1]-1)/2,
+                #                                                    win_size[0], win_size[1])
+                # imbuf[:, :, b-1] = ds.GetRasterBand(b).ReadAsArray(np.int(np.round(pixel))-(win_size[0]-1),
+                #                                                    np.int(np.round(line))-(win_size[1]-1),
+                #                                                    win_size[0], win_size[1])
+                # imbuf[:, :, b-1] = ds.GetRasterBand(b).ReadAsArray(np.int(np.round(pixel)),
+                #                                                    np.int(np.round(line)),
+                #                                                    win_size[0], win_size[1])
+                # imbuf[:, :, b-1] = ds.GetRasterBand(b).ReadAsArray(np.int(np.round(pixel))-(win_size[0]-1),
+                #                                                    np.int(np.round(line)),
+                #                                                    win_size[0], win_size[1])
+                # this option performs best (bottom left / SW cnrs)
+                imbuf[:, :, b-1] = ds.GetRasterBand(b).ReadAsArray(np.int(np.round(pixel)),
+                                                                   np.int(np.round(line))-(win_size[0]-1),
+                                                                   win_size[0], win_size[1])
+            if np.all(imbuf==0):
+                print "imbuf zero"
+            # for b in range(0, 4):
+            #     imbuf[:, :, b] = imbuf[:, :, b] / max_im_vals_[b]
+            feat = extract_patch_features(imbuf)
+            feat['classi'] = ci
+            feat['class'] = class_labels[ci]
+            fields = ['TAGC', 'Z_P_AFRA', 'ALLOMETRY', 'HERB', 'LITTER']
+            for f in fields:
+                feat[f] = cs_gt_dict[plot['PLOT']][f]
+            feat['thumbnail'] = imbuf
+            plot_dict[plot['PLOT']] = feat
+                # plotTagcDict[plot['PLOT']] = cs_gt_dict[plot['PLOT']]['TAGC']
+            tmp = np.reshape(imbuf, (np.prod(win_size), 4))
+            # max_tmp = tmp.max(axis=0)
+            max_tmp = np.percentile(tmp, 98., axis=0)
+            max_im_vals[max_tmp > max_im_vals] = max_tmp[max_tmp > max_im_vals]
+            print plot['PLOT']
+            i = i +1
+        else:
+            print "x-" + plot['PLOT']
+    
+    print i
+    thumbs = np.array([plot['thumbnail'] for plot in plot_dict.values()])
+    for thumb in thumbs:
+        for b in range(0, 4):
+            thumb[:,:,b] = thumb[:,:,b]/max_im_vals[b]
+        thumb[:, :, 0] = thumb[:, :, 0] / 1.5
+    
+    return plot_dict
 
 
 def scatterd(x, y, labels=None, class_labels=None, thumbnails=None, regress=True, xlabel=None, ylabel=None):
@@ -210,6 +195,102 @@ def scatterd(x, y, labels=None, class_labels=None, thumbnails=None, regress=True
     if classes.__len__() > 1:
         pylab.legend(classes)
 
+###########################################################################################################
+
+# read in cs gt
+ds = gdal.OpenEx(csGtFile, gdal.OF_VECTOR)
+if ds is None:
+    print "Open failed./n"
+
+lyr = ds.GetLayerByIndex(0)
+lyr.ResetReading()
+cs_gt_spatial_ref = lyr.GetSpatialRef()
+
+# gcpList = []
+cs_gt_dict = {}
+for (i, feat) in enumerate(lyr):
+    if i > 190:
+        break
+    print '.',
+    feat_defn = lyr.GetLayerDefn()
+    f = {}
+    for i in range(feat_defn.GetFieldCount()):
+        field_defn = feat_defn.GetFieldDefn(i)
+        f[field_defn.GetName()] = feat.GetField(i)
+    geom = feat.GetGeometryRef()
+    if geom is not None and (geom.GetGeometryType() == ogr.wkbPoint or geom.GetGeometryType() == ogr.wkbPoint25D):
+        print "%s %.6f, %.6f" % (f['PLOT'], geom.GetX(), geom.GetY())
+        f['geom'] = geom
+        f['X'] = geom.GetX()
+        f['Y'] = geom.GetY()
+    else:
+        print "no point geometry/n"
+    # gcpList.append(f)
+    cs_gt_dict[f['PLOT']] = f
+print ' '
+
+ds = None
+
+# read in cs gt locations
+ds = gdal.OpenEx(csGtGpsFile, gdal.OF_VECTOR)
+if ds is None:
+    print "Open failed./n"
+
+lyr = ds.GetLayerByIndex(0)
+lyr.ResetReading()
+cs_gt_spatial_ref = lyr.GetSpatialRef()
+
+csGtGpsDict = {}
+for (i, feat) in enumerate(lyr):
+    if i > 190:
+        break
+    print '.',
+    feat_defn = lyr.GetLayerDefn()
+    f = {}
+    for i in range(feat_defn.GetFieldCount()):
+        field_defn = feat_defn.GetFieldDefn(i)
+        f[field_defn.GetName()] = feat.GetField(i)
+    geom = feat.GetGeometryRef()
+    if geom is not None and (geom.GetGeometryType() == ogr.wkbPoint or geom.GetGeometryType() == ogr.wkbPoint25D):
+        print "%s %.6f, %.6f" % (f['CODE'], geom.GetX(), geom.GetY())
+        f['geom'] = geom
+        f['X'] = geom.GetX()
+        f['Y'] = geom.GetY()
+    else:
+        print "no point geometry/n"
+    # gcpList.append(f)
+    csGtGpsDict[f['CODE']] = f
+print ' '
+
+ds = None
+
+# copy across gps locs to cs_gt_dict (they are more accurate than the ones in cs_gt_dict)
+# [s for s in csGtGpsDict.keys() if "GH" in str(s)]
+# [s for s in cs_gt_dict.keys() if "GH" in str(s)]
+# [s for s in csGtGpsDict.keys() if "RHOL" in str(s)]
+#
+gpsInd = (np.zeros((1, csGtGpsDict.__len__())))
+
+for k in cs_gt_dict.keys():
+    # fixing some quirks in the keys
+    gpsK = k
+    gpsK = str(gpsK).replace('KADSS', 'KASS')
+    gpsK = str(gpsK).replace('GHOL1_', 'RHOL1_')
+    if gpsK == 'GHOL3_5':
+        gpsK = 'GHOL3_'
+    # gpsK = str(gpsK).replace('GHOL3_', 'GHOL3_5')
+    if csGtGpsDict.has_key(gpsK):
+        cs_gt_dict[k]['X'] = csGtGpsDict[gpsK]['X']
+        cs_gt_dict[k]['Y'] = csGtGpsDict[gpsK]['Y']
+        # print k
+        gpsInd[0, csGtGpsDict.keys().index(gpsK)] = True
+    else:
+        print k + " not found in gps locs - " + gpsK
+
+np.array(csGtGpsDict.keys())[np.logical_not(gpsInd[0])]
+
+# Read in the image
+
 
 ds = gdal.OpenEx(imFile, gdal.OF_RASTER)
 if ds is None:
@@ -225,126 +306,61 @@ if not geotransform is None:
     print 'Origin = (',geotransform[0], ',',geotransform[3],')'
     print 'Pixel Size = (',geotransform[1], ',',geotransform[5],')'
 
-#
+# plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict)
+plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict,
+                                     win_sizes=[np.array((32, 32)), np.array((32, 32))])
 
-transform = osr.CoordinateTransformation(csGtSpatialRef, osr.SpatialReference(ds.GetProjection()))
-i = 0
-plotDict = {}
-plotTagcDict = {}
-class_labels = ['OL','DST','ST']
-max_im_vals = np.zeros((4))
-for plot in csGtDict.values():
-    point = ogr.Geometry(ogr.wkbPoint)
-    point.AddPoint(plot['X'], plot['Y'])
-    point.Transform(transform)  # xform into im projection
-    (pixel, line) = world2Pixel(geotransform, point.GetX(), point.GetY())
-    # not all the point fall inside the image
-    if pixel >= 0 and line >=0 and pixel < ds.RasterXSize and line < ds.RasterYSize:
-        winSize = (16, 16)
-        if 'DST' in plot['PLOT']:
-            ci = 1
-        elif 'ST' in plot['PLOT']:
-            ci = 2
-        elif 'OL' in plot['PLOT']:
-            ci = 0
-            winSize = (32, 32)
-        else:
-            ci = 2
-        imbuf = np.zeros((winSize[0], winSize[1], 4), dtype=float)
-
-        for b in range(1,5):
-            imbuf[:, :, b-1] = ds.GetRasterBand(b).ReadAsArray(np.int(np.round(pixel))-(winSize[0]-1)/2,
-                                                               np.int(np.round(line))-(winSize[1]-1)/2,
-                                                               winSize[0], winSize[1])
-            # imbuf[:, :, b-1] = ds.GetRasterBand(b).ReadAsArray(np.int(np.round(pixel))-(winSize[0]-1),
-            #                                                    np.int(np.round(line))-(winSize[1]-1),
-            #                                                    winSize[0], winSize[1])
-            # imbuf[:, :, b-1] = ds.GetRasterBand(b).ReadAsArray(np.int(np.round(pixel)),
-            #                                                    np.int(np.round(line)),
-            #                                                    winSize[0], winSize[1])
-            # imbuf[:, :, b-1] = ds.GetRasterBand(b).ReadAsArray(np.int(np.round(pixel))-(winSize[0]-1),
-            #                                                    np.int(np.round(line)),
-            #                                                    winSize[0], winSize[1])
-            # this option performs best (bottom left / SW cnrs)
-            # imbuf[:, :, b-1] = ds.GetRasterBand(b).ReadAsArray(np.int(np.round(pixel)),
-            #                                                    np.int(np.round(line))-(winSize[0]-1),
-            #                                                    winSize[0], winSize[1])
-        if np.all(imbuf==0):
-            print "imbuf zero"
-        feat = extract_features(imbuf)
-        feat['classi'] = ci
-        feat['class'] = class_labels[ci]
-        fields = ['TAGC', 'Z_P_AFRA', 'ALLOMETRY', 'HERB', 'LITTER']
-        for f in fields:
-            feat[f] = csGtDict[plot['PLOT']][f]
-        feat['thumbnail'] = imbuf
-        plotDict[plot['PLOT']] = feat
-            # plotTagcDict[plot['PLOT']] = csGtDict[plot['PLOT']]['TAGC']
-        tmp = np.reshape(imbuf, (np.prod(winSize), 4))
-        # max_tmp = tmp.max(axis=0)
-        max_tmp = np.percentile(tmp, 98., axis=0)
-        max_im_vals[max_tmp > max_im_vals] = max_tmp[max_tmp > max_im_vals]
-        print plot['PLOT']
-        i = i +1
-    else:
-        print "x-" + plot['PLOT']
-
-print i
-thumbs = np.array([plot['thumbnail'] for plot in plotDict.values()])
-for thumb in thumbs:
-    for b in range(0, 4):
-        thumb[:,:,b] = thumb[:,:,b]/max_im_vals[b]
-    thumb[:, :, 0] = thumb[:, :, 0] / 1.5
-
-#
-# ndvi = np.array([plot['NDVI'] for plot in plotDict.values()])
-# gn = np.array([plot['g_n'] for plot in plotDict.values()])
-# std = np.array([plot['i_std'] for plot in plotDict.values()])
-# ir_rat = np.array([plot['ir_rat'] for plot in plotDict.values()])
-# tagc = np.array([plot['TAGC'] for plot in plotDict.values()])
-plotNames = plotDict.keys()
+# ndvi = np.array([plot['NDVI'] for plot in plot_dict.values()])
+# gn = np.array([plot['g_n'] for plot in plot_dict.values()])
+# std = np.array([plot['i_std'] for plot in plot_dict.values()])
+# ir_rat = np.array([plot['ir_rat'] for plot in plot_dict.values()])
+# tagc = np.array([plot['TAGC'] for plot in plot_dict.values()])
+plotNames = plot_dict.keys()
 
 
 yfields = ['TAGC', 'Z_P_AFRA', 'ALLOMETRY', 'HERB', 'LITTER']
-xfields = ['NDVI', 'g_n', 'b_n', 'ir_n', 'ir_rat', 'NDVI_std']
+xfields = ['NDVI', 'g_n', 'b_n', 'SAVI', 'ir_rat', 'NDVI_std']
 
 pylab.figure()
-x = np.array([plot['NDVI'] for plot in plotDict.values()])
+x = np.array([plot['NDVI'] for plot in plot_dict.values()])
 for yi, yf in enumerate(yfields):
     pylab.subplot(2, 3, yi+1)
-    y = np.array([plot[yf] for plot in plotDict.values()])
+    y = np.array([plot[yf] for plot in plot_dict.values()])
     scatterd(x, y, regress=True, xlabel='NDVI', ylabel=yf)
 
 
 pylab.figure()
-y = np.log10([plot['TAGC'] for plot in plotDict.values()])
+y = np.log10([plot['TAGC'] for plot in plot_dict.values()])
 for xi, xf in enumerate(xfields):
     pylab.subplot(2, 3, xi+1)
-    x = np.array([plot[xf] for plot in plotDict.values()])
+    x = np.array([plot[xf] for plot in plot_dict.values()])
     scatterd(x, y, regress=True, xlabel=xf, ylabel='log10(TAGC)')
 
 
 pylab.figure()
-x = np.array([plot['NDVI'] for plot in plotDict.values()])
-class_lab = np.array([plot['class'] for plot in plotDict.values()])
-plot_names = plotDict.keys()
+x = np.array([plot['NDVI'] for plot in plot_dict.values()])
+class_lab = np.array([plot['class'] for plot in plot_dict.values()])
+plot_names = plot_dict.keys()
 for yi, yf in enumerate(yfields):
     pylab.subplot(2, 3, yi+1)
-    y = np.array([plot[yf] for plot in plotDict.values()])
+    y = np.array([plot[yf] for plot in plot_dict.values()])
     scatterd(x, y, labels=plot_names, class_labels=class_lab, regress=True, xlabel='NDVI', ylabel=yf)
 
 
 #with images
 pylab.figure()
-x = np.array([plot['NDVI'] for plot in plotDict.values()])
-class_lab = np.array([plot['class'] for plot in plotDict.values()])
-plot_names = plotDict.keys()
-thumbs = np.array([plot['thumbnail'] for plot in plotDict.values()])
+x = np.array([plot['NDVI'] for plot in plot_dict.values()])
+class_lab = np.array([plot['class'] for plot in plot_dict.values()])
+plot_names = plot_dict.keys()
+thumbs = np.array([plot['thumbnail'] for plot in plot_dict.values()])
 
 for yi, yf in enumerate(['TAGC']):
     ax = pylab.subplot(1, 1, yi+1)
-    y = np.log10(np.array([plot[yf] for plot in plotDict.values()]))
+    y = np.log10(np.array([plot[yf] for plot in plot_dict.values()]))
     scatterd(x, y, labels=plot_names,class_labels=class_lab, thumbnails=thumbs, xlabel='NDVI', ylabel='log10(TAGC)')
+
+
+################################################################3
 
 
 
