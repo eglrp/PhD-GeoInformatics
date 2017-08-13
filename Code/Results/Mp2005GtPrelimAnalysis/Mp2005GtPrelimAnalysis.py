@@ -70,7 +70,13 @@ def extract_patch_features(imbuf):
 
 
 def extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array((8, 8)), np.array((42, 42))],
-                     win_offset=np.array([0, 0])):
+                     win_offsets=None):
+
+    if win_offsets == None:   #setup defaults as determined to be optimal from experiments
+        win_offsets = [np.array((0, 0)), np.array((0, 0))]
+        for wi, win_size in enumerate(win_sizes):
+            win_offsets[wi][0] = 0   #win_size[0]/2
+            win_offsets[wi][1] = -win_size[1]
 
     transform = osr.CoordinateTransformation(cs_gt_spatial_ref, osr.SpatialReference(ds.GetProjection()))
     i = 0
@@ -86,6 +92,7 @@ def extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array(
         # not all the point fall inside the image
         if pixel >= 0 and line >=0 and pixel < ds.RasterXSize and line < ds.RasterYSize:
             win_size = win_sizes[0]
+            win_offset = win_offsets[0]
             if 'DST' in plot['PLOT']:
                 ci = 1
             elif 'ST' in plot['PLOT']:
@@ -93,6 +100,7 @@ def extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array(
             elif 'OL' in plot['PLOT']:
                 ci = 0
                 win_size = win_sizes[1]
+                win_offset = win_offsets[1]
             else:
                 ci = 2
             imbuf = np.zeros((win_size[0], win_size[1], 4), dtype=float)
@@ -111,9 +119,12 @@ def extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array(
                 #                                                    np.int(np.round(line)),
                 #                                                    win_size[0], win_size[1])
                 # this option performs best (bottom left / SW cnrs)
-                imbuf[:, :, b-1] = ds.GetRasterBand(b).ReadAsArray(np.int(np.round(pixel)),
-                                                                   np.int(np.round(line))-(win_size[0]-1),
-                                                                   win_size[0], win_size[1])
+                # pixel_start = np.int(np.round((pixel - (win_size[0] - 1)/2) + win_offset[0]))
+                # line_start = np.int(np.round((line - (win_size[1] - 1)/2) + win_offset[1]))
+                pixel_start = np.int(np.round((pixel + win_offset[0])))
+                line_start = np.int(np.round((line + win_offset[1])))
+                imbuf[:, :, b-1] = ds.GetRasterBand(b).ReadAsArray(pixel_start, line_start, win_size[0], win_size[1])
+
             if np.all(imbuf==0):
                 print "imbuf zero"
             # for b in range(0, 4):
@@ -360,7 +371,129 @@ for yi, yf in enumerate(['TAGC']):
     scatterd(x, y, labels=plot_names,class_labels=class_lab, thumbnails=thumbs, xlabel='NDVI', ylabel='log10(TAGC)')
 
 
-################################################################3
+################################################################
+# check effect of window offset
+
+win_sizes= [np.array((8, 8)), np.array((42, 42))]
+win_offsets= [np.array((0, 0)), np.array((0, 0))]
+#xy_offset = np.arange(-64, 68, 8)
+xy_offset = np.arange(-1.5, 2., 0.5)
+res = np.zeros((xy_offset.__len__(), xy_offset.__len__()))
+for xi, xoff in enumerate(xy_offset):
+    for yi, yoff in enumerate(xy_offset):
+        for wi, win_size in enumerate(win_sizes):
+            win_offsets[wi][0] = np.round(win_size[0] * xoff)
+            win_offsets[wi][1] = np.round(win_size[1] * yoff)
+
+        print win_offsets
+        plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=win_sizes, win_offsets=win_offsets)
+
+        x = np.array([plot['NDVI'] for plot in plot_dict.values()])
+        y = np.log10([plot['TAGC'] for plot in plot_dict.values()])
+        (slope, intercept, r, p, stde) = stats.linregress(x, y)
+        res[yi, xi] = r**2
+
+xgrid, ygrid = np.meshgrid(xy_offset, xy_offset)
+
+res.max()
+my, mx = np.unravel_index(res.argmax(), res.shape)
+print xgrid[my, mx], ygrid[my, mx]
+
+
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+#fig = pylab.figure()
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
+ax.plot_surface(xgrid, ygrid, res)
+ax.set_xlabel('x')
+ax.set_ylabel('y')
+
+pylab.figure()
+pylab.imshow(res, extent=[-1.5, 1.5, 1.5, -1.5])
+pylab.colorbar()
+
+# check default
+plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=win_sizes)
+x = np.array([plot['NDVI'] for plot in plot_dict.values()])
+y = np.log10([plot['TAGC'] for plot in plot_dict.values()])
+(slope, intercept, r, p, stde) = stats.linregress(x, y)
+print r**2
+
+
+#############################################################################33
+# check effect of changing window size
+
+# for a centrally placed window
+win_size= np.array((3, 3))
+incr_array = np.arange(15, 35, 2)
+res = np.zeros(incr_array.__len__())
+for i, incr in enumerate(incr_array):
+    win_size += incr
+    plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[win_size, win_size],
+                                     win_offsets = [-win_size/2, -win_size/2])
+
+    x = np.array([plot['NDVI'] for plot in plot_dict.values()])
+    y = np.log10([plot['TAGC'] for plot in plot_dict.values()])
+    (slope, intercept, r, p, stde) = stats.linregress(x, y)
+    res[i] = r**2
+
+pylab.figure()
+pylab.plot(3 + incr_array, res, 'kx-')
+
+
+#for default window placement
+win_size= np.array((3, 3))
+incr_array = np.arange(15, 35, 2)
+res = np.zeros(incr_array.__len__())
+for i, incr in enumerate(incr_array):
+    win_size += incr
+    plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[win_size, win_size])
+
+    x = np.array([plot['NDVI'] for plot in plot_dict.values()])
+    y = np.log10([plot['TAGC'] for plot in plot_dict.values()])
+    (slope, intercept, r, p, stde) = stats.linregress(x, y)
+    res[i] = r**2
+
+pylab.figure()
+pylab.plot(3 + incr_array, res, 'kx-')
+
+#for actual OL window size
+win_size= np.array((3, 3))
+incr_array = np.arange(5, 20, 2)
+res = np.zeros(incr_array.__len__())
+for i, incr in enumerate(incr_array):
+    win_size += incr
+    plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[win_size, np.array([42, 42])])
+
+    x = np.array([plot['NDVI'] for plot in plot_dict.values()])
+    y = np.log10([plot['TAGC'] for plot in plot_dict.values()])
+    (slope, intercept, r, p, stde) = stats.linregress(x, y)
+    res[i] = r**2
+
+pylab.figure()
+pylab.plot(3 + incr_array, res, 'kx-')
+
+
+# imbuf[:, :, b-1] = ds.GetRasterBand(b).ReadAsArray(np.int(np.round(pixel))-(win_size[0]-1),
+#                                                    np.int(np.round(line)),
+#                                                    win_size[0], win_size[1])
+#redo but for different win cnr placement
+win_size= np.array((3, 3))
+incr_array = np.arange(20, 35, 2)
+res = np.zeros(incr_array.__len__())
+for i, incr in enumerate(incr_array):
+    win_size += incr
+    win_offset = -1*np.int32(np.round(win_size/2.-1))
+    plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[win_size, win_size], win_offset=win_offset)
+
+    x = np.array([plot['NDVI'] for plot in plot_dict.values()])
+    y = np.log10([plot['TAGC'] for plot in plot_dict.values()])
+    (slope, intercept, r, p, stde) = stats.linregress(x, y)
+    res[i] = r**2
+
+pylab.figure()
+pylab.plot(3 + incr_array, res, 'kx-')
 
 
 
