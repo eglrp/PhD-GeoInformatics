@@ -378,7 +378,7 @@ win_sizes= [np.array((8, 8)), np.array((42, 42))]
 win_offsets= [np.array((0, 0)), np.array((0, 0))]
 #xy_offset = np.arange(-64, 68, 8)
 xy_offset = np.arange(-1.5, 2., 0.5)
-res = np.zeros((xy_offset.__len__(), xy_offset.__len__()))
+res = np.zeros((xy_offset.__len__(), xy_offset.__len__(), 3))
 for xi, xoff in enumerate(xy_offset):
     for yi, yoff in enumerate(xy_offset):
         for wi, win_size in enumerate(win_sizes):
@@ -390,13 +390,19 @@ for xi, xoff in enumerate(xy_offset):
 
         x = np.array([plot['NDVI'] for plot in plot_dict.values()])
         y = np.log10([plot['TAGC'] for plot in plot_dict.values()])
+        class_lab = np.array([plot['class'] for plot in plot_dict.values()])
         (slope, intercept, r, p, stde) = stats.linregress(x, y)
-        res[yi, xi] = r**2
+        res[yi, xi, 0] = r**2
+        class_idx = class_lab == 'OL'
+        (slope, intercept, r, p, stde) = stats.linregress(x[class_idx], y[class_idx])
+        res[yi, xi, 1] = r**2
+        (slope, intercept, r, p, stde) = stats.linregress(x[np.logical_not(class_idx)], y[np.logical_not(class_idx)])
+        res[yi, xi, 2] = r**2
 
 xgrid, ygrid = np.meshgrid(xy_offset, xy_offset)
 
-res.max()
-my, mx = np.unravel_index(res.argmax(), res.shape)
+res[:,:,0].max()
+my, mx = np.unravel_index(res[:,:,0].argmax(), res[:,:,0].shape)
 print xgrid[my, mx], ygrid[my, mx]
 
 
@@ -404,14 +410,25 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 #fig = pylab.figure()
 fig = plt.figure()
-ax = fig.add_subplot(111, projection='3d')
-ax.plot_surface(xgrid, ygrid, res)
+ax = fig.add_subplot(131, projection='3d')
+ax.plot_surface(xgrid, ygrid, res[:,:,0])
+ax.set_xlabel('x')
+ax.set_ylabel('y')
+ax = fig.add_subplot(132, projection='3d')
+ax.plot_surface(xgrid, ygrid, res[:,:,1])
+ax.set_xlabel('x')
+ax.set_ylabel('y')
+ax = fig.add_subplot(133, projection='3d')
+ax.plot_surface(xgrid, ygrid, res[:,:,2])
 ax.set_xlabel('x')
 ax.set_ylabel('y')
 
+
 pylab.figure()
-pylab.imshow(res, extent=[-1.5, 1.5, 1.5, -1.5])
-pylab.colorbar()
+for i in range(0, 3):
+    pylab.subplot(1,3,i+1)
+    pylab.imshow(res[:,:,i], extent=[-1.5, 1.5, 1.5, -1.5])
+    pylab.colorbar()
 
 # check default
 plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=win_sizes)
@@ -425,75 +442,79 @@ print r**2
 # check effect of changing window size
 
 # for a centrally placed window
-win_size= np.array((3, 3))
-incr_array = np.arange(15, 35, 2)
-res = np.zeros(incr_array.__len__())
+win_sizes = [np.array((3, 3)), np.array((17, 17))]
+incr_array = np.arange(5, 75, 5)
+res = np.zeros((incr_array.__len__(), 3))
 for i, incr in enumerate(incr_array):
-    win_size += incr
-    plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[win_size, win_size],
-                                     win_offsets = [-win_size/2, -win_size/2])
+    win_sizes_ = win_sizes + incr
+    plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=win_sizes_,
+                                     win_offsets = -win_sizes_/2)
 
     x = np.array([plot['NDVI'] for plot in plot_dict.values()])
     y = np.log10([plot['TAGC'] for plot in plot_dict.values()])
+    class_lab = np.array([plot['class'] for plot in plot_dict.values()])
     (slope, intercept, r, p, stde) = stats.linregress(x, y)
-    res[i] = r**2
+    res[i, 0] = r ** 2
+    class_idx = class_lab == 'OL'
+    (slope, intercept, r, p, stde) = stats.linregress(x[class_idx], y[class_idx])
+    res[i, 1] = r ** 2
+    (slope, intercept, r, p, stde) = stats.linregress(x[np.logical_not(class_idx)], y[np.logical_not(class_idx)])
+    res[i, 2] = r ** 2
 
 pylab.figure()
-pylab.plot(3 + incr_array, res, 'kx-')
-
+pylab.plot(np.c_[incr_array+3, incr_array+17, incr_array+3], res, 'x-')
+pylab.legend(['all', 'OL', 'ST+DST'])
 
 #for default window placement
-win_size= np.array((3, 3))
-incr_array = np.arange(15, 35, 2)
-res = np.zeros(incr_array.__len__())
+win_sizes = [np.array((4, 4)), np.array((16, 16))]
+incr_array = np.arange(0, 25, 2)
+res = np.zeros((incr_array.__len__(), 3))
 for i, incr in enumerate(incr_array):
-    win_size += incr
-    plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[win_size, win_size])
+    # win_sizes += incr
+    plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=win_sizes+incr)
 
     x = np.array([plot['NDVI'] for plot in plot_dict.values()])
     y = np.log10([plot['TAGC'] for plot in plot_dict.values()])
+    class_lab = np.array([plot['class'] for plot in plot_dict.values()])
     (slope, intercept, r, p, stde) = stats.linregress(x, y)
-    res[i] = r**2
+    res[i, 0] = r ** 2
+    class_idx = class_lab == 'OL'
+    (slope, intercept, r, p, stde) = stats.linregress(x[class_idx], y[class_idx])
+    res[i, 1] = r ** 2
+    (slope, intercept, r, p, stde) = stats.linregress(x[np.logical_not(class_idx)], y[np.logical_not(class_idx)])
+    res[i, 2] = r ** 2
+
 
 pylab.figure()
-pylab.plot(3 + incr_array, res, 'kx-')
+pylab.plot(np.c_[incr_array+4, incr_array+16, incr_array+4], res, 'x-')
+pylab.legend(['all', 'OL', 'ST+DST'])
 
-#for actual OL window size
-win_size= np.array((3, 3))
-incr_array = np.arange(5, 20, 2)
-res = np.zeros(incr_array.__len__())
-for i, incr in enumerate(incr_array):
-    win_size += incr
-    plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[win_size, np.array([42, 42])])
+#check with best params
+plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array([10,10]), np.array([10,10])])
 
-    x = np.array([plot['NDVI'] for plot in plot_dict.values()])
-    y = np.log10([plot['TAGC'] for plot in plot_dict.values()])
-    (slope, intercept, r, p, stde) = stats.linregress(x, y)
-    res[i] = r**2
-
-pylab.figure()
-pylab.plot(3 + incr_array, res, 'kx-')
+x = np.array([plot['NDVI'] for plot in plot_dict.values()])
+y = np.log10([plot['TAGC'] for plot in plot_dict.values()])
+(slope, intercept, r, p, stde) = stats.linregress(x, y)
+print r**2
 
 
-# imbuf[:, :, b-1] = ds.GetRasterBand(b).ReadAsArray(np.int(np.round(pixel))-(win_size[0]-1),
-#                                                    np.int(np.round(line)),
-#                                                    win_size[0], win_size[1])
-#redo but for different win cnr placement
-win_size= np.array((3, 3))
-incr_array = np.arange(20, 35, 2)
-res = np.zeros(incr_array.__len__())
-for i, incr in enumerate(incr_array):
-    win_size += incr
-    win_offset = -1*np.int32(np.round(win_size/2.-1))
-    plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[win_size, win_size], win_offset=win_offset)
+if False:
+    #for actual OL window size
+    win_size= np.array((3, 3))
+    incr_array = np.arange(5, 20, 2)
+    res = np.zeros(incr_array.__len__())
+    for i, incr in enumerate(incr_array):
+        win_size += incr
+        plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[win_size, np.array([42, 42])])
 
-    x = np.array([plot['NDVI'] for plot in plot_dict.values()])
-    y = np.log10([plot['TAGC'] for plot in plot_dict.values()])
-    (slope, intercept, r, p, stde) = stats.linregress(x, y)
-    res[i] = r**2
+        x = np.array([plot['NDVI'] for plot in plot_dict.values()])
+        y = np.log10([plot['TAGC'] for plot in plot_dict.values()])
+        (slope, intercept, r, p, stde) = stats.linregress(x, y)
+        res[i] = r**2
 
-pylab.figure()
-pylab.plot(3 + incr_array, res, 'kx-')
+    pylab.figure()
+    pylab.plot(3 + incr_array, res, 'kx-')
+
 
 
 
