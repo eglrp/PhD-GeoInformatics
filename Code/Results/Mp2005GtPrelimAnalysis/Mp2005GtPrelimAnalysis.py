@@ -72,7 +72,7 @@ def extract_patch_features(imbuf):
 def extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array((8, 8)), np.array((42, 42))],
                      win_offsets=None):
 
-    if win_offsets == None:   #setup defaults as determined to be optimal from experiments
+    if win_offsets is None:   #setup defaults as determined to be optimal from experiments
         win_offsets = [np.array((0, 0)), np.array((0, 0))]
         for wi, win_size in enumerate(win_sizes):
             win_offsets[wi][0] = 0   #win_size[0]/2
@@ -142,12 +142,12 @@ def extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array(
             # max_tmp = tmp.max(axis=0)
             max_tmp = np.percentile(tmp, 98., axis=0)
             max_im_vals[max_tmp > max_im_vals] = max_tmp[max_tmp > max_im_vals]
-            print plot['PLOT']
+            # print plot['PLOT']
             i = i +1
-        else:
-            print "x-" + plot['PLOT']
+        # else:
+        #     print "x-" + plot['PLOT']
     
-    print i
+    # print i
     thumbs = np.array([plot['thumbnail'] for plot in plot_dict.values()])
     for thumb in thumbs:
         for b in range(0, 4):
@@ -320,6 +320,10 @@ if not geotransform is None:
 # plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict)
 plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict,
                                      win_sizes=[np.array((32, 32)), np.array((32, 32))])
+# these from window pos/size experiments below
+plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array([18,18]), np.array([32,32])])
+plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array([22,22]), np.array([50,50])],
+                                 win_offsets=[np.array([0, 0]), np.array([0, 0])])
 
 # ndvi = np.array([plot['NDVI'] for plot in plot_dict.values()])
 # gn = np.array([plot['g_n'] for plot in plot_dict.values()])
@@ -368,14 +372,14 @@ thumbs = np.array([plot['thumbnail'] for plot in plot_dict.values()])
 for yi, yf in enumerate(['TAGC']):
     ax = pylab.subplot(1, 1, yi+1)
     y = np.log10(np.array([plot[yf] for plot in plot_dict.values()]))
-    scatterd(x, y, labels=plot_names,class_labels=class_lab, thumbnails=thumbs, xlabel='NDVI', ylabel='log10(TAGC)')
+    scatterd(x, y, labels=plot_names, class_labels=class_lab, thumbnails=thumbs, xlabel='NDVI', ylabel='log10(TAGC)')
 
 
 ################################################################
 # check effect of window offset
-
-win_sizes= [np.array((8, 8)), np.array((42, 42))]
-win_offsets= [np.array((0, 0)), np.array((0, 0))]
+# win_sizes = [np.array((18, 18)), np.array((30, 30))]
+win_sizes = [np.array((8, 8)), np.array((42, 42))]
+win_offsets = [np.array((0, 0)), np.array((0, 0))]
 #xy_offset = np.arange(-64, 68, 8)
 xy_offset = np.arange(-1.5, 2., 0.5)
 res = np.zeros((xy_offset.__len__(), xy_offset.__len__(), 3))
@@ -441,14 +445,18 @@ print r**2
 #############################################################################33
 # check effect of changing window size
 
-# for a centrally placed window
+# for differently placed windows
 win_sizes = [np.array((3, 3)), np.array((17, 17))]
+win_offsets = [np.array((0, 0)), np.array((0, 0))]
 incr_array = np.arange(5, 75, 5)
 res = np.zeros((incr_array.__len__(), 3))
 for i, incr in enumerate(incr_array):
     win_sizes_ = win_sizes + incr
+    for wi, win_size in enumerate(win_sizes_):
+        win_offsets[wi][0] = -win_size[0]/2    # CHHANGE THESE
+        win_offsets[wi][1] = -win_size[1]/2
     plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=win_sizes_,
-                                     win_offsets = -win_sizes_/2)
+                                     win_offsets = win_offsets)
 
     x = np.array([plot['NDVI'] for plot in plot_dict.values()])
     y = np.log10([plot['TAGC'] for plot in plot_dict.values()])
@@ -464,41 +472,65 @@ for i, incr in enumerate(incr_array):
 pylab.figure()
 pylab.plot(np.c_[incr_array+3, incr_array+17, incr_array+3], res, 'x-')
 pylab.legend(['all', 'OL', 'ST+DST'])
-
-#for default window placement
-win_sizes = [np.array((4, 4)), np.array((16, 16))]
-incr_array = np.arange(0, 25, 2)
-res = np.zeros((incr_array.__len__(), 3))
-for i, incr in enumerate(incr_array):
-    # win_sizes += incr
-    plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=win_sizes+incr)
-
-    x = np.array([plot['NDVI'] for plot in plot_dict.values()])
-    y = np.log10([plot['TAGC'] for plot in plot_dict.values()])
-    class_lab = np.array([plot['class'] for plot in plot_dict.values()])
-    (slope, intercept, r, p, stde) = stats.linregress(x, y)
-    res[i, 0] = r ** 2
-    class_idx = class_lab == 'OL'
-    (slope, intercept, r, p, stde) = stats.linregress(x[class_idx], y[class_idx])
-    res[i, 1] = r ** 2
-    (slope, intercept, r, p, stde) = stats.linregress(x[np.logical_not(class_idx)], y[np.logical_not(class_idx)])
-    res[i, 2] = r ** 2
+pylab.title('1,-1')
 
 
-pylab.figure()
-pylab.plot(np.c_[incr_array+4, incr_array+16, incr_array+4], res, 'x-')
-pylab.legend(['all', 'OL', 'ST+DST'])
+#Note: testing above with different window offsets, the most likely offsets are 0,0 ors 0,-1.  But then 0,0 gives an
+# overall r2>5 for windows of ~30 (?)
+#NB Note: The OL individual performance is significantly improved for offset 0,0 !!  Overall though 0,-1 gives better results
 
 #check with best params
-plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array([10,10]), np.array([10,10])])
+plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array([18,18]), np.array([32,32])])
+plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array([22,22]), np.array([50,50])],
+                                 win_offsets=[np.array([0, 0]), np.array([0, 0])])
 
 x = np.array([plot['NDVI'] for plot in plot_dict.values()])
 y = np.log10([plot['TAGC'] for plot in plot_dict.values()])
+class_lab = np.array([plot['class'] for plot in plot_dict.values()])
 (slope, intercept, r, p, stde) = stats.linregress(x, y)
-print r**2
+print r ** 2
+class_idx = class_lab == 'OL'
+(slope, intercept, r, p, stde) = stats.linregress(x[class_idx], y[class_idx])
+print r ** 2
+(slope, intercept, r, p, stde) = stats.linregress(x[np.logical_not(class_idx)], y[np.logical_not(class_idx)])
+print r ** 2
 
 
 if False:
+
+    #for default window placement
+    win_sizes = [np.array((4, 4)), np.array((16, 16))]
+    incr_array = np.arange(0, 25, 2)
+    res = np.zeros((incr_array.__len__(), 3))
+    for i, incr in enumerate(incr_array):
+        # win_sizes += incr
+        plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=win_sizes+incr)
+
+        x = np.array([plot['NDVI'] for plot in plot_dict.values()])
+        y = np.log10([plot['TAGC'] for plot in plot_dict.values()])
+        class_lab = np.array([plot['class'] for plot in plot_dict.values()])
+        (slope, intercept, r, p, stde) = stats.linregress(x, y)
+        res[i, 0] = r ** 2
+        class_idx = class_lab == 'OL'
+        (slope, intercept, r, p, stde) = stats.linregress(x[class_idx], y[class_idx])
+        res[i, 1] = r ** 2
+        (slope, intercept, r, p, stde) = stats.linregress(x[np.logical_not(class_idx)], y[np.logical_not(class_idx)])
+        res[i, 2] = r ** 2
+
+
+    pylab.figure()
+    pylab.plot(np.c_[incr_array+4, incr_array+16, incr_array+4], res, 'x-')
+    pylab.legend(['all', 'OL', 'ST+DST'])
+
+    #check with best params
+    plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array([18,18]), np.array([30,30])])
+
+    x = np.array([plot['NDVI'] for plot in plot_dict.values()])
+    y = np.log10([plot['TAGC'] for plot in plot_dict.values()])
+    (slope, intercept, r, p, stde) = stats.linregress(x, y)
+    print r**2
+
+
     #for actual OL window size
     win_size= np.array((3, 3))
     incr_array = np.arange(5, 20, 2)
