@@ -513,6 +513,57 @@ print r ** 2
 print r ** 2
 
 
+
+########################################################################################################
+# Simulate smaller windows than 5m\
+
+#############################################################################33
+# check effect of changing window size
+
+# for differently placed windows
+win_sizes = [np.array((9, 9)), np.array((42, 42))]
+win_offsets = [np.array((0, 0)), np.array((0, 0))]
+incr_array = np.arange(-1, -9, -1)
+res = np.zeros((incr_array.__len__(), 5))
+for i, incr in enumerate(incr_array):
+    win_sizes_ = win_sizes + incr
+    for wi, win_size in enumerate(win_sizes_):
+        win_offsets[wi][0] = 0 #-win_size[0]/2    # CHHANGE THESE
+        win_offsets[wi][1] = -win_size[1]
+    plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=win_sizes_,
+                                     win_offsets = win_offsets)
+
+    x = np.array([plot['NDVI'] for plot in plot_dict.values()])
+    y = np.log10([plot['TAGC'] for plot in plot_dict.values()])
+    class_lab = np.array([plot['class'] for plot in plot_dict.values()])
+    (slope, intercept, r, p, stde) = stats.linregress(x, y)
+    res[i, 0] = r ** 2
+    for ci, cclass in enumerate(['OL', 'DST', 'ST']):
+        class_idx = class_lab == cclass
+        (slope, intercept, r, p, stde) = stats.linregress(x[class_idx], y[class_idx])
+        res[i, ci + 1] = r ** 2
+    class_idx = np.logical_not(class_lab == 'OL')
+    (slope, intercept, r, p, stde) = stats.linregress(x[class_idx], y[class_idx])
+    res[i, 4] = r ** 2
+
+res_lab = ['All','OL','DST','ST','*ST']
+pylab.figure()
+pylab.plot(0.6*np.c_[incr_array+9, incr_array+42, incr_array+9, incr_array+9, incr_array+9], res, 'x-')
+pylab.legend(res_lab) #['all', 'OL', 'ST+DST'])
+pylab.title('0,-1')
+
+#plot for report
+res_lab = ['All','OL','DST','ST','*ST']
+pylab.figure()
+pylab.plot(0.6*np.c_[incr_array+9], res[:, 0], 'x-')
+pylab.xlabel('Plot size (m)', fontsize=12)
+pylab.ylabel('$R^2$ for NDVI vs log$_10$(TAGC)', fontsize=12)
+#pylab.legend(res_lab) #['all', 'OL', 'ST+DST'])
+pylab.title('Effect of plot size', fontsize=12)
+pylab.grid()
+
+
+
 if False:
 
     #for default window placement
