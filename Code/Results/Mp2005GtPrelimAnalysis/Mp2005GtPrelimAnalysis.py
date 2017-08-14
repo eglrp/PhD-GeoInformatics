@@ -170,6 +170,7 @@ def scatterd(x, y, labels=None, class_labels=None, thumbnails=None, regress=True
     pylab.axis([np.min(x), np.max(x), np.min(y), np.max(y)])
     pylab.hold('on')
     ax = pylab.gca()
+    handles = [0,0,0]
 
     for ci, (class_label, colour) in enumerate(zip(classes, colours[:classes.__len__()])):
         class_idx = class_labels == class_label
@@ -185,26 +186,27 @@ def scatterd(x, y, labels=None, class_labels=None, thumbnails=None, regress=True
                 ims = 20.
                 extent = [xx - xd / (2 * ims), xx + xd / (2 * ims), yy - yd / (2 * ims), yy + yd / (2 * ims)]
                 pylab.imshow(imbuf[:, :, 2::-1], extent=extent, aspect='auto')  # zorder=-1,
-                ax.add_patch(
+                handles[ci] = ax.add_patch(
                     patches.Rectangle((xx - xd / (2 * ims), yy - yd / (2 * ims)), xd / ims, yd / ims, fill=False,
-                                      edgecolor=colour, linewidth=1.5))
+                                      edgecolor=colour, linewidth=2.))
                 # pylab.plot(mPixels[::step], dRawPixels[::step], color='k', marker='.', linestyle='', markersize=.5)
-        if regress and classes.__len__() > 1:
+        if regress and classes.__len__() > 1 and False:
             (slope, intercept, r, p, stde) = stats.linregress(x[class_idx], y[class_idx])
             pylab.text(xlim[0] + xd*0.7, ylim[0] + yd*0.05*(ci + 2),
                        str.format('{1}: $R^2$ = {0:.2f}', np.round(r**2, 2), classes[ci]), fontdict={'size':10, 'color': colour})
 
     if regress:
         (slope, intercept, r, p, stde) = stats.linregress(x, y)
-        pylab.text((xlim[0] + xd*0.7), (ylim[0] + yd*0.05), str.format('All: $R^2$ = {0:.2f}', np.round(r**2, 2)))
+        pylab.text((xlim[0] + xd*0.4), (ylim[0] + yd*0.05), str.format('All: $R^2$ = {0:.2f}', np.round(r**2, 2)),
+                   fontdict={'size':12})
 
     if xlabel is not None:
-        pylab.xlabel(xlabel)
+        pylab.xlabel(xlabel, fontdict={'size':12})
     if ylabel is not None:
-        pylab.ylabel(ylabel)
+        pylab.ylabel(ylabel, fontdict={'size':12})
     # pylab.ylabel(yf)
     if classes.__len__() > 1:
-        pylab.legend(classes)
+        pylab.legend(handles, classes, fontsize=12)
 
 ###########################################################################################################
 
@@ -320,10 +322,13 @@ if not geotransform is None:
 # plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict)
 plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict,
                                      win_sizes=[np.array((32, 32)), np.array((32, 32))])
-# these from window pos/size experiments below
+# these are "best" options from window pos/size experiments below
 plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array([18,18]), np.array([32,32])])
 plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array([22,22]), np.array([50,50])],
                                  win_offsets=[np.array([0, 0]), np.array([0, 0])])
+plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array([18,18]), np.array([50,50])],
+                                 win_offsets=[np.array([0, -18]), np.array([0, 0])])
+
 
 # ndvi = np.array([plot['NDVI'] for plot in plot_dict.values()])
 # gn = np.array([plot['g_n'] for plot in plot_dict.values()])
@@ -372,7 +377,9 @@ thumbs = np.array([plot['thumbnail'] for plot in plot_dict.values()])
 for yi, yf in enumerate(['TAGC']):
     ax = pylab.subplot(1, 1, yi+1)
     y = np.log10(np.array([plot[yf] for plot in plot_dict.values()]))
-    scatterd(x, y, labels=plot_names, class_labels=class_lab, thumbnails=thumbs, xlabel='NDVI', ylabel='log10(TAGC)')
+    scatterd(x, y, labels=None, class_labels=class_lab, thumbnails=thumbs, xlabel='NDVI', ylabel='log10(TAGC)')
+    pylab.grid(zorder=-1)
+
 
 
 ################################################################
@@ -382,7 +389,7 @@ win_sizes = [np.array((8, 8)), np.array((42, 42))]
 win_offsets = [np.array((0, 0)), np.array((0, 0))]
 #xy_offset = np.arange(-64, 68, 8)
 xy_offset = np.arange(-1.5, 2., 0.5)
-res = np.zeros((xy_offset.__len__(), xy_offset.__len__(), 3))
+res = np.zeros((xy_offset.__len__(), xy_offset.__len__(), 5))
 for xi, xoff in enumerate(xy_offset):
     for yi, yoff in enumerate(xy_offset):
         for wi, win_size in enumerate(win_sizes):
@@ -395,13 +402,16 @@ for xi, xoff in enumerate(xy_offset):
         x = np.array([plot['NDVI'] for plot in plot_dict.values()])
         y = np.log10([plot['TAGC'] for plot in plot_dict.values()])
         class_lab = np.array([plot['class'] for plot in plot_dict.values()])
+        class_labi = np.array([plot['classi'] for plot in plot_dict.values()])
         (slope, intercept, r, p, stde) = stats.linregress(x, y)
         res[yi, xi, 0] = r**2
-        class_idx = class_lab == 'OL'
+        for ci,cclass in enumerate(['OL','DST','ST']):
+            class_idx = class_lab == cclass
+            (slope, intercept, r, p, stde) = stats.linregress(x[class_idx], y[class_idx])
+            res[yi, xi, ci+1] = r**2
+        class_idx = np.logical_not(class_lab == 'OL')
         (slope, intercept, r, p, stde) = stats.linregress(x[class_idx], y[class_idx])
-        res[yi, xi, 1] = r**2
-        (slope, intercept, r, p, stde) = stats.linregress(x[np.logical_not(class_idx)], y[np.logical_not(class_idx)])
-        res[yi, xi, 2] = r**2
+        res[yi, xi, 4] = r**2
 
 xgrid, ygrid = np.meshgrid(xy_offset, xy_offset)
 
@@ -413,26 +423,30 @@ print xgrid[my, mx], ygrid[my, mx]
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 #fig = pylab.figure()
+res_lab = ['All','OL','DST','ST','*ST']
 fig = plt.figure()
-ax = fig.add_subplot(131, projection='3d')
-ax.plot_surface(xgrid, ygrid, res[:,:,0])
-ax.set_xlabel('x')
-ax.set_ylabel('y')
-ax = fig.add_subplot(132, projection='3d')
-ax.plot_surface(xgrid, ygrid, res[:,:,1])
-ax.set_xlabel('x')
-ax.set_ylabel('y')
-ax = fig.add_subplot(133, projection='3d')
-ax.plot_surface(xgrid, ygrid, res[:,:,2])
-ax.set_xlabel('x')
-ax.set_ylabel('y')
+for ci in range(0, res.shape[2]):
+    ax = fig.add_subplot(2,3,ci+1, projection='3d')
+    ax.plot_surface(xgrid, ygrid, res[:,:,ci])
+    ax.set_xlabel('x')
+    ax.set_ylabel('y')
+    ax.set_title(res_lab[ci])
+# ax = fig.add_subplot(132, projection='3d')
+# ax.plot_surface(xgrid, ygrid, res[:,:,1])
+# ax.set_xlabel('x')
+# ax.set_ylabel('y')
+# ax = fig.add_subplot(133, projection='3d')
+# ax.plot_surface(xgrid, ygrid, res[:,:,2])
+# ax.set_xlabel('x')
+# ax.set_ylabel('y')
 
 
 pylab.figure()
-for i in range(0, 3):
-    pylab.subplot(1,3,i+1)
+for i in range(0, res.shape[2]):
+    pylab.subplot(2,3,i+1)
     pylab.imshow(res[:,:,i], extent=[-1.5, 1.5, 1.5, -1.5])
     pylab.colorbar()
+    pylab.title(res_lab[i])
 
 # check default
 plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=win_sizes)
@@ -449,12 +463,12 @@ print r**2
 win_sizes = [np.array((3, 3)), np.array((17, 17))]
 win_offsets = [np.array((0, 0)), np.array((0, 0))]
 incr_array = np.arange(5, 75, 5)
-res = np.zeros((incr_array.__len__(), 3))
+res = np.zeros((incr_array.__len__(), 5))
 for i, incr in enumerate(incr_array):
     win_sizes_ = win_sizes + incr
     for wi, win_size in enumerate(win_sizes_):
-        win_offsets[wi][0] = -win_size[0]/2    # CHHANGE THESE
-        win_offsets[wi][1] = -win_size[1]/2
+        win_offsets[wi][0] = 0 #-win_size[0]/2    # CHHANGE THESE
+        win_offsets[wi][1] = -win_size[1]
     plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=win_sizes_,
                                      win_offsets = win_offsets)
 
@@ -463,16 +477,19 @@ for i, incr in enumerate(incr_array):
     class_lab = np.array([plot['class'] for plot in plot_dict.values()])
     (slope, intercept, r, p, stde) = stats.linregress(x, y)
     res[i, 0] = r ** 2
-    class_idx = class_lab == 'OL'
+    for ci, cclass in enumerate(['OL', 'DST', 'ST']):
+        class_idx = class_lab == cclass
+        (slope, intercept, r, p, stde) = stats.linregress(x[class_idx], y[class_idx])
+        res[i, ci + 1] = r ** 2
+    class_idx = np.logical_not(class_lab == 'OL')
     (slope, intercept, r, p, stde) = stats.linregress(x[class_idx], y[class_idx])
-    res[i, 1] = r ** 2
-    (slope, intercept, r, p, stde) = stats.linregress(x[np.logical_not(class_idx)], y[np.logical_not(class_idx)])
-    res[i, 2] = r ** 2
+    res[i, 4] = r ** 2
 
+res_lab = ['All','OL','DST','ST','*ST']
 pylab.figure()
-pylab.plot(np.c_[incr_array+3, incr_array+17, incr_array+3], res, 'x-')
-pylab.legend(['all', 'OL', 'ST+DST'])
-pylab.title('1,-1')
+pylab.plot(np.c_[incr_array+3, incr_array+17, incr_array+3, incr_array+3, incr_array+3], res, 'x-')
+pylab.legend(res_lab) #['all', 'OL', 'ST+DST'])
+pylab.title('0,-1')
 
 
 #Note: testing above with different window offsets, the most likely offsets are 0,0 ors 0,-1.  But then 0,0 gives an
@@ -560,13 +577,14 @@ if False:
 #todo make features that use classification within window eg perhaps ttl vegetation pixels, or mean soil colour and mean veg colour
 #todo investigate visualisation with qgis/arc python libraries
 #todo x FETCH MY PKG FROM PATTI
-#todo x what about xects?  were they used in calculating TAGC?
+#todo x what about xects?  were they used in calculating TAGC? No
 #todo consider other no visual variables like altitude and slope, ttl sun hours.
 #todo what about finding the ttl amount of sun various areas receive based on DEM?
 #todo try doing this with aeral imagery - need NIR though...
 #todo x regress on individual classes
 #todo refactor code to have functions like scatterd for general scattering
-
+#todo NB go back to orthorectification - why do the errors in my image appear a lot worse than the PCI reported errors?
+#todo NB go back to atcor
 # Notes on MP's gt
 #- OL plots are 25x25m, ST and DST are 5x5m
 #- Allometry was done inside these plots - no transects
