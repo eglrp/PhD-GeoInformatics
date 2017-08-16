@@ -1,3 +1,5 @@
+
+
 Block Labelling
 - The 3 digit NGI numbers like "320" I think are job numbers.
   They dont relate to the 4 digit (like 3320) numbers
@@ -1134,7 +1136,9 @@ NNB - DG sent me Level2A "standard" imagery as best I can tell - which is "Proje
 - Dont forget about the ellipsoid to mean sea level conversion for GCP's 
 - Some results - the basic level 1b image is a lot more accurate than the std 2a ~ 1.34 pixel RMS error for 15 GCP's (on the fitted ones).  This is excluding a lot of the braai/table gcp's and with some tweaking of other uncertain ones to improve things.  
 - To evaluate spatial accuracy of orthorect: exclude dodgy gcp's entirely, then go roughly 60/40 gcp/check point to get an idea from check points.  NB OR do a LOO type approach where each gcp is left out indicidually and the errors on each left one averaged to give an overall figure.  For the final orthorect, use all decent GCP's though.  Similar to classification.   
-
+- X The RMS errors reported in the PCI GUI are a lot smaller than what I see if I look at the GCP's in the final orthorectified image.  I think https://dg-cms-uploads-production.s3.amazonaws.com/uploads/document/file/38/DG_ACCURACY_WP_V3.pdf explains why.  In the GUI, the DEM is not being used, rather the image point is projected to the same height as the GCP and the horizontal error found from there.  This does not consider horizontal displacement caused by DEM innacuracy which is what we see in the final image.  This suggests that a better DEM would help a lot.  Perhapds we could test this by making the GCP's use the DEM height rather than DGPS height and then compare the PCI errors to observed image errors - not quite the same thing though perhaps as it will be the DEM height at the GCP not the projected image point- still should be closer the orthorectified image situation.  
+- The above leads to: Perhaps for the next stage, we should get stereo imagery and make our own DEM (this may also allow a check of plant height).  Or perhaps adjust the SUDEM to the GCP's (suspect).   
+- It may be worth making some plots of DEM vs GCP height to see if anything systematic is happening there.  And also check SUDEM vs GCP for ellipsoid vs MSL quantitatively.  Because SUDEM errors are big.  
 
 
 Vertical Datum Practicalities
@@ -1150,6 +1154,9 @@ Vertical Datum Practicalities
 - The SA GEOID is available from NGI but not in gtx format.  gtx is a regular grid while ngi's sageoid2010 is not.  
 - For the approx lat lon of my study area, the SAGEOID.dat entry is " -33.666667  24.458333  28.165330".  SO it is ~30m and I guess -ve if you're going from wgs84.  I think the 28.16... is relative to wgs84 more or less (i.e IRTF2005??) - see the pdf with the sageoid.    
 - I dont think SAGEOID2010 varies by more than 2m within my study area and maybe less.
+- NB The SUDEM is in Hartebeeshoek94 - should we not convert it to WGS84 (also vertically???)  Yes it is ref to geoid relative to hartebeeshoek94 - we should convert to rel to wgs84. ??
+
+
 
 
 Notes on pan-sharpening quickbird 
@@ -2364,8 +2371,4 @@ Num.	Importance (%)	Features
 16	35.03	SkewnessPc1
 17	34.86	KurtosisGn
 18	33.86	KurtosisPc1
-
-
-
-
 

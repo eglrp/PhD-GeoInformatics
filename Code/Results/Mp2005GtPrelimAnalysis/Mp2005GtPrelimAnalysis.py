@@ -5,6 +5,8 @@ import osr
 import pylab
 from scipy import stats as stats
 from matplotlib import patches
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
 
 from collections import OrderedDict
 
@@ -420,8 +422,6 @@ my, mx = np.unravel_index(res[:,:,0].argmax(), res[:,:,0].shape)
 print xgrid[my, mx], ygrid[my, mx]
 
 
-import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
 #fig = pylab.figure()
 res_lab = ['All','OL','DST','ST','*ST']
 fig = plt.figure()
@@ -557,7 +557,7 @@ res_lab = ['All','OL','DST','ST','*ST']
 pylab.figure()
 pylab.plot(0.6*np.c_[incr_array+9], res[:, 0], 'x-')
 pylab.xlabel('Plot size (m)', fontsize=12)
-pylab.ylabel('$R^2$ for NDVI vs log$_10$(TAGC)', fontsize=12)
+pylab.ylabel('$R^2$ for NDVI vs log$_{10}$(TAGC)', fontsize=12)
 #pylab.legend(res_lab) #['all', 'OL', 'ST+DST'])
 pylab.title('Effect of plot size', fontsize=12)
 pylab.grid()
