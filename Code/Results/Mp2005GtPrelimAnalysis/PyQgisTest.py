@@ -4,7 +4,7 @@
 
 from qgis.gui import *
 from qgis.core import *
-from PyQt4.QtGui import QAction, QMainWindow, QMdiSubWindow
+from PyQt4.QtGui import QAction, QMainWindow, QMdiSubWindow, QWidget
 from PyQt4.QtCore import SIGNAL, Qt #, QString
 
 def QString(s):
@@ -16,6 +16,7 @@ class MyWnd(QMdiSubWindow):
     QMdiSubWindow.__init__(self)
     self.canvas = QgsMapCanvas()
     self.canvas.setCanvasColor(Qt.white)
+
 
     # self.canvas.setExtent(layer.extent())
     # self.canvas.setLayerSet([QgsMapCanvasLayer(layer)])
