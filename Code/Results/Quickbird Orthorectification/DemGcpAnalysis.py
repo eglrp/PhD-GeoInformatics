@@ -13,8 +13,10 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 from scipy import interpolate
 
-os.environ['GDAL_DATA'] = "C:\ProgramData\Anaconda3\envs\py27\etc\conda\activate.d\\..\..\..\Library\share\gdal"
-demFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/CGA/SUDEM/x3324c_15_15_L2a_crop.tif"
+os.environ['GDAL_DATA'] = "C:/ProgramData/Anaconda3/envs/py27/Library/share/gdal"
+os.environ.update()
+print os.environ['GDAL_DATA']
+demFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/CGA/SUDEM/x3324c_15_15_L2a_crop_wgs84.tif"
 gcpGeoLocFile = "C:/Data/Development/Projects/PhD GeoInformatics/Docs/Misc/Baviaanskloof/BaviiaansPeCorrectedGcpMay2017Combined.shp"
 gcpGeoidGeoLocFile = "C:/Data/Development/Projects/PhD GeoInformatics/Docs/Misc/Baviaanskloof/BaviiaansPeCorrectedGcpMay2017Combined_SaGeoid2010.shp"
 
@@ -291,3 +293,33 @@ ax.scatter(gcpX, gcpY, off, 'z', 10, 'r')
 ax.set_xlabel('x')
 ax.set_ylabel('y')
 ax.set_alpha(0.5)
+
+
+
+
+
+
+
+#######################################3
+from qgis.core import *
+from qgis.gui import *
+
+# supply path to qgis install location
+# QgsApplication.setPrefixPath("/path/to/qgis/installation", True)
+
+# create a reference to the QgsApplication, setting the
+# second argument to False disables the GUI
+qgs = QgsApplication([], False)
+
+# load providers
+qgs.initQgis()
+
+
+canvas = QgsMapCanvas()
+canvas.show()
+
+# Write your code here to load some layers, use processing algorithms, etc.
+
+# When your script is complete, call exitQgis() to remove the provider and
+# layer registries from memory
+qgs.exitQgis()
