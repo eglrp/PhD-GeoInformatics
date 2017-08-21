@@ -10,10 +10,10 @@ from PyQt4.QtCore import SIGNAL, Qt #, QString
 def QString(s):
     return str(s)
 
-class MyWnd(QMdiSubWindow):
+class MyWnd(QMainWindow):
   def __init__(self, layer):
     # QMainWindow.__init__(self)
-    QMdiSubWindow.__init__(self)
+    QMainWindow.__init__(self)
     self.canvas = QgsMapCanvas()
     self.canvas.setCanvasColor(Qt.white)
 
@@ -21,8 +21,8 @@ class MyWnd(QMdiSubWindow):
     # self.canvas.setExtent(layer.extent())
     # self.canvas.setLayerSet([QgsMapCanvasLayer(layer)])
 
-    # self.setCentralWidget(self.canvas)
-    self.setWidget(self.canvas)
+    self.setCentralWidget(self.canvas)
+    #self.setWidget(self.canvas)
 
     actionZoomIn = QAction(QString("Zoom in"), self)
     actionZoomOut = QAction(QString("Zoom out"), self)
@@ -36,10 +36,10 @@ class MyWnd(QMdiSubWindow):
     self.connect(actionZoomOut, SIGNAL("triggered()"), self.zoomOut)
     self.connect(actionPan, SIGNAL("triggered()"), self.pan)
 
-    # self.toolbar = self.addToolBar("Canvas actions")
-    # self.toolbar.addAction(actionZoomIn)
-    # self.toolbar.addAction(actionZoomOut)
-    # self.toolbar.addAction(actionPan)
+    self.toolbar = self.addToolBar("Canvas actions")
+    self.toolbar.addAction(actionZoomIn)
+    self.toolbar.addAction(actionZoomOut)
+    self.toolbar.addAction(actionPan)
     #
     # # create the map tools
     self.toolPan = QgsMapToolPan(self.canvas)
@@ -64,6 +64,7 @@ class MyWnd(QMdiSubWindow):
 import sys
 
 if __name__ == "__main__":
+    QgsApplication.setPrefixPath("C:/OSGeo4W64/apps/qgis")
     qgs = QgsApplication([], True)
 
     # load providers
