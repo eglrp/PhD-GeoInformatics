@@ -16,9 +16,12 @@ from scipy import interpolate
 os.environ['GDAL_DATA'] = "C:/ProgramData/Anaconda3/envs/py27/Library/share/gdal"
 os.environ.update()
 print os.environ['GDAL_DATA']
-demFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/CGA/SUDEM/x3324c_15_15_L2a_crop_wgs84.tif"
+# demFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/CGA/SUDEM/x3324c_15_15_L2a_crop_wgs84.tif"
+demFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/CGA/SRTM/s34_e024_1arc_v3.tif"
+# demFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/CGA/ASTER DEM/ASTGTM2_S34E024_dem.tif"
 gcpGeoLocFile = "C:/Data/Development/Projects/PhD GeoInformatics/Docs/Misc/Baviaanskloof/BaviiaansPeCorrectedGcpMay2017Combined.shp"
 gcpGeoidGeoLocFile = "C:/Data/Development/Projects/PhD GeoInformatics/Docs/Misc/Baviaanskloof/BaviiaansPeCorrectedGcpMay2017Combined_SaGeoid2010.shp"
+# gcpGeoidGeoLocFile = "C:/Data/Development/Projects/PhD GeoInformatics/Docs/Misc/Baviaanskloof/BaviiaansPeCorrectedGcpMay2017Combined_Egm96.shp"
 
 
 def world2Pixel(geoMatrix, x, y):
@@ -126,6 +129,7 @@ pylab.xlabel('DEM Z')
 pylab.ylabel('GCP Z')
 
 
+
 # Repeat for Geoid ref GCP's
 ds = gdal.OpenEx(gcpGeoidGeoLocFile, gdal.OF_VECTOR)
 if ds is None:
@@ -188,6 +192,13 @@ gcpY = np.array([gcp['Y'] for gcp in gcpGeoidDict.values()])
 
 print 'WGS84 RMS: %f' % (np.sqrt(((demZ - gcpZ)**2).mean()))
 print 'GEOID RMS: %f' % (np.sqrt(((demZ - gcpZgeoid)**2).mean()))
+print 'DEM-WGS84 Mean: %f' % ((demZ - gcpZ).mean())
+print 'DEM-GEOID Mean: %f' % ((demZ - gcpZgeoid).mean())
+print 'GEOID RMS Adjusted: %f' % (np.sqrt(((demZ - gcpZgeoid - ((demZ - gcpZgeoid).mean()))**2).mean()))
+print 'GEOID Abs: %f' % ((demZ - gcpZgeoid).__abs__().mean())
+print 'GEOID Abs Adjusted: %f' % ((demZ - gcpZgeoid - ((demZ - gcpZgeoid).mean())).__abs__().mean())
+
+
 
 pylab.figure()
 pylab.imshow(dem)

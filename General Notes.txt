@@ -1139,7 +1139,9 @@ NNB - DG sent me Level2A "standard" imagery as best I can tell - which is "Proje
 - X The RMS errors reported in the PCI GUI are a lot smaller than what I see if I look at the GCP's in the final orthorectified image.  I think https://dg-cms-uploads-production.s3.amazonaws.com/uploads/document/file/38/DG_ACCURACY_WP_V3.pdf explains why.  In the GUI, the DEM is not being used, rather the image point is projected to the same height as the GCP and the horizontal error found from there.  This does not consider horizontal displacement caused by DEM innacuracy which is what we see in the final image.  This suggests that a better DEM would help a lot.  Perhapds we could test this by making the GCP's use the DEM height rather than DGPS height and then compare the PCI errors to observed image errors - not quite the same thing though perhaps as it will be the DEM height at the GCP not the projected image point- still should be closer the orthorectified image situation.  
 - The above leads to: Perhaps for the next stage, we should get stereo imagery and make our own DEM (this may also allow a check of plant height).  Or perhaps adjust the SUDEM to the GCP's (suspect).   
 - It may be worth making some plots of DEM vs GCP height to see if anything systematic is happening there.  And also check SUDEM vs GCP for ellipsoid vs MSL quantitatively.  Because SUDEM errors are big.  
-
+- NB the NGI 2009 and 2015 rectifications look more accurate than mine.  what DEM do they use??
+- The NGI 2009 and 2015 imagery rectification sets look similarly accurate in Bavs.   
+- NB Rerunning the orthorect with SRTM (ref EGM96) and GCP (ref SAGEOID) but with SRTM offset -4.3m (this is the const offset betw GCP and SRTM) does seem to produce a more accurate ortho image.  
 
 Vertical Datum Practicalities
 -----------------------------
@@ -1156,6 +1158,7 @@ Vertical Datum Practicalities
 - I dont think SAGEOID2010 varies by more than 2m within my study area and maybe less.
 - NB The SUDEM is in Hartebeeshoek94 - should we not convert it to WGS84 (vertically???)  Yes it is ref to geoid relative to hartebeeshoek94 - we should convert to rel to wgs84. ??
 x - The above does not improve things.  The errors between GCP and DEM we are seeing vary over the study area.  The sa geoid hardly varies at all over this area and it is highly unlikely the wgs or whatever datum will vary either.  i.e. the errors we are seeing are inherent in SUDEM (at least in part).  Fiddling with datums etc is not going to fix that.  
+- NB So... I tried comparing GCP's to SUDEM and SRTM and they are closer to SRTM - SUDEM looks to be warped with height somehow.  The SRTM is relative to geoid EGM96.  The SAGEOID2010 and EGM96 differ by ~0.5m in my study area seemingly quite constantly.  
 
 
 

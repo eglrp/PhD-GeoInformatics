@@ -10,11 +10,12 @@ import osr
 # to be converted back to image pixel locs
 
 # file containing actual GCP locs in WGS84
-doEllipsoidalHeight = True
+doEllipsoidalHeight = False
 if doEllipsoidalHeight:  # ellipsoidal heights
     gcpGeoLocFile = "C:/Data/Development/Projects/PhD GeoInformatics/Docs/Misc/Baviaanskloof/BaviiaansPeCorrectedGcpMay2017Combined.shp"
 else:
     gcpGeoLocFile = "C:/Data/Development/Projects/PhD GeoInformatics/Docs/Misc/Baviaanskloof/BaviiaansPeCorrectedGcpMay2017Combined_SaGeoid2010.shp"
+    gcpGeoLocFile = "C:/Data/Development/Projects/PhD GeoInformatics/Docs/Misc/Baviaanskloof/BaviiaansPeCorrectedGcpMay2017Combined_Egm96.shp"
 # file containing image locations of GCP locs in UTM 35S
 gcpImLocFile = "C:/Data/Development/Projects/PhD GeoInformatics/Docs/Misc/Baviaanskloof/Quickbird-056844553010_01-Gcp.shp"
 
@@ -183,7 +184,9 @@ for f in imGcpDict.values():
 if doEllipsoidalHeight:
     gcpFile = open("C:/Data/Development/Projects/PhD GeoInformatics/Docs/Misc/Baviaanskloof/Quickbird-056844553010-Gcp.txt", 'w')
 else:
-    gcpFile = open("C:/Data/Development/Projects/PhD GeoInformatics/Docs/Misc/Baviaanskloof/Quickbird-056844553010-Gcp-SaGeoid2010.txt", 'w')
+    # gcpFile = open("C:/Data/Development/Projects/PhD GeoInformatics/Docs/Misc/Baviaanskloof/Quickbird-056844553010-Gcp-SaGeoid2010.txt", 'w')
+    gcpFile = open(
+        "C:/Data/Development/Projects/PhD GeoInformatics/Docs/Misc/Baviaanskloof/Quickbird-056844553010-Gcp-Egm96.txt", 'w')
 gcpFile.write("I\tP\tL\tX\tY\tE\n")
 id = 1
 for key in imGcpDict:

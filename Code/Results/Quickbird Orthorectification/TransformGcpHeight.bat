@@ -18,3 +18,7 @@ ogr2ogr -t_srs "+proj=longlat +datum=WGS84 +geoidgrids=sageoid2010_25.gtx +vunit
 pause
 ogrinfo BaviiaansPeCorrectedGcpMay2017Combined_SaGeoid2010.shp BaviiaansPeCorrectedGcpMay2017Combined_SaGeoid2010
 pause
+ogr2ogr -t_srs "+proj=longlat +datum=WGS84 +geoidgrids=egm96_15.gtx +vunits=m +no_defs" BaviiaansPeCorrectedGcpMay2017Combined_Egm96.shp BaviiaansPeCorrectedGcpMay2017Combined.shp
+pause
+ogrinfo BaviiaansPeCorrectedGcpMay2017Combined_Egm96.shp BaviiaansPeCorrectedGcpMay2017Combined_Egm96
+pause
