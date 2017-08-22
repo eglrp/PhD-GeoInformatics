@@ -10,8 +10,9 @@ set VSI_CACHE=TRUE
 set VSI_CACHE_SIZE=1000000
 set QT_PLUGIN_PATH=%OSGEO4W_ROOT%\apps\qgis\qtplugins;%OSGEO4W_ROOT%\apps\qt4\plugins;%QT_PLUGIN_PATH%
 set PYTHONPATH=%OSGEO4W_ROOT%\apps\qgis\python;%PYTHONPATH%
+REM set IPYTHON=1
+REM set PYTHONHOME=C:\ProgramData\Anaconda3\envs\py27
 echo "DONE"
-
 SET PYCHARM="C:\Program Files\PyCharm Community Edition 2017.1.3\bin\pycharm64.exe"
  
 start "PyCharm aware of QGIS & OSGeo4W" /B %PYCHARM% %*
@@ -30,4 +31,3 @@ REM SET PYTHONPATH=%QGIS%\python;%OTB%\python;%PYTHONPATH%
 REM SET PYCHARM="C:\Program Files\PyCharm Community Edition 2017.1.3\bin\pycharm64.exe"
  
 REM start "PyCharm aware of QGIS & OSGeo4W" /B %PYCHARM% %*
-

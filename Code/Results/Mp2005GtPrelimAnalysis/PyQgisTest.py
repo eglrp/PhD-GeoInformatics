@@ -17,9 +17,9 @@ class MyWnd(QMainWindow):
     self.canvas = QgsMapCanvas()
     self.canvas.setCanvasColor(Qt.white)
 
-
-    # self.canvas.setExtent(layer.extent())
-    # self.canvas.setLayerSet([QgsMapCanvasLayer(layer)])
+    if layer is not None:
+        self.canvas.setExtent(layer.extent())
+        self.canvas.setLayerSet([QgsMapCanvasLayer(layer)])
 
     self.setCentralWidget(self.canvas)
     #self.setWidget(self.canvas)
@@ -64,6 +64,14 @@ class MyWnd(QMainWindow):
 import sys
 
 if __name__ == "__main__":
+    import os
+    keys = os.environ.keys()
+    pykeys = [s for s in keys if "PYTHON" in s]
+    for pk in pykeys:
+        print "%s: %s" % (pk, os.environ[pk])
+
+
+
     QgsApplication.setPrefixPath("C:/OSGeo4W64/apps/qgis")
     qgs = QgsApplication([], True)
 
@@ -74,3 +82,5 @@ if __name__ == "__main__":
     m = MyWnd(None)
     m.show()
     sys.exit(qgs.exec_())
+
+

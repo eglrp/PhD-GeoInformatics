@@ -1172,6 +1172,8 @@ PyQgis and Anaconda
 - PyQgis and OsGeo4W support can be obtained in Anaconda by making a conda env with same python version as osgeo then editing the environment activation batch file - see "C:\ProgramData\Anaconda3\envs\py27\etc\conda\activate.d\env_vars.bat" to set up all the osgeo env vars.  PyCharcm does not run this batch file though, so PyCharm must be started from an env that already has all these vars set - see "C:\Data\Development\Projects\PhD GeoInformatics\Code\Results\Quickbird Orthorectification\PyCharmOSGeo4W.bat".  
 - Note however, that it doesn't seem possible to simply create GUI elements from the python console - you can do it from within qgis.  This requires more investigation.
 - In the end I got something to run - it seems you can't instantiate QMainWindow from outside QGIS but other GUI classes are ok.  So maybe we can use a plain qt main window?
+- ** OK now I can instantiate QMainWindow - I just need to call QgsApplication.setPrefixPath("C:/OSGeo4W64/apps/qgis") before hand.
+- Note that the above is actually using osgeo python i.e. has no access to any of the anaconda libs incl ipython etc 
 
 
 Funding
