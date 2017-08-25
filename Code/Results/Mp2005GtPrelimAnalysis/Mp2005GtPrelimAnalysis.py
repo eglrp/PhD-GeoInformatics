@@ -26,7 +26,8 @@ imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056
 # imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/PCI Output/Separate Pan and MS/TOA/PanSharpToaOrtho.tif"
 # imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/PCI Output/Separate Pan and MS/ATCOR1/PansharpAtcorOrtho.tif"
 # imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/PCI Output/056844553010_01_P001_OrthoPanSharpen.tif"
-
+imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/PCI Output/TOA and Haze/TOACorrected_056844553010_01_P001_OrthoPanSharpen_05644015.tif"
+imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/056844553010_01_P001_MUL/PCI Ortho/03NOV18082012-M1BS-056844553010_01_P001_PCiOrtho.tif"
 
 def world2Pixel(geoMatrix, x, y):
     """
@@ -192,7 +193,7 @@ def scatterd(x, y, labels=None, class_labels=None, thumbnails=None, regress=True
                     patches.Rectangle((xx - xd / (2 * ims), yy - yd / (2 * ims)), xd / ims, yd / ims, fill=False,
                                       edgecolor=colour, linewidth=2.))
                 # pylab.plot(mPixels[::step], dRawPixels[::step], color='k', marker='.', linestyle='', markersize=.5)
-        if regress and classes.__len__() > 1 and False:
+        if regress and classes.__len__() > 1:  # and False:
             (slope, intercept, r, p, stde) = stats.linregress(x[class_idx], y[class_idx])
             pylab.text(xlim[0] + xd*0.7, ylim[0] + yd*0.05*(ci + 2),
                        str.format('{1}: $R^2$ = {0:.2f}', np.round(r**2, 2), classes[ci]), fontdict={'size':10, 'color': colour})
@@ -321,6 +322,19 @@ if not geotransform is None:
     print 'Origin = (',geotransform[0], ',',geotransform[3],')'
     print 'Pixel Size = (',geotransform[1], ',',geotransform[5],')'
 
+
+if False:  # for MS image and excl OL
+    plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict,
+                                         win_sizes=[np.array((3, 3)), np.array((11, 11))])
+
+    class_lab = np.array([plot['class'] for plot in plot_dict.values()])
+    class_labi = np.array([plot['classi'] for plot in plot_dict.values()])
+    ol_idx = class_lab == 'OL'
+
+    plot_dict2 = dict((k, plot_dict[k]) for k in np.array(plot_dict.keys())[np.logical_not(ol_idx)])
+    plot_dict = plot_dict2
+
+
 # plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict)
 plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict,
                                      win_sizes=[np.array((32, 32)), np.array((32, 32))])
@@ -387,7 +401,9 @@ for yi, yf in enumerate(['TAGC']):
 ################################################################
 # check effect of window offset
 # win_sizes = [np.array((18, 18)), np.array((30, 30))]
-win_sizes = [np.array((8, 8)), np.array((42, 42))]
+#win_sizes = [np.array((8, 8)), np.array((42, 42))]
+win_sizes = [np.array((3, 3)), np.array((11, 11))]
+
 win_offsets = [np.array((0, 0)), np.array((0, 0))]
 #xy_offset = np.arange(-64, 68, 8)
 xy_offset = np.arange(-1.5, 2., 0.5)
@@ -460,9 +476,10 @@ print r**2
 # check effect of changing window size
 
 # for differently placed windows
-win_sizes = [np.array((3, 3)), np.array((17, 17))]
+# win_sizes = [np.array((3, 3)), np.array((17, 17))]
+win_sizes = [np.array((3, 3)), np.array((11, 11))]
 win_offsets = [np.array((0, 0)), np.array((0, 0))]
-incr_array = np.arange(5, 75, 5)
+incr_array = np.arange(2, 50, 2)
 res = np.zeros((incr_array.__len__(), 5))
 for i, incr in enumerate(incr_array):
     win_sizes_ = win_sizes + incr

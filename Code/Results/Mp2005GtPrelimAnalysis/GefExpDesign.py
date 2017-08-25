@@ -96,13 +96,21 @@ cv = tagc.std() / np.abs(tagc.mean())
 # Plot area effect on cv
 # cv2**2 = (cv1**2)*np.sqrt(a1/a2)
 
+print "%s CVi: %s" % (str(class_labels[:-1]), str(cvi))
 print "5.x5. CV: %f" % (100*cv)
 
 for sidelen in range(10, 30, 5):
     cv2 = np.sqrt(((100*cv)**2)*np.sqrt((5.*5.)/(sidelen**2)))
-    print "%dx%d CV: %f" % (sidelen, sidelen, cv2)
+    print "%dx%d CVall: %f" % (sidelen, sidelen, cv2)
+
+sidelens = np.array([25., 5., 5.])
+for inc in range(5, 30, 5):
+    sidelens_inc = sidelens + inc
+    cvi2 = np.sqrt(((100*cvi)**2)*np.sqrt((sidelens**2)/(sidelens_inc**2)))
+    print "Plot size: %s CVi: %s" % (str(sidelens_inc), str(cvi2))
 
 # note the cv decreases non-lin and slower than sidelen i.e. diminishing returns
+# also note that CV is markedly worse for OL and DST which suggests their plot sizes should be increased!
 
 
 # -----------------------------------------------
@@ -114,8 +122,8 @@ tst = 2. # t student value for 95% CI
 E = 10.  # allowable error %
 sidelen = 10.  # plot size
 cvmax = np.max([cv, cvi.max()])
-CV = np.sqrt(((100*cvmax)**2)*np.sqrt((5.*5.)/(sidelen**2))) # cv*100 #np.max([cv, cvi.max()])*100 # highest CV in %
-Ni = np.array([10000])  # max possible sampling units per stratum i.e. if plot is 1m2 and startum is 100m2 then Ni=100
+CV = np.sqrt(((100*cvi)**2)*np.sqrt((5.*5.)/(sidelen**2))) # cv*100 #np.max([cv, cvi.max()])*100 # highest CV in %
+Ni = np.array([10000, 10000, 10000])  # max possible sampling units per stratum i.e. if plot is 1m2 and startum is 100m2 then Ni=100
 N = np.sum(Ni) #
 
 #from doc
