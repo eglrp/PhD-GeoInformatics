@@ -1179,6 +1179,22 @@ PyQgis and Anaconda
 - Note that the above is actually using osgeo python i.e. has no access to any of the anaconda libs incl ipython etc 
 
 
+Num Plots and Plot Size
+--------------------------
+- A min N for regression is 28 accordinf to AVN.  If this is taken per class then a min N for 3 classes is 100.
+- My initial thinking is that with geolocation errors of the order of 2m, we want a plot size >> than this so that we still end up with the majority of our pixels being valid.  5m is too small as one can easily end up with 50% invalid pixels.  10m is a compromise - bigger would be better.
+- Also according to AVN, we should work at multispec resolution which means 2.4m for quickbird.  One would like a plot size that has >10 of these pixels to allow us to average out effects like soil mixing.  At 5m we only get 4 pixels, at 10m we get 16 Quickbird pixels and ~60 Worldview pixels.  
+- What about somehow mitigating gelocation accuracy issues by having very many small plots?  Very many small plots will better describe the variation in the landscape.  If there are enough plots, the image measurements should describe the corresponding image variation even if they are not located accurately.  But the problem is how do you relate the two together - there is not way to relate specific image values to specific TAGC values when you know your image value has a substantial noise component due to spatial error.  I don't really think this can work.  
+- TAGChat = f(image) + im noise   
+- f = fit(image to TAGC)
+- For very heterogenous veg, the variation between small plots is large so use bigger plots to be spatially representative of variation in habitat and or simply to decrease variation. "Basically, the more similar the observations are, the more efficient is the small plot, and vice versa.
+As a rule of thumb, a plot should be large enough to contain enough trees per plot to be representative of the population
+It follows that small plots should be employed for dense stands with small trees, and large ones for open stands and large trees"  see "Designing a National Forest Inventory in the context of REDD +"
+- 10x10m plots are amongst the smallest used in lit.  
+- Stratification only helps if there is real separation between strata - in this case, each stratum can be modelled separately using less plots in ttl than would have been required if all strata were modelled together.  In MP 2005 gt, there is not great separation between strata - which points in part to the need to increase at least DST plot sizes.  But it also means that modelling is best done on all data, not on strata.  
+
+
+
 Funding
 --------
 - NRF Innovation Award
