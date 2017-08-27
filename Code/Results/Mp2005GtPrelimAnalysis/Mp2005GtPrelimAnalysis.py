@@ -639,6 +639,15 @@ scatterd(ndvi_merge, tagc_merge, labels=None, class_labels=class_lab_merge, thum
 pylab.title("Inc plot size")
 
 
+
+# from rana, gautam et al
+# n2 = var(y)(1-r2)/var(yhat)
+(slope, intercept, r, p, stde) = stats.linregress(ndvi, tagc)
+
+n2 = tagc.var()*(1-0.6)/(slope*ndvi + intercept).var()
+
+
+
 if False:
 
     #for default window placement
