@@ -114,7 +114,7 @@ for inc in range(5, 30, 5):
 
 
 # -----------------------------------------------
-# Initial sampling size
+# Initial sampling size - I think this is just taken from the standard formula for "sampling error" from a finite population
 
 # NOTE: TAGC must not be log and must be in same area units as rest of qty's ??
 L = 1.   # num strata
@@ -122,14 +122,14 @@ tst = 2. # t student value for 95% CI
 E = 10.  # allowable error %
 sidelen = 10.  # plot size
 cvmax = np.max([cv, cvi.max()])
-CV = np.sqrt(((100*cvi)**2)*np.sqrt((5.*5.)/(sidelen**2))) # cv*100 #np.max([cv, cvi.max()])*100 # highest CV in %
+CV = np.sqrt(((100*cvmax)**2)*np.sqrt((5.*5.)/(sidelen**2))) # cv*100 #np.max([cv, cvi.max()])*100 # highest CV in %
 Ni = np.array([10000, 10000, 10000])  # max possible sampling units per stratum i.e. if plot is 1m2 and startum is 100m2 then Ni=100
 N = np.sum(Ni) #
 
 #from doc
 n = ((tst**2)*(CV**2))/(E**2 + (tst**2 + CV**2)/N)
 ni = n*Ni/N
-print "Initial sampling size: %d" % (n)
+print "Initial sampling size: %s" % (str(n))
 print "Initial stratum sampling sizes: %s" % (str(ni))
 
 # recalculation and realloation of sampling size (from doc)
@@ -143,3 +143,9 @@ Ci = np.array([1])  # cost per plot in stratum i
 
 n = ((tst/E)**2) * (Wi*Si*np.sqrt(Ci)).sum() * (Wi*Si/np.sqrt(Ci)).sum()
 ni = n * (Wi*Si/np.sqrt(Ci)) / ((Wi*Si/np.sqrt(Ci)).sum())
+
+
+# from rana, gautam et al
+# n2 = var(y)(1-r2)/var(yhat)
+
+n2 = tagc.var()*(1-0.6)/

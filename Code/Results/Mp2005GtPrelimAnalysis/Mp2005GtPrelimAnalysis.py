@@ -15,6 +15,8 @@ from collections import OrderedDict
 # cs gt file - NB the locs in this file are rounded to 5 decimal places which is only accurate to something like 2m
 
 # we should combine with gps file which is more accurate
+from Mp2005GtPrelimAnalysis import ndvi_merge
+
 csGtFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/BMR Carbon Stocks/abf_agc_191_plots.shp"
 # the file below contains only the plot locations but to greater accuracy than the above file
 csGtGpsFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/BMR Carbon Stocks/gps_coords_191plots.shp"
@@ -334,6 +336,9 @@ if False:  # for MS image and excl OL
     plot_dict2 = dict((k, plot_dict[k]) for k in np.array(plot_dict.keys())[np.logical_not(ol_idx)])
     plot_dict = plot_dict2
 
+# win_sizes for ms data
+plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict,
+                                     win_sizes=[np.array((3, 3)), np.array((11, 11))])
 
 # plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict)
 plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict,
@@ -579,6 +584,59 @@ pylab.ylabel('$R^2$ for NDVI vs log$_{10}$(TAGC)', fontsize=12)
 pylab.title('Effect of plot size', fontsize=12)
 pylab.grid()
 
+
+###################################################################################3
+# coarse simulation of larger but fewer plots by combining multiple plots into 1
+
+class_lab = np.array([plot['class'] for plot in plot_dict.values()])
+classi = np.array([plot['classi'] for plot in plot_dict.values()])
+tagc = np.array([plot['TAGC'] for plot in plot_dict.values()])
+ndvi = np.array([plot['NDVI'] for plot in plot_dict.values()])
+
+tagc_merge = np.array([])
+ndvi_merge = np.array([])
+class_lab_merge = np.array([])
+
+nmerge = 4
+for ci in np.unique(classi):
+    class_idx = classi == ci
+    tagc_ci = tagc[class_idx]
+    ndvi_ci = ndvi[class_idx]
+    tagc_merge_ci = np.zeros(int(tagc_ci.__len__()/nmerge))
+    ndvi_merge_ci = np.zeros(int(tagc_ci.__len__()/nmerge))
+    for i in range(0, nmerge):
+        idx = range(i, tagc_ci.__len__() - nmerge + 1 + i, nmerge)
+        tagc_merge_ci += tagc_ci[idx]
+        ndvi_merge_ci += ndvi_ci[idx]    #is it valid to add NDVI - yes I think so - is per pixel
+    tagc_merge = np.r_[tagc_merge, tagc_merge_ci]
+    ndvi_merge = np.r_[ndvi_merge, ndvi_merge_ci]
+    class_lab_merge = np.r_[class_lab_merge, class_lab[class_idx][0:int(tagc_ci.__len__()/nmerge)]]
+
+
+ndvi_merge = ndvi_merge/nmerge
+tagc_merge = tagc_merge/nmerge
+
+tagc = np.log10(tagc)
+tagc_merge = np.log10(tagc_merge)  #only do log after merge otherwise invalid
+
+# NOTE: beware of low effective N and overfitting on training data with these results
+
+(slope, intercept, r, p, stde) = stats.linregress(ndvi, tagc)
+adjr2 = r**2 - (1 - r**2)*(1./(ndvi.__len__() - 2.))
+print r**2
+print adjr2
+(slope, intercept, r, p, stde) = stats.linregress(ndvi_merge, tagc_merge)
+adjr2 = r**2 - (1 - r**2)*(1./(ndvi_merge.__len__() - 2.))
+print r**2
+print adjr2
+
+pylab.figure()
+pylab.subplot(1,2,1)
+scatterd(ndvi, tagc, labels=None, class_labels=class_lab, thumbnails=None, xlabel='NDVI', ylabel='log10(TAGC)')
+pylab.title("Orig plot size")
+pylab.subplot(1,2,2)
+scatterd(ndvi_merge, tagc_merge, labels=None, class_labels=class_lab_merge, thumbnails=None, xlabel='NDVI', ylabel='log10(TAGC)')
+pylab.title("Inc plot size")
 
 
 if False:
