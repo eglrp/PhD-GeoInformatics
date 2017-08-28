@@ -635,7 +635,7 @@ pylab.figure()
 for nmi, res in enumerate(res_dict.values()):
     pylab.subplot(2, 2, nmi+1)
     scatterd(res['NDVI'], res['TAGC'], labels=None, class_labels=res['ClassLab'], thumbnails=None, xlabel='NDVI', ylabel='log10(TAGC)')
-    pylab.title("Merge: %d, N: %d" % (nmi+1, tagc_merge.__len__()))
+    pylab.title("Merge: %d, N: %d" % (nmi+1, res['N']))
 
 
 r2 = np.array([res['adjR2'] for res in res_dict.values()])
