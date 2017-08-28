@@ -593,52 +593,58 @@ classi = np.array([plot['classi'] for plot in plot_dict.values()])
 tagc = np.array([plot['TAGC'] for plot in plot_dict.values()])
 ndvi = np.array([plot['NDVI'] for plot in plot_dict.values()])
 
-tagc_merge = np.array([])
-ndvi_merge = np.array([])
-class_lab_merge = np.array([])
+nmerge_list = [1, 2, 3, 4]
+res_dict = {}
+for nmi, nmerge in enumerate(nmerge_list):
+    tagc_merge = np.array([])
+    ndvi_merge = np.array([])
+    class_lab_merge = np.array([])
 
-nmerge = 4
-for ci in np.unique(classi):
-    class_idx = classi == ci
-    tagc_ci = tagc[class_idx]
-    ndvi_ci = ndvi[class_idx]
-    tagc_merge_ci = np.zeros(int(tagc_ci.__len__()/nmerge))
-    ndvi_merge_ci = np.zeros(int(tagc_ci.__len__()/nmerge))
-    for i in range(0, nmerge):
-        idx = range(i, tagc_ci.__len__() - nmerge + 1 + i, nmerge)
-        tagc_merge_ci += tagc_ci[idx]
-        ndvi_merge_ci += ndvi_ci[idx]    #is it valid to add NDVI - yes I think so - is per pixel
-    tagc_merge = np.r_[tagc_merge, tagc_merge_ci]
-    ndvi_merge = np.r_[ndvi_merge, ndvi_merge_ci]
-    class_lab_merge = np.r_[class_lab_merge, class_lab[class_idx][0:int(tagc_ci.__len__()/nmerge)]]
+    for ci in np.unique(classi):
+        class_idx = classi == ci
+        tagc_ci = tagc[class_idx]
+        ndvi_ci = ndvi[class_idx]
+        tagc_merge_ci = np.zeros(int(tagc_ci.__len__()/nmerge))
+        ndvi_merge_ci = np.zeros(int(tagc_ci.__len__()/nmerge))
+        for i in range(0, nmerge):
+            idx = range(i, tagc_ci.__len__() - nmerge + 1 + i, nmerge)
+            tagc_merge_ci += tagc_ci[idx]
+            ndvi_merge_ci += ndvi_ci[idx]    #is it valid to add NDVI - yes I think so - is per pixel
+        tagc_merge = np.r_[tagc_merge, tagc_merge_ci]
+        ndvi_merge = np.r_[ndvi_merge, ndvi_merge_ci]
+        class_lab_merge = np.r_[class_lab_merge, class_lab[class_idx][0:int(tagc_ci.__len__()/nmerge)]]
 
+    ndvi_merge = ndvi_merge/nmerge
+    tagc_merge = tagc_merge/nmerge
+    tagc_merge = np.log10(tagc_merge)  #only do log after merge otherwise invalid
 
-ndvi_merge = ndvi_merge/nmerge
-tagc_merge = tagc_merge/nmerge
+    (slope, intercept, r, p, stde) = stats.linregress(ndvi_merge, tagc_merge)
+    adjr2 = r**2 - (1 - r**2)*(1./(ndvi_merge.__len__() - 2.))
+    res = {}
+    res['R2'] = r**2
+    res['adjR2'] = adjr2
+    res['N'] = tagc_merge.__len__()
+    res['TAGC'] = tagc_merge
+    res['NDVI'] = ndvi_merge
+    res['ClassLab'] = class_lab_merge
+    res_dict[nmerge] = res
+    print "Merge: %d, N: %d, R2: %f, adjR2: %f" % (nmerge, tagc_merge.__len__(), r**2, adjr2)
 
-tagc = np.log10(tagc)
-tagc_merge = np.log10(tagc_merge)  #only do log after merge otherwise invalid
-
-# NOTE: beware of low effective N and overfitting on training data with these results
-
-(slope, intercept, r, p, stde) = stats.linregress(ndvi, tagc)
-adjr2 = r**2 - (1 - r**2)*(1./(ndvi.__len__() - 2.))
-print r**2
-print adjr2
-(slope, intercept, r, p, stde) = stats.linregress(ndvi_merge, tagc_merge)
-adjr2 = r**2 - (1 - r**2)*(1./(ndvi_merge.__len__() - 2.))
-print r**2
-print adjr2
 
 pylab.figure()
-pylab.subplot(1,2,1)
-scatterd(ndvi, tagc, labels=None, class_labels=class_lab, thumbnails=None, xlabel='NDVI', ylabel='log10(TAGC)')
-pylab.title("Orig plot size")
-pylab.subplot(1,2,2)
-scatterd(ndvi_merge, tagc_merge, labels=None, class_labels=class_lab_merge, thumbnails=None, xlabel='NDVI', ylabel='log10(TAGC)')
-pylab.title("Inc plot size")
+for nmi, res in enumerate(res_dict.values()):
+    pylab.subplot(2, 2, nmi+1)
+    scatterd(res['NDVI'], res['TAGC'], labels=None, class_labels=res['ClassLab'], thumbnails=None, xlabel='NDVI', ylabel='log10(TAGC)')
+    pylab.title("Merge: %d, N: %d" % (nmi+1, tagc_merge.__len__()))
 
 
+r2 = np.array([res['adjR2'] for res in res_dict.values()])
+
+pylab.figure()
+pylab.plot(nmerge_list, r2, 'kx-')
+pylab.xlabel('Plot Size Factor')
+pylab.ylabel('$R^2$')
+pylab.grid()
 
 # from rana, gautam et al
 # n2 = var(y)(1-r2)/var(yhat)
