@@ -16,8 +16,8 @@ from scipy import interpolate
 os.environ['GDAL_DATA'] = "C:/ProgramData/Anaconda3/envs/py27/Library/share/gdal"
 os.environ.update()
 print os.environ['GDAL_DATA']
-# demFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/CGA/SUDEM/x3324c_15_15_L2a_crop_wgs84.tif"
-demFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/CGA/SRTM/s34_e024_1arc_v3.tif"
+demFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/CGA/SUDEM/x3324c_15_15_L2a_crop_wgs84.tif"
+srtmFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/CGA/SRTM/s34_e024_1arc_v3.tif"
 # demFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/CGA/ASTER DEM/ASTGTM2_S34E024_dem.tif"
 gcpGeoLocFile = "C:/Data/Development/Projects/PhD GeoInformatics/Docs/Misc/Baviaanskloof/BaviiaansPeCorrectedGcpMay2017Combined.shp"
 gcpGeoidGeoLocFile = "C:/Data/Development/Projects/PhD GeoInformatics/Docs/Misc/Baviaanskloof/BaviiaansPeCorrectedGcpMay2017Combined_SaGeoid2010.shp"
@@ -117,6 +117,89 @@ demLine = np.array([gcp['demLine'] for gcp in gcpDict.values()])
 demZ = np.array([gcp['demZ'] for gcp in gcpDict.values()])
 gcpZ = np.array([gcp['Z'] for gcp in gcpDict.values()])
 
+#####################################################33
+# repeat for SRTM
+
+ds = gdal.OpenEx(srtmFile, gdal.OF_RASTER)
+if ds is None:
+    print "Open failed"
+
+print 'Driver: ', ds.GetDriver().ShortName,'/', \
+      ds.GetDriver().LongName
+print 'Size is ',ds.RasterXSize,'x',ds.RasterYSize, \
+      'x',ds.RasterCount
+print 'Projection is ',ds.GetProjection()
+srtmGeoTransform = ds.GetGeoTransform()
+if not srtmGeoTransform is None:
+    print 'Origin = (',srtmGeoTransform[0], ',',srtmGeoTransform[3],')'
+    print 'Pixel Size = (',srtmGeoTransform[1], ',',srtmGeoTransform[5],')'
+
+srtmSpatialRef = osr.SpatialReference(ds.GetProjection())
+
+srtm = ds.ReadAsArray()
+srtmInterp = interpolate.RectBivariateSpline(range(0, srtm.shape[0]), range(0, srtm.shape[1]), srtm)
+ds = None
+
+
+# read in Geo CoOrds of GCP's (and height!)
+ds = gdal.OpenEx(gcpGeoLocFile, gdal.OF_VECTOR)
+if ds is None:
+    print "Open failed./n"
+
+lyr = ds.GetLayerByIndex(0)
+lyr.ResetReading()
+gcpSpatialRef = lyr.GetSpatialRef()
+
+gcpToDemTransform = osr.CreateCoordinateTransformation(gcpSpatialRef, srtmSpatialRef)
+
+# gcpList = []
+gcpDict = {}
+for (i, feat) in enumerate(lyr):
+    if i > 190:
+        break
+    print '.',
+    feat_defn = lyr.GetLayerDefn()
+    f = {}
+    for i in range(feat_defn.GetFieldCount()):
+        field_defn = feat_defn.GetFieldDefn(i)
+        f[field_defn.GetName()] = feat.GetField(i)
+    geom = feat.GetGeometryRef()
+    if geom is not None and (geom.GetGeometryType() == ogr.wkbPoint or geom.GetGeometryType() == ogr.wkbPoint25D):
+        print "%s %.6f, %.6f" % (f['Comment'], geom.GetX(), geom.GetY())
+        f['geom'] = geom
+        f['X'] = geom.GetX()
+        f['Y'] = geom.GetY()
+        f['Z'] = f['GNSS_Heigh']   #? - should be able to get this from geom
+
+        srtmGeom = geom.Clone()
+        srtmGeom.Transform(gcpToDemTransform)
+        srtmPixel, srtmLine = world2Pixel(srtmGeoTransform, srtmGeom.GetX(), srtmGeom.GetY())
+        f['srtmX'] = srtmGeom.GetX()
+        f['srtmY'] = srtmGeom.GetY()
+        f['srtmPixel'] = srtmPixel
+        f['srtmLine'] = srtmLine
+        srtmP, srtmL = np.int(np.round(srtmPixel)), np.int(np.round(srtmLine))
+        if srtmP >= 0 and srtmP < srtm.shape[1] and srtmL >= 0 and srtmL < srtm.shape[0]:
+            f['srtmZ'] = srtmInterp(srtmLine, srtmPixel)[0][0]  #  srtm[srtmL, srtmP]  #rather interpolate !
+        else:
+            f['srtmZ'] = -1.  #rather interpolate !
+
+        # geom.Ta
+    else:
+        print "no point geometry/n"
+    # gcpList.append(f)
+    gcpDict[f['Comment']] = f
+print ' '
+ds = None
+
+srtmPixel = np.array([gcp['srtmPixel'] for gcp in gcpDict.values()])
+srtmLine = np.array([gcp['srtmLine'] for gcp in gcpDict.values()])
+srtmZ = np.array([gcp['srtmZ'] for gcp in gcpDict.values()])
+gcpZ = np.array([gcp['Z'] for gcp in gcpDict.values()])
+
+
+
+
 pylab.figure()
 pylab.imshow(dem)
 pylab.hold('on')
@@ -198,6 +281,38 @@ print 'GEOID RMS Adjusted: %f' % (np.sqrt(((demZ - gcpZgeoid - ((demZ - gcpZgeoi
 print 'GEOID Abs: %f' % ((demZ - gcpZgeoid).__abs__().mean())
 print 'GEOID Abs Adjusted: %f' % ((demZ - gcpZgeoid - ((demZ - gcpZgeoid).mean())).__abs__().mean())
 
+##figure gor report
+# (slope, intercept, r, p, stde) = stats.linregress(x[class_idx], y[class_idx])
+
+ylim = [0, gcpZgeoid.max()]
+xlim = [0, demZ.max()]
+xd = np.diff(xlim)[0]
+yd = np.diff(ylim)[0]
+
+pylab.figure()
+pylab.subplot(1, 2, 1)
+pylab.plot(demZ, gcpZgeoid, 'kx')
+h = pylab.plot([0, demZ.max()], [0, demZ.max()], 'k--', label='1:1')
+pylab.xlabel('DEM Z (m)')
+pylab.ylabel('DGPS Z (m)')
+pylab.grid()
+pylab.title('SUDEM accuracy')
+rmse = (np.sqrt(((demZ - gcpZgeoid)**2).mean()))
+pylab.text((xlim[0] + xd * 0.5), (ylim[0] + yd * 0.1), str.format('RMSE = {0:.2f}m', np.round(rmse, 2)),
+           fontdict={'size': 12})
+pylab.legend()
+
+pylab.subplot(1, 2, 2)
+pylab.plot(srtmZ, gcpZgeoid, 'kx')
+h = pylab.plot([0, demZ.max()], [0, demZ.max()], 'k--', label='1:1')
+pylab.xlabel('DEM Z (m)')
+pylab.ylabel('DGPS Z (m)')
+pylab.grid()
+pylab.title('SRTM DEM accuracy')
+rmse = (np.sqrt(((srtmZ - gcpZgeoid)**2).mean()))
+pylab.text((xlim[0] + xd * 0.5), (ylim[0] + yd * 0.1), str.format('RMSE = {0:.2f}m', np.round(rmse, 2)),
+           fontdict={'size': 12})
+pylab.legend()
 
 
 pylab.figure()
