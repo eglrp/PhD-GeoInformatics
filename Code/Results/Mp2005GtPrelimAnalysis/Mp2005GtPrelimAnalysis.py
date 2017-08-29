@@ -642,8 +642,10 @@ r2 = np.array([res['adjR2'] for res in res_dict.values()])
 
 pylab.figure()
 pylab.plot(nmerge_list, r2, 'kx-')
-pylab.xlabel('Plot Size Factor')
-pylab.ylabel('$R^2$')
+pylab.xticks(nmerge_list)
+pylab.xlabel('Num Plots Combined')
+pylab.ylabel('$R^2$ for log(TAGC) vs NDVI')
+pylab.title('Simulation of Increased Plot Size')
 pylab.grid()
 
 # from rana, gautam et al
