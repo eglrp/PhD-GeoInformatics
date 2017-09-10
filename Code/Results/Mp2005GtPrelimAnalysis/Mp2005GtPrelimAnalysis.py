@@ -771,3 +771,7 @@ if False:
 
     app = qgis.core.QgsApplication()
     canvas = qgis.gui.QgsMapCanvas()
+
+
+# S33 33" 15' E23 56" 41'
+23. + 56./60 + 41./3600, 33.+33./60 + 15./3600
