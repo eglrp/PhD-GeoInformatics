@@ -271,6 +271,20 @@ disp(methodNames(si)')
 % save 'C:\Data\Development\Projects\MSc GeoInformatics\Data\Feature Selection\resFeatIdx.mat' resFeatIdx res
 save 'C:\Data\Development\Projects\MSc GeoInformatics\Data\Feature Selection\resHs4.mat' res resFci
 save 'C:\Data\Development\Projects\MSc GeoInformatics\Data\Feature Selection\CompareFsMethodsHs4.mat'
+
+%% Make eg dendgrogram (for paper)
+close all;clear all;
+
+load('D:\Data\Development\Projects\PhD GeoInformatics\Data\Feature Selection\Synthetic.mat');
+
+res = BootstrapFsEval(data, FeatSelClusterRankM([], naivebc, 0, [], 'preferredFeatures', ...
+        myPreferredFeatures, 'clusterThresh', myClusterThresh, 'showFigures', true, 'jmiFormulation', false), ...
+        'numBootStraps', 1, 'numFeatures', myNumFeatures);
+
+figure(2)
+print('C:\Data\Development\Projects\PhD GeoInformatics\Docs\My Docs\Thesis\Feature Clustering and Ranking\Figure 1 - Example dendrogram.eps', ...
+    '-deps', '-r1200')
+
 %% Visualise results (for paper)
 % NB remember to replace feat idx with cluster idx for FCR
 clear all; close all;
@@ -286,7 +300,7 @@ methodNamesAbbr = {'FCR-NaiveBC', 'Rank-NaiveBC', 'FS-NaiveBC',...
 cdataNamesAbbr = {'Spekboom', 'Synthetic', 'Landsat', 'Urban', 'Botswana', 'KSC'};
 
     %'FCR-mi-jmi off-corr off', 'FCR-mi-jmi on-corr off', 'featselb-naivebc', 'featselb-nmi'};
-load 'C:\Data\Development\Projects\MSc GeoInformatics\Data\Feature Selection\CompareFsMethodsHs4.mat'
+load 'D:\Data\Development\Projects\PhD GeoInformatics\Data\Feature Selection\CompareFsMethodsHs4.mat'
 %methodIdx = [7, 1, 2, 3, 12, 8, 4, 5, 13];
 methodIdx = [7, 1, 2, 3, 10, 8, 4, 5, 11];
 methodNamesAbbr(methodIdx)'
@@ -338,6 +352,9 @@ xlabel('Method', 'FontWeight', 'Bold')
 ylabel('Stability', 'FontWeight', 'Bold')
 %title('Consistency by Method')
 fontsize(9)
+print('C:\Data\Development\Projects\PhD GeoInformatics\Docs\My Docs\Thesis\Feature Clustering and Ranking\Figure 2 - Method stability per data set.eps', ...
+    '-depsc', '-r1200')
+
 
 figure;
 bar(consistency(methodIdx(consistencyIdx), :)')
@@ -364,7 +381,8 @@ xlabel('Method', 'FontWeight', 'Bold')
 ylabel('Accuracy', 'FontWeight', 'Bold')
 %title('Consistency by Method')
 fontsize(9)
-
+print('C:\Data\Development\Projects\PhD GeoInformatics\Docs\My Docs\Thesis\Feature Clustering and Ranking\Figure 3 - Method accuracy per data set.eps', ...
+    '-depsc', '-r1200')
 
 figure;
 bar(knnAcc(methodIdx(knnAccIdx), :)')
