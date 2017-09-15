@@ -5,11 +5,38 @@
   <evaluateDefaultValues active="0"/>
   <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="">
     <customproperties/>
-    <layer-tree-layer expanded="1" providerKey="memory" checked="Qt::Checked" id="Jan_Vlok_Intact_Thicket20170910202654491" source="memory?geometry=Point&amp;crs=EPSG:4326&amp;field=ID:integer(0,0)" name="Jan Vlok Intact Thicket">
+    <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="Baviaans Vector Data">
       <customproperties/>
-    </layer-tree-layer>
-    <layer-tree-group expanded="0" checked="Qt::PartiallyChecked" name="Baviaans Vector Data">
-      <customproperties/>
+      <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="2017 Trial">
+        <customproperties/>
+        <layer-tree-layer expanded="1" providerKey="memory" checked="Qt::Checked" id="Jan_Vlok_Intact_Thicket20170910202654491" source="memory?geometry=Point&amp;crs=EPSG:4326&amp;field=ID:integer(0,0)" name="Jan Vlok Intact Thicket">
+          <customproperties/>
+        </layer-tree-layer>
+        <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="ThnuganuDegradedPlantableSubAreaForSept2017Trial20170830185624813" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/BMR ShapeFiles/ThnuganuDegradedPlantableSubAreaForSept2017Trial.kml|layername=ThnuganuDegradedPlantableSubAreaForSept2017Trial" name="ThnuganuDegradedPlantableSubAreaForSept2017Trial">
+          <customproperties/>
+        </layer-tree-layer>
+        <layer-tree-layer expanded="1" providerKey="memory" checked="Qt::Unchecked" id="SewefonteinPristineAreaForTrial20170830194225590" source="memory?geometry=Polygon&amp;crs=EPSG:4326&amp;field=ID:integer(0,0)&amp;field=Desc:string(0,0)" name="SewefonteinPristineAreaForTrial Near Road">
+          <customproperties/>
+        </layer-tree-layer>
+        <layer-tree-layer expanded="1" providerKey="memory" checked="Qt::Unchecked" id="SewefonteinIntactAreaForTrialV220170831112336083" source="memory?geometry=MultiPolygon&amp;crs=EPSG:4326" name="SewefonteinIntactAreaForTrialV2">
+          <customproperties/>
+        </layer-tree-layer>
+        <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="SewefonteinIntactTrialPoints20170830195901194" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/BMR ShapeFiles/SewefonteinIntactTrialPoints.kml|layername=SewefonteinIntactTrialPoints" name="SewefonteinIntactTrialPoints">
+          <customproperties/>
+        </layer-tree-layer>
+        <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="SewefonteinIntactTrialPointsV220170831113851977" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/BMR ShapeFiles/SewefonteinIntactTrialPointsV2.kml|layername=SewefonteinIntactTrialPointsV2" name="SewefonteinIntactTrialPointsV2">
+          <customproperties/>
+        </layer-tree-layer>
+        <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="ThnuganuDegradedTrialPoints20170830214016751" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/BMR ShapeFiles/ThnuganuDegradedTrialPoints.kml|layername=ThnuganuDegradedTrialPoints" name="ThnuganuDegradedTrialPoints">
+          <customproperties/>
+        </layer-tree-layer>
+        <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="ThnuganuDegradedTrialPointsV220170831101259382" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/BMR ShapeFiles/ThnuganuDegradedTrialPointsV2.kml|layername=ThnuganuDegradedTrialPointsV2" name="ThnuganuDegradedTrialPointsV2">
+          <customproperties/>
+        </layer-tree-layer>
+      </layer-tree-group>
+      <layer-tree-layer expanded="0" providerKey="ogr" checked="Qt::Checked" id="GEF5_Baviaans_Data20170811134206913" source="C:/Data/Development/Projects/PhD GeoInformatics/Docs/Misc/Baviaanskloof/GEF5_Baviaans_Data.shp" name="GEF5_Baviaans_Data">
+        <customproperties/>
+      </layer-tree-layer>
       <layer-tree-layer expanded="0" providerKey="ogr" checked="Qt::Checked" id="abf_agc_191_plots20170727203413936" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/BMR Carbon Stocks/abf_agc_191_plots.shp" name="abf_agc_191_plots">
         <customproperties/>
       </layer-tree-layer>
@@ -58,25 +85,13 @@
       <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="GefBaviaansData20170830201254446" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/BMR ShapeFiles/GefBaviaansData.kml|layername=GefBaviaansData" name="GefBaviaansData">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="ThnuganuDegradedTrialPointsV220170831101259382" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/BMR ShapeFiles/ThnuganuDegradedTrialPointsV2.kml|layername=ThnuganuDegradedTrialPointsV2" name="ThnuganuDegradedTrialPointsV2">
-        <customproperties/>
-      </layer-tree-layer>
-      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="ThnuganuDegradedTrialPoints20170830214016751" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/BMR ShapeFiles/ThnuganuDegradedTrialPoints.kml|layername=ThnuganuDegradedTrialPoints" name="ThnuganuDegradedTrialPoints">
-        <customproperties/>
-      </layer-tree-layer>
       <layer-tree-layer expanded="1" providerKey="memory" checked="Qt::Unchecked" id="TchuganuDegradedTrialArea20170830213513700" source="memory?geometry=Polygon&amp;crs=EPSG:4326" name="TchuganuDegradedTrialArea">
         <customproperties/>
       </layer-tree-layer>
       <layer-tree-layer expanded="1" providerKey="memory" checked="Qt::Unchecked" id="TchuganuPlantableAreasScratch20170831100912292" source="memory?geometry=MultiPolygon&amp;crs=EPSG:4326" name="TchuganuPlantableAreasScratch">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="GEF5_Baviaans_Data20170811134206913" source="C:/Data/Development/Projects/PhD GeoInformatics/Docs/Misc/Baviaanskloof/GEF5_Baviaans_Data.shp" name="GEF5_Baviaans_Data">
-        <customproperties/>
-      </layer-tree-layer>
       <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="BMR_ROI20170304123226877" source="D:\Data\Development\Projects\PhD GeoInformatics\Data/Misc/BMR ShapeFiles/BMR_ROI.shp" name="BMR_ROI">
-        <customproperties/>
-      </layer-tree-layer>
-      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="ThnuganuDegradedTrialPoints20170830192632001" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/BMR ShapeFiles/ThnuganuDegradedTrialPoints.kml|layername=ThnuganuDegradedTrialPoints" name="ThnuganuDegradedTrialPoints">
         <customproperties/>
       </layer-tree-layer>
       <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="initiativesaborder20170624101732442" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/BMR ShapeFiles/initiativesaborder.shp" name="Tchuganu">
@@ -85,25 +100,7 @@
       <layer-tree-layer expanded="1" providerKey="memory" checked="Qt::Unchecked" id="memory_20170830191359256" source="memory?geometry=MultiPolygon&amp;crs=EPSG:4326&amp;field=Name:string(255,0)&amp;field=description:string(255,0)&amp;field=timestamp:datetime(-1,0)&amp;field=begin:datetime(-1,0)&amp;field=end:datetime(-1,0)&amp;field=altitudeMode:string(255,0)&amp;field=tessellate:integer(-1,0)&amp;field=extrude:integer(-1,0)&amp;field=visibility:integer(-1,0)&amp;field=drawOrder:integer(-1,0)&amp;field=icon:string(255,0)" name="Dissolved">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="ThnuganuDegradedPlantableSubAreaForSept2017Trial20170830185624813" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/BMR ShapeFiles/ThnuganuDegradedPlantableSubAreaForSept2017Trial.kml|layername=ThnuganuDegradedPlantableSubAreaForSept2017Trial" name="ThnuganuDegradedPlantableSubAreaForSept2017Trial">
-        <customproperties/>
-      </layer-tree-layer>
-      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="SewefonteinIntactTrialPoints20170830195901194" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/BMR ShapeFiles/SewefonteinIntactTrialPoints.kml|layername=SewefonteinIntactTrialPoints" name="SewefonteinIntactTrialPoints">
-        <customproperties/>
-      </layer-tree-layer>
       <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="Intersection20170830185339278" source="C:/Users/dugalh/.qgis2/processing/outputs/SubThnuganuPlantableArea.shp" name="Intersection">
-        <customproperties/>
-      </layer-tree-layer>
-      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="SewefonteinIntactTrialPointsV220170831113851977" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/BMR ShapeFiles/SewefonteinIntactTrialPointsV2.kml|layername=SewefonteinIntactTrialPointsV2" name="SewefonteinIntactTrialPointsV2">
-        <customproperties/>
-      </layer-tree-layer>
-      <layer-tree-layer expanded="1" providerKey="memory" checked="Qt::Checked" id="memory_20170831113053013" source="memory?geometry=Point&amp;crs=EPSG:4326&amp;field=id:integer(-1,0)" name="Random points">
-        <customproperties/>
-      </layer-tree-layer>
-      <layer-tree-layer expanded="1" providerKey="memory" checked="Qt::Unchecked" id="SewefonteinIntactAreaForTrialV220170831112336083" source="memory?geometry=MultiPolygon&amp;crs=EPSG:4326" name="SewefonteinIntactAreaForTrialV2">
-        <customproperties/>
-      </layer-tree-layer>
-      <layer-tree-layer expanded="1" providerKey="memory" checked="Qt::Checked" id="SewefonteinPristineAreaForTrial20170830194225590" source="memory?geometry=Polygon&amp;crs=EPSG:4326&amp;field=ID:integer(0,0)&amp;field=Desc:string(0,0)" name="SewefonteinPristineAreaForTrial Near Road">
         <customproperties/>
       </layer-tree-layer>
       <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="SubThnuganu20170830185104412" source="C:/Data/Development/Projects/PhD GeoInformatics/Docs/Misc/Baviaanskloof/SubThnuganu.shp" name="SubThnuganu">
@@ -164,7 +161,7 @@
     <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="R1C12_GdalPanSharp20170727195709263" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056549293010_01/PanSharpen/R1C12-GdalPanSharp.tif" name="R1C12-GdalPanSharp">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-group expanded="1" checked="Qt::Unchecked" name="SUDEM">
+    <layer-tree-group expanded="0" checked="Qt::Unchecked" name="SUDEM">
       <customproperties/>
       <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="s34_e024_1arc_v320170822170556971" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/CGA/SRTM/s34_e024_1arc_v3.tif" name="s34_e024_1arc_v3">
         <customproperties/>
@@ -173,7 +170,7 @@
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
-    <layer-tree-group expanded="1" checked="Qt::Unchecked" name="QB 056844553010_01 Basic 1B">
+    <layer-tree-group expanded="0" checked="Qt::Unchecked" name="QB 056844553010_01 Basic 1B">
       <customproperties/>
       <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="TOACorrected_056844553010_01_P001_OrthoPanSharpen_0564401520170809141333684" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/PCI Output/TOA and Haze/TOACorrected_056844553010_01_P001_OrthoPanSharpen_05644015.tif" name="TOACorrected_056844553010_01_P001_OrthoPanSharpen_05644015">
         <customproperties/>
@@ -830,7 +827,7 @@
         </layer-tree-layer>
       </layer-tree-group>
     </layer-tree-group>
-    <layer-tree-group expanded="1" checked="Qt::Unchecked" name="NGI 2009">
+    <layer-tree-group expanded="0" checked="Qt::Unchecked" name="NGI 2009">
       <customproperties/>
       <layer-tree-group expanded="0" checked="Qt::Unchecked" name="3323DB">
         <customproperties/>
@@ -1145,7 +1142,7 @@
         </layer-tree-layer>
       </layer-tree-group>
     </layer-tree-group>
-    <layer-tree-group expanded="1" checked="Qt::Unchecked" name="Basemaps">
+    <layer-tree-group expanded="0" checked="Qt::Unchecked" name="Basemaps">
       <customproperties/>
       <layer-tree-layer expanded="1" providerKey="wms" checked="Qt::Unchecked" id="NGI20170616160824777" source="crs=EPSG:3857&amp;format=&amp;type=xyz&amp;url=http://a.aerial.openstreetmap.org.za/ngi-aerial/%7Bz%7D/%7Bx%7D/%7By%7D.jpg" name="NGI">
         <customproperties/>
@@ -1162,10 +1159,10 @@
   <mapcanvas>
     <units>degrees</units>
     <extent>
-      <xmin>24.2832484939494897</xmin>
-      <ymin>-33.71229667296996979</ymin>
-      <xmax>24.44162534399044162</xmax>
-      <ymax>-33.60960204622791991</ymax>
+      <xmin>23.94459893292820141</xmin>
+      <ymin>-33.57479754872386479</ymin>
+      <xmax>24.0061392219539016</xmax>
+      <ymax>-33.54097283629333504</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
@@ -1485,6 +1482,7 @@
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_21_2015_1004_RGB_RECT20170330112503043"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_16_2015_1004_RGB_RECT20170330112352734"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="memory_20170830185739746"/>
+      <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="SewefonteinIntactTrialPoints20170915103140805"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_07_2009_221_RGB_RECT20170330121923573"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_10_2012_588_RGB_RECT20170330121357081"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_23_2015_1004_RGB_RECT20170330112503199"/>
@@ -1548,6 +1546,7 @@
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="03NOV18082012_P1BS_056844553010_01_P00120170802213212551"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_10_2015_1004_RGB_RECT20170330112502187"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="GEF5_Baviaans_Data20170811134536653"/>
+      <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="SewefonteinTchuhanuPlantableAreas20170915103757917"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="egm08_2520170804111018436"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_14_2015_1004_RGB_RECT20170330112502481"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_06_2015_1005_RGB_RECT20170330112618589"/>
@@ -1571,6 +1570,7 @@
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_02_2012_588_RGB_RECT20170330121358059"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_25_2015_1001_RGB_RECT20170330110903241"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_08_2015_1004_RGB_RECT20170330112352121"/>
+      <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="SewefonteinIntactTrialPointsV220170915103039949"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_13_2015_1001_RGB_RECT20170330110902471"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_09_2015_1001_RGB_RECT20170330110902191"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_21_2015_1004_RGB_RECT20170330112353119"/>
@@ -1940,7 +1940,6 @@
       <item>Intersection20170830185339278</item>
       <item>ThnuganuDegradedPlantableSubAreaForSept2017Trial20170830185624813</item>
       <item>memory_20170830191359256</item>
-      <item>ThnuganuDegradedTrialPoints20170830192632001</item>
       <item>SewefonteinPristineAreaForTrial20170830194225590</item>
       <item>SewefonteinIntactTrialPoints20170830195901194</item>
       <item>GefBaviaansData20170830201254446</item>
@@ -1949,18 +1948,59 @@
       <item>TchuganuPlantableAreasScratch20170831100912292</item>
       <item>ThnuganuDegradedTrialPointsV220170831101259382</item>
       <item>SewefonteinIntactAreaForTrialV220170831112336083</item>
-      <item>memory_20170831113053013</item>
       <item>SewefonteinIntactTrialPointsV220170831113851977</item>
       <item>Jan_Vlok_Intact_Thicket20170910202654491</item>
     </custom-order>
   </layer-tree-canvas>
   <legend updateDrawingOrder="true">
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Jan Vlok Intact Thicket" showFeatureCount="0">
-      <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="Jan_Vlok_Intact_Thicket20170910202654491" visible="1"/>
-      </filegroup>
-    </legendlayer>
-    <legendgroup open="false" checked="Qt::PartiallyChecked" name="Baviaans Vector Data">
+    <legendgroup open="true" checked="Qt::PartiallyChecked" name="Baviaans Vector Data">
+      <legendgroup open="true" checked="Qt::PartiallyChecked" name="2017 Trial">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Jan Vlok Intact Thicket" showFeatureCount="0">
+          <filegroup open="true" hidden="false">
+            <legendlayerfile isInOverview="0" layerid="Jan_Vlok_Intact_Thicket20170910202654491" visible="1"/>
+          </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="ThnuganuDegradedPlantableSubAreaForSept2017Trial" showFeatureCount="0">
+          <filegroup open="true" hidden="false">
+            <legendlayerfile isInOverview="0" layerid="ThnuganuDegradedPlantableSubAreaForSept2017Trial20170830185624813" visible="0"/>
+          </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="SewefonteinPristineAreaForTrial Near Road" showFeatureCount="0">
+          <filegroup open="true" hidden="false">
+            <legendlayerfile isInOverview="0" layerid="SewefonteinPristineAreaForTrial20170830194225590" visible="0"/>
+          </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="SewefonteinIntactAreaForTrialV2" showFeatureCount="0">
+          <filegroup open="true" hidden="false">
+            <legendlayerfile isInOverview="0" layerid="SewefonteinIntactAreaForTrialV220170831112336083" visible="0"/>
+          </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="SewefonteinIntactTrialPoints" showFeatureCount="0">
+          <filegroup open="true" hidden="false">
+            <legendlayerfile isInOverview="0" layerid="SewefonteinIntactTrialPoints20170830195901194" visible="0"/>
+          </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="SewefonteinIntactTrialPointsV2" showFeatureCount="0">
+          <filegroup open="true" hidden="false">
+            <legendlayerfile isInOverview="0" layerid="SewefonteinIntactTrialPointsV220170831113851977" visible="0"/>
+          </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="ThnuganuDegradedTrialPoints" showFeatureCount="0">
+          <filegroup open="true" hidden="false">
+            <legendlayerfile isInOverview="0" layerid="ThnuganuDegradedTrialPoints20170830214016751" visible="0"/>
+          </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="ThnuganuDegradedTrialPointsV2" showFeatureCount="0">
+          <filegroup open="true" hidden="false">
+            <legendlayerfile isInOverview="0" layerid="ThnuganuDegradedTrialPointsV220170831101259382" visible="0"/>
+          </filegroup>
+        </legendlayer>
+      </legendgroup>
+      <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="GEF5_Baviaans_Data" showFeatureCount="0">
+        <filegroup open="false" hidden="false">
+          <legendlayerfile isInOverview="0" layerid="GEF5_Baviaans_Data20170811134206913" visible="1"/>
+        </filegroup>
+      </legendlayer>
       <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="abf_agc_191_plots" showFeatureCount="0">
         <filegroup open="false" hidden="false">
           <legendlayerfile isInOverview="0" layerid="abf_agc_191_plots20170727203413936" visible="1"/>
@@ -2041,16 +2081,6 @@
           <legendlayerfile isInOverview="0" layerid="GefBaviaansData20170830201254446" visible="0"/>
         </filegroup>
       </legendlayer>
-      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="ThnuganuDegradedTrialPointsV2" showFeatureCount="0">
-        <filegroup open="true" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="ThnuganuDegradedTrialPointsV220170831101259382" visible="1"/>
-        </filegroup>
-      </legendlayer>
-      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="ThnuganuDegradedTrialPoints" showFeatureCount="0">
-        <filegroup open="true" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="ThnuganuDegradedTrialPoints20170830214016751" visible="1"/>
-        </filegroup>
-      </legendlayer>
       <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="TchuganuDegradedTrialArea" showFeatureCount="0">
         <filegroup open="true" hidden="false">
           <legendlayerfile isInOverview="0" layerid="TchuganuDegradedTrialArea20170830213513700" visible="0"/>
@@ -2061,19 +2091,9 @@
           <legendlayerfile isInOverview="0" layerid="TchuganuPlantableAreasScratch20170831100912292" visible="0"/>
         </filegroup>
       </legendlayer>
-      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="GEF5_Baviaans_Data" showFeatureCount="0">
-        <filegroup open="true" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="GEF5_Baviaans_Data20170811134206913" visible="1"/>
-        </filegroup>
-      </legendlayer>
       <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="BMR_ROI" showFeatureCount="0">
         <filegroup open="true" hidden="false">
           <legendlayerfile isInOverview="0" layerid="BMR_ROI20170304123226877" visible="0"/>
-        </filegroup>
-      </legendlayer>
-      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="ThnuganuDegradedTrialPoints" showFeatureCount="0">
-        <filegroup open="true" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="ThnuganuDegradedTrialPoints20170830192632001" visible="1"/>
         </filegroup>
       </legendlayer>
       <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Tchuganu" showFeatureCount="0">
@@ -2086,39 +2106,9 @@
           <legendlayerfile isInOverview="0" layerid="memory_20170830191359256" visible="0"/>
         </filegroup>
       </legendlayer>
-      <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="ThnuganuDegradedPlantableSubAreaForSept2017Trial" showFeatureCount="0">
-        <filegroup open="true" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="ThnuganuDegradedPlantableSubAreaForSept2017Trial20170830185624813" visible="0"/>
-        </filegroup>
-      </legendlayer>
-      <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="SewefonteinIntactTrialPoints" showFeatureCount="0">
-        <filegroup open="true" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="SewefonteinIntactTrialPoints20170830195901194" visible="0"/>
-        </filegroup>
-      </legendlayer>
       <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Intersection" showFeatureCount="0">
         <filegroup open="true" hidden="false">
           <legendlayerfile isInOverview="0" layerid="Intersection20170830185339278" visible="0"/>
-        </filegroup>
-      </legendlayer>
-      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="SewefonteinIntactTrialPointsV2" showFeatureCount="0">
-        <filegroup open="true" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="SewefonteinIntactTrialPointsV220170831113851977" visible="1"/>
-        </filegroup>
-      </legendlayer>
-      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Random points" showFeatureCount="0">
-        <filegroup open="true" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="memory_20170831113053013" visible="1"/>
-        </filegroup>
-      </legendlayer>
-      <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="SewefonteinIntactAreaForTrialV2" showFeatureCount="0">
-        <filegroup open="true" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="SewefonteinIntactAreaForTrialV220170831112336083" visible="0"/>
-        </filegroup>
-      </legendlayer>
-      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="SewefonteinPristineAreaForTrial Near Road" showFeatureCount="0">
-        <filegroup open="true" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="SewefonteinPristineAreaForTrial20170830194225590" visible="1"/>
         </filegroup>
       </legendlayer>
       <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="SubThnuganu" showFeatureCount="0">
@@ -2214,7 +2204,7 @@
         <legendlayerfile isInOverview="0" layerid="R1C12_GdalPanSharp20170727195709263" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendgroup open="true" checked="Qt::Unchecked" name="SUDEM">
+    <legendgroup open="false" checked="Qt::Unchecked" name="SUDEM">
       <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="s34_e024_1arc_v3" showFeatureCount="0">
         <filegroup open="true" hidden="false">
           <legendlayerfile isInOverview="0" layerid="s34_e024_1arc_v320170822170556971" visible="0"/>
@@ -2226,7 +2216,7 @@
         </filegroup>
       </legendlayer>
     </legendgroup>
-    <legendgroup open="true" checked="Qt::Unchecked" name="QB 056844553010_01 Basic 1B">
+    <legendgroup open="false" checked="Qt::Unchecked" name="QB 056844553010_01 Basic 1B">
       <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="TOACorrected_056844553010_01_P001_OrthoPanSharpen_05644015" showFeatureCount="0">
         <filegroup open="true" hidden="false">
           <legendlayerfile isInOverview="0" layerid="TOACorrected_056844553010_01_P001_OrthoPanSharpen_0564401520170809141333684" visible="0"/>
@@ -3270,7 +3260,7 @@
         </legendlayer>
       </legendgroup>
     </legendgroup>
-    <legendgroup open="true" checked="Qt::Unchecked" name="NGI 2009">
+    <legendgroup open="false" checked="Qt::Unchecked" name="NGI 2009">
       <legendgroup open="false" checked="Qt::Unchecked" name="3323DB">
         <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3323DB_24_2009_221_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
@@ -3780,7 +3770,7 @@
         </legendlayer>
       </legendgroup>
     </legendgroup>
-    <legendgroup open="true" checked="Qt::Unchecked" name="Basemaps">
+    <legendgroup open="false" checked="Qt::Unchecked" name="Basemaps">
       <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="NGI" showFeatureCount="0">
         <filegroup open="true" hidden="false">
           <legendlayerfile isInOverview="0" layerid="NGI20170616160824777" visible="0"/>
@@ -26747,6 +26737,12 @@ def my_form_open(dialog, layer, feature):
       <previewExpression>'[Please define preview text]'</previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <extent>
+        <xmin>23.93961329695720153</xmin>
+        <ymin>-33.55588204209840342</ymin>
+        <xmax>23.9478103065270993</xmax>
+        <ymax>-33.55381242127599961</ymax>
+      </extent>
       <id>SewefonteinIntactTrialPoints20170830195901194</id>
       <datasource>D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/BMR ShapeFiles/SewefonteinIntactTrialPoints.kml|layername=SewefonteinIntactTrialPoints</datasource>
       <keywordList>
@@ -26915,6 +26911,12 @@ def my_form_open(dialog, layer, feature):
       <previewExpression></previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <extent>
+        <xmin>23.93805270806440078</xmin>
+        <ymin>-33.56255097815609645</ymin>
+        <xmax>23.94760339125119941</xmax>
+        <ymax>-33.55466378033170116</ymax>
+      </extent>
       <id>SewefonteinIntactTrialPointsV220170831113851977</id>
       <datasource>D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/BMR ShapeFiles/SewefonteinIntactTrialPointsV2.kml|layername=SewefonteinIntactTrialPointsV2</datasource>
       <keywordList>
@@ -29225,174 +29227,12 @@ def my_form_open(dialog, layer, feature):
       <previewExpression>COALESCE( "Name", '&lt;NULL>' )</previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
-      <id>ThnuganuDegradedTrialPoints20170830192632001</id>
-      <datasource>D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/BMR ShapeFiles/ThnuganuDegradedTrialPoints.kml|layername=ThnuganuDegradedTrialPoints</datasource>
-      <keywordList>
-        <value></value>
-      </keywordList>
-      <layername>ThnuganuDegradedTrialPoints</layername>
-      <srs>
-        <spatialrefsys>
-          <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
-          <srsid>3452</srsid>
-          <srid>4326</srid>
-          <authid>EPSG:4326</authid>
-          <description>WGS 84</description>
-          <projectionacronym>longlat</projectionacronym>
-          <ellipsoidacronym>WGS84</ellipsoidacronym>
-          <geographicflag>true</geographicflag>
-        </spatialrefsys>
-      </srs>
-      <provider encoding="UTF-8">ogr</provider>
-      <vectorjoins/>
-      <layerDependencies/>
-      <expressionfields/>
-      <map-layer-style-manager current="">
-        <map-layer-style name=""/>
-      </map-layer-style-manager>
-      <edittypes>
-        <edittype widgetv2type="TextEdit" name="Name">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="description">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="timestamp">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="begin">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="end">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="altitudeMode">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="tessellate">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="extrude">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="visibility">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="drawOrder">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="icon">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="id">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-      </edittypes>
-      <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol" enableorderby="0">
-        <symbols>
-          <symbol alpha="1" clip_to_extent="1" type="marker" name="0">
-            <layer pass="0" class="SimpleMarker" locked="0">
-              <prop k="angle" v="0"/>
-              <prop k="color" v="103,139,131,255"/>
-              <prop k="horizontal_anchor_point" v="1"/>
-              <prop k="joinstyle" v="bevel"/>
-              <prop k="name" v="circle"/>
-              <prop k="offset" v="0,0"/>
-              <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="offset_unit" v="MM"/>
-              <prop k="outline_color" v="0,0,0,255"/>
-              <prop k="outline_style" v="solid"/>
-              <prop k="outline_width" v="0"/>
-              <prop k="outline_width_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="outline_width_unit" v="MM"/>
-              <prop k="scale_method" v="diameter"/>
-              <prop k="size" v="2"/>
-              <prop k="size_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="size_unit" v="MM"/>
-              <prop k="vertical_anchor_point" v="1"/>
-            </layer>
-          </symbol>
-        </symbols>
-        <rotation/>
-        <sizescale scalemethod="diameter"/>
-      </renderer-v2>
-      <labeling type="simple"/>
-      <customproperties/>
-      <blendMode>0</blendMode>
-      <featureBlendMode>0</featureBlendMode>
-      <layerTransparency>0</layerTransparency>
-      <displayfield>Name</displayfield>
-      <label>0</label>
-      <labelattributes>
-        <label fieldname="" text="Label"/>
-        <family fieldname="" name="MS Shell Dlg 2"/>
-        <size fieldname="" units="pt" value="12"/>
-        <bold fieldname="" on="0"/>
-        <italic fieldname="" on="0"/>
-        <underline fieldname="" on="0"/>
-        <strikeout fieldname="" on="0"/>
-        <color fieldname="" red="0" blue="0" green="0"/>
-        <x fieldname=""/>
-        <y fieldname=""/>
-        <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
-        <angle fieldname="" value="0" auto="0"/>
-        <alignment fieldname="" value="center"/>
-        <buffercolor fieldname="" red="255" blue="255" green="255"/>
-        <buffersize fieldname="" units="pt" value="1"/>
-        <bufferenabled fieldname="" on=""/>
-        <multilineenabled fieldname="" on=""/>
-        <selectedonly on=""/>
-      </labelattributes>
-      <annotationform>.</annotationform>
-      <aliases>
-        <alias field="Name" index="0" name=""/>
-        <alias field="description" index="1" name=""/>
-        <alias field="timestamp" index="2" name=""/>
-        <alias field="begin" index="3" name=""/>
-        <alias field="end" index="4" name=""/>
-        <alias field="altitudeMode" index="5" name=""/>
-        <alias field="tessellate" index="6" name=""/>
-        <alias field="extrude" index="7" name=""/>
-        <alias field="visibility" index="8" name=""/>
-        <alias field="drawOrder" index="9" name=""/>
-        <alias field="icon" index="10" name=""/>
-        <alias field="id" index="11" name=""/>
-      </aliases>
-      <excludeAttributesWMS/>
-      <excludeAttributesWFS/>
-      <attributeactions default="-1"/>
-      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
-        <columns/>
-      </attributetableconfig>
-      <editform>.</editform>
-      <editforminit/>
-      <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath>.</editforminitfilepath>
-      <editforminitcode><![CDATA[]]></editforminitcode>
-      <featformsuppress>0</featformsuppress>
-      <editorlayout>generatedlayout</editorlayout>
-      <widgets/>
-      <conditionalstyles>
-        <rowstyles/>
-        <fieldstyles/>
-      </conditionalstyles>
-      <defaults>
-        <default field="Name" expression=""/>
-        <default field="description" expression=""/>
-        <default field="timestamp" expression=""/>
-        <default field="begin" expression=""/>
-        <default field="end" expression=""/>
-        <default field="altitudeMode" expression=""/>
-        <default field="tessellate" expression=""/>
-        <default field="extrude" expression=""/>
-        <default field="visibility" expression=""/>
-        <default field="drawOrder" expression=""/>
-        <default field="icon" expression=""/>
-        <default field="id" expression=""/>
-      </defaults>
-      <previewExpression></previewExpression>
-    </maplayer>
-    <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <extent>
+        <xmin>23.98707414861840093</xmin>
+        <ymin>-33.57297649102380177</ymin>
+        <xmax>23.99496690152820122</xmax>
+        <ymax>-33.56459524130350047</ymax>
+      </extent>
       <id>ThnuganuDegradedTrialPoints20170830214016751</id>
       <datasource>D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/BMR ShapeFiles/ThnuganuDegradedTrialPoints.kml|layername=ThnuganuDegradedTrialPoints</datasource>
       <keywordList>
@@ -29561,6 +29401,12 @@ def my_form_open(dialog, layer, feature):
       <previewExpression></previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <extent>
+        <xmin>23.98124153873609998</xmin>
+        <ymin>-33.5695082258607016</ymin>
+        <xmax>23.9983075426664989</xmax>
+        <ymax>-33.56052112446960223</ymax>
+      </extent>
       <id>ThnuganuDegradedTrialPointsV220170831101259382</id>
       <datasource>D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/BMR ShapeFiles/ThnuganuDegradedTrialPointsV2.kml|layername=ThnuganuDegradedTrialPointsV2</datasource>
       <keywordList>
@@ -34237,125 +34083,6 @@ def my_form_open(dialog, layer, feature):
       </defaults>
       <previewExpression>COALESCE( "Name", '&lt;NULL>' )</previewExpression>
     </maplayer>
-    <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
-      <extent>
-        <xmin>23.93805270806444696</xmin>
-        <ymin>-33.56255097815608224</ymin>
-        <xmax>23.94760339125116388</xmax>
-        <ymax>-33.55466378033167274</ymax>
-      </extent>
-      <id>memory_20170831113053013</id>
-      <datasource>memory?geometry=Point&amp;crs=EPSG:4326&amp;field=id:integer(-1,0)</datasource>
-      <keywordList>
-        <value></value>
-      </keywordList>
-      <layername>Random points</layername>
-      <srs>
-        <spatialrefsys>
-          <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
-          <srsid>3452</srsid>
-          <srid>4326</srid>
-          <authid>EPSG:4326</authid>
-          <description>WGS 84</description>
-          <projectionacronym>longlat</projectionacronym>
-          <ellipsoidacronym>WGS84</ellipsoidacronym>
-          <geographicflag>true</geographicflag>
-        </spatialrefsys>
-      </srs>
-      <provider encoding="UTF-8">memory</provider>
-      <vectorjoins/>
-      <layerDependencies/>
-      <expressionfields/>
-      <map-layer-style-manager current="">
-        <map-layer-style name=""/>
-      </map-layer-style-manager>
-      <edittypes>
-        <edittype widgetv2type="TextEdit" name="id">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-      </edittypes>
-      <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol" enableorderby="0">
-        <symbols>
-          <symbol alpha="1" clip_to_extent="1" type="marker" name="0">
-            <layer pass="0" class="SimpleMarker" locked="0">
-              <prop k="angle" v="0"/>
-              <prop k="color" v="240,135,78,255"/>
-              <prop k="horizontal_anchor_point" v="1"/>
-              <prop k="joinstyle" v="bevel"/>
-              <prop k="name" v="circle"/>
-              <prop k="offset" v="0,0"/>
-              <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="offset_unit" v="MM"/>
-              <prop k="outline_color" v="0,0,0,255"/>
-              <prop k="outline_style" v="solid"/>
-              <prop k="outline_width" v="0"/>
-              <prop k="outline_width_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="outline_width_unit" v="MM"/>
-              <prop k="scale_method" v="diameter"/>
-              <prop k="size" v="2"/>
-              <prop k="size_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="size_unit" v="MM"/>
-              <prop k="vertical_anchor_point" v="1"/>
-            </layer>
-          </symbol>
-        </symbols>
-        <rotation/>
-        <sizescale scalemethod="diameter"/>
-      </renderer-v2>
-      <labeling type="simple"/>
-      <customproperties/>
-      <blendMode>0</blendMode>
-      <featureBlendMode>0</featureBlendMode>
-      <layerTransparency>0</layerTransparency>
-      <displayfield>id</displayfield>
-      <label>0</label>
-      <labelattributes>
-        <label fieldname="" text="Label"/>
-        <family fieldname="" name="MS Shell Dlg 2"/>
-        <size fieldname="" units="pt" value="12"/>
-        <bold fieldname="" on="0"/>
-        <italic fieldname="" on="0"/>
-        <underline fieldname="" on="0"/>
-        <strikeout fieldname="" on="0"/>
-        <color fieldname="" red="0" blue="0" green="0"/>
-        <x fieldname=""/>
-        <y fieldname=""/>
-        <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
-        <angle fieldname="" value="0" auto="0"/>
-        <alignment fieldname="" value="center"/>
-        <buffercolor fieldname="" red="255" blue="255" green="255"/>
-        <buffersize fieldname="" units="pt" value="1"/>
-        <bufferenabled fieldname="" on=""/>
-        <multilineenabled fieldname="" on=""/>
-        <selectedonly on=""/>
-      </labelattributes>
-      <annotationform>.</annotationform>
-      <aliases>
-        <alias field="id" index="0" name=""/>
-      </aliases>
-      <excludeAttributesWMS/>
-      <excludeAttributesWFS/>
-      <attributeactions default="-1"/>
-      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
-        <columns/>
-      </attributetableconfig>
-      <editform>.</editform>
-      <editforminit/>
-      <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath>.</editforminitfilepath>
-      <editforminitcode><![CDATA[]]></editforminitcode>
-      <featformsuppress>0</featformsuppress>
-      <editorlayout>generatedlayout</editorlayout>
-      <widgets/>
-      <conditionalstyles>
-        <rowstyles/>
-        <fieldstyles/>
-      </conditionalstyles>
-      <defaults>
-        <default field="id" expression=""/>
-      </defaults>
-      <previewExpression></previewExpression>
-    </maplayer>
     <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
       <extent>
         <xmin>23.99986111111111242</xmin>
@@ -36258,6 +35985,9 @@ def my_form_open(dialog, layer, feature):
         <value>Baviaans_contract_Data20170304123226846</value>
         <value>BaviiaansPeCorrectedGcpMay2017Combined20170720173845991</value>
         <value>GEF5_Baviaans_Data20170811134206913</value>
+        <value>GefBaviaansData20170830201254446</value>
+        <value>Intersection20170830185339278</value>
+        <value>Jan_Vlok_Intact_Thicket20170910202654491</value>
         <value>Point_ge20170616222751098</value>
         <value>Point_ge20170616224351190</value>
         <value>Point_ge20170616224852956</value>
@@ -36265,10 +35995,20 @@ def my_form_open(dialog, layer, feature):
         <value>QuickbirdGcp20170720173032402</value>
         <value>Quickbird_056844553010_01_Gcp20170802213252670</value>
         <value>SeweTchu_old_spekboomveld2_Vlok_SeweTchu_old_spekboomveld2_Vlok_kmz_Polygon20170811124255553</value>
+        <value>SewefonteinIntactAreaForTrialV220170831112336083</value>
+        <value>SewefonteinIntactTrialPoints20170830195901194</value>
+        <value>SewefonteinIntactTrialPointsV220170831113851977</value>
+        <value>SewefonteinPristineAreaForTrial20170830194225590</value>
         <value>SewefonteinTchuganuDegrMap20170703140304176</value>
         <value>SewefonteinTchuganuPlantableAreas20170703171932253</value>
         <value>Sheet_50K20170329124416633</value>
+        <value>SubThnuganu20170830185104412</value>
+        <value>TchuganuDegradedTrialArea20170830213513700</value>
+        <value>TchuganuPlantableAreasScratch20170831100912292</value>
         <value>TchuganuPlantedAreas20170703170424992</value>
+        <value>ThnuganuDegradedPlantableSubAreaForSept2017Trial20170830185624813</value>
+        <value>ThnuganuDegradedTrialPoints20170830214016751</value>
+        <value>ThnuganuDegradedTrialPointsV220170831101259382</value>
         <value>ZAF_adm120170804001858449</value>
         <value>abf_agc_191_plots20170727203413936</value>
         <value>abf_agc_191_plots_bound20170304123330439</value>
@@ -36282,25 +36022,12 @@ def my_form_open(dialog, layer, feature):
         <value>memory_20170327130408709</value>
         <value>memory_20170703162610533</value>
         <value>memory_20170703163307360</value>
+        <value>memory_20170830191359256</value>
         <value>sewefontein20170327111125203</value>
         <value>sewefontein_tchuganu_bound_wgs8420170304123226893</value>
         <value>sewefontienborder20170811142052345</value>
         <value>vlokveg2010_Tm2520170304123226893</value>
         <value>vlokveg2010_Tm25_Degr_copy20170304124946370</value>
-        <value>SubThnuganu20170830185104412</value>
-        <value>Intersection20170830185339278</value>
-        <value>ThnuganuDegradedPlantableSubAreaForSept2017Trial20170830185624813</value>
-        <value>memory_20170830191359256</value>
-        <value>ThnuganuDegradedTrialPoints20170830192632001</value>
-        <value>SewefonteinPristineAreaForTrial20170830194225590</value>
-        <value>SewefonteinIntactTrialPoints20170830195901194</value>
-        <value>GefBaviaansData20170830201254446</value>
-        <value>TchuganuDegradedTrialArea20170830213513700</value>
-        <value>ThnuganuDegradedTrialPoints20170830214016751</value>
-        <value>TchuganuPlantableAreasScratch20170831100912292</value>
-        <value>ThnuganuDegradedTrialPointsV220170831101259382</value>
-        <value>SewefonteinIntactAreaForTrialV220170831112336083</value>
-        <value>memory_20170831113053013</value>
       </LayerSnappingList>
       <LayerSnappingEnabledList type="QStringList">
         <value>disabled</value>
