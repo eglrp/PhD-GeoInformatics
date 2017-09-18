@@ -368,7 +368,7 @@ xlabel('Data')
 ylabel('Stability')
 
 figure;
-bar(knnAcc(methodIdx(knnAccIdx), :))
+bar(100*knnAcc(methodIdx(knnAccIdx), :))
 h = legend(cdataNamesAbbr, 'Location', 'NorthEastOutside');
 v = get(h, 'title');
 set(v, 'string','Data Sets');
@@ -378,7 +378,7 @@ ax.XTick = 1:length(methodIdx);
 ax.XTickLabel = methodNamesAbbr(methodIdx(knnAccIdx));
 ax.XTickLabelRotation = 45;
 xlabel('Method', 'FontWeight', 'Bold')
-ylabel('Accuracy', 'FontWeight', 'Bold')
+ylabel('Accuracy (%)', 'FontWeight', 'Bold')
 %title('Consistency by Method')
 fontsize(9)
 print('C:\Data\Development\Projects\PhD GeoInformatics\Docs\My Docs\Thesis\Feature Clustering and Ranking\Figure 3 - Method accuracy per data set.eps', ...
