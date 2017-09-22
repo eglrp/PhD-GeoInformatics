@@ -2095,7 +2095,7 @@
   <projectlayers layercount="8">
     <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="1" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <id>ReducedStudyArea20151023165414889</id>
-      <datasource>D:/Data/Development/Projects/MSc GeoInformatics/Data/Misc/ReducedStudyArea.shp</datasource>
+      <datasource>D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/ReducedStudyArea.shp</datasource>
       <title></title>
       <abstract></abstract>
       <keywordList>
@@ -2198,7 +2198,7 @@
     </maplayer>
     <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="1" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <id>ZAF_adm120151023165527784</id>
-      <datasource>D:/Data/Development/Projects/MSc GeoInformatics/Data/Misc/SA ShapeFiles/ZAF_adm1.shp</datasource>
+      <datasource>D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/SA ShapeFiles/ZAF_adm1.shp</datasource>
       <title></title>
       <abstract></abstract>
       <keywordList>
@@ -2545,7 +2545,7 @@
     </maplayer>
     <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="1" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Line" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <id>ZAF_water_lines_dcw20151023165446823</id>
-      <datasource>D:/Data/Development/Projects/MSc GeoInformatics/Data/Misc/SA ShapeFiles/ZAF_water_lines_dcw.shp</datasource>
+      <datasource>D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/SA ShapeFiles/ZAF_water_lines_dcw.shp</datasource>
       <title></title>
       <abstract></abstract>
       <keywordList>
@@ -2679,7 +2679,7 @@
     </maplayer>
     <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="1" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <id>natural20151023165447093</id>
-      <datasource>D:/Data/Development/Projects/MSc GeoInformatics/Data/Misc/SA ShapeFiles/natural.shp</datasource>
+      <datasource>D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/SA ShapeFiles/natural.shp</datasource>
       <title></title>
       <abstract></abstract>
       <keywordList>
@@ -2791,7 +2791,7 @@
     </maplayer>
     <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="0" minLabelScale="1" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <id>places20151023165447443</id>
-      <datasource>D:/Data/Development/Projects/MSc GeoInformatics/Data/Misc/SA ShapeFiles/places.shp|layerid=0|subset="name" = "calitzdorp" OR "name" = "oudtshoorn" OR "name" = "ladismith" OR "name" = "uniondale" OR "name" = "prince albert" OR "name" = "heidelburg" OR "name" = "swellendam" OR "name" = "george" </datasource>
+      <datasource>D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/SA ShapeFiles/places.shp|layerid=0|subset="name" = "calitzdorp" OR "name" = "oudtshoorn" OR "name" = "ladismith" OR "name" = "uniondale" OR "name" = "prince albert" OR "name" = "heidelburg" OR "name" = "swellendam" OR "name" = "george" </datasource>
       <title></title>
       <abstract></abstract>
       <keywordList>
@@ -3069,7 +3069,7 @@
     </maplayer>
     <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="1" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <id>points20151023165447859</id>
-      <datasource>D:/Data/Development/Projects/MSc GeoInformatics/Data/Misc/SA ShapeFiles/points.shp</datasource>
+      <datasource>D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/SA ShapeFiles/points.shp</datasource>
       <title></title>
       <abstract></abstract>
       <keywordList>
@@ -3193,7 +3193,7 @@
     </maplayer>
     <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
       <id>t1_2010036_0819_utm35j_2_SouthAfrica_143_231m_paa20151024213909102</id>
-      <datasource>D:/Data/Development/Projects/MSc GeoInformatics/Data/MODIS/t1.2010036.0819.utm35j-2.SouthAfrica.143.231m.paa.tif</datasource>
+      <datasource>D:/Data/Development/Projects/PhD GeoInformatics/Data/MODIS/t1.2010036.0819.utm35j-2.SouthAfrica.143.231m.paa.tif</datasource>
       <title></title>
       <abstract></abstract>
       <keywordList>
@@ -3236,7 +3236,7 @@
     </maplayer>
     <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="1" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Line" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <id>waterways20151023171555947</id>
-      <datasource>D:/Data/Development/Projects/MSc GeoInformatics/Data/Misc/SA ShapeFiles/waterways.shp|layerid=0|subset="name" = 'Dwyka River' OR "name" = 'Gourits River' OR "name" = 'Gamka River' OR "name" = 'Grootrivier' OR "name" = 'Olifantsrivier'</datasource>
+      <datasource>D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/SA ShapeFiles/waterways.shp|layerid=0|subset="name" = 'Dwyka River' OR "name" = 'Gourits River' OR "name" = 'Gamka River' OR "name" = 'Grootrivier' OR "name" = 'Olifantsrivier'</datasource>
       <title></title>
       <abstract></abstract>
       <keywordList>

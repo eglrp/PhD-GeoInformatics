@@ -1,8 +1,8 @@
 function [dataIm, labels] = ExtractFeaturesIm2(subIm, varargin)
     %% 
-    wPcaSpekboom = 'F:\MSc GeoInformatics\Data\NGI\My Rectified\Ground Truth Images\PcaSpekBoom.mat';
-    wPcaAll = 'F:\MSc GeoInformatics\Data\NGI\My Rectified\Ground Truth Images\PcaAll.mat';
-    wPcaRgG = 'F:\MSc GeoInformatics\Data\NGI\My Rectified\Ground Truth Images\PcaRgG.mat';
+    wPcaSpekboom = 'D:\Data\Development\Projects\PhD GeoInformatics\Data\NGI\My Rectified\Ground Truth Images\PcaSpekBoom.mat';
+    wPcaAll = 'D:\Data\Development\Projects\PhD GeoInformatics\Data\NGI\My Rectified\Ground Truth Images\PcaAll.mat';
+    wPcaRgG = 'D:\Data\Development\Projects\PhD GeoInformatics\Data\NGI\My Rectified\Ground Truth Images\PcaRgG.mat';
     lbpFiltSize = 4;
     lbpFiltRadius = 1;
     
@@ -119,9 +119,9 @@ function [dataIm labels] = SlidingWinFeatures(subIm, varargin)
 %TO DO: we need to scale the features better to get them 0-1 for
 %entropyfilt, also we need to offset them!!!
 
-    wPcaSpekboom = 'F:\MSc GeoInformatics\Data\NGI\My Rectified\Ground Truth Images\PcaSpekBoom.mat';
-    wPcaAll = 'F:\MSc GeoInformatics\Data\NGI\My Rectified\Ground Truth Images\PcaAll.mat';
-    wPcaRgG = 'F:\MSc GeoInformatics\Data\NGI\My Rectified\Ground Truth Images\PcaRgG.mat';
+    wPcaSpekboom = 'D:\Data\Development\Projects\PhD GeoInformatics\Data\NGI\My Rectified\Ground Truth Images\PcaSpekBoom.mat';
+    wPcaAll = 'D:\Data\Development\Projects\PhD GeoInformatics\Data\NGI\My Rectified\Ground Truth Images\PcaAll.mat';
+    wPcaRgG = 'D:\Data\Development\Projects\PhD GeoInformatics\Data\NGI\My Rectified\Ground Truth Images\PcaRgG.mat';
     lbpFiltSize = 4;
     lbpFiltRadius = 1;
     
