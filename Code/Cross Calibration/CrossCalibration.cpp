@@ -44,10 +44,11 @@
 
 using namespace std;
 
-#define XCALIB_DEBUG 0
+#define XCALIB_DEBUG 1
 #define MAX_PATH 1024
-#define SEAMLINE_FIX 1
+#define SEAMLINE_FIX 0
 #define DO_COMPRESS_OUTPUT 1
+#define BIGTIFF 1
 
 int defaultWinSize[2] = {1, 1};
 int gdalwarp(int argc, char ** argv);
@@ -244,7 +245,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	string srcMaskDsFileName = string(CPLGetCurrentDir()) + "\\SourceMaskDs.tif"; //reuse the same file
 #endif
 
-	sprintf_s(gdalString, MAX_PATH, "gdalwarp~-overwrite~-srcnodata~none~-dstnodata~none~-r~average~-tap~-tr~%d~%d~%s~%s~", (int)abs(refGeoTransform[1]), (int)abs(refGeoTransform[5]),
+	sprintf_s(gdalString, MAX_PATH, "gdalwarp~-wo~\"NUM_THREADS=ALL_CPUS\"~-overwrite~-srcnodata~none~-dstnodata~none~-r~average~-tap~-tr~%d~%d~%s~%s~", (int)abs(refGeoTransform[1]), (int)abs(refGeoTransform[5]),
 		srcMaskFileName.c_str(), srcMaskDsFileName.c_str());
 	res = GdalWarpWrapper(gdalString);
 
@@ -261,7 +262,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	string srcDsFileName = string(CPLGetCurrentDir()) + "\\SourceDs.tif"; //reuse the same file
 #endif
 
-	sprintf_s(gdalString, MAX_PATH, "gdalwarp~-overwrite~-srcnodata~\"0\"~-dstnodata~\"0\"~-r~cubicspline~-tap~-tr~%d~%d~%s~%s~", (int)abs(refGeoTransform[1]), (int)abs(refGeoTransform[5]), 
+	sprintf_s(gdalString, MAX_PATH, "gdalwarp~-wo~\"NUM_THREADS=ALL_CPUS\"~-overwrite~-srcnodata~\"0\"~-dstnodata~\"0\"~-r~cubicspline~-tap~-tr~%d~%d~%s~%s~", (int)abs(refGeoTransform[1]), (int)abs(refGeoTransform[5]), 
 		srcFileName.c_str(), srcDsFileName.c_str());
 	res = GdalWarpWrapper(gdalString);
 
@@ -450,8 +451,13 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 #endif
 	cout << "Interpolating calibration gains (" << gainUsFileName << ")" << endl << endl;
 
-	sprintf_s(gdalString, MAX_PATH, "gdalwarp~-multi~-overwrite~-srcnodata~0~-dstnodata~0~-wm~2048~-r~cubicspline~-tr~%f~%f~%s~%s~",
+#if BIGTIFF
+	sprintf_s(gdalString, MAX_PATH, "gdalwarp~-wo~\"NUM_THREADS=ALL_CPUS\"~-co~\"BIGTIFF=YES\"~-multi~-overwrite~-srcnodata~0~-dstnodata~0~-wm~2048~-r~cubicspline~-tr~%f~%f~%s~%s~",
 		fabs(srcGeoTransform[1]), fabs(srcGeoTransform[5]), gainDsFileName.c_str(), gainUsFileName.c_str());
+#else
+	sprintf_s(gdalString, MAX_PATH, "gdalwarp~-wo~\"NUM_THREADS=ALL_CPUS\"~-multi~-overwrite~-srcnodata~0~-dstnodata~0~-wm~2048~-r~cubicspline~-tr~%f~%f~%s~%s~",
+		fabs(srcGeoTransform[1]), fabs(srcGeoTransform[5]), gainDsFileName.c_str(), gainUsFileName.c_str());
+#endif
 
 	res = GdalWarpWrapper(gdalString);
 	if (res != 0)
@@ -477,6 +483,9 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	papszOptions = CSLSetNameValue(papszOptions, "TILED", "YES");
 	papszOptions = CSLSetNameValue(papszOptions, "COMPRESS", "DEFLATE");
 	papszOptions = CSLSetNameValue(papszOptions, "PREDICTOR", "2");
+#if BIGTIFF
+	papszOptions = CSLSetNameValue(papszOptions, "BIGTIFF", "YES");
+#endif
 #endif
 	GDALDataset* calibDataSet = srcDataSet->GetDriver()->Create(calibFileName.c_str(), srcDataSet->GetRasterXSize(), 
 		srcDataSet->GetRasterYSize(), 4, GDALDataType::GDT_UInt16, papszOptions);
@@ -514,9 +523,13 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	string erodeMaskUsFileName = string(CPLGetCurrentDir()) + "\\ErodeMaskUs.tif";
 #endif
 	cout << "Upsampling eroded mask (" << erodeMaskUsFileName << ")" << endl << endl;
-
-	sprintf_s(gdalString, MAX_PATH, "gdalwarp~-multi~-overwrite~-srcnodata~0~-dstnodata~None~-wm~2048~-r~bilinear~-tr~%f~%f~%s~%s~",
+#if BIGTIFF
+	sprintf_s(gdalString, MAX_PATH, "gdalwarp~-wo~\"NUM_THREADS=ALL_CPUS\"~-co~\"BIGTIFF=YES\"~-multi~-overwrite~-srcnodata~0~-dstnodata~None~-wm~2048~-r~bilinear~-tr~%f~%f~%s~%s~",
 		fabs(srcGeoTransform[1]), fabs(srcGeoTransform[5]), erodeMaskDsFileName.c_str(), erodeMaskUsFileName.c_str());
+#else
+	sprintf_s(gdalString, MAX_PATH, "gdalwarp~-wo~\"NUM_THREADS=ALL_CPUS\"~-multi~-overwrite~-srcnodata~0~-dstnodata~None~-wm~2048~-r~bilinear~-tr~%f~%f~%s~%s~",
+		fabs(srcGeoTransform[1]), fabs(srcGeoTransform[5]), erodeMaskDsFileName.c_str(), erodeMaskUsFileName.c_str());
+#endif
 
 	res = GdalWarpWrapper(gdalString);
 	if (res != 0)
