@@ -42,6 +42,13 @@ def ReadDmcRsr(filename):
     rsr = t[:,2:] 
     return (wavelen, rsr)
 
+def ReadQuickbirdRsr(filename):
+    t = np.loadtxt(filename, dtype = float, skiprows = 1) #, delimiter = ",")
+    #Lambda	PAN	NIR	Red	Green	Blue
+    wavelen = t[:,0]
+    rsr = np.fliplr(t[:,2:])
+    return (wavelen, rsr)
+
 def SimSensorMeasurement(sensorRsr, surfRefl):
     sensorMeas = []
     for i in range(0, np.shape(sensorRsr)[1]):
@@ -71,15 +78,17 @@ def ReadSpot5Rsr(fileName):
     return wavelen, rsr
 
 
-dmcFn = "D:/Data/Development/Projects/MSc GeoInformatics/Data/Spectral Sensitivities/DMC Spectral sensitivity.txt" #ordered nir,r,g,b
-modisFn = ["D:/Data/Development/Projects/MSc GeoInformatics/Data/Spectral Sensitivities/rsr.2.inb.final",
-           "D:/Data/Development/Projects/MSc GeoInformatics/Data/Spectral Sensitivities/rsr.1.inb.final",
-           "D:/Data/Development/Projects/MSc GeoInformatics/Data/Spectral Sensitivities/rsr.4.inb.final",
-           "D:/Data/Development/Projects/MSc GeoInformatics/Data/Spectral Sensitivities/rsr.3.inb.final"] #ordered here to be nir,r,g,b
+dmcFn = "C:/Data/Development/Projects/PhD GeoInformatics/Data/Spectral Sensitivities/DMC Spectral sensitivity.txt" #ordered nir,r,g,b/
+qbFn = "C:/Data/Development/Projects/PhD GeoInformatics/Data/Spectral Sensitivities/Quickbird Spectral Sensitivity.txt" #ordered nir,r,g,b
 
-spotFn = "D:/Data/Development/Projects/MSc GeoInformatics/Data/Spectral Sensitivities/SPOT r453_9_spectralsensivity.xlsx"
+modisFn = ["C:/Data/Development/Projects/PhD GeoInformatics/Data/Spectral Sensitivities/rsr.2.inb.final",
+           "C:/Data/Development/Projects/PhD GeoInformatics/Data/Spectral Sensitivities/rsr.1.inb.final",
+           "C:/Data/Development/Projects/PhD GeoInformatics/Data/Spectral Sensitivities/rsr.4.inb.final",
+           "C:/Data/Development/Projects/PhD GeoInformatics/Data/Spectral Sensitivities/rsr.3.inb.final"] #ordered here to be nir,r,g,b
 
-asterDir = "D:/Data/Development/Projects/MSc GeoInformatics/Data/Spectral Sensitivities"
+spotFn = "C:/Data/Development/Projects/PhD GeoInformatics/Data/Spectral Sensitivities/SPOT r453_9_spectralsensivity.xlsx"
+
+asterDir = "C:/Data/Development/Projects/PhD GeoInformatics/Data/Spectral Sensitivities"
 
 # Note on units:
 #
@@ -131,7 +140,7 @@ for afn in os.listdir(asterDir):
 pylab.legend(np.asarray(asterHF), asterFnF)
 
 ## subset of aster spectra for plotting
-asterDir2 = "D:/Data/Development/Projects/MSc GeoInformatics/Data/Spectral Sensitivities/Temp"
+asterDir2 = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Spectral Sensitivities/Temp"
 
 asterWaveLen = []
 asterRefl = []
@@ -156,6 +165,10 @@ pylab.legend(np.asarray(asterH), asterFn)
 (dmcWaveLen,dmcRsr) = ReadDmcRsr(dmcFn)
 pylab.figure('DMC')
 pylab.plot(dmcWaveLen, dmcRsr, '-')
+
+(qbWaveLen,qbRsr) = ReadQuickbirdRsr(qbFn)
+pylab.figure('QB')
+pylab.plot(qbWaveLen, qbRsr, '-')
 
 (spotWaveLen,spotRsr) = ReadSpot5Rsr(spotFn)
 pylab.figure('SPOT 5')
@@ -207,14 +220,25 @@ hAsterF = pylab.plot(dmcWaveLen, np.asarray(asterReflInterpF).transpose())
 #pylab.legend([hDmc, hModis, hAster], ['DMC','MODIS','ASTER'])
 pylab.legend(hAsterF, asterFnF)
 
+
+qbRsrInterp = []
+for i in range(3):
+    rsrInterp = np.interp(dmcWaveLen, qbWaveLen, np.array(qbRsr)[:,i], left=0, right=0)
+    qbRsrInterp.append(rsrInterp)
+
+pylab.figure('QB Interp')
+hQb = pylab.plot(dmcWaveLen, np.asarray(qbRsrInterp).transpose(), 'r-')
+
+
 dmcMeas = []
 modisMeas = []
 spotMeas = []
+qbMeas = []
 for asterR in asterReflInterpF:
     dmcMeas.append(SimSensorMeasurement(dmcRsr, asterR))
     modisMeas.append(SimSensorMeasurement(np.asarray(modisRsrInterp).transpose(), asterR))
     spotMeas.append(SimSensorMeasurement(np.asarray(spotRsrInterp).transpose(), asterR))
-
+    qbMeas.append(SimSensorMeasurement(np.asarray(qbRsrInterp).transpose(), asterR))
 
 # figures for paper of linear rel betw real world meas
 pylab.close('all')
@@ -265,7 +289,7 @@ for i in range(0, np.shape(modisMeas)[1]):
     pyplot.locator_params(axis='x', nbins=8)
     #pylab.text(xi[-1]*1.05, yi[-1]*0.95, '$R^2$ = ' + str.format('{0:.2f}', r**2), color=colors[i])
 
-f1.savefig('C:/Data/Development/Projects/MSc GeoInformatics/Docs/My Docs/Thesis/Retrieval of Surface Reflectance '
+f1.savefig('C:/Data/Development/Projects/PhD GeoInformatics/Docs/My Docs/Thesis/Retrieval of Surface Reflectance '
            'from Aerial Imagery/Figure 4 - DMC vs MODIS Band Averaged Relationship.eps', dpi=1200)
 
 
@@ -296,6 +320,42 @@ for i in range(0, np.shape(spotMeas)[1]):
     # for j in range(asterFnF.__len__()):
     #     pylab.text(x[j]+0.2, y[j], asterFnF[j])
 
+# figures for paper of linear rel betw real world meas
+pylab.close('all')
+fontSize = 24.
+mpl.rcParams.update({'font.size': fontSize})
+
+f1=pylab.figure('MODIS vs QB')
+f1.set_size_inches(12, 9, forward=True)
+colors = ['orange', 'red', 'green', 'blue']
+legend = ['NIR', 'Red', 'Green', 'Blue']
+markers = ['v', 'o', '^', 's']
+hf2=[]
+for i in range(0, np.shape(modisMeas)[1]):
+    x = np.asarray(modisMeas)[:,i]
+    y = np.asarray(qbMeas)[:,i]
+    (slope, intercept, r, p, stde) = scipy.stats.linregress(x, y)
+    pylab.figure('MODIS vs QB')
+    pylab.subplot(221+i)
+    pylab.plot(x, y , 'kx', markersize=12.)
+    pylab.hold('on')
+    xi = np.linspace(x.min(), x.max(), 10)
+    yi = slope*xi + intercept
+    pylab.plot(xi, yi, 'k-')
+    pylab.title(legend[i])
+    pylab.text(xi.mean()*1.0, yi.mean()*0.6, '$R^2$ = ' + str.format('{0:.2f}', np.round(r**2, 2)), fontsize=fontSize+1)
+    # pylab.xlabel(r'MODIS $\rho_t$')
+    # pylab.ylabel(r'DMC $\rho_t$')
+    pylab.xlabel(r'MODIS surface refl.')
+    pylab.ylabel(r'QB surface refl.')
+    pylab.grid('on')
+    # for j in range(asterFnF.__len__()):
+    #     pylab.text(x[j]+.2, y[j], asterFnF[j])
+    pylab.tight_layout()
+    pyplot.locator_params(axis='y', nbins=5)#to specify number of ticks on both or any single axes
+    pyplot.locator_params(axis='x', nbins=4)
+
+
 
 ########################################################################################################################
 # MODIS, DMC RSR for paper
@@ -320,7 +380,7 @@ for i in range(0, 4):
 pylab.xlabel('Wavelength ($\mu m$)')
 pylab.ylabel('Relative spectral response')
 pylab.tight_layout()
-f1.savefig('C:/Data/Development/Projects/MSc GeoInformatics/Docs/My Docs/Thesis/Retrieval of Surface Reflectance '
+f1.savefig('C:/Data/Development/Projects/PhD GeoInformatics/Docs/My Docs/Thesis/Retrieval of Surface Reflectance '
            'from Aerial Imagery/Figure - DMC RSR.eps', dpi=1200)
 
 f1 = pylab.figure('MODIS and DMC Spectral Sensitivities')
@@ -340,7 +400,7 @@ pylab.xlabel('Wavelength ($\mu m$)')
 pylab.ylabel('Relative spectral response')
 pylab.tight_layout()
 
-f1.savefig('C:/Data/Development/Projects/MSc GeoInformatics/Docs/My Docs/Thesis/Retrieval of Surface Reflectance '
+f1.savefig('C:/Data/Development/Projects/PhD GeoInformatics/Docs/My Docs/Thesis/Retrieval of Surface Reflectance '
            'from Aerial Imagery/Figure 2 - MODIS and DMC RSRs.eps', dpi=1200)
 
 
@@ -361,6 +421,27 @@ for i in range(0, 4):
         hSpot.append(pylab.plot(np.array(spotWaveLen)[mask], np.array(spotRsr)[mask, i], color=colors[i], linestyle=':'))
 
 pylab.legend((hModis[0][0], hDmc[0][0], hSpot[0][0]), ('MODIS', 'DMC', 'SPOT5'))
+pylab.xlabel('Wavelength ($\mu m$)')
+pylab.ylabel('Relative spectral response')
+pylab.tight_layout()
+
+pylab.figure('MODIS, DMC and QB Spectral Sensitivities')
+colors = ['k','r','g','b']
+hModis = []
+hDmc = []
+hSpot = []
+for i in range(0, 4):
+#    hModis.append(pylab.plot(modisWaveLen[i], modisRsr[i], color=colors[i], linestyle='-'))
+    hModis.append(pylab.plot(modisWaveLen[i], modisRsr[i], color='k', linestyle='-'))
+    pylab.hold('on')
+    mask = dmcRsr[:, i] > 0.001
+#    hDmc.append(pylab.plot(dmcWaveLen[mask], dmcRsr[mask, i], color=colors[i], linestyle='--'))
+    hDmc.append(pylab.plot(dmcWaveLen[mask], dmcRsr[mask, i], color='k', linestyle='--'))
+    if i<np.shape(qbRsr)[1]:
+        mask = np.array(qbRsr)[:, i] > 0.001
+        hSpot.append(pylab.plot(np.array(qbWaveLen)[mask], np.array(qbRsr)[mask, i], color=colors[i], linestyle=':'))
+
+pylab.legend((hModis[0][0], hDmc[0][0], hSpot[0][0]), ('MODIS', 'DMC', 'QB'))
 pylab.xlabel('Wavelength ($\mu m$)')
 pylab.ylabel('Relative spectral response')
 pylab.tight_layout()
@@ -387,7 +468,7 @@ pylab.xlabel('Wavelength ($\mu m$)')
 pylab.ylabel('Relative spectral response')
 pylab.tight_layout()
 
-f1.savefig('C:/Data/Development/Projects/MSc GeoInformatics/Docs/My Docs/Thesis/Retrieval of Surface Reflectance '
+f1.savefig('C:/Data/Development/Projects/PhD GeoInformatics/Docs/My Docs/Thesis/Retrieval of Surface Reflectance '
            'from Aerial Imagery/Figure 11 - DMC and SPOT5 RSRs.eps', dpi=1200)
 
 # MODIS, DMC RSR and ASTER spectra for paper
