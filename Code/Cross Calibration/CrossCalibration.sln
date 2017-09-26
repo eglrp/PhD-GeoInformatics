@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.13
+VisualStudioVersion = 15.0.26730.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CrossCalibration", "CrossCalibration.vcxproj", "{5181EC35-4E92-42FB-8B74-C38182ED2D9F}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GDalTest", "C:\Users\harrisd\Documents\Visual Studio 2010\Projects\GDalTestOsGeo4w\GDalTest\GDalTest.vcxproj", "{630DBAA6-A8D2-4580-8589-FDD017B311D6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,18 +19,13 @@ Global
 		{5181EC35-4E92-42FB-8B74-C38182ED2D9F}.Debug|x64.Build.0 = Debug|x64
 		{5181EC35-4E92-42FB-8B74-C38182ED2D9F}.Release|Win32.ActiveCfg = Release|Win32
 		{5181EC35-4E92-42FB-8B74-C38182ED2D9F}.Release|Win32.Build.0 = Release|Win32
-		{5181EC35-4E92-42FB-8B74-C38182ED2D9F}.Release|x64.ActiveCfg = Debug|x64
-		{5181EC35-4E92-42FB-8B74-C38182ED2D9F}.Release|x64.Build.0 = Debug|x64
-		{630DBAA6-A8D2-4580-8589-FDD017B311D6}.Debug|Win32.ActiveCfg = Debug|Win32
-		{630DBAA6-A8D2-4580-8589-FDD017B311D6}.Debug|Win32.Build.0 = Debug|Win32
-		{630DBAA6-A8D2-4580-8589-FDD017B311D6}.Debug|x64.ActiveCfg = Debug|x64
-		{630DBAA6-A8D2-4580-8589-FDD017B311D6}.Debug|x64.Build.0 = Debug|x64
-		{630DBAA6-A8D2-4580-8589-FDD017B311D6}.Release|Win32.ActiveCfg = Release|Win32
-		{630DBAA6-A8D2-4580-8589-FDD017B311D6}.Release|Win32.Build.0 = Release|Win32
-		{630DBAA6-A8D2-4580-8589-FDD017B311D6}.Release|x64.ActiveCfg = Release|x64
-		{630DBAA6-A8D2-4580-8589-FDD017B311D6}.Release|x64.Build.0 = Release|x64
+		{5181EC35-4E92-42FB-8B74-C38182ED2D9F}.Release|x64.ActiveCfg = Release|x64
+		{5181EC35-4E92-42FB-8B74-C38182ED2D9F}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BEC85FB1-8F71-4086-96E3-69182476AAEC}
 	EndGlobalSection
 EndGlobal
