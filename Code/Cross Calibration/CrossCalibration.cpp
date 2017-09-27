@@ -185,7 +185,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 
 	string srcInitFileName = srcFileName.substr(0, srcFileName.length() - 4) + "_INIT.tif";
 	
-	sprintf_s(gdalString, MAX_PATH, "gdalwarp~-multi~-overwrite~-srcnodata~\"0\"~-dstnodata~\"0\"~-wm~1024~-r~bilinear~-tap~-tr~%1.1f~%1.1f~%s~%s~", 2.5, 2.5, 
+	sprintf_s(gdalString, MAX_PATH, "gdalwarp~-multi~-wo~NUM_THREADS=ALL_CPUS~-overwrite~-srcnodata~\"0\"~-dstnodata~\"0\"~-wm~1024~-r~bilinear~-tap~-tr~%1.1f~%1.1f~%s~%s~", 2.5, 2.5, 
 		srcFileName.c_str(), srcInitFileName.c_str());
 	res = GdalWarpWrapper(gdalString);
 
@@ -245,7 +245,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	string srcMaskDsFileName = string(CPLGetCurrentDir()) + "\\SourceMaskDs.tif"; //reuse the same file
 #endif
 
-	sprintf_s(gdalString, MAX_PATH, "gdalwarp~-overwrite~-srcnodata~none~-dstnodata~none~-r~average~-tap~-tr~%d~%d~%s~%s~", (int)abs(refGeoTransform[1]), (int)abs(refGeoTransform[5]),
+	sprintf_s(gdalString, MAX_PATH, "gdalwarp~-multi~-wo~NUM_THREADS=ALL_CPUS~-overwrite~-srcnodata~none~-dstnodata~none~-r~average~-tap~-tr~%d~%d~%s~%s~", (int)abs(refGeoTransform[1]), (int)abs(refGeoTransform[5]),
 		srcMaskFileName.c_str(), srcMaskDsFileName.c_str());
 	res = GdalWarpWrapper(gdalString);
 
@@ -262,7 +262,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	string srcDsFileName = string(CPLGetCurrentDir()) + "\\SourceDs.tif"; //reuse the same file
 #endif
 	//
-	sprintf_s(gdalString, MAX_PATH, "gdalwarp~-co~\"BIGTIFF=YES\"~-overwrite~-srcnodata~\"0\"~-dstnodata~\"0\"~-r~cubicspline~-tap~-tr~%d~%d~%s~%s~", (int)abs(refGeoTransform[1]), (int)abs(refGeoTransform[5]), 
+	sprintf_s(gdalString, MAX_PATH, "gdalwarp~-multi~-overwrite~-srcnodata~\"0\"~-dstnodata~\"0\"~-r~cubicspline~-tap~-tr~%d~%d~%s~%s~", (int)abs(refGeoTransform[1]), (int)abs(refGeoTransform[5]), 
 		srcFileName.c_str(), srcDsFileName.c_str());
 	res = GdalWarpWrapper(gdalString);
 
@@ -452,10 +452,10 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	cout << "Interpolating calibration gains (" << gainUsFileName << ")" << endl << endl;
 
 #if BIGTIFF
-	sprintf_s(gdalString, MAX_PATH, "gdalwarp~-co~\"BIGTIFF=YES\"~-multi~-overwrite~-srcnodata~0~-dstnodata~0~-wm~2048~-r~cubicspline~-tr~%f~%f~%s~%s~",
+	sprintf_s(gdalString, MAX_PATH, "gdalwarp~-multi~-wo~NUM_THREADS=ALL_CPUS~-co~BIGTIFF=YES~-multi~-wo~NUM_THREADS=ALL_CPUS~-overwrite~-srcnodata~0~-dstnodata~0~-wm~2048~-r~cubicspline~-tr~%f~%f~%s~%s~",
 		fabs(srcGeoTransform[1]), fabs(srcGeoTransform[5]), gainDsFileName.c_str(), gainUsFileName.c_str());
 #else
-	sprintf_s(gdalString, MAX_PATH, "gdalwarp~-multi~-overwrite~-srcnodata~0~-dstnodata~0~-wm~2048~-r~cubicspline~-tr~%f~%f~%s~%s~",
+	sprintf_s(gdalString, MAX_PATH, "gdalwarp~-multi~-wo~NUM_THREADS=ALL_CPUS~-overwrite~-srcnodata~0~-dstnodata~0~-wm~2048~-r~cubicspline~-tr~%f~%f~%s~%s~",
 		fabs(srcGeoTransform[1]), fabs(srcGeoTransform[5]), gainDsFileName.c_str(), gainUsFileName.c_str());
 #endif
 
@@ -487,7 +487,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 #if BIGTIFF
 	papszOptions = CSLSetNameValue(papszOptions, "BIGTIFF", "YES");
 #endif
-	GDALDataset* calibDataSet = srcDataSet->GetDriver()->Create(calibFileName.c_str(), srcDataSet->GetRasterXSize(),
+	GDALDataset* calibDataSet = srcDataSet->GetDriver()->Create(calibFileName.c_str(), srcDataSet->GetRasterXSize(), 
 		srcDataSet->GetRasterYSize(), 4, GDALDataType::GDT_UInt16, papszOptions);
 
 	if (calibDataSet == NULL)
@@ -524,10 +524,10 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 #endif
 	cout << "Upsampling eroded mask (" << erodeMaskUsFileName << ")" << endl << endl;
 #if BIGTIFF
-	sprintf_s(gdalString, MAX_PATH, "gdalwarp~-co~\"BIGTIFF=YES\"~-multi~-overwrite~-srcnodata~0~-dstnodata~None~-wm~2048~-r~bilinear~-tr~%f~%f~%s~%s~",
+	sprintf_s(gdalString, MAX_PATH, "gdalwarp~-multi~-wo~NUM_THREADS=ALL_CPUS~-co~BIGTIFF=YES~-multi~-wo~NUM_THREADS=ALL_CPUS~-overwrite~-srcnodata~0~-dstnodata~None~-wm~2048~-r~bilinear~-tr~%f~%f~%s~%s~",
 		fabs(srcGeoTransform[1]), fabs(srcGeoTransform[5]), erodeMaskDsFileName.c_str(), erodeMaskUsFileName.c_str());
 #else
-	sprintf_s(gdalString, MAX_PATH, "gdalwarp~-multi~-overwrite~-srcnodata~0~-dstnodata~None~-wm~2048~-r~bilinear~-tr~%f~%f~%s~%s~",
+	sprintf_s(gdalString, MAX_PATH, "gdalwarp~-multi~-wo~NUM_THREADS=ALL_CPUS~-overwrite~-srcnodata~0~-dstnodata~None~-wm~2048~-r~bilinear~-tr~%f~%f~%s~%s~",
 		fabs(srcGeoTransform[1]), fabs(srcGeoTransform[5]), erodeMaskDsFileName.c_str(), erodeMaskUsFileName.c_str());
 #endif
 
