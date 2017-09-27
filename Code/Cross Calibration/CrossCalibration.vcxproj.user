@@ -9,11 +9,11 @@
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <LocalDebuggerCommandArguments>-o "F:\MSc GeoInformatics\Data\NGI\Temp\MCD43A4.A2010025.h19v12.005.2010043064233.Lo21.RGBN.tif" "F:\MSc GeoInformatics\Data\NGI\Temp\3321b_3172_12_0415_rgbn.tif"</LocalDebuggerCommandArguments>
+    <LocalDebuggerCommandArguments>-w 1 1 -o "D:\Data\Development\Projects\PhD GeoInformatics\Data\MODIS\MCD43A4.A2003313.h20v12.005.2008026015724\MCD43A4.A2003313.h20v12.005.2008026015724.QbBandOrderAndCoords.tif" "C:\Data\Development\Projects\PhD GeoInformatics\Data\Temp\temp.tif"</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <LocalDebuggerCommandArguments>-o "F:\MSc GeoInformatics\Data\NGI\Temp\MCD43A4.A2010025.h19v12.005.2010043064233.Lo21.RGBN.tif" "F:\MSc GeoInformatics\Data\NGI\Temp\3321b_3172_12_0415_rgbn.tif"</LocalDebuggerCommandArguments>
+    <LocalDebuggerCommandArguments>-w 1 1 -o "D:\Data\Development\Projects\PhD GeoInformatics\Data\MODIS\MCD43A4.A2003313.h20v12.005.2008026015724\MCD43A4.A2003313.h20v12.005.2008026015724.QbBandOrderAndCoords.tif" "D:\Data\Development\Projects\PhD GeoInformatics\Data\Digital Globe\056844553010_01\PCI Output\ATCOR1\ATCORCorrected_056844553010_01_P001_OrthoPanSharpen_05644032.tif"</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
 </Project>

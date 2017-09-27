@@ -183,12 +183,13 @@
   <ItemGroup>
     <ClInclude Include="commonutils.h" />
     <ClInclude Include="CrossCalibration.h" />
+    <ClInclude Include="gdal_utils_priv.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="commonutils.cpp" />
     <ClCompile Include="CrossCalibration.cpp" />
-    <ClCompile Include="gdalwarp.cpp" />
+    <ClCompile Include="gdalwarp_bin.cpp" />
     <ClCompile Include="gdal_translate.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

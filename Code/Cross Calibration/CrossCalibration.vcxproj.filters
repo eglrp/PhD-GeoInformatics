@@ -28,6 +28,9 @@
     <ClInclude Include="CrossCalibration.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="gdal_utils_priv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CrossCalibration.cpp">
@@ -36,10 +39,10 @@
     <ClCompile Include="commonutils.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="gdalwarp.cpp">
+    <ClCompile Include="gdal_translate.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="gdal_translate.cpp">
+    <ClCompile Include="gdalwarp_bin.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
