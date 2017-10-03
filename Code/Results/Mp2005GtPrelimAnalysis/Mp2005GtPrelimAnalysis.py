@@ -15,7 +15,6 @@ from collections import OrderedDict
 # cs gt file - NB the locs in this file are rounded to 5 decimal places which is only accurate to something like 2m
 
 # we should combine with gps file which is more accurate
-from Mp2005GtPrelimAnalysis import ndvi_merge
 
 csGtFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/BMR Carbon Stocks/abf_agc_191_plots.shp"
 # the file below contains only the plot locations but to greater accuracy than the above file
@@ -28,8 +27,10 @@ imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056
 # imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/PCI Output/Separate Pan and MS/TOA/PanSharpToaOrtho.tif"
 # imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/PCI Output/Separate Pan and MS/ATCOR1/PansharpAtcorOrtho.tif"
 # imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/PCI Output/056844553010_01_P001_OrthoPanSharpen.tif"
-imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/PCI Output/TOA and Haze/TOACorrected_056844553010_01_P001_OrthoPanSharpen_05644015.tif"
-imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/056844553010_01_P001_MUL/PCI Ortho/03NOV18082012-M1BS-056844553010_01_P001_PCiOrtho.tif"
+# imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/PCI Output/TOA and Haze/TOACorrected_056844553010_01_P001_OrthoPanSharpen_05644015.tif"
+# imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/056844553010_01_P001_MUL/PCI Ortho/03NOV18082012-M1BS-056844553010_01_P001_PCiOrtho.tif"
+# imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/PCI Output/ATCOR1/ATCORCorrected_056844553010_01_P001_OrthoPanSharpen_05644032_XCALIB.tif"
+
 
 def world2Pixel(geoMatrix, x, y):
     """
@@ -621,6 +622,7 @@ for nmi, nmerge in enumerate(nmerge_list):
     (slope, intercept, r, p, stde) = stats.linregress(ndvi_merge, tagc_merge)
     adjr2 = r**2 - (1 - r**2)*(1./(ndvi_merge.__len__() - 2.))
     res = {}
+    res['p'] = p
     res['R2'] = r**2
     res['adjR2'] = adjr2
     res['N'] = tagc_merge.__len__()
@@ -635,16 +637,26 @@ pylab.figure()
 for nmi, res in enumerate(res_dict.values()):
     pylab.subplot(2, 2, nmi+1)
     scatterd(res['NDVI'], res['TAGC'], labels=None, class_labels=res['ClassLab'], thumbnails=None, xlabel='NDVI', ylabel='log10(TAGC)')
-    pylab.title("Merge: %d, N: %d" % (nmi+1, res['N']))
+    pylab.title("Merge: %d, N: %d, p: %f" % (nmi+1, res['N'], res['p']))
 
 
 r2 = np.array([res['adjR2'] for res in res_dict.values()])
+p = np.array([res['p'] for res in res_dict.values()])
 
 pylab.figure()
 pylab.plot(nmerge_list, r2, 'kx-')
 pylab.xticks(nmerge_list)
 pylab.xlabel('Num Plots Combined')
 pylab.ylabel('$R^2$ for log(TAGC) vs NDVI')
+pylab.title('Simulation of Increased Plot Size')
+pylab.grid()
+
+
+pylab.figure()
+pylab.plot(nmerge_list, p, 'kx-')
+pylab.xticks(nmerge_list)
+pylab.xlabel('Num Plots Combined')
+pylab.ylabel('p for log(TAGC) vs NDVI')
 pylab.title('Simulation of Increased Plot Size')
 pylab.grid()
 

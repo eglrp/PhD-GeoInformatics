@@ -1142,6 +1142,7 @@ NNB - DG sent me Level2A "standard" imagery as best I can tell - which is "Proje
 - NB the NGI 2009 and 2015 rectifications look more accurate than mine.  what DEM do they use??
 - The NGI 2009 and 2015 imagery rectification sets look similarly accurate in Bavs.   
 - NB Rerunning the orthorect with SRTM (ref EGM96) and GCP (ref SAGEOID) but with SRTM offset -4.3m (this is the const offset betw GCP and SRTM) does seem to produce a more accurate ortho image.  
+- Then rerunning with SUDEM L3 derived from stereo NGI aerials seems to improve slightly on SRTM and definitely on SUDEM L2.  The SUDEM L3 is more a DTM than a DSM and thererfore should be more appropriate for veg mapping as you are then warping the veg to be something like their orthographic view too.   
 
 Vertical Datum Practicalities
 -----------------------------
@@ -1159,7 +1160,7 @@ Vertical Datum Practicalities
 - NB The SUDEM is in Hartebeeshoek94 - should we not convert it to WGS84 (vertically???)  Yes it is ref to geoid relative to hartebeeshoek94 - we should convert to rel to wgs84. ??
 x - The above does not improve things.  The errors between GCP and DEM we are seeing vary over the study area.  The sa geoid hardly varies at all over this area and it is highly unlikely the wgs or whatever datum will vary either.  i.e. the errors we are seeing are inherent in SUDEM (at least in part).  Fiddling with datums etc is not going to fix that.  
 - NB So... I tried comparing GCP's to SUDEM and SRTM and they are closer to SRTM - SUDEM looks to be warped with height somehow.  The SRTM is relative to geoid EGM96.  The SAGEOID2010 and EGM96 differ by ~0.5m in my study area seemingly quite constantly.  
-
+- SUDEM l3 from NGI stereo aerials is a lot more accurate than SUDEM l2.  Compared to SA GEOID 2010 GCP's, I get RMSE 0.8m
 
 
 
