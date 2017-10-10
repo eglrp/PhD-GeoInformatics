@@ -22,7 +22,7 @@ csGtGpsFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/BMR Car
 
 # file containing image locations of GCP locs in UTM 35S
 # imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056549293010_01/Ortho/R1C12-GdalPanSharp-ArcGcpWarp.tif"
-# imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/PCI Output/ATCOR1/ATCORCorrected_056844553010_01_P001_OrthoPanSharpen_05644032.tif"
+#  imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/PCI Output/ATCOR1/ATCORCorrected_056844553010_01_P001_OrthoPanSharpen_05644032.tif"
 imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/PCI Output/TOA and Haze/TOACorrected_056844553010_01_P001_OrthoPanSharpen_05644015.tif"
 # imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/PCI Output/Separate Pan and MS/TOA/PanSharpToaOrtho.tif"
 # imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/PCI Output/Separate Pan and MS/ATCOR1/PansharpAtcorOrtho.tif"
@@ -30,7 +30,10 @@ imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056
 # imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/PCI Output/TOA and Haze/TOACorrected_056844553010_01_P001_OrthoPanSharpen_05644015.tif"
 # imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/056844553010_01_P001_MUL/PCI Ortho/03NOV18082012-M1BS-056844553010_01_P001_PCiOrtho.tif"
 # imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/PCI Output/ATCOR1/ATCORCorrected_056844553010_01_P001_OrthoPanSharpen_05644032_XCALIB.tif"
-
+# imFile = "G:/Sungis08/056844553010_01/PCI Output/TOA and Haze Sudem L3/TOACorrected_03NOV18082012-056844553010_01_P001_PciOrtho_SudemL3_PanSharpen.tif"
+# imFile = "G:/Sungis08/056844553010_01/PCI Output/ATCOR Sudem L3 v3 w SRTM/ATCORCorrected_03NOV18082012-056844553010_01_P001_PciOrtho_SudemL3_PanSharpen.tif"
+# imFile = "G:/Sungis08/056844553010_01/PCI Output/TOA and Haze Sudem L3/TOACorrected_03NOV18082012-M1BS-056844553010_01_P001_PCiOrtho_SudemL3_39400001.tif"
+imFile = "G:/Sungis08/056844553010_01/PCI Output/056844553010_01_P001_OrthoSudemL3_PanSharpen.tif"
 
 def world2Pixel(geoMatrix, x, y):
     """
@@ -309,7 +312,10 @@ for k in cs_gt_dict.keys():
 np.array(csGtGpsDict.keys())[np.logical_not(gpsInd[0])]
 
 # Read in the image
-
+# image origin is TL corner, i.e. NW corner
+# xindex +ve goes east, y index +ve goes south
+# if the cs gt locs are SW cnr, they should be offset by [0, -winsize[1]]
+# if the cs gt locs are NE cnr, they should be offset by [-winsize[0], -winsize[1]]
 
 ds = gdal.OpenEx(imFile, gdal.OF_RASTER)
 if ds is None:
@@ -338,19 +344,30 @@ if False:  # for MS image and excl OL
     plot_dict = plot_dict2
 
 # win_sizes for ms data
-plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict,
-                                     win_sizes=[np.array((3, 3)), np.array((11, 11))])
+# plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict,
+#                                      win_sizes=[np.array((3, 3)), np.array((11, 11))])
+#
+# # plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict)
+# plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict,
+#                                      win_sizes=[np.array((32, 32)), np.array((32, 32))])
+# # these are "best" options from window pos/size experiments below
+# plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array([18,18]), np.array([32,32])])
+# plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array([22,22]), np.array([50,50])],
+#                                  win_offsets=[np.array([0, 0]), np.array([0, 0])])
+# plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array([18,18]), np.array([50,50])],
+#                                  win_offsets=[np.array([0, -18]), np.array([0, 0])])
 
-# plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict)
-plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict,
-                                     win_sizes=[np.array((32, 32)), np.array((32, 32))])
-# these are "best" options from window pos/size experiments below
-plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array([18,18]), np.array([32,32])])
-plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array([22,22]), np.array([50,50])],
-                                 win_offsets=[np.array([0, 0]), np.array([0, 0])])
-plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array([18,18]), np.array([50,50])],
-                                 win_offsets=[np.array([0, -18]), np.array([0, 0])])
+# for multispec pixels
+# plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array([3, 3]), np.array([11, 11])],
+#                                  win_offsets=[np.array([0, -3]), np.array([0, -11])])
 
+# for pansharp pixels
+#this seems to give best scores per stratum
+# plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array([8, 8]), np.array([42, 42])],
+#                                  win_offsets=[np.array([-8, 8]), np.array([-42, 42])])
+
+plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array([10, 10]), np.array([50, 50])],
+                                 win_offsets=[np.array([0, -10]), np.array([0, -50])])
 
 # ndvi = np.array([plot['NDVI'] for plot in plot_dict.values()])
 # gn = np.array([plot['g_n'] for plot in plot_dict.values()])
@@ -407,12 +424,12 @@ for yi, yf in enumerate(['TAGC']):
 ################################################################
 # check effect of window offset
 # win_sizes = [np.array((18, 18)), np.array((30, 30))]
-#win_sizes = [np.array((8, 8)), np.array((42, 42))]
-win_sizes = [np.array((3, 3)), np.array((11, 11))]
+win_sizes = [np.array((8, 8)), np.array((42, 42))]
+# win_sizes = [np.array((3, 3)), np.array((11, 11))]
 
 win_offsets = [np.array((0, 0)), np.array((0, 0))]
 #xy_offset = np.arange(-64, 68, 8)
-xy_offset = np.arange(-1.5, 2., 0.5)
+xy_offset = np.arange(-2.5, 2.0, 0.5)
 res = np.zeros((xy_offset.__len__(), xy_offset.__len__(), 5))
 for xi, xoff in enumerate(xy_offset):
     for yi, yoff in enumerate(xy_offset):
@@ -466,7 +483,7 @@ for ci in range(0, res.shape[2]):
 pylab.figure()
 for i in range(0, res.shape[2]):
     pylab.subplot(2,3,i+1)
-    pylab.imshow(res[:,:,i], extent=[-1.5, 1.5, 1.5, -1.5])
+    pylab.imshow(res[:,:,i], extent=[-2.5, 1.5, 1.5, -2.5])
     pylab.colorbar()
     pylab.title(res_lab[i])
 
@@ -588,6 +605,10 @@ pylab.grid()
 
 ###################################################################################3
 # coarse simulation of larger but fewer plots by combining multiple plots into 1
+
+plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array([8, 8]), np.array([42, 42])],
+                                 win_offsets=[np.array([0, -8]), np.array([0, -42])])
+
 
 class_lab = np.array([plot['class'] for plot in plot_dict.values()])
 classi = np.array([plot['classi'] for plot in plot_dict.values()])
