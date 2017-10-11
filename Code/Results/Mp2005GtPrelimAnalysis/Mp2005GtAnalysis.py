@@ -14,7 +14,8 @@ from mpl_toolkits.mplot3d import Axes3D
 from collections import OrderedDict
 
 
-# take a rough first look for feature correlations with cs
+# relook at cs gt and image feature correlations using rotated windows
+# compare results from different images
 
 # cs gt file - NB the locs in this file are rounded to 5 decimal places which is only accurate to something like 2m
 
@@ -34,10 +35,10 @@ imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056
 # imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/PCI Output/TOA and Haze/TOACorrected_056844553010_01_P001_OrthoPanSharpen_05644015.tif"
 # imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/056844553010_01_P001_MUL/PCI Ortho/03NOV18082012-M1BS-056844553010_01_P001_PCiOrtho.tif"
 # imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/PCI Output/ATCOR1/ATCORCorrected_056844553010_01_P001_OrthoPanSharpen_05644032_XCALIB.tif"
-# imFile = "G:/Sungis08/056844553010_01/PCI Output/TOA and Haze Sudem L3/TOACorrected_03NOV18082012-056844553010_01_P001_PciOrtho_SudemL3_PanSharpen.tif"
+imFile = "G:/Sungis08/056844553010_01/PCI Output/TOA and Haze Sudem L3/TOACorrected_03NOV18082012-056844553010_01_P001_PciOrtho_SudemL3_PanSharpen.tif"
 # imFile = "G:/Sungis08/056844553010_01/PCI Output/ATCOR Sudem L3 v3 w SRTM/ATCORCorrected_03NOV18082012-056844553010_01_P001_PciOrtho_SudemL3_PanSharpen.tif"
 # imFile = "G:/Sungis08/056844553010_01/PCI Output/TOA and Haze Sudem L3/TOACorrected_03NOV18082012-M1BS-056844553010_01_P001_PCiOrtho_SudemL3_39400001.tif"
-imFile = "G:/Sungis08/056844553010_01/PCI Output/056844553010_01_P001_OrthoSudemL3_PanSharpen.tif"
+# imFile = "G:/Sungis08/056844553010_01/PCI Output/056844553010_01_P001_OrthoSudemL3_PanSharpen.tif"
 
 def world2Pixel(geoMatrix, x, y):
     """
@@ -55,7 +56,7 @@ def world2Pixel(geoMatrix, x, y):
     return (pixel, line)
 
 
-def extract_patch_features(imbuf):
+def extract_patch_features_(imbuf):
     imbuf = np.float64(imbuf)/100.   # values are in percent?
     s = np.sum(imbuf, 2)
     cn = imbuf/np.tile(s[:,:,None], (1, 1, imbuf.shape[2]))
@@ -82,14 +83,60 @@ def extract_patch_features(imbuf):
     return feat
 
 
-def extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array((8, 8)), np.array((42, 42))],
-                     win_offsets=None):
+def extract_patch_features(imbuf, mask):
+    mask = np.bool8(mask)
+    imbuf_mask = np.ndarray(shape=(np.int32(mask.sum()), imbuf.shape[2]), dtype=np.float64)
+    for i in range(0, imbuf.shape[2]):
+        band = imbuf[:, :, i]
+        imbuf_mask[:, i] = np.float64(band[mask])/100.
 
+    s = np.sum(imbuf_mask, 1)
+    cn = imbuf_mask/np.tile(s[:,None], (1, imbuf_mask.shape[1]))
+    b_i = 0
+    g_i = 1
+    r_i = 2
+    ir_i = 3
+    ndvi = (imbuf_mask[:,ir_i] - imbuf_mask[:,r_i])/(imbuf_mask[:,ir_i] + imbuf_mask[:,r_i])
+    ir_rat = imbuf_mask[:,ir_i]/imbuf_mask[:,r_i]
+    L = 0.05
+    savi = (1 + L)*(imbuf_mask[:,ir_i] - imbuf_mask[:,r_i])/(L + imbuf_mask[:,ir_i] + imbuf_mask[:,r_i])
+    feat = {}
+    feat['r_n'] = cn[:,r_i].mean()
+    feat['g_n'] = cn[:,g_i].mean()
+    feat['b_n'] = cn[:,b_i].mean()
+    feat['ir_n'] = cn[:,ir_i].mean()
+    feat['NDVI'] = ndvi.mean()
+    feat['SAVI'] = savi.mean()
+    feat['ir_rat'] = ir_rat.mean()
+    feat['i'] = (s/imbuf_mask.shape[1]).mean()
+    feat['i_std'] = (s/imbuf_mask.shape[1]).std()
+    feat['NDVI_std'] = ndvi.std()
+
+    return feat
+
+def extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array((8, 8)), np.array((42, 42))],
+                     win_offsets=None, win_rotations=None):
+    # from itertools import izip
     if win_offsets is None:   #setup defaults as determined to be optimal from experiments
         win_offsets = [np.array((0, 0)), np.array((0, 0))]
         for wi, win_size in enumerate(win_sizes):
             win_offsets[wi][0] = 0   #win_size[0]/2
             win_offsets[wi][1] = -win_size[1]
+
+    win_masks = [np.ones(win_sizes[0]), np.ones(win_sizes[1])]
+    if win_rotations is not None:
+        print 'rotating'
+        # for win_mask, win_rotation, win_size in izip(win_masks, win_rotations, win_sizes):
+        for i in range(0, 2):
+            win_masks[i] = ndimage.rotate(win_masks[i], win_rotations[i])
+            win_sizes[i] = win_masks[i].shape
+
+    if False:
+        pylab.figure()
+        pylab.subplot(1, 2, 1)
+        pylab.imshow(win_masks[0])
+        pylab.subplot(1, 2, 2)
+        pylab.imshow(win_masks[1])
 
     transform = osr.CoordinateTransformation(cs_gt_spatial_ref, osr.SpatialReference(ds.GetProjection()))
     i = 0
@@ -106,6 +153,7 @@ def extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array(
         if pixel >= 0 and line >=0 and pixel < ds.RasterXSize and line < ds.RasterYSize:
             win_size = win_sizes[0]
             win_offset = win_offsets[0]
+            win_mask = win_masks[0]
             if 'DST' in plot['PLOT']:
                 ci = 1
             elif 'ST' in plot['PLOT']:
@@ -114,6 +162,7 @@ def extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array(
                 ci = 0
                 win_size = win_sizes[1]
                 win_offset = win_offsets[1]
+                win_mask = win_masks[1]
             else:
                 ci = 2
             imbuf = np.zeros((win_size[0], win_size[1], 4), dtype=float)
@@ -138,11 +187,12 @@ def extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array(
                 line_start = np.int(np.round((line + win_offset[1])))
                 imbuf[:, :, b-1] = ds.GetRasterBand(b).ReadAsArray(pixel_start, line_start, win_size[0], win_size[1])
 
+
             if np.all(imbuf==0):
                 print "imbuf zero"
             # for b in range(0, 4):
             #     imbuf[:, :, b] = imbuf[:, :, b] / max_im_vals_[b]
-            feat = extract_patch_features(imbuf)
+            feat = extract_patch_features(imbuf, win_mask)
             feat['classi'] = ci
             feat['class'] = class_labels[ci]
             fields = ['TAGC', 'Z_P_AFRA', 'ALLOMETRY', 'HERB', 'LITTER']
@@ -371,7 +421,7 @@ if False:  # for MS image and excl OL
 #                                  win_offsets=[np.array([-8, 8]), np.array([-42, 42])])
 
 plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array([10, 10]), np.array([50, 50])],
-                                 win_offsets=[np.array([0, -10]), np.array([0, -50])])
+                                 win_offsets=[np.array([0, -10]), np.array([0, -50])], win_rotations=[26., 26.])
 
 # ndvi = np.array([plot['NDVI'] for plot in plot_dict.values()])
 # gn = np.array([plot['g_n'] for plot in plot_dict.values()])
