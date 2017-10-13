@@ -28,17 +28,17 @@ csGtGpsFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/BMR Car
 # file containing image locations of GCP locs in UTM 35S
 # imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056549293010_01/Ortho/R1C12-GdalPanSharp-ArcGcpWarp.tif"
 #  imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/PCI Output/ATCOR1/ATCORCorrected_056844553010_01_P001_OrthoPanSharpen_05644032.tif"
-imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/PCI Output/TOA and Haze/TOACorrected_056844553010_01_P001_OrthoPanSharpen_05644015.tif"
+# imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/PCI Output/TOA and Haze/TOACorrected_056844553010_01_P001_OrthoPanSharpen_05644015.tif"
 # imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/PCI Output/Separate Pan and MS/TOA/PanSharpToaOrtho.tif"
 # imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/PCI Output/Separate Pan and MS/ATCOR1/PansharpAtcorOrtho.tif"
 # imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/PCI Output/056844553010_01_P001_OrthoPanSharpen.tif"
 # imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/PCI Output/TOA and Haze/TOACorrected_056844553010_01_P001_OrthoPanSharpen_05644015.tif"
 # imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/056844553010_01_P001_MUL/PCI Ortho/03NOV18082012-M1BS-056844553010_01_P001_PCiOrtho.tif"
 # imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/PCI Output/ATCOR1/ATCORCorrected_056844553010_01_P001_OrthoPanSharpen_05644032_XCALIB.tif"
-imFile = "G:/Sungis08/056844553010_01/PCI Output/TOA and Haze Sudem L3/TOACorrected_03NOV18082012-056844553010_01_P001_PciOrtho_SudemL3_PanSharpen.tif"
+# imFile = "G:/Sungis08/056844553010_01/PCI Output/TOA and Haze Sudem L3/TOACorrected_03NOV18082012-056844553010_01_P001_PciOrtho_SudemL3_PanSharpen.tif"
 # imFile = "G:/Sungis08/056844553010_01/PCI Output/ATCOR Sudem L3 v3 w SRTM/ATCORCorrected_03NOV18082012-056844553010_01_P001_PciOrtho_SudemL3_PanSharpen.tif"
 # imFile = "G:/Sungis08/056844553010_01/PCI Output/TOA and Haze Sudem L3/TOACorrected_03NOV18082012-M1BS-056844553010_01_P001_PCiOrtho_SudemL3_39400001.tif"
-# imFile = "G:/Sungis08/056844553010_01/PCI Output/056844553010_01_P001_OrthoSudemL3_PanSharpen.tif"
+imFile = "G:/Sungis08/056844553010_01/PCI Output/056844553010_01_P001_OrthoSudemL3_PanSharpen.tif"
 
 def world2Pixel(geoMatrix, x, y):
     """
@@ -56,7 +56,7 @@ def world2Pixel(geoMatrix, x, y):
     return (pixel, line)
 
 
-def extract_patch_features_(imbuf):
+def extract_patch_features(imbuf):
     imbuf = np.float64(imbuf)/100.   # values are in percent?
     s = np.sum(imbuf, 2)
     cn = imbuf/np.tile(s[:,:,None], (1, 1, imbuf.shape[2]))
@@ -192,7 +192,7 @@ def extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array(
                 print "imbuf zero"
             # for b in range(0, 4):
             #     imbuf[:, :, b] = imbuf[:, :, b] / max_im_vals_[b]
-            feat = extract_patch_features(imbuf, win_mask)
+            feat = extract_patch_features(imbuf.copy(), win_mask)
             feat['classi'] = ci
             feat['class'] = class_labels[ci]
             fields = ['TAGC', 'Z_P_AFRA', 'ALLOMETRY', 'HERB', 'LITTER']
@@ -206,7 +206,7 @@ def extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array(
             max_tmp = np.percentile(tmp, 98., axis=0)
             max_im_vals[max_tmp > max_im_vals] = max_tmp[max_tmp > max_im_vals]
             # print plot['PLOT']
-            i = i +1
+            i = i + 1
         # else:
         #     print "x-" + plot['PLOT']
     
@@ -411,7 +411,7 @@ if False:  # for MS image and excl OL
 # plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array([18,18]), np.array([50,50])],
 #                                  win_offsets=[np.array([0, -18]), np.array([0, 0])])
 
-# for multispec pixels
+# # for multispec pixels
 # plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array([3, 3]), np.array([11, 11])],
 #                                  win_offsets=[np.array([0, -3]), np.array([0, -11])])
 
@@ -421,7 +421,7 @@ if False:  # for MS image and excl OL
 #                                  win_offsets=[np.array([-8, 8]), np.array([-42, 42])])
 
 plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array([10, 10]), np.array([50, 50])],
-                                 win_offsets=[np.array([0, -10]), np.array([0, -50])], win_rotations=[26., 26.])
+                                 win_offsets=[np.array([0, -10]), np.array([0, -50])], win_rotations=[0., 0.])
 
 # ndvi = np.array([plot['NDVI'] for plot in plot_dict.values()])
 # gn = np.array([plot['g_n'] for plot in plot_dict.values()])
@@ -429,7 +429,6 @@ plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[n
 # ir_rat = np.array([plot['ir_rat'] for plot in plot_dict.values()])
 # tagc = np.array([plot['TAGC'] for plot in plot_dict.values()])
 plotNames = plot_dict.keys()
-
 
 yfields = ['TAGC', 'Z_P_AFRA', 'ALLOMETRY', 'HERB', 'LITTER']
 xfields = ['NDVI', 'g_n', 'b_n', 'SAVI', 'ir_rat', 'NDVI_std']
