@@ -309,23 +309,28 @@ def extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array(
                 win_coord = win_coords_[1]
             else:
                 ci = 2
-            mn = np.floor(np.min(win_coord, 0))
-            mx = np.ceil(np.max(win_coord, 0))
-            win_size_r = mx-mn
+
+            #think about window size for co-ord xform
+            mn = (np.min(win_coord, 0))
+            mx = (np.max(win_coord, 0))
+            win_size_r = mx-mn+1
             imbuf = np.zeros((win_size_r[0], win_size_r[1], 4), dtype=float)
 
             for b in range(1, 5):
                 # this option performs best (bottom left / SW cnrs)
                 # pixel_start = np.int(np.round((pixel - (win_size[0] - 1)/2) + win_offset[0]))
                 # line_start = np.int(np.round((line - (win_size[1] - 1)/2) + win_offset[1]))
-                pixel_start = np.int(np.round((pixel + win_offset[0])))
-                line_start = np.int(np.round((line + win_offset[1])))
-                imbuf[:, :, b - 1] = ds.GetRasterBand(b).ReadAsArray(pixel_start, line_start, win_size[0], win_size[1])
+                pixel_start = np.int(np.round((pixel + mn[0])))
+                line_start = np.int(np.round((line + mn[1])))
+                imbuf[:, :, b - 1] = ds.GetRasterBand(b).ReadAsArray(pixel_start, line_start, win_size_r[0], win_size_r[1])
 
             if np.all(imbuf == 0):
                 print "imbuf zero"
             # for b in range(0, 4):
             #     imbuf[:, :, b] = imbuf[:, :, b] / max_im_vals_[b]
+            if not all(win_mask.shape == imbuf.shape[0:2]):
+                print "error - mask and buf different sizes"
+                raise Exception("error - mask and buf different sizes")
             feat = extract_patch_features(imbuf.copy(), win_mask)
             feat['classi'] = ci
             feat['class'] = class_labels[ci]
