@@ -128,15 +128,16 @@ def extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array(
         print 'rotating'
         # for win_mask, win_rotation, win_size in izip(win_masks, win_rotations, win_sizes):
         for i in range(0, 2):
-            win_masks[i] = ndimage.rotate(win_masks[i], win_rotations[i])
-            win_sizes[i] = win_masks[i].shape
+            if not win_rotations[i] == 0.:
+                win_masks[i] = ndimage.rotate(win_masks[i], win_rotations[i])
+                win_sizes[i] = win_masks[i].shape
 
-    if False:
+    if True:
         pylab.figure()
         pylab.subplot(1, 2, 1)
-        pylab.imshow(win_masks[0])
+        pylab.imshow(np.bool8(win_masks[0]))
         pylab.subplot(1, 2, 2)
-        pylab.imshow(win_masks[1])
+        pylab.imshow(np.bool8(win_masks[1]))
 
     transform = osr.CoordinateTransformation(cs_gt_spatial_ref, osr.SpatialReference(ds.GetProjection()))
     i = 0
@@ -198,10 +199,10 @@ def extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array(
             fields = ['TAGC', 'Z_P_AFRA', 'ALLOMETRY', 'HERB', 'LITTER']
             for f in fields:
                 feat[f] = cs_gt_dict[plot['PLOT']][f]
-            feat['thumbnail'] = imbuf
+            feat['thumbnail'] = np.float32(imbuf.copy())
             plot_dict[plot['PLOT']] = feat
                 # plotTagcDict[plot['PLOT']] = cs_gt_dict[plot['PLOT']]['TAGC']
-            tmp = np.reshape(imbuf, (np.prod(win_size), 4))
+            tmp = np.reshape(feat['thumbnail'], (np.prod(win_size), 4))
             # max_tmp = tmp.max(axis=0)
             max_tmp = np.percentile(tmp, 98., axis=0)
             max_im_vals[max_tmp > max_im_vals] = max_tmp[max_tmp > max_im_vals]
@@ -211,12 +212,147 @@ def extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array(
         #     print "x-" + plot['PLOT']
     
     # print i
-    thumbs = np.array([plot['thumbnail'] for plot in plot_dict.values()])
-    for thumb in thumbs:
+    for k, v in plot_dict.iteritems():
+        thumb = v['thumbnail']
         for b in range(0, 4):
-            thumb[:,:,b] = thumb[:,:,b]/max_im_vals[b]
+            thumb[:, :, b] = thumb[:, :, b] / max_im_vals[b]
+            thumb[:, :, b][thumb[:, :, b] > 1.] = 1.
         thumb[:, :, 0] = thumb[:, :, 0] / 1.5
-    
+        plot_dict[k]['thumbnail'] = thumb
+
+    return plot_dict
+
+
+def extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array((8, 8)), np.array((42, 42))],
+                         win_origin='BL', win_rotation=30., axis_signs=[1, 1]):
+
+    win_cnrs = np.array([[0,0], [0,1], [1,1], [1,0]])
+
+    if win_origin == 'BL':
+        win_cnrs = win_cnrs
+    elif win_origin == 'TL':
+        win_cnrs[:,1] = win_cnrs[:,1]-1
+    elif win_origin == 'TR':
+        win_cnrs[:,0] = win_cnrs[:,0]-1
+        win_cnrs[:,1] = win_cnrs[:,1]-1
+    elif win_origin == 'BR':
+        win_cnrs[:,0] = win_cnrs[:,0]-1
+    else:
+        raise Exception('Unknown win_origin')
+
+    # where is the right place to apply this?
+    # win_cnrs[:, 0] = win_cnrs[:, 0] * axis_signs[0]
+    # win_cnrs[:, 1] = win_cnrs[:, 1] * axis_signs[1]
+
+    win_coords = [win_cnrs.copy(), win_cnrs.copy()]
+
+    theta = np.radians(win_rotation)
+    c, s = np.cos(theta), np.sin(theta)
+    R = np.array([[c, -s], [s, c]])
+    win_coords_ = [[],[]]
+    for i in range(0, 2):
+        win_coords[i] = win_cnrs * np.tile(win_sizes[i], [4,1])
+        win_coords_[i] = np.matmul(win_coords[i], R.transpose())
+        # where is the right place to apply this?
+        win_coords[i][:, 0] = win_coords[i][:, 0] * axis_signs[0]
+        win_coords[i][:, 1] = win_coords[i][:, 1] * axis_signs[1]
+        win_coords_[i][:, 0] = win_coords_[i][:, 0] * axis_signs[0]
+        win_coords_[i][:, 1] = win_coords_[i][:, 1] * axis_signs[1]
+
+    pylab.figure()
+    pylab.plot(win_coords[0][:,0],win_coords[0][:,1])
+    pylab.plot(win_coords_[0][:,0],win_coords_[0][:,1], 'r')
+    pylab.axis('equal')
+
+    win_masks = [np.ones(win_sizes[0]), np.ones(win_sizes[1])]
+    win_mask_sizes = [[],[]]
+    if win_rotation is not None:
+        print 'rotating'
+        # for win_mask, win_rotation, win_size in izip(win_masks, win_rotations, win_sizes):
+        for i in range(0, 2):
+            if not win_rotation == 0.:
+                win_masks[i] = ndimage.rotate(win_masks[i], win_rotation)
+                win_mask_sizes[i] = win_masks[i].shape
+
+    if True:
+        pylab.figure()
+        pylab.subplot(1, 2, 1)
+        pylab.imshow(np.bool8(win_masks[0]))
+        pylab.subplot(1, 2, 2)
+        pylab.imshow(np.bool8(win_masks[1]))
+
+    transform = osr.CoordinateTransformation(cs_gt_spatial_ref, osr.SpatialReference(ds.GetProjection()))
+    i = 0
+    plot_dict = {}
+    plotTagcDict = {}
+    class_labels = ['OL', 'DST', 'ST']
+    max_im_vals = np.zeros((4))
+    for plot in cs_gt_dict.values():
+        point = ogr.Geometry(ogr.wkbPoint)
+        point.AddPoint(plot['X'], plot['Y'])
+        point.Transform(transform)  # xform into im projection
+        (pixel, line) = world2Pixel(geotransform, point.GetX(), point.GetY())
+        # not all the point fall inside the image
+        if pixel >= 0 and line >= 0 and pixel < ds.RasterXSize and line < ds.RasterYSize:
+            win_size = win_sizes[0]
+            win_mask = win_masks[0]
+            win_coord = win_coords_[0]
+
+            if 'DST' in plot['PLOT']:
+                ci = 1
+            elif 'ST' in plot['PLOT']:
+                ci = 2
+            elif 'OL' in plot['PLOT']:
+                ci = 0
+                win_size = win_sizes[1]
+                win_mask = win_masks[1]
+                win_coord = win_coords_[1]
+            else:
+                ci = 2
+            mn = np.floor(np.min(win_coord, 0))
+            mx = np.ceil(np.max(win_coord, 0))
+            win_size_r = mx-mn
+            imbuf = np.zeros((win_size_r[0], win_size_r[1], 4), dtype=float)
+
+            for b in range(1, 5):
+                # this option performs best (bottom left / SW cnrs)
+                # pixel_start = np.int(np.round((pixel - (win_size[0] - 1)/2) + win_offset[0]))
+                # line_start = np.int(np.round((line - (win_size[1] - 1)/2) + win_offset[1]))
+                pixel_start = np.int(np.round((pixel + win_offset[0])))
+                line_start = np.int(np.round((line + win_offset[1])))
+                imbuf[:, :, b - 1] = ds.GetRasterBand(b).ReadAsArray(pixel_start, line_start, win_size[0], win_size[1])
+
+            if np.all(imbuf == 0):
+                print "imbuf zero"
+            # for b in range(0, 4):
+            #     imbuf[:, :, b] = imbuf[:, :, b] / max_im_vals_[b]
+            feat = extract_patch_features(imbuf.copy(), win_mask)
+            feat['classi'] = ci
+            feat['class'] = class_labels[ci]
+            fields = ['TAGC', 'Z_P_AFRA', 'ALLOMETRY', 'HERB', 'LITTER']
+            for f in fields:
+                feat[f] = cs_gt_dict[plot['PLOT']][f]
+            feat['thumbnail'] = np.float32(imbuf.copy())
+            plot_dict[plot['PLOT']] = feat
+            # plotTagcDict[plot['PLOT']] = cs_gt_dict[plot['PLOT']]['TAGC']
+            tmp = np.reshape(feat['thumbnail'], (np.prod(win_size), 4))
+            # max_tmp = tmp.max(axis=0)
+            max_tmp = np.percentile(tmp, 98., axis=0)
+            max_im_vals[max_tmp > max_im_vals] = max_tmp[max_tmp > max_im_vals]
+            # print plot['PLOT']
+            i = i + 1
+            # else:
+            #     print "x-" + plot['PLOT']
+
+    # print i
+    for k, v in plot_dict.iteritems():
+        thumb = v['thumbnail']
+        for b in range(0, 4):
+            thumb[:, :, b] = thumb[:, :, b] / max_im_vals[b]
+            thumb[:, :, b][thumb[:, :, b] > 1.] = 1.
+        thumb[:, :, 0] = thumb[:, :, 0] / 1.5
+        plot_dict[k]['thumbnail'] = thumb
+
     return plot_dict
 
 
@@ -421,7 +557,7 @@ if False:  # for MS image and excl OL
 #                                  win_offsets=[np.array([-8, 8]), np.array([-42, 42])])
 
 plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array([10, 10]), np.array([50, 50])],
-                                 win_offsets=[np.array([0, -10]), np.array([0, -50])], win_rotations=[0., 0.])
+                                 win_offsets=[np.array([0, -10]), np.array([0, -50])], win_rotations=[27., 27.])
 
 # ndvi = np.array([plot['NDVI'] for plot in plot_dict.values()])
 # gn = np.array([plot['g_n'] for plot in plot_dict.values()])
