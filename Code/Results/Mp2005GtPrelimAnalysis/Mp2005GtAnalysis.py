@@ -8,6 +8,9 @@ from matplotlib import patches
 import matplotlib.pyplot as plt
 from scipy import ndimage as ndimage
 
+# Python Imaging Library imports
+from PIL import Image
+from PIL import ImageDraw
 
 from mpl_toolkits.mplot3d import Axes3D
 
@@ -251,9 +254,9 @@ def extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array(
     R = np.array([[c, -s], [s, c]])
     win_coords_ = [[],[]]
     for i in range(0, 2):
-        win_coords[i] = win_cnrs * np.tile(win_sizes[i], [4,1])
+        win_coords[i] = win_cnrs * np.tile(win_sizes[i]-1, [4,1])  # note -1
         win_coords_[i] = np.matmul(win_coords[i], R.transpose())
-        # where is the right place to apply this?
+        # where is the right place to apply this?  also, it can be incorporated into R more neatly
         win_coords[i][:, 0] = win_coords[i][:, 0] * axis_signs[0]
         win_coords[i][:, 1] = win_coords[i][:, 1] * axis_signs[1]
         win_coords_[i][:, 0] = win_coords_[i][:, 0] * axis_signs[0]
@@ -268,9 +271,19 @@ def extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array(
     win_mask_sizes = [[],[]]
     if win_rotation is not None:
         print 'rotating'
+
         # for win_mask, win_rotation, win_size in izip(win_masks, win_rotations, win_sizes):
         for i in range(0, 2):
             if not win_rotation == 0.:
+                if False:
+                    img = Image.fromarray(win_masks[i])
+
+                    # Draw a rotated rectangle on the image.
+                    draw = ImageDraw.Draw(img)
+                    # rect = get_rect(x=120, y=80, width=100, height=40, angle=30.0)
+                    draw.polygon([tuple(p) for p in win_coords_[i]], fill=0)
+                    # Convert the Image data to a numpy array.
+                    win_masks[i] = np.asarray(img)
                 win_masks[i] = ndimage.rotate(win_masks[i], win_rotation)
                 win_mask_sizes[i] = win_masks[i].shape
 
@@ -313,7 +326,7 @@ def extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array(
             #think about window size for co-ord xform
             mn = (np.min(win_coord, 0))
             mx = (np.max(win_coord, 0))
-            win_size_r = mx-mn+1
+            win_size_r = np.int32(np.round(mx-mn)+1)
             imbuf = np.zeros((win_size_r[0], win_size_r[1], 4), dtype=float)
 
             for b in range(1, 5):
@@ -328,7 +341,7 @@ def extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array(
                 print "imbuf zero"
             # for b in range(0, 4):
             #     imbuf[:, :, b] = imbuf[:, :, b] / max_im_vals_[b]
-            if not all(win_mask.shape == imbuf.shape[0:2]):
+            if not win_mask.shape == imbuf.shape[0:2]:
                 print "error - mask and buf different sizes"
                 raise Exception("error - mask and buf different sizes")
             feat = extract_patch_features(imbuf.copy(), win_mask)
@@ -340,7 +353,7 @@ def extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array(
             feat['thumbnail'] = np.float32(imbuf.copy())
             plot_dict[plot['PLOT']] = feat
             # plotTagcDict[plot['PLOT']] = cs_gt_dict[plot['PLOT']]['TAGC']
-            tmp = np.reshape(feat['thumbnail'], (np.prod(win_size), 4))
+            tmp = np.reshape(feat['thumbnail'], (np.prod(win_size_r), 4))
             # max_tmp = tmp.max(axis=0)
             max_tmp = np.percentile(tmp, 98., axis=0)
             max_im_vals[max_tmp > max_im_vals] = max_tmp[max_tmp > max_im_vals]
