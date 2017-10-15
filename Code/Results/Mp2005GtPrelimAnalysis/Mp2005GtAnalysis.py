@@ -117,7 +117,7 @@ def extract_patch_features(imbuf, mask):
 
     return feat
 
-def extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array((8, 8)), np.array((42, 42))],
+def extract_all_features_(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array((8, 8)), np.array((42, 42))],
                      win_offsets=None, win_rotations=None):
     # from itertools import izip
     if win_offsets is None:   #setup defaults as determined to be optimal from experiments
@@ -267,7 +267,7 @@ def extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array(
     pylab.plot(win_coords_[0][:,0],win_coords_[0][:,1], 'r')
     pylab.axis('equal')
 
-    win_masks = [np.ones(win_sizes[0]), np.ones(win_sizes[1])]
+    win_masks = [np.zeros(win_sizes[0]), np.zeros(win_sizes[1])]
     win_mask_sizes = [[],[]]
     if win_rotation is not None:
         print 'rotating'
@@ -275,16 +275,27 @@ def extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array(
         # for win_mask, win_rotation, win_size in izip(win_masks, win_rotations, win_sizes):
         for i in range(0, 2):
             if not win_rotation == 0.:
-                if False:
-                    img = Image.fromarray(win_masks[i])
+                if True:
+                    mn = (np.min(win_coords_[i], 0))
+                    mx = (np.max(win_coords_[i], 0))
+                    win_size_r = np.int32(np.ceil(mx - mn))
+
+                    img = Image.fromarray(np.zeros(win_size_r))
 
                     # Draw a rotated rectangle on the image.
                     draw = ImageDraw.Draw(img)
                     # rect = get_rect(x=120, y=80, width=100, height=40, angle=30.0)
-                    draw.polygon([tuple(p) for p in win_coords_[i]], fill=0)
+                    draw.polygon([tuple((p-mn)) for p in win_coords_[i]], fill=1)
                     # Convert the Image data to a numpy array.
                     win_masks[i] = np.asarray(img)
-                win_masks[i] = ndimage.rotate(win_masks[i], win_rotation)
+                    win_masks[i] = np.flipud(win_masks[i])  # to compensare for TL origin
+                else:
+                    win_masks[i] = ndimage.rotate(win_masks[i], win_rotation)
+                    if axis_signs[0] < 0:
+                        win_masks[i] = np.fliplr(win_masks[i])
+                    if axis_signs[1] < 0:
+                        win_masks[i] = np.flipud(win_masks[i])
+
                 win_mask_sizes[i] = win_masks[i].shape
 
     if True:
@@ -326,7 +337,7 @@ def extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array(
             #think about window size for co-ord xform
             mn = (np.min(win_coord, 0))
             mx = (np.max(win_coord, 0))
-            win_size_r = np.int32(np.round(mx-mn)+1)
+            win_size_r = np.int32(np.ceil(mx-mn))
             imbuf = np.zeros((win_size_r[0], win_size_r[1], 4), dtype=float)
 
             for b in range(1, 5):
@@ -573,9 +584,12 @@ if False:  # for MS image and excl OL
 #this seems to give best scores per stratum
 # plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array([8, 8]), np.array([42, 42])],
 #                                  win_offsets=[np.array([-8, 8]), np.array([-42, 42])])
+#
+# plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array([10, 10]), np.array([50, 50])],
+#                                  win_offsets=[np.array([0, -10]), np.array([0, -50])], win_rotations=[27., 27.])
 
-plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array([10, 10]), np.array([50, 50])],
-                                 win_offsets=[np.array([0, -10]), np.array([0, -50])], win_rotations=[27., 27.])
+plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array([8, 8]), np.array([42, 42])],
+                                 axis_signs=[np.sign(geotransform[1]), np.sign(geotransform[5])], win_rotation=-0., win_origin='TL')
 
 # ndvi = np.array([plot['NDVI'] for plot in plot_dict.values()])
 # gn = np.array([plot['g_n'] for plot in plot_dict.values()])
