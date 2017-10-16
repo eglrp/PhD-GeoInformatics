@@ -35,13 +35,13 @@ csGtGpsFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/BMR Car
 # imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/PCI Output/Separate Pan and MS/TOA/PanSharpToaOrtho.tif"
 # imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/PCI Output/Separate Pan and MS/ATCOR1/PansharpAtcorOrtho.tif"
 # imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/PCI Output/056844553010_01_P001_OrthoPanSharpen.tif"
-# imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/PCI Output/TOA and Haze/TOACorrected_056844553010_01_P001_OrthoPanSharpen_05644015.tif"
+imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/PCI Output/TOA and Haze/TOACorrected_056844553010_01_P001_OrthoPanSharpen_05644015.tif"
 # imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/056844553010_01_P001_MUL/PCI Ortho/03NOV18082012-M1BS-056844553010_01_P001_PCiOrtho.tif"
 # imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/PCI Output/ATCOR1/ATCORCorrected_056844553010_01_P001_OrthoPanSharpen_05644032_XCALIB.tif"
 # imFile = "G:/Sungis08/056844553010_01/PCI Output/TOA and Haze Sudem L3/TOACorrected_03NOV18082012-056844553010_01_P001_PciOrtho_SudemL3_PanSharpen.tif"
 # imFile = "G:/Sungis08/056844553010_01/PCI Output/ATCOR Sudem L3 v3 w SRTM/ATCORCorrected_03NOV18082012-056844553010_01_P001_PciOrtho_SudemL3_PanSharpen.tif"
 # imFile = "G:/Sungis08/056844553010_01/PCI Output/TOA and Haze Sudem L3/TOACorrected_03NOV18082012-M1BS-056844553010_01_P001_PCiOrtho_SudemL3_39400001.tif"
-imFile = "G:/Sungis08/056844553010_01/PCI Output/056844553010_01_P001_OrthoSudemL3_PanSharpen.tif"
+# imFile = "G:/Sungis08/056844553010_01/PCI Output/056844553010_01_P001_OrthoSudemL3_PanSharpen.tif"
 
 def world2Pixel(geoMatrix, x, y):
     """
@@ -227,7 +227,7 @@ def extract_all_features_(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array
 
 
 def extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array((8, 8)), np.array((42, 42))],
-                         win_origin='BL', win_rotation=30., axis_signs=[1, 1]):
+                         win_origin='TL', win_rotation=27., axis_signs=[1, -1]):
 
     win_cnrs = np.array([[0,0], [0,1], [1,1], [1,0]])
 
@@ -254,7 +254,7 @@ def extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array(
     R = np.array([[c, -s], [s, c]])
     win_coords_ = [[],[]]
     for i in range(0, 2):
-        win_coords[i] = win_cnrs * np.tile(win_sizes[i]-1, [4,1])  # note -1
+        win_coords[i] = win_cnrs * np.tile(win_sizes[i], [4,1])  # note -1
         win_coords_[i] = np.matmul(win_coords[i], R.transpose())
         # where is the right place to apply this?  also, it can be incorporated into R more neatly
         win_coords[i][:, 0] = win_coords[i][:, 0] * axis_signs[0]
@@ -274,29 +274,28 @@ def extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array(
 
         # for win_mask, win_rotation, win_size in izip(win_masks, win_rotations, win_sizes):
         for i in range(0, 2):
-            if not win_rotation == 0.:
-                if True:
-                    mn = (np.min(win_coords_[i], 0))
-                    mx = (np.max(win_coords_[i], 0))
-                    win_size_r = np.int32(np.ceil(mx - mn))
+            if True:
+                mn = (np.min(win_coords_[i], 0))
+                mx = (np.max(win_coords_[i], 0))
+                win_size_r = np.int32(np.ceil(mx - mn))
 
-                    img = Image.fromarray(np.zeros(win_size_r))
+                img = Image.fromarray(np.zeros(win_size_r))
 
-                    # Draw a rotated rectangle on the image.
-                    draw = ImageDraw.Draw(img)
-                    # rect = get_rect(x=120, y=80, width=100, height=40, angle=30.0)
-                    draw.polygon([tuple((p-mn)) for p in win_coords_[i]], fill=1)
-                    # Convert the Image data to a numpy array.
-                    win_masks[i] = np.asarray(img)
-                    win_masks[i] = np.flipud(win_masks[i])  # to compensare for TL origin
-                else:
-                    win_masks[i] = ndimage.rotate(win_masks[i], win_rotation)
-                    if axis_signs[0] < 0:
-                        win_masks[i] = np.fliplr(win_masks[i])
-                    if axis_signs[1] < 0:
-                        win_masks[i] = np.flipud(win_masks[i])
+                # Draw a rotated rectangle on the image.
+                draw = ImageDraw.Draw(img)
+                # rect = get_rect(x=120, y=80, width=100, height=40, angle=30.0)
+                draw.polygon([tuple((p-mn)) for p in win_coords_[i]], fill=1)
+                # Convert the Image data to a numpy array.
+                win_masks[i] = np.asarray(img)
+                win_masks[i] = np.flipud(win_masks[i])  # to compensare for TL origin
+            else:
+                win_masks[i] = ndimage.rotate(win_masks[i], win_rotation)
+                if axis_signs[0] < 0:
+                    win_masks[i] = np.fliplr(win_masks[i])
+                if axis_signs[1] < 0:
+                    win_masks[i] = np.flipud(win_masks[i])
 
-                win_mask_sizes[i] = win_masks[i].shape
+            win_mask_sizes[i] = win_masks[i].shape
 
     if True:
         pylab.figure()
@@ -585,11 +584,11 @@ if False:  # for MS image and excl OL
 # plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array([8, 8]), np.array([42, 42])],
 #                                  win_offsets=[np.array([-8, 8]), np.array([-42, 42])])
 #
-# plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array([10, 10]), np.array([50, 50])],
-#                                  win_offsets=[np.array([0, -10]), np.array([0, -50])], win_rotations=[27., 27.])
+plot_dict = extract_all_features_(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array([10, 10]), np.array([50, 50])],
+                                 win_offsets=[np.array([0, -10]), np.array([0, -50])], win_rotations=[0., 0.])
 
-plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array([8, 8]), np.array([42, 42])],
-                                 axis_signs=[np.sign(geotransform[1]), np.sign(geotransform[5])], win_rotation=-0., win_origin='TL')
+plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array([10, 10]), np.array([50, 50])],
+                                 axis_signs=[1,-1], win_rotation=0., win_origin='BL')
 
 # ndvi = np.array([plot['NDVI'] for plot in plot_dict.values()])
 # gn = np.array([plot['g_n'] for plot in plot_dict.values()])
@@ -626,7 +625,6 @@ for yi, yf in enumerate(yfields):
     y = np.array([plot[yf] for plot in plot_dict.values()])
     scatterd(x, y, labels=plot_names, class_labels=class_lab, regress=True, xlabel='NDVI', ylabel=yf)
 
-
 #with images
 pylab.figure()
 x = np.array([plot['NDVI'] for plot in plot_dict.values()])
@@ -639,7 +637,6 @@ for yi, yf in enumerate(['TAGC']):
     y = np.log10(np.array([plot[yf] for plot in plot_dict.values()]))
     scatterd(x, y, labels=None, class_labels=class_lab, thumbnails=thumbs, xlabel='NDVI', ylabel='log10(TAGC)')
     pylab.grid(zorder=-1)
-
 
 
 ################################################################
