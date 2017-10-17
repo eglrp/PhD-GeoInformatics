@@ -41,7 +41,7 @@ imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056
 # imFile = "G:/Sungis08/056844553010_01/PCI Output/TOA and Haze Sudem L3/TOACorrected_03NOV18082012-056844553010_01_P001_PciOrtho_SudemL3_PanSharpen.tif"
 # imFile = "G:/Sungis08/056844553010_01/PCI Output/ATCOR Sudem L3 v3 w SRTM/ATCORCorrected_03NOV18082012-056844553010_01_P001_PciOrtho_SudemL3_PanSharpen.tif"
 # imFile = "G:/Sungis08/056844553010_01/PCI Output/TOA and Haze Sudem L3/TOACorrected_03NOV18082012-M1BS-056844553010_01_P001_PCiOrtho_SudemL3_39400001.tif"
-# imFile = "G:/Sungis08/056844553010_01/PCI Output/056844553010_01_P001_OrthoSudemL3_PanSharpen.tif"
+imFile = "G:/Sungis08/056844553010_01/PCI Output/056844553010_01_P001_OrthoSudemL3_PanSharpen.tif"
 
 def world2Pixel(geoMatrix, x, y):
     """
@@ -227,19 +227,29 @@ def extract_all_features_(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array
 
 
 def extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array((8, 8)), np.array((42, 42))],
-                         win_origin='TL', win_rotation=27., axis_signs=[1, -1]):
-
-    win_cnrs = np.array([[0,0], [0,1], [1,1], [1,0]])
+                         win_origin='TL', win_rotation=27., plotFigures=False):   #, axis_signs=[1, 1]):
+    # win_sizes - the OL and other window sizes in pixels
+    # win_origin - the corner of the plot where the CS plot gps loc was recorded (BL,TL,TR,BR = SW,NW,NE,SE)
+    #              the image (and any numpy matrix) origin is TL and increasing pixels L->R is W->E and T->B is N->S
+    #              so eg if the plot origin is BL, one would want to start reading at TL to end at BL
+    # win_rotation - the rotation of the plots (magnetic N offset from TN)
+    # axis_signs - I think this is redundant and prone to introduce bugs (image origins will ALWAYS be TL and the code
+    #              should deal with this - this does in effect mean the y axis is flipped relative to normal cartesian)
+    # Note         A way around all this confusion may to be to layout plot co-ords in world co-ords and then convert to
+    #              to pixel co-ords using world2pixel.  this would avoid all the fiddling and confusion in pixel space
+    win_cnrs = np.array([[0,0], [0,1], [1,1], [1,0]])  # TL origin by default
 
     if win_origin == 'BL':
-        win_cnrs = win_cnrs
-    elif win_origin == 'TL':
         win_cnrs[:,1] = win_cnrs[:,1]-1
+    elif win_origin == 'TL':
+        # win_cnrs[:,1] = win_cnrs[:,1]-1
+        win_cnrs = win_cnrs
     elif win_origin == 'TR':
         win_cnrs[:,0] = win_cnrs[:,0]-1
-        win_cnrs[:,1] = win_cnrs[:,1]-1
+        # win_cnrs[:,1] = win_cnrs[:,1]-1
     elif win_origin == 'BR':
         win_cnrs[:,0] = win_cnrs[:,0]-1
+        win_cnrs[:,1] = win_cnrs[:,1]-1
     else:
         raise Exception('Unknown win_origin')
 
@@ -249,23 +259,25 @@ def extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array(
 
     win_coords = [win_cnrs.copy(), win_cnrs.copy()]
 
-    theta = np.radians(win_rotation)
+    theta = -np.radians(win_rotation)  # -ve angle for inverted y axis (valid for rotation<90)
     c, s = np.cos(theta), np.sin(theta)
     R = np.array([[c, -s], [s, c]])
     win_coords_ = [[],[]]
     for i in range(0, 2):
         win_coords[i] = win_cnrs * np.tile(win_sizes[i], [4,1])  # note -1
-        win_coords_[i] = np.matmul(win_coords[i], R.transpose())
+        win_coords_[i] = np.dot(win_coords[i], R.transpose())
         # where is the right place to apply this?  also, it can be incorporated into R more neatly
-        win_coords[i][:, 0] = win_coords[i][:, 0] * axis_signs[0]
-        win_coords[i][:, 1] = win_coords[i][:, 1] * axis_signs[1]
-        win_coords_[i][:, 0] = win_coords_[i][:, 0] * axis_signs[0]
-        win_coords_[i][:, 1] = win_coords_[i][:, 1] * axis_signs[1]
+        # win_coords[i][:, 0] = win_coords[i][:, 0] * axis_signs[0]
+        # win_coords[i][:, 1] = win_coords[i][:, 1] * axis_signs[1]
+        # win_coords_[i][:, 0] = win_coords_[i][:, 0] * axis_signs[0]
+        # win_coords_[i][:, 1] = win_coords_[i][:, 1] * axis_signs[1]
 
-    pylab.figure()
-    pylab.plot(win_coords[0][:,0],win_coords[0][:,1])
-    pylab.plot(win_coords_[0][:,0],win_coords_[0][:,1], 'r')
-    pylab.axis('equal')
+    if plotFigures:
+        f = pylab.figure()
+        p = pylab.plot(win_coords[0][:,0],win_coords[0][:,1])
+        pylab.plot(win_coords_[0][:,0],win_coords_[0][:,1], 'r')
+        pylab.axis('equal')
+        f.gca().invert_yaxis()
 
     win_masks = [np.zeros(win_sizes[0]), np.zeros(win_sizes[1])]
     win_mask_sizes = [[],[]]
@@ -287,17 +299,17 @@ def extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array(
                 draw.polygon([tuple((p-mn)) for p in win_coords_[i]], fill=1)
                 # Convert the Image data to a numpy array.
                 win_masks[i] = np.asarray(img)
-                win_masks[i] = np.flipud(win_masks[i])  # to compensare for TL origin
+                # win_masks[i] = np.flipud(win_masks[i])  # ??? why is this necessary
             else:
                 win_masks[i] = ndimage.rotate(win_masks[i], win_rotation)
-                if axis_signs[0] < 0:
-                    win_masks[i] = np.fliplr(win_masks[i])
-                if axis_signs[1] < 0:
-                    win_masks[i] = np.flipud(win_masks[i])
+                # if axis_signs[0] < 0:
+                #     win_masks[i] = np.fliplr(win_masks[i])
+                # if axis_signs[1] < 0:
+                #     win_masks[i] = np.flipud(win_masks[i])
 
             win_mask_sizes[i] = win_masks[i].shape
 
-    if True:
+    if plotFigures:
         pylab.figure()
         pylab.subplot(1, 2, 1)
         pylab.imshow(np.bool8(win_masks[0]))
@@ -584,11 +596,13 @@ if False:  # for MS image and excl OL
 # plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array([8, 8]), np.array([42, 42])],
 #                                  win_offsets=[np.array([-8, 8]), np.array([-42, 42])])
 #
-plot_dict = extract_all_features_(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array([10, 10]), np.array([50, 50])],
-                                 win_offsets=[np.array([0, -10]), np.array([0, -50])], win_rotations=[0., 0.])
+# plot_dict = extract_all_features_(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array([10, 10]), np.array([50, 50])],
+#                                  win_offsets=[np.array([0, -10]), np.array([0, -50])], win_rotations=[0., 0.])
 
-plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array([10, 10]), np.array([50, 50])],
-                                 axis_signs=[1,-1], win_rotation=0., win_origin='BL')
+plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array([10, 10]), np.array([42, 42])],
+                                 win_rotation=-27., win_origin='BL')
+
+# im = ds.GetRasterBand(1).ReadAsArray(5000, 5000, 1000, 1000)
 
 # ndvi = np.array([plot['NDVI'] for plot in plot_dict.values()])
 # gn = np.array([plot['g_n'] for plot in plot_dict.values()])
@@ -637,6 +651,60 @@ for yi, yf in enumerate(['TAGC']):
     y = np.log10(np.array([plot[yf] for plot in plot_dict.values()]))
     scatterd(x, y, labels=None, class_labels=class_lab, thumbnails=thumbs, xlabel='NDVI', ylabel='log10(TAGC)')
     pylab.grid(zorder=-1)
+
+if True:  # excl OL
+    class_lab = np.array([plot['class'] for plot in plot_dict.values()])
+    class_labi = np.array([plot['classi'] for plot in plot_dict.values()])
+    ol_idx = class_lab == 'OL'
+
+    plot_dict_st_dst = dict((k, plot_dict[k]) for k in np.array(plot_dict.keys())[np.logical_not(ol_idx)])
+
+    pylab.figure()
+    x = np.array([plot['NDVI'] for plot in plot_dict_st_dst.values()])
+    class_lab = np.array([plot['class'] for plot in plot_dict_st_dst.values()])
+    plot_names = plot_dict.keys()
+    thumbs = np.array([plot['thumbnail'] for plot in plot_dict_st_dst.values()])
+
+    for yi, yf in enumerate(['TAGC']):
+        ax = pylab.subplot(1, 1, yi+1)
+        y = np.log10(np.array([plot[yf] for plot in plot_dict_st_dst.values()]))
+        scatterd(x, y, labels=None, class_labels=class_lab, thumbnails=thumbs, xlabel='NDVI', ylabel='log10(TAGC)')
+        pylab.grid(zorder=-1)
+
+################################################################
+# check effect of window rotation
+# win_sizes = [np.array((8, 8)), np.array((42, 42))]
+
+rotations = np.arange(-45, 45.0, 5.)
+res = np.zeros((rotations.__len__(), 5))
+for ri, rot in enumerate(rotations):
+
+    plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict,
+                                     win_sizes=[np.array([8, 8]), np.array([42, 42])],
+                                     win_rotation=rot, win_origin='BL')
+
+    x = np.array([plot['NDVI'] for plot in plot_dict.values()])
+    y = np.log10([plot['TAGC'] for plot in plot_dict.values()])
+    class_lab = np.array([plot['class'] for plot in plot_dict.values()])
+    class_labi = np.array([plot['classi'] for plot in plot_dict.values()])
+    (slope, intercept, r, p, stde) = stats.linregress(x, y)
+    res[ri, 0] = r ** 2
+    for ci, cclass in enumerate(['OL', 'DST', 'ST']):
+        class_idx = class_lab == cclass
+        (slope, intercept, r, p, stde) = stats.linregress(x[class_idx], y[class_idx])
+        res[ri, ci + 1] = r ** 2
+    class_idx = np.logical_not(class_lab == 'OL')
+    (slope, intercept, r, p, stde) = stats.linregress(x[class_idx], y[class_idx])
+    res[ri, 4] = r ** 2
+
+res_lab = ['All', 'OL', 'DST', 'ST', '*ST']
+fig = plt.figure()
+for ci in range(0, res.shape[1]):
+    ax = fig.add_subplot(2, 3, ci + 1)
+    ax.plot(rotations, res[:, ci])
+    ax.set_xlabel('rotations')
+    ax.set_ylabel('r**2')
+    ax.set_title(res_lab[ci])
 
 
 ################################################################
