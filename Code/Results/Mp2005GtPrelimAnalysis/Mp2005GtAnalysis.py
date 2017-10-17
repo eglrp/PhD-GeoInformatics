@@ -680,7 +680,7 @@ res = np.zeros((rotations.__len__(), 5))
 for ri, rot in enumerate(rotations):
 
     plot_dict = extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict,
-                                     win_sizes=[np.array([8, 8]), np.array([42, 42])],
+                                     win_sizes=[np.array([6, 6]), np.array([8, 8])],
                                      win_rotation=rot, win_origin='BL')
 
     x = np.array([plot['NDVI'] for plot in plot_dict.values()])

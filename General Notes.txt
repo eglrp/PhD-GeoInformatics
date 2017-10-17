@@ -1194,6 +1194,22 @@ It follows that small plots should be employed for dense stands with small trees
 - 10x10m plots are amongst the smallest used in lit.  
 - Stratification only helps if there is real separation between strata - in this case, each stratum can be modelled separately using less plots in ttl than would have been required if all strata were modelled together.  In MP 2005 gt, there is not great separation between strata - which points in part to the need to increase at least DST plot sizes.  But it also means that modelling is best done on all data, not on strata.  
 
+Combining NGI RGB and NIR
+--------------------------
+- The georef NIR files are shifted/rotated relative to RGB files.  The NIR files also have different NODATA borders so the geotransform cannot simply be copied from RGB to NIR. 
+- Also note that the NIR files have slightly different pixel sizes (& orientations ?) and so will need to be resampled to the RGB grid
+- We want to make 4 band images in the RGB projection & geotransform so that we can apply orthorect using NGI aerotriangulation
+  Somehow we need to either 
+  A) Georef the NIR files correctly and then resample to RGB projection and stack on top of RGB file (either adding or removing NODATA boundary as appropriate)
+  B) ???
+- A) there is a way doc'd here https://gis.stackexchange.com/questions/61512/calculating-image-boundary-footprint-of-satellite-images-using-open-source-too to extract raster boundary into vector.  
+     - Make boundary for NIR and RGB files 
+     - Find xform between the boundaries 
+       Either a) - Apply the xform to the NIR geotransform/(extents) and overwrite the NIR file with this data
+       	         - Resample the NIR image to the RGB grid and extent (?)
+				 - Stack bands 
+		or b) ??? 
+    transform = osr.CoordinateTransformation(cs_gt_spatial_ref, osr.SpatialReference(ds.GetProjection()))
 
 
 
