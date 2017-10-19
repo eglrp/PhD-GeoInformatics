@@ -10,7 +10,7 @@ setlocal enabledelayedexpansion
 
 REM Mosaic the 1st 2 tiles
 
-set nirFile="E:\NIR\3323D_2015_1001\NIR\3323d_2015_1001_01~0002_n.tif"
+set nirFile="E:\NIR\3323D_2015_1001\NIR\3323d_2015_1001_01~0002_n - scratch.tif"
 set rgbFile="E:\Unrectified_Aerials\3323D_2015_1001\3323D_2015_1001_01_0002_RGB.tif"
 REM gdal_merge.py -o %outFile% %mulR1C1% %mulR1C2%
 
@@ -30,4 +30,11 @@ echo %nirFile%2.vrt
 gdal_translate -b 1 -of vrt -a_nodata 0 %nirFile%.vrt %nirFile%2.vrt
 echo %nirFile%.shp
 gdal_polygonize.py -8 %nirFile%2.vrt -b 1 -f "ESRI Shapefile" %nirFile%.shp
+pause
+
+REM add NIR and RGB bands into one file to see if it works
+REM gdal_merge.py -o E:\NIR\3323D_2015_1001\NIR\RGBNtest.tif -separate %rgbFile% %nirFile%
+pause
+gdalbuildvrt E:\NIR\3323D_2015_1001\NIR\RGBNtest.vrt -separate %rgbFile% %nirFile%
+gdal_translate E:\NIR\3323D_2015_1001\NIR\RGBNtest.vrt E:\NIR\3323D_2015_1001\NIR\RGBNtest.vrt.tif
 pause
