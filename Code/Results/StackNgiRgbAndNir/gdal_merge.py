@@ -472,7 +472,12 @@ def main( argv=None ):
             print('Creation failed, terminating gdal_merge.')
             sys.exit( 1 )
 
-        t_fh.SetGeoTransform( geotransform )
+
+        if separate != 0:
+            t_fh.SetGeoTransform( file_infos[0].geotransform )  # dh hack for copying geotransform with rotation
+        else:
+            t_fh.SetGeoTransform( geotransform )
+
         t_fh.SetProjection( file_infos[0].projection )
 
         if copy_pct:

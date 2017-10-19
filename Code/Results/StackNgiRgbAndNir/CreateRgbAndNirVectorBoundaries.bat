@@ -16,25 +16,27 @@ REM gdal_merge.py -o %outFile% %mulR1C1% %mulR1C2%
 
 
 echo %rgbFile%.vrt
-gdal_translate -b mask -of vrt -a_nodata 0 %rgbFile% %rgbFile%.vrt
+REM gdal_translate -b mask -of vrt -a_nodata 0 %rgbFile% %rgbFile%.vrt
 REM Note the  -a_nodata 0 doesn't seem to work when the mask is input, so do another pass
 echo %rgbFile%2.vrt
-gdal_translate -b 1 -of vrt -a_nodata 0 %rgbFile%.vrt %rgbFile%2.vrt
+REM gdal_translate -b 1 -of vrt -a_nodata 0 %rgbFile%.vrt %rgbFile%2.vrt
 echo %rgbFile%.shp
-gdal_polygonize.py -8 %rgbFile%2.vrt -b 1 -f "ESRI Shapefile" %rgbFile%.shp
+REM gdal_polygonize.py -8 %rgbFile%2.vrt -b 1 -f "ESRI Shapefile" %rgbFile%.shp
 pause
-echo %nirFile%.vrt
-gdal_translate -b mask -of vrt -a_nodata 0 %nirFile% %nirFile%.vrt
+REM echo %nirFile%.vrt
+REM gdal_translate -b mask -of vrt -a_nodata 0 %nirFile% %nirFile%.vrt
 REM Note the  -a_nodata 0 doesn't seem to work when the mask is input, so do another pass
 echo %nirFile%2.vrt
-gdal_translate -b 1 -of vrt -a_nodata 0 %nirFile%.vrt %nirFile%2.vrt
+REM gdal_translate -b 1 -of vrt -a_nodata 0 %nirFile%.vrt %nirFile%2.vrt
 echo %nirFile%.shp
-gdal_polygonize.py -8 %nirFile%2.vrt -b 1 -f "ESRI Shapefile" %nirFile%.shp
+REM gdal_polygonize.py -8 %nirFile%2.vrt -b 1 -f "ESRI Shapefile" %nirFile%.shp
 pause
 
 REM add NIR and RGB bands into one file to see if it works
 REM gdal_merge.py -o E:\NIR\3323D_2015_1001\NIR\RGBNtest.tif -separate %rgbFile% %nirFile%
 pause
-gdalbuildvrt E:\NIR\3323D_2015_1001\NIR\RGBNtest.vrt -separate %rgbFile% %nirFile%
-gdal_translate E:\NIR\3323D_2015_1001\NIR\RGBNtest.vrt E:\NIR\3323D_2015_1001\NIR\RGBNtest.vrt.tif
+REM gdalbuildvrt E:\NIR\3323D_2015_1001\NIR\RGBNtest.vrt -separate %rgbFile% %nirFile%
+REM gdal_translate E:\NIR\3323D_2015_1001\NIR\RGBNtest.vrt E:\NIR\3323D_2015_1001\NIR\RGBNtest.vrt.tif
+pause
+gdal_merge.py -o E:\NIR\3323D_2015_1001\NIR\RGBNtest2.tif -co "COMPRESS=JPEG" -co "JPEG_QUALITY=85" -co "NBITS=12" -a_nodata 0 -separate %rgbFile% %nirFile%
 pause
