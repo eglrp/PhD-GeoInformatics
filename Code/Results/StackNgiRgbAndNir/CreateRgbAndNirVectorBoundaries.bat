@@ -39,4 +39,5 @@ REM gdalbuildvrt E:\NIR\3323D_2015_1001\NIR\RGBNtest.vrt -separate %rgbFile% %ni
 REM gdal_translate E:\NIR\3323D_2015_1001\NIR\RGBNtest.vrt E:\NIR\3323D_2015_1001\NIR\RGBNtest.vrt.tif
 pause
 gdal_merge.py -o E:\NIR\3323D_2015_1001\NIR\RGBNtest2.tif -co "COMPRESS=JPEG" -co "JPEG_QUALITY=85" -co "NBITS=12" -a_nodata 0 -separate %rgbFile% %nirFile%
+gdaladdo --config COMPRESS_OVERVIEW JPEG -ro -r average RGBNtest2.tif 2 4 8 16 32
 pause
