@@ -165,7 +165,7 @@ class file_info:
 
         Returns 1 on success or 0 if the file can't be opened.
         """
-        fh = gdal.Open( filename )
+        fh = gdal.Open( filename | gdal.GA_Update)  #dh
         if fh is None:
             return 0
 

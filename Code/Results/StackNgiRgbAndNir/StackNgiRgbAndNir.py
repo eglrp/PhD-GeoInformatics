@@ -9,7 +9,7 @@ import ogr
 import pylab
 import numpy as np
 
-nirFile = "E:/NIR/3323D_2015_1001/NIR/3323d_2015_1001_01~0002_n - scratch.tif"
+nirFile = "E:/NIR/3323D_2015_1001/NIR/3323d_2015_1001_01~0002_n.tif"
 rgbFile = "E:/Unrectified_Aerials/3323D_2015_1001/3323D_2015_1001_01_0002_RGB.tif"
 combFile = "E:/NIR/3323D_2015_1001/NIR/RGBNtest.tif"
 
@@ -42,8 +42,11 @@ def UpdateGeotransform(fileName, transform):
     #     ds.SetGeoTransform(gt)
     ulx = geotransform[0]
     uly = geotransform[3]
-    lrx = ulx + np.float64(ds.RasterXSize) * geotransform[1]
-    lry = uly + np.float64(ds.RasterYSize) * geotransform[5]
+    # >> Xgeo = GT(0) + Xpixel * GT(1) + Yline * GT(2)
+    # >> Ygeo = GT(3) + Xpixel * GT(4) + Yline * GT(5)
+    # include rotation terms
+    lrx = ulx + ds.RasterXSize * geotransform[1] + ds.RasterYSize * geotransform[2]
+    lry = uly + ds.RasterYSize * geotransform[5] + ds.RasterXSize * geotransform[4]
     print type(geotransform[0])
     print geotransform
     print "UL: (", ulx, ", ", uly, ")"
@@ -96,7 +99,7 @@ def CopyGeotransform(srcFile, destFile):
     if not destGt is None:
         print 'Origin = (',destGt[0], ',',destGt[3],')'
         print 'Pixel Size = (',destGt[1], ',',destGt[5],')'
-    ds.SetGeoTransform(srcGt)
+    # ds.SetGeoTransform(srcGt)
     ds = None
 
 
@@ -150,11 +153,12 @@ def GetCornerCoords(fileName):
 
 nirPts = GetCornerCoords(nirFile + ".shp")
 rgbPts = GetCornerCoords(rgbFile + ".shp")
-
-pylab.figure()
-pylab.plot(nirPts[:,0], nirPts[:,1],'b')
-pylab.plot(rgbPts[:,0], rgbPts[:,1],'r')
-pylab.axis('square')
+#
+# pylab.figure()
+# pylab.plot(nirPts[:,0], nirPts[:,1],'b')
+# pylab.plot(rgbPts[:,0], rgbPts[:,1],'r')
+# pylab.axis('square')
+# pylab.hold('on')
 
 # nirPts * trans = rgbPts
 # n x 3 * 3 x 2 = n x 2
@@ -169,9 +173,10 @@ rgbPts2, dum = UpdateGeotransform(rgbFile, trans)
 pylab.figure()
 pylab.plot(nirPts[:,0], nirPts[:,1], 'b')
 pylab.plot(rgbPts[:,0], rgbPts[:,1], 'r')
-pylab.plot(rgbPts2[:,0], rgbPts2[:,1], 'g-x')
+pylab.plot(pts[:,0], pts[:,1], 'b-x')
+pylab.plot(rgbPts2[:,0], rgbPts2[:,1], 'r-x')
 # pylab.plot(pts[:,0], pts[:,1], 'g-x')
-# pylab.plot(transPts[:,0], transPts[:,1], 'k-x')
+pylab.plot(transPts[:,0], transPts[:,1], 'k--x')
 pylab.axis('square')
 
 #
