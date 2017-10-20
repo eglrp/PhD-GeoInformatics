@@ -34,8 +34,13 @@ REM echo rgbFileR: !rgbFileR!
 echo rgbFile: !rgbFile!
 echo outFile: !outFile!
 REM echo tmp: !tmp!
+if not exist %3\!outFile! (
+.\copy_geotransform.py "%1\!rgbFile!" "%%i"
 .\gdal_merge.py -o %3\!outFile! -co "COMPRESS=JPEG" -co "JPEG_QUALITY=85" -co "NBITS=12" -a_nodata 0 -separate "%1\!rgbFile!" "%%i" 
 REM gdaladdo --config COMPRESS_OVERVIEW JPEG -ro -r average RGBNtest2.tif 2 4 8 16 32
+) else (
+echo !outFile! exists - skipping
+)
 )
 
 pause

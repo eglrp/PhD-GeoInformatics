@@ -21,7 +21,7 @@ def CopyGeotransform(srcFile, destFile):
         print "Open failed."
         return
     srcGt = ds.GetGeoTransform()
-
+    print "Source Geotransform: ", srcGt
     if False:
         print 'Driver: ', ds.GetDriver().ShortName,'/', \
               ds.GetDriver().LongName
@@ -38,7 +38,7 @@ def CopyGeotransform(srcFile, destFile):
         print "Open failed."
         return
     destGt = ds.GetGeoTransform()
-
+    print "Dest Geotransform: ", destGt
     if False:
         print 'Driver: ', ds.GetDriver().ShortName,'/', \
               ds.GetDriver().LongName
@@ -48,7 +48,8 @@ def CopyGeotransform(srcFile, destFile):
         if not destGt is None:
             print 'Origin = (',destGt[0], ',',destGt[3],')'
             print 'Pixel Size = (',destGt[1], ',',destGt[5],')'
-        # ds.SetGeoTransform(srcGt)
+
+    ds.SetGeoTransform(srcGt)
     ds = None
 
 
@@ -112,7 +113,7 @@ def main( argv=None ):
         Usage()
         sys.exit( 1 )
 
-    if len(names) >= 2:
+    if len(names) > 2:
         print('Use only 2 files: src and dest.')
         Usage()
         sys.exit( 1 )

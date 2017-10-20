@@ -165,7 +165,7 @@ class file_info:
 
         Returns 1 on success or 0 if the file can't be opened.
         """
-        fh = gdal.Open( filename | gdal.GA_Update)  #dh
+        fh = gdal.Open( filename)
         if fh is None:
             return 0
 
@@ -219,12 +219,24 @@ class file_info:
         t_geotransform = t_fh.GetGeoTransform()
         t_ulx = t_geotransform[0]
         t_uly = t_geotransform[3]
-        t_lrx = t_geotransform[0] + t_fh.RasterXSize * t_geotransform[1]
-        t_lry = t_geotransform[3] + t_fh.RasterYSize * t_geotransform[5]
+        if True:
+            t_lrx = t_geotransform[0] + t_fh.RasterXSize * t_geotransform[1]
+            t_lry = t_geotransform[3] + t_fh.RasterYSize * t_geotransform[5]
+        else:  # dh - include rotation
+            t_lrx = t_geotransform[0] + t_fh.RasterXSize * t_geotransform[1] + t_fh.RasterYSize * t_geotransform[2]
+            t_lry = t_geotransform[3] + t_fh.RasterYSize * t_geotransform[5] + t_fh.RasterXSize * t_geotransform[4]
+
+        # lrx = ulx + ds.RasterXSize * geotransform[1] + ds.RasterYSize * geotransform[2]
+        # lry = uly + ds.RasterYSize * geotransform[5] + ds.RasterXSize * geotransform[4]
 
         # figure out intersection region
-        tgw_ulx = max(t_ulx,self.ulx)
-        tgw_lrx = min(t_lrx,self.lrx)
+        if t_geotransform[1] < 0:  # dh bugfix
+            tgw_ulx = min(t_ulx,self.ulx)
+            tgw_lrx = max(t_lrx,self.lrx)
+        else:
+            tgw_ulx = max(t_ulx, self.ulx)
+            tgw_lrx = min(t_lrx, self.lrx)
+
         if t_geotransform[5] < 0:
             tgw_uly = min(t_uly,self.uly)
             tgw_lry = max(t_lry,self.lry)
@@ -233,8 +245,13 @@ class file_info:
             tgw_lry = min(t_lry,self.lry)
 
         # do they even intersect?
-        if tgw_ulx >= tgw_lrx:
+        # bugfix by dh
+        if t_geotransform[1] < 0 and tgw_ulx <= tgw_lrx:
             return 1
+        if t_geotransform[1] > 0 and tgw_ulx >= tgw_lrx:
+            return 1
+        # if tgw_ulx >= tgw_lrx:
+        #     return 1
         if t_geotransform[5] < 0 and tgw_uly <= tgw_lry:
             return 1
         if t_geotransform[5] > 0 and tgw_uly >= tgw_lry:
