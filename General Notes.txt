@@ -212,6 +212,15 @@ Rectification
   - Using hartebeeshoek datum makes sense but contrary to advertisement NGI seems to be using plain WGS84.  Also GDAL doesn't seem to recognise hartebeeshoek.  The choice in PCI datum/ellipse is either or not both and
   - To set output dir: on 1st run - before anything else, select all files and shift to process box, select dir for 1st file, rest are auto named
   
+  Oct 2017:
+  - NB: The coord sys of the NGI Aerotriang / exterior orientation files is contained in the filenames eg *Lo25Wgs84.* means TM 25 with datum=WGS84.  It is the same projection as the unrectified NGI supplied images.  Note that it is datum and not ellipse = WGS84.
+  - If there are not enough (all?) images covered by the DEM, PCI gives an error after a v long wait.  To avoid this, set a clip region to the valid DEM and also only load relevant NGI images.
+  - Do not setup TIF jpeg compression for output format as PCI gives an error about 16bit files. 
+  - PCI builds internal overviews by default. 
+  - The hartbeeshoek94 datum files report a proj4 string as ellips=WGS84.  If this is right it means CGA is screwing up.  
+  - NNB "The difference between Hartebeesthoek 94 coordinates and WGS84 as used for the reference frame of GPS is approximately 0.2 m and 0.3 m in Lo y and x coordinates respectively. Therefore coordinates in these systems can normally be assumed to be coincident for most GIS applications."  http://www.georeference.org/forum/t115330
+  i.e. we may not know if we are incorrectly using Hartebeeshoek94 or WGS84
+  
 GDAL
 ----------------
  - A GDALDataset has a 3x2 affine xform matrix to project from image to projected space.  It is called GeoTransform.  It is the same as the camera intrinsic matrix in the camera model and the "SpatialReference" in the mapping toolbox.
