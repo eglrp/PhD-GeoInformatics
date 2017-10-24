@@ -6,13 +6,14 @@ woodyFileName = "C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Field 
 
 from openpyxl import load_workbook
 import numpy as np
-
+import pylab
+from scipy.stats import gaussian_kde
 
 def EvalRecordCs(allometricModels, record):
     # vars = [model['vars'] for model in allometricModels.values()]
     if not allometricModels.__contains__(record['species']):
         print record['species'], " not found"
-        return -1.
+        return 0.
     model = allometricModels[record['species']]
     x = 0.
     if model['vars'] == 'CA.H':
@@ -27,7 +28,7 @@ def EvalRecordCs(allometricModels, record):
         x = record['height']
     else:
         print model['vars'], " unknown variable"
-        return -1.
+        return 0.
     yn = model['ay']*x**model['by']   # "naive"
     Yc = yn*model['duanz']
     return Yc
@@ -88,19 +89,69 @@ for ws in wb:
         if r[1].value is None:
             break
         record = {}
-        record['species'] = str(r[1].value).strip()
+        species = str(r[1].value).strip()
+        # hack for unknown plants
+        if species == 'A. ferox' or species.__contains__('Aloe'):
+            species = 'A. speciosa'
+        # if species.__contains__('unk'):
+        if species.__contains__('Asparagus') or species.__contains__('hairy'):
+            species = 'A. capensis'
+        if species.__contains__('Crassula') or species.__contains__('horns'):
+            species = 'C. ovata'
+
+        record['species'] = species
         record['canopyWidth'] = r[2].value
         record['canopyLength'] = r[3].value
         record['height'] = r[4].value
         record['bsd'] = r[5].value
-        Yc = EvalRecordCs(allometricModels, record)
-        record['Yc'] = Yc
+        yc = EvalRecordCs(allometricModels, record)
+        record['yc'] = yc
         plot.append(record)
     plots[ws.title] = plot
 wb = None
 
-vars = [model['vars'] for model in allometricModels.values()]
-print np.unique(vars)
+# vars = [model['vars'] for model in allometricModels.values()]
+# print np.unique(vars)
+pylab.close('all')
+i = 1
+ycTtl = 0.
+pylab.figure()
+for plotKey, plot in plots.iteritems():
+    yc = np.array([record['yc'] for record in plot])
+    height = np.float64([record['height'] for record in plot])
+    ycTtl += yc.sum()
 
-yc = [record['Yc'] for record in plot]
-print np.unique(vars)
+    kde = gaussian_kde(height)  #, bw_method=bandwidth / height.std(ddof=1))
+    heightGrid = np.linspace(0, 300, 100)
+    heightKde = kde.evaluate(heightGrid)
+    pylab.subplot(2, 3, i)
+    pylab.plot(heightGrid, heightKde)
+    pylab.grid('on')
+    pylab.xlabel('Height (cm)')
+    pylab.ylabel('KDE(Height)')
+    pylab.title(plotKey)
+    i += 1
+
+i = 1
+pylab.figure()
+for plotKey, plot in plots.iteritems():
+    yc = np.array([record['yc'] for record in plot])
+    height = np.float64([record['height'] for record in plot])
+    idx = np.argsort(height)
+
+    ycCumSum = np.cumsum(-yc[idx])
+    pylab.subplot(2, 3, i)
+    pylab.plot(height[idx], ycCumSum)
+    pylab.grid('on')
+    pylab.xlabel('Height (cm)')
+    pylab.ylabel('Cdf(CS)')
+    pylab.xlim([0, 350])
+    pylab.title(plotKey)
+    i += 1
+
+    idx = height > 50
+    print str(plotKey), ": "
+    print "Ttl: ", str(yc.sum())
+    print "Hgt>50: ", str(yc[idx].sum())
+    print "Hgt>50/Plot Ttl: ", str(yc[idx].sum()/yc.sum())
+    print "Hgt>50/Ttl: ", str(yc[idx].sum()/ycTtl)
