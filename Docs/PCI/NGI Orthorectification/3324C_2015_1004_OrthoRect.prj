@@ -69,16 +69,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -9.79315000000000E+04  -3.70632100000000E+06
 	OrthoXY: 1  -9.40200000000000E+04  -3.71310100000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -142,16 +142,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -9.67520000000000E+04  -3.70614150000000E+06
 	OrthoXY: 1  -9.29860000000000E+04  -3.71295850000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -215,16 +215,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -9.55365000000000E+04  -3.70625950000000E+06
 	OrthoXY: 1  -9.17390000000000E+04  -3.71311450000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -288,16 +288,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -9.42650000000000E+04  -3.70625850000000E+06
 	OrthoXY: 1  -9.04065000000000E+04  -3.71312850000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -361,16 +361,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -9.30280000000000E+04  -3.70628850000000E+06
 	OrthoXY: 1  -8.92850000000000E+04  -3.71295750000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -434,16 +434,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -9.17925000000000E+04  -3.70624500000000E+06
 	OrthoXY: 1  -8.80770000000000E+04  -3.71289650000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -507,16 +507,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -9.05875000000000E+04  -3.70616400000000E+06
 	OrthoXY: 1  -8.68490000000000E+04  -3.71289850000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -580,16 +580,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.93320000000000E+04  -3.70630000000000E+06
 	OrthoXY: 1  -8.55995000000000E+04  -3.71284950000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -653,16 +653,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.81155000000000E+04  -3.70634200000000E+06
 	OrthoXY: 1  -8.43955000000000E+04  -3.71285400000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -726,16 +726,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.68780000000000E+04  -3.70641550000000E+06
 	OrthoXY: 1  -8.31590000000000E+04  -3.71301950000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -799,16 +799,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.56970000000000E+04  -3.70608100000000E+06
 	OrthoXY: 1  -8.19030000000000E+04  -3.71261800000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -872,16 +872,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.45580000000000E+04  -3.70612450000000E+06
 	OrthoXY: 1  -8.07740000000000E+04  -3.71262850000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -945,16 +945,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.33015000000000E+04  -3.70623100000000E+06
 	OrthoXY: 1  -7.95340000000000E+04  -3.71272250000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -1018,16 +1018,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.20340000000000E+04  -3.70629500000000E+06
 	OrthoXY: 1  -7.82845000000000E+04  -3.71283100000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -1091,16 +1091,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.08005000000000E+04  -3.70620450000000E+06
 	OrthoXY: 1  -7.70300000000000E+04  -3.71257050000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -1164,16 +1164,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.95620000000000E+04  -3.70619650000000E+06
 	OrthoXY: 1  -7.57870000000000E+04  -3.71256150000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -1237,16 +1237,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.83625000000000E+04  -3.70627550000000E+06
 	OrthoXY: 1  -7.45815000000000E+04  -3.71260450000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -1310,16 +1310,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.71775000000000E+04  -3.70616550000000E+06
 	OrthoXY: 1  -7.33810000000000E+04  -3.71255650000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -1383,16 +1383,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.59645000000000E+04  -3.70610600000000E+06
 	OrthoXY: 1  -7.21840000000000E+04  -3.71259750000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -1456,16 +1456,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.47515000000000E+04  -3.70624900000000E+06
 	OrthoXY: 1  -7.09775000000000E+04  -3.71274500000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -1529,16 +1529,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.35180000000000E+04  -3.70606950000000E+06
 	OrthoXY: 1  -6.97000000000000E+04  -3.71262550000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -1602,16 +1602,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.22605000000000E+04  -3.70607250000000E+06
 	OrthoXY: 1  -6.84460000000000E+04  -3.71255800000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -1675,16 +1675,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.10535000000000E+04  -3.70603050000000E+06
 	OrthoXY: 1  -6.72315000000000E+04  -3.71264900000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -1748,16 +1748,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.98310000000000E+04  -3.70596850000000E+06
 	OrthoXY: 1  -6.59845000000000E+04  -3.71270100000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -1821,16 +1821,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.86150000000000E+04  -3.70594450000000E+06
 	OrthoXY: 1  -6.47585000000000E+04  -3.71268950000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -1894,16 +1894,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.73990000000000E+04  -3.70596150000000E+06
 	OrthoXY: 1  -6.35325000000000E+04  -3.71275650000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -1967,16 +1967,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.59555000000000E+04  -3.70594000000000E+06
 	OrthoXY: 1  -6.20655000000000E+04  -3.71279350000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -2040,16 +2040,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.44860000000000E+04  -3.70595450000000E+06
 	OrthoXY: 1  -6.06105000000000E+04  -3.71283100000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -2113,16 +2113,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.30360000000000E+04  -3.70583200000000E+06
 	OrthoXY: 1  -5.91355000000000E+04  -3.71273550000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -2186,16 +2186,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.15870000000000E+04  -3.70585100000000E+06
 	OrthoXY: 1  -5.76685000000000E+04  -3.71278000000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -2259,16 +2259,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.00995000000000E+04  -3.70586200000000E+06
 	OrthoXY: 1  -5.61900000000000E+04  -3.71280800000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -2332,16 +2332,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.85530000000000E+04  -3.70586100000000E+06
 	OrthoXY: 1  -5.46315000000000E+04  -3.71285850000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -2405,16 +2405,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.71920000000000E+04  -3.70562100000000E+06
 	OrthoXY: 1  -5.32260000000000E+04  -3.71261700000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -2478,16 +2478,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.57545000000000E+04  -3.70589050000000E+06
 	OrthoXY: 1  -5.18315000000000E+04  -3.71286550000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -2551,16 +2551,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.43190000000000E+04  -3.70581450000000E+06
 	OrthoXY: 1  -5.03875000000000E+04  -3.71276350000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -2624,16 +2624,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.28555000000000E+04  -3.70585750000000E+06
 	OrthoXY: 1  -4.89095000000000E+04  -3.71287700000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -2697,16 +2697,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.13640000000000E+04  -3.70562350000000E+06
 	OrthoXY: 1  -4.74210000000000E+04  -3.71261750000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -2770,16 +2770,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -4.99065000000000E+04  -3.70571650000000E+06
 	OrthoXY: 1  -4.59560000000000E+04  -3.71272750000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -2843,16 +2843,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -4.84570000000000E+04  -3.70568450000000E+06
 	OrthoXY: 1  -4.45255000000000E+04  -3.71270400000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -2916,16 +2916,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -4.70065000000000E+04  -3.70568350000000E+06
 	OrthoXY: 1  -4.31070000000000E+04  -3.71266000000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -2989,16 +2989,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -4.54720000000000E+04  -3.70568350000000E+06
 	OrthoXY: 1  -4.15540000000000E+04  -3.71265350000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -3062,16 +3062,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -9.79205000000000E+04  -3.71090700000000E+06
 	OrthoXY: 1  -9.41030000000000E+04  -3.71753850000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -3135,16 +3135,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -9.64565000000000E+04  -3.71122900000000E+06
 	OrthoXY: 1  -9.26500000000000E+04  -3.71775700000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -3208,16 +3208,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -9.52505000000000E+04  -3.71094400000000E+06
 	OrthoXY: 1  -9.13660000000000E+04  -3.71760600000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -3281,16 +3281,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -9.39680000000000E+04  -3.71096600000000E+06
 	OrthoXY: 1  -9.00955000000000E+04  -3.71767000000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -3354,16 +3354,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -9.26225000000000E+04  -3.71092250000000E+06
 	OrthoXY: 1  -8.87610000000000E+04  -3.71760200000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -3427,16 +3427,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -9.12765000000000E+04  -3.71098200000000E+06
 	OrthoXY: 1  -8.73765000000000E+04  -3.71764950000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -3500,16 +3500,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.99895000000000E+04  -3.71103350000000E+06
 	OrthoXY: 1  -8.60845000000000E+04  -3.71765100000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -3573,16 +3573,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.87185000000000E+04  -3.71100400000000E+06
 	OrthoXY: 1  -8.48180000000000E+04  -3.71761100000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -3646,16 +3646,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.74655000000000E+04  -3.71110400000000E+06
 	OrthoXY: 1  -8.35270000000000E+04  -3.71777250000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -3719,16 +3719,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.61715000000000E+04  -3.71103400000000E+06
 	OrthoXY: 1  -8.22455000000000E+04  -3.71768500000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -3792,16 +3792,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.49045000000000E+04  -3.71084900000000E+06
 	OrthoXY: 1  -8.10020000000000E+04  -3.71760200000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -3865,16 +3865,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.36920000000000E+04  -3.71105900000000E+06
 	OrthoXY: 1  -7.97085000000000E+04  -3.71785550000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -3938,16 +3938,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.24365000000000E+04  -3.71077300000000E+06
 	OrthoXY: 1  -7.85355000000000E+04  -3.71758350000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -4011,16 +4011,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.11915000000000E+04  -3.71074650000000E+06
 	OrthoXY: 1  -7.73055000000000E+04  -3.71755500000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -4084,16 +4084,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.99815000000000E+04  -3.71094300000000E+06
 	OrthoXY: 1  -7.60415000000000E+04  -3.71777400000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -4157,16 +4157,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.87260000000000E+04  -3.71087000000000E+06
 	OrthoXY: 1  -7.49295000000000E+04  -3.71773500000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -4230,16 +4230,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.74615000000000E+04  -3.71083050000000E+06
 	OrthoXY: 1  -7.37125000000000E+04  -3.71767350000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -4303,16 +4303,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.61895000000000E+04  -3.71068650000000E+06
 	OrthoXY: 1  -7.25225000000000E+04  -3.71752650000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -4376,16 +4376,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.49260000000000E+04  -3.71091150000000E+06
 	OrthoXY: 1  -7.11750000000000E+04  -3.71772600000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -4449,16 +4449,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.37110000000000E+04  -3.71071750000000E+06
 	OrthoXY: 1  -7.00340000000000E+04  -3.71736550000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -4522,16 +4522,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.24930000000000E+04  -3.71066900000000E+06
 	OrthoXY: 1  -6.88080000000000E+04  -3.71737100000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -4595,16 +4595,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.12980000000000E+04  -3.71070750000000E+06
 	OrthoXY: 1  -6.75835000000000E+04  -3.71749800000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -4668,16 +4668,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.01270000000000E+04  -3.71050950000000E+06
 	OrthoXY: 1  -6.63455000000000E+04  -3.71708800000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -4741,16 +4741,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.88735000000000E+04  -3.71082700000000E+06
 	OrthoXY: 1  -6.51690000000000E+04  -3.71746400000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -4814,16 +4814,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.77595000000000E+04  -3.71079150000000E+06
 	OrthoXY: 1  -6.39880000000000E+04  -3.71741250000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -4887,16 +4887,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.66195000000000E+04  -3.71043900000000E+06
 	OrthoXY: 1  -6.27755000000000E+04  -3.71712750000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -4960,16 +4960,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.53845000000000E+04  -3.71050550000000E+06
 	OrthoXY: 1  -6.15310000000000E+04  -3.71720050000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -5033,16 +5033,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.40605000000000E+04  -3.71040800000000E+06
 	OrthoXY: 1  -6.01775000000000E+04  -3.71716900000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -5106,16 +5106,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.26910000000000E+04  -3.71052500000000E+06
 	OrthoXY: 1  -5.88205000000000E+04  -3.71727650000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -5179,16 +5179,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.13115000000000E+04  -3.71052450000000E+06
 	OrthoXY: 1  -5.74320000000000E+04  -3.71736700000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -5252,16 +5252,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.99550000000000E+04  -3.71053900000000E+06
 	OrthoXY: 1  -5.60805000000000E+04  -3.71740200000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -5325,16 +5325,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.86410000000000E+04  -3.71034950000000E+06
 	OrthoXY: 1  -5.47280000000000E+04  -3.71724350000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -5398,16 +5398,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.72095000000000E+04  -3.71063950000000E+06
 	OrthoXY: 1  -5.33495000000000E+04  -3.71744650000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -5471,16 +5471,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.58340000000000E+04  -3.71065800000000E+06
 	OrthoXY: 1  -5.19705000000000E+04  -3.71745200000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -5544,16 +5544,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.45030000000000E+04  -3.71044800000000E+06
 	OrthoXY: 1  -5.06205000000000E+04  -3.71728100000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -5617,16 +5617,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.31430000000000E+04  -3.71035050000000E+06
 	OrthoXY: 1  -4.92500000000000E+04  -3.71713950000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -5690,16 +5690,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.17495000000000E+04  -3.71049750000000E+06
 	OrthoXY: 1  -4.78880000000000E+04  -3.71724400000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -5763,16 +5763,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.03575000000000E+04  -3.71060850000000E+06
 	OrthoXY: 1  -4.65145000000000E+04  -3.71728900000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -5836,16 +5836,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -4.90410000000000E+04  -3.71040900000000E+06
 	OrthoXY: 1  -4.51910000000000E+04  -3.71711050000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -5909,16 +5909,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -4.77035000000000E+04  -3.71035050000000E+06
 	OrthoXY: 1  -4.38125000000000E+04  -3.71709250000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -5982,16 +5982,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -4.64125000000000E+04  -3.71051050000000E+06
 	OrthoXY: 1  -4.25575000000000E+04  -3.71724750000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -6055,16 +6055,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -4.50685000000000E+04  -3.71051400000000E+06
 	OrthoXY: 1  -4.12410000000000E+04  -3.71726200000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -6128,16 +6128,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -4.51330000000000E+04  -3.71510450000000E+06
 	OrthoXY: 1  -4.14775000000000E+04  -3.72165200000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -6201,16 +6201,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -4.63460000000000E+04  -3.71495950000000E+06
 	OrthoXY: 1  -4.26320000000000E+04  -3.72159650000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -6274,16 +6274,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -4.74940000000000E+04  -3.71507250000000E+06
 	OrthoXY: 1  -4.37810000000000E+04  -3.72174950000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -6347,16 +6347,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -4.86665000000000E+04  -3.71505200000000E+06
 	OrthoXY: 1  -4.49460000000000E+04  -3.72172450000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -6420,16 +6420,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -4.97990000000000E+04  -3.71505100000000E+06
 	OrthoXY: 1  -4.60450000000000E+04  -3.72181900000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -6493,16 +6493,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.09315000000000E+04  -3.71491950000000E+06
 	OrthoXY: 1  -4.71970000000000E+04  -3.72167200000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -6566,16 +6566,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.20400000000000E+04  -3.71496550000000E+06
 	OrthoXY: 1  -4.82990000000000E+04  -3.72173650000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -6639,16 +6639,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.32130000000000E+04  -3.71489450000000E+06
 	OrthoXY: 1  -4.94040000000000E+04  -3.72166600000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -6712,16 +6712,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.43470000000000E+04  -3.71507150000000E+06
 	OrthoXY: 1  -5.05515000000000E+04  -3.72183200000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -6785,16 +6785,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.54745000000000E+04  -3.71506550000000E+06
 	OrthoXY: 1  -5.16485000000000E+04  -3.72183050000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -6858,16 +6858,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.66370000000000E+04  -3.71505000000000E+06
 	OrthoXY: 1  -5.28835000000000E+04  -3.72182200000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -6931,16 +6931,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.78210000000000E+04  -3.71501150000000E+06
 	OrthoXY: 1  -5.39900000000000E+04  -3.72175600000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -7004,16 +7004,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.88960000000000E+04  -3.71515300000000E+06
 	OrthoXY: 1  -5.50825000000000E+04  -3.72191500000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -7077,16 +7077,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.00590000000000E+04  -3.71506050000000E+06
 	OrthoXY: 1  -5.62540000000000E+04  -3.72181900000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -7150,16 +7150,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.11575000000000E+04  -3.71511150000000E+06
 	OrthoXY: 1  -5.74710000000000E+04  -3.72186350000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -7223,16 +7223,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.23115000000000E+04  -3.71512050000000E+06
 	OrthoXY: 1  -5.85585000000000E+04  -3.72183850000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -7296,16 +7296,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.34455000000000E+04  -3.71504650000000E+06
 	OrthoXY: 1  -5.96920000000000E+04  -3.72180450000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -7369,16 +7369,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.45280000000000E+04  -3.71512500000000E+06
 	OrthoXY: 1  -6.08030000000000E+04  -3.72189550000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -7442,16 +7442,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.57915000000000E+04  -3.71520500000000E+06
 	OrthoXY: 1  -6.19725000000000E+04  -3.72211500000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -7515,16 +7515,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.69250000000000E+04  -3.71527850000000E+06
 	OrthoXY: 1  -6.30525000000000E+04  -3.72208700000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -7588,16 +7588,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.80600000000000E+04  -3.71524000000000E+06
 	OrthoXY: 1  -6.42830000000000E+04  -3.72197950000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -7661,16 +7661,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.92240000000000E+04  -3.71529750000000E+06
 	OrthoXY: 1  -6.53680000000000E+04  -3.72204850000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -7734,16 +7734,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.03515000000000E+04  -3.71547350000000E+06
 	OrthoXY: 1  -6.64040000000000E+04  -3.72213550000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -7807,16 +7807,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.15580000000000E+04  -3.71549450000000E+06
 	OrthoXY: 1  -6.76230000000000E+04  -3.72209950000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -7880,16 +7880,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.27765000000000E+04  -3.71551050000000E+06
 	OrthoXY: 1  -6.88305000000000E+04  -3.72201100000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -7953,16 +7953,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.40035000000000E+04  -3.71536000000000E+06
 	OrthoXY: 1  -7.00795000000000E+04  -3.72194300000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -8026,16 +8026,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.52175000000000E+04  -3.71538500000000E+06
 	OrthoXY: 1  -7.13080000000000E+04  -3.72186150000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -8099,16 +8099,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.65415000000000E+04  -3.71528550000000E+06
 	OrthoXY: 1  -7.26160000000000E+04  -3.72199300000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -8172,16 +8172,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.77790000000000E+04  -3.71533850000000E+06
 	OrthoXY: 1  -7.38455000000000E+04  -3.72203300000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -8245,16 +8245,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.89930000000000E+04  -3.71522150000000E+06
 	OrthoXY: 1  -7.50520000000000E+04  -3.72192950000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -8318,16 +8318,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.01895000000000E+04  -3.71539550000000E+06
 	OrthoXY: 1  -7.62845000000000E+04  -3.72201350000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -8391,16 +8391,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.15035000000000E+04  -3.71520050000000E+06
 	OrthoXY: 1  -7.76035000000000E+04  -3.72189700000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -8464,16 +8464,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.27990000000000E+04  -3.71522700000000E+06
 	OrthoXY: 1  -7.89240000000000E+04  -3.72184100000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -8537,16 +8537,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.41135000000000E+04  -3.71513700000000E+06
 	OrthoXY: 1  -8.02355000000000E+04  -3.72200100000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -8610,16 +8610,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.53325000000000E+04  -3.71520550000000E+06
 	OrthoXY: 1  -8.14535000000000E+04  -3.72207650000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -8683,16 +8683,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.65705000000000E+04  -3.71523700000000E+06
 	OrthoXY: 1  -8.26825000000000E+04  -3.72203350000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -8756,16 +8756,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.78270000000000E+04  -3.71526200000000E+06
 	OrthoXY: 1  -8.39545000000000E+04  -3.72197950000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -8829,16 +8829,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.90895000000000E+04  -3.71516650000000E+06
 	OrthoXY: 1  -8.52440000000000E+04  -3.72195950000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -8902,16 +8902,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -9.03235000000000E+04  -3.71517900000000E+06
 	OrthoXY: 1  -8.64915000000000E+04  -3.72197000000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -8975,16 +8975,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -9.15860000000000E+04  -3.71510350000000E+06
 	OrthoXY: 1  -8.77330000000000E+04  -3.72187850000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -9048,16 +9048,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -9.28195000000000E+04  -3.71531050000000E+06
 	OrthoXY: 1  -8.90490000000000E+04  -3.72192350000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -9121,16 +9121,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -9.41170000000000E+04  -3.71521850000000E+06
 	OrthoXY: 1  -9.03345000000000E+04  -3.72182400000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -9194,16 +9194,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -9.53435000000000E+04  -3.71532850000000E+06
 	OrthoXY: 1  -9.15930000000000E+04  -3.72197000000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -9267,16 +9267,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -9.64955000000000E+04  -3.71539400000000E+06
 	OrthoXY: 1  -9.28490000000000E+04  -3.72202100000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -9340,16 +9340,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -9.77755000000000E+04  -3.71539700000000E+06
 	OrthoXY: 1  -9.41415000000000E+04  -3.72199900000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -9413,16 +9413,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -9.76615000000000E+04  -3.71988950000000E+06
 	OrthoXY: 1  -9.41905000000000E+04  -3.72599300000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -9486,16 +9486,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -9.63970000000000E+04  -3.72039150000000E+06
 	OrthoXY: 1  -9.31510000000000E+04  -3.72641150000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -9559,16 +9559,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -9.53985000000000E+04  -3.71989850000000E+06
 	OrthoXY: 1  -9.19930000000000E+04  -3.72603800000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -9632,16 +9632,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -9.42765000000000E+04  -3.72004200000000E+06
 	OrthoXY: 1  -9.08035000000000E+04  -3.72618850000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -9705,16 +9705,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -9.31785000000000E+04  -3.72009400000000E+06
 	OrthoXY: 1  -8.96455000000000E+04  -3.72622350000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -9778,16 +9778,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -9.19785000000000E+04  -3.71991800000000E+06
 	OrthoXY: 1  -8.84550000000000E+04  -3.72617150000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -9851,16 +9851,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -9.08155000000000E+04  -3.71993050000000E+06
 	OrthoXY: 1  -8.73275000000000E+04  -3.72629000000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -9924,16 +9924,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.97160000000000E+04  -3.72013300000000E+06
 	OrthoXY: 1  -8.61710000000000E+04  -3.72642950000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -9997,16 +9997,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.86340000000000E+04  -3.71997650000000E+06
 	OrthoXY: 1  -8.50360000000000E+04  -3.72632750000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -10070,16 +10070,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.75175000000000E+04  -3.72007700000000E+06
 	OrthoXY: 1  -8.38960000000000E+04  -3.72648200000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -10143,16 +10143,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.64305000000000E+04  -3.71959950000000E+06
 	OrthoXY: 1  -8.27330000000000E+04  -3.72616700000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -10216,16 +10216,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.52550000000000E+04  -3.71996750000000E+06
 	OrthoXY: 1  -8.16440000000000E+04  -3.72649550000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -10289,16 +10289,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.39725000000000E+04  -3.72002200000000E+06
 	OrthoXY: 1  -8.03715000000000E+04  -3.72642000000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -10362,16 +10362,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.27635000000000E+04  -3.71988900000000E+06
 	OrthoXY: 1  -7.90540000000000E+04  -3.72629400000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -10435,16 +10435,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.14525000000000E+04  -3.72006450000000E+06
 	OrthoXY: 1  -7.77865000000000E+04  -3.72642800000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -10508,16 +10508,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.01210000000000E+04  -3.71966500000000E+06
 	OrthoXY: 1  -7.65125000000000E+04  -3.72620150000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -10581,16 +10581,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.88700000000000E+04  -3.71960000000000E+06
 	OrthoXY: 1  -7.51665000000000E+04  -3.72620700000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -10654,16 +10654,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.76905000000000E+04  -3.71970750000000E+06
 	OrthoXY: 1  -7.39325000000000E+04  -3.72632800000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -10727,16 +10727,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.63965000000000E+04  -3.71974200000000E+06
 	OrthoXY: 1  -7.27215000000000E+04  -3.72639100000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -10800,16 +10800,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.50465000000000E+04  -3.71994700000000E+06
 	OrthoXY: 1  -7.12350000000000E+04  -3.72655300000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -10873,16 +10873,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.38630000000000E+04  -3.71960550000000E+06
 	OrthoXY: 1  -6.99870000000000E+04  -3.72640550000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -10946,16 +10946,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.27205000000000E+04  -3.71957300000000E+06
 	OrthoXY: 1  -6.88300000000000E+04  -3.72633700000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -11019,16 +11019,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.13850000000000E+04  -3.71978300000000E+06
 	OrthoXY: 1  -6.75195000000000E+04  -3.72654500000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -11092,16 +11092,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.01310000000000E+04  -3.71975600000000E+06
 	OrthoXY: 1  -6.62110000000000E+04  -3.72652650000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -11165,16 +11165,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.89375000000000E+04  -3.71958000000000E+06
 	OrthoXY: 1  -6.50250000000000E+04  -3.72630550000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -11238,16 +11238,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.76150000000000E+04  -3.71983650000000E+06
 	OrthoXY: 1  -6.37170000000000E+04  -3.72657600000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -11311,16 +11311,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.63140000000000E+04  -3.71976300000000E+06
 	OrthoXY: 1  -6.24175000000000E+04  -3.72645950000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -11384,16 +11384,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.51415000000000E+04  -3.71975000000000E+06
 	OrthoXY: 1  -6.12290000000000E+04  -3.72636250000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -11457,16 +11457,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.38395000000000E+04  -3.71993400000000E+06
 	OrthoXY: 1  -5.99325000000000E+04  -3.72647650000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -11530,16 +11530,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.26010000000000E+04  -3.71990350000000E+06
 	OrthoXY: 1  -5.86605000000000E+04  -3.72656300000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -11603,16 +11603,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.13195000000000E+04  -3.72003600000000E+06
 	OrthoXY: 1  -5.74005000000000E+04  -3.72659600000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -11676,16 +11676,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.99745000000000E+04  -3.71988250000000E+06
 	OrthoXY: 1  -5.60395000000000E+04  -3.72662900000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -11749,16 +11749,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.87160000000000E+04  -3.71977700000000E+06
 	OrthoXY: 1  -5.47905000000000E+04  -3.72651600000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -11822,16 +11822,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.74755000000000E+04  -3.71972700000000E+06
 	OrthoXY: 1  -5.36205000000000E+04  -3.72643200000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -11895,16 +11895,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.62920000000000E+04  -3.71979900000000E+06
 	OrthoXY: 1  -5.23970000000000E+04  -3.72652500000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -11968,16 +11968,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.50725000000000E+04  -3.71995800000000E+06
 	OrthoXY: 1  -5.11800000000000E+04  -3.72670450000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -12041,16 +12041,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.37755000000000E+04  -3.71981900000000E+06
 	OrthoXY: 1  -4.99105000000000E+04  -3.72650350000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -12114,16 +12114,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.25105000000000E+04  -3.71970000000000E+06
 	OrthoXY: 1  -4.87025000000000E+04  -3.72650600000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -12187,16 +12187,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.12765000000000E+04  -3.71966400000000E+06
 	OrthoXY: 1  -4.74930000000000E+04  -3.72641600000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -12260,16 +12260,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.00135000000000E+04  -3.71992200000000E+06
 	OrthoXY: 1  -4.61535000000000E+04  -3.72665400000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -12333,16 +12333,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -4.87410000000000E+04  -3.71986650000000E+06
 	OrthoXY: 1  -4.49265000000000E+04  -3.72643850000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -12406,16 +12406,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -4.75220000000000E+04  -3.71986000000000E+06
 	OrthoXY: 1  -4.37080000000000E+04  -3.72642550000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -12479,16 +12479,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -4.62805000000000E+04  -3.71996500000000E+06
 	OrthoXY: 1  -4.26325000000000E+04  -3.72649050000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -12552,16 +12552,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -4.50900000000000E+04  -3.71966850000000E+06
 	OrthoXY: 1  -4.14140000000000E+04  -3.72638900000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -12625,16 +12625,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -4.50580000000000E+04  -3.72385150000000E+06
 	OrthoXY: 1  -4.11955000000000E+04  -3.73081450000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -12698,16 +12698,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -4.63140000000000E+04  -3.72394400000000E+06
 	OrthoXY: 1  -4.24965000000000E+04  -3.73088200000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -12771,16 +12771,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -4.76475000000000E+04  -3.72410600000000E+06
 	OrthoXY: 1  -4.37230000000000E+04  -3.73101000000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -12844,16 +12844,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -4.89785000000000E+04  -3.72406700000000E+06
 	OrthoXY: 1  -4.50045000000000E+04  -3.73098150000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -12917,16 +12917,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.03630000000000E+04  -3.72405050000000E+06
 	OrthoXY: 1  -4.63865000000000E+04  -3.73093650000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -12990,16 +12990,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.16945000000000E+04  -3.72391300000000E+06
 	OrthoXY: 1  -4.76940000000000E+04  -3.73089450000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -13063,16 +13063,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.29925000000000E+04  -3.72401450000000E+06
 	OrthoXY: 1  -4.90190000000000E+04  -3.73101050000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -13136,16 +13136,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.43365000000000E+04  -3.72390000000000E+06
 	OrthoXY: 1  -5.03405000000000E+04  -3.73086850000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -13209,16 +13209,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.56920000000000E+04  -3.72397450000000E+06
 	OrthoXY: 1  -5.17300000000000E+04  -3.73095000000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -13282,16 +13282,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.70915000000000E+04  -3.72398850000000E+06
 	OrthoXY: 1  -5.31825000000000E+04  -3.73098400000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -13355,16 +13355,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.85165000000000E+04  -3.72388350000000E+06
 	OrthoXY: 1  -5.45575000000000E+04  -3.73085200000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -13428,16 +13428,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.96840000000000E+04  -3.72398400000000E+06
 	OrthoXY: 1  -5.56755000000000E+04  -3.73089800000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -13501,16 +13501,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.08415000000000E+04  -3.72402550000000E+06
 	OrthoXY: 1  -5.69505000000000E+04  -3.73075050000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -13574,16 +13574,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.20675000000000E+04  -3.72414250000000E+06
 	OrthoXY: 1  -5.82005000000000E+04  -3.73093050000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -13647,16 +13647,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.33760000000000E+04  -3.72380900000000E+06
 	OrthoXY: 1  -5.94320000000000E+04  -3.73066150000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -13720,16 +13720,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.44950000000000E+04  -3.72390250000000E+06
 	OrthoXY: 1  -6.06265000000000E+04  -3.73071000000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -13793,16 +13793,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.56145000000000E+04  -3.72393950000000E+06
 	OrthoXY: 1  -6.18335000000000E+04  -3.73069900000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -13866,16 +13866,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.68645000000000E+04  -3.72391900000000E+06
 	OrthoXY: 1  -6.30565000000000E+04  -3.73067850000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -13939,16 +13939,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.79540000000000E+04  -3.72414750000000E+06
 	OrthoXY: 1  -6.42560000000000E+04  -3.73084000000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -14012,16 +14012,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.91375000000000E+04  -3.72410300000000E+06
 	OrthoXY: 1  -6.55025000000000E+04  -3.73080450000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -14085,16 +14085,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.04540000000000E+04  -3.72412700000000E+06
 	OrthoXY: 1  -6.66565000000000E+04  -3.73073750000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -14158,16 +14158,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.15660000000000E+04  -3.72400350000000E+06
 	OrthoXY: 1  -6.78840000000000E+04  -3.73058900000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -14231,16 +14231,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.27380000000000E+04  -3.72420800000000E+06
 	OrthoXY: 1  -6.91350000000000E+04  -3.73077700000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -14304,16 +14304,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.39160000000000E+04  -3.72450300000000E+06
 	OrthoXY: 1  -7.03570000000000E+04  -3.73095200000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -14377,16 +14377,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.51915000000000E+04  -3.72451050000000E+06
 	OrthoXY: 1  -7.15675000000000E+04  -3.73085850000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -14450,16 +14450,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.64215000000000E+04  -3.72421550000000E+06
 	OrthoXY: 1  -7.28275000000000E+04  -3.73055300000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -14523,16 +14523,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.75455000000000E+04  -3.72429400000000E+06
 	OrthoXY: 1  -7.40385000000000E+04  -3.73060450000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -14596,16 +14596,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.87580000000000E+04  -3.72442450000000E+06
 	OrthoXY: 1  -7.51925000000000E+04  -3.73072950000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -14669,16 +14669,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.99985000000000E+04  -3.72411800000000E+06
 	OrthoXY: 1  -7.64795000000000E+04  -3.73039800000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -14742,16 +14742,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.11830000000000E+04  -3.72453250000000E+06
 	OrthoXY: 1  -7.76690000000000E+04  -3.73084350000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -14815,16 +14815,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.23610000000000E+04  -3.72463550000000E+06
 	OrthoXY: 1  -7.88805000000000E+04  -3.73081600000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -14888,16 +14888,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.35575000000000E+04  -3.72443600000000E+06
 	OrthoXY: 1  -8.00765000000000E+04  -3.73062450000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -14961,16 +14961,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.48535000000000E+04  -3.72442750000000E+06
 	OrthoXY: 1  -8.13420000000000E+04  -3.73063600000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -15034,16 +15034,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.58555000000000E+04  -3.72430450000000E+06
 	OrthoXY: 1  -8.24505000000000E+04  -3.73051150000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -15107,16 +15107,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.69015000000000E+04  -3.72457350000000E+06
 	OrthoXY: 1  -8.34015000000000E+04  -3.73083150000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -15180,16 +15180,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.79195000000000E+04  -3.72468800000000E+06
 	OrthoXY: 1  -8.44900000000000E+04  -3.73076500000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -15253,16 +15253,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.90810000000000E+04  -3.72429650000000E+06
 	OrthoXY: 1  -8.55760000000000E+04  -3.73039900000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -15326,16 +15326,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -9.01240000000000E+04  -3.72436950000000E+06
 	OrthoXY: 1  -8.66295000000000E+04  -3.73068900000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -15399,16 +15399,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -9.11155000000000E+04  -3.72455600000000E+06
 	OrthoXY: 1  -8.77345000000000E+04  -3.73076850000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -15472,16 +15472,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -9.21030000000000E+04  -3.72465850000000E+06
 	OrthoXY: 1  -8.87220000000000E+04  -3.73087650000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -15545,16 +15545,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -9.31090000000000E+04  -3.72450600000000E+06
 	OrthoXY: 1  -8.97800000000000E+04  -3.73056650000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -15618,16 +15618,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -9.41660000000000E+04  -3.72487350000000E+06
 	OrthoXY: 1  -9.08680000000000E+04  -3.73072600000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -15691,16 +15691,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -9.52970000000000E+04  -3.72483050000000E+06
 	OrthoXY: 1  -9.20335000000000E+04  -3.73080050000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -15764,16 +15764,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -9.63500000000000E+04  -3.72484400000000E+06
 	OrthoXY: 1  -9.31350000000000E+04  -3.73081100000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -15837,16 +15837,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -9.75280000000000E+04  -3.72480650000000E+06
 	OrthoXY: 1  -9.42260000000000E+04  -3.73073900000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -15910,16 +15910,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -9.75350000000000E+04  -3.72896250000000E+06
 	OrthoXY: 1  -9.39735000000000E+04  -3.73523300000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -15983,16 +15983,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -9.63765000000000E+04  -3.72900100000000E+06
 	OrthoXY: 1  -9.28375000000000E+04  -3.73526400000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -16056,16 +16056,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -9.52815000000000E+04  -3.72882750000000E+06
 	OrthoXY: 1  -9.17680000000000E+04  -3.73497500000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -16129,16 +16129,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -9.42480000000000E+04  -3.72892650000000E+06
 	OrthoXY: 1  -9.06855000000000E+04  -3.73507200000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -16202,16 +16202,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -9.32165000000000E+04  -3.72900550000000E+06
 	OrthoXY: 1  -8.96955000000000E+04  -3.73508100000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -16275,16 +16275,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -9.21590000000000E+04  -3.72912800000000E+06
 	OrthoXY: 1  -8.86145000000000E+04  -3.73533500000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -16348,16 +16348,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -9.11105000000000E+04  -3.72892600000000E+06
 	OrthoXY: 1  -8.75945000000000E+04  -3.73504250000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -16421,16 +16421,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -9.00420000000000E+04  -3.72887550000000E+06
 	OrthoXY: 1  -8.65520000000000E+04  -3.73493600000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -16494,16 +16494,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.90175000000000E+04  -3.72885100000000E+06
 	OrthoXY: 1  -8.54840000000000E+04  -3.73497500000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -16567,16 +16567,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.79040000000000E+04  -3.72881950000000E+06
 	OrthoXY: 1  -8.43500000000000E+04  -3.73504250000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -16640,16 +16640,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.67745000000000E+04  -3.72867750000000E+06
 	OrthoXY: 1  -8.33565000000000E+04  -3.73502700000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -16713,16 +16713,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.58015000000000E+04  -3.72875800000000E+06
 	OrthoXY: 1  -8.23020000000000E+04  -3.73509300000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -16786,16 +16786,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.48275000000000E+04  -3.72874250000000E+06
 	OrthoXY: 1  -8.13085000000000E+04  -3.73507350000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -16859,16 +16859,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.36170000000000E+04  -3.72876800000000E+06
 	OrthoXY: 1  -8.00495000000000E+04  -3.73505000000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -16932,16 +16932,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.23850000000000E+04  -3.72870650000000E+06
 	OrthoXY: 1  -7.88950000000000E+04  -3.73499850000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -17005,16 +17005,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.10940000000000E+04  -3.72870100000000E+06
 	OrthoXY: 1  -7.75895000000000E+04  -3.73503700000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -17078,16 +17078,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.99790000000000E+04  -3.72852150000000E+06
 	OrthoXY: 1  -7.64710000000000E+04  -3.73482850000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -17151,16 +17151,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.87160000000000E+04  -3.72863050000000E+06
 	OrthoXY: 1  -7.52330000000000E+04  -3.73492200000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -17224,16 +17224,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.75780000000000E+04  -3.72842150000000E+06
 	OrthoXY: 1  -7.40690000000000E+04  -3.73474050000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -17297,16 +17297,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.63085000000000E+04  -3.72873650000000E+06
 	OrthoXY: 1  -7.27865000000000E+04  -3.73505050000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -17370,16 +17370,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.51695000000000E+04  -3.72867750000000E+06
 	OrthoXY: 1  -7.15940000000000E+04  -3.73490350000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -17443,16 +17443,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.39015000000000E+04  -3.72847950000000E+06
 	OrthoXY: 1  -7.04165000000000E+04  -3.73488200000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -17516,16 +17516,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.27425000000000E+04  -3.72840900000000E+06
 	OrthoXY: 1  -6.92150000000000E+04  -3.73487050000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -17589,16 +17589,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.15510000000000E+04  -3.72838700000000E+06
 	OrthoXY: 1  -6.79610000000000E+04  -3.73484050000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -17662,16 +17662,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.03855000000000E+04  -3.72829200000000E+06
 	OrthoXY: 1  -6.67405000000000E+04  -3.73474200000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -17735,16 +17735,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.91930000000000E+04  -3.72822000000000E+06
 	OrthoXY: 1  -6.55650000000000E+04  -3.73472100000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -17808,16 +17808,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.80025000000000E+04  -3.72828700000000E+06
 	OrthoXY: 1  -6.43195000000000E+04  -3.73476550000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -17881,16 +17881,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.68440000000000E+04  -3.72830650000000E+06
 	OrthoXY: 1  -6.30805000000000E+04  -3.73481900000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -17954,16 +17954,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.55290000000000E+04  -3.72858450000000E+06
 	OrthoXY: 1  -6.18165000000000E+04  -3.73506400000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -18027,16 +18027,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.43105000000000E+04  -3.72839900000000E+06
 	OrthoXY: 1  -6.05605000000000E+04  -3.73492600000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -18100,16 +18100,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.31235000000000E+04  -3.72823250000000E+06
 	OrthoXY: 1  -5.93145000000000E+04  -3.73498100000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -18173,16 +18173,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.19395000000000E+04  -3.72805800000000E+06
 	OrthoXY: 1  -5.81320000000000E+04  -3.73498950000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -18246,16 +18246,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.07850000000000E+04  -3.72813550000000E+06
 	OrthoXY: 1  -5.69595000000000E+04  -3.73511800000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -18319,16 +18319,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.96265000000000E+04  -3.72818750000000E+06
 	OrthoXY: 1  -5.57540000000000E+04  -3.73514950000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -18392,16 +18392,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.84315000000000E+04  -3.72789250000000E+06
 	OrthoXY: 1  -5.45050000000000E+04  -3.73472350000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -18465,16 +18465,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.70110000000000E+04  -3.72793350000000E+06
 	OrthoXY: 1  -5.31430000000000E+04  -3.73474250000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -18538,16 +18538,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.56795000000000E+04  -3.72808800000000E+06
 	OrthoXY: 1  -5.17675000000000E+04  -3.73488850000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -18611,16 +18611,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.43070000000000E+04  -3.72804300000000E+06
 	OrthoXY: 1  -5.04435000000000E+04  -3.73488300000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -18684,16 +18684,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.28810000000000E+04  -3.72800500000000E+06
 	OrthoXY: 1  -4.90720000000000E+04  -3.73487100000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -18757,16 +18757,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.16605000000000E+04  -3.72822000000000E+06
 	OrthoXY: 1  -4.77830000000000E+04  -3.73505400000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -18830,16 +18830,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.03665000000000E+04  -3.72777850000000E+06
 	OrthoXY: 1  -4.63685000000000E+04  -3.73465800000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -18903,16 +18903,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -4.89680000000000E+04  -3.72792750000000E+06
 	OrthoXY: 1  -4.49920000000000E+04  -3.73462850000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -18976,16 +18976,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -4.77310000000000E+04  -3.72805050000000E+06
 	OrthoXY: 1  -4.37670000000000E+04  -3.73473100000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -19049,16 +19049,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -4.63435000000000E+04  -3.72821900000000E+06
 	OrthoXY: 1  -4.24885000000000E+04  -3.73496200000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -19122,16 +19122,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -4.49640000000000E+04  -3.72813350000000E+06
 	OrthoXY: 1  -4.11865000000000E+04  -3.73481750000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -19195,16 +19195,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -4.56110000000000E+04  -3.73261000000000E+06
 	OrthoXY: 1  -4.18165000000000E+04  -3.73946400000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -19268,16 +19268,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -4.68715000000000E+04  -3.73226550000000E+06
 	OrthoXY: 1  -4.31485000000000E+04  -3.73914700000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -19341,16 +19341,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -4.81725000000000E+04  -3.73247050000000E+06
 	OrthoXY: 1  -4.44085000000000E+04  -3.73921650000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -19414,16 +19414,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -4.96020000000000E+04  -3.73251200000000E+06
 	OrthoXY: 1  -4.57770000000000E+04  -3.73926100000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -19487,16 +19487,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.07990000000000E+04  -3.73247700000000E+06
 	OrthoXY: 1  -4.70460000000000E+04  -3.73921200000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -19560,16 +19560,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.21020000000000E+04  -3.73250650000000E+06
 	OrthoXY: 1  -4.83630000000000E+04  -3.73926750000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -19633,16 +19633,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.34440000000000E+04  -3.73272750000000E+06
 	OrthoXY: 1  -4.96315000000000E+04  -3.73933850000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -19706,16 +19706,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.48435000000000E+04  -3.73254450000000E+06
 	OrthoXY: 1  -5.10090000000000E+04  -3.73931950000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -19779,16 +19779,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.60400000000000E+04  -3.73254900000000E+06
 	OrthoXY: 1  -5.22685000000000E+04  -3.73933650000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -19852,16 +19852,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.74630000000000E+04  -3.73249700000000E+06
 	OrthoXY: 1  -5.36020000000000E+04  -3.73932200000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -19925,16 +19925,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.87670000000000E+04  -3.73227700000000E+06
 	OrthoXY: 1  -5.48125000000000E+04  -3.73920100000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -19998,16 +19998,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -5.99985000000000E+04  -3.73255400000000E+06
 	OrthoXY: 1  -5.61670000000000E+04  -3.73946200000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -20071,16 +20071,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.12680000000000E+04  -3.73254000000000E+06
 	OrthoXY: 1  -5.74490000000000E+04  -3.73962200000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -20144,16 +20144,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.25105000000000E+04  -3.73248450000000E+06
 	OrthoXY: 1  -5.86665000000000E+04  -3.73947850000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -20217,16 +20217,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.38020000000000E+04  -3.73260100000000E+06
 	OrthoXY: 1  -5.99265000000000E+04  -3.73949300000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -20290,16 +20290,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.50560000000000E+04  -3.73288450000000E+06
 	OrthoXY: 1  -6.11835000000000E+04  -3.73966100000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -20363,16 +20363,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.63040000000000E+04  -3.73283600000000E+06
 	OrthoXY: 1  -6.26250000000000E+04  -3.73952100000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -20436,16 +20436,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.75450000000000E+04  -3.73272000000000E+06
 	OrthoXY: 1  -6.39410000000000E+04  -3.73934750000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -20509,16 +20509,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -6.88445000000000E+04  -3.73278850000000E+06
 	OrthoXY: 1  -6.51615000000000E+04  -3.73939550000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -20582,16 +20582,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.01820000000000E+04  -3.73306500000000E+06
 	OrthoXY: 1  -6.65900000000000E+04  -3.73950250000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -20655,16 +20655,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.15140000000000E+04  -3.73295250000000E+06
 	OrthoXY: 1  -6.78715000000000E+04  -3.73939100000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -20728,16 +20728,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.27865000000000E+04  -3.73301200000000E+06
 	OrthoXY: 1  -6.91235000000000E+04  -3.73953150000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -20801,16 +20801,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.39890000000000E+04  -3.73308450000000E+06
 	OrthoXY: 1  -7.03715000000000E+04  -3.73944000000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -20874,16 +20874,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.51190000000000E+04  -3.73293150000000E+06
 	OrthoXY: 1  -7.14550000000000E+04  -3.73929850000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -20947,16 +20947,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.61880000000000E+04  -3.73305800000000E+06
 	OrthoXY: 1  -7.25050000000000E+04  -3.73942650000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -21020,16 +21020,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.73545000000000E+04  -3.73308800000000E+06
 	OrthoXY: 1  -7.36890000000000E+04  -3.73937150000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -21093,16 +21093,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.84400000000000E+04  -3.73303350000000E+06
 	OrthoXY: 1  -7.48060000000000E+04  -3.73929200000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -21166,16 +21166,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -7.96305000000000E+04  -3.73296500000000E+06
 	OrthoXY: 1  -7.59650000000000E+04  -3.73926100000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -21239,16 +21239,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.08140000000000E+04  -3.73303600000000E+06
 	OrthoXY: 1  -7.70875000000000E+04  -3.73936850000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -21312,16 +21312,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.19385000000000E+04  -3.73294100000000E+06
 	OrthoXY: 1  -7.82505000000000E+04  -3.73932750000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -21385,16 +21385,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.30920000000000E+04  -3.73286700000000E+06
 	OrthoXY: 1  -7.93635000000000E+04  -3.73927350000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -21458,16 +21458,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.42190000000000E+04  -3.73306350000000E+06
 	OrthoXY: 1  -8.04820000000000E+04  -3.73950950000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -21531,16 +21531,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.53705000000000E+04  -3.73306700000000E+06
 	OrthoXY: 1  -8.16270000000000E+04  -3.73943950000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -21604,16 +21604,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.64905000000000E+04  -3.73318250000000E+06
 	OrthoXY: 1  -8.27555000000000E+04  -3.73954900000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -21677,16 +21677,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.76320000000000E+04  -3.73297900000000E+06
 	OrthoXY: 1  -8.38840000000000E+04  -3.73934600000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -21750,16 +21750,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.87905000000000E+04  -3.73309050000000E+06
 	OrthoXY: 1  -8.50290000000000E+04  -3.73942650000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -21823,16 +21823,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -8.99845000000000E+04  -3.73296150000000E+06
 	OrthoXY: 1  -8.62425000000000E+04  -3.73929950000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -21896,16 +21896,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -9.11710000000000E+04  -3.73320550000000E+06
 	OrthoXY: 1  -8.74195000000000E+04  -3.73954400000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -21969,16 +21969,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -9.24475000000000E+04  -3.73315300000000E+06
 	OrthoXY: 1  -8.87295000000000E+04  -3.73952600000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -22042,16 +22042,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -9.37140000000000E+04  -3.73303950000000E+06
 	OrthoXY: 1  -8.99510000000000E+04  -3.73949100000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -22115,16 +22115,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -9.50005000000000E+04  -3.73299450000000E+06
 	OrthoXY: 1  -9.12630000000000E+04  -3.73940450000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -22188,16 +22188,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -9.62940000000000E+04  -3.73322100000000E+06
 	OrthoXY: 1  -9.25850000000000E+04  -3.73948700000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0
@@ -22261,16 +22261,16 @@ Photo:
 	MaxChannel: 4
 	MaxPhotoChan: 4
 	PhotoChan: 3 1 2 3
-	OrthoChan: 0 0 0 0
+	OrthoChan: 3 1 2 3
 	MatchChannel: -1
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: None
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0  -9.75770000000000E+04  -3.73325500000000E+06
 	OrthoXY: 1  -9.38795000000000E+04  -3.73957700000000E+06
-	OrthoChanCount: 0
+	OrthoChanCount: 4
 	PhotoMosaicOptions:
 	ProcessPhoto: 1
 	HistoryPhoto: 0

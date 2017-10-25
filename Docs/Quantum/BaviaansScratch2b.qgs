@@ -5,7 +5,7 @@
   <evaluateDefaultValues active="0"/>
   <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="">
     <customproperties/>
-    <layer-tree-group expanded="0" checked="Qt::PartiallyChecked" name="Baviaans Vector Data">
+    <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="Baviaans Vector Data">
       <customproperties/>
       <layer-tree-group expanded="0" checked="Qt::PartiallyChecked" name="2017 Trial">
         <customproperties/>
@@ -1219,10 +1219,10 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>250507.63853040395770222</xmin>
-      <ymin>6272846.06934170704334974</ymin>
-      <xmax>250686.54959109303308651</xmax>
-      <ymax>6272994.98515259381383657</ymax>
+      <xmin>258610.9621348945365753</xmin>
+      <ymin>6265281.70553246885538101</ymin>
+      <xmax>260711.14399467370822094</xmax>
+      <ymax>6268896.11259634047746658</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
@@ -1240,134 +1240,147 @@
     </destinationsrs>
     <rendermaptile>0</rendermaptile>
     <layer_coordinate_transform_info>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_15_2015_1005_RGB_RECT20170330112619464"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_20_2015_1004_RGB_RECT20170330112353052"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_20_2015_1001_RGB_RECT20170330110902932"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_22_2015_1001_RGB_RECT20170330110903061"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_01_2015_1004_RGB_RECT20170330112351644"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="Point_ge20170928165040368"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_01_2015_1001_RGB_RECT20170330110718954"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_18_2015_1005_RGB_RECT20170330112619686"/>
       <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_11_2015_1004_RGB_RECT20170330112352348"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_07_2015_1001_RGB_RECT20170330110902072"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100007" srcDatumTransform="-1" destDatumTransform="-1" layerid="056844553010_01_P001_OrthoSudemL3_PanSharpen20171023213518643"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_16_2015_1001_RGB_RECT20170330110902657"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100006" srcDatumTransform="-1" destDatumTransform="-1" layerid="x3324c_2015_L3a20171024044612284"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_05_2015_1004_RGB_RECT20170330112501829"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_23_2015_1005_RGB_RECT20170330112621399"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_03_2015_1005_RGB_RECT20170330112618331"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324c_2015_1004_01_0001_RGBN20171024044754768"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_19_2015_1005_RGB_RECT20170330112621116"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="Jan_Vlok_Intact_Thicket20170910202654491"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_25_2015_1001_RGB_RECT20170330110903241"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_10_2015_1005_RGB_RECT20170330112618989"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_11_2015_1001_RGB_RECT20170330110902333"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_09_2015_1004_RGB_RECT20170330112502108"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_08_2015_1005_RGB_RECT20170330112618786"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_05_2015_1001_RGB_RECT20170330110902024"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_24_2015_1001_RGB_RECT20170330110903192"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_06_0253_RGBN20171025153106971"/>
       <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_04_2015_1005_RGB_RECT20170330112618353"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_10_2015_1004_RGB_RECT20170330112502187"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="Point_ge20170928164324414"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_07_2015_1004_RGB_RECT20170330112501954"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_04_0153_RGBN20171023202239473"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_19_2015_1001_RGB_RECT20170330110902848"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_06_2015_1004_RGB_RECT20170330112501899"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_01_0009_RGBN20171024100100433"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="Point_ge20170928164649994"/>
       <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_16_2015_1005_RGB_RECT20170330112619540"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_24_2015_1004_RGB_RECT20170330112503263"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_04_0152_RGBN20171023202239462"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_10_2015_1004_RGB_RECT20170330112352261"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_18_2015_1004_RGB_RECT20170330112352872"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="gps_coords_191plots20170727205628077"/>
       <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_17_2015_1005_RGB_RECT20170330112619603"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_08_2015_1004_RGB_RECT20170330112502028"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_03_2015_1004_RGB_RECT20170330112351754"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_04_0154_RGBN20171023202239485"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_04_0152_RGBN20171023213751614"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_08_2015_1004_RGB_RECT20170330112352121"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_05_2015_1005_RGB_RECT20170330112618474"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_11_2015_1005_RGB_RECT20170330112619059"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_04_2015_1004_RGB_RECT20170330112351818"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324c_2015_1004_01_0009_RGBN20171024101009690"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_24_2015_1004_RGB_RECT20170330112503263"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="abf_agc_191_plots20170727203413936"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_24_2015_1004_RGB_RECT20170330112353353"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_15_2015_1005_RGB_RECT20170330112619464"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324c_2015_1004_07_0305_RGBN20171024045006172"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_20_2015_1004_RGB_RECT20170330112353052"/>
       <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_14_2015_1004_RGB_RECT20170330112502481"/>
       <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_03_2015_1004_RGB_RECT20170330112501742"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_04_0152_RGBN20171023211758653"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_09_2015_1004_RGB_RECT20170330112502108"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_08_2015_1004_RGB_RECT20170330112352121"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="abf_agc_191_plots20170727203413936"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_06_2015_1001_RGB_RECT20170330110902042"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_09_2015_1005_RGB_RECT20170330112618907"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_09_2015_1001_RGB_RECT20170330110902191"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_10_2015_1001_RGB_RECT20170330110902262"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="ZAF_adm120170804001858449"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_13_2015_1004_RGB_RECT20170330112502415"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_14_2015_1001_RGB_RECT20170330110902538"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="ThnuganuDegradedTrialPoints20170830214016751"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_14_2015_1004_RGB_RECT20170330112352585"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_17_2015_1001_RGB_RECT20170330110902703"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="Point_ge20170928164324414"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_04_0151_RGBN20171023212042736"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_06_2015_1004_RGB_RECT20170330112351935"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_14_2015_1005_RGB_RECT20170330112619400"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="Jan_Vlok_Intact_Thicket20170910202654491"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_05_2015_1005_RGB_RECT20170330112618474"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_04_0153_RGBN20171023202239473"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_04_2015_1001_RGB_RECT20170330110901973"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100007" srcDatumTransform="-1" destDatumTransform="-1" layerid="056844553010_01_P001_OrthoSudemL3_PanSharpen20171023213518643"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_05_2015_1004_RGB_RECT20170330112501829"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_04_2015_1004_RGB_RECT20170330112501769"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_21_2015_1001_RGB_RECT20170330110902994"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_17_2015_1004_RGB_RECT20170330112502712"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_07_2015_1005_RGB_RECT20170330112618687"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_10_2015_1005_RGB_RECT20170330112618989"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_05_2015_1001_RGB_RECT20170330110902024"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_15_2015_1001_RGB_RECT20170330110902585"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_13_2015_1004_RGB_RECT20170330112352515"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_01_2015_1001_RGB_RECT20170330110718954"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_04_0154_RGBN20171023213751634"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_23_2015_1005_RGB_RECT20170330112621399"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324c_2015_1004_10_0426_RGBN20171024044806516"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_10_2015_1004_RGB_RECT20170330112502187"/>
       <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_23_2015_1001_RGB_RECT20170330110903117"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_17_2015_1001_RGB_RECT20170330110902703"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_01_2015_1005_RGB_RECT20170330112618255"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_04_0151_RGBN20171023202239440"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_18_2015_1004_RGB_RECT20170330112352872"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_15_2015_1001_RGB_RECT20170330110902585"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_20_2015_1005_RGB_RECT20170330112621172"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_13_2015_1004_RGB_RECT20170330112502415"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_17_2015_1004_RGB_RECT20170330112502712"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_14_2015_1005_RGB_RECT20170330112619400"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100007" srcDatumTransform="-1" destDatumTransform="-1" layerid="ATCORCorrected_03NOV18082012_056844553010_01_P001_PciOrtho_SudemL3_PanSharpen20171003195205910"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_07_2015_1004_RGB_RECT20170330112352049"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_21_2015_1001_RGB_RECT20170330110902994"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_02_2015_1001_RGB_RECT20170330110719034"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_06_2015_1001_RGB_RECT20170330110902042"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="x3324c_2015_L3a_Lo25Wgs8420171024045743338"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_14_2015_1004_RGB_RECT20170330112352585"/>
       <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_04_0151_RGBN20171023213751604"/>
       <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_20_2015_1004_RGB_RECT20170330112502962"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_22_2015_1004_RGB_RECT20170330112503128"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_16_2015_1001_RGB_RECT20170330110902657"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_10_2015_1001_RGB_RECT20170330110902262"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_04_2015_1004_RGB_RECT20170330112501769"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_09_2015_1001_RGB_RECT20170330110902191"/>
       <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="ThnuganuDegradedTrialPointsV220170831101259382"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_03_2015_1001_RGB_RECT20170330110901941"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_22_2015_1004_RGB_RECT20170330112503128"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_13_2015_1004_RGB_RECT20170330112352515"/>
       <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_04_0153_RGBN20171023213751624"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="x3324c_2015_L3a_Lo25Wgs8420171024050720315"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_10_2015_1004_RGB_RECT20170330112352261"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_04_2015_1001_RGB_RECT20170330110901973"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_04_0152_RGBN20171023202239462"/>
       <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="GEF5_Baviaans_Data20170811134206913"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_11_2015_1001_RGB_RECT20170330110902333"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_18_2015_1005_RGB_RECT20170330112619686"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_08_2015_1004_RGB_RECT20170330112502028"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_16_2015_1004_RGB_RECT20170330112352734"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_12_2015_1005_RGB_RECT20170330112619169"/>
       <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_24_2015_1005_RGB_RECT20170330112621467"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_04_0151_RGBN20171023211758641"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_22_2015_1004_RGB_RECT20170330112353188"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_07_2015_1004_RGB_RECT20170330112501954"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_01_2015_1004_RGB_RECT20170330112501680"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="Sheet_50K20170329124416633"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_03_2015_1004_RGB_RECT20170330112351754"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_02_2015_1005_RGB_RECT20170330112618296"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_01_2015_1005_RGB_RECT20170330112618255"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_04_2015_1004_RGB_RECT20170330112351818"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="Point_ge20170928164851296"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="SewefonteinIntactTrialPointsV220170831113851977"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_19_2015_1005_RGB_RECT20170330112621116"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_12_2015_1004_RGB_RECT20170330112502342"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_02_2015_1004_RGB_RECT20170330112351715"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_04_0154_RGBN20171023202239485"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_05_2015_1004_RGB_RECT20170330112351862"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_07_2015_1004_RGB_RECT20170330112352049"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_22_2015_1001_RGB_RECT20170330110903061"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="Point_ge20170928164810008"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_25_2015_1001_RGB_RECT20170330110903241"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_24_2015_1004_RGB_RECT20170330112353353"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_22_2015_1005_RGB_RECT20170330112621332"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_17_2015_1004_RGB_RECT20170330112352808"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_21_2015_1004_RGB_RECT20170330112353119"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_06_2015_1004_RGB_RECT20170330112501899"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_04_0151_RGBN20171023202239440"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_12_2015_1001_RGB_RECT20170330110902408"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="Point_ge20170928165040368"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="Point_ge20170928164649994"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_04_0154_RGBN20171023213751634"/>
       <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_16_2015_1004_RGB_RECT20170330112502638"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_13_2015_1005_RGB_RECT20170330112619279"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_02_2015_1004_RGB_RECT20170330112501713"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_18_2015_1001_RGB_RECT20170330110902778"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_25_2015_1005_RGB_RECT20170330112621533"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_19_2015_1001_RGB_RECT20170330110902848"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_25_2015_1004_RGB_RECT20170330112353424"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_20_2015_1005_RGB_RECT20170330112621172"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_19_2015_1004_RGB_RECT20170330112502886"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_12_2015_1004_RGB_RECT20170330112352425"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="BaviiaansPeCorrectedGcpMay2017Combined20170720173845991"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_03_2015_1005_RGB_RECT20170330112618331"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_15_2015_1004_RGB_RECT20170330112352656"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_24_2015_1001_RGB_RECT20170330110903192"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100007" srcDatumTransform="-1" destDatumTransform="-1" layerid="ATCORCorrected_03NOV18082012_056844553010_01_P001_PciOrtho_SudemL3_PanSharpen20171003195205910"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_11_2015_1004_RGB_RECT20170330112502267"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_13_2015_1001_RGB_RECT20170330110902471"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_21_2015_1005_RGB_RECT20170330112621253"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_11_2015_1005_RGB_RECT20170330112619059"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_08_2015_1005_RGB_RECT20170330112618786"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_12_2015_1005_RGB_RECT20170330112619169"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_01_2015_1004_RGB_RECT20170330112501680"/>
       <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_06_2015_1005_RGB_RECT20170330112618589"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_08_2015_1001_RGB_RECT20170330110902139"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_01_2015_1004_RGB_RECT20170330112351644"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_23_2015_1004_RGB_RECT20170330112503199"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_04_0152_RGBN20171023213751614"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_23_2015_1004_RGB_RECT20170330112353271"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_25_2015_1004_RGB_RECT20170330112503327"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324c_2015_1004_08_0345_RGBN20171024044920409"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_12_2015_1004_RGB_RECT20170330112502342"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_18_2015_1001_RGB_RECT20170330110902778"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_03_2015_1001_RGB_RECT20170330110901941"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_22_2015_1005_RGB_RECT20170330112621332"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_19_2015_1004_RGB_RECT20170330112502886"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324c_2015_1004_01_0009_RGBN20171024100349326"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_06_2015_1004_RGB_RECT20170330112351935"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_13_2015_1005_RGB_RECT20170330112619279"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_16_2015_1004_RGB_RECT20170330112352734"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_12_2015_1001_RGB_RECT20170330110902408"/>
       <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_09_2015_1004_RGB_RECT20170330112352185"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_02_2015_1004_RGB_RECT20170330112501713"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="Sheet_50K20170329124416633"/>
       <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_21_2015_1004_RGB_RECT20170330112503043"/>
-      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_02_2015_1001_RGB_RECT20170330110719034"/>
       <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_18_2015_1004_RGB_RECT20170330112502793"/>
       <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_15_2015_1004_RGB_RECT20170330112502553"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="ThnuganuDegradedTrialPoints20170830214016751"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="SewefonteinIntactTrialPointsV220170831113851977"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_04_0152_RGBN20171023211758653"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="BaviiaansPeCorrectedGcpMay2017Combined20170720173845991"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_17_2015_1004_RGB_RECT20170330112352808"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_21_2015_1005_RGB_RECT20170330112621253"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_11_2015_1004_RGB_RECT20170330112502267"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_23_2015_1004_RGB_RECT20170330112503199"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324c_2015_1004_01_0001_RGBN20171024100300418"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_22_2015_1004_RGB_RECT20170330112353188"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="Point_ge20170928164851296"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_02_2015_1004_RGB_RECT20170330112351715"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="Point_ge20170928164810008"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_25_2015_1004_RGB_RECT20170330112503327"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_15_2015_1004_RGB_RECT20170330112352656"/>
       <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_19_2015_1004_RGB_RECT20170330112352953"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_13_2015_1001_RGB_RECT20170330110902471"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_09_2015_1005_RGB_RECT20170330112618907"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_05_2015_1004_RGB_RECT20170330112351862"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_20_2015_1001_RGB_RECT20170330110902932"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_21_2015_1004_RGB_RECT20170330112353119"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="ZAF_adm120170804001858449"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_07_2015_1005_RGB_RECT20170330112618687"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_12_2015_1004_RGB_RECT20170330112352425"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_14_2015_1001_RGB_RECT20170330110902538"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_25_2015_1004_RGB_RECT20170330112353424"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_04_0151_RGBN20171023212042736"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="gps_coords_191plots20170727205628077"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_02_2015_1005_RGB_RECT20170330112618296"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_07_2015_1001_RGB_RECT20170330110902072"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_04_0151_RGBN20171023211758641"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_25_2015_1005_RGB_RECT20170330112621533"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_08_2015_1001_RGB_RECT20170330110902139"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="x3324c_2015_L3a_Lo25Wgs8420171024045605160"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_23_2015_1004_RGB_RECT20170330112353271"/>
     </layer_coordinate_transform_info>
   </mapcanvas>
   <layer-tree-canvas>
@@ -1749,7 +1762,7 @@
     </custom-order>
   </layer-tree-canvas>
   <legend updateDrawingOrder="true">
-    <legendgroup open="false" checked="Qt::PartiallyChecked" name="Baviaans Vector Data">
+    <legendgroup open="true" checked="Qt::PartiallyChecked" name="Baviaans Vector Data">
       <legendgroup open="false" checked="Qt::PartiallyChecked" name="2017 Trial">
         <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Point_ge" showFeatureCount="0">
           <filegroup open="true" hidden="false">

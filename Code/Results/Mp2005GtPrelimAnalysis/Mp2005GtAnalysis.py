@@ -409,7 +409,7 @@ def scatterd(x, y, labels=None, class_labels=None, thumbnails=None, regress=True
     pylab.axis([np.min(x), np.max(x), np.min(y), np.max(y)])
     pylab.hold('on')
     ax = pylab.gca()
-    handles = [0,0,0]
+    handles = [0, 0, 0]
 
     for ci, (class_label, colour) in enumerate(zip(classes, colours[:classes.__len__()])):
         class_idx = class_labels == class_label
