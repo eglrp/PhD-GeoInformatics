@@ -26,14 +26,14 @@ def EvalRecordCs(allometricModels, record):
     elif model['vars'] == 'CD':
         x = CD
     elif model['vars'] == 'CD.H':
-        x = CD**record['height']
+        x = CD*record['height']
     elif model['vars'] == 'Hgt':
         x = record['height']
     else:
         print model['vars'], " unknown variable"
         return 0.
-    yn = model['ay']*x**model['by']   # "naive"
-    Yc = yn*model['duan']
+    yn = np.exp(model['ay'])*x**model['by']   # "naive"
+    Yc = yn*model['MB']
     return Yc
 
 def EvalPlotCs(allometricModels, plot):
@@ -65,6 +65,7 @@ for r in ws[2:ws.max_row]:  #how to find num rows?
     model['vars'] = r[3].value
     model['ay'] = r[6].value
     model['by'] = r[7].value
+    model['MB'] = r[13].value
     model['duan'] = r[12].value
     if str(r[14].value) == 'x':
         model['useWdRatio'] = False
@@ -129,11 +130,15 @@ for plotKey, plot in plots.iteritems():
     heightKde = kde.evaluate(heightGrid)
     pylab.subplot(2, 3, i)
     pylab.plot(heightGrid, heightKde)
-    pylab.plot([50, 50], [0, heightKde.max()], 'r')
+    axLim = pylab.axis()
+    h = pylab.plot([50, 50], [0, heightKde.max()], 'r')
     pylab.grid('on')
-    pylab.xlabel('Height (cm)')
+    pylab.xlabel('Plant Height (cm)')
     pylab.ylabel('Prob.(height)')
     pylab.title('Height distribution for plot %s' % (plotKey))
+    if i >= plots.__len__():
+        pylab.legend(h, ['50cm threshold'], loc='upper left', bbox_to_anchor=(1.2, 1))
+    pylab.axis([axLim[0], axLim[1], 0, heightKde.max()])
     i += 1
 
 i = 1
@@ -143,15 +148,19 @@ for plotKey, plot in plots.iteritems():
     height = np.float64([record['height'] for record in plot])
     idx = np.argsort(height)
 
-    ycCumSum = np.cumsum(-yc[idx])
+    ycCumSum = np.cumsum(yc[idx])
     pylab.subplot(2, 3, i)
     pylab.plot(height[idx], ycCumSum)
-    pylab.plot([50, 50], [0, ycCumSum.max()], 'r')
+    axLim = pylab.axis()
+    h = pylab.plot([50, 50], [axLim[2], axLim[3]], 'r')
+    pylab.axis(axLim)
     pylab.grid('on')
-    pylab.xlabel('Height (cm)')
-    pylab.ylabel('Cum. Distr.(C. stock)')
+    pylab.xlabel('Plant Height (cm)')
+    pylab.ylabel('Cum. Distr.(C. stock) (kg)')
     pylab.xlim([0, 350])
     pylab.title('Height / C. stock relation for plot %s' % (plotKey))
+    if i >= plots.__len__():
+        pylab.legend(h, ['50cm threshold'], loc='upper left', bbox_to_anchor=(1.2, 1))
     i += 1
 
     idx = height > 50
@@ -176,9 +185,11 @@ def EllipseSliceArea(a, b, thetaStart, thetaEnd):
 
 # find the area of a section of the ellipse (x/a)**2 + (x/b)**2 = 1 where the section is x = (-a to x_section)
 def EllipseSectionArea(a, b, xSection):
+    xSign = 1.
     if xSection < 0:
         print "WARNING: xSection should positive"
         xSection = np.abs(xSection)
+        xSign = -1.
     if xSection > a:
         print "WARNING: xSection should be less than a"
         xSection = a
@@ -191,8 +202,38 @@ def EllipseSectionArea(a, b, xSection):
 
     ellipseOtherSliceArea = EllipseSliceArea(a, b, 0, np.arctan(ySection/xSection))
     ellipseOtherSectionArea = 2*(ellipseOtherSliceArea - triArea)
-    # print ellipseOtherSectionArea + ellipseSectionArea
-    # print ellipseArea
+    print ellipseOtherSectionArea + ellipseSectionArea
+    print ellipseArea
+    # sectionLength = 2*ySection
+    print ellipseSectionArea, ySection
+    if xSign < 0:
+        ellipseSectionArea = ellipseOtherSectionArea
+
+    return ellipseSectionArea, ySection
+
+def CircleSectionArea(a, b, xSection):
+    a = b = (a + b)/2   # Simply for Marius' formula for CD/2
+    xSign = 1.
+    if xSection < 0:
+        print "WARNING: xSection should positive"
+        xSection = np.abs(xSection)
+        xSign = -1.
+    if xSection > a:
+        print "WARNING: xSection should be less than a"
+        xSection = a
+
+    ySection = b*np.sqrt(1 - (xSection/a)**2)
+    triArea = 0.5*xSection*ySection
+    ellipseSliceArea = EllipseSliceArea(a, b, np.arctan(ySection/xSection), np.pi)
+    ellipseSectionArea = 2*(triArea + ellipseSliceArea)
+    ellipseArea = np.pi*a*b
+
+    ellipseOtherSliceArea = EllipseSliceArea(a, b, 0, np.arctan(ySection/xSection))
+    ellipseOtherSectionArea = 2*(ellipseOtherSliceArea - triArea)
+    print ellipseOtherSectionArea + ellipseSectionArea
+    print ellipseArea
+    if xSign < 0:
+        ellipseSectionArea = ellipseOtherSectionArea
     # sectionLength = 2*ySection
     return ellipseSectionArea, ySection
 
@@ -202,34 +243,35 @@ def EllipseSectionArea(a, b, xSection):
 from scipy import stats
 av = np.abs(np.random.randn(100)+0.5)
 bv = np.abs(np.random.randn(100)+0.5)
-xSectionV = av*np.abs(np.random.rand(100))
+xSectionV = 0.5*(av+bv)*np.abs(0.3*np.random.randn(100))
 all(xSectionV<av)
 
 sectionAreaV = []
-ellipseAreaV = []
+circleAreaV = []
 for a, b, xSection in zip(av, bv, xSectionV):
-    sa, bnew = EllipseSectionArea(a, b, xSection)
+    sa, bnew = CircleSectionArea(a, b, xSection)
     sectionAreaV.append(sa)
-    ellipseAreaV.append((a+xSection)*0.5*bnew*4)
+    # circleAreaV.append((a+xSection)*0.5*bnew*4)  # rectangular area
+    circleAreaV.append(np.pi*(((a+xSection)*0.5 + bnew)/2)**2)
 
 sectionAreaV = np.array(sectionAreaV)
-ellipseAreaV = np.array(ellipseAreaV)
+circleAreaV = np.array(circleAreaV)
 
-(slope, intercept, r, p, stde) = stats.linregress(sectionAreaV, ellipseAreaV)
+(slope, intercept, r, p, stde) = stats.linregress(sectionAreaV, circleAreaV)
 
 pylab.figure()
 # pylab.subplot(1, 2, 1)
 # pylab.plot(av, bv, 'kx')
 # pylab.subplot(1, 2, 2)
-pylab.plot(sectionAreaV, ellipseAreaV, 'bx')
-m = np.max([sectionAreaV.max(), ellipseAreaV.max()])
+pylab.plot(sectionAreaV, circleAreaV, 'bx')
+m = np.max([sectionAreaV.max(), circleAreaV.max()])
 h, = pylab.plot([0, m], [0, m], 'r')
 pylab.text(m*0.6, m*0.1, str.format('$R^2$ = {0:.2f}', np.round(r ** 2, 2)))
 pylab.grid()
 pylab.legend([h], ['1:1'])
-pylab.xlabel('Ellipse Area to Edge')
-pylab.ylabel('Approx. Elliptical Area')
-pylab.title('Relationship of edge intersected canopy areas to approximated elliptical areas')
+pylab.xlabel('Canopy Area to Edge')
+pylab.ylabel('Approx. Circular Area')
+pylab.title('Edge intersected canopy area approximation')
 # for model, species in allometricModels.iteritems():
 
 
@@ -244,7 +286,7 @@ allSpeciesYc = dict(zip(allSpecies, np.zeros(allSpecies.shape)))
 for plotKey, plot in plots.iteritems():
     for record in plot:
         if allSpecies.__contains__(record['species']):
-            allSpeciesYc[record['species']] += np.abs(record['yc'])
+            allSpeciesYc[record['species']] += record['yc']
 
 pylab.figure()
 pylab.bar(range(0, allSpecies.size), [v for k,v in allSpeciesYc.iteritems()])
@@ -254,19 +296,56 @@ pylab.xticks(range(0, allSpecies.size), allSpecies, rotation='vertical')
 idx = np.flipud(np.argsort([v for k,v in allSpeciesYc.iteritems()]))
 topSpecies = allSpecies[idx[:4]]
 
+pylab.figure()
+pi = 0
 for specie in topSpecies:
     model = allometricModels[specie]
-    for i in range(0, 100):
+    canopyLengths = []
+    canopyLengths = np.linspace(20,300,100)
+    ycs = []
+    for canopyLength in canopyLengths:  # i in range(0, 100):
         record = {}
-        record['canopyLength'] = np.random.rand(1)*200
-        record['canopyWidth'] = np.random.rand(1)*200
-        record['height'] = np.random.rand(1)*300
-        CD = np.mean([record['canopyLength'], record['canopyWidth']])
-        CA = np.pi*(CD/2)**2
-        # record['canopyLength'] = np.random.rand(1)*200
-        edgeSection = record['canopyWidth']*np.random.rand(1)/2
-        fullArea = record['canopyLength']*
+        if False:
+            record['canopyLength'] = np.random.rand(1)*200
+            canopyLengths.append(record['canopyLength'])
+        else:
+            record['canopyLength'] = canopyLength
+        record['canopyWidth'] = canopyLength*0.5
+        record['height'] = 150
+        record['species'] = specie
 
+        edgeSection = record['canopyLength']*0.2
+        sectionArea, ySection = CircleSectionArea(edgeSection + 0.5*record['canopyLength'], 0.5*record['canopyWidth'], edgeSection)
+        record['canopyWidth'] = edgeSection*2
+
+        # get yc for full canopy
+        ycFull = EvalRecordCs(allometricModels, record)   # find c for full canopy
+
+        ycs.append(ycFull)
+
+    ycs = np.array(ycs)
+    pylab.subplot(2, 2, pi + 1)
+    pylab.plot(canopyLengths, ycs)
+    pylab.plot([canopyLengths.min(), canopyLengths.max()], [ycs.min(), ycs.max()])
+    pylab.grid()
+    pylab.ylabel('Yc')
+    pylab.xlabel('Canopy Length')
+    pylab.title(specie)
+    pi += 1
+
+    if False:
+
+        # update record for section of canopy and get yc
+        sectionArea, ySection = CircleSectionArea(record['canopyLength']/2, record['canopyWidth']/2, edgeSection)
+        record['canopyLength'] = record['canopyLength'] - edgeSection
+        record['canopyWidth'] = ySection
+        ycSectionApprox = EvalRecordCs(allometricModels, record)   #find c for approx inside area of canopy
+
+        # get yc for actual portion of canopy
+        model = allometricModels[record['species']]
+        x = 0.
+        CD = np.mean([record['canopyLength'], record['canopyWidth']])
+        CA = sectionArea  #np.pi*(CD/2)**2
         if model['vars'] == 'CA.H':
             x = CA*record['height']
         elif model['vars'] == 'CA.SL':
@@ -280,3 +359,4 @@ for specie in topSpecies:
         else:
             print model['vars'], " unknown variable"
         yn = model['ay']*x**model['by']   # "naive"
+        Yc = yn*model['duan']
