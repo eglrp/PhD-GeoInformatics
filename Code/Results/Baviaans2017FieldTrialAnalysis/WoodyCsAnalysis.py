@@ -34,6 +34,13 @@ def EvalRecordCs(allometricModels, record):
         return 0.
     yn = np.exp(model['ay'])*x**model['by']   # "naive"
     Yc = yn*model['MB']
+
+    if model['useWdRatio']:
+        if model.__contains__('wdRatio'):
+            Yc = Yc * model['wdRatio']
+        else:
+            print "WD Ratio for ", record['species'], " not found - using 1."
+
     return Yc
 
 def EvalPlotCs(allometricModels, plot):
@@ -72,8 +79,29 @@ for r in ws[2:ws.max_row]:  #how to find num rows?
     else:
         model['useWdRatio'] = True
     allometricModels[species] = model
-wb = None
 ws = None
+
+ws = wb["Wet Dry Ratios"]
+first_row = ws[0 + 1]
+header = []
+for c in first_row:
+    header.append(c.value)
+
+wdRatios = {}
+for r in ws[2:ws.max_row]:  #how to find num rows?
+    if r[0].value is None:
+        break
+    species = str.strip(str(r[0].value[0]) + '. ' + str(r[1].value))
+    model = {}
+    model['WDratio'] = r[4].value
+    if allometricModels.__contains__(species):
+        allometricModels[species]['wdRatio'] = r[4].value
+    else:
+        print species, ' not found in allometric models'
+    wdRatios[species] = model
+ws = None
+
+wb = None
 
 # ----------------------------------------------------------------------------------------------------------------------
 # Read in trial woody measurements
@@ -282,20 +310,92 @@ pylab.title('Edge intersected canopy area approximation')
 
 allSpecies = np.array([k for k, v in allometricModels.iteritems()])
 allSpeciesYc = dict(zip(allSpecies, np.zeros(allSpecies.shape)))
+allSpecies = np.array([k for k, v in allSpeciesYc.iteritems()])  # order can change!!!
 
 for plotKey, plot in plots.iteritems():
     for record in plot:
         if allSpecies.__contains__(record['species']):
+            if record['species'].__contains__('junceum'):
+                print 'JUNCEUM'
+                break
             allSpeciesYc[record['species']] += record['yc']
+
 
 pylab.figure()
 pylab.bar(range(0, allSpecies.size), [v for k,v in allSpeciesYc.iteritems()])
+# pylab.yscale('log')
 pylab.xticks(range(0, allSpecies.size), allSpecies, rotation='vertical')
+pylab.grid('on')
+pylab.ylabel('Total C (kg)')
+pylab.title('Total Trial C per Species')
 
 #find 4 highest contributing species
 idx = np.flipud(np.argsort([v for k,v in allSpeciesYc.iteritems()]))
 topSpecies = allSpecies[idx[:4]]
 
+# -------------------------------------------------------------------------------------------------------
+# see how y varies with x for these species
+
+
+# a hacked version of the fn above to return y for varying x
+def EvalRecordCsV(allometricModels, record):
+    # vars = [model['vars'] for model in allometricModels.values()]
+    if not allometricModels.__contains__(record['species']):
+        print record['species'], " not found"
+        return 0.
+    model = allometricModels[record['species']]
+    x = 0.
+    CD = np.mean([record['canopyLength'], record['canopyWidth']])  #make these the max valies
+    CD = np.linspace(10, CD, 100)
+    CA = np.pi*(CD/2)**2
+    if model['vars'] == 'CA.H':
+        x = CA*record['height']
+    elif model['vars'] == 'CA.SL':
+        x = CA*record['height']
+    elif model['vars'] == 'CD':
+        x = CD
+    elif model['vars'] == 'CD.H':
+        x = CD*record['height']
+    elif model['vars'] == 'Hgt':
+        x = record['height']
+    else:
+        print model['vars'], " unknown variable"
+        return 0.
+    yn = np.exp(model['ay'])*x**model['by']   # "naive"
+    yc = yn*model['MB']
+    if model['useWdRatio']:
+        if model.__contains__('wdRatio'):
+            yc = yc * model['wdRatio']
+        else:
+            print "WD Ratio for ", record['species'], " not found - using 1."
+
+    return yc, x
+
+
+pylab.figure()
+pi = 0
+for specie in topSpecies:
+    model = allometricModels[specie]
+    # max values
+    record['canopyLength'] = 200
+    record['canopyWidth'] = 200
+    record['height'] = 150
+    record['species'] = specie
+
+    yc,x = EvalRecordCsV(allometricModels, record)
+    pylab.subplot(2, 2, pi+1)
+    pylab.plot(x, yc)
+    pylab.grid()
+    pylab.ylabel('Yc (kg)')
+    pylab.xlabel(allometricModels[record['species']]['vars'])
+    pylab.title(specie)
+    pi += 1
+
+
+
+
+#------------------------------------------------------------------------------------------------------------------
+# suspect code below
 pylab.figure()
 pi = 0
 for specie in topSpecies:
