@@ -7,6 +7,7 @@
 */
 
 // OpenCV Dependencies
+
 #include <opencv2/core/core.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 #include <opencv2/highgui/highgui.hpp>
@@ -500,7 +501,7 @@ int main( int argc, char* argv[] )
 		rgbV[2] = images[3];
 		rgbV[1] = images[0];
 		rgbV[0] = images[1];
-		Mat rgb;		
+		Mat rgb;
 		cv::merge(rgbV, rgb);
 
 		namedWindow("IMAGE", cv::WINDOW_NORMAL|CV_WINDOW_KEEPRATIO|CV_GUI_EXPANDED);

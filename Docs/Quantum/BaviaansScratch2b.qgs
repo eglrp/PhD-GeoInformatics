@@ -200,7 +200,7 @@
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
-    <layer-tree-group expanded="0" checked="Qt::Unchecked" name="QB 056844553010_01 Basic 1B">
+    <layer-tree-group expanded="1" checked="Qt::Unchecked" name="QB 056844553010_01 Basic 1B">
       <customproperties/>
       <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="056844553010_01_P001_OrthoSudemL3_PanSharpen20171023213518643" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/PCI Output/056844553010_01_P001_OrthoSudemL3_PanSharpen.tif" name="056844553010_01_P001_OrthoSudemL3_PanSharpen">
         <customproperties/>
@@ -239,7 +239,7 @@
         </layer-tree-layer>
       </layer-tree-group>
     </layer-tree-group>
-    <layer-tree-group expanded="0" checked="Qt::Checked" name="NGI 2015 RGBN">
+    <layer-tree-group expanded="1" checked="Qt::Checked" name="NGI 2015 RGBN">
       <customproperties/>
       <layer-tree-group expanded="1" checked="Qt::Checked" name="3324C">
         <customproperties/>
@@ -1160,317 +1160,317 @@
         </layer-tree-layer>
       </layer-tree-group>
     </layer-tree-group>
-    <layer-tree-group expanded="0" checked="Qt::Unchecked" name="NGI 2015">
+    <layer-tree-group expanded="0" checked="Qt::Checked" name="NGI 2015">
       <customproperties/>
-      <layer-tree-group expanded="0" checked="Qt::Unchecked" name="3323DB">
+      <layer-tree-group expanded="0" checked="Qt::Checked" name="3323DB">
         <customproperties/>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3323DB_25_2015_1001_RGB_RECT20170330110903241" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3323DB/3323DB_25_2015_1001_RGB_RECT.tif" name="3323DB_25_2015_1001_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3323DB_25_2015_1001_RGB_RECT20170330110903241" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3323DB/3323DB_25_2015_1001_RGB_RECT.tif" name="3323DB_25_2015_1001_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3323DB_24_2015_1001_RGB_RECT20170330110903192" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3323DB/3323DB_24_2015_1001_RGB_RECT.tif" name="3323DB_24_2015_1001_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3323DB_24_2015_1001_RGB_RECT20170330110903192" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3323DB/3323DB_24_2015_1001_RGB_RECT.tif" name="3323DB_24_2015_1001_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3323DB_23_2015_1001_RGB_RECT20170330110903117" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3323DB/3323DB_23_2015_1001_RGB_RECT.tif" name="3323DB_23_2015_1001_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3323DB_23_2015_1001_RGB_RECT20170330110903117" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3323DB/3323DB_23_2015_1001_RGB_RECT.tif" name="3323DB_23_2015_1001_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3323DB_22_2015_1001_RGB_RECT20170330110903061" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3323DB/3323DB_22_2015_1001_RGB_RECT.tif" name="3323DB_22_2015_1001_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3323DB_22_2015_1001_RGB_RECT20170330110903061" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3323DB/3323DB_22_2015_1001_RGB_RECT.tif" name="3323DB_22_2015_1001_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3323DB_21_2015_1001_RGB_RECT20170330110902994" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3323DB/3323DB_21_2015_1001_RGB_RECT.tif" name="3323DB_21_2015_1001_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3323DB_21_2015_1001_RGB_RECT20170330110902994" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3323DB/3323DB_21_2015_1001_RGB_RECT.tif" name="3323DB_21_2015_1001_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3323DB_20_2015_1001_RGB_RECT20170330110902932" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3323DB/3323DB_20_2015_1001_RGB_RECT.tif" name="3323DB_20_2015_1001_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3323DB_20_2015_1001_RGB_RECT20170330110902932" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3323DB/3323DB_20_2015_1001_RGB_RECT.tif" name="3323DB_20_2015_1001_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3323DB_19_2015_1001_RGB_RECT20170330110902848" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3323DB/3323DB_19_2015_1001_RGB_RECT.tif" name="3323DB_19_2015_1001_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3323DB_19_2015_1001_RGB_RECT20170330110902848" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3323DB/3323DB_19_2015_1001_RGB_RECT.tif" name="3323DB_19_2015_1001_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3323DB_18_2015_1001_RGB_RECT20170330110902778" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3323DB/3323DB_18_2015_1001_RGB_RECT.tif" name="3323DB_18_2015_1001_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3323DB_18_2015_1001_RGB_RECT20170330110902778" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3323DB/3323DB_18_2015_1001_RGB_RECT.tif" name="3323DB_18_2015_1001_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3323DB_17_2015_1001_RGB_RECT20170330110902703" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3323DB/3323DB_17_2015_1001_RGB_RECT.tif" name="3323DB_17_2015_1001_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3323DB_17_2015_1001_RGB_RECT20170330110902703" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3323DB/3323DB_17_2015_1001_RGB_RECT.tif" name="3323DB_17_2015_1001_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3323DB_16_2015_1001_RGB_RECT20170330110902657" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3323DB/3323DB_16_2015_1001_RGB_RECT.tif" name="3323DB_16_2015_1001_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3323DB_16_2015_1001_RGB_RECT20170330110902657" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3323DB/3323DB_16_2015_1001_RGB_RECT.tif" name="3323DB_16_2015_1001_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3323DB_15_2015_1001_RGB_RECT20170330110902585" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3323DB/3323DB_15_2015_1001_RGB_RECT.tif" name="3323DB_15_2015_1001_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3323DB_15_2015_1001_RGB_RECT20170330110902585" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3323DB/3323DB_15_2015_1001_RGB_RECT.tif" name="3323DB_15_2015_1001_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3323DB_14_2015_1001_RGB_RECT20170330110902538" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3323DB/3323DB_14_2015_1001_RGB_RECT.tif" name="3323DB_14_2015_1001_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3323DB_14_2015_1001_RGB_RECT20170330110902538" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3323DB/3323DB_14_2015_1001_RGB_RECT.tif" name="3323DB_14_2015_1001_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3323DB_13_2015_1001_RGB_RECT20170330110902471" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3323DB/3323DB_13_2015_1001_RGB_RECT.tif" name="3323DB_13_2015_1001_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3323DB_13_2015_1001_RGB_RECT20170330110902471" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3323DB/3323DB_13_2015_1001_RGB_RECT.tif" name="3323DB_13_2015_1001_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3323DB_12_2015_1001_RGB_RECT20170330110902408" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3323DB/3323DB_12_2015_1001_RGB_RECT.tif" name="3323DB_12_2015_1001_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3323DB_12_2015_1001_RGB_RECT20170330110902408" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3323DB/3323DB_12_2015_1001_RGB_RECT.tif" name="3323DB_12_2015_1001_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3323DB_11_2015_1001_RGB_RECT20170330110902333" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3323DB/3323DB_11_2015_1001_RGB_RECT.tif" name="3323DB_11_2015_1001_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3323DB_11_2015_1001_RGB_RECT20170330110902333" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3323DB/3323DB_11_2015_1001_RGB_RECT.tif" name="3323DB_11_2015_1001_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3323DB_10_2015_1001_RGB_RECT20170330110902262" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3323DB/3323DB_10_2015_1001_RGB_RECT.tif" name="3323DB_10_2015_1001_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3323DB_10_2015_1001_RGB_RECT20170330110902262" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3323DB/3323DB_10_2015_1001_RGB_RECT.tif" name="3323DB_10_2015_1001_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3323DB_09_2015_1001_RGB_RECT20170330110902191" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3323DB/3323DB_09_2015_1001_RGB_RECT.tif" name="3323DB_09_2015_1001_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3323DB_09_2015_1001_RGB_RECT20170330110902191" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3323DB/3323DB_09_2015_1001_RGB_RECT.tif" name="3323DB_09_2015_1001_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3323DB_08_2015_1001_RGB_RECT20170330110902139" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3323DB/3323DB_08_2015_1001_RGB_RECT.tif" name="3323DB_08_2015_1001_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3323DB_08_2015_1001_RGB_RECT20170330110902139" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3323DB/3323DB_08_2015_1001_RGB_RECT.tif" name="3323DB_08_2015_1001_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3323DB_07_2015_1001_RGB_RECT20170330110902072" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3323DB/3323DB_07_2015_1001_RGB_RECT.tif" name="3323DB_07_2015_1001_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3323DB_07_2015_1001_RGB_RECT20170330110902072" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3323DB/3323DB_07_2015_1001_RGB_RECT.tif" name="3323DB_07_2015_1001_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3323DB_06_2015_1001_RGB_RECT20170330110902042" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3323DB/3323DB_06_2015_1001_RGB_RECT.tif" name="3323DB_06_2015_1001_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3323DB_06_2015_1001_RGB_RECT20170330110902042" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3323DB/3323DB_06_2015_1001_RGB_RECT.tif" name="3323DB_06_2015_1001_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3323DB_05_2015_1001_RGB_RECT20170330110902024" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3323DB/3323DB_05_2015_1001_RGB_RECT.tif" name="3323DB_05_2015_1001_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3323DB_05_2015_1001_RGB_RECT20170330110902024" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3323DB/3323DB_05_2015_1001_RGB_RECT.tif" name="3323DB_05_2015_1001_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3323DB_04_2015_1001_RGB_RECT20170330110901973" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3323DB/3323DB_04_2015_1001_RGB_RECT.tif" name="3323DB_04_2015_1001_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3323DB_04_2015_1001_RGB_RECT20170330110901973" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3323DB/3323DB_04_2015_1001_RGB_RECT.tif" name="3323DB_04_2015_1001_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3323DB_03_2015_1001_RGB_RECT20170330110901941" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3323DB/3323DB_03_2015_1001_RGB_RECT.tif" name="3323DB_03_2015_1001_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3323DB_03_2015_1001_RGB_RECT20170330110901941" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3323DB/3323DB_03_2015_1001_RGB_RECT.tif" name="3323DB_03_2015_1001_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3323DB_02_2015_1001_RGB_RECT20170330110719034" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3323DB/3323DB_02_2015_1001_RGB_RECT.tif" name="3323DB_02_2015_1001_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3323DB_02_2015_1001_RGB_RECT20170330110719034" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3323DB/3323DB_02_2015_1001_RGB_RECT.tif" name="3323DB_02_2015_1001_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3323DB_01_2015_1001_RGB_RECT20170330110718954" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3323DB/3323DB_01_2015_1001_RGB_RECT.tif" name="3323DB_01_2015_1001_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3323DB_01_2015_1001_RGB_RECT20170330110718954" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3323DB/3323DB_01_2015_1001_RGB_RECT.tif" name="3323DB_01_2015_1001_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
       </layer-tree-group>
-      <layer-tree-group expanded="0" checked="Qt::Unchecked" name="3324CA">
+      <layer-tree-group expanded="0" checked="Qt::Checked" name="3324CA">
         <customproperties/>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324CA_25_2015_1004_RGB_RECT20170330112353424" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CA/3324CA_25_2015_1004_RGB_RECT.tif" name="3324CA_25_2015_1004_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324CA_25_2015_1004_RGB_RECT20170330112353424" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CA/3324CA_25_2015_1004_RGB_RECT.tif" name="3324CA_25_2015_1004_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324CA_24_2015_1004_RGB_RECT20170330112353353" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CA/3324CA_24_2015_1004_RGB_RECT.tif" name="3324CA_24_2015_1004_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324CA_24_2015_1004_RGB_RECT20170330112353353" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CA/3324CA_24_2015_1004_RGB_RECT.tif" name="3324CA_24_2015_1004_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324CA_23_2015_1004_RGB_RECT20170330112353271" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CA/3324CA_23_2015_1004_RGB_RECT.tif" name="3324CA_23_2015_1004_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324CA_23_2015_1004_RGB_RECT20170330112353271" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CA/3324CA_23_2015_1004_RGB_RECT.tif" name="3324CA_23_2015_1004_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324CA_22_2015_1004_RGB_RECT20170330112353188" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CA/3324CA_22_2015_1004_RGB_RECT.tif" name="3324CA_22_2015_1004_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324CA_22_2015_1004_RGB_RECT20170330112353188" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CA/3324CA_22_2015_1004_RGB_RECT.tif" name="3324CA_22_2015_1004_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324CA_21_2015_1004_RGB_RECT20170330112353119" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CA/3324CA_21_2015_1004_RGB_RECT.tif" name="3324CA_21_2015_1004_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324CA_21_2015_1004_RGB_RECT20170330112353119" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CA/3324CA_21_2015_1004_RGB_RECT.tif" name="3324CA_21_2015_1004_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324CA_20_2015_1004_RGB_RECT20170330112353052" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CA/3324CA_20_2015_1004_RGB_RECT.tif" name="3324CA_20_2015_1004_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324CA_20_2015_1004_RGB_RECT20170330112353052" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CA/3324CA_20_2015_1004_RGB_RECT.tif" name="3324CA_20_2015_1004_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324CA_19_2015_1004_RGB_RECT20170330112352953" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CA/3324CA_19_2015_1004_RGB_RECT.tif" name="3324CA_19_2015_1004_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324CA_19_2015_1004_RGB_RECT20170330112352953" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CA/3324CA_19_2015_1004_RGB_RECT.tif" name="3324CA_19_2015_1004_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324CA_18_2015_1004_RGB_RECT20170330112352872" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CA/3324CA_18_2015_1004_RGB_RECT.tif" name="3324CA_18_2015_1004_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324CA_18_2015_1004_RGB_RECT20170330112352872" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CA/3324CA_18_2015_1004_RGB_RECT.tif" name="3324CA_18_2015_1004_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324CA_17_2015_1004_RGB_RECT20170330112352808" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CA/3324CA_17_2015_1004_RGB_RECT.tif" name="3324CA_17_2015_1004_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324CA_17_2015_1004_RGB_RECT20170330112352808" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CA/3324CA_17_2015_1004_RGB_RECT.tif" name="3324CA_17_2015_1004_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324CA_16_2015_1004_RGB_RECT20170330112352734" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CA/3324CA_16_2015_1004_RGB_RECT.tif" name="3324CA_16_2015_1004_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324CA_16_2015_1004_RGB_RECT20170330112352734" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CA/3324CA_16_2015_1004_RGB_RECT.tif" name="3324CA_16_2015_1004_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324CA_15_2015_1004_RGB_RECT20170330112352656" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CA/3324CA_15_2015_1004_RGB_RECT.tif" name="3324CA_15_2015_1004_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324CA_15_2015_1004_RGB_RECT20170330112352656" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CA/3324CA_15_2015_1004_RGB_RECT.tif" name="3324CA_15_2015_1004_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324CA_14_2015_1004_RGB_RECT20170330112352585" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CA/3324CA_14_2015_1004_RGB_RECT.tif" name="3324CA_14_2015_1004_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324CA_14_2015_1004_RGB_RECT20170330112352585" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CA/3324CA_14_2015_1004_RGB_RECT.tif" name="3324CA_14_2015_1004_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324CA_13_2015_1004_RGB_RECT20170330112352515" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CA/3324CA_13_2015_1004_RGB_RECT.tif" name="3324CA_13_2015_1004_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324CA_13_2015_1004_RGB_RECT20170330112352515" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CA/3324CA_13_2015_1004_RGB_RECT.tif" name="3324CA_13_2015_1004_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324CA_12_2015_1004_RGB_RECT20170330112352425" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CA/3324CA_12_2015_1004_RGB_RECT.tif" name="3324CA_12_2015_1004_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324CA_12_2015_1004_RGB_RECT20170330112352425" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CA/3324CA_12_2015_1004_RGB_RECT.tif" name="3324CA_12_2015_1004_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324CA_11_2015_1004_RGB_RECT20170330112352348" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CA/3324CA_11_2015_1004_RGB_RECT.tif" name="3324CA_11_2015_1004_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324CA_11_2015_1004_RGB_RECT20170330112352348" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CA/3324CA_11_2015_1004_RGB_RECT.tif" name="3324CA_11_2015_1004_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324CA_10_2015_1004_RGB_RECT20170330112352261" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CA/3324CA_10_2015_1004_RGB_RECT.tif" name="3324CA_10_2015_1004_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324CA_10_2015_1004_RGB_RECT20170330112352261" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CA/3324CA_10_2015_1004_RGB_RECT.tif" name="3324CA_10_2015_1004_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324CA_09_2015_1004_RGB_RECT20170330112352185" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CA/3324CA_09_2015_1004_RGB_RECT.tif" name="3324CA_09_2015_1004_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324CA_09_2015_1004_RGB_RECT20170330112352185" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CA/3324CA_09_2015_1004_RGB_RECT.tif" name="3324CA_09_2015_1004_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324CA_08_2015_1004_RGB_RECT20170330112352121" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CA/3324CA_08_2015_1004_RGB_RECT.tif" name="3324CA_08_2015_1004_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324CA_08_2015_1004_RGB_RECT20170330112352121" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CA/3324CA_08_2015_1004_RGB_RECT.tif" name="3324CA_08_2015_1004_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324CA_07_2015_1004_RGB_RECT20170330112352049" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CA/3324CA_07_2015_1004_RGB_RECT.tif" name="3324CA_07_2015_1004_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324CA_07_2015_1004_RGB_RECT20170330112352049" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CA/3324CA_07_2015_1004_RGB_RECT.tif" name="3324CA_07_2015_1004_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324CA_06_2015_1004_RGB_RECT20170330112351935" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CA/3324CA_06_2015_1004_RGB_RECT.tif" name="3324CA_06_2015_1004_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324CA_06_2015_1004_RGB_RECT20170330112351935" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CA/3324CA_06_2015_1004_RGB_RECT.tif" name="3324CA_06_2015_1004_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324CA_05_2015_1004_RGB_RECT20170330112351862" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CA/3324CA_05_2015_1004_RGB_RECT.tif" name="3324CA_05_2015_1004_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324CA_05_2015_1004_RGB_RECT20170330112351862" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CA/3324CA_05_2015_1004_RGB_RECT.tif" name="3324CA_05_2015_1004_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324CA_04_2015_1004_RGB_RECT20170330112351818" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CA/3324CA_04_2015_1004_RGB_RECT.tif" name="3324CA_04_2015_1004_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324CA_04_2015_1004_RGB_RECT20170330112351818" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CA/3324CA_04_2015_1004_RGB_RECT.tif" name="3324CA_04_2015_1004_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324CA_03_2015_1004_RGB_RECT20170330112351754" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CA/3324CA_03_2015_1004_RGB_RECT.tif" name="3324CA_03_2015_1004_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324CA_03_2015_1004_RGB_RECT20170330112351754" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CA/3324CA_03_2015_1004_RGB_RECT.tif" name="3324CA_03_2015_1004_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324CA_02_2015_1004_RGB_RECT20170330112351715" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CA/3324CA_02_2015_1004_RGB_RECT.tif" name="3324CA_02_2015_1004_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324CA_02_2015_1004_RGB_RECT20170330112351715" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CA/3324CA_02_2015_1004_RGB_RECT.tif" name="3324CA_02_2015_1004_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324CA_01_2015_1004_RGB_RECT20170330112351644" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CA/3324CA_01_2015_1004_RGB_RECT.tif" name="3324CA_01_2015_1004_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324CA_01_2015_1004_RGB_RECT20170330112351644" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CA/3324CA_01_2015_1004_RGB_RECT.tif" name="3324CA_01_2015_1004_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
       </layer-tree-group>
-      <layer-tree-group expanded="0" checked="Qt::Unchecked" name="3324CB">
+      <layer-tree-group expanded="0" checked="Qt::Checked" name="3324CB">
         <customproperties/>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324CB_25_2015_1004_RGB_RECT20170330112503327" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CB/3324CB_25_2015_1004_RGB_RECT.tif" name="3324CB_25_2015_1004_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324CB_25_2015_1004_RGB_RECT20170330112503327" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CB/3324CB_25_2015_1004_RGB_RECT.tif" name="3324CB_25_2015_1004_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324CB_24_2015_1004_RGB_RECT20170330112503263" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CB/3324CB_24_2015_1004_RGB_RECT.tif" name="3324CB_24_2015_1004_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324CB_24_2015_1004_RGB_RECT20170330112503263" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CB/3324CB_24_2015_1004_RGB_RECT.tif" name="3324CB_24_2015_1004_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324CB_23_2015_1004_RGB_RECT20170330112503199" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CB/3324CB_23_2015_1004_RGB_RECT.tif" name="3324CB_23_2015_1004_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324CB_23_2015_1004_RGB_RECT20170330112503199" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CB/3324CB_23_2015_1004_RGB_RECT.tif" name="3324CB_23_2015_1004_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324CB_22_2015_1004_RGB_RECT20170330112503128" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CB/3324CB_22_2015_1004_RGB_RECT.tif" name="3324CB_22_2015_1004_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324CB_22_2015_1004_RGB_RECT20170330112503128" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CB/3324CB_22_2015_1004_RGB_RECT.tif" name="3324CB_22_2015_1004_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324CB_21_2015_1004_RGB_RECT20170330112503043" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CB/3324CB_21_2015_1004_RGB_RECT.tif" name="3324CB_21_2015_1004_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324CB_21_2015_1004_RGB_RECT20170330112503043" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CB/3324CB_21_2015_1004_RGB_RECT.tif" name="3324CB_21_2015_1004_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324CB_20_2015_1004_RGB_RECT20170330112502962" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CB/3324CB_20_2015_1004_RGB_RECT.tif" name="3324CB_20_2015_1004_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324CB_20_2015_1004_RGB_RECT20170330112502962" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CB/3324CB_20_2015_1004_RGB_RECT.tif" name="3324CB_20_2015_1004_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324CB_19_2015_1004_RGB_RECT20170330112502886" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CB/3324CB_19_2015_1004_RGB_RECT.tif" name="3324CB_19_2015_1004_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324CB_19_2015_1004_RGB_RECT20170330112502886" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CB/3324CB_19_2015_1004_RGB_RECT.tif" name="3324CB_19_2015_1004_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324CB_18_2015_1004_RGB_RECT20170330112502793" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CB/3324CB_18_2015_1004_RGB_RECT.tif" name="3324CB_18_2015_1004_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324CB_18_2015_1004_RGB_RECT20170330112502793" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CB/3324CB_18_2015_1004_RGB_RECT.tif" name="3324CB_18_2015_1004_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324CB_17_2015_1004_RGB_RECT20170330112502712" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CB/3324CB_17_2015_1004_RGB_RECT.tif" name="3324CB_17_2015_1004_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324CB_17_2015_1004_RGB_RECT20170330112502712" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CB/3324CB_17_2015_1004_RGB_RECT.tif" name="3324CB_17_2015_1004_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324CB_16_2015_1004_RGB_RECT20170330112502638" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CB/3324CB_16_2015_1004_RGB_RECT.tif" name="3324CB_16_2015_1004_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324CB_16_2015_1004_RGB_RECT20170330112502638" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CB/3324CB_16_2015_1004_RGB_RECT.tif" name="3324CB_16_2015_1004_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324CB_15_2015_1004_RGB_RECT20170330112502553" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CB/3324CB_15_2015_1004_RGB_RECT.tif" name="3324CB_15_2015_1004_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324CB_15_2015_1004_RGB_RECT20170330112502553" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CB/3324CB_15_2015_1004_RGB_RECT.tif" name="3324CB_15_2015_1004_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324CB_14_2015_1004_RGB_RECT20170330112502481" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CB/3324CB_14_2015_1004_RGB_RECT.tif" name="3324CB_14_2015_1004_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324CB_14_2015_1004_RGB_RECT20170330112502481" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CB/3324CB_14_2015_1004_RGB_RECT.tif" name="3324CB_14_2015_1004_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324CB_13_2015_1004_RGB_RECT20170330112502415" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CB/3324CB_13_2015_1004_RGB_RECT.tif" name="3324CB_13_2015_1004_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324CB_13_2015_1004_RGB_RECT20170330112502415" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CB/3324CB_13_2015_1004_RGB_RECT.tif" name="3324CB_13_2015_1004_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324CB_12_2015_1004_RGB_RECT20170330112502342" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CB/3324CB_12_2015_1004_RGB_RECT.tif" name="3324CB_12_2015_1004_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324CB_12_2015_1004_RGB_RECT20170330112502342" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CB/3324CB_12_2015_1004_RGB_RECT.tif" name="3324CB_12_2015_1004_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324CB_11_2015_1004_RGB_RECT20170330112502267" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CB/3324CB_11_2015_1004_RGB_RECT.tif" name="3324CB_11_2015_1004_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324CB_11_2015_1004_RGB_RECT20170330112502267" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CB/3324CB_11_2015_1004_RGB_RECT.tif" name="3324CB_11_2015_1004_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324CB_10_2015_1004_RGB_RECT20170330112502187" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CB/3324CB_10_2015_1004_RGB_RECT.tif" name="3324CB_10_2015_1004_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324CB_10_2015_1004_RGB_RECT20170330112502187" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CB/3324CB_10_2015_1004_RGB_RECT.tif" name="3324CB_10_2015_1004_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324CB_09_2015_1004_RGB_RECT20170330112502108" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CB/3324CB_09_2015_1004_RGB_RECT.tif" name="3324CB_09_2015_1004_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324CB_09_2015_1004_RGB_RECT20170330112502108" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CB/3324CB_09_2015_1004_RGB_RECT.tif" name="3324CB_09_2015_1004_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324CB_08_2015_1004_RGB_RECT20170330112502028" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CB/3324CB_08_2015_1004_RGB_RECT.tif" name="3324CB_08_2015_1004_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324CB_08_2015_1004_RGB_RECT20170330112502028" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CB/3324CB_08_2015_1004_RGB_RECT.tif" name="3324CB_08_2015_1004_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324CB_07_2015_1004_RGB_RECT20170330112501954" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CB/3324CB_07_2015_1004_RGB_RECT.tif" name="3324CB_07_2015_1004_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324CB_07_2015_1004_RGB_RECT20170330112501954" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CB/3324CB_07_2015_1004_RGB_RECT.tif" name="3324CB_07_2015_1004_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324CB_06_2015_1004_RGB_RECT20170330112501899" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CB/3324CB_06_2015_1004_RGB_RECT.tif" name="3324CB_06_2015_1004_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324CB_06_2015_1004_RGB_RECT20170330112501899" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CB/3324CB_06_2015_1004_RGB_RECT.tif" name="3324CB_06_2015_1004_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324CB_05_2015_1004_RGB_RECT20170330112501829" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CB/3324CB_05_2015_1004_RGB_RECT.tif" name="3324CB_05_2015_1004_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324CB_05_2015_1004_RGB_RECT20170330112501829" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CB/3324CB_05_2015_1004_RGB_RECT.tif" name="3324CB_05_2015_1004_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324CB_04_2015_1004_RGB_RECT20170330112501769" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CB/3324CB_04_2015_1004_RGB_RECT.tif" name="3324CB_04_2015_1004_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324CB_04_2015_1004_RGB_RECT20170330112501769" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CB/3324CB_04_2015_1004_RGB_RECT.tif" name="3324CB_04_2015_1004_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324CB_03_2015_1004_RGB_RECT20170330112501742" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CB/3324CB_03_2015_1004_RGB_RECT.tif" name="3324CB_03_2015_1004_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324CB_03_2015_1004_RGB_RECT20170330112501742" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CB/3324CB_03_2015_1004_RGB_RECT.tif" name="3324CB_03_2015_1004_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324CB_02_2015_1004_RGB_RECT20170330112501713" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CB/3324CB_02_2015_1004_RGB_RECT.tif" name="3324CB_02_2015_1004_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324CB_02_2015_1004_RGB_RECT20170330112501713" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CB/3324CB_02_2015_1004_RGB_RECT.tif" name="3324CB_02_2015_1004_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324CB_01_2015_1004_RGB_RECT20170330112501680" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CB/3324CB_01_2015_1004_RGB_RECT.tif" name="3324CB_01_2015_1004_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324CB_01_2015_1004_RGB_RECT20170330112501680" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324CB/3324CB_01_2015_1004_RGB_RECT.tif" name="3324CB_01_2015_1004_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
       </layer-tree-group>
-      <layer-tree-group expanded="0" checked="Qt::Unchecked" name="3324DA">
+      <layer-tree-group expanded="0" checked="Qt::Checked" name="3324DA">
         <customproperties/>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324DA_25_2015_1005_RGB_RECT20170330112621533" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324DA/3324DA_25_2015_1005_RGB_RECT.tif" name="3324DA_25_2015_1005_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324DA_25_2015_1005_RGB_RECT20170330112621533" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324DA/3324DA_25_2015_1005_RGB_RECT.tif" name="3324DA_25_2015_1005_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324DA_24_2015_1005_RGB_RECT20170330112621467" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324DA/3324DA_24_2015_1005_RGB_RECT.tif" name="3324DA_24_2015_1005_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324DA_24_2015_1005_RGB_RECT20170330112621467" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324DA/3324DA_24_2015_1005_RGB_RECT.tif" name="3324DA_24_2015_1005_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324DA_23_2015_1005_RGB_RECT20170330112621399" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324DA/3324DA_23_2015_1005_RGB_RECT.tif" name="3324DA_23_2015_1005_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324DA_23_2015_1005_RGB_RECT20170330112621399" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324DA/3324DA_23_2015_1005_RGB_RECT.tif" name="3324DA_23_2015_1005_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324DA_22_2015_1005_RGB_RECT20170330112621332" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324DA/3324DA_22_2015_1005_RGB_RECT.tif" name="3324DA_22_2015_1005_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324DA_22_2015_1005_RGB_RECT20170330112621332" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324DA/3324DA_22_2015_1005_RGB_RECT.tif" name="3324DA_22_2015_1005_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324DA_21_2015_1005_RGB_RECT20170330112621253" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324DA/3324DA_21_2015_1005_RGB_RECT.tif" name="3324DA_21_2015_1005_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324DA_21_2015_1005_RGB_RECT20170330112621253" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324DA/3324DA_21_2015_1005_RGB_RECT.tif" name="3324DA_21_2015_1005_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324DA_20_2015_1005_RGB_RECT20170330112621172" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324DA/3324DA_20_2015_1005_RGB_RECT.tif" name="3324DA_20_2015_1005_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324DA_20_2015_1005_RGB_RECT20170330112621172" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324DA/3324DA_20_2015_1005_RGB_RECT.tif" name="3324DA_20_2015_1005_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324DA_19_2015_1005_RGB_RECT20170330112621116" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324DA/3324DA_19_2015_1005_RGB_RECT.tif" name="3324DA_19_2015_1005_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324DA_19_2015_1005_RGB_RECT20170330112621116" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324DA/3324DA_19_2015_1005_RGB_RECT.tif" name="3324DA_19_2015_1005_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324DA_18_2015_1005_RGB_RECT20170330112619686" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324DA/3324DA_18_2015_1005_RGB_RECT.tif" name="3324DA_18_2015_1005_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324DA_18_2015_1005_RGB_RECT20170330112619686" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324DA/3324DA_18_2015_1005_RGB_RECT.tif" name="3324DA_18_2015_1005_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324DA_17_2015_1005_RGB_RECT20170330112619603" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324DA/3324DA_17_2015_1005_RGB_RECT.tif" name="3324DA_17_2015_1005_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324DA_17_2015_1005_RGB_RECT20170330112619603" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324DA/3324DA_17_2015_1005_RGB_RECT.tif" name="3324DA_17_2015_1005_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324DA_16_2015_1005_RGB_RECT20170330112619540" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324DA/3324DA_16_2015_1005_RGB_RECT.tif" name="3324DA_16_2015_1005_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324DA_16_2015_1005_RGB_RECT20170330112619540" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324DA/3324DA_16_2015_1005_RGB_RECT.tif" name="3324DA_16_2015_1005_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324DA_15_2015_1005_RGB_RECT20170330112619464" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324DA/3324DA_15_2015_1005_RGB_RECT.tif" name="3324DA_15_2015_1005_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324DA_15_2015_1005_RGB_RECT20170330112619464" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324DA/3324DA_15_2015_1005_RGB_RECT.tif" name="3324DA_15_2015_1005_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324DA_14_2015_1005_RGB_RECT20170330112619400" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324DA/3324DA_14_2015_1005_RGB_RECT.tif" name="3324DA_14_2015_1005_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324DA_14_2015_1005_RGB_RECT20170330112619400" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324DA/3324DA_14_2015_1005_RGB_RECT.tif" name="3324DA_14_2015_1005_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324DA_13_2015_1005_RGB_RECT20170330112619279" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324DA/3324DA_13_2015_1005_RGB_RECT.tif" name="3324DA_13_2015_1005_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324DA_13_2015_1005_RGB_RECT20170330112619279" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324DA/3324DA_13_2015_1005_RGB_RECT.tif" name="3324DA_13_2015_1005_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324DA_12_2015_1005_RGB_RECT20170330112619169" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324DA/3324DA_12_2015_1005_RGB_RECT.tif" name="3324DA_12_2015_1005_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324DA_12_2015_1005_RGB_RECT20170330112619169" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324DA/3324DA_12_2015_1005_RGB_RECT.tif" name="3324DA_12_2015_1005_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324DA_11_2015_1005_RGB_RECT20170330112619059" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324DA/3324DA_11_2015_1005_RGB_RECT.tif" name="3324DA_11_2015_1005_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324DA_11_2015_1005_RGB_RECT20170330112619059" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324DA/3324DA_11_2015_1005_RGB_RECT.tif" name="3324DA_11_2015_1005_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324DA_10_2015_1005_RGB_RECT20170330112618989" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324DA/3324DA_10_2015_1005_RGB_RECT.tif" name="3324DA_10_2015_1005_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324DA_10_2015_1005_RGB_RECT20170330112618989" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324DA/3324DA_10_2015_1005_RGB_RECT.tif" name="3324DA_10_2015_1005_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324DA_09_2015_1005_RGB_RECT20170330112618907" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324DA/3324DA_09_2015_1005_RGB_RECT.tif" name="3324DA_09_2015_1005_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324DA_09_2015_1005_RGB_RECT20170330112618907" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324DA/3324DA_09_2015_1005_RGB_RECT.tif" name="3324DA_09_2015_1005_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324DA_08_2015_1005_RGB_RECT20170330112618786" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324DA/3324DA_08_2015_1005_RGB_RECT.tif" name="3324DA_08_2015_1005_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324DA_08_2015_1005_RGB_RECT20170330112618786" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324DA/3324DA_08_2015_1005_RGB_RECT.tif" name="3324DA_08_2015_1005_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324DA_07_2015_1005_RGB_RECT20170330112618687" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324DA/3324DA_07_2015_1005_RGB_RECT.tif" name="3324DA_07_2015_1005_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324DA_07_2015_1005_RGB_RECT20170330112618687" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324DA/3324DA_07_2015_1005_RGB_RECT.tif" name="3324DA_07_2015_1005_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324DA_06_2015_1005_RGB_RECT20170330112618589" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324DA/3324DA_06_2015_1005_RGB_RECT.tif" name="3324DA_06_2015_1005_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324DA_06_2015_1005_RGB_RECT20170330112618589" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324DA/3324DA_06_2015_1005_RGB_RECT.tif" name="3324DA_06_2015_1005_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324DA_05_2015_1005_RGB_RECT20170330112618474" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324DA/3324DA_05_2015_1005_RGB_RECT.tif" name="3324DA_05_2015_1005_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324DA_05_2015_1005_RGB_RECT20170330112618474" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324DA/3324DA_05_2015_1005_RGB_RECT.tif" name="3324DA_05_2015_1005_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324DA_04_2015_1005_RGB_RECT20170330112618353" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324DA/3324DA_04_2015_1005_RGB_RECT.tif" name="3324DA_04_2015_1005_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324DA_04_2015_1005_RGB_RECT20170330112618353" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324DA/3324DA_04_2015_1005_RGB_RECT.tif" name="3324DA_04_2015_1005_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324DA_03_2015_1005_RGB_RECT20170330112618331" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324DA/3324DA_03_2015_1005_RGB_RECT.tif" name="3324DA_03_2015_1005_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324DA_03_2015_1005_RGB_RECT20170330112618331" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324DA/3324DA_03_2015_1005_RGB_RECT.tif" name="3324DA_03_2015_1005_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324DA_02_2015_1005_RGB_RECT20170330112618296" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324DA/3324DA_02_2015_1005_RGB_RECT.tif" name="3324DA_02_2015_1005_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324DA_02_2015_1005_RGB_RECT20170330112618296" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324DA/3324DA_02_2015_1005_RGB_RECT.tif" name="3324DA_02_2015_1005_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324DA_01_2015_1005_RGB_RECT20170330112618255" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324DA/3324DA_01_2015_1005_RGB_RECT.tif" name="3324DA_01_2015_1005_RGB_RECT">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324DA_01_2015_1005_RGB_RECT20170330112618255" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/10K/2015/3324DA/3324DA_01_2015_1005_RGB_RECT.tif" name="3324DA_01_2015_1005_RGB_RECT">
           <customproperties/>
         </layer-tree-layer>
       </layer-tree-group>
@@ -2105,9 +2105,15 @@
         </layer-tree-layer>
       </layer-tree-group>
     </layer-tree-group>
-    <layer-tree-group expanded="1" checked="Qt::Unchecked" name="Basemaps">
+    <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="Basemaps">
       <customproperties/>
-      <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="MCD43A4_A2003313_h20v12_005_2008026015724_QbBandOrderAndCoOrds20170926165730131" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/MODIS/MCD43A4.A2003313.h20v12.005.2008026015724/MCD43A4.A2003313.h20v12.005.2008026015724.QbBandOrderAndCoOrds.tif" name="MCD43A4.A2003313.h20v12.005.2008026015724.QbBandOrderAndCoOrds">
+      <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="MCD43A4_A2015241_h20v12_005_2015260133130_NgiBandOrder20171027155218764" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/MODIS/MCD43A4.A2015241.h20v12.005.2015260133130/MCD43A4.A2015241.h20v12.005.2015260133130.NgiBandOrder.tif" name="MCD43A4.A2015241.h20v12.005.2015260133130.NgiBandOrder">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="MCD43A4_A2015241_h20v12_005_201526013313020171027153852876" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/MODIS/MCD43A4.A2015241.h20v12.005.2015260133130/MCD43A4.A2015241.h20v12.005.2015260133130.tif" name="MCD43A4.A2015241.h20v12.005.2015260133130">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="MCD43A4_A2003313_h20v12_005_2008026015724_QbBandOrderAndCoOrds20170926165730131" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/MODIS/MCD43A4.A2003313.h20v12.005.2008026015724/MCD43A4.A2003313.h20v12.005.2008026015724.QbBandOrderAndCoOrds.tif" name="MCD43A4.A2003313.h20v12.005.2008026015724.QbBandOrderAndCoOrds">
         <customproperties/>
       </layer-tree-layer>
       <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="MCD43A4_A2003313_h20v12_005_2008026015724_QbBandOrder20170926132043861" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/MODIS/MCD43A4.A2003313.h20v12.005.2008026015724/MCD43A4.A2003313.h20v12.005.2008026015724.QbBandOrder.tif" name="MCD43A4.A2003313.h20v12.005.2008026015724.QbBandOrder">
@@ -2128,10 +2134,10 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>257443.67137635932886042</xmin>
-      <ymin>6271660.16149021591991186</ymin>
-      <xmax>257546.12818926529143937</xmax>
-      <ymax>6271722.70805236790329218</ymax>
+      <xmin>213970.50822944342507981</xmin>
+      <ymin>6278261.61398610938340425</ymin>
+      <xmax>226420.23938249101047404</xmax>
+      <ymax>6288637.81485890131443739</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
@@ -2182,6 +2188,7 @@
       <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_19_2015_1004_RGB_RECT20170330112502886"/>
       <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_04_0152_RGBN20171023213751614"/>
       <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_04_0171_RGBN20171026134751021"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100004" srcDatumTransform="-1" destDatumTransform="-1" layerid="MCD43A4_A2015241_h20v12_005_201526013313020171027153852876"/>
       <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_02_0049_RGBN20171026134737562"/>
       <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_16_2015_1001_RGB_RECT20170330110902657"/>
       <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_04_0153_RGBN20171023202239473"/>
@@ -2236,6 +2243,7 @@
       <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_03_0086_RGBN20171026134741590"/>
       <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_01_0039_RGBN20171026134736493"/>
       <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100004" srcDatumTransform="-1" destDatumTransform="-1" layerid="MCD43A4_A2003313_h20v12_005_200802601572420170926131307619"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="EPSG:32735" srcDatumTransform="-1" destDatumTransform="-1" layerid="MCD43A4_A2003313_h20v12_005_2008026015724_QbBandOrderAndCoOrds20170926165730131"/>
       <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_07_0293_RGBN20171026134805408"/>
       <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_07_0273_RGBN20171026134802652"/>
       <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_13_2015_1005_RGB_RECT20170330112619279"/>
@@ -2256,6 +2264,7 @@
       <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_02_0055_RGBN20171026134738266"/>
       <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_04_0137_RGBN20171026134747234"/>
       <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_05_2015_1001_RGB_RECT20170330110902024"/>
+      <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100004" srcDatumTransform="-1" destDatumTransform="-1" layerid="MCD43A4_A2015241_h20v12_005_2015260133130_NgiBandOrder20171027155218764"/>
       <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_05_0211_RGBN20171026134755615"/>
       <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100007" srcDatumTransform="-1" destDatumTransform="-1" layerid="ATCORCorrected_03NOV18082012_056844553010_01_P001_PciOrtho_SudemL3_PanSharpen20171003195205910"/>
       <layer_coordinate_transform destAuthId="EPSG:32735" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_05_0193_RGBN20171026134753558"/>
@@ -3278,6 +3287,8 @@
       <item>o3324c_2015_1004_07_0303_RGBN20171026134806797</item>
       <item>o3324c_2015_1004_07_0304_RGBN20171026134806952</item>
       <item>o3324c_2015_1004_07_0305_RGBN20171026134807081</item>
+      <item>MCD43A4_A2015241_h20v12_005_201526013313020171027153852876</item>
+      <item>MCD43A4_A2015241_h20v12_005_2015260133130_NgiBandOrder20171027155218764</item>
     </custom-order>
   </layer-tree-canvas>
   <legend updateDrawingOrder="true">
@@ -3590,7 +3601,7 @@
         </filegroup>
       </legendlayer>
     </legendgroup>
-    <legendgroup open="false" checked="Qt::Unchecked" name="QB 056844553010_01 Basic 1B">
+    <legendgroup open="true" checked="Qt::Unchecked" name="QB 056844553010_01 Basic 1B">
       <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="056844553010_01_P001_OrthoSudemL3_PanSharpen" showFeatureCount="0">
         <filegroup open="true" hidden="false">
           <legendlayerfile isInOverview="0" layerid="056844553010_01_P001_OrthoSudemL3_PanSharpen20171023213518643" visible="0"/>
@@ -3634,7 +3645,7 @@
         </legendlayer>
       </legendgroup>
     </legendgroup>
-    <legendgroup open="false" checked="Qt::Checked" name="NGI 2015 RGBN">
+    <legendgroup open="true" checked="Qt::Checked" name="NGI 2015 RGBN">
       <legendgroup open="true" checked="Qt::Checked" name="3324C">
         <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="o3324c_2015_1004_07_0305_RGBN" showFeatureCount="0">
           <filegroup open="true" hidden="false">
@@ -5163,512 +5174,512 @@
         </legendlayer>
       </legendgroup>
     </legendgroup>
-    <legendgroup open="false" checked="Qt::Unchecked" name="NGI 2015">
-      <legendgroup open="false" checked="Qt::Unchecked" name="3323DB">
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3323DB_25_2015_1001_RGB_RECT" showFeatureCount="0">
+    <legendgroup open="false" checked="Qt::Checked" name="NGI 2015">
+      <legendgroup open="false" checked="Qt::Checked" name="3323DB">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3323DB_25_2015_1001_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3323DB_25_2015_1001_RGB_RECT20170330110903241" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3323DB_25_2015_1001_RGB_RECT20170330110903241" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3323DB_24_2015_1001_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3323DB_24_2015_1001_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3323DB_24_2015_1001_RGB_RECT20170330110903192" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3323DB_24_2015_1001_RGB_RECT20170330110903192" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3323DB_23_2015_1001_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3323DB_23_2015_1001_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3323DB_23_2015_1001_RGB_RECT20170330110903117" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3323DB_23_2015_1001_RGB_RECT20170330110903117" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3323DB_22_2015_1001_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3323DB_22_2015_1001_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3323DB_22_2015_1001_RGB_RECT20170330110903061" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3323DB_22_2015_1001_RGB_RECT20170330110903061" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3323DB_21_2015_1001_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3323DB_21_2015_1001_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3323DB_21_2015_1001_RGB_RECT20170330110902994" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3323DB_21_2015_1001_RGB_RECT20170330110902994" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3323DB_20_2015_1001_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3323DB_20_2015_1001_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3323DB_20_2015_1001_RGB_RECT20170330110902932" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3323DB_20_2015_1001_RGB_RECT20170330110902932" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3323DB_19_2015_1001_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3323DB_19_2015_1001_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3323DB_19_2015_1001_RGB_RECT20170330110902848" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3323DB_19_2015_1001_RGB_RECT20170330110902848" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3323DB_18_2015_1001_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3323DB_18_2015_1001_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3323DB_18_2015_1001_RGB_RECT20170330110902778" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3323DB_18_2015_1001_RGB_RECT20170330110902778" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3323DB_17_2015_1001_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3323DB_17_2015_1001_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3323DB_17_2015_1001_RGB_RECT20170330110902703" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3323DB_17_2015_1001_RGB_RECT20170330110902703" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3323DB_16_2015_1001_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3323DB_16_2015_1001_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3323DB_16_2015_1001_RGB_RECT20170330110902657" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3323DB_16_2015_1001_RGB_RECT20170330110902657" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3323DB_15_2015_1001_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3323DB_15_2015_1001_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3323DB_15_2015_1001_RGB_RECT20170330110902585" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3323DB_15_2015_1001_RGB_RECT20170330110902585" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3323DB_14_2015_1001_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3323DB_14_2015_1001_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3323DB_14_2015_1001_RGB_RECT20170330110902538" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3323DB_14_2015_1001_RGB_RECT20170330110902538" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3323DB_13_2015_1001_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3323DB_13_2015_1001_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3323DB_13_2015_1001_RGB_RECT20170330110902471" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3323DB_13_2015_1001_RGB_RECT20170330110902471" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3323DB_12_2015_1001_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3323DB_12_2015_1001_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3323DB_12_2015_1001_RGB_RECT20170330110902408" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3323DB_12_2015_1001_RGB_RECT20170330110902408" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3323DB_11_2015_1001_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3323DB_11_2015_1001_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3323DB_11_2015_1001_RGB_RECT20170330110902333" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3323DB_11_2015_1001_RGB_RECT20170330110902333" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3323DB_10_2015_1001_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3323DB_10_2015_1001_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3323DB_10_2015_1001_RGB_RECT20170330110902262" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3323DB_10_2015_1001_RGB_RECT20170330110902262" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3323DB_09_2015_1001_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3323DB_09_2015_1001_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3323DB_09_2015_1001_RGB_RECT20170330110902191" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3323DB_09_2015_1001_RGB_RECT20170330110902191" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3323DB_08_2015_1001_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3323DB_08_2015_1001_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3323DB_08_2015_1001_RGB_RECT20170330110902139" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3323DB_08_2015_1001_RGB_RECT20170330110902139" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3323DB_07_2015_1001_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3323DB_07_2015_1001_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3323DB_07_2015_1001_RGB_RECT20170330110902072" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3323DB_07_2015_1001_RGB_RECT20170330110902072" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3323DB_06_2015_1001_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3323DB_06_2015_1001_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3323DB_06_2015_1001_RGB_RECT20170330110902042" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3323DB_06_2015_1001_RGB_RECT20170330110902042" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3323DB_05_2015_1001_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3323DB_05_2015_1001_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3323DB_05_2015_1001_RGB_RECT20170330110902024" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3323DB_05_2015_1001_RGB_RECT20170330110902024" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3323DB_04_2015_1001_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3323DB_04_2015_1001_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3323DB_04_2015_1001_RGB_RECT20170330110901973" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3323DB_04_2015_1001_RGB_RECT20170330110901973" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3323DB_03_2015_1001_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3323DB_03_2015_1001_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3323DB_03_2015_1001_RGB_RECT20170330110901941" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3323DB_03_2015_1001_RGB_RECT20170330110901941" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3323DB_02_2015_1001_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3323DB_02_2015_1001_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3323DB_02_2015_1001_RGB_RECT20170330110719034" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3323DB_02_2015_1001_RGB_RECT20170330110719034" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3323DB_01_2015_1001_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3323DB_01_2015_1001_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3323DB_01_2015_1001_RGB_RECT20170330110718954" visible="0"/>
-          </filegroup>
-        </legendlayer>
-      </legendgroup>
-      <legendgroup open="false" checked="Qt::Unchecked" name="3324CA">
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324CA_25_2015_1004_RGB_RECT" showFeatureCount="0">
-          <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324CA_25_2015_1004_RGB_RECT20170330112353424" visible="0"/>
-          </filegroup>
-        </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324CA_24_2015_1004_RGB_RECT" showFeatureCount="0">
-          <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324CA_24_2015_1004_RGB_RECT20170330112353353" visible="0"/>
-          </filegroup>
-        </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324CA_23_2015_1004_RGB_RECT" showFeatureCount="0">
-          <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324CA_23_2015_1004_RGB_RECT20170330112353271" visible="0"/>
-          </filegroup>
-        </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324CA_22_2015_1004_RGB_RECT" showFeatureCount="0">
-          <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324CA_22_2015_1004_RGB_RECT20170330112353188" visible="0"/>
-          </filegroup>
-        </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324CA_21_2015_1004_RGB_RECT" showFeatureCount="0">
-          <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324CA_21_2015_1004_RGB_RECT20170330112353119" visible="0"/>
-          </filegroup>
-        </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324CA_20_2015_1004_RGB_RECT" showFeatureCount="0">
-          <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324CA_20_2015_1004_RGB_RECT20170330112353052" visible="0"/>
-          </filegroup>
-        </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324CA_19_2015_1004_RGB_RECT" showFeatureCount="0">
-          <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324CA_19_2015_1004_RGB_RECT20170330112352953" visible="0"/>
-          </filegroup>
-        </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324CA_18_2015_1004_RGB_RECT" showFeatureCount="0">
-          <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324CA_18_2015_1004_RGB_RECT20170330112352872" visible="0"/>
-          </filegroup>
-        </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324CA_17_2015_1004_RGB_RECT" showFeatureCount="0">
-          <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324CA_17_2015_1004_RGB_RECT20170330112352808" visible="0"/>
-          </filegroup>
-        </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324CA_16_2015_1004_RGB_RECT" showFeatureCount="0">
-          <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324CA_16_2015_1004_RGB_RECT20170330112352734" visible="0"/>
-          </filegroup>
-        </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324CA_15_2015_1004_RGB_RECT" showFeatureCount="0">
-          <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324CA_15_2015_1004_RGB_RECT20170330112352656" visible="0"/>
-          </filegroup>
-        </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324CA_14_2015_1004_RGB_RECT" showFeatureCount="0">
-          <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324CA_14_2015_1004_RGB_RECT20170330112352585" visible="0"/>
-          </filegroup>
-        </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324CA_13_2015_1004_RGB_RECT" showFeatureCount="0">
-          <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324CA_13_2015_1004_RGB_RECT20170330112352515" visible="0"/>
-          </filegroup>
-        </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324CA_12_2015_1004_RGB_RECT" showFeatureCount="0">
-          <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324CA_12_2015_1004_RGB_RECT20170330112352425" visible="0"/>
-          </filegroup>
-        </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324CA_11_2015_1004_RGB_RECT" showFeatureCount="0">
-          <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324CA_11_2015_1004_RGB_RECT20170330112352348" visible="0"/>
-          </filegroup>
-        </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324CA_10_2015_1004_RGB_RECT" showFeatureCount="0">
-          <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324CA_10_2015_1004_RGB_RECT20170330112352261" visible="0"/>
-          </filegroup>
-        </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324CA_09_2015_1004_RGB_RECT" showFeatureCount="0">
-          <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324CA_09_2015_1004_RGB_RECT20170330112352185" visible="0"/>
-          </filegroup>
-        </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324CA_08_2015_1004_RGB_RECT" showFeatureCount="0">
-          <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324CA_08_2015_1004_RGB_RECT20170330112352121" visible="0"/>
-          </filegroup>
-        </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324CA_07_2015_1004_RGB_RECT" showFeatureCount="0">
-          <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324CA_07_2015_1004_RGB_RECT20170330112352049" visible="0"/>
-          </filegroup>
-        </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324CA_06_2015_1004_RGB_RECT" showFeatureCount="0">
-          <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324CA_06_2015_1004_RGB_RECT20170330112351935" visible="0"/>
-          </filegroup>
-        </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324CA_05_2015_1004_RGB_RECT" showFeatureCount="0">
-          <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324CA_05_2015_1004_RGB_RECT20170330112351862" visible="0"/>
-          </filegroup>
-        </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324CA_04_2015_1004_RGB_RECT" showFeatureCount="0">
-          <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324CA_04_2015_1004_RGB_RECT20170330112351818" visible="0"/>
-          </filegroup>
-        </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324CA_03_2015_1004_RGB_RECT" showFeatureCount="0">
-          <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324CA_03_2015_1004_RGB_RECT20170330112351754" visible="0"/>
-          </filegroup>
-        </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324CA_02_2015_1004_RGB_RECT" showFeatureCount="0">
-          <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324CA_02_2015_1004_RGB_RECT20170330112351715" visible="0"/>
-          </filegroup>
-        </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324CA_01_2015_1004_RGB_RECT" showFeatureCount="0">
-          <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324CA_01_2015_1004_RGB_RECT20170330112351644" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3323DB_01_2015_1001_RGB_RECT20170330110718954" visible="1"/>
           </filegroup>
         </legendlayer>
       </legendgroup>
-      <legendgroup open="false" checked="Qt::Unchecked" name="3324CB">
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324CB_25_2015_1004_RGB_RECT" showFeatureCount="0">
+      <legendgroup open="false" checked="Qt::Checked" name="3324CA">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324CA_25_2015_1004_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324CB_25_2015_1004_RGB_RECT20170330112503327" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3324CA_25_2015_1004_RGB_RECT20170330112353424" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324CB_24_2015_1004_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324CA_24_2015_1004_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324CB_24_2015_1004_RGB_RECT20170330112503263" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3324CA_24_2015_1004_RGB_RECT20170330112353353" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324CB_23_2015_1004_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324CA_23_2015_1004_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324CB_23_2015_1004_RGB_RECT20170330112503199" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3324CA_23_2015_1004_RGB_RECT20170330112353271" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324CB_22_2015_1004_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324CA_22_2015_1004_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324CB_22_2015_1004_RGB_RECT20170330112503128" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3324CA_22_2015_1004_RGB_RECT20170330112353188" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324CB_21_2015_1004_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324CA_21_2015_1004_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324CB_21_2015_1004_RGB_RECT20170330112503043" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3324CA_21_2015_1004_RGB_RECT20170330112353119" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324CB_20_2015_1004_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324CA_20_2015_1004_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324CB_20_2015_1004_RGB_RECT20170330112502962" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3324CA_20_2015_1004_RGB_RECT20170330112353052" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324CB_19_2015_1004_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324CA_19_2015_1004_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324CB_19_2015_1004_RGB_RECT20170330112502886" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3324CA_19_2015_1004_RGB_RECT20170330112352953" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324CB_18_2015_1004_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324CA_18_2015_1004_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324CB_18_2015_1004_RGB_RECT20170330112502793" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3324CA_18_2015_1004_RGB_RECT20170330112352872" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324CB_17_2015_1004_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324CA_17_2015_1004_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324CB_17_2015_1004_RGB_RECT20170330112502712" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3324CA_17_2015_1004_RGB_RECT20170330112352808" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324CB_16_2015_1004_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324CA_16_2015_1004_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324CB_16_2015_1004_RGB_RECT20170330112502638" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3324CA_16_2015_1004_RGB_RECT20170330112352734" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324CB_15_2015_1004_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324CA_15_2015_1004_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324CB_15_2015_1004_RGB_RECT20170330112502553" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3324CA_15_2015_1004_RGB_RECT20170330112352656" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324CB_14_2015_1004_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324CA_14_2015_1004_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324CB_14_2015_1004_RGB_RECT20170330112502481" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3324CA_14_2015_1004_RGB_RECT20170330112352585" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324CB_13_2015_1004_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324CA_13_2015_1004_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324CB_13_2015_1004_RGB_RECT20170330112502415" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3324CA_13_2015_1004_RGB_RECT20170330112352515" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324CB_12_2015_1004_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324CA_12_2015_1004_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324CB_12_2015_1004_RGB_RECT20170330112502342" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3324CA_12_2015_1004_RGB_RECT20170330112352425" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324CB_11_2015_1004_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324CA_11_2015_1004_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324CB_11_2015_1004_RGB_RECT20170330112502267" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3324CA_11_2015_1004_RGB_RECT20170330112352348" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324CB_10_2015_1004_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324CA_10_2015_1004_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324CB_10_2015_1004_RGB_RECT20170330112502187" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3324CA_10_2015_1004_RGB_RECT20170330112352261" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324CB_09_2015_1004_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324CA_09_2015_1004_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324CB_09_2015_1004_RGB_RECT20170330112502108" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3324CA_09_2015_1004_RGB_RECT20170330112352185" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324CB_08_2015_1004_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324CA_08_2015_1004_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324CB_08_2015_1004_RGB_RECT20170330112502028" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3324CA_08_2015_1004_RGB_RECT20170330112352121" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324CB_07_2015_1004_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324CA_07_2015_1004_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324CB_07_2015_1004_RGB_RECT20170330112501954" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3324CA_07_2015_1004_RGB_RECT20170330112352049" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324CB_06_2015_1004_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324CA_06_2015_1004_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324CB_06_2015_1004_RGB_RECT20170330112501899" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3324CA_06_2015_1004_RGB_RECT20170330112351935" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324CB_05_2015_1004_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324CA_05_2015_1004_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324CB_05_2015_1004_RGB_RECT20170330112501829" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3324CA_05_2015_1004_RGB_RECT20170330112351862" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324CB_04_2015_1004_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324CA_04_2015_1004_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324CB_04_2015_1004_RGB_RECT20170330112501769" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3324CA_04_2015_1004_RGB_RECT20170330112351818" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324CB_03_2015_1004_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324CA_03_2015_1004_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324CB_03_2015_1004_RGB_RECT20170330112501742" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3324CA_03_2015_1004_RGB_RECT20170330112351754" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324CB_02_2015_1004_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324CA_02_2015_1004_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324CB_02_2015_1004_RGB_RECT20170330112501713" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3324CA_02_2015_1004_RGB_RECT20170330112351715" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324CB_01_2015_1004_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324CA_01_2015_1004_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324CB_01_2015_1004_RGB_RECT20170330112501680" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3324CA_01_2015_1004_RGB_RECT20170330112351644" visible="1"/>
           </filegroup>
         </legendlayer>
       </legendgroup>
-      <legendgroup open="false" checked="Qt::Unchecked" name="3324DA">
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324DA_25_2015_1005_RGB_RECT" showFeatureCount="0">
+      <legendgroup open="false" checked="Qt::Checked" name="3324CB">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324CB_25_2015_1004_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324DA_25_2015_1005_RGB_RECT20170330112621533" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3324CB_25_2015_1004_RGB_RECT20170330112503327" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324DA_24_2015_1005_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324CB_24_2015_1004_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324DA_24_2015_1005_RGB_RECT20170330112621467" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3324CB_24_2015_1004_RGB_RECT20170330112503263" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324DA_23_2015_1005_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324CB_23_2015_1004_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324DA_23_2015_1005_RGB_RECT20170330112621399" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3324CB_23_2015_1004_RGB_RECT20170330112503199" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324DA_22_2015_1005_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324CB_22_2015_1004_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324DA_22_2015_1005_RGB_RECT20170330112621332" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3324CB_22_2015_1004_RGB_RECT20170330112503128" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324DA_21_2015_1005_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324CB_21_2015_1004_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324DA_21_2015_1005_RGB_RECT20170330112621253" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3324CB_21_2015_1004_RGB_RECT20170330112503043" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324DA_20_2015_1005_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324CB_20_2015_1004_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324DA_20_2015_1005_RGB_RECT20170330112621172" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3324CB_20_2015_1004_RGB_RECT20170330112502962" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324DA_19_2015_1005_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324CB_19_2015_1004_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324DA_19_2015_1005_RGB_RECT20170330112621116" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3324CB_19_2015_1004_RGB_RECT20170330112502886" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324DA_18_2015_1005_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324CB_18_2015_1004_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324DA_18_2015_1005_RGB_RECT20170330112619686" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3324CB_18_2015_1004_RGB_RECT20170330112502793" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324DA_17_2015_1005_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324CB_17_2015_1004_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324DA_17_2015_1005_RGB_RECT20170330112619603" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3324CB_17_2015_1004_RGB_RECT20170330112502712" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324DA_16_2015_1005_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324CB_16_2015_1004_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324DA_16_2015_1005_RGB_RECT20170330112619540" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3324CB_16_2015_1004_RGB_RECT20170330112502638" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324DA_15_2015_1005_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324CB_15_2015_1004_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324DA_15_2015_1005_RGB_RECT20170330112619464" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3324CB_15_2015_1004_RGB_RECT20170330112502553" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324DA_14_2015_1005_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324CB_14_2015_1004_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324DA_14_2015_1005_RGB_RECT20170330112619400" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3324CB_14_2015_1004_RGB_RECT20170330112502481" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324DA_13_2015_1005_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324CB_13_2015_1004_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324DA_13_2015_1005_RGB_RECT20170330112619279" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3324CB_13_2015_1004_RGB_RECT20170330112502415" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324DA_12_2015_1005_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324CB_12_2015_1004_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324DA_12_2015_1005_RGB_RECT20170330112619169" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3324CB_12_2015_1004_RGB_RECT20170330112502342" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324DA_11_2015_1005_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324CB_11_2015_1004_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324DA_11_2015_1005_RGB_RECT20170330112619059" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3324CB_11_2015_1004_RGB_RECT20170330112502267" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324DA_10_2015_1005_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324CB_10_2015_1004_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324DA_10_2015_1005_RGB_RECT20170330112618989" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3324CB_10_2015_1004_RGB_RECT20170330112502187" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324DA_09_2015_1005_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324CB_09_2015_1004_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324DA_09_2015_1005_RGB_RECT20170330112618907" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3324CB_09_2015_1004_RGB_RECT20170330112502108" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324DA_08_2015_1005_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324CB_08_2015_1004_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324DA_08_2015_1005_RGB_RECT20170330112618786" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3324CB_08_2015_1004_RGB_RECT20170330112502028" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324DA_07_2015_1005_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324CB_07_2015_1004_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324DA_07_2015_1005_RGB_RECT20170330112618687" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3324CB_07_2015_1004_RGB_RECT20170330112501954" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324DA_06_2015_1005_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324CB_06_2015_1004_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324DA_06_2015_1005_RGB_RECT20170330112618589" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3324CB_06_2015_1004_RGB_RECT20170330112501899" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324DA_05_2015_1005_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324CB_05_2015_1004_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324DA_05_2015_1005_RGB_RECT20170330112618474" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3324CB_05_2015_1004_RGB_RECT20170330112501829" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324DA_04_2015_1005_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324CB_04_2015_1004_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324DA_04_2015_1005_RGB_RECT20170330112618353" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3324CB_04_2015_1004_RGB_RECT20170330112501769" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324DA_03_2015_1005_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324CB_03_2015_1004_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324DA_03_2015_1005_RGB_RECT20170330112618331" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3324CB_03_2015_1004_RGB_RECT20170330112501742" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324DA_02_2015_1005_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324CB_02_2015_1004_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324DA_02_2015_1005_RGB_RECT20170330112618296" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3324CB_02_2015_1004_RGB_RECT20170330112501713" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324DA_01_2015_1005_RGB_RECT" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324CB_01_2015_1004_RGB_RECT" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3324DA_01_2015_1005_RGB_RECT20170330112618255" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="3324CB_01_2015_1004_RGB_RECT20170330112501680" visible="1"/>
+          </filegroup>
+        </legendlayer>
+      </legendgroup>
+      <legendgroup open="false" checked="Qt::Checked" name="3324DA">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324DA_25_2015_1005_RGB_RECT" showFeatureCount="0">
+          <filegroup open="true" hidden="false">
+            <legendlayerfile isInOverview="0" layerid="3324DA_25_2015_1005_RGB_RECT20170330112621533" visible="1"/>
+          </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324DA_24_2015_1005_RGB_RECT" showFeatureCount="0">
+          <filegroup open="true" hidden="false">
+            <legendlayerfile isInOverview="0" layerid="3324DA_24_2015_1005_RGB_RECT20170330112621467" visible="1"/>
+          </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324DA_23_2015_1005_RGB_RECT" showFeatureCount="0">
+          <filegroup open="true" hidden="false">
+            <legendlayerfile isInOverview="0" layerid="3324DA_23_2015_1005_RGB_RECT20170330112621399" visible="1"/>
+          </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324DA_22_2015_1005_RGB_RECT" showFeatureCount="0">
+          <filegroup open="true" hidden="false">
+            <legendlayerfile isInOverview="0" layerid="3324DA_22_2015_1005_RGB_RECT20170330112621332" visible="1"/>
+          </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324DA_21_2015_1005_RGB_RECT" showFeatureCount="0">
+          <filegroup open="true" hidden="false">
+            <legendlayerfile isInOverview="0" layerid="3324DA_21_2015_1005_RGB_RECT20170330112621253" visible="1"/>
+          </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324DA_20_2015_1005_RGB_RECT" showFeatureCount="0">
+          <filegroup open="true" hidden="false">
+            <legendlayerfile isInOverview="0" layerid="3324DA_20_2015_1005_RGB_RECT20170330112621172" visible="1"/>
+          </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324DA_19_2015_1005_RGB_RECT" showFeatureCount="0">
+          <filegroup open="true" hidden="false">
+            <legendlayerfile isInOverview="0" layerid="3324DA_19_2015_1005_RGB_RECT20170330112621116" visible="1"/>
+          </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324DA_18_2015_1005_RGB_RECT" showFeatureCount="0">
+          <filegroup open="true" hidden="false">
+            <legendlayerfile isInOverview="0" layerid="3324DA_18_2015_1005_RGB_RECT20170330112619686" visible="1"/>
+          </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324DA_17_2015_1005_RGB_RECT" showFeatureCount="0">
+          <filegroup open="true" hidden="false">
+            <legendlayerfile isInOverview="0" layerid="3324DA_17_2015_1005_RGB_RECT20170330112619603" visible="1"/>
+          </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324DA_16_2015_1005_RGB_RECT" showFeatureCount="0">
+          <filegroup open="true" hidden="false">
+            <legendlayerfile isInOverview="0" layerid="3324DA_16_2015_1005_RGB_RECT20170330112619540" visible="1"/>
+          </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324DA_15_2015_1005_RGB_RECT" showFeatureCount="0">
+          <filegroup open="true" hidden="false">
+            <legendlayerfile isInOverview="0" layerid="3324DA_15_2015_1005_RGB_RECT20170330112619464" visible="1"/>
+          </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324DA_14_2015_1005_RGB_RECT" showFeatureCount="0">
+          <filegroup open="true" hidden="false">
+            <legendlayerfile isInOverview="0" layerid="3324DA_14_2015_1005_RGB_RECT20170330112619400" visible="1"/>
+          </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324DA_13_2015_1005_RGB_RECT" showFeatureCount="0">
+          <filegroup open="true" hidden="false">
+            <legendlayerfile isInOverview="0" layerid="3324DA_13_2015_1005_RGB_RECT20170330112619279" visible="1"/>
+          </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324DA_12_2015_1005_RGB_RECT" showFeatureCount="0">
+          <filegroup open="true" hidden="false">
+            <legendlayerfile isInOverview="0" layerid="3324DA_12_2015_1005_RGB_RECT20170330112619169" visible="1"/>
+          </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324DA_11_2015_1005_RGB_RECT" showFeatureCount="0">
+          <filegroup open="true" hidden="false">
+            <legendlayerfile isInOverview="0" layerid="3324DA_11_2015_1005_RGB_RECT20170330112619059" visible="1"/>
+          </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324DA_10_2015_1005_RGB_RECT" showFeatureCount="0">
+          <filegroup open="true" hidden="false">
+            <legendlayerfile isInOverview="0" layerid="3324DA_10_2015_1005_RGB_RECT20170330112618989" visible="1"/>
+          </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324DA_09_2015_1005_RGB_RECT" showFeatureCount="0">
+          <filegroup open="true" hidden="false">
+            <legendlayerfile isInOverview="0" layerid="3324DA_09_2015_1005_RGB_RECT20170330112618907" visible="1"/>
+          </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324DA_08_2015_1005_RGB_RECT" showFeatureCount="0">
+          <filegroup open="true" hidden="false">
+            <legendlayerfile isInOverview="0" layerid="3324DA_08_2015_1005_RGB_RECT20170330112618786" visible="1"/>
+          </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324DA_07_2015_1005_RGB_RECT" showFeatureCount="0">
+          <filegroup open="true" hidden="false">
+            <legendlayerfile isInOverview="0" layerid="3324DA_07_2015_1005_RGB_RECT20170330112618687" visible="1"/>
+          </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324DA_06_2015_1005_RGB_RECT" showFeatureCount="0">
+          <filegroup open="true" hidden="false">
+            <legendlayerfile isInOverview="0" layerid="3324DA_06_2015_1005_RGB_RECT20170330112618589" visible="1"/>
+          </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324DA_05_2015_1005_RGB_RECT" showFeatureCount="0">
+          <filegroup open="true" hidden="false">
+            <legendlayerfile isInOverview="0" layerid="3324DA_05_2015_1005_RGB_RECT20170330112618474" visible="1"/>
+          </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324DA_04_2015_1005_RGB_RECT" showFeatureCount="0">
+          <filegroup open="true" hidden="false">
+            <legendlayerfile isInOverview="0" layerid="3324DA_04_2015_1005_RGB_RECT20170330112618353" visible="1"/>
+          </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324DA_03_2015_1005_RGB_RECT" showFeatureCount="0">
+          <filegroup open="true" hidden="false">
+            <legendlayerfile isInOverview="0" layerid="3324DA_03_2015_1005_RGB_RECT20170330112618331" visible="1"/>
+          </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324DA_02_2015_1005_RGB_RECT" showFeatureCount="0">
+          <filegroup open="true" hidden="false">
+            <legendlayerfile isInOverview="0" layerid="3324DA_02_2015_1005_RGB_RECT20170330112618296" visible="1"/>
+          </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324DA_01_2015_1005_RGB_RECT" showFeatureCount="0">
+          <filegroup open="true" hidden="false">
+            <legendlayerfile isInOverview="0" layerid="3324DA_01_2015_1005_RGB_RECT20170330112618255" visible="1"/>
           </filegroup>
         </legendlayer>
       </legendgroup>
@@ -6693,10 +6704,20 @@
         </legendlayer>
       </legendgroup>
     </legendgroup>
-    <legendgroup open="true" checked="Qt::Unchecked" name="Basemaps">
-      <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="MCD43A4.A2003313.h20v12.005.2008026015724.QbBandOrderAndCoOrds" showFeatureCount="0">
+    <legendgroup open="true" checked="Qt::PartiallyChecked" name="Basemaps">
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="MCD43A4.A2015241.h20v12.005.2015260133130.NgiBandOrder" showFeatureCount="0">
         <filegroup open="true" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="MCD43A4_A2003313_h20v12_005_2008026015724_QbBandOrderAndCoOrds20170926165730131" visible="0"/>
+          <legendlayerfile isInOverview="0" layerid="MCD43A4_A2015241_h20v12_005_2015260133130_NgiBandOrder20171027155218764" visible="1"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="MCD43A4.A2015241.h20v12.005.2015260133130" showFeatureCount="0">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" layerid="MCD43A4_A2015241_h20v12_005_201526013313020171027153852876" visible="1"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="MCD43A4.A2003313.h20v12.005.2008026015724.QbBandOrderAndCoOrds" showFeatureCount="0">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" layerid="MCD43A4_A2003313_h20v12_005_2008026015724_QbBandOrderAndCoOrds20170926165730131" visible="1"/>
         </filegroup>
       </legendlayer>
       <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="MCD43A4.A2003313.h20v12.005.2008026015724.QbBandOrder" showFeatureCount="0">
@@ -27559,7 +27580,7 @@ def my_form_open(dialog, layer, feature):
       </defaults>
       <previewExpression>'[Please define preview text]'</previewExpression>
     </maplayer>
-    <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+    <maplayer minimumScale="inf" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
       <extent>
         <xmin>2223901.03933299984782934</xmin>
         <ymin>-4447802.07866699993610382</ymin>
@@ -27585,6 +27606,7 @@ def my_form_open(dialog, layer, feature):
         </spatialrefsys>
       </srs>
       <customproperties>
+        <property key="embeddedWidgets/count" value="0"/>
         <property key="identify/format" value="Value"/>
       </customproperties>
       <provider>gdal</provider>
@@ -27601,7 +27623,7 @@ def my_form_open(dialog, layer, feature):
         <map-layer-style name=""/>
       </map-layer-style-manager>
       <pipe>
-        <rasterrenderer opacity="1" alphaBand="-1" blueBand="3" greenBand="2" type="multibandcolor" redBand="1">
+        <rasterrenderer opacity="1" alphaBand="0" blueBand="3" greenBand="4" type="multibandcolor" redBand="1">
           <rasterTransparency/>
           <redContrastEnhancement>
             <minValue>0</minValue>
@@ -27610,12 +27632,12 @@ def my_form_open(dialog, layer, feature):
           </redContrastEnhancement>
           <greenContrastEnhancement>
             <minValue>0</minValue>
-            <maxValue>2881</maxValue>
+            <maxValue>1279</maxValue>
             <algorithm>StretchToMinimumMaximum</algorithm>
           </greenContrastEnhancement>
           <blueContrastEnhancement>
             <minValue>0</minValue>
-            <maxValue>813</maxValue>
+            <maxValue>1279</maxValue>
             <algorithm>StretchToMinimumMaximum</algorithm>
           </blueContrastEnhancement>
         </rasterrenderer>
@@ -27744,6 +27766,137 @@ def my_form_open(dialog, layer, feature):
           <blueContrastEnhancement>
             <minValue>219</minValue>
             <maxValue>896</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer minimumScale="inf" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+      <extent>
+        <xmin>2223901.03933299984782934</xmin>
+        <ymin>-4447802.07866699993610382</ymin>
+        <xmax>3335851.55899999989196658</xmax>
+        <ymax>-3335851.55899999989196658</ymax>
+      </extent>
+      <id>MCD43A4_A2015241_h20v12_005_201526013313020171027153852876</id>
+      <datasource>D:/Data/Development/Projects/PhD GeoInformatics/Data/MODIS/MCD43A4.A2015241.h20v12.005.2015260133130/MCD43A4.A2015241.h20v12.005.2015260133130.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>MCD43A4.A2015241.h20v12.005.2015260133130</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=sinu +lon_0=0 +x_0=0 +y_0=0 +a=6371007.181 +b=6371007.181 +units=m +no_defs</proj4>
+          <srsid>100004</srsid>
+          <srid>0</srid>
+          <authid>USER:100004</authid>
+          <description> * Generated CRS (+proj=sinu +lon_0=0 +x_0=0 +y_0=0 +a=6371007.181 +b=6371007.181 +units=m +no_defs)</description>
+          <projectionacronym>sinu</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <customproperties>
+        <property key="embeddedWidgets/count" value="0"/>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="1"/>
+        <noDataList bandNo="2" useSrcNoData="1"/>
+        <noDataList bandNo="3" useSrcNoData="1"/>
+        <noDataList bandNo="4" useSrcNoData="1"/>
+        <noDataList bandNo="5" useSrcNoData="1"/>
+        <noDataList bandNo="6" useSrcNoData="1"/>
+        <noDataList bandNo="7" useSrcNoData="1"/>
+      </noData>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer opacity="1" alphaBand="0" blueBand="3" greenBand="4" type="multibandcolor" redBand="1">
+          <rasterTransparency/>
+          <redContrastEnhancement>
+            <minValue>25</minValue>
+            <maxValue>1652</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>111</minValue>
+            <maxValue>1203</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>132</minValue>
+            <maxValue>755</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer minimumScale="inf" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+      <extent>
+        <xmin>2223901.03933299984782934</xmin>
+        <ymin>-4447802.07866699993610382</ymin>
+        <xmax>3335851.55899999989196658</xmax>
+        <ymax>-3335851.55899999989196658</ymax>
+      </extent>
+      <id>MCD43A4_A2015241_h20v12_005_2015260133130_NgiBandOrder20171027155218764</id>
+      <datasource>D:/Data/Development/Projects/PhD GeoInformatics/Data/MODIS/MCD43A4.A2015241.h20v12.005.2015260133130/MCD43A4.A2015241.h20v12.005.2015260133130.NgiBandOrder.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>MCD43A4.A2015241.h20v12.005.2015260133130.NgiBandOrder</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=sinu +lon_0=0 +x_0=0 +y_0=0 +a=6371007.181 +b=6371007.181 +units=m +no_defs</proj4>
+          <srsid>100004</srsid>
+          <srid>0</srid>
+          <authid>USER:100004</authid>
+          <description> * Generated CRS (+proj=sinu +lon_0=0 +x_0=0 +y_0=0 +a=6371007.181 +b=6371007.181 +units=m +no_defs)</description>
+          <projectionacronym>sinu</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <customproperties>
+        <property key="embeddedWidgets/count" value="0"/>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="1"/>
+        <noDataList bandNo="2" useSrcNoData="1"/>
+        <noDataList bandNo="3" useSrcNoData="1"/>
+        <noDataList bandNo="4" useSrcNoData="1"/>
+      </noData>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer opacity="1" alphaBand="-1" blueBand="3" greenBand="2" type="multibandcolor" redBand="1">
+          <rasterTransparency/>
+          <redContrastEnhancement>
+            <minValue>25</minValue>
+            <maxValue>1652</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>130</minValue>
+            <maxValue>1400</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>132</minValue>
+            <maxValue>755</maxValue>
             <algorithm>StretchToMinimumMaximum</algorithm>
           </blueContrastEnhancement>
         </rasterrenderer>

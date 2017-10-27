@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.13
+VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestOpenCV", "..\TestOpenCV\TestOpenCV.vcxproj", "{93401474-8ABD-4746-9780-C1874E71650D}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "NodataMaskErosion", "..\NodataMaskErosion\NodataMaskErosion.pyproj", "{8FBA1613-7D7E-4C80-930D-4FAF5FED4796}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestCompilationIssues", "..\TestCompilationIssues\TestCompilationIssues.vcxproj", "{A19D1806-2F93-475A-BCDD-F0E40E67ADA8}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConsoleApplication1", "..\ConsoleApplication1\ConsoleApplication1.vcxproj", "{98417F93-E222-41ED-A321-F58863D6D214}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -88,8 +90,25 @@ Global
 		{A19D1806-2F93-475A-BCDD-F0E40E67ADA8}.Release|Win32.Build.0 = Release|Win32
 		{A19D1806-2F93-475A-BCDD-F0E40E67ADA8}.Release|x64.ActiveCfg = Release|x64
 		{A19D1806-2F93-475A-BCDD-F0E40E67ADA8}.Release|x64.Build.0 = Release|x64
+		{98417F93-E222-41ED-A321-F58863D6D214}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{98417F93-E222-41ED-A321-F58863D6D214}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{98417F93-E222-41ED-A321-F58863D6D214}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{98417F93-E222-41ED-A321-F58863D6D214}.Debug|Win32.ActiveCfg = Debug|Win32
+		{98417F93-E222-41ED-A321-F58863D6D214}.Debug|Win32.Build.0 = Debug|Win32
+		{98417F93-E222-41ED-A321-F58863D6D214}.Debug|x64.ActiveCfg = Debug|x64
+		{98417F93-E222-41ED-A321-F58863D6D214}.Debug|x64.Build.0 = Debug|x64
+		{98417F93-E222-41ED-A321-F58863D6D214}.Release|Any CPU.ActiveCfg = Release|Win32
+		{98417F93-E222-41ED-A321-F58863D6D214}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{98417F93-E222-41ED-A321-F58863D6D214}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{98417F93-E222-41ED-A321-F58863D6D214}.Release|Win32.ActiveCfg = Release|Win32
+		{98417F93-E222-41ED-A321-F58863D6D214}.Release|Win32.Build.0 = Release|Win32
+		{98417F93-E222-41ED-A321-F58863D6D214}.Release|x64.ActiveCfg = Release|x64
+		{98417F93-E222-41ED-A321-F58863D6D214}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E52EC0A8-3302-46B0-B6E0-DEA7BA9017D2}
 	EndGlobalSection
 EndGlobal

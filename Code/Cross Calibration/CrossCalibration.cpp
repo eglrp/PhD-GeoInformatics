@@ -642,9 +642,9 @@ int main(int argc, char* argv[])
 
 	for (int i = 1; i < argc; i++)
 	{
-		if (EQUAL(argv[i], "-o"))
+		if (_stricmp(argv[i], "-o"))
 			doOverwrite = true;
-		else if (EQUAL(argv[i], "-w") && i < argc-2)
+		else if (_stricmp(argv[i], "-w") && i < argc-2)
 		{
             winSize[0] = atoi(argv[++i]);
             winSize[1] = atoi(argv[++i]);
