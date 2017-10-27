@@ -10,6 +10,8 @@ import pylab
 from scipy.stats import gaussian_kde
 import collections
 
+fontSize = 16
+
 def EvalRecordCs(allometricModels, record):
     # vars = [model['vars'] for model in allometricModels.values()]
     if not allometricModels.__contains__(record['species']):
@@ -161,11 +163,11 @@ for plotKey, plot in plots.iteritems():
     axLim = pylab.axis()
     h = pylab.plot([50, 50], [0, heightKde.max()], 'r')
     pylab.grid('on')
-    pylab.xlabel('Plant Height (cm)')
-    pylab.ylabel('Prob.(height)')
-    pylab.title('Height distribution for plot %s' % (plotKey))
+    pylab.xlabel('Plant Height (cm)', fontdict={'size':fontSize})
+    pylab.ylabel('Prob.(height)', fontdict={'size':fontSize})
+    pylab.title('Height distribution for plot %s' % (plotKey), fontdict={'size':fontSize})
     if i >= plots.__len__():
-        pylab.legend(h, ['50cm threshold'], loc='upper left', bbox_to_anchor=(1.2, 1))
+        pylab.legend(h, ['50cm threshold'], loc='upper left', bbox_to_anchor=(1.2, 1), prop={'size':fontSize})
     pylab.axis([axLim[0], axLim[1], 0, heightKde.max()])
     i += 1
 
@@ -183,12 +185,12 @@ for plotKey, plot in plots.iteritems():
     h = pylab.plot([50, 50], [axLim[2], axLim[3]], 'r')
     pylab.axis(axLim)
     pylab.grid('on')
-    pylab.xlabel('Plant Height (cm)')
-    pylab.ylabel('Cum. Distr.(C. stock) (kg)')
+    pylab.xlabel('Plant Height (cm)', fontdict={'size':fontSize})
+    pylab.ylabel('Cum. Distr.(C. stock) (kg)', fontdict={'size':fontSize})
     pylab.xlim([0, 350])
-    pylab.title('Height / C. stock relation for plot %s' % (plotKey))
+    pylab.title('Height / C. stock relation for plot %s' % (plotKey), fontdict={'size':fontSize})
     if i >= plots.__len__():
-        pylab.legend(h, ['50cm threshold'], loc='upper left', bbox_to_anchor=(1.2, 1))
+        pylab.legend(h, ['50cm threshold'], loc='upper left', bbox_to_anchor=(1.2, 1), prop={'size':fontSize})
     i += 1
 
     idx = height > 50
@@ -294,12 +296,12 @@ pylab.figure()
 pylab.plot(sectionAreaV, circleAreaV, 'bx')
 m = np.max([sectionAreaV.max(), circleAreaV.max()])
 h, = pylab.plot([0, m], [0, m], 'r')
-pylab.text(m*0.6, m*0.1, str.format('$R^2$ = {0:.2f}', np.round(r ** 2, 2)))
+pylab.text(m*0.6, m*0.1, str.format('$R^2$ = {0:.2f}', np.round(r ** 2, 2)), fontdict={'size':fontSize})
 pylab.grid()
-pylab.legend([h], ['1:1'])
-pylab.xlabel('Canopy Area to Edge')
-pylab.ylabel('Approx. Circular Area')
-pylab.title('Edge intersected canopy area approximation')
+pylab.legend([h], ['1:1'], prop={'size':fontSize})
+pylab.xlabel('Canopy Area to Edge', fontdict={'size':fontSize})
+pylab.ylabel('Approx. Circular Area', fontdict={'size':fontSize})
+pylab.title('Edge intersected canopy area approximation', fontdict={'size':fontSize})
 # for model, species in allometricModels.iteritems():
 
 
@@ -324,10 +326,10 @@ for plotKey, plot in plots.iteritems():
 pylab.figure()
 pylab.bar(range(0, allSpecies.size), [v for k,v in allSpeciesYc.iteritems()])
 # pylab.yscale('log')
-pylab.xticks(range(0, allSpecies.size), allSpecies, rotation='vertical')
+pylab.xticks(range(0, allSpecies.size), allSpecies, rotation='vertical', fontSize=fontSize)  #prop={'size':fontSize-2})
 pylab.grid('on')
-pylab.ylabel('Total C (kg)')
-pylab.title('Total Trial C per Species')
+pylab.ylabel('Total C (kg)', fontdict={'size':fontSize})
+pylab.title('Total Trial C per Species', fontdict={'size':fontSize})
 
 #find 4 highest contributing species
 idx = np.flipud(np.argsort([v for k,v in allSpeciesYc.iteritems()]))
@@ -386,9 +388,9 @@ for specie in topSpecies:
     pylab.subplot(2, 2, pi+1)
     pylab.plot(x, yc)
     pylab.grid()
-    pylab.ylabel('Yc (kg)')
-    pylab.xlabel(allometricModels[record['species']]['vars'])
-    pylab.title(specie)
+    pylab.ylabel('Yc (kg)', fontdict={'size':fontSize})
+    pylab.xlabel(allometricModels[record['species']]['vars'], fontdict={'size':fontSize})
+    pylab.title(specie, fontdict={'size':fontSize})
     pi += 1
 
 
