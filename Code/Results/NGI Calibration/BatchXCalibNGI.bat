@@ -9,11 +9,11 @@ SET OSGEO4W_ROOT=C:\OSGeo4W64\
 REM SET OTB=%OSGEO4W_ROOT%apps\orfeotoolbox
 
 CALL %OSGEO4W_ROOT%bin\o4w_env.bat
-
+echo Paths....
 setlocal EnableDelayedExpansion
 SET PATH=%path%;C:\Data\Development\Toolboxes\OpenCV-2.4.8\build\x64\vc12\bin
-SET XCALIBEXE="C:\Data\Development\Projects\PhD GeoInformatics\Code\Cross Calibration\Sungis08\CrossCalibration.exe"
-REM SET XCALIBEXE="C:\Data\Development\Projects\PhD GeoInformatics\Code\Cross Calibration\x64\Release\CrossCalibration.exe"
+REM SET XCALIBEXE="C:\Data\Development\Projects\PhD GeoInformatics\Code\Cross Calibration\Sungis08\CrossCalibration.exe"
+SET XCALIBEXE="C:\Data\Development\Projects\PhD GeoInformatics\Code\Cross Calibration\x64\Debug\CrossCalibration.exe"
 SET MODISFILENAME="D:\Data\Development\Projects\PhD GeoInformatics\Data\MODIS\MCD43A4.A2015241.h20v12.005.2015260133130\MCD43A4.A2015241.h20v12.005.2015260133130.NgiBandOrder.Lo25Wgs84.tif"
 
 REM gdalinfo -proj4 %QBFILENAME%

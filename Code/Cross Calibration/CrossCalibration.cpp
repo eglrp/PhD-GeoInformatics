@@ -44,7 +44,7 @@
 
 using namespace std;
 
-#define XCALIB_DEBUG 1
+#define XCALIB_DEBUG 0
 #define MAX_PATH 1024
 #define SEAMLINE_FIX 1
 #define DO_COMPRESS_OUTPUT 1
@@ -642,9 +642,9 @@ int main(int argc, char* argv[])
 
 	for (int i = 1; i < argc; i++)
 	{
-		if (EQUAL(argv[i], "-o"))
+		if (_strcmpi(argv[i], "-o") == 0)
 			doOverwrite = true;
-		else if (EQUAL(argv[i], "-w") && i < argc-2)
+		else if (_strcmpi(argv[i], "-w") == 0 && i < argc-2)
 		{
             winSize[0] = atoi(argv[++i]);
             winSize[1] = atoi(argv[++i]);
