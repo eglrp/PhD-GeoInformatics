@@ -13,9 +13,9 @@ echo Paths....
 setlocal EnableDelayedExpansion
 SET PATH=%path%;C:\Data\Development\Toolboxes\OpenCV-2.4.8\build\x64\vc12\bin
 REM SET XCALIBEXE="C:\Data\Development\Projects\PhD GeoInformatics\Code\Cross Calibration\Sungis08\CrossCalibration.exe"
-SET XCALIBEXE="C:\Data\Development\Projects\PhD GeoInformatics\Code\Cross Calibration\x64\Debug\CrossCalibration.exe"
-SET MODISFILENAME="D:\Data\Development\Projects\PhD GeoInformatics\Data\MODIS\MCD43A4.A2015241.h20v12.005.2015260133130\MCD43A4.A2015241.h20v12.005.2015260133130.NgiBandOrder.Lo25Wgs84.tif"
-
+SET XCALIBEXE="C:\Data\Development\Projects\PhD GeoInformatics\Code\Cross Calibration\x64\Release\CrossCalibration.exe"
+REM SET MODISFILENAME="D:\Data\Development\Projects\PhD GeoInformatics\Data\MODIS\MCD43A4.A2015241.h20v12.005.2015260133130\MCD43A4.A2015241.h20v12.005.2015260133130.NgiBandOrder.Lo25Wgs84.tif"
+SET MODISFILENAME="D:\Data\Development\Projects\PhD GeoInformatics\Data\MODIS\MCD43A4.3324C_Mosaic.NgiBandOrder.Lo25Wgs84.tif"
 REM gdalinfo -proj4 %QBFILENAME%
 
 REM %XCALIBEXE% -w 1 1 -o %MODISFILENAME% %QBFILENAME%
@@ -26,7 +26,7 @@ echo Calibrating....
 for %%i in (%2) do (
 REM CrossCalibration.exe %1 "%%i"
 echo %XCALIBEXE% -o -w 1 1 %MODISFILENAME% "%%i"
-%XCALIBEXE% -o -w 1 1 %MODISFILENAME% "%%i"
+%XCALIBEXE% -w 1 1 %MODISFILENAME% "%%i"
 )
 
 

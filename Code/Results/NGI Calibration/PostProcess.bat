@@ -8,9 +8,9 @@ setlocal EnableDelayedExpansion
 REM echo on
 REM CMD /V:ON /C
 E:
-cd "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\XCALIB"
+cd "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN"
 
-for %%i in (o*_RGBN_XCALIB.tif) do (
+for %%i in (o*_RGBN.tif) do (
 set jj=%%i
 REM  -co "TILED=YES" -co "BLOCKXSIZE=512" -co "BLOCKYSIZE=512" 
 REM !jj:~1!

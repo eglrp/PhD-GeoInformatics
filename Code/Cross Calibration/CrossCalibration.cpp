@@ -44,7 +44,7 @@
 
 using namespace std;
 
-#define XCALIB_DEBUG 1
+#define XCALIB_DEBUG 0
 #define MAX_PATH 1024
 #define SEAMLINE_FIX 1
 #define DO_COMPRESS_OUTPUT 1
