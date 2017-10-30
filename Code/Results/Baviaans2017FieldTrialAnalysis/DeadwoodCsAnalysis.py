@@ -84,13 +84,13 @@ for plotKey, plot in plots.iteritems():
     pylab.subplot(2, 3, i)
     pylab.plot(heightGrid, heightKde)
     axLim = pylab.axis()
-    h = pylab.plot([50, 50], [0, heightKde.max()], 'r')
+    # h = pylab.plot([50, 50], [0, heightKde.max()], 'r')
     pylab.grid('on')
     pylab.xlabel('Plant Diam. (mm)', fontdict={'size':fontSize})
     pylab.ylabel('Prob.(diam.)', fontdict={'size':fontSize})
     pylab.title('Diam. distribution for plot %s' % (plotKey), fontdict={'size':fontSize})
-    if i >= plots.__len__():
-        pylab.legend(h, ['50mm threshold'], loc='upper left', bbox_to_anchor=(1.2, 1), prop={'size':fontSize})
+    # if i >= plots.__len__():
+    #     pylab.legend(h, ['50mm threshold'], loc='upper left', bbox_to_anchor=(1.2, 1), prop={'size':fontSize})
     pylab.axis([axLim[0], axLim[1], 0, heightKde.max()])
     i += 1
 
@@ -105,15 +105,15 @@ for plotKey, plot in plots.iteritems():
     pylab.subplot(2, 3, i)
     pylab.plot(height[idx], ycCumSum)
     axLim = pylab.axis()
-    h = pylab.plot([50, 50], [axLim[2], axLim[3]], 'r')
+    # h = pylab.plot([50, 50], [axLim[2], axLim[3]], 'r')
     pylab.axis(axLim)
     pylab.grid('on')
     pylab.xlabel('Plant Diam. (mm)', fontdict={'size':fontSize})
     pylab.ylabel('Cum. Distr.(C. stock) (kg)', fontdict={'size':fontSize})
     # pylab.xlim([0, 350])
     pylab.title('Diam. / C. stock relation for plot %s' % (plotKey), fontdict={'size':fontSize})
-    if i >= plots.__len__():
-        pylab.legend(h, ['50cm threshold'], loc='upper left', bbox_to_anchor=(1.2, 1), prop={'size':fontSize})
+    # if i >= plots.__len__():
+    #     pylab.legend(h, ['50cm threshold'], loc='upper left', bbox_to_anchor=(1.2, 1), prop={'size':fontSize})
     i += 1
 
     idx = height > 50
