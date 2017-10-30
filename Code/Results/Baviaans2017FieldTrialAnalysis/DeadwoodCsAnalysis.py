@@ -81,12 +81,16 @@ wb = None
 pylab.close('all')
 i = 1
 ycTtl = 0.
+measTtl = 0
+
 pylab.figure()
 for plotKey, plot in plots.iteritems():
     height = np.float64([record['diameter'] for record in plot])
-
+    yc = np.float64([record['yc'] for record in plot])
+    ycTtl += yc.sum()
+    measTtl += yc.__len__()
     kde = gaussian_kde(height)  #, bw_method=bandwidth / height.std(ddof=1))
-    heightGrid = np.linspace(0, 600, 100)
+    heightGrid = np.linspace(0, 500, 100)
     heightKde = kde.evaluate(heightGrid)
     pylab.subplot(2, 3, i)
     pylab.plot(heightGrid, heightKde)
@@ -101,6 +105,8 @@ for plotKey, plot in plots.iteritems():
     pylab.axis([axLim[0], axLim[1], 0, heightKde.max()])
     i += 1
 
+cutOffTtlYc = 0.
+cutOffTtlMeas = 0
 i = 1
 pylab.figure()
 for plotKey, plot in plots.iteritems():
@@ -123,9 +129,16 @@ for plotKey, plot in plots.iteritems():
     #     pylab.legend(h, ['50cm threshold'], loc='upper left', bbox_to_anchor=(1.2, 1), prop={'size':fontSize})
     i += 1
 
-    idx = height > 50
+    idx = height > 20
+    cutOffTtlYc += yc[idx].sum()
+    cutOffTtlMeas += (~idx).sum()
     print str(plotKey), ": "
     print "Ttl: ", str(yc.sum())
-    print "Hgt>50: ", str(yc[idx].sum())
-    print "Hgt>50/Plot Ttl: ", str(yc[idx].sum()/yc.sum())
-    # print "Hgt>50/Ttl: ", str(yc[idx].sum()/ycTtl)
+    print "Hgt>20: ", str(yc[idx].sum())
+    print "Hgt>20/Plot Ttl: ", str(yc[idx].sum()/yc.sum())
+    print "Hgt>20/Ttl: ", str(yc[idx].sum()/ycTtl)
+
+print "---------------------------------------------"
+print "Ttl C Hgt>20/Ttl: ", str(100.*cutOffTtlYc/ycTtl)
+print "Ttl Meas Hgt>20/Ttl: ", str(100.*float(cutOffTtlMeas)/float(measTtl))
+
