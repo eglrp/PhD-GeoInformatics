@@ -59,8 +59,8 @@ Photo:
 	Id: "3324c_2015_1004_01_0001_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0001_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0001_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0001_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0001_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -132,8 +132,8 @@ Photo:
 	Id: "3324c_2015_1004_01_0002_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0002_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0002_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0002_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0002_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -205,8 +205,8 @@ Photo:
 	Id: "3324c_2015_1004_01_0003_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0003_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0003_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0003_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0003_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -278,8 +278,8 @@ Photo:
 	Id: "3324c_2015_1004_01_0004_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0004_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0004_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0004_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0004_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -351,8 +351,8 @@ Photo:
 	Id: "3324c_2015_1004_01_0005_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0005_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0005_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0005_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0005_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -424,8 +424,8 @@ Photo:
 	Id: "3324c_2015_1004_01_0006_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0006_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0006_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0006_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0006_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -497,8 +497,8 @@ Photo:
 	Id: "3324c_2015_1004_01_0007_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0007_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0007_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0007_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0007_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -570,8 +570,8 @@ Photo:
 	Id: "3324c_2015_1004_01_0008_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0008_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0008_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0008_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0008_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -643,8 +643,8 @@ Photo:
 	Id: "3324c_2015_1004_01_0009_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0009_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0009_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0009_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0009_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -716,8 +716,8 @@ Photo:
 	Id: "3324c_2015_1004_01_0010_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0010_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0010_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0010_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0010_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -789,8 +789,8 @@ Photo:
 	Id: "3324c_2015_1004_01_0011_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0011_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0011_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0011_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0011_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -862,8 +862,8 @@ Photo:
 	Id: "3324c_2015_1004_01_0012_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0012_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0012_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0012_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0012_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -935,8 +935,8 @@ Photo:
 	Id: "3324c_2015_1004_01_0013_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0013_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0013_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0013_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0013_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -1008,8 +1008,8 @@ Photo:
 	Id: "3324c_2015_1004_01_0014_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0014_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0014_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0014_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0014_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -1081,8 +1081,8 @@ Photo:
 	Id: "3324c_2015_1004_01_0015_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0015_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0015_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0015_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0015_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -1154,8 +1154,8 @@ Photo:
 	Id: "3324c_2015_1004_01_0016_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0016_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0016_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0016_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0016_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -1227,8 +1227,8 @@ Photo:
 	Id: "3324c_2015_1004_01_0017_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0017_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0017_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0017_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0017_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -1300,8 +1300,8 @@ Photo:
 	Id: "3324c_2015_1004_01_0018_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0018_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0018_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0018_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0018_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -1373,8 +1373,8 @@ Photo:
 	Id: "3324c_2015_1004_01_0019_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0019_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0019_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0019_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0019_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -1446,8 +1446,8 @@ Photo:
 	Id: "3324c_2015_1004_01_0020_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0020_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0020_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0020_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0020_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -1519,8 +1519,8 @@ Photo:
 	Id: "3324c_2015_1004_01_0021_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0021_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0021_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0021_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0021_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -1592,8 +1592,8 @@ Photo:
 	Id: "3324c_2015_1004_01_0022_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0022_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0022_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0022_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0022_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -1665,8 +1665,8 @@ Photo:
 	Id: "3324c_2015_1004_01_0023_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0023_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0023_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0023_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0023_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -1738,8 +1738,8 @@ Photo:
 	Id: "3324c_2015_1004_01_0024_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0024_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0024_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0024_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0024_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -1811,8 +1811,8 @@ Photo:
 	Id: "3324c_2015_1004_01_0025_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0025_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0025_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0025_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0025_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -1884,8 +1884,8 @@ Photo:
 	Id: "3324c_2015_1004_01_0026_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0026_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0026_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0026_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0026_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -1957,8 +1957,8 @@ Photo:
 	Id: "3324c_2015_1004_01_0027_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0027_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0027_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0027_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0027_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -2030,8 +2030,8 @@ Photo:
 	Id: "3324c_2015_1004_01_0028_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0028_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0028_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0028_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0028_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -2103,8 +2103,8 @@ Photo:
 	Id: "3324c_2015_1004_01_0029_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0029_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0029_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0029_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0029_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -2176,8 +2176,8 @@ Photo:
 	Id: "3324c_2015_1004_01_0030_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0030_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0030_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0030_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0030_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -2249,8 +2249,8 @@ Photo:
 	Id: "3324c_2015_1004_01_0031_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0031_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0031_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0031_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0031_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -2322,8 +2322,8 @@ Photo:
 	Id: "3324c_2015_1004_01_0032_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0032_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0032_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0032_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0032_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -2395,8 +2395,8 @@ Photo:
 	Id: "3324c_2015_1004_01_0033_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0033_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0033_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0033_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0033_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -2468,8 +2468,8 @@ Photo:
 	Id: "3324c_2015_1004_01_0034_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0034_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0034_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0034_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0034_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -2541,8 +2541,8 @@ Photo:
 	Id: "3324c_2015_1004_01_0035_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0035_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0035_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0035_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0035_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -2614,8 +2614,8 @@ Photo:
 	Id: "3324c_2015_1004_01_0036_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0036_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0036_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0036_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0036_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -2687,8 +2687,8 @@ Photo:
 	Id: "3324c_2015_1004_01_0037_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0037_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0037_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0037_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0037_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -2760,8 +2760,8 @@ Photo:
 	Id: "3324c_2015_1004_01_0038_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0038_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0038_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0038_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0038_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -2833,8 +2833,8 @@ Photo:
 	Id: "3324c_2015_1004_01_0039_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0039_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0039_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0039_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0039_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -2906,8 +2906,8 @@ Photo:
 	Id: "3324c_2015_1004_01_0040_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0040_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0040_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0040_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0040_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -2979,8 +2979,8 @@ Photo:
 	Id: "3324c_2015_1004_01_0041_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0041_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0041_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_01_0041_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_01_0041_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -3052,8 +3052,8 @@ Photo:
 	Id: "3324c_2015_1004_02_0042_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0042_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0042_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0042_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0042_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -3125,8 +3125,8 @@ Photo:
 	Id: "3324c_2015_1004_02_0043_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0043_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0043_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0043_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0043_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -3198,8 +3198,8 @@ Photo:
 	Id: "3324c_2015_1004_02_0044_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0044_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0044_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0044_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0044_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -3271,8 +3271,8 @@ Photo:
 	Id: "3324c_2015_1004_02_0045_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0045_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0045_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0045_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0045_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -3344,8 +3344,8 @@ Photo:
 	Id: "3324c_2015_1004_02_0046_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0046_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0046_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0046_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0046_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -3417,8 +3417,8 @@ Photo:
 	Id: "3324c_2015_1004_02_0047_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0047_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0047_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0047_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0047_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -3490,8 +3490,8 @@ Photo:
 	Id: "3324c_2015_1004_02_0048_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0048_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0048_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0048_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0048_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -3563,8 +3563,8 @@ Photo:
 	Id: "3324c_2015_1004_02_0049_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0049_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0049_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0049_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0049_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -3636,8 +3636,8 @@ Photo:
 	Id: "3324c_2015_1004_02_0050_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0050_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0050_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0050_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0050_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -3709,8 +3709,8 @@ Photo:
 	Id: "3324c_2015_1004_02_0051_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0051_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0051_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0051_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0051_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -3782,8 +3782,8 @@ Photo:
 	Id: "3324c_2015_1004_02_0052_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0052_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0052_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0052_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0052_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -3855,8 +3855,8 @@ Photo:
 	Id: "3324c_2015_1004_02_0053_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0053_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0053_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0053_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0053_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -3928,8 +3928,8 @@ Photo:
 	Id: "3324c_2015_1004_02_0054_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0054_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0054_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0054_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0054_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -4001,8 +4001,8 @@ Photo:
 	Id: "3324c_2015_1004_02_0055_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0055_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0055_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0055_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0055_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -4074,8 +4074,8 @@ Photo:
 	Id: "3324c_2015_1004_02_0056_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0056_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0056_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0056_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0056_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -4147,8 +4147,8 @@ Photo:
 	Id: "3324c_2015_1004_02_0057_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0057_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0057_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0057_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0057_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -4220,8 +4220,8 @@ Photo:
 	Id: "3324c_2015_1004_02_0058_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0058_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0058_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0058_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0058_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -4293,8 +4293,8 @@ Photo:
 	Id: "3324c_2015_1004_02_0059_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0059_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0059_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0059_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0059_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -4366,8 +4366,8 @@ Photo:
 	Id: "3324c_2015_1004_02_0060_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0060_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0060_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0060_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0060_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -4439,8 +4439,8 @@ Photo:
 	Id: "3324c_2015_1004_02_0061_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0061_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0061_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0061_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0061_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -4512,8 +4512,8 @@ Photo:
 	Id: "3324c_2015_1004_02_0062_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0062_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0062_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0062_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0062_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -4585,8 +4585,8 @@ Photo:
 	Id: "3324c_2015_1004_02_0063_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0063_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0063_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0063_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0063_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -4658,8 +4658,8 @@ Photo:
 	Id: "3324c_2015_1004_02_0064_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0064_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0064_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0064_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0064_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -4731,8 +4731,8 @@ Photo:
 	Id: "3324c_2015_1004_02_0065_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0065_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0065_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0065_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0065_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -4804,8 +4804,8 @@ Photo:
 	Id: "3324c_2015_1004_02_0066_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0066_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0066_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0066_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0066_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -4877,8 +4877,8 @@ Photo:
 	Id: "3324c_2015_1004_02_0067_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0067_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0067_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0067_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0067_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -4950,8 +4950,8 @@ Photo:
 	Id: "3324c_2015_1004_02_0068_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0068_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0068_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0068_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0068_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -5023,8 +5023,8 @@ Photo:
 	Id: "3324c_2015_1004_02_0069_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0069_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0069_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0069_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0069_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -5096,8 +5096,8 @@ Photo:
 	Id: "3324c_2015_1004_02_0070_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0070_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0070_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0070_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0070_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -5169,8 +5169,8 @@ Photo:
 	Id: "3324c_2015_1004_02_0071_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0071_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0071_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0071_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0071_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -5242,8 +5242,8 @@ Photo:
 	Id: "3324c_2015_1004_02_0072_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0072_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0072_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0072_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0072_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -5315,8 +5315,8 @@ Photo:
 	Id: "3324c_2015_1004_02_0073_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0073_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0073_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0073_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0073_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -5388,8 +5388,8 @@ Photo:
 	Id: "3324c_2015_1004_02_0074_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0074_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0074_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0074_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0074_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -5461,8 +5461,8 @@ Photo:
 	Id: "3324c_2015_1004_02_0075_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0075_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0075_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0075_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0075_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -5534,8 +5534,8 @@ Photo:
 	Id: "3324c_2015_1004_02_0076_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0076_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0076_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0076_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0076_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -5607,8 +5607,8 @@ Photo:
 	Id: "3324c_2015_1004_02_0077_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0077_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0077_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0077_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0077_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -5680,8 +5680,8 @@ Photo:
 	Id: "3324c_2015_1004_02_0078_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0078_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0078_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0078_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0078_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -5753,8 +5753,8 @@ Photo:
 	Id: "3324c_2015_1004_02_0079_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0079_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0079_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0079_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0079_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -5826,8 +5826,8 @@ Photo:
 	Id: "3324c_2015_1004_02_0080_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0080_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0080_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0080_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0080_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -5899,8 +5899,8 @@ Photo:
 	Id: "3324c_2015_1004_02_0081_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0081_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0081_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0081_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0081_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -5972,8 +5972,8 @@ Photo:
 	Id: "3324c_2015_1004_02_0082_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0082_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0082_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0082_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0082_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -6045,8 +6045,8 @@ Photo:
 	Id: "3324c_2015_1004_02_0083_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0083_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0083_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_02_0083_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_02_0083_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -6118,8 +6118,8 @@ Photo:
 	Id: "3324c_2015_1004_03_0084_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0084_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0084_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0084_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0084_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -6191,8 +6191,8 @@ Photo:
 	Id: "3324c_2015_1004_03_0085_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0085_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0085_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0085_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0085_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -6264,8 +6264,8 @@ Photo:
 	Id: "3324c_2015_1004_03_0086_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0086_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0086_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0086_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0086_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -6337,8 +6337,8 @@ Photo:
 	Id: "3324c_2015_1004_03_0087_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0087_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0087_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0087_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0087_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -6410,8 +6410,8 @@ Photo:
 	Id: "3324c_2015_1004_03_0088_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0088_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0088_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0088_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0088_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -6483,8 +6483,8 @@ Photo:
 	Id: "3324c_2015_1004_03_0089_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0089_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0089_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0089_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0089_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -6556,8 +6556,8 @@ Photo:
 	Id: "3324c_2015_1004_03_0090_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0090_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0090_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0090_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0090_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -6629,8 +6629,8 @@ Photo:
 	Id: "3324c_2015_1004_03_0091_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0091_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0091_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0091_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0091_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -6702,8 +6702,8 @@ Photo:
 	Id: "3324c_2015_1004_03_0092_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0092_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0092_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0092_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0092_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -6775,8 +6775,8 @@ Photo:
 	Id: "3324c_2015_1004_03_0093_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0093_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0093_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0093_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0093_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -6848,8 +6848,8 @@ Photo:
 	Id: "3324c_2015_1004_03_0094_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0094_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0094_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0094_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0094_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -6921,8 +6921,8 @@ Photo:
 	Id: "3324c_2015_1004_03_0095_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0095_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0095_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0095_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0095_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -6994,8 +6994,8 @@ Photo:
 	Id: "3324c_2015_1004_03_0096_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0096_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0096_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0096_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0096_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -7067,8 +7067,8 @@ Photo:
 	Id: "3324c_2015_1004_03_0097_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0097_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0097_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0097_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0097_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -7140,8 +7140,8 @@ Photo:
 	Id: "3324c_2015_1004_03_0098_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0098_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0098_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0098_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0098_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -7213,8 +7213,8 @@ Photo:
 	Id: "3324c_2015_1004_03_0099_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0099_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0099_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0099_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0099_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -7286,8 +7286,8 @@ Photo:
 	Id: "3324c_2015_1004_03_0100_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0100_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0100_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0100_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0100_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -7359,8 +7359,8 @@ Photo:
 	Id: "3324c_2015_1004_03_0101_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0101_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0101_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0101_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0101_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -7432,8 +7432,8 @@ Photo:
 	Id: "3324c_2015_1004_03_0102_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0102_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0102_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0102_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0102_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -7505,8 +7505,8 @@ Photo:
 	Id: "3324c_2015_1004_03_0103_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0103_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0103_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0103_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0103_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -7578,8 +7578,8 @@ Photo:
 	Id: "3324c_2015_1004_03_0104_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0104_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0104_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0104_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0104_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -7651,8 +7651,8 @@ Photo:
 	Id: "3324c_2015_1004_03_0105_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0105_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0105_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0105_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0105_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -7724,8 +7724,8 @@ Photo:
 	Id: "3324c_2015_1004_03_0106_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0106_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0106_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0106_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0106_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -7797,8 +7797,8 @@ Photo:
 	Id: "3324c_2015_1004_03_0107_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0107_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0107_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0107_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0107_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -7870,8 +7870,8 @@ Photo:
 	Id: "3324c_2015_1004_03_0108_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0108_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0108_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0108_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0108_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -7943,8 +7943,8 @@ Photo:
 	Id: "3324c_2015_1004_03_0109_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0109_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0109_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0109_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0109_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -8016,8 +8016,8 @@ Photo:
 	Id: "3324c_2015_1004_03_0110_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0110_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0110_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0110_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0110_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -8089,8 +8089,8 @@ Photo:
 	Id: "3324c_2015_1004_03_0111_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0111_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0111_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0111_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0111_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -8162,8 +8162,8 @@ Photo:
 	Id: "3324c_2015_1004_03_0112_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0112_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0112_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0112_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0112_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -8235,8 +8235,8 @@ Photo:
 	Id: "3324c_2015_1004_03_0113_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0113_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0113_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0113_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0113_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -8308,8 +8308,8 @@ Photo:
 	Id: "3324c_2015_1004_03_0114_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0114_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0114_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0114_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0114_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -8381,8 +8381,8 @@ Photo:
 	Id: "3324c_2015_1004_03_0115_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0115_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0115_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0115_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0115_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -8454,8 +8454,8 @@ Photo:
 	Id: "3324c_2015_1004_03_0116_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0116_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0116_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0116_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0116_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -8527,8 +8527,8 @@ Photo:
 	Id: "3324c_2015_1004_03_0117_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0117_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0117_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0117_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0117_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -8600,8 +8600,8 @@ Photo:
 	Id: "3324c_2015_1004_03_0118_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0118_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0118_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0118_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0118_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -8673,8 +8673,8 @@ Photo:
 	Id: "3324c_2015_1004_03_0119_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0119_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0119_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0119_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0119_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -8746,8 +8746,8 @@ Photo:
 	Id: "3324c_2015_1004_03_0120_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0120_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0120_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0120_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0120_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -8819,8 +8819,8 @@ Photo:
 	Id: "3324c_2015_1004_03_0121_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0121_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0121_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0121_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0121_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -8892,8 +8892,8 @@ Photo:
 	Id: "3324c_2015_1004_03_0122_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0122_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0122_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0122_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0122_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -8965,8 +8965,8 @@ Photo:
 	Id: "3324c_2015_1004_03_0123_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0123_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0123_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0123_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0123_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -9038,8 +9038,8 @@ Photo:
 	Id: "3324c_2015_1004_03_0124_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0124_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0124_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0124_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0124_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -9111,8 +9111,8 @@ Photo:
 	Id: "3324c_2015_1004_03_0125_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0125_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0125_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0125_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0125_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -9184,8 +9184,8 @@ Photo:
 	Id: "3324c_2015_1004_03_0126_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0126_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0126_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0126_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0126_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -9257,8 +9257,8 @@ Photo:
 	Id: "3324c_2015_1004_03_0127_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0127_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0127_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0127_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0127_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -9330,8 +9330,8 @@ Photo:
 	Id: "3324c_2015_1004_03_0128_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0128_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0128_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_03_0128_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_03_0128_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -9403,8 +9403,8 @@ Photo:
 	Id: "3324c_2015_1004_04_0129_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0129_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0129_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0129_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0129_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -9476,8 +9476,8 @@ Photo:
 	Id: "3324c_2015_1004_04_0130_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0130_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0130_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0130_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0130_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -9549,8 +9549,8 @@ Photo:
 	Id: "3324c_2015_1004_04_0131_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0131_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0131_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0131_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0131_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -9622,8 +9622,8 @@ Photo:
 	Id: "3324c_2015_1004_04_0132_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0132_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0132_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0132_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0132_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -9695,8 +9695,8 @@ Photo:
 	Id: "3324c_2015_1004_04_0133_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0133_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0133_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0133_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0133_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -9768,8 +9768,8 @@ Photo:
 	Id: "3324c_2015_1004_04_0134_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0134_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0134_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0134_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0134_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -9841,8 +9841,8 @@ Photo:
 	Id: "3324c_2015_1004_04_0135_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0135_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0135_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0135_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0135_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -9914,8 +9914,8 @@ Photo:
 	Id: "3324c_2015_1004_04_0136_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0136_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0136_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0136_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0136_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -9987,8 +9987,8 @@ Photo:
 	Id: "3324c_2015_1004_04_0137_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0137_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0137_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0137_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0137_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -10060,8 +10060,8 @@ Photo:
 	Id: "3324c_2015_1004_04_0138_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0138_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0138_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0138_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0138_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -10133,8 +10133,8 @@ Photo:
 	Id: "3324c_2015_1004_04_0139_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0139_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0139_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0139_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0139_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -10206,8 +10206,8 @@ Photo:
 	Id: "3324c_2015_1004_04_0140_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0140_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0140_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0140_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0140_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -10279,8 +10279,8 @@ Photo:
 	Id: "3324c_2015_1004_04_0141_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0141_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0141_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0141_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0141_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -10352,8 +10352,8 @@ Photo:
 	Id: "3324c_2015_1004_04_0142_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0142_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0142_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0142_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0142_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -10425,8 +10425,8 @@ Photo:
 	Id: "3324c_2015_1004_04_0143_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0143_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0143_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0143_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0143_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -10498,8 +10498,8 @@ Photo:
 	Id: "3324c_2015_1004_04_0144_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0144_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0144_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0144_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0144_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -10571,8 +10571,8 @@ Photo:
 	Id: "3324c_2015_1004_04_0145_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0145_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0145_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0145_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0145_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -10644,8 +10644,8 @@ Photo:
 	Id: "3324c_2015_1004_04_0146_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0146_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0146_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0146_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0146_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -10717,8 +10717,8 @@ Photo:
 	Id: "3324c_2015_1004_04_0147_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0147_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0147_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0147_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0147_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -10790,8 +10790,8 @@ Photo:
 	Id: "3324c_2015_1004_04_0148_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0148_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0148_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0148_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0148_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -10863,8 +10863,8 @@ Photo:
 	Id: "3324c_2015_1004_04_0149_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0149_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0149_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0149_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0149_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -10936,8 +10936,8 @@ Photo:
 	Id: "3324c_2015_1004_04_0150_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0150_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0150_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0150_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0150_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -11009,8 +11009,8 @@ Photo:
 	Id: "3324c_2015_1004_04_0151_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0151_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0151_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0151_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0151_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -11082,8 +11082,8 @@ Photo:
 	Id: "3324c_2015_1004_04_0152_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0152_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0152_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0152_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0152_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -11155,8 +11155,8 @@ Photo:
 	Id: "3324c_2015_1004_04_0153_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0153_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0153_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0153_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0153_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -11228,8 +11228,8 @@ Photo:
 	Id: "3324c_2015_1004_04_0154_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0154_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0154_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0154_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0154_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -11301,8 +11301,8 @@ Photo:
 	Id: "3324c_2015_1004_04_0155_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0155_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0155_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0155_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0155_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -11374,8 +11374,8 @@ Photo:
 	Id: "3324c_2015_1004_04_0156_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0156_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0156_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0156_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0156_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -11447,8 +11447,8 @@ Photo:
 	Id: "3324c_2015_1004_04_0157_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0157_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0157_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0157_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0157_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -11520,8 +11520,8 @@ Photo:
 	Id: "3324c_2015_1004_04_0158_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0158_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0158_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0158_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0158_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -11593,8 +11593,8 @@ Photo:
 	Id: "3324c_2015_1004_04_0159_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0159_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0159_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0159_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0159_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -11666,8 +11666,8 @@ Photo:
 	Id: "3324c_2015_1004_04_0160_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0160_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0160_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0160_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0160_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -11739,8 +11739,8 @@ Photo:
 	Id: "3324c_2015_1004_04_0161_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0161_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0161_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0161_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0161_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -11812,8 +11812,8 @@ Photo:
 	Id: "3324c_2015_1004_04_0162_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0162_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0162_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0162_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0162_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -11885,8 +11885,8 @@ Photo:
 	Id: "3324c_2015_1004_04_0163_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0163_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0163_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0163_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0163_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -11958,8 +11958,8 @@ Photo:
 	Id: "3324c_2015_1004_04_0164_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0164_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0164_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0164_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0164_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -12031,8 +12031,8 @@ Photo:
 	Id: "3324c_2015_1004_04_0165_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0165_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0165_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0165_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0165_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -12104,8 +12104,8 @@ Photo:
 	Id: "3324c_2015_1004_04_0166_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0166_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0166_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0166_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0166_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -12177,8 +12177,8 @@ Photo:
 	Id: "3324c_2015_1004_04_0167_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0167_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0167_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0167_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0167_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -12250,8 +12250,8 @@ Photo:
 	Id: "3324c_2015_1004_04_0168_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0168_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0168_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0168_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0168_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -12323,8 +12323,8 @@ Photo:
 	Id: "3324c_2015_1004_04_0169_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0169_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0169_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0169_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0169_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -12396,8 +12396,8 @@ Photo:
 	Id: "3324c_2015_1004_04_0170_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0170_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0170_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0170_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0170_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -12469,8 +12469,8 @@ Photo:
 	Id: "3324c_2015_1004_04_0171_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0171_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0171_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0171_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0171_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -12542,8 +12542,8 @@ Photo:
 	Id: "3324c_2015_1004_04_0172_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0172_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0172_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_04_0172_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_04_0172_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -12615,8 +12615,8 @@ Photo:
 	Id: "3324c_2015_1004_05_0173_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0173_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0173_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0173_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0173_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -12688,8 +12688,8 @@ Photo:
 	Id: "3324c_2015_1004_05_0174_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0174_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0174_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0174_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0174_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -12761,8 +12761,8 @@ Photo:
 	Id: "3324c_2015_1004_05_0175_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0175_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0175_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0175_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0175_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -12834,8 +12834,8 @@ Photo:
 	Id: "3324c_2015_1004_05_0176_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0176_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0176_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0176_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0176_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -12907,8 +12907,8 @@ Photo:
 	Id: "3324c_2015_1004_05_0177_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0177_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0177_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0177_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0177_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -12980,8 +12980,8 @@ Photo:
 	Id: "3324c_2015_1004_05_0178_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0178_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0178_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0178_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0178_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -13053,8 +13053,8 @@ Photo:
 	Id: "3324c_2015_1004_05_0179_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0179_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0179_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0179_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0179_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -13126,8 +13126,8 @@ Photo:
 	Id: "3324c_2015_1004_05_0180_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0180_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0180_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0180_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0180_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -13199,8 +13199,8 @@ Photo:
 	Id: "3324c_2015_1004_05_0181_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0181_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0181_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0181_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0181_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -13272,8 +13272,8 @@ Photo:
 	Id: "3324c_2015_1004_05_0182_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0182_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0182_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0182_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0182_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -13345,8 +13345,8 @@ Photo:
 	Id: "3324c_2015_1004_05_0183_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0183_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0183_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0183_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0183_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -13418,8 +13418,8 @@ Photo:
 	Id: "3324c_2015_1004_05_0184_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0184_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0184_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0184_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0184_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -13491,8 +13491,8 @@ Photo:
 	Id: "3324c_2015_1004_05_0185_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0185_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0185_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0185_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0185_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -13564,8 +13564,8 @@ Photo:
 	Id: "3324c_2015_1004_05_0186_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0186_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0186_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0186_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0186_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -13637,8 +13637,8 @@ Photo:
 	Id: "3324c_2015_1004_05_0187_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0187_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0187_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0187_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0187_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -13710,8 +13710,8 @@ Photo:
 	Id: "3324c_2015_1004_05_0188_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0188_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0188_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0188_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0188_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -13783,8 +13783,8 @@ Photo:
 	Id: "3324c_2015_1004_05_0189_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0189_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0189_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0189_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0189_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -13856,8 +13856,8 @@ Photo:
 	Id: "3324c_2015_1004_05_0190_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0190_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0190_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0190_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0190_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -13929,8 +13929,8 @@ Photo:
 	Id: "3324c_2015_1004_05_0191_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0191_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0191_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0191_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0191_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -14002,8 +14002,8 @@ Photo:
 	Id: "3324c_2015_1004_05_0192_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0192_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0192_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0192_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0192_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -14075,8 +14075,8 @@ Photo:
 	Id: "3324c_2015_1004_05_0193_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0193_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0193_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0193_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0193_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -14148,8 +14148,8 @@ Photo:
 	Id: "3324c_2015_1004_05_0194_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0194_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0194_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0194_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0194_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -14221,8 +14221,8 @@ Photo:
 	Id: "3324c_2015_1004_05_0195_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0195_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0195_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0195_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0195_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -14294,8 +14294,8 @@ Photo:
 	Id: "3324c_2015_1004_05_0196_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0196_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0196_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0196_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0196_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -14367,8 +14367,8 @@ Photo:
 	Id: "3324c_2015_1004_05_0197_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0197_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0197_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0197_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0197_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -14440,8 +14440,8 @@ Photo:
 	Id: "3324c_2015_1004_05_0198_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0198_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0198_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0198_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0198_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -14513,8 +14513,8 @@ Photo:
 	Id: "3324c_2015_1004_05_0199_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0199_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0199_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0199_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0199_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -14586,8 +14586,8 @@ Photo:
 	Id: "3324c_2015_1004_05_0200_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0200_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0200_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0200_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0200_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -14659,8 +14659,8 @@ Photo:
 	Id: "3324c_2015_1004_05_0201_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0201_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0201_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0201_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0201_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -14732,8 +14732,8 @@ Photo:
 	Id: "3324c_2015_1004_05_0202_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0202_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0202_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0202_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0202_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -14805,8 +14805,8 @@ Photo:
 	Id: "3324c_2015_1004_05_0203_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0203_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0203_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0203_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0203_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -14878,8 +14878,8 @@ Photo:
 	Id: "3324c_2015_1004_05_0204_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0204_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0204_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0204_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0204_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -14951,8 +14951,8 @@ Photo:
 	Id: "3324c_2015_1004_05_0205_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0205_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0205_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0205_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0205_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -15024,8 +15024,8 @@ Photo:
 	Id: "3324c_2015_1004_05_0206_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0206_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0206_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0206_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0206_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -15097,8 +15097,8 @@ Photo:
 	Id: "3324c_2015_1004_05_0207_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0207_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0207_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0207_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0207_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -15170,8 +15170,8 @@ Photo:
 	Id: "3324c_2015_1004_05_0208_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0208_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0208_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0208_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0208_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -15243,8 +15243,8 @@ Photo:
 	Id: "3324c_2015_1004_05_0209_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0209_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0209_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0209_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0209_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -15316,8 +15316,8 @@ Photo:
 	Id: "3324c_2015_1004_05_0210_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0210_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0210_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0210_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0210_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -15389,8 +15389,8 @@ Photo:
 	Id: "3324c_2015_1004_05_0211_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0211_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0211_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0211_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0211_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -15462,8 +15462,8 @@ Photo:
 	Id: "3324c_2015_1004_05_0212_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0212_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0212_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0212_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0212_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -15535,8 +15535,8 @@ Photo:
 	Id: "3324c_2015_1004_05_0213_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0213_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0213_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0213_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0213_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -15608,8 +15608,8 @@ Photo:
 	Id: "3324c_2015_1004_05_0214_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0214_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0214_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0214_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0214_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -15681,8 +15681,8 @@ Photo:
 	Id: "3324c_2015_1004_05_0215_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0215_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0215_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0215_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0215_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -15754,8 +15754,8 @@ Photo:
 	Id: "3324c_2015_1004_05_0216_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0216_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0216_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0216_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0216_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -15827,8 +15827,8 @@ Photo:
 	Id: "3324c_2015_1004_05_0217_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0217_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0217_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_05_0217_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_05_0217_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -15900,8 +15900,8 @@ Photo:
 	Id: "3324c_2015_1004_06_0218_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0218_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0218_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0218_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0218_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -15973,8 +15973,8 @@ Photo:
 	Id: "3324c_2015_1004_06_0219_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0219_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0219_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0219_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0219_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -16046,8 +16046,8 @@ Photo:
 	Id: "3324c_2015_1004_06_0220_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0220_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0220_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0220_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0220_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -16119,8 +16119,8 @@ Photo:
 	Id: "3324c_2015_1004_06_0221_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0221_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0221_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0221_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0221_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -16192,8 +16192,8 @@ Photo:
 	Id: "3324c_2015_1004_06_0222_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0222_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0222_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0222_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0222_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -16265,8 +16265,8 @@ Photo:
 	Id: "3324c_2015_1004_06_0223_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0223_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0223_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0223_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0223_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -16338,8 +16338,8 @@ Photo:
 	Id: "3324c_2015_1004_06_0224_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0224_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0224_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0224_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0224_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -16411,8 +16411,8 @@ Photo:
 	Id: "3324c_2015_1004_06_0225_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0225_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0225_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0225_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0225_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -16484,8 +16484,8 @@ Photo:
 	Id: "3324c_2015_1004_06_0226_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0226_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0226_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0226_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0226_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -16557,8 +16557,8 @@ Photo:
 	Id: "3324c_2015_1004_06_0227_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0227_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0227_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0227_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0227_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -16630,8 +16630,8 @@ Photo:
 	Id: "3324c_2015_1004_06_0228_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0228_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0228_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0228_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0228_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -16703,8 +16703,8 @@ Photo:
 	Id: "3324c_2015_1004_06_0229_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0229_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0229_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0229_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0229_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -16776,8 +16776,8 @@ Photo:
 	Id: "3324c_2015_1004_06_0230_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0230_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0230_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0230_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0230_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -16849,8 +16849,8 @@ Photo:
 	Id: "3324c_2015_1004_06_0231_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0231_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0231_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0231_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0231_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -16922,8 +16922,8 @@ Photo:
 	Id: "3324c_2015_1004_06_0232_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0232_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0232_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0232_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0232_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -16995,8 +16995,8 @@ Photo:
 	Id: "3324c_2015_1004_06_0233_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0233_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0233_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0233_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0233_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -17068,8 +17068,8 @@ Photo:
 	Id: "3324c_2015_1004_06_0234_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0234_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0234_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0234_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0234_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -17141,8 +17141,8 @@ Photo:
 	Id: "3324c_2015_1004_06_0235_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0235_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0235_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0235_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0235_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -17214,8 +17214,8 @@ Photo:
 	Id: "3324c_2015_1004_06_0236_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0236_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0236_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0236_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0236_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -17287,8 +17287,8 @@ Photo:
 	Id: "3324c_2015_1004_06_0237_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0237_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0237_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0237_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0237_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -17360,8 +17360,8 @@ Photo:
 	Id: "3324c_2015_1004_06_0238_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0238_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0238_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0238_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0238_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -17433,8 +17433,8 @@ Photo:
 	Id: "3324c_2015_1004_06_0239_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0239_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0239_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0239_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0239_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -17506,8 +17506,8 @@ Photo:
 	Id: "3324c_2015_1004_06_0240_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0240_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0240_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0240_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0240_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -17579,8 +17579,8 @@ Photo:
 	Id: "3324c_2015_1004_06_0241_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0241_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0241_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0241_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0241_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -17652,8 +17652,8 @@ Photo:
 	Id: "3324c_2015_1004_06_0242_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0242_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0242_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0242_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0242_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -17725,8 +17725,8 @@ Photo:
 	Id: "3324c_2015_1004_06_0243_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0243_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0243_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0243_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0243_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -17798,8 +17798,8 @@ Photo:
 	Id: "3324c_2015_1004_06_0244_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0244_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0244_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0244_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0244_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -17871,8 +17871,8 @@ Photo:
 	Id: "3324c_2015_1004_06_0245_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0245_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0245_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0245_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0245_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -17944,8 +17944,8 @@ Photo:
 	Id: "3324c_2015_1004_06_0246_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0246_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0246_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0246_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0246_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -18017,8 +18017,8 @@ Photo:
 	Id: "3324c_2015_1004_06_0247_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0247_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0247_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0247_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0247_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -18090,8 +18090,8 @@ Photo:
 	Id: "3324c_2015_1004_06_0248_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0248_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0248_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0248_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0248_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -18163,8 +18163,8 @@ Photo:
 	Id: "3324c_2015_1004_06_0249_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0249_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0249_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0249_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0249_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -18236,8 +18236,8 @@ Photo:
 	Id: "3324c_2015_1004_06_0250_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0250_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0250_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0250_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0250_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -18309,8 +18309,8 @@ Photo:
 	Id: "3324c_2015_1004_06_0251_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0251_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0251_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0251_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0251_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -18382,8 +18382,8 @@ Photo:
 	Id: "3324c_2015_1004_06_0252_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0252_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0252_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0252_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0252_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -18455,8 +18455,8 @@ Photo:
 	Id: "3324c_2015_1004_06_0253_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0253_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0253_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0253_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0253_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -18528,8 +18528,8 @@ Photo:
 	Id: "3324c_2015_1004_06_0254_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0254_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0254_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0254_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0254_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -18601,8 +18601,8 @@ Photo:
 	Id: "3324c_2015_1004_06_0255_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0255_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0255_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0255_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0255_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -18674,8 +18674,8 @@ Photo:
 	Id: "3324c_2015_1004_06_0256_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0256_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0256_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0256_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0256_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -18747,8 +18747,8 @@ Photo:
 	Id: "3324c_2015_1004_06_0257_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0257_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0257_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0257_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0257_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -18820,8 +18820,8 @@ Photo:
 	Id: "3324c_2015_1004_06_0258_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0258_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0258_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0258_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0258_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -18893,8 +18893,8 @@ Photo:
 	Id: "3324c_2015_1004_06_0259_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0259_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0259_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0259_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0259_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -18966,8 +18966,8 @@ Photo:
 	Id: "3324c_2015_1004_06_0260_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0260_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0260_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0260_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0260_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -19039,8 +19039,8 @@ Photo:
 	Id: "3324c_2015_1004_06_0261_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0261_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0261_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0261_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0261_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -19112,8 +19112,8 @@ Photo:
 	Id: "3324c_2015_1004_06_0262_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0262_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0262_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_06_0262_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_06_0262_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -19185,8 +19185,8 @@ Photo:
 	Id: "3324c_2015_1004_07_0263_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0263_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0263_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0263_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0263_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -19258,8 +19258,8 @@ Photo:
 	Id: "3324c_2015_1004_07_0264_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0264_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0264_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0264_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0264_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -19331,8 +19331,8 @@ Photo:
 	Id: "3324c_2015_1004_07_0265_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0265_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0265_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0265_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0265_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -19404,8 +19404,8 @@ Photo:
 	Id: "3324c_2015_1004_07_0266_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0266_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0266_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0266_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0266_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -19477,8 +19477,8 @@ Photo:
 	Id: "3324c_2015_1004_07_0267_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0267_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0267_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0267_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0267_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -19550,8 +19550,8 @@ Photo:
 	Id: "3324c_2015_1004_07_0268_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0268_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0268_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0268_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0268_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -19623,8 +19623,8 @@ Photo:
 	Id: "3324c_2015_1004_07_0269_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0269_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0269_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0269_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0269_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -19696,8 +19696,8 @@ Photo:
 	Id: "3324c_2015_1004_07_0270_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0270_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0270_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0270_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0270_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -19769,8 +19769,8 @@ Photo:
 	Id: "3324c_2015_1004_07_0271_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0271_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0271_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0271_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0271_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -19842,8 +19842,8 @@ Photo:
 	Id: "3324c_2015_1004_07_0272_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0272_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0272_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0272_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0272_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -19915,8 +19915,8 @@ Photo:
 	Id: "3324c_2015_1004_07_0273_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0273_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0273_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0273_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0273_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -19988,8 +19988,8 @@ Photo:
 	Id: "3324c_2015_1004_07_0274_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0274_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0274_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0274_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0274_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -20061,8 +20061,8 @@ Photo:
 	Id: "3324c_2015_1004_07_0275_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0275_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0275_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0275_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0275_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -20134,8 +20134,8 @@ Photo:
 	Id: "3324c_2015_1004_07_0276_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0276_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0276_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0276_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0276_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -20207,8 +20207,8 @@ Photo:
 	Id: "3324c_2015_1004_07_0277_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0277_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0277_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0277_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0277_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -20280,8 +20280,8 @@ Photo:
 	Id: "3324c_2015_1004_07_0278_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0278_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0278_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0278_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0278_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -20353,8 +20353,8 @@ Photo:
 	Id: "3324c_2015_1004_07_0279_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0279_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0279_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0279_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0279_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -20426,8 +20426,8 @@ Photo:
 	Id: "3324c_2015_1004_07_0280_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0280_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0280_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0280_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0280_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -20499,8 +20499,8 @@ Photo:
 	Id: "3324c_2015_1004_07_0281_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0281_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0281_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0281_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0281_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -20572,8 +20572,8 @@ Photo:
 	Id: "3324c_2015_1004_07_0282_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0282_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0282_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0282_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0282_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -20645,8 +20645,8 @@ Photo:
 	Id: "3324c_2015_1004_07_0283_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0283_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0283_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0283_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0283_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -20718,8 +20718,8 @@ Photo:
 	Id: "3324c_2015_1004_07_0284_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0284_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0284_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0284_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0284_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -20791,8 +20791,8 @@ Photo:
 	Id: "3324c_2015_1004_07_0285_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0285_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0285_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0285_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0285_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -20864,8 +20864,8 @@ Photo:
 	Id: "3324c_2015_1004_07_0286_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0286_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0286_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0286_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0286_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -20937,8 +20937,8 @@ Photo:
 	Id: "3324c_2015_1004_07_0287_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0287_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0287_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0287_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0287_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -21010,8 +21010,8 @@ Photo:
 	Id: "3324c_2015_1004_07_0288_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0288_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0288_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0288_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0288_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -21083,8 +21083,8 @@ Photo:
 	Id: "3324c_2015_1004_07_0289_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0289_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0289_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0289_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0289_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -21156,8 +21156,8 @@ Photo:
 	Id: "3324c_2015_1004_07_0290_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0290_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0290_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0290_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0290_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -21229,8 +21229,8 @@ Photo:
 	Id: "3324c_2015_1004_07_0291_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0291_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0291_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0291_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0291_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -21302,8 +21302,8 @@ Photo:
 	Id: "3324c_2015_1004_07_0292_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0292_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0292_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0292_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0292_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -21375,8 +21375,8 @@ Photo:
 	Id: "3324c_2015_1004_07_0293_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0293_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0293_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0293_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0293_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -21448,8 +21448,8 @@ Photo:
 	Id: "3324c_2015_1004_07_0294_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0294_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0294_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0294_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0294_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -21521,8 +21521,8 @@ Photo:
 	Id: "3324c_2015_1004_07_0295_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0295_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0295_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0295_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0295_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -21594,8 +21594,8 @@ Photo:
 	Id: "3324c_2015_1004_07_0296_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0296_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0296_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0296_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0296_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -21667,8 +21667,8 @@ Photo:
 	Id: "3324c_2015_1004_07_0297_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0297_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0297_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0297_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0297_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -21740,8 +21740,8 @@ Photo:
 	Id: "3324c_2015_1004_07_0298_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0298_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0298_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0298_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0298_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -21813,8 +21813,8 @@ Photo:
 	Id: "3324c_2015_1004_07_0299_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0299_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0299_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0299_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0299_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -21886,8 +21886,8 @@ Photo:
 	Id: "3324c_2015_1004_07_0300_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0300_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0300_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0300_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0300_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -21959,8 +21959,8 @@ Photo:
 	Id: "3324c_2015_1004_07_0301_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0301_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0301_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0301_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0301_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -22032,8 +22032,8 @@ Photo:
 	Id: "3324c_2015_1004_07_0302_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0302_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0302_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0302_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0302_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -22105,8 +22105,8 @@ Photo:
 	Id: "3324c_2015_1004_07_0303_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0303_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0303_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0303_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0303_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -22178,8 +22178,8 @@ Photo:
 	Id: "3324c_2015_1004_07_0304_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0304_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0304_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0304_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0304_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
@@ -22251,8 +22251,8 @@ Photo:
 	Id: "3324c_2015_1004_07_0305_RGBN"
 	AddDate: 10/24/2017
 	UpdateDate: 10/24/2017
-	PhotoFile: "E:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0305_RGBN.tif"
-	OrthoFile: "E:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0305_RGBN.tif"
+	PhotoFile: "V:\Data\NGI\UnRectified\3324C_2015_1004\RGBN\3324c_2015_1004_07_0305_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\o3324c_2015_1004_07_0305_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3324c_2015_L3a_Lo25Wgs84.tif" 1 0
 	DEMAux: -150
 	ElevScale: 1
