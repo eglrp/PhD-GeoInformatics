@@ -1,0 +1,155 @@
+NB see "C:\Data\Development\Projects\PhD GeoInformatics\Code\Results\Budget2018.py" for calcs
+
+- 2018 AWP to do :
+  - Shift times and amounts out according to availabiluty of field data 
+  - Get a price of WV3 image that can be rectified accurately i.e. can a "standard" georectified image be orthorectified with custom GCP's in PCI or is this like Quickbird?
+  
+Imagery Notes:
+  - DG "basic" imagery is needed to use toutin model 
+  - DG basic imagery can only be ordered by scene while "standard" imagery has a min order of 25km2
+  - DG Ortho-ready Standard level 2a (ORS2a) imagery can be orthrectified but only with RPC model incl GCP adjustment
+  - DG "standard" imagery has already been coarsely warped and cannot be further orthorectified!!!
+  - While QB RPC orthorectifcation gives poor accuracy, I have a couple of refernces saying WV RPC orthorectifcation is good (and better than toutin applied to basic imagery)
+  - PCI can do the ORS2A RPC rectification with GCP adjustment
+  - PCI tutorial: "If the user is supplied with OrthoReadyStandard2A level of data with RPCs, then it is recommended to use RPC modeling instead of Rigorous Modeling"
+  
+  - I originally budgeted for ~$5000 for fixed costs incl DJI phantom and 136km2 wv-2 of MP's study area 
+  
+  - to summarise: WV ORS2A is my best bet.  More specifically WV-3 at 30cm is my preference, but I only have a price for archive 50cm from landinfo
+  - Worst case is $32.50/km2 for wv-3 30cm, new collect 
+  - GEF study area is ~30km2
+
+Timing Notes:
+  - Theoretically I should still only be working 2 days/wk while GEF budgeted for 2.5 days/wk in 2018
+  - There could be a 6wk delay for new task imagery 
+  - We need Cos' data which will only be available 3rd or 4th quarter 
+  - I don't won't to work less than budgeted as then I can just lose the budget for those quarters from what I understand, so it is better to spread the budget out and then invoice for any "overtime" / over-budget work done in later quarters.
+  - So we should probably push the times out 
+  - ONly invoice for imagery / fixed costs in last quarter (in case we don't need the imagery and can use the budget for hourly rates)
+  
+2018 Imagery costs
+------------------
+WV-3, new task, 30cm: 30km2 x $32.50/km2 = $960 worst case 
+WV-3, archive, 50cm:  30km2 x $14/km2 = $420 "best" case 
+
+Note that this is still substantially less than the $5000 I originally budgeted for fixed costs, so I don't think I can really ask for more money for images 
+
+2018 Timing
+------------------
+To give me time for papers and Cos for gathering data work something like 1 day/wk for first quarter and 2-2.5 days/week thereafter 
+
+2018 Budget
+-----------
+My total busget is $22807*13.5 = R307894.5 (from what I can tell which is more or less 2 * R120000pa phd bursary + $5000 fixed costs)
+In 2017 I invoiced the following amounts:
+  21 July R24300.00
+  30 Aug  R41700.00
+  12 Dec  R48000.00 (160hrs estimate)
+  
+which leaves me with ~ R307894.5 - (24300+41700+48000) = R193894.5 for 2018
+which converts to 193894.5/300 = 646 hours = 646/7 = 92 days = 92/2 = 46 weeks, which is pretty much the whole year.  
+
+2018 To Do
+-----------
+A) Tasks that don't require GEF GT 
+Invert LUT on NGI ims and apply XCALIB, try larger nhoods etc: 			1 wk 
+Experiment with Xcalib and 2005 GT & new vars: 							1 wk
+Produce stratified map for sampling + assist with methodology planning: 1 wk
+Experiment with veg height from DEM: 									2 wk 
+Aquire and calibrate WV-3 image: 										1 wk
+Field trip for GCP's: 													1 wk
+----------------------------------------------
+Ttl: 																	7 wks
+B) Tasks that require GEF GT 
+Collate, process and check allometric data: 							1 wk
+Do regression study														5 wk 
+Write paper																4 wk 
+----------------------------------------------
+Ttl: 																	10 wks
+
+
+
+
+https://aeon.co/videos/pearls-before-squid-how-a-cephalopod-is-born-in-stunning-microscopy-footage
+
+------------------------------------------------------------------------------------------
+2017 below
+------------------------------------------------------------------------------------------
+
+YR1: 48hrs/mnth for 10 months (Feb to November 2017) @ R300/hr = R 144 000
+YR2: 76hrs/month for 7 months (Mid-Jan to Mid-August 2018) @ R300/hr = R159 600
+Total: R 303 600
+
+They have budgeted on 12 hrs/wk for 2017 & 19 hrs/wk (~2.5 days) for 2018
+They for budgeted for 3 months / 12 weeks full time work in 2017
+and 3.5 months (13 wks) in 2018
+
+
+In terms of time to do something useful:
+Initial study
+- Acquire and calibrate imagery: 2 wks 
+- Do feature and regression study: 6 wks 
+- Field work to delineate sites: 50*3hrs= 150hrs ~ 4 wks
+- Repeat study: 2 wks 
+- Write report: 4 wks 
+--------------------------
+Total - 16 wks = 4 months 
+
+Repeat study with other imagery and other (new?) ground truth
+-----------------------------------------------------
+- Calibration: 2 wks
+- Do feature and regression study: 2 wks 
+- Field work (???): 2 wks 
+--------------------------------------------
+Total: 6 wks
+
+Investigate extension over space and time
+-----------------------------------------
+- 4 wks 
+
+Investigate plant height from drone imagery 
+-----------------------------------------
+- 4 wks 
+
+PhD timelines:
+----------------
+Revise calibration paper: 4 wks
+Revise feat sel paper: 4 wks
+Revise mapping paper: 4 wks
+Write into and concluding chapters: 4 wks 
+----------------------------------------------
+Total: 4 months 
+
+Questions
+---------
+Is that the total budget for me?
+Do I charge for the initial study that is part of my phd - if not I can only begin invoicing late in year / next year?
+So I don't charge for work already completed?  
+
+
+Notes
+--------
+- So my PhD + initial cs time is 8 months - (+ tamboo at 2 months) call it 10 - which takes me to october 
+- I have enough time to finish my phd and do the initial study this year, I dont want to commit to anything else. 
+- I am likely to work in chunks that averages out to 48hrs/month rather than 12 hrs/wk religiously
+- How do I separate out the "free" initial study from the rest of the work?  
+- And what about the work I've done?
+- Do I bill them for time on the initial study?
+
+- If I don't, do I have enough time in the year to do both their work and my study work?  I would need to complete the initial study before starting any other GEF work, so if I don't bill them for that initial study, I can only start other GEF work well into the year - 
+- If I do bill them for the initial study, the timelines are reasonable as we should have the new gt in 2018 to start work on that.  
+- Legally, is this ok? - I am being paid for my study time 12 hrs/wk with no IP blabla agreement?  I see nothing wrong.  It does not even qualify as external work - it is more like funding without any IP obligations.  
+
+------------------------------
+May AWP budget 
+
+R/$ = 13.5 
+12 hrs/wk 
+r300/hr 
+
+$266.57 / wk 
+
+
+5-11 Oct
+
+022 772 2144
