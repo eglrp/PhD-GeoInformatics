@@ -6,6 +6,8 @@ import numpy as np
 import pylab
 from scipy.stats import gaussian_kde
 import collections
+from csv import DictWriter
+from collections import OrderedDict
 
 
 def EvalRecordCs(record, plotArea=(10. ** 2) / (100. ** 2)  ):   # plotArea in ha
@@ -48,7 +50,7 @@ for sheetName in sheetNames:
         for r in ws[9:ws.max_row]:
             if r[colStart].value is None:
                 break
-            record = {}
+            record = OrderedDict()
             record['diameter'] = r[colStart].value
             record['densityState'] = r[colStart + 1].value
             if record['densityState'] == 'D':
@@ -75,6 +77,15 @@ for sheetName in sheetNames:
             plots[plotName] = plot
         print ''
 wb = None
+
+# make csv files of results
+for plotName in plots.keys():
+    plot = plots[plotName]
+    outFileName = 'C:\Data\Development\Projects\PhD GeoInformatics\Code\Results\Baviaans2017FieldTrialAnalysis\%s - Deadwood.csv' % (plotName)
+    with open(outFileName, 'wb') as outfile:
+        writer = DictWriter(outfile, plot[0].keys())
+        writer.writeheader()
+        writer.writerows(plot)
 
 # vars = [model['vars'] for model in allometricModels.values()]
 # print np.unique(vars)

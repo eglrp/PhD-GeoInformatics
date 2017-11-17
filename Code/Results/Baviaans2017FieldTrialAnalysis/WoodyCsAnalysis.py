@@ -9,7 +9,8 @@ import numpy as np
 import pylab
 from scipy.stats import gaussian_kde
 import collections
-
+from csv import DictWriter
+from collections import OrderedDict
 fontSize = 16
 
 def EvalRecordCs(allometricModels, record):
@@ -122,7 +123,7 @@ for ws in wb:
     for r in ws[6:ws.max_row]:
         if r[1].value is None:
             break
-        record = {}
+        record = OrderedDict()
         species = str(r[1].value).strip()
         # hack for unknown plants
         if species == 'A. ferox' or species.__contains__('Aloe'):
@@ -133,7 +134,7 @@ for ws in wb:
         if species.__contains__('Crassula') or species.__contains__('horns'):
             species = 'C. ovata'
 
-        record['species'] = species
+        record['species'] = str(species).strip()
         record['canopyWidth'] = r[2].value
         record['canopyLength'] = r[3].value
         record['height'] = r[4].value
@@ -142,6 +143,12 @@ for ws in wb:
         record['yc'] = yc
         plot.append(record)
     plots[ws.title] = plot
+    outFileName = 'C:\Data\Development\Projects\PhD GeoInformatics\Code\Results\Baviaans2017FieldTrialAnalysis\%s - Woody.csv' % (ws.title)
+    with open(outFileName,'wb') as outfile:
+        writer = DictWriter(outfile, plot[0].keys())
+        writer.writeheader()
+        writer.writerows(plot)
+
 wb = None
 
 # vars = [model['vars'] for model in allometricModels.values()]

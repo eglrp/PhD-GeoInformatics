@@ -221,10 +221,10 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	int srcYSize = srcDataSet->GetRasterYSize();
 	GDALClose(srcDataSet);
 
-	cout << "------------------------------------------------------------" << endl;
-	cout << "Processing: " << srcFileName << endl << endl;
+	std::cout << "------------------------------------------------------------" << endl;
+	std::cout << "Processing: " << srcFileName << endl << endl;
 #if SEAMLINE_FIX
-	cout << "Extracting mask from: " << srcFileName << endl << endl;
+	std::cout << "Extracting mask from: " << srcFileName << endl << endl;
 #if XCALIB_DEBUG
 	string srcMaskFileName = srcFileName.substr(0, srcFileName.length() - 4) + "_MASK.tif"; //make separate files for each source file
 #else
@@ -237,7 +237,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	if (res != 0)
 		throw string("Could not extract mask " + srcFileName);
 
-	cout << "Downsampling mask: " << srcMaskFileName << endl << endl;
+	std::cout << "Downsampling mask: " << srcMaskFileName << endl << endl;
 
 #if XCALIB_DEBUG
 	string srcMaskDsFileName = srcMaskFileName.substr(0, srcMaskFileName.length() - 4) + "_DS.tif"; //make separate files for each source file
@@ -254,7 +254,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 
 #endif //SEAMLINE_FIX
 
-	cout << "Downsampling: " << srcFileName << endl << endl;
+	std::cout << "Downsampling: " << srcFileName << endl << endl;
 
 #if XCALIB_DEBUG
 	string srcDsFileName = srcFileName.substr(0, srcFileName.length() - 4) + "_DS.tif"; //make separate files for each source file
@@ -307,7 +307,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	string gainDsFileName = string(CPLGetCurrentDir()) + "\\GainDs.tif"; //reuse the same file
 #endif
 
-	cout << "Calculating calibration gains (" << gainDsFileName << ")" << endl << endl;
+	std::cout << "Calculating calibration gains (" << gainDsFileName << ")" << endl << endl;
 
 	GDALDataset* gainDsDataSet = srcDsDataSet->GetDriver()->Create(gainDsFileName.c_str(), srcDsDataSet->GetRasterXSize(), 
 		srcDsDataSet->GetRasterYSize(), 4, GDALDataType::GDT_Float64, NULL);
@@ -449,7 +449,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 #else
 	string gainUsFileName = string(CPLGetCurrentDir()) + "\\GainUs.tif";
 #endif
-	cout << "Interpolating calibration gains (" << gainUsFileName << ")" << endl << endl;
+	std::cout << "Interpolating calibration gains (" << gainUsFileName << ")" << endl << endl;
 
 #if BIGTIFF
 	sprintf_s(gdalString, MAX_PATH, "gdalwarp~-multi~-wo~NUM_THREADS=ALL_CPUS~-co~BIGTIFF=YES~-multi~-wo~NUM_THREADS=ALL_CPUS~-overwrite~-srcnodata~0~-dstnodata~0~-wm~2048~-r~cubicspline~-tr~%f~%f~%s~%s~",
@@ -469,7 +469,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	//-------------------------------------------------------------------------------------------------
 
 	string calibFileName = srcFileName.substr(0, srcFileName.length() - 4) + "_XCALIB.tif";
-	cout << "Applying gains (" << calibFileName << ")" << endl << endl;
+	std::cout << "Applying gains (" << calibFileName << ")" << endl << endl;
 
 	srcDataSet = (GDALDataset*)GDALOpen(srcFileName.c_str(), GDALAccess::GA_ReadOnly);
 	if (srcDataSet == NULL)
@@ -522,7 +522,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 #else
 	string erodeMaskUsFileName = string(CPLGetCurrentDir()) + "\\ErodeMaskUs.tif";
 #endif
-	cout << "Upsampling eroded mask (" << erodeMaskUsFileName << ")" << endl << endl;
+	std::cout << "Upsampling eroded mask (" << erodeMaskUsFileName << ")" << endl << endl;
 #if BIGTIFF
 	sprintf_s(gdalString, MAX_PATH, "gdalwarp~-multi~-wo~NUM_THREADS=ALL_CPUS~-co~BIGTIFF=YES~-multi~-wo~NUM_THREADS=ALL_CPUS~-overwrite~-srcnodata~0~-dstnodata~None~-wm~2048~-r~bilinear~-tr~%f~%f~%s~%s~",
 		fabs(srcGeoTransform[1]), fabs(srcGeoTransform[5]), erodeMaskDsFileName.c_str(), erodeMaskUsFileName.c_str());
@@ -544,6 +544,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	if (erodeMaskDataSet == NULL)
 	throw string("Could not open: " + erodeMaskUsFileName);*/
 #endif
+	//TO DO: consider rewriting to make sure it is by block
 
 	//process by row (usually same size as block so should be fast)
 	for (int j = 0; j < srcDataSet->GetRasterYSize(); j++)
@@ -572,11 +573,11 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 			for (int i = 0; i < srcDataSet->GetRasterXSize(); i++)
 			{
 #if SEAMLINE_FIX
-				if (erodeMaskSubData(0, i, 0) > (unsigned char)0.95*255.0)
-					calibData(0, i, k) = gainSubData(0, i, k) * srcData(0, i, k);
+				if (erodeMaskSubData(0, i, 0) <= (unsigned char)0.95*255.0)
+					calibData(0, i, k) = 0;
 				else
 #endif
-					calibData(0, i, k) = 0;
+					calibData(0, i, k) = gainSubData(0, i, k) * srcData(0, i, k);
 			}
 		}
 		err = calibDataSet->RasterIO(GDALRWFlag::GF_Write, (int)0, (int)j, srcDataSet->GetRasterXSize(), 1,
@@ -589,11 +590,11 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 		if ((100*j) / srcDataSet->GetRasterYSize() > prog)
 		{
 			prog = (100*j) / srcDataSet->GetRasterYSize();
-			cout << ".";
+			std::cout << ".";
 		}
 			
 	}
-	cout << endl << endl;
+	std::cout << endl << endl;
 		
 	for (int k = 0; k < calibDataSet->GetRasterCount(); k++)
 	{
@@ -616,12 +617,12 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 //-------------------------------------------------------------------------------------------------
 void Usage()
 {
-	cout << endl << "Usage: CrossCalibration.exe [-o] [-w width height] [ref file name] [src file name]" << endl << endl;
-	cout << "Source and reference files must be tiffs in the same co-ordinates and with matching bands. Reference image must contain the source area." << endl << endl;
-	cout << "[ref file name]: name of a calibrated reference file" << endl;
-	cout << "[src file name]: name of the file to be calibrated" << endl;
-	cout << "-o: overwrite calibrated file if it exists otherwise exit (optional - default off)" << endl;
-	cout << "-w: specify the width and height of the sliding window in reference pixels (optional - default 1 1)" << endl;
+	std::cout << endl << "Usage: CrossCalibration.exe [-o] [-w width height] [ref file name] [src file name]" << endl << endl;
+	std::cout << "Source and reference files must be tiffs in the same co-ordinates and with matching bands. Reference image must contain the source area." << endl << endl;
+	std::cout << "[ref file name]: name of a calibrated reference file" << endl;
+	std::cout << "[src file name]: name of the file to be calibrated" << endl;
+	std::cout << "-o: overwrite calibrated file if it exists otherwise exit (optional - default off)" << endl;
+	std::cout << "-w: specify the width and height of the sliding window in reference pixels (optional - default 1 1)" << endl;
 	exit(-1);
 }
 
@@ -674,7 +675,7 @@ int main(int argc, char* argv[])
 		//strcpy(tmp, calibFileName.c_str());
 		if (CPLCheckForFile((char*)calibFileName.c_str(), NULL) == 1)
 		{
-			cout << calibFileName  <<  " exists.  Exiting" << endl;
+			std::cout << calibFileName  <<  " exists.  Exiting" << endl;
 			return -1;
 		}
 	}
