@@ -5,7 +5,31 @@
   <evaluateDefaultValues active="0"/>
   <layer-tree-group expanded="1" checked="Qt::Checked" name="">
     <customproperties/>
-    <layer-tree-group expanded="1" checked="Qt::Checked" name="group1">
+    <layer-tree-group expanded="1" checked="Qt::Checked" name="XCALIB DEBUG">
+      <customproperties/>
+      <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="ErodeMaskUs20171117180600793" source="C:/Data/Development/Projects/PhD GeoInformatics/Code/Results/NGI Calibration/ErodeMaskUs.tif" name="ErodeMaskUs">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="SourceMaskDs20171117180601254" source="C:/Data/Development/Projects/PhD GeoInformatics/Code/Results/NGI Calibration/SourceMaskDs.tif" name="SourceMaskDs">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="SourceMask20171117180601185" source="C:/Data/Development/Projects/PhD GeoInformatics/Code/Results/NGI Calibration/SourceMask.tif" name="SourceMask">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="SourceDs20171117180601177" source="C:/Data/Development/Projects/PhD GeoInformatics/Code/Results/NGI Calibration/SourceDs.tif" name="SourceDs">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="GainUs20171117180600896" source="C:/Data/Development/Projects/PhD GeoInformatics/Code/Results/NGI Calibration/GainUs.tif" name="GainUs">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="GainDs20171117180600881" source="C:/Data/Development/Projects/PhD GeoInformatics/Code/Results/NGI Calibration/GainDs.tif" name="GainDs">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="ErodeMaskDs20171117180600763" source="C:/Data/Development/Projects/PhD GeoInformatics/Code/Results/NGI Calibration/ErodeMaskDs.tif" name="ErodeMaskDs">
+        <customproperties/>
+      </layer-tree-layer>
+    </layer-tree-group>
+    <layer-tree-group expanded="0" checked="Qt::Checked" name="NGI 3324C 2015 XCALIB">
       <customproperties/>
       <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="o3324c_2015_1004_07_0305_RGBN_XCALIB20171028111855885" source="V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\XCALIB\o3324c_2015_1004_07_0305_RGBN_XCALIB.tif" name="o3324c_2015_1004_07_0305_RGBN_XCALIB">
         <customproperties/>
@@ -922,8 +946,35 @@
       <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="o3324c_2015_1004_01_0001_RGBN_XCALIB20171028111826949" source="V:\Data\NGI\Rectified\3324C_2015_1004\RGBN\XCALIB\o3324c_2015_1004_01_0001_RGBN_XCALIB.tif" name="o3324c_2015_1004_01_0001_RGBN_XCALIB">
         <customproperties/>
       </layer-tree-layer>
+      <layer-tree-group expanded="1" checked="Qt::Checked" name="sub-group1">
+        <customproperties/>
+      </layer-tree-group>
+      <layer-tree-group expanded="1" checked="Qt::Checked" name="sub-group2">
+        <customproperties/>
+      </layer-tree-group>
+      <layer-tree-group expanded="1" checked="Qt::Checked" name="sub-group3">
+        <customproperties/>
+      </layer-tree-group>
+      <layer-tree-group expanded="1" checked="Qt::Checked" name="sub-group4">
+        <customproperties/>
+      </layer-tree-group>
+      <layer-tree-group expanded="1" checked="Qt::Checked" name="sub-group5">
+        <customproperties/>
+      </layer-tree-group>
+      <layer-tree-group expanded="1" checked="Qt::Checked" name="sub-group6">
+        <customproperties/>
+      </layer-tree-group>
+      <layer-tree-group expanded="1" checked="Qt::Checked" name="sub-group7">
+        <customproperties/>
+      </layer-tree-group>
+      <layer-tree-group expanded="1" checked="Qt::Checked" name="sub-group8">
+        <customproperties/>
+      </layer-tree-group>
+      <layer-tree-group expanded="1" checked="Qt::Checked" name="sub-group9">
+        <customproperties/>
+      </layer-tree-group>
     </layer-tree-group>
-    <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="MCD43A4_A2015241_h20v12_005_2015260133130_NgiBandOrder_Lo25Wgs8420171028095841144" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/MODIS/MCD43A4.A2015241.h20v12.005.2015260133130/MCD43A4.A2015241.h20v12.005.2015260133130.NgiBandOrder.Lo25Wgs84.tif" name="MCD43A4.A2015241.h20v12.005.2015260133130.NgiBandOrder.Lo25Wgs84">
+    <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="MCD43A4_3324C_Mosaic_NgiBandOrder_Lo25Wgs8420171117180349306" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/MODIS/MCD43A4.3324C_Mosaic.NgiBandOrder.Lo25Wgs84.tif" name="MCD43A4.3324C_Mosaic.NgiBandOrder.Lo25Wgs84">
       <customproperties/>
     </layer-tree-layer>
   </layer-tree-group>
@@ -931,10 +982,10 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>-108757.53045287515851669</xmin>
-      <ymin>-3725643.93894926551729441</ymin>
-      <xmax>-53193.65968543387134559</xmax>
-      <ymax>-3692312.47078601364046335</ymax>
+      <xmin>-98112.5</xmin>
+      <ymin>-3740175</ymin>
+      <xmax>-93387.5</xmax>
+      <ymax>-3732825</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>0</projections>
@@ -955,7 +1006,6 @@
   </mapcanvas>
   <layer-tree-canvas>
     <custom-order enabled="0">
-      <item>MCD43A4_A2015241_h20v12_005_2015260133130_NgiBandOrder_Lo25Wgs8420171028095841144</item>
       <item>o3324c_2015_1004_01_0001_RGBN_XCALIB20171028111826949</item>
       <item>o3324c_2015_1004_01_0002_RGBN_XCALIB20171028111826995</item>
       <item>o3324c_2015_1004_01_0003_RGBN_XCALIB20171028111827010</item>
@@ -1261,10 +1311,55 @@
       <item>o3324c_2015_1004_07_0303_RGBN_XCALIB20171028111855856</item>
       <item>o3324c_2015_1004_07_0304_RGBN_XCALIB20171028111855870</item>
       <item>o3324c_2015_1004_07_0305_RGBN_XCALIB20171028111855885</item>
+      <item>MCD43A4_3324C_Mosaic_NgiBandOrder_Lo25Wgs8420171117180349306</item>
+      <item>ErodeMaskDs20171117180600763</item>
+      <item>ErodeMaskUs20171117180600793</item>
+      <item>GainDs20171117180600881</item>
+      <item>GainUs20171117180600896</item>
+      <item>SourceDs20171117180601177</item>
+      <item>SourceMask20171117180601185</item>
+      <item>SourceMaskDs20171117180601254</item>
     </custom-order>
   </layer-tree-canvas>
   <legend updateDrawingOrder="true">
-    <legendgroup open="true" checked="Qt::Checked" name="group1">
+    <legendgroup open="true" checked="Qt::Checked" name="XCALIB DEBUG">
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="ErodeMaskUs" showFeatureCount="0">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" layerid="ErodeMaskUs20171117180600793" visible="1"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="SourceMaskDs" showFeatureCount="0">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" layerid="SourceMaskDs20171117180601254" visible="1"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="SourceMask" showFeatureCount="0">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" layerid="SourceMask20171117180601185" visible="1"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="SourceDs" showFeatureCount="0">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" layerid="SourceDs20171117180601177" visible="1"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="GainUs" showFeatureCount="0">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" layerid="GainUs20171117180600896" visible="1"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="GainDs" showFeatureCount="0">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" layerid="GainDs20171117180600881" visible="1"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="ErodeMaskDs" showFeatureCount="0">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" layerid="ErodeMaskDs20171117180600763" visible="1"/>
+        </filegroup>
+      </legendlayer>
+    </legendgroup>
+    <legendgroup open="false" checked="Qt::Checked" name="NGI 3324C 2015 XCALIB">
       <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="o3324c_2015_1004_07_0305_RGBN_XCALIB" showFeatureCount="0">
         <filegroup open="true" hidden="false">
           <legendlayerfile isInOverview="0" layerid="o3324c_2015_1004_07_0305_RGBN_XCALIB20171028111855885" visible="1"/>
@@ -2790,27 +2885,36 @@
           <legendlayerfile isInOverview="0" layerid="o3324c_2015_1004_01_0001_RGBN_XCALIB20171028111826949" visible="1"/>
         </filegroup>
       </legendlayer>
+      <legendgroup open="true" checked="Qt::Checked" name="sub-group1"/>
+      <legendgroup open="true" checked="Qt::Checked" name="sub-group2"/>
+      <legendgroup open="true" checked="Qt::Checked" name="sub-group3"/>
+      <legendgroup open="true" checked="Qt::Checked" name="sub-group4"/>
+      <legendgroup open="true" checked="Qt::Checked" name="sub-group5"/>
+      <legendgroup open="true" checked="Qt::Checked" name="sub-group6"/>
+      <legendgroup open="true" checked="Qt::Checked" name="sub-group7"/>
+      <legendgroup open="true" checked="Qt::Checked" name="sub-group8"/>
+      <legendgroup open="true" checked="Qt::Checked" name="sub-group9"/>
     </legendgroup>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="MCD43A4.A2015241.h20v12.005.2015260133130.NgiBandOrder.Lo25Wgs84" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="MCD43A4.3324C_Mosaic.NgiBandOrder.Lo25Wgs84" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="MCD43A4_A2015241_h20v12_005_2015260133130_NgiBandOrder_Lo25Wgs8420171028095841144" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="MCD43A4_3324C_Mosaic_NgiBandOrder_Lo25Wgs8420171117180349306" visible="1"/>
       </filegroup>
     </legendlayer>
   </legend>
   <projectlayers>
-    <maplayer minimumScale="inf" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+    <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
       <extent>
-        <xmin>-183918.89811907181865536</xmin>
-        <ymin>-4526629.01395149528980255</ymin>
-        <xmax>1211641.03808068879880011</xmax>
-        <ymax>-3320113.39764177659526467</ymax>
+        <xmin>-98000</xmin>
+        <ymin>-3740000</ymin>
+        <xmax>-93500</xmax>
+        <ymax>-3733000</ymax>
       </extent>
-      <id>MCD43A4_A2015241_h20v12_005_2015260133130_NgiBandOrder_Lo25Wgs8420171028095841144</id>
-      <datasource>D:/Data/Development/Projects/PhD GeoInformatics/Data/MODIS/MCD43A4.A2015241.h20v12.005.2015260133130/MCD43A4.A2015241.h20v12.005.2015260133130.NgiBandOrder.Lo25Wgs84.tif</datasource>
+      <id>ErodeMaskDs20171117180600763</id>
+      <datasource>../../Code/Results/NGI Calibration/ErodeMaskDs.tif</datasource>
       <keywordList>
         <value></value>
       </keywordList>
-      <layername>MCD43A4.A2015241.h20v12.005.2015260133130.NgiBandOrder.Lo25Wgs84</layername>
+      <layername>ErodeMaskDs</layername>
       <srs>
         <spatialrefsys>
           <proj4>+proj=tmerc +lat_0=0 +lon_0=25 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
@@ -2824,7 +2928,232 @@
         </spatialrefsys>
       </srs>
       <customproperties>
-        <property key="embeddedWidgets/count" value="0"/>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="0"/>
+      </noData>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer gradient="BlackToWhite" opacity="1" alphaBand="-1" type="singlebandgray" grayBand="1">
+          <rasterTransparency/>
+          <contrastEnhancement>
+            <minValue>0</minValue>
+            <maxValue>255</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </contrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+      <extent>
+        <xmin>-98000</xmin>
+        <ymin>-3740000</ymin>
+        <xmax>-93500</xmax>
+        <ymax>-3733000</ymax>
+      </extent>
+      <id>ErodeMaskUs20171117180600793</id>
+      <datasource>../../Code/Results/NGI Calibration/ErodeMaskUs.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>ErodeMaskUs</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=25 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100000</srsid>
+          <srid>0</srid>
+          <authid>USER:100000</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=25 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="0"/>
+      </noData>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer gradient="BlackToWhite" opacity="1" alphaBand="-1" type="singlebandgray" grayBand="1">
+          <rasterTransparency/>
+          <contrastEnhancement>
+            <minValue>0</minValue>
+            <maxValue>255</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </contrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+      <extent>
+        <xmin>-98000</xmin>
+        <ymin>-3740000</ymin>
+        <xmax>-93500</xmax>
+        <ymax>-3733000</ymax>
+      </extent>
+      <id>GainDs20171117180600881</id>
+      <datasource>../../Code/Results/NGI Calibration/GainDs.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>GainDs</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=25 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100000</srsid>
+          <srid>0</srid>
+          <authid>USER:100000</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=25 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="1"/>
+        <noDataList bandNo="2" useSrcNoData="1"/>
+        <noDataList bandNo="3" useSrcNoData="1"/>
+        <noDataList bandNo="4" useSrcNoData="1"/>
+      </noData>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer opacity="1" alphaBand="-1" blueBand="3" greenBand="2" type="multibandcolor" redBand="1">
+          <rasterTransparency/>
+          <redContrastEnhancement>
+            <minValue>0.311282754235831</minValue>
+            <maxValue>0.481650045148526</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>0.327319740872745</minValue>
+            <maxValue>0.482271802055167</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>0.160912301049257</minValue>
+            <maxValue>0.261474671511243</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+      <extent>
+        <xmin>-98000</xmin>
+        <ymin>-3740000</ymin>
+        <xmax>-93500</xmax>
+        <ymax>-3733000</ymax>
+      </extent>
+      <id>GainUs20171117180600896</id>
+      <datasource>../../Code/Results/NGI Calibration/GainUs.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>GainUs</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=25 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100000</srsid>
+          <srid>0</srid>
+          <authid>USER:100000</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=25 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="1"/>
+        <noDataList bandNo="2" useSrcNoData="1"/>
+        <noDataList bandNo="3" useSrcNoData="1"/>
+        <noDataList bandNo="4" useSrcNoData="1"/>
+      </noData>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer opacity="1" alphaBand="-1" blueBand="3" greenBand="2" type="multibandcolor" redBand="1">
+          <rasterTransparency/>
+          <redContrastEnhancement>
+            <minValue>0.314872963105868</minValue>
+            <maxValue>0.468361110609998</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>0.334977816311877</minValue>
+            <maxValue>0.474403191477173</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>0.159448507112652</minValue>
+            <maxValue>0.257124097665889</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer minimumScale="inf" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+      <extent>
+        <xmin>-1304500</xmin>
+        <ymin>-4527000</ymin>
+        <xmax>1211500</xmax>
+        <ymax>-3320000</ymax>
+      </extent>
+      <id>MCD43A4_3324C_Mosaic_NgiBandOrder_Lo25Wgs8420171117180349306</id>
+      <datasource>D:/Data/Development/Projects/PhD GeoInformatics/Data/MODIS/MCD43A4.3324C_Mosaic.NgiBandOrder.Lo25Wgs84.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>MCD43A4.3324C_Mosaic.NgiBandOrder.Lo25Wgs84</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=25 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100000</srsid>
+          <srid>0</srid>
+          <authid>USER:100000</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=25 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <customproperties>
         <property key="identify/format" value="Value"/>
       </customproperties>
       <provider>gdal</provider>
@@ -2855,6 +3184,169 @@
             <maxValue>1000</maxValue>
             <algorithm>StretchToMinimumMaximum</algorithm>
           </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+      <extent>
+        <xmin>-98000</xmin>
+        <ymin>-3740000</ymin>
+        <xmax>-93500</xmax>
+        <ymax>-3733000</ymax>
+      </extent>
+      <id>SourceDs20171117180601177</id>
+      <datasource>../../Code/Results/NGI Calibration/SourceDs.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>SourceDs</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=25 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100000</srsid>
+          <srid>0</srid>
+          <authid>USER:100000</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=25 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="1"/>
+        <noDataList bandNo="2" useSrcNoData="1"/>
+        <noDataList bandNo="3" useSrcNoData="1"/>
+        <noDataList bandNo="4" useSrcNoData="1"/>
+      </noData>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer opacity="1" alphaBand="-1" blueBand="3" greenBand="2" type="multibandcolor" redBand="1">
+          <rasterTransparency/>
+          <redContrastEnhancement>
+            <minValue>925</minValue>
+            <maxValue>1786</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>929</minValue>
+            <maxValue>1770</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>1022</minValue>
+            <maxValue>1717</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+      <extent>
+        <xmin>-97577</xmin>
+        <ymin>-3739577</ymin>
+        <xmax>-93879.5</xmax>
+        <ymax>-3733255</ymax>
+      </extent>
+      <id>SourceMask20171117180601185</id>
+      <datasource>../../Code/Results/NGI Calibration/SourceMask.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>SourceMask</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=25 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100000</srsid>
+          <srid>0</srid>
+          <authid>USER:100000</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=25 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="0"/>
+      </noData>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer gradient="BlackToWhite" opacity="1" alphaBand="-1" type="singlebandgray" grayBand="1">
+          <rasterTransparency/>
+          <contrastEnhancement>
+            <minValue>0</minValue>
+            <maxValue>254.745</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </contrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+      <extent>
+        <xmin>-98000</xmin>
+        <ymin>-3740000</ymin>
+        <xmax>-93500</xmax>
+        <ymax>-3733000</ymax>
+      </extent>
+      <id>SourceMaskDs20171117180601254</id>
+      <datasource>../../Code/Results/NGI Calibration/SourceMaskDs.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>SourceMaskDs</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=25 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100000</srsid>
+          <srid>0</srid>
+          <authid>USER:100000</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=25 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="0"/>
+      </noData>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer gradient="BlackToWhite" opacity="1" alphaBand="-1" type="singlebandgray" grayBand="1">
+          <rasterTransparency/>
+          <contrastEnhancement>
+            <minValue>0</minValue>
+            <maxValue>252.97619047619045</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </contrastEnhancement>
         </rasterrenderer>
         <brightnesscontrast brightness="0" contrast="0"/>
         <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
