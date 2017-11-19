@@ -46,7 +46,8 @@ using namespace std;
 
 #define XCALIB_DEBUG 0
 #define MAX_PATH 1024
-#define SEAMLINE_FIX 1
+#define SEAMLINE_COVERAGE_FIX 1					// excludes partially covered ref pixels
+#define SEAMLINE_EXTRAP_FIX 0					// erodes away one boundary pixel to exclude extrapolated gains, SEAMLINE_COVERAGE_FIX must be 1
 #define DO_COMPRESS_OUTPUT 1
 #define BIGTIFF 1
 
@@ -223,7 +224,8 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 
 	std::cout << "------------------------------------------------------------" << endl;
 	std::cout << "Processing: " << srcFileName << endl << endl;
-#if SEAMLINE_FIX
+#if SEAMLINE_COVERAGE_FIX   // TO DO: somehow change seamline fix to improve processing Eg only downsample/upsample fully covered ref areas to reduce processing by figuring 
+					// out the full coverage mask, then update nodata in source im with this.  OR: avoid upsampling the DS mask - just make one rather than being lazy 
 	std::cout << "Extracting mask from: " << srcFileName << endl << endl;
 #if XCALIB_DEBUG
 	string srcMaskFileName = srcFileName.substr(0, srcFileName.length() - 4) + "_MASK.tif"; //make separate files for each source file
@@ -252,7 +254,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	if (res != 0)
 		throw string("Could not warp " + srcMaskFileName);
 
-#endif //SEAMLINE_FIX
+#endif //SEAMLINE_COVERAGE_FIX
 
 	std::cout << "Downsampling: " << srcFileName << endl << endl;
 
@@ -332,7 +334,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	if (err != CPLErr::CE_None)
 		throw string("refDataSet->RasterIO failure");
 
-#if SEAMLINE_FIX
+#if SEAMLINE_COVERAGE_FIX && SEAMLINE_EXTRAP_FIX
 	//read the ds mask
 	GDALDataset* srcMaskDsDataSet = (GDALDataset*)GDALOpen(srcMaskDsFileName.c_str(), GDALAccess::GA_ReadOnly);
 	if (srcMaskDsDataSet == NULL)
@@ -345,6 +347,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 
 	if (err != CPLErr::CE_None)
 		throw string("srcMaskDsData->RasterIO failure");
+
 	//make eroded mask for application to upsampled images
 	//string winTitle = "mask";
 	cv::Mat cvMask(srcMaskDsDataSet->GetRasterYSize(), srcMaskDsDataSet->GetRasterXSize(), CV_64FC1, (void*)srcMaskDsData.Buf());
@@ -386,8 +389,9 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	GDALClose(erodeMaskDsDataSet);
 	GDALClose(srcMaskDsDataSet);
 
+#elif SEAMLINE_COVERAGE_FIX
+	string erodeMaskDsFileName = srcMaskDsFileName;  // don't do erosion
 #endif //#if SEAMLINE_FIX
-
 
 	//gainDsDataSet->GetRasterBand(1)->Mas
 
@@ -480,7 +484,12 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 		throw string("Could not open: " + gainUsFileName);
 	char **papszOptions = NULL;
 #if DO_COMPRESS_OUTPUT
+	// make block size same as gain?  to speed writing?
 	papszOptions = CSLSetNameValue(papszOptions, "TILED", "YES");
+	/*int xBlockSize = 0, yBlockSize = 0;
+	gainDataSet->GetRasterBand(1)->GetBlockSize(&xBlockSize, &yBlockSize);
+	papszOptions = CSLSetNameValue(papszOptions, "BLOCKXSIZE", std::to_string(xBlockSize).c_str());
+	papszOptions = CSLSetNameValue(papszOptions, "BLOCKYSIZE", std::to_string(yBlockSize).c_str());*/
 	papszOptions = CSLSetNameValue(papszOptions, "COMPRESS", "DEFLATE");
 	papszOptions = CSLSetNameValue(papszOptions, "PREDICTOR", "2");
 #endif
@@ -515,7 +524,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	Buf3d<double> calibData(1, srcDataSet->GetRasterXSize(), srcDataSet->GetRasterCount());
 	int prog = 0;
 
-#if SEAMLINE_FIX
+#if SEAMLINE_COVERAGE_FIX
 	//upsample eroded mask to source resolution
 #if XCALIB_DEBUG
 	string erodeMaskUsFileName = srcMaskFileName.substr(0, srcFileName.length() - 4) + "_MASK_US_ERODE.tif";
@@ -544,7 +553,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	if (erodeMaskDataSet == NULL)
 	throw string("Could not open: " + erodeMaskUsFileName);*/
 #endif
-	//TO DO: consider rewriting to make sure it is by block
+	//TO DO: consider rewriting to make sure it is by block (xcalib block size is 256x256)
 
 	//process by row (usually same size as block so should be fast)
 	for (int j = 0; j < srcDataSet->GetRasterYSize(); j++)
@@ -561,7 +570,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 		if (err != CPLErr::CE_None)
 			throw string("srcDataSet->RasterIO failure");
 
-#if SEAMLINE_FIX
+#if SEAMLINE_COVERAGE_FIX
 		err = erodeMaskDataSet->RasterIO(GDALRWFlag::GF_Read, (int)gainUlI, (int)gainUlJ + j, srcDataSet->GetRasterXSize(), 1,
 			erodeMaskSubData.Buf(), srcDataSet->GetRasterXSize(), 1, GDALDataType::GDT_Byte,
 			1, NULL, 0, 0, 0); //nLineSpace is wrong I think but not used (?)
@@ -572,7 +581,9 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 		{
 			for (int i = 0; i < srcDataSet->GetRasterXSize(); i++)
 			{
-#if SEAMLINE_FIX
+				//TO DO: will threading help speed things up here?  Eg sim read and write and or mult threads for applying gains
+				//TO DO: rather just set a nodata mask post proc than read and check the mask for each pixel
+#if SEAMLINE_COVERAGE_FIX
 				if (erodeMaskSubData(0, i, 0) <= (unsigned char)0.95*255.0)
 					calibData(0, i, k) = 0;
 				else

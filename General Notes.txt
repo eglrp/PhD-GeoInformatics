@@ -483,8 +483,7 @@ Cross Calibration
 
 - 2015:
 - When downsampling, modis res pixels that are not entirely covered by dmc pixels are set to nodata.  This is what I thought at first BUT it is modis res pixels that are mostly covered that are retained not entirely covered modis res pixels i.e. only modis res pixels that are mostly uncovered are set .  This results in gains being found for invalid/partial downsampled pixels then usampled and applied to full res pixels.  XCalib pixels in these zones will be "invalid" and will tend to create seamlines / discontinuities between adjacent images.
-- In general, when gains are upsampled, all boundary zone upsampled pixels will contain extrap vals and will thus be suspect and should be set to nodata.  But only after they are upsampled! If before then we still have the same
-problem.
+- In general, when gains are upsampled, all boundary zone upsampled pixels will contain extrap vals and will thus be suspect and should be set to nodata.  But only after they are upsampled! If before then we still have the same problem.
 - The code assumes that by ommitting 1 border ds pixel, we make sure that only full covered pixels are used but this is not the case necessarily.  If the image is quite diagonally oriented there could be >1 border pixel not fully covered.  Also
 - So the algorithm should go something like: 
    - Downsample only fully covered pixels, the rest are set to nodata.  To find only fully covered pixels: Perhaps we can make a polygon of the nodata border then use the -cutline option with gdalwarp - problem is gadal_polygonize is python.  Also we could make a nodata mask but change the nodata value to be not nodata so that it is included in the interpolation.  Then downsample the mask using averaging and only use pixels use average shows they were completely covered.  
