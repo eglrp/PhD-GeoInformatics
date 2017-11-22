@@ -1225,6 +1225,25 @@ Combining NGI RGB and NIR
     transform = osr.CoordinateTransformation(cs_gt_spatial_ref, osr.SpatialReference(ds.GetProjection()))
 
 
+Importing shapefile to DGPS for Navigation
+-------------------------------------------
+How to import a shapefile
+- Copy the shapefile(s) to a dir on SD Card
+- Put SD Card in DGPS
+- Start GNSS
+- Select "Data" from tl combobox
+- Select "File Manager" from combobox under TL	
+- At "Choose File Type:", select "Background Files"
+- At "Location:", select "Storage Card"
+- Click "Options" and select "Read Background from shape" 
+  - Give it a name and select the appropriate folder on the card, 
+  - Next to "Include:" check the shapefile you want to include
+  - Click "Done" (it should say "...complete")
+  - Click "Close"
+- Back in file manager, if you change Location: to "Default" you should see the file you just imported
+- Now if you go to "Map" you will be able to select the background file you just imported as you did before.  And you will be able to navigate to the points in it. 
+  	
+	
 
 Funding
 --------
