@@ -1,6 +1,6 @@
 REM Generate hillshade etc SUDEM in GEF site.  To assist with stratification and sample site generation.
 REM see http://www.gdal.org/gdaldem.html for other options 
-REM echo off
+echo off
 SET OSGEO4W_ROOT=C:\OSGeo4W64\
 REM SET OTB=%OSGEO4W_ROOT%apps\orfeotoolbox
 
