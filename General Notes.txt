@@ -1253,7 +1253,7 @@ GEF Site Stratification
 - We need to make sure we don't overlap with the trial points.  
 - It would make sense for Cos to chop and change between Pristine and  Moderate in the field as these sites may be close together.  So we need one global set of points that also says if it is pristine / moderate /...
 - Sites should have unique ID's, this will make things easier to keep track of eg we easily know how to geolocate plot allometry.  It will also let Cos know which numbers he should be doing i.e. from the 150 sites, he should be starting with only 1-100.?
-- How to split the plots?  Ttl 90, Degraded: 35, Pristine: 30, Moderate: 25
+- How to split the plots?  Ttl 90, Degraded: 35, Pristine: 30, Moderate: 25, for safety make it times 1.5
 	
 
 Funding
