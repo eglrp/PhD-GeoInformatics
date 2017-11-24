@@ -1244,6 +1244,17 @@ How to import a shapefile
 - Now if you go to "Map" you will be able to select the background file you just imported as you did before.  And you will be able to navigate to the points in it. 
   	
 	
+GEF Site Stratification
+-------------------------
+- We want a fairly even spread of plots over TAGC for the regression.  There is not an even spread of these by area in the site.  Therefore we stratify into Degraded/ Moderate / Pristine classes and make sure we get enough plots in each class.
+- We want to minimise travel times between sites - therefore either cluster, or distr randomly but allow sites to also be visited randomly.  Just generating random points will only save travel time if they are quite dense.  
+- We don't want to bias sampling to small clustered areas though.  
+- It is perhaps better to generate more than we need in case we have time to do extra.  We then start with 1-100 and if possible carry on with 101-150.  This means we generate points once off and don't have to try and generate new points possibly overallping with old points.  
+- We need to make sure we don't overlap with the trial points.  
+- It would make sense for Cos to chop and change between Pristine and  Moderate in the field as these sites may be close together.  So we need one global set of points that also says if it is pristine / moderate /...
+- Sites should have unique ID's, this will make things easier to keep track of eg we easily know how to geolocate plot allometry.  It will also let Cos know which numbers he should be doing i.e. from the 150 sites, he should be starting with only 1-100.?
+- How to split the plots?  Ttl 90, Degraded: 35, Pristine: 30, Moderate: 25
+	
 
 Funding
 --------
