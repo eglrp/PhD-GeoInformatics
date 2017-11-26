@@ -1254,7 +1254,8 @@ GEF Site Stratification
 - It would make sense for Cos to chop and change between Pristine and  Moderate in the field as these sites may be close together.  So we need one global set of points that also says if it is pristine / moderate /...
 - Sites should have unique ID's, this will make things easier to keep track of eg we easily know how to geolocate plot allometry.  It will also let Cos know which numbers he should be doing i.e. from the 150 sites, he should be starting with only 1-100.?
 - How to split the plots?  Ttl 90, Degraded: 35, Pristine: 30, Moderate: 25, for safety make it times 1.5
-	
+- As per Cos' suggestion: number the plots randomly over the whole area.  Then start sampling from plot 1-N.  This way the plots are spread out randomly no matter how many we end up doing.  But -  we should then number each strata separately.  This also complicates/counters the clustering objective i.e. there will not be so many close clusters in a small random subsample of all the generated plots.  Still this seems the best way to go as then we don't need to know how many plots we are going to do up front (which we don't).  
+- We can prevent overlap with existing plots by manually shifting any that are too close together.  
 
 Funding
 --------
