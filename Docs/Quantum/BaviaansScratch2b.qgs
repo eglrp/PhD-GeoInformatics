@@ -2113,10 +2113,10 @@
   <mapcanvas>
     <units>degrees</units>
     <extent>
-      <xmin>23.93336275651105893</xmin>
-      <ymin>-33.5646215525099052</ymin>
-      <xmax>23.9608856633944356</xmax>
-      <ymax>-33.54907290270615761</ymax>
+      <xmin>23.87886255103054367</xmin>
+      <ymin>-33.63253047612160174</ymin>
+      <xmax>24.09904580609755698</xmax>
+      <ymax>-33.50814127769162099</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
@@ -27182,7 +27182,7 @@ def my_form_open(dialog, layer, feature):
       </edittypes>
       <renderer-v2 attr="DegrClass" forceraster="0" symbollevels="0" type="categorizedSymbol" enableorderby="0">
         <categories>
-          <category render="true" symbol="0" value="Degraded" label="Degraded"/>
+          <category render="true" symbol="0" value="Severe" label="Severe"/>
           <category render="true" symbol="1" value="Moderate" label="Moderate"/>
           <category render="true" symbol="2" value="Pristine" label="Pristine"/>
           <category render="true" symbol="3" value="" label=""/>
@@ -27196,7 +27196,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="customdash_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="215,25,28,255"/>
+              <prop k="line_color" v="215,20,56,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="0.86"/>
               <prop k="line_width_unit" v="MM"/>
@@ -27215,7 +27215,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="customdash_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="254,201,129,255"/>
+              <prop k="line_color" v="255,239,5,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="0.86"/>
               <prop k="line_width_unit" v="MM"/>
@@ -27234,7 +27234,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="customdash_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="196,230,135,255"/>
+              <prop k="line_color" v="20,215,10,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="0.86"/>
               <prop k="line_width_unit" v="MM"/>
@@ -27253,7 +27253,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="customdash_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="26,150,65,255"/>
+              <prop k="line_color" v="124,93,196,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="0.86"/>
               <prop k="line_width_unit" v="MM"/>
@@ -27298,6 +27298,7 @@ def my_form_open(dialog, layer, feature):
       </renderer-v2>
       <labeling type="simple"/>
       <customproperties>
+        <property key="embeddedWidgets/count" value="0"/>
         <property key="labeling" value="pal"/>
         <property key="labeling/addDirectionSymbol" value="false"/>
         <property key="labeling/angleOffset" value="0"/>
@@ -28004,7 +28005,7 @@ def my_form_open(dialog, layer, feature):
       </edittypes>
       <renderer-v2 attr="DegrClass" forceraster="0" symbollevels="0" type="categorizedSymbol" enableorderby="0">
         <categories>
-          <category render="true" symbol="0" value="Degraded" label="Degraded"/>
+          <category render="true" symbol="0" value="Severe" label="Severe"/>
           <category render="true" symbol="1" value="Moderate" label="Moderate"/>
           <category render="true" symbol="2" value="Pristine" label="Pristine"/>
           <category render="true" symbol="3" value="" label=""/>
@@ -28013,7 +28014,7 @@ def my_form_open(dialog, layer, feature):
           <symbol alpha="1" clip_to_extent="1" type="marker" name="0">
             <layer pass="0" class="SimpleMarker" locked="0">
               <prop k="angle" v="0"/>
-              <prop k="color" v="215,25,28,255"/>
+              <prop k="color" v="215,20,56,255"/>
               <prop k="horizontal_anchor_point" v="1"/>
               <prop k="joinstyle" v="bevel"/>
               <prop k="name" v="circle"/>
@@ -28035,7 +28036,7 @@ def my_form_open(dialog, layer, feature):
           <symbol alpha="1" clip_to_extent="1" type="marker" name="1">
             <layer pass="0" class="SimpleMarker" locked="0">
               <prop k="angle" v="0"/>
-              <prop k="color" v="254,201,129,255"/>
+              <prop k="color" v="255,239,5,255"/>
               <prop k="horizontal_anchor_point" v="1"/>
               <prop k="joinstyle" v="bevel"/>
               <prop k="name" v="circle"/>
@@ -28057,7 +28058,7 @@ def my_form_open(dialog, layer, feature):
           <symbol alpha="1" clip_to_extent="1" type="marker" name="2">
             <layer pass="0" class="SimpleMarker" locked="0">
               <prop k="angle" v="0"/>
-              <prop k="color" v="196,230,135,255"/>
+              <prop k="color" v="20,215,10,255"/>
               <prop k="horizontal_anchor_point" v="1"/>
               <prop k="joinstyle" v="bevel"/>
               <prop k="name" v="circle"/>
@@ -28079,7 +28080,7 @@ def my_form_open(dialog, layer, feature):
           <symbol alpha="1" clip_to_extent="1" type="marker" name="3">
             <layer pass="0" class="SimpleMarker" locked="0">
               <prop k="angle" v="0"/>
-              <prop k="color" v="26,150,65,255"/>
+              <prop k="color" v="124,93,196,255"/>
               <prop k="horizontal_anchor_point" v="1"/>
               <prop k="joinstyle" v="bevel"/>
               <prop k="name" v="circle"/>
@@ -28383,7 +28384,7 @@ def my_form_open(dialog, layer, feature):
         <default field="DegrClass" expression=""/>
         <default field="Farm" expression=""/>
       </defaults>
-      <previewExpression></previewExpression>
+      <previewExpression>COALESCE( "ID", '&lt;NULL>' )</previewExpression>
     </maplayer>
     <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
       <extent>
