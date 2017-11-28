@@ -18,7 +18,7 @@ from PIL import ImageDraw
 tchnuganuImageFile = "V:/Data/NGI/Rectified/3324C_2015_1004/RGBN/o3324c_2015_1004_02_0044_RGBN_XCALIB.tif"
 vdwImageFile = "V:/Data/NGI/Rectified/3323D_2015_1001/RGBN/o3323d_2015_1001_02_0077_Lo25Wgs84_RGBN_XCALIB.tif"
 samplingPtFile = "C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/GEF Sampling Points.shp"
-
+pylab.close('all')
 
 def world2Pixel(geoMatrix, x, y):
     """
@@ -37,7 +37,7 @@ def world2Pixel(geoMatrix, x, y):
 
 
 def extract_patch_features(imbuf):
-    imbuf = np.float64(imbuf) / 100.  # values are in percent?
+    imbuf = np.float64(imbuf) / 2048.  # values are in percent?
     s = np.sum(imbuf, 2)
     cn = imbuf / np.tile(s[:, :, None], (1, 1, imbuf.shape[2]))
     b_i = 2
@@ -210,6 +210,7 @@ def extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_size=np.array((2
                 imbuf[:, :, b - 1] = ds.GetRasterBand(b).ReadAsArray(pixel_start, line_start, win_size_r[0],
                                                                      win_size_r[1])
 
+            # imbuf[:, :, 3] = imbuf[:, :, 3] / 2  # hack for NGI XCALIB
             if np.all(imbuf == 0):
                 print "imbuf zero"
             # for b in range(0, 4):
@@ -236,13 +237,16 @@ def extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_size=np.array((2
         else:
             print "x-" + plot['ID']
 
-    # print i
+    print i
     for k, v in plot_dict.iteritems():
         thumb = v['thumbnail']
+        max_im_vals[1] = max_im_vals[1]
         for b in range(0, 4):
             thumb[:, :, b] = thumb[:, :, b] / max_im_vals[b]
             thumb[:, :, b][thumb[:, :, b] > 1.] = 1.
-        thumb[:, :, 0] = thumb[:, :, 0] / 1.5
+        # thumb[:, :, 0] = thumb[:, :, 0] / 1.5
+        # thumb[:, :, 1] = thumb[:, :, 1] * 1.2
+        # thumb[:, :, 1][thumb[:, :, 1] > 1.] = 1.
         plot_dict[k]['thumbnail'] = thumb
 
     return plot_dict
@@ -276,7 +280,7 @@ def scatterd(x, y, labels=None, class_labels=None, thumbnails=None, regress=True
                 imbuf = np.array(thumbnails)[class_idx][xyi]
                 ims = 20.
                 extent = [xx - xd / (2 * ims), xx + xd / (2 * ims), yy - yd / (2 * ims), yy + yd / (2 * ims)]
-                pylab.imshow(imbuf[:, :, 2::-1], extent=extent, aspect='auto')  # zorder=-1,
+                pylab.imshow(imbuf[:, :, :3], extent=extent, aspect='auto')  # zorder=-1,
                 handles[ci] = ax.add_patch(
                     patches.Rectangle((xx - xd / (2 * ims), yy - yd / (2 * ims)), xd / ims, yd / ims, fill=False,
                                       edgecolor=colour, linewidth=2.))
@@ -372,7 +376,8 @@ vdwDs = None
 plotDict = tchnuganuPlotDict.copy()
 plotDict.update(vdwPlotDict.copy())
 
-featureName = 'r_n'
+featureName = 'g_n'
+
 featureVal = np.array([plot[featureName] for plot in plotDict.values()])
 # featureVal = np.log10(np.array([plot[featureName] for plot in plotDict.values()]))
 
@@ -413,4 +418,13 @@ pylab.title('All')
 pylab.grid()
 
 
-plotDict.values()[0].keys()
+gn = np.array([plot['g_n'] for plot in plotDict.values()])
+ndvi = np.array([plot['NDVI'] for plot in plotDict.values()])
+id = np.array([plot['ID'] for plot in plotDict.values()])
+thumbnails = [plot['thumbnail'] for plot in plotDict.values()]
+
+pylab.figure()
+scatterd(gn, ndvi, labels=id, class_labels=classes, thumbnails=thumbnails, regress=False, xlabel='gn', ylabel='NDVI')
+
+
+# plotDict.values()[0].keys()
