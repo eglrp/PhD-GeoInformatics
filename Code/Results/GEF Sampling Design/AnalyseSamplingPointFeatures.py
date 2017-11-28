@@ -36,31 +36,31 @@ def world2Pixel(geoMatrix, x, y):
     return (pixel, line)
 
 
-def extract_patch_features(imbuf):
-    imbuf = np.float64(imbuf) / 2048.  # values are in percent?
-    s = np.sum(imbuf, 2)
-    cn = imbuf / np.tile(s[:, :, None], (1, 1, imbuf.shape[2]))
-    b_i = 2
-    g_i = 1
-    r_i = 0
-    ir_i = 3
-    ndvi = (imbuf[:, :, ir_i] - imbuf[:, :, r_i]) / (imbuf[:, :, ir_i] + imbuf[:, :, r_i])
-    ir_rat = imbuf[:, :, ir_i] / imbuf[:, :, r_i]
-    L = 0.05
-    savi = (1 + L) * (imbuf[:, :, ir_i] - imbuf[:, :, r_i]) / (L + imbuf[:, :, ir_i] + imbuf[:, :, r_i])
-    feat = {}
-    feat['r_n'] = cn[:, :, r_i].mean()
-    feat['g_n'] = cn[:, :, g_i].mean()
-    feat['b_n'] = cn[:, :, b_i].mean()
-    feat['ir_n'] = cn[:, :, ir_i].mean()
-    feat['NDVI'] = ndvi.mean()
-    feat['SAVI'] = savi.mean()
-    feat['ir_rat'] = ir_rat.mean()
-    feat['i'] = (s / np.prod(s.shape[0:2])).mean()
-    feat['i_std'] = (s / np.prod(s.shape[0:2])).std()
-    feat['NDVI_std'] = ndvi.std()
-
-    return feat
+# def extract_patch_features(imbuf):
+#     imbuf = np.float64(imbuf)  # values are in percent?
+#     s = np.sum(imbuf, 2)
+#     cn = imbuf / np.tile(s[:, :, None], (1, 1, imbuf.shape[2]))
+#     b_i = 2
+#     g_i = 1
+#     r_i = 0
+#     ir_i = 3
+#     ndvi = (imbuf[:, :, ir_i] - imbuf[:, :, r_i]) / (imbuf[:, :, ir_i] + imbuf[:, :, r_i])
+#     ir_rat = imbuf[:, :, ir_i] / imbuf[:, :, r_i]
+#     L = 0.05
+#     savi = (1 + L) * (imbuf[:, :, ir_i] - imbuf[:, :, r_i]) / (L + imbuf[:, :, ir_i] + imbuf[:, :, r_i])
+#     feat = {}
+#     feat['r_n'] = cn[:, :, r_i].mean()
+#     feat['g_n'] = cn[:, :, g_i].mean()
+#     feat['b_n'] = cn[:, :, b_i].mean()
+#     feat['ir_n'] = cn[:, :, ir_i].mean()
+#     feat['NDVI'] = ndvi.mean()
+#     feat['SAVI'] = savi.mean()
+#     feat['ir_rat'] = ir_rat.mean()
+#     feat['i'] = (s / np.prod(s.shape[0:2])).mean()
+#     feat['i_std'] = (s / np.prod(s.shape[0:2])).std()
+#     feat['NDVI_std'] = ndvi.std()
+#
+#     return feat
 
 
 def extract_patch_features(imbuf, mask):
@@ -69,8 +69,8 @@ def extract_patch_features(imbuf, mask):
     for i in range(0, imbuf.shape[2]):
         band = imbuf[:, :, i]
         imbuf_mask[:, i] = np.float64(band[mask]) / 100.
-
-    s = np.sum(imbuf_mask, 1)
+    # imbuf_mask[:, 3] = imbuf_mask[:,  3]/2.
+    s = np.sum(imbuf_mask[:,:3], 1)   # NNB only sum r,g,b as ir confuses things in g_n   
     cn = imbuf_mask / np.tile(s[:, None], (1, imbuf_mask.shape[1]))
     b_i = 2
     g_i = 1
