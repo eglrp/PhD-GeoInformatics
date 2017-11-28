@@ -238,7 +238,7 @@ def extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_sizes=[np.array(
     # Note         A way around all this confusion may to be to layout plot co-ords in world co-ords and then convert to
     #              to pixel co-ords using world2pixel.  this would avoid all the fiddling and confusion in pixel space
     win_cnrs = np.array([[0,0], [0,1], [1,1], [1,0]])  # TL origin by default
-
+    geotransform = ds.GetGeoTransform()
     if win_origin == 'BL':
         win_cnrs[:,1] = win_cnrs[:,1]-1
     elif win_origin == 'TL':
