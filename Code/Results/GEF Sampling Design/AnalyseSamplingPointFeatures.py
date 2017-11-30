@@ -70,7 +70,7 @@ def extract_patch_features(imbuf, mask):
         band = imbuf[:, :, i]
         imbuf_mask[:, i] = np.float64(band[mask]) / 100.
     # imbuf_mask[:, 3] = imbuf_mask[:,  3]/2.
-    s = np.sum(imbuf_mask[:,:3], 1)   # NNB only sum r,g,b as ir confuses things in g_n   
+    s = np.sum(imbuf_mask[:,:3], 1)   # NNB only sum r,g,b as ir confuses things in g_n
     cn = imbuf_mask / np.tile(s[:, None], (1, imbuf_mask.shape[1]))
     b_i = 2
     g_i = 1
@@ -376,7 +376,7 @@ vdwDs = None
 plotDict = tchnuganuPlotDict.copy()
 plotDict.update(vdwPlotDict.copy())
 
-featureName = 'g_n'
+featureName = 'NDVI'
 
 featureVal = np.array([plot[featureName] for plot in plotDict.values()])
 # featureVal = np.log10(np.array([plot[featureName] for plot in plotDict.values()]))
@@ -412,7 +412,7 @@ featureKde = kde.evaluate(featureGrid)
 
 pylab.subplot(2, 2, 4)
 pylab.plot(featureGrid, featureKde)
-pylab.xlabel('NDVI')
+pylab.xlabel(featureName)
 pylab.ylabel('Density')
 pylab.title('All')
 pylab.grid()
