@@ -8,7 +8,7 @@
     <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="o3324c_2015_1004_05_0186_RGBN20171201080716538" source="V:/Data/NGI/Rectified/3324C_2015_1004/RGBN/o3324c_2015_1004_05_0186_RGBN.tif" name="o3324c_2015_1004_05_0186_RGBN">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="o3324c_2015_1004_05_0185_RGBN20171201080716266" source="V:/Data/NGI/Rectified/3324C_2015_1004/RGBN/o3324c_2015_1004_05_0185_RGBN.tif" name="o3324c_2015_1004_05_0185_RGBN">
+    <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="o3324c_2015_1004_05_0185_RGBN20171201080716266" source="V:/Data/NGI/Rectified/3324C_2015_1004/RGBN/o3324c_2015_1004_05_0185_RGBN.tif" name="o3324c_2015_1004_05_0185_RGBN">
       <customproperties/>
     </layer-tree-layer>
     <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="o3324c_2015_1004_05_0184_RGBN20171201080716128" source="V:/Data/NGI/Rectified/3324C_2015_1004/RGBN/o3324c_2015_1004_05_0184_RGBN.tif" name="o3324c_2015_1004_05_0184_RGBN">
@@ -20,7 +20,7 @@
     <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324c_2015_1004_05_0183_to_0186_DEM_NoWallisOutBlend20171201082924838" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/DEM Working/3324c_2015_1004_05_0183_to_0186_DEM_NoWallisOutBlend.tif" name="3324c_2015_1004_05_0183_to_0186_DEM_NoWallisOutBlend">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3324c_2015_1004_05_0183_to_0186_DEM_WallisOutHighest20171201082937656" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/DEM Working/3324c_2015_1004_05_0183_to_0186_DEM_WallisOutHighest.tif" name="3324c_2015_1004_05_0183_to_0186_DEM_WallisOutHighest">
+    <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="3324c_2015_1004_05_0183_to_0186_DEM_WallisOutHighest20171201082937656" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/DEM Working/3324c_2015_1004_05_0183_to_0186_DEM_WallisOutHighest.tif" name="3324c_2015_1004_05_0183_to_0186_DEM_WallisOutHighest">
       <customproperties/>
     </layer-tree-layer>
   </layer-tree-group>
@@ -28,10 +28,10 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>-58743.1784810529788956</xmin>
-      <ymin>-3728634.41446782788261771</ymin>
-      <xmax>-57386.7690806201135274</xmax>
-      <ymax>-3727659.03009282751008868</ymax>
+      <xmin>-59211.83761439925001469</xmin>
+      <ymin>-3728042.95241981698200107</ymin>
+      <xmax>-55776.8215856374008581</xmax>
+      <ymax>-3725572.85676782438531518</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>0</projections>
@@ -66,9 +66,9 @@
         <legendlayerfile isInOverview="0" layerid="o3324c_2015_1004_05_0186_RGBN20171201080716538" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="o3324c_2015_1004_05_0185_RGBN" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="o3324c_2015_1004_05_0185_RGBN" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="o3324c_2015_1004_05_0185_RGBN20171201080716266" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="o3324c_2015_1004_05_0185_RGBN20171201080716266" visible="0"/>
       </filegroup>
     </legendlayer>
     <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="o3324c_2015_1004_05_0184_RGBN" showFeatureCount="0">
@@ -86,9 +86,9 @@
         <legendlayerfile isInOverview="0" layerid="3324c_2015_1004_05_0183_to_0186_DEM_NoWallisOutBlend20171201082924838" visible="1"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3324c_2015_1004_05_0183_to_0186_DEM_WallisOutHighest" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3324c_2015_1004_05_0183_to_0186_DEM_WallisOutHighest" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="3324c_2015_1004_05_0183_to_0186_DEM_WallisOutHighest20171201082937656" visible="0"/>
+        <legendlayerfile isInOverview="0" layerid="3324c_2015_1004_05_0183_to_0186_DEM_WallisOutHighest20171201082937656" visible="1"/>
       </filegroup>
     </legendlayer>
   </legend>
