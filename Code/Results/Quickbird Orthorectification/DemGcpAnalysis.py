@@ -290,19 +290,19 @@ xd = np.diff(xlim)[0]
 yd = np.diff(ylim)[0]
 
 pylab.figure()
-pylab.subplot(1, 2, 1)
+pylab.subplot(1, 2, 2)
 pylab.plot(demZ, gcpZgeoid, 'kx')
 h = pylab.plot([0, demZ.max()], [0, demZ.max()], 'k--', label='1:1')
 pylab.xlabel('DEM Z (m)')
 pylab.ylabel('DGPS Z (m)')
 pylab.grid()
-pylab.title('SUDEM accuracy')
+pylab.title('NGI DEM accuracy')
 rmse = (np.sqrt(((demZ - gcpZgeoid)**2).mean()))
 pylab.text((xlim[0] + xd * 0.5), (ylim[0] + yd * 0.1), str.format('RMSE = {0:.2f}m', np.round(rmse, 2)),
            fontdict={'size': 12})
 pylab.legend()
 
-pylab.subplot(1, 2, 2)
+pylab.subplot(1, 2, 1)
 pylab.plot(srtmZ, gcpZgeoid, 'kx')
 h = pylab.plot([0, demZ.max()], [0, demZ.max()], 'k--', label='1:1')
 pylab.xlabel('DEM Z (m)')

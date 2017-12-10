@@ -29,3 +29,7 @@ REM gdaladdo -ro --config COMPRESS_OVERVIEW LZW -r average %GEFFILE1_WARP% 2 4 8
 
 pause
 exit
+REM 3323D...77
+REM 3323D...79
+REM 3323D...81
+REM 3323D...82
