@@ -56,7 +56,7 @@ Photo:
 {
 	Id: "3323d_2015_1001_02_0077_RGBN"
 	AddDate: 11/27/2017
-	UpdateDate: 11/27/2017
+	UpdateDate: 12/10/2017
 	PhotoFile: "V:\Data\NGI\UnRectified\3323D_2015_1001\RGBN\3323d_2015_1001_02_0077_RGBN.tif"
 	OrthoFile: "V:\Data\NGI\Rectified\3323D_2015_1001\RGBN\o3323d_2015_1001_02_0077_RGBN.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3323db_2015_L3a_Lo23Wgs84.tif" 1 0
@@ -72,7 +72,7 @@ Photo:
 	Size: 7680 13824
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: OK
+	OrthoStatus: Stale
 	NormalizeMethod: 0
 	OrthoXY: 0   8.50920000000000E+04  -3.71090000000000E+06
 	OrthoXY: 1   8.90270000000000E+04  -3.71792650000000E+06
@@ -87,12 +87,12 @@ Photo:
 	LocalMaskIsVisible: 0
 	MatchAreaIsVisible: 0
 	OrthoFormatType: TIF
-	OrthoFormatOptions: "Tiled112 LZW BIGTIFF=AUTO"
+	OrthoFormatOptions: "Pixel LZW BIGTIFF=AUTO"
 	OrthoNoDataValue: 0
 	OrthoEdgeClip: 0
 	ElevationType: DEMFile
 	ElevDatum: MSL
-	FlightLineTag: "3323D_2015_1001 ortho rectification_1_1"
+	FlightLineTag: "3323D_2015_1001 ortho rectification_1_2"
 	PhotoActiveState: 1
 }
 
@@ -122,6 +122,444 @@ ExtOrient:
 PhotoCutline:
 {
 	PhotoId: "3323d_2015_1001_02_0077_RGBN"
+	Georef: 1 
+}
+
+Photo:
+{
+	Id: "3323d_2015_1001_02_0078_RGBN"
+	AddDate: 12/10/2017
+	UpdateDate: 12/10/2017
+	PhotoFile: "V:\Data\NGI\UnRectified\3323D_2015_1001\RGBN\3323d_2015_1001_02_0078_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3323D_2015_1001\RGBN\o3323d_2015_1001_02_0078_RGBN.tif"
+	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3323db_2015_L3a_Lo23Wgs84.tif" 1 0
+	DEMAux: -150
+	ElevScale: 1
+	ElevOffset: 0
+	ElevUnits: m
+	MaxChannel: 4
+	MaxPhotoChan: 4
+	PhotoChan: 3 1 2 3
+	OrthoChan: 3 1 2 3
+	MatchChannel: -1
+	Size: 7680 13824
+	ClipRect: -1 -1 -1 -1
+	BundleStatus: OK
+	OrthoStatus: OK
+	NormalizeMethod: 0
+	OrthoXY: 0   8.64925000000000E+04  -3.71089250000000E+06
+	OrthoXY: 1   9.04525000000000E+04  -3.71790650000000E+06
+	OrthoChanCount: 4
+	PhotoMosaicOptions:
+	ProcessPhoto: 1
+	HistoryPhoto: 0
+	ImageStatus: unverified
+	PhotoIsVisible: 1
+	LabelIsVisible: 1
+	CutlineIsVisible: 1
+	LocalMaskIsVisible: 0
+	MatchAreaIsVisible: 0
+	OrthoFormatType: TIF
+	OrthoFormatOptions: "Pixel LZW BIGTIFF=AUTO"
+	OrthoNoDataValue: 0
+	OrthoEdgeClip: 0
+	ElevationType: DEMFile
+	ElevDatum: MSL
+	FlightLineTag: "3323D_2015_1001 ortho rectification_1_3"
+	PhotoActiveState: 1
+}
+
+Fiducial:
+{
+	PhotoId: "3323d_2015_1001_02_0078_RGBN"
+	FidType: Corner
+	Fiducial: 0 0.0000 0.0000
+	Fiducial: 1 7680.0000 0.0000
+	Fiducial: 2 7680.0000 13824.0000
+	Fiducial: 3 0.0000 13824.0000
+	Principal: 3840.0000 6912.0000
+	CalibrationEdge: Left
+}
+
+ExtOrient:
+{
+	PhotoId: "3323d_2015_1001_02_0078_RGBN"
+	X: 8.8454178880000007E+04
+	Y: -3.7144550348200002E+06
+	Z: 5.6829865499999996E+03
+	Omega: 3.5339500000000001E-01
+	Phi: -5.0132000000000003E-02
+	Kappa: -1.2329600000000000E-01
+}
+
+PhotoCutline:
+{
+	PhotoId: "3323d_2015_1001_02_0078_RGBN"
+	Georef: 1 
+}
+
+Photo:
+{
+	Id: "3323d_2015_1001_02_0079_RGBN"
+	AddDate: 12/10/2017
+	UpdateDate: 12/10/2017
+	PhotoFile: "V:\Data\NGI\UnRectified\3323D_2015_1001\RGBN\3323d_2015_1001_02_0079_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3323D_2015_1001\RGBN\o3323d_2015_1001_02_0079_RGBN.tif"
+	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3323db_2015_L3a_Lo23Wgs84.tif" 1 0
+	DEMAux: -150
+	ElevScale: 1
+	ElevOffset: 0
+	ElevUnits: m
+	MaxChannel: 4
+	MaxPhotoChan: 4
+	PhotoChan: 3 1 2 3
+	OrthoChan: 3 1 2 3
+	MatchChannel: -1
+	Size: 7680 13824
+	ClipRect: -1 -1 -1 -1
+	BundleStatus: OK
+	OrthoStatus: OK
+	NormalizeMethod: 0
+	OrthoXY: 0   8.78895000000000E+04  -3.71103100000000E+06
+	OrthoXY: 1   9.18410000000000E+04  -3.71801550000000E+06
+	OrthoChanCount: 4
+	PhotoMosaicOptions:
+	ProcessPhoto: 1
+	HistoryPhoto: 0
+	ImageStatus: unverified
+	PhotoIsVisible: 1
+	LabelIsVisible: 1
+	CutlineIsVisible: 1
+	LocalMaskIsVisible: 0
+	MatchAreaIsVisible: 0
+	OrthoFormatType: TIF
+	OrthoFormatOptions: "Pixel LZW BIGTIFF=AUTO"
+	OrthoNoDataValue: 0
+	OrthoEdgeClip: 0
+	ElevationType: DEMFile
+	ElevDatum: MSL
+	FlightLineTag: "3323D_2015_1001 ortho rectification_1_4"
+	PhotoActiveState: 1
+}
+
+Fiducial:
+{
+	PhotoId: "3323d_2015_1001_02_0079_RGBN"
+	FidType: Corner
+	Fiducial: 0 0.0000 0.0000
+	Fiducial: 1 7680.0000 0.0000
+	Fiducial: 2 7680.0000 13824.0000
+	Fiducial: 3 0.0000 13824.0000
+	Principal: 3840.0000 6912.0000
+	CalibrationEdge: Left
+}
+
+ExtOrient:
+{
+	PhotoId: "3323d_2015_1001_02_0079_RGBN"
+	X: 8.9848594930000007E+04
+	Y: -3.7144705882999999E+06
+	Z: 5.6862824499999997E+03
+	Omega: -6.3870400000000005E-01
+	Phi: -7.7419999999999998E-03
+	Kappa: -1.4753200000000000E-01
+}
+
+PhotoCutline:
+{
+	PhotoId: "3323d_2015_1001_02_0079_RGBN"
+	Georef: 1 
+}
+
+Photo:
+{
+	Id: "3323d_2015_1001_02_0080_RGBN"
+	AddDate: 12/10/2017
+	UpdateDate: 12/10/2017
+	PhotoFile: "V:\Data\NGI\UnRectified\3323D_2015_1001\RGBN\3323d_2015_1001_02_0080_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3323D_2015_1001\RGBN\o3323d_2015_1001_02_0080_RGBN.tif"
+	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3323db_2015_L3a_Lo23Wgs84.tif" 1 0
+	DEMAux: -150
+	ElevScale: 1
+	ElevOffset: 0
+	ElevUnits: m
+	MaxChannel: 4
+	MaxPhotoChan: 4
+	PhotoChan: 3 1 2 3
+	OrthoChan: 3 1 2 3
+	MatchChannel: -1
+	Size: 7680 13824
+	ClipRect: -1 -1 -1 -1
+	BundleStatus: OK
+	OrthoStatus: OK
+	NormalizeMethod: 0
+	OrthoXY: 0   8.92380000000000E+04  -3.71101950000000E+06
+	OrthoXY: 1   9.32030000000000E+04  -3.71801350000000E+06
+	OrthoChanCount: 4
+	PhotoMosaicOptions:
+	ProcessPhoto: 1
+	HistoryPhoto: 0
+	ImageStatus: unverified
+	PhotoIsVisible: 1
+	LabelIsVisible: 1
+	CutlineIsVisible: 1
+	LocalMaskIsVisible: 0
+	MatchAreaIsVisible: 0
+	OrthoFormatType: TIF
+	OrthoFormatOptions: "Pixel LZW BIGTIFF=AUTO"
+	OrthoNoDataValue: 0
+	OrthoEdgeClip: 0
+	ElevationType: DEMFile
+	ElevDatum: MSL
+	FlightLineTag: "3323D_2015_1001 ortho rectification_1_5"
+	PhotoActiveState: 1
+}
+
+Fiducial:
+{
+	PhotoId: "3323d_2015_1001_02_0080_RGBN"
+	FidType: Corner
+	Fiducial: 0 0.0000 0.0000
+	Fiducial: 1 7680.0000 0.0000
+	Fiducial: 2 7680.0000 13824.0000
+	Fiducial: 3 0.0000 13824.0000
+	Principal: 3840.0000 6912.0000
+	CalibrationEdge: Left
+}
+
+ExtOrient:
+{
+	PhotoId: "3323d_2015_1001_02_0080_RGBN"
+	X: 9.1241563980000006E+04
+	Y: -3.7144764934999999E+06
+	Z: 5.6780913300000002E+03
+	Omega: -9.2360999999999999E-02
+	Phi: 2.9915300000000000E-01
+	Kappa: -1.4140100000000000E-01
+}
+
+PhotoCutline:
+{
+	PhotoId: "3323d_2015_1001_02_0080_RGBN"
+	Georef: 1 
+}
+
+Photo:
+{
+	Id: "3323d_2015_1001_02_0081_RGBN"
+	AddDate: 12/10/2017
+	UpdateDate: 12/10/2017
+	PhotoFile: "V:\Data\NGI\UnRectified\3323D_2015_1001\RGBN\3323d_2015_1001_02_0081_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3323D_2015_1001\RGBN\o3323d_2015_1001_02_0081_RGBN.tif"
+	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3323db_2015_L3a_Lo23Wgs84.tif" 1 0
+	DEMAux: -150
+	ElevScale: 1
+	ElevOffset: 0
+	ElevUnits: m
+	MaxChannel: 4
+	MaxPhotoChan: 4
+	PhotoChan: 3 1 2 3
+	OrthoChan: 3 1 2 3
+	MatchChannel: -1
+	Size: 7680 13824
+	ClipRect: -1 -1 -1 -1
+	BundleStatus: OK
+	OrthoStatus: OK
+	NormalizeMethod: 0
+	OrthoXY: 0   9.06180000000000E+04  -3.71102350000000E+06
+	OrthoXY: 1   9.46005000000000E+04  -3.71798850000000E+06
+	OrthoChanCount: 4
+	PhotoMosaicOptions:
+	ProcessPhoto: 1
+	HistoryPhoto: 0
+	ImageStatus: unverified
+	PhotoIsVisible: 1
+	LabelIsVisible: 1
+	CutlineIsVisible: 1
+	LocalMaskIsVisible: 0
+	MatchAreaIsVisible: 0
+	OrthoFormatType: TIF
+	OrthoFormatOptions: "Pixel LZW BIGTIFF=AUTO"
+	OrthoNoDataValue: 0
+	OrthoEdgeClip: 0
+	ElevationType: DEMFile
+	ElevDatum: MSL
+	FlightLineTag: "3323D_2015_1001 ortho rectification_1_6"
+	PhotoActiveState: 1
+}
+
+Fiducial:
+{
+	PhotoId: "3323d_2015_1001_02_0081_RGBN"
+	FidType: Corner
+	Fiducial: 0 0.0000 0.0000
+	Fiducial: 1 7680.0000 0.0000
+	Fiducial: 2 7680.0000 13824.0000
+	Fiducial: 3 0.0000 13824.0000
+	Principal: 3840.0000 6912.0000
+	CalibrationEdge: Left
+}
+
+ExtOrient:
+{
+	PhotoId: "3323d_2015_1001_02_0081_RGBN"
+	X: 9.2602313039999994E+04
+	Y: -3.7144807130300002E+06
+	Z: 5.6795882499999998E+03
+	Omega: 1.0951600000000000E-01
+	Phi: 1.5276000000000000E-02
+	Kappa: -1.5548899999999999E-01
+}
+
+PhotoCutline:
+{
+	PhotoId: "3323d_2015_1001_02_0081_RGBN"
+	Georef: 1 
+}
+
+Photo:
+{
+	Id: "3323d_2015_1001_02_0082_RGBN"
+	AddDate: 12/10/2017
+	UpdateDate: 12/10/2017
+	PhotoFile: "V:\Data\NGI\UnRectified\3323D_2015_1001\RGBN\3323d_2015_1001_02_0082_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3323D_2015_1001\RGBN\o3323d_2015_1001_02_0082_RGBN.tif"
+	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3323db_2015_L3a_Lo23Wgs84.tif" 1 0
+	DEMAux: -150
+	ElevScale: 1
+	ElevOffset: 0
+	ElevUnits: m
+	MaxChannel: 4
+	MaxPhotoChan: 4
+	PhotoChan: 3 1 2 3
+	OrthoChan: 3 1 2 3
+	MatchChannel: -1
+	Size: 7680 13824
+	ClipRect: -1 -1 -1 -1
+	BundleStatus: OK
+	OrthoStatus: OK
+	NormalizeMethod: 0
+	OrthoXY: 0   9.19610000000000E+04  -3.71103150000000E+06
+	OrthoXY: 1   9.59505000000000E+04  -3.71796400000000E+06
+	OrthoChanCount: 4
+	PhotoMosaicOptions:
+	ProcessPhoto: 1
+	HistoryPhoto: 0
+	ImageStatus: unverified
+	PhotoIsVisible: 1
+	LabelIsVisible: 1
+	CutlineIsVisible: 1
+	LocalMaskIsVisible: 0
+	MatchAreaIsVisible: 0
+	OrthoFormatType: TIF
+	OrthoFormatOptions: "Pixel LZW BIGTIFF=AUTO"
+	OrthoNoDataValue: 0
+	OrthoEdgeClip: 0
+	ElevationType: DEMFile
+	ElevDatum: MSL
+	FlightLineTag: "3323D_2015_1001 ortho rectification_1_7"
+	PhotoActiveState: 1
+}
+
+Fiducial:
+{
+	PhotoId: "3323d_2015_1001_02_0082_RGBN"
+	FidType: Corner
+	Fiducial: 0 0.0000 0.0000
+	Fiducial: 1 7680.0000 0.0000
+	Fiducial: 2 7680.0000 13824.0000
+	Fiducial: 3 0.0000 13824.0000
+	Principal: 3840.0000 6912.0000
+	CalibrationEdge: Left
+}
+
+ExtOrient:
+{
+	PhotoId: "3323d_2015_1001_02_0082_RGBN"
+	X: 9.3963164730000004E+04
+	Y: -3.7144861956099998E+06
+	Z: 5.6783946400000004E+03
+	Omega: 5.0208100000000000E-01
+	Phi: 1.2238100000000000E-01
+	Kappa: -3.3640599999999998E-01
+}
+
+PhotoCutline:
+{
+	PhotoId: "3323d_2015_1001_02_0082_RGBN"
+	Georef: 1 
+}
+
+Photo:
+{
+	Id: "3323d_2015_1001_02_0076_RGBN"
+	AddDate: 12/10/2017
+	UpdateDate: 12/10/2017
+	PhotoFile: "V:\Data\NGI\UnRectified\3323D_2015_1001\RGBN\3323d_2015_1001_02_0076_RGBN.tif"
+	OrthoFile: "V:\Data\NGI\Rectified\3323D_2015_1001\RGBN\o3323d_2015_1001_02_0076_RGBN.tif"
+	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SUDEM L3 Unedited\x3323db_2015_L3a_Lo23Wgs84.tif" 1 0
+	DEMAux: -150
+	ElevScale: 1
+	ElevOffset: 0
+	ElevUnits: m
+	MaxChannel: 4
+	MaxPhotoChan: 4
+	PhotoChan: 3 1 2 3
+	OrthoChan: 3 1 2 3
+	MatchChannel: -1
+	Size: 7680 13824
+	ClipRect: -1 -1 -1 -1
+	BundleStatus: OK
+	OrthoStatus: OK
+	NormalizeMethod: 0
+	OrthoXY: 0   8.37085000000000E+04  -3.71097150000000E+06
+	OrthoXY: 1   8.76180000000000E+04  -3.71786550000000E+06
+	OrthoChanCount: 4
+	PhotoMosaicOptions:
+	ProcessPhoto: 1
+	HistoryPhoto: 0
+	ImageStatus: unverified
+	PhotoIsVisible: 1
+	LabelIsVisible: 1
+	CutlineIsVisible: 1
+	LocalMaskIsVisible: 0
+	MatchAreaIsVisible: 0
+	OrthoFormatType: TIF
+	OrthoFormatOptions: "Pixel LZW BIGTIFF=AUTO"
+	OrthoNoDataValue: 0
+	OrthoEdgeClip: 0
+	ElevationType: DEMFile
+	ElevDatum: MSL
+	FlightLineTag: "3323D_2015_1001 ortho rectification_1_1"
+	PhotoActiveState: 1
+}
+
+Fiducial:
+{
+	PhotoId: "3323d_2015_1001_02_0076_RGBN"
+	FidType: Corner
+	Fiducial: 0 0.0000 0.0000
+	Fiducial: 1 7680.0000 0.0000
+	Fiducial: 2 7680.0000 13824.0000
+	Fiducial: 3 0.0000 13824.0000
+	Principal: 3840.0000 6912.0000
+	CalibrationEdge: Left
+}
+
+ExtOrient:
+{
+	PhotoId: "3323d_2015_1001_02_0076_RGBN"
+	X: 8.5670254679999998E+04
+	Y: -3.7144333723399998E+06
+	Z: 5.6816812499999996E+03
+	Omega: -4.4957799999999998E-01
+	Phi: 1.8061700000000000E-01
+	Kappa: -7.3244000000000004E-02
+}
+
+PhotoCutline:
+{
+	PhotoId: "3323d_2015_1001_02_0076_RGBN"
 	Georef: 1 
 }
 
