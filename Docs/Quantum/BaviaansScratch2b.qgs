@@ -182,7 +182,7 @@
     <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Sheet_50K20170329124416633" source="D:\Data\Development\Projects\PhD GeoInformatics\Data/Misc/Sheet 50K/Sheet_50K.shp" name="Sheet_50K">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-group expanded="1" checked="Qt::Unchecked" name="SUDEM">
+    <layer-tree-group expanded="0" checked="Qt::Unchecked" name="SUDEM">
       <customproperties/>
       <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="x3323db_2015_L3a_Lo23Wgs8420171127150519448" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/CGA/SUDEM L3 Unedited/x3323db_2015_L3a_Lo23Wgs84.tif" name="x3323db_2015_L3a_Lo23Wgs84">
         <customproperties/>
@@ -262,7 +262,7 @@
     </layer-tree-group>
     <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="NGI 2015 RGBN">
       <customproperties/>
-      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Ngi2015_3324C_ROI20171028185721552" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/BMR ShapeFiles/Ngi2015_3324C_ROI.shp" name="Ngi2015_3324C_ROI">
+      <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="Ngi2015_3324C_ROI20171028185721552" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/BMR ShapeFiles/Ngi2015_3324C_ROI.shp" name="Ngi2015_3324C_ROI">
         <customproperties/>
       </layer-tree-layer>
       <layer-tree-group expanded="0" checked="Qt::Unchecked" name="3324C">
@@ -1183,12 +1183,12 @@
           <customproperties/>
         </layer-tree-layer>
       </layer-tree-group>
-      <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="3323D Unrectified">
+      <layer-tree-group expanded="1" checked="Qt::Unchecked" name="3323D Unrectified">
         <customproperties/>
         <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="3323d_2015_1001_02_0077_RGBN20171127152322728" source="V:/Data/NGI/UnRectified/3323D_2015_1001/RGBN/3323d_2015_1001_02_0077_RGBN.tif" name="3323d_2015_1001_02_0077_RGBN">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="3323D_Extents20171127151945097" source="V:/Data/NGI/UnRectified/3323D_2015_1001/3323D_Extents.shp" name="3323D_Extents">
+        <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="3323D_Extents20171127151945097" source="V:/Data/NGI/UnRectified/3323D_2015_1001/3323D_Extents.shp" name="3323D_Extents">
           <customproperties/>
         </layer-tree-layer>
       </layer-tree-group>
@@ -1203,10 +1203,25 @@
       </layer-tree-group>
       <layer-tree-group expanded="1" checked="Qt::Checked" name="2015 GEF XCALIB">
         <customproperties/>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="o3324c_2015_1004_02_0044_RGBN_XCALIB20171127161715559" source="V:/Data/NGI/Rectified/3324C_2015_1004/RGBN/o3324c_2015_1004_02_0044_RGBN_XCALIB.tif" name="o3324c_2015_1004_02_0044_RGBN_XCALIB">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="o3323d_2015_1001_02_0082_RGBN_XCALIB20171211175710278" source="V:/Data/NGI/Rectified/3323D_2015_1001/RGBN/XCALIB/o3323d_2015_1001_02_0082_RGBN_XCALIB.tif" name="o3323d_2015_1001_02_0082_RGBN_XCALIB">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="o3323d_2015_1001_02_0077_Lo25Wgs84_RGBN_XCALIB20171127161445639" source="V:/Data/NGI/Rectified/3323D_2015_1001/RGBN/o3323d_2015_1001_02_0077_Lo25Wgs84_RGBN_XCALIB.tif" name="o3323d_2015_1001_02_0077_Lo25Wgs84_RGBN_XCALIB">
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="o3323d_2015_1001_02_0081_RGBN_XCALIB20171211175710095" source="V:/Data/NGI/Rectified/3323D_2015_1001/RGBN/XCALIB/o3323d_2015_1001_02_0081_RGBN_XCALIB.tif" name="o3323d_2015_1001_02_0081_RGBN_XCALIB">
+          <customproperties/>
+        </layer-tree-layer>
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="o3323d_2015_1001_02_0080_RGBN_XCALIB20171211175709899" source="V:/Data/NGI/Rectified/3323D_2015_1001/RGBN/XCALIB/o3323d_2015_1001_02_0080_RGBN_XCALIB.tif" name="o3323d_2015_1001_02_0080_RGBN_XCALIB">
+          <customproperties/>
+        </layer-tree-layer>
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="o3323d_2015_1001_02_0079_RGBN_XCALIB20171211175709709" source="V:/Data/NGI/Rectified/3323D_2015_1001/RGBN/XCALIB/o3323d_2015_1001_02_0079_RGBN_XCALIB.tif" name="o3323d_2015_1001_02_0079_RGBN_XCALIB">
+          <customproperties/>
+        </layer-tree-layer>
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="o3323d_2015_1001_02_0078_RGBN_XCALIB20171211175709538" source="V:/Data/NGI/Rectified/3323D_2015_1001/RGBN/XCALIB/o3323d_2015_1001_02_0078_RGBN_XCALIB.tif" name="o3323d_2015_1001_02_0078_RGBN_XCALIB">
+          <customproperties/>
+        </layer-tree-layer>
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="o3323d_2015_1001_02_0077_RGBN_XCALIB20171211175709360" source="V:/Data/NGI/Rectified/3323D_2015_1001/RGBN/XCALIB/o3323d_2015_1001_02_0077_RGBN_XCALIB.tif" name="o3323d_2015_1001_02_0077_RGBN_XCALIB">
+          <customproperties/>
+        </layer-tree-layer>
+        <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="o3323d_2015_1001_02_0076_RGBN_XCALIB20171211175709094" source="V:/Data/NGI/Rectified/3323D_2015_1001/RGBN/XCALIB/o3323d_2015_1001_02_0076_RGBN_XCALIB.tif" name="o3323d_2015_1001_02_0076_RGBN_XCALIB">
           <customproperties/>
         </layer-tree-layer>
       </layer-tree-group>
@@ -2188,10 +2203,10 @@
   <mapcanvas>
     <units>degrees</units>
     <extent>
-      <xmin>23.85539077738672731</xmin>
-      <ymin>-33.61947542460438143</ymin>
-      <xmax>24.07480757404425376</xmax>
-      <ymax>-33.48070448869292903</ymax>
+      <xmin>23.97277359488428772</xmin>
+      <ymin>-33.5787828167094986</ymin>
+      <xmax>24.01034317718949751</xmax>
+      <ymax>-33.5550218003346501</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
@@ -2264,6 +2279,7 @@
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_07_0287_RGBN20171026134804529"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_05_0174_RGBN20171026134751451"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_04_0160_RGBN20171026134749837"/>
+      <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3323d_2015_1001_02_0079_RGBN_XCALIB20171211175709709"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323D_Extents20171127151945097"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_07_0297_RGBN20171026134805979"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="Point_ge20170928164851296"/>
@@ -2274,6 +2290,7 @@
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_18_2015_1004_RGB_RECT20170330112352872"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_07_0281_RGBN20171026134803742"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_22_2015_1004_RGB_RECT20170330112503128"/>
+      <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3323d_2015_1001_02_0078_RGBN_XCALIB20171211175709538"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_01_0034_RGBN20171026134735984"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_06_0222_RGBN20171026134756792"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_04_0140_RGBN20171026134747519"/>
@@ -2355,6 +2372,7 @@
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_04_0157_RGBN20171026134749480"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100006" srcDatumTransform="-1" destDatumTransform="-1" layerid="x3324cb_2015_L3a20170930104649723"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="memory_20171126185734082"/>
+      <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3323d_2015_1001_02_0081_RGBN_XCALIB20171211175710095"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_07_0300_RGBN20171026134806383"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_04_0152_RGBN20171026134748906"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100005" srcDatumTransform="-1" destDatumTransform="-1" layerid="x3323db_2015_L3a_GDAL_Roughness20171122132742152"/>
@@ -2444,6 +2462,7 @@
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_03_0092_RGBN20171026134742267"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_03_0121_RGBN20171026134745456"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_05_0208_RGBN20171026134755329"/>
+      <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3323d_2015_1001_02_0082_RGBN_XCALIB20171211175710278"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_07_0282_RGBN20171026134803858"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_03_0115_RGBN20171026134744757"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_04_0172_RGBN20171026134751191"/>
@@ -2525,6 +2544,7 @@
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_02_0069_RGBN20171026134739916"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="SewefonteinIntactAreaForTrialV120171122105116574"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_01_0021_RGBN20171026134734433"/>
+      <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3323d_2015_1001_02_0080_RGBN_XCALIB20171211175709899"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_04_0166_RGBN20171026134750481"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_04_0141_RGBN20171026134747674"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_03_0123_RGBN20171026134745727"/>
@@ -2565,6 +2585,7 @@
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_06_0230_RGBN20171026134757739"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_02_0058_RGBN20171026134738569"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_13_2015_1004_RGB_RECT20170330112352515"/>
+      <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3323d_2015_1001_02_0077_RGBN_XCALIB20171211175709360"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_05_2015_1004_RGB_RECT20170330112501829"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_05_0195_RGBN20171026134753786"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_05_0209_RGBN20171026134755435"/>
@@ -2647,6 +2668,7 @@
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_03_0111_RGBN20171026134744356"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_02_0062_RGBN20171026134739029"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_06_0240_RGBN20171026134758851"/>
+      <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3323d_2015_1001_02_0076_RGBN_XCALIB20171211175709094"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="GEF_Sampling_Points_Vdw_V120171124161121831"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="ADT20171126175004882"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_01_0009_RGBN20171026134733021"/>
@@ -3387,8 +3409,6 @@
       <item>3323d_2015_1001_02_0077_RGBN20171127152322728</item>
       <item>o3323d_2015_1001_02_0077_RGBN20171127153752026</item>
       <item>o3323d_2015_1001_02_0077_Lo25Wgs84_RGBN20171127160752807</item>
-      <item>o3323d_2015_1001_02_0077_Lo25Wgs84_RGBN_XCALIB20171127161445639</item>
-      <item>o3324c_2015_1004_02_0044_RGBN_XCALIB20171127161715559</item>
       <item>Point_ge20171209220054712</item>
       <item>Point_ge20171209220523330</item>
       <item>Point_ge20171209220546564</item>
@@ -3402,6 +3422,13 @@
       <item>Point_ge20171209220633507</item>
       <item>Point_ge20171209220638859</item>
       <item>Point_ge20171209220644583</item>
+      <item>o3323d_2015_1001_02_0076_RGBN_XCALIB20171211175709094</item>
+      <item>o3323d_2015_1001_02_0077_RGBN_XCALIB20171211175709360</item>
+      <item>o3323d_2015_1001_02_0078_RGBN_XCALIB20171211175709538</item>
+      <item>o3323d_2015_1001_02_0079_RGBN_XCALIB20171211175709709</item>
+      <item>o3323d_2015_1001_02_0080_RGBN_XCALIB20171211175709899</item>
+      <item>o3323d_2015_1001_02_0081_RGBN_XCALIB20171211175710095</item>
+      <item>o3323d_2015_1001_02_0082_RGBN_XCALIB20171211175710278</item>
     </custom-order>
   </layer-tree-canvas>
   <legend updateDrawingOrder="true">
@@ -3682,7 +3709,7 @@
         <legendlayerfile isInOverview="0" layerid="Sheet_50K20170329124416633" visible="1"/>
       </filegroup>
     </legendlayer>
-    <legendgroup open="true" checked="Qt::Unchecked" name="SUDEM">
+    <legendgroup open="false" checked="Qt::Unchecked" name="SUDEM">
       <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="x3323db_2015_L3a_Lo23Wgs84" showFeatureCount="0">
         <filegroup open="true" hidden="false">
           <legendlayerfile isInOverview="0" layerid="x3323db_2015_L3a_Lo23Wgs8420171127150519448" visible="0"/>
@@ -3789,9 +3816,9 @@
       </legendgroup>
     </legendgroup>
     <legendgroup open="true" checked="Qt::PartiallyChecked" name="NGI 2015 RGBN">
-      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Ngi2015_3324C_ROI" showFeatureCount="0">
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Ngi2015_3324C_ROI" showFeatureCount="0">
         <filegroup open="true" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="Ngi2015_3324C_ROI20171028185721552" visible="1"/>
+          <legendlayerfile isInOverview="0" layerid="Ngi2015_3324C_ROI20171028185721552" visible="0"/>
         </filegroup>
       </legendlayer>
       <legendgroup open="false" checked="Qt::Unchecked" name="3324C">
@@ -5321,15 +5348,15 @@
           </filegroup>
         </legendlayer>
       </legendgroup>
-      <legendgroup open="true" checked="Qt::PartiallyChecked" name="3323D Unrectified">
+      <legendgroup open="true" checked="Qt::Unchecked" name="3323D Unrectified">
         <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3323d_2015_1001_02_0077_RGBN" showFeatureCount="0">
           <filegroup open="true" hidden="false">
             <legendlayerfile isInOverview="0" layerid="3323d_2015_1001_02_0077_RGBN20171127152322728" visible="0"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="3323D_Extents" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="3323D_Extents" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="3323D_Extents20171127151945097" visible="1"/>
+            <legendlayerfile isInOverview="0" layerid="3323D_Extents20171127151945097" visible="0"/>
           </filegroup>
         </legendlayer>
       </legendgroup>
@@ -5346,14 +5373,39 @@
         </legendlayer>
       </legendgroup>
       <legendgroup open="true" checked="Qt::Checked" name="2015 GEF XCALIB">
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="o3324c_2015_1004_02_0044_RGBN_XCALIB" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="o3323d_2015_1001_02_0082_RGBN_XCALIB" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="o3324c_2015_1004_02_0044_RGBN_XCALIB20171127161715559" visible="1"/>
+            <legendlayerfile isInOverview="0" layerid="o3323d_2015_1001_02_0082_RGBN_XCALIB20171211175710278" visible="1"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="o3323d_2015_1001_02_0077_Lo25Wgs84_RGBN_XCALIB" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="o3323d_2015_1001_02_0081_RGBN_XCALIB" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="o3323d_2015_1001_02_0077_Lo25Wgs84_RGBN_XCALIB20171127161445639" visible="1"/>
+            <legendlayerfile isInOverview="0" layerid="o3323d_2015_1001_02_0081_RGBN_XCALIB20171211175710095" visible="1"/>
+          </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="o3323d_2015_1001_02_0080_RGBN_XCALIB" showFeatureCount="0">
+          <filegroup open="true" hidden="false">
+            <legendlayerfile isInOverview="0" layerid="o3323d_2015_1001_02_0080_RGBN_XCALIB20171211175709899" visible="1"/>
+          </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="o3323d_2015_1001_02_0079_RGBN_XCALIB" showFeatureCount="0">
+          <filegroup open="true" hidden="false">
+            <legendlayerfile isInOverview="0" layerid="o3323d_2015_1001_02_0079_RGBN_XCALIB20171211175709709" visible="1"/>
+          </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="o3323d_2015_1001_02_0078_RGBN_XCALIB" showFeatureCount="0">
+          <filegroup open="true" hidden="false">
+            <legendlayerfile isInOverview="0" layerid="o3323d_2015_1001_02_0078_RGBN_XCALIB20171211175709538" visible="1"/>
+          </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="o3323d_2015_1001_02_0077_RGBN_XCALIB" showFeatureCount="0">
+          <filegroup open="true" hidden="false">
+            <legendlayerfile isInOverview="0" layerid="o3323d_2015_1001_02_0077_RGBN_XCALIB20171211175709360" visible="1"/>
+          </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="o3323d_2015_1001_02_0076_RGBN_XCALIB" showFeatureCount="0">
+          <filegroup open="true" hidden="false">
+            <legendlayerfile isInOverview="0" layerid="o3323d_2015_1001_02_0076_RGBN_XCALIB20171211175709094" visible="1"/>
           </filegroup>
         </legendlayer>
       </legendgroup>
@@ -40468,6 +40520,69 @@ def my_form_open(dialog, layer, feature):
     </maplayer>
     <maplayer minimumScale="inf" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
       <extent>
+        <xmin>83708.5</xmin>
+        <ymin>-3717865.5</ymin>
+        <xmax>87618</xmax>
+        <ymax>-3710971.5</ymax>
+      </extent>
+      <id>o3323d_2015_1001_02_0076_RGBN_XCALIB20171211175709094</id>
+      <datasource>V:/Data/NGI/Rectified/3323D_2015_1001/RGBN/XCALIB/o3323d_2015_1001_02_0076_RGBN_XCALIB.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>o3323d_2015_1001_02_0076_RGBN_XCALIB</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=23 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100001</srsid>
+          <srid>0</srid>
+          <authid>USER:100001</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=23 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="1"/>
+        <noDataList bandNo="2" useSrcNoData="1"/>
+        <noDataList bandNo="3" useSrcNoData="1"/>
+        <noDataList bandNo="4" useSrcNoData="1"/>
+      </noData>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer opacity="1" alphaBand="-1" blueBand="2" greenBand="1" type="multibandcolor" redBand="4">
+          <rasterTransparency/>
+          <redContrastEnhancement>
+            <minValue>270</minValue>
+            <maxValue>3582</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>260</minValue>
+            <maxValue>1200</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>282</minValue>
+            <maxValue>1400</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer minimumScale="inf" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+      <extent>
         <xmin>-100712.129877513521933</xmin>
         <ymin>-3718075.90102248825132847</ymin>
         <xmax>-96642.02165317072649486</xmax>
@@ -40520,69 +40635,6 @@ def my_form_open(dialog, layer, feature):
           <blueContrastEnhancement>
             <minValue>0</minValue>
             <maxValue>2846</maxValue>
-            <algorithm>StretchToMinimumMaximum</algorithm>
-          </blueContrastEnhancement>
-        </rasterrenderer>
-        <brightnesscontrast brightness="0" contrast="0"/>
-        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
-        <rasterresampler maxOversampling="2"/>
-      </pipe>
-      <blendMode>0</blendMode>
-    </maplayer>
-    <maplayer minimumScale="inf" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
-      <extent>
-        <xmin>-100712.129877513521933</xmin>
-        <ymin>-3718075.90102248825132847</ymin>
-        <xmax>-96642.02165317072649486</xmax>
-        <ymax>-3710974.71220158925279975</ymax>
-      </extent>
-      <id>o3323d_2015_1001_02_0077_Lo25Wgs84_RGBN_XCALIB20171127161445639</id>
-      <datasource>V:/Data/NGI/Rectified/3323D_2015_1001/RGBN/o3323d_2015_1001_02_0077_Lo25Wgs84_RGBN_XCALIB.tif</datasource>
-      <keywordList>
-        <value></value>
-      </keywordList>
-      <layername>o3323d_2015_1001_02_0077_Lo25Wgs84_RGBN_XCALIB</layername>
-      <srs>
-        <spatialrefsys>
-          <proj4>+proj=tmerc +lat_0=0 +lon_0=25 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
-          <srsid>100000</srsid>
-          <srid>0</srid>
-          <authid>USER:100000</authid>
-          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=25 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
-          <projectionacronym>tmerc</projectionacronym>
-          <ellipsoidacronym></ellipsoidacronym>
-          <geographicflag>false</geographicflag>
-        </spatialrefsys>
-      </srs>
-      <customproperties>
-        <property key="identify/format" value="Value"/>
-      </customproperties>
-      <provider>gdal</provider>
-      <noData>
-        <noDataList bandNo="1" useSrcNoData="1"/>
-        <noDataList bandNo="2" useSrcNoData="1"/>
-        <noDataList bandNo="3" useSrcNoData="1"/>
-        <noDataList bandNo="4" useSrcNoData="1"/>
-      </noData>
-      <map-layer-style-manager current="">
-        <map-layer-style name=""/>
-      </map-layer-style-manager>
-      <pipe>
-        <rasterrenderer opacity="1" alphaBand="-1" blueBand="2" greenBand="1" type="multibandcolor" redBand="4">
-          <rasterTransparency/>
-          <redContrastEnhancement>
-            <minValue>438</minValue>
-            <maxValue>2937</maxValue>
-            <algorithm>StretchToMinimumMaximum</algorithm>
-          </redContrastEnhancement>
-          <greenContrastEnhancement>
-            <minValue>300</minValue>
-            <maxValue>1262</maxValue>
-            <algorithm>StretchToMinimumMaximum</algorithm>
-          </greenContrastEnhancement>
-          <blueContrastEnhancement>
-            <minValue>291</minValue>
-            <maxValue>1156</maxValue>
             <algorithm>StretchToMinimumMaximum</algorithm>
           </blueContrastEnhancement>
         </rasterrenderer>
@@ -40647,6 +40699,386 @@ def my_form_open(dialog, layer, feature):
           <blueContrastEnhancement>
             <minValue>0</minValue>
             <maxValue>2846</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer minimumScale="inf" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+      <extent>
+        <xmin>85092</xmin>
+        <ymin>-3717926.5</ymin>
+        <xmax>89027</xmax>
+        <ymax>-3710900</ymax>
+      </extent>
+      <id>o3323d_2015_1001_02_0077_RGBN_XCALIB20171211175709360</id>
+      <datasource>V:/Data/NGI/Rectified/3323D_2015_1001/RGBN/XCALIB/o3323d_2015_1001_02_0077_RGBN_XCALIB.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>o3323d_2015_1001_02_0077_RGBN_XCALIB</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=23 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100001</srsid>
+          <srid>0</srid>
+          <authid>USER:100001</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=23 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="1"/>
+        <noDataList bandNo="2" useSrcNoData="1"/>
+        <noDataList bandNo="3" useSrcNoData="1"/>
+        <noDataList bandNo="4" useSrcNoData="1"/>
+      </noData>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer opacity="1" alphaBand="-1" blueBand="2" greenBand="1" type="multibandcolor" redBand="4">
+          <rasterTransparency/>
+          <redContrastEnhancement>
+            <minValue>270</minValue>
+            <maxValue>3582</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>260</minValue>
+            <maxValue>1200</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>282</minValue>
+            <maxValue>1400</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer minimumScale="inf" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+      <extent>
+        <xmin>86492.5</xmin>
+        <ymin>-3717906.5</ymin>
+        <xmax>90452.5</xmax>
+        <ymax>-3710892.5</ymax>
+      </extent>
+      <id>o3323d_2015_1001_02_0078_RGBN_XCALIB20171211175709538</id>
+      <datasource>V:/Data/NGI/Rectified/3323D_2015_1001/RGBN/XCALIB/o3323d_2015_1001_02_0078_RGBN_XCALIB.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>o3323d_2015_1001_02_0078_RGBN_XCALIB</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=23 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100001</srsid>
+          <srid>0</srid>
+          <authid>USER:100001</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=23 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="1"/>
+        <noDataList bandNo="2" useSrcNoData="1"/>
+        <noDataList bandNo="3" useSrcNoData="1"/>
+        <noDataList bandNo="4" useSrcNoData="1"/>
+      </noData>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer opacity="1" alphaBand="-1" blueBand="2" greenBand="1" type="multibandcolor" redBand="4">
+          <rasterTransparency/>
+          <redContrastEnhancement>
+            <minValue>270</minValue>
+            <maxValue>3582</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>260</minValue>
+            <maxValue>1200</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>282</minValue>
+            <maxValue>1400</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer minimumScale="inf" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+      <extent>
+        <xmin>87889.5</xmin>
+        <ymin>-3718015.5</ymin>
+        <xmax>91841</xmax>
+        <ymax>-3711031</ymax>
+      </extent>
+      <id>o3323d_2015_1001_02_0079_RGBN_XCALIB20171211175709709</id>
+      <datasource>V:/Data/NGI/Rectified/3323D_2015_1001/RGBN/XCALIB/o3323d_2015_1001_02_0079_RGBN_XCALIB.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>o3323d_2015_1001_02_0079_RGBN_XCALIB</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=23 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100001</srsid>
+          <srid>0</srid>
+          <authid>USER:100001</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=23 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="1"/>
+        <noDataList bandNo="2" useSrcNoData="1"/>
+        <noDataList bandNo="3" useSrcNoData="1"/>
+        <noDataList bandNo="4" useSrcNoData="1"/>
+      </noData>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer opacity="1" alphaBand="-1" blueBand="2" greenBand="1" type="multibandcolor" redBand="4">
+          <rasterTransparency/>
+          <redContrastEnhancement>
+            <minValue>270</minValue>
+            <maxValue>3582</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>260</minValue>
+            <maxValue>1200</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>282</minValue>
+            <maxValue>1400</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer minimumScale="inf" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+      <extent>
+        <xmin>89238</xmin>
+        <ymin>-3718013.5</ymin>
+        <xmax>93203</xmax>
+        <ymax>-3711019.5</ymax>
+      </extent>
+      <id>o3323d_2015_1001_02_0080_RGBN_XCALIB20171211175709899</id>
+      <datasource>V:/Data/NGI/Rectified/3323D_2015_1001/RGBN/XCALIB/o3323d_2015_1001_02_0080_RGBN_XCALIB.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>o3323d_2015_1001_02_0080_RGBN_XCALIB</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=23 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100001</srsid>
+          <srid>0</srid>
+          <authid>USER:100001</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=23 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <customproperties>
+        <property key="embeddedWidgets/count" value="0"/>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="1"/>
+        <noDataList bandNo="2" useSrcNoData="1"/>
+        <noDataList bandNo="3" useSrcNoData="1"/>
+        <noDataList bandNo="4" useSrcNoData="1"/>
+      </noData>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer opacity="1" alphaBand="-1" blueBand="2" greenBand="1" type="multibandcolor" redBand="4">
+          <rasterTransparency/>
+          <redContrastEnhancement>
+            <minValue>270</minValue>
+            <maxValue>3582</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>260</minValue>
+            <maxValue>1200</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>282</minValue>
+            <maxValue>1400</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer minimumScale="inf" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+      <extent>
+        <xmin>90618</xmin>
+        <ymin>-3717988.5</ymin>
+        <xmax>94600.5</xmax>
+        <ymax>-3711023.5</ymax>
+      </extent>
+      <id>o3323d_2015_1001_02_0081_RGBN_XCALIB20171211175710095</id>
+      <datasource>V:/Data/NGI/Rectified/3323D_2015_1001/RGBN/XCALIB/o3323d_2015_1001_02_0081_RGBN_XCALIB.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>o3323d_2015_1001_02_0081_RGBN_XCALIB</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=23 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100001</srsid>
+          <srid>0</srid>
+          <authid>USER:100001</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=23 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="1"/>
+        <noDataList bandNo="2" useSrcNoData="1"/>
+        <noDataList bandNo="3" useSrcNoData="1"/>
+        <noDataList bandNo="4" useSrcNoData="1"/>
+      </noData>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer opacity="1" alphaBand="-1" blueBand="2" greenBand="1" type="multibandcolor" redBand="4">
+          <rasterTransparency/>
+          <redContrastEnhancement>
+            <minValue>270</minValue>
+            <maxValue>3582</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>260</minValue>
+            <maxValue>1200</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>282</minValue>
+            <maxValue>1400</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer minimumScale="inf" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+      <extent>
+        <xmin>91961</xmin>
+        <ymin>-3717964</ymin>
+        <xmax>95950.5</xmax>
+        <ymax>-3711031.5</ymax>
+      </extent>
+      <id>o3323d_2015_1001_02_0082_RGBN_XCALIB20171211175710278</id>
+      <datasource>V:/Data/NGI/Rectified/3323D_2015_1001/RGBN/XCALIB/o3323d_2015_1001_02_0082_RGBN_XCALIB.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>o3323d_2015_1001_02_0082_RGBN_XCALIB</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=23 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100001</srsid>
+          <srid>0</srid>
+          <authid>USER:100001</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=23 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <customproperties>
+        <property key="embeddedWidgets/count" value="0"/>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="1"/>
+        <noDataList bandNo="2" useSrcNoData="1"/>
+        <noDataList bandNo="3" useSrcNoData="1"/>
+        <noDataList bandNo="4" useSrcNoData="1"/>
+      </noData>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer opacity="1" alphaBand="-1" blueBand="2" greenBand="1" type="multibandcolor" redBand="4">
+          <rasterTransparency/>
+          <redContrastEnhancement>
+            <minValue>270</minValue>
+            <maxValue>3582</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>260</minValue>
+            <maxValue>1200</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>282</minValue>
+            <maxValue>1400</maxValue>
             <algorithm>StretchToMinimumMaximum</algorithm>
           </blueContrastEnhancement>
         </rasterrenderer>
@@ -43419,70 +43851,6 @@ def my_form_open(dialog, layer, feature):
           <blueContrastEnhancement>
             <minValue>0</minValue>
             <maxValue>2846</maxValue>
-            <algorithm>StretchToMinimumMaximum</algorithm>
-          </blueContrastEnhancement>
-        </rasterrenderer>
-        <brightnesscontrast brightness="0" contrast="0"/>
-        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
-        <rasterresampler maxOversampling="2"/>
-      </pipe>
-      <blendMode>0</blendMode>
-    </maplayer>
-    <maplayer minimumScale="inf" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
-      <extent>
-        <xmin>-95250.5</xmin>
-        <ymin>-3717606</ymin>
-        <xmax>-91366</xmax>
-        <ymax>-3710944</ymax>
-      </extent>
-      <id>o3324c_2015_1004_02_0044_RGBN_XCALIB20171127161715559</id>
-      <datasource>V:/Data/NGI/Rectified/3324C_2015_1004/RGBN/o3324c_2015_1004_02_0044_RGBN_XCALIB.tif</datasource>
-      <keywordList>
-        <value></value>
-      </keywordList>
-      <layername>o3324c_2015_1004_02_0044_RGBN_XCALIB</layername>
-      <srs>
-        <spatialrefsys>
-          <proj4>+proj=tmerc +lat_0=0 +lon_0=25 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
-          <srsid>100000</srsid>
-          <srid>0</srid>
-          <authid>USER:100000</authid>
-          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=25 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
-          <projectionacronym>tmerc</projectionacronym>
-          <ellipsoidacronym></ellipsoidacronym>
-          <geographicflag>false</geographicflag>
-        </spatialrefsys>
-      </srs>
-      <customproperties>
-        <property key="embeddedWidgets/count" value="0"/>
-        <property key="identify/format" value="Value"/>
-      </customproperties>
-      <provider>gdal</provider>
-      <noData>
-        <noDataList bandNo="1" useSrcNoData="1"/>
-        <noDataList bandNo="2" useSrcNoData="1"/>
-        <noDataList bandNo="3" useSrcNoData="1"/>
-        <noDataList bandNo="4" useSrcNoData="1"/>
-      </noData>
-      <map-layer-style-manager current="">
-        <map-layer-style name=""/>
-      </map-layer-style-manager>
-      <pipe>
-        <rasterrenderer opacity="1" alphaBand="-1" blueBand="2" greenBand="1" type="multibandcolor" redBand="4">
-          <rasterTransparency/>
-          <redContrastEnhancement>
-            <minValue>438</minValue>
-            <maxValue>2937</maxValue>
-            <algorithm>StretchToMinimumMaximum</algorithm>
-          </redContrastEnhancement>
-          <greenContrastEnhancement>
-            <minValue>300</minValue>
-            <maxValue>1262</maxValue>
-            <algorithm>StretchToMinimumMaximum</algorithm>
-          </greenContrastEnhancement>
-          <blueContrastEnhancement>
-            <minValue>291</minValue>
-            <maxValue>1156</maxValue>
             <algorithm>StretchToMinimumMaximum</algorithm>
           </blueContrastEnhancement>
         </rasterrenderer>
@@ -62268,6 +62636,19 @@ def my_form_open(dialog, layer, feature):
         <value>Point_ge20170928164810008</value>
         <value>Point_ge20170928164851296</value>
         <value>Point_ge20170928165040368</value>
+        <value>Point_ge20171209220054712</value>
+        <value>Point_ge20171209220523330</value>
+        <value>Point_ge20171209220546564</value>
+        <value>Point_ge20171209220555118</value>
+        <value>Point_ge20171209220600079</value>
+        <value>Point_ge20171209220606618</value>
+        <value>Point_ge20171209220613626</value>
+        <value>Point_ge20171209220619914</value>
+        <value>Point_ge20171209220624567</value>
+        <value>Point_ge20171209220629268</value>
+        <value>Point_ge20171209220633507</value>
+        <value>Point_ge20171209220638859</value>
+        <value>Point_ge20171209220644583</value>
         <value>QuickbirdGcp20170720173032402</value>
         <value>Quickbird_056844553010_01_Gcp20170802213252670</value>
         <value>SeweTchu_old_spekboomveld2_Vlok_SeweTchu_old_spekboomveld2_Vlok_kmz_Polygon20170811124255553</value>
@@ -62290,19 +62671,6 @@ def my_form_open(dialog, layer, feature):
         <value>sewefontein_tchuganu_bound_wgs8420170304123226893</value>
         <value>vlokveg2010_Tm2520170304123226893</value>
         <value>vlokveg2010_Tm25_Degr_copy20170304124946370</value>
-        <value>Point_ge20171209220054712</value>
-        <value>Point_ge20171209220523330</value>
-        <value>Point_ge20171209220546564</value>
-        <value>Point_ge20171209220555118</value>
-        <value>Point_ge20171209220600079</value>
-        <value>Point_ge20171209220606618</value>
-        <value>Point_ge20171209220613626</value>
-        <value>Point_ge20171209220619914</value>
-        <value>Point_ge20171209220624567</value>
-        <value>Point_ge20171209220629268</value>
-        <value>Point_ge20171209220633507</value>
-        <value>Point_ge20171209220638859</value>
-        <value>Point_ge20171209220644583</value>
       </LayerSnappingList>
       <LayerSnappingEnabledList type="QStringList">
         <value>disabled</value>
