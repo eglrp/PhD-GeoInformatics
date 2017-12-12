@@ -1257,6 +1257,32 @@ GEF Site Stratification
 - As per Cos' suggestion: number the plots randomly over the whole area.  Then start sampling from plot 1-N.  This way the plots are spread out randomly no matter how many we end up doing.  But -  we should then number each strata separately.  This also complicates/counters the clustering objective i.e. there will not be so many close clusters in a small random subsample of all the generated plots.  Still this seems the best way to go as then we don't need to know how many plots we are going to do up front (which we don't).  
 - We can prevent overlap with existing plots by manually shifting any that are too close together.  
 
+NGI XCALIB Meeting
+--------------------
+JPEG and 4 band issues
+-----------------------
+- NGI's end-user imagery is COMPRESSION=YCbCr JPEG i.e. this can only be three band.  The YCbCr colour space does allow better compression.
+  They use 8bit depth.
+- Geotiff with 12bit JPEG (packed in UINT16 band) is supported.  By GDAL.  This is/can be JPEG per band, so you can have any number of bands.  
+- The above would of course be at least twice the size of the 8bit end user jpegs.
+- From http://www.gdal.org/frmt_gtiff.html: "When translating a RGB image to JPEG-In-TIFF, using PHOTOMETRIC=YCBCR can make the size of the image typically 2 to 3 times smaller than the default photometric value (RGB). When using PHOTOMETRIC=YCBCR, the INTERLEAVE option must be kept to its default value (PIXEL), otherwise libtiff will fail to compress the data. Note also that the dimensions of the tiles or strips must be a multiple of 8 for PHOTOMETRIC=RGB or 16 for PHOTOMETRIC=YCBCR"
+- Howvever my own test showed that PHOTOMETRIC=RGB gave much the same tiff size as PHOTOMETRIC=YCBCR for an eg NGI tiff.  I used "gdal_translate -co "PHOTOMETRIC=RGB" -co "COMPRESS=JPEG" 3323DB_01_2015_1001_RGB_RECT.tif 3323DB_01_2015_1001_RGB_RECT.testPhotom.tif"  and "gdaladdo -r average --config COMPRESS_OVERVIEW JPEG 3323DB_01_2015_1001_RGB_RECT.testPhotom.tif 2 4 8 16 32 64"
+- I have confirmed that an xcalib file can be jpeg compressed using "gdal_translate -co "PHOTOMETRIC=RGB" -co "COMPRESS=JPEG" -co "INTERLEAVE=BAND" -co "NBITS=12" o3323d_2015_1001_02_0076_RGBN_XCALIB.tif o3323d_2015_1001_02_0076_RGBN_XCALIB.Jpeg.tif".  And it is a little more than twice the size of a similar resolution end-user 8bit file.  So that all bodes well.
+- NB The deflate compressed xcalib tif is visually identical to a jpeg compressed version. The jpeg compressed version is less than half the size.
+
+Integration into NGI processes
+------------------------------
+- Store the images as 4 band images - jpeg ok if necessary.
+- Distribution Options:
+  A) - Distribute raw unrectified 4 band, uint16 imagery (should include Integraph camera calibrations but no LUT, dodging, normalisation or other post processing).  Also distribute, aero-triangulation data,  the xcalib utility and instructions.  Then the user finds the appropriate MODIS image and runs xcalib.   
+  B) - Make 4 band raw imagery with no LUT (can invert LUT on existing images).  Rectify this imagery = "raw rect".  You can then do whatever LUT, normalisation, scaling to 8bit etc on this imagery and distribute as ususal to customer for visual interp.  You can also distribute the "raw rect" imagery with xcalib utility and instructions to user.  Then user gets MODIS and applies xcalib.  This option is my favourite as it gives flexibility to user on xcalib params but they don't need expensive rectification software.  
+  C) Take the "raw rect" imagery above and implement a semi-automated process that fetches appropriate MODIS image for each block, applies xcalib.  Then make a finished xcalib product available to user.  
+  
+
+-------------------------------
+
+
+
 Funding
 --------
 - NRF Innovation Award
