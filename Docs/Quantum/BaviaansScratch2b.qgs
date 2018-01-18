@@ -9,49 +9,49 @@
       <customproperties/>
       <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="GEF">
         <customproperties/>
-        <layer-tree-group expanded="0" checked="Qt::Checked" name="Dec 2017 Sampling Points">
+        <layer-tree-group expanded="0" checked="Qt::Unchecked" name="Dec 2017 Sampling Points">
           <customproperties/>
-          <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Point_ge20171209220644583" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/DGPS Dec 2017/st49/Point_ge.shp" name="Point_ge">
+          <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="Point_ge20171209220644583" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/DGPS Dec 2017/st49/Point_ge.shp" name="Point_ge">
             <customproperties/>
           </layer-tree-layer>
-          <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Point_ge20171209220638859" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/DGPS Dec 2017/st48/Point_ge.shp" name="Point_ge">
+          <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="Point_ge20171209220638859" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/DGPS Dec 2017/st48/Point_ge.shp" name="Point_ge">
             <customproperties/>
           </layer-tree-layer>
-          <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Point_ge20171209220633507" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/DGPS Dec 2017/st45/Point_ge.shp" name="Point_ge">
+          <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="Point_ge20171209220633507" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/DGPS Dec 2017/st45/Point_ge.shp" name="Point_ge">
             <customproperties/>
           </layer-tree-layer>
-          <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Point_ge20171209220629268" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/DGPS Dec 2017/st43/Point_ge.shp" name="Point_ge">
+          <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="Point_ge20171209220629268" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/DGPS Dec 2017/st43/Point_ge.shp" name="Point_ge">
             <customproperties/>
           </layer-tree-layer>
-          <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Point_ge20171209220624567" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/DGPS Dec 2017/st39/Point_ge.shp" name="Point_ge">
+          <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="Point_ge20171209220624567" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/DGPS Dec 2017/st39/Point_ge.shp" name="Point_ge">
             <customproperties/>
           </layer-tree-layer>
-          <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Point_ge20171209220619914" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/DGPS Dec 2017/st35/Point_ge.shp" name="Point_ge">
+          <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="Point_ge20171209220619914" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/DGPS Dec 2017/st35/Point_ge.shp" name="Point_ge">
             <customproperties/>
           </layer-tree-layer>
-          <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Point_ge20171209220613626" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/DGPS Dec 2017/st22/Point_ge.shp" name="Point_ge">
+          <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="Point_ge20171209220613626" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/DGPS Dec 2017/st22/Point_ge.shp" name="Point_ge">
             <customproperties/>
           </layer-tree-layer>
-          <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Point_ge20171209220606618" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/DGPS Dec 2017/st19/Point_ge.shp" name="Point_ge">
+          <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="Point_ge20171209220606618" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/DGPS Dec 2017/st19/Point_ge.shp" name="Point_ge">
             <customproperties/>
           </layer-tree-layer>
-          <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Point_ge20171209220600079" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/DGPS Dec 2017/st18/Point_ge.shp" name="Point_ge">
+          <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="Point_ge20171209220600079" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/DGPS Dec 2017/st18/Point_ge.shp" name="Point_ge">
             <customproperties/>
           </layer-tree-layer>
-          <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Point_ge20171209220555118" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/DGPS Dec 2017/st17/Point_ge.shp" name="Point_ge">
+          <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="Point_ge20171209220555118" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/DGPS Dec 2017/st17/Point_ge.shp" name="Point_ge">
             <customproperties/>
           </layer-tree-layer>
-          <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Point_ge20171209220546564" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/DGPS Dec 2017/st15/Point_ge.shp" name="Point_ge">
+          <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="Point_ge20171209220546564" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/DGPS Dec 2017/st15/Point_ge.shp" name="Point_ge">
             <customproperties/>
           </layer-tree-layer>
-          <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Point_ge20171209220523330" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/DGPS Dec 2017/st7/Point_ge.shp" name="Point_ge">
+          <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="Point_ge20171209220523330" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/DGPS Dec 2017/st7/Point_ge.shp" name="Point_ge">
             <customproperties/>
           </layer-tree-layer>
-          <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Point_ge20171209220054712" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/DGPS Dec 2017/st2/Point_ge.dbf" name="Point_ge">
+          <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="Point_ge20171209220054712" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/DGPS Dec 2017/st2/Point_ge.dbf" name="Point_ge">
             <customproperties/>
           </layer-tree-layer>
         </layer-tree-group>
-        <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="Sept 2017 Trial">
+        <layer-tree-group expanded="0" checked="Qt::PartiallyChecked" name="Sept 2017 Trial">
           <customproperties/>
           <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="ThnuganuDegradedTrialPointsV220170831101259382" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/BMR ShapeFiles/ThnuganuDegradedTrialPointsV2.kml|layername=ThnuganuDegradedTrialPointsV2" name="ThnuganuDegradedTrialPointsV2">
             <customproperties/>
@@ -90,16 +90,16 @@
         <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="sewefontein_tchuganu_bound_wgs8420170304123226893" source="D:\Data\Development\Projects\PhD GeoInformatics\Data/Misc/BMR ShapeFiles/sewefontein_tchuganu_bound_wgs84.shp" name="sewefontein_tchuganu_bound_wgs84">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="GEF_Property_boundaries20171124113951351" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/BMR ShapeFiles/GEF Property boundaries.kmz" name="GEF Property boundaries Property boundaries Polygon">
+        <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="GEF_Property_boundaries20171124113951351" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/BMR ShapeFiles/GEF Property boundaries.kmz" name="GEF Property boundaries Property boundaries Polygon">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="0" providerKey="ogr" checked="Qt::Unchecked" id="GEF_Sampling_Points20171126190058329" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/GEF Sampling Points.shp" name="GEF Sampling Points">
+        <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="GEF_Sampling_Points20171126190058329" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/GEF Sampling Points.shp" name="GEF Sampling Points">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="GEF_Sampling_Areas20171126191058114" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/GEF Sampling Areas.shp" name="GEF Sampling Areas">
+        <layer-tree-layer expanded="0" providerKey="ogr" checked="Qt::Unchecked" id="GEF_Sampling_Areas20171126191058114" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/GEF Sampling Areas.shp" name="GEF Sampling Areas">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="GEF_Sampling_Areas_V220180118154257585" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/GEF Sampling Areas V2.shp" name="GEF Sampling Areas V2">
+        <layer-tree-layer expanded="0" providerKey="ogr" checked="Qt::Unchecked" id="GEF_Sampling_Areas_V220180118154257585" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/GEF Sampling Areas V2.shp" name="GEF Sampling Areas V2">
           <customproperties/>
         </layer-tree-layer>
         <layer-tree-layer expanded="0" providerKey="ogr" checked="Qt::Unchecked" id="GEF_Sampling_Areas_Bidolph20171124114452284" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/GEF Sampling Areas Bidolph.shp" name="GEF Sampling Areas Bidolph">
@@ -117,16 +117,25 @@
         <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="sewefontein20170327111125203" source="D:\Data\Development\Projects\PhD GeoInformatics\Data/Misc/BMR ShapeFiles/sewefontein.shp" name="Sewefontein">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="Intersection20180118153043865" source="memory_4:.shp" name="Intersection">
+        <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="Intersection20180118153043865" source="C:/OSGEO4~1/bin/memory_4:.shp" name="Intersection">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="Intersection20180118153043644" source="memory_3:.shp" name="Intersection">
+        <layer-tree-layer expanded="1" providerKey="memory" checked="Qt::Unchecked" id="memory_20180118165008962" source="memory?geometry=MultiPolygon&amp;crs=EPSG:4326&amp;field=Name:string(255,0)&amp;field=Temp:integer(-1,0)" name="Multipart">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="memory" checked="Qt::Checked" id="Plantable_Degraded20180118152358212" source="multipolygon?crs=EPSG:4326&amp;memoryid={2343454b-4f32-492f-bf7b-cc603fb17aee}" name="Plantable Degraded">
+        <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="Union20180118164647340" source="C:/OSGEO4~1/bin/memory_0:.shp" name="Union">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="GEF5_Baviaans_Data20170811134206913" source="C:/Data/Development/Projects/PhD GeoInformatics/Docs/Misc/Baviaanskloof/GEF5_Baviaans_Data.shp" name="GEF5_Baviaans_Data">
+        <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="Intersection20180118153043644" source="C:/OSGEO4~1/bin/memory_3:.shp" name="Intersection">
+          <customproperties/>
+        </layer-tree-layer>
+        <layer-tree-layer expanded="1" providerKey="memory" checked="Qt::Unchecked" id="Plantable_Degraded20180118152358212" source="memory?geometry=MultiPolygon&amp;crs=EPSG:4326" name="Plantable Degraded">
+          <customproperties/>
+        </layer-tree-layer>
+        <layer-tree-layer expanded="1" providerKey="memory" checked="Qt::Unchecked" id="memory_20180118163442111" source="memory?geometry=Polygon&amp;crs=EPSG:4326&amp;field=Name:string(255,0)&amp;field=descriptio:string(255,0)&amp;field=timestamp:string(255,0)&amp;field=begin:string(255,0)&amp;field=end:string(255,0)&amp;field=altitudeMo:string(255,0)&amp;field=tessellate:string(255,0)&amp;field=extrude:string(255,0)&amp;field=visibility:string(255,0)&amp;field=drawOrder:string(255,0)&amp;field=icon:string(255,0)&amp;field=name_2:string(255,0)&amp;field=descript_1:string(255,0)&amp;field=timestamp_:string(255,0)&amp;field=begin_2:string(255,0)&amp;field=end_2:string(255,0)&amp;field=altitude_1:string(255,0)&amp;field=tessella_1:double(20,5)&amp;field=extrude_2:double(20,5)&amp;field=visibili_1:double(20,5)&amp;field=draworder_:double(20,5)&amp;field=icon_2:string(255,0)" name="Single parts">
+          <customproperties/>
+        </layer-tree-layer>
+        <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="GEF_Ancillary_Data20180118162638155" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/GEF Ancillary Data.shp" name="GEF Ancillary Data">
           <customproperties/>
         </layer-tree-layer>
       </layer-tree-group>
@@ -2218,10 +2227,10 @@
   <mapcanvas>
     <units>degrees</units>
     <extent>
-      <xmin>23.93096338816824087</xmin>
-      <ymin>-33.56956757600683261</ymin>
-      <xmax>23.99072732395083207</xmax>
-      <ymax>-33.55139596861279472</ymax>
+      <xmin>23.91974587086623671</xmin>
+      <ymin>-33.57384211836217958</ymin>
+      <xmax>23.98511269223352116</xmax>
+      <ymax>-33.53416825961487291</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
@@ -2275,6 +2284,7 @@
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_01_0008_RGBN20171026134732899"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_03_0108_RGBN20171026134744047"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3323d_2015_1001_02_0077_RGBN_XCALIB20171211175709360"/>
+      <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="Baviaans_contract_Data20170304123226846"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_01_0013_RGBN20171026134733498"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_04_0141_RGBN20171026134747674"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_05_0204_RGBN20171026134754870"/>
@@ -2305,6 +2315,7 @@
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_04_2015_1001_RGB_RECT20170330110901973"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_05_0213_RGBN20171026134755816"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_03_0112_RGBN20171026134744453"/>
+      <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="memory_20180118163442111"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_16_2015_1004_RGB_RECT20170330112502638"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_09_2015_1001_RGB_RECT20170330110902191"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="Point_ge20171209220633507"/>
@@ -2322,6 +2333,7 @@
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_21_2015_1005_RGB_RECT20170330112621253"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="memory_20171126163634248"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="memory_20171126185734082"/>
+      <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="GEF_Ancillary_Data20180118162638155"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_06_0227_RGBN20171026134757407"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_05_0191_RGBN20171026134753289"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_03_0091_RGBN20171026134742152"/>
@@ -2364,6 +2376,7 @@
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_04_0157_RGBN20171026134749480"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_25_2015_1001_RGB_RECT20170330110903241"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_01_0021_RGBN20171026134734433"/>
+      <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="ADSp20180118191947960"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_06_0218_RGBN20171026134756407"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_07_0269_RGBN20171026134802167"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_02_0048_RGBN20171026134737444"/>
@@ -2380,6 +2393,7 @@
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_06_0221_RGBN20171026134756687"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_03_0118_RGBN20171026134745099"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_07_2015_1004_RGB_RECT20170330112501954"/>
+      <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="ADSp20180118191739149"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_02_0056_RGBN20171026134738388"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_05_0192_RGBN20171026134753452"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_01_0014_RGBN20171026134733598"/>
@@ -2542,8 +2556,8 @@
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_22_2015_1004_RGB_RECT20170330112503128"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="APV20171126174243930"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="Point_ge20171209220638859"/>
-      <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_05_0178_RGBN20171026134751884"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="Intersection20180118153043644"/>
+      <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_05_0178_RGBN20171026134751884"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_20_2015_1005_RGB_RECT20170330112621172"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_01_2015_1004_RGB_RECT20170330112351644"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="GEF_Sampling_Areas_V220171126165909075"/>
@@ -2568,6 +2582,7 @@
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_01_0019_RGBN20171026134734206"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_03_0087_RGBN20171026134741700"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_01_0022_RGBN20171026134734533"/>
+      <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="memory_20180118165008962"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_24_2015_1004_RGB_RECT20170330112353353"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_02_0082_RGBN20171026134741186"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_01_0002_RGBN20171026134732238"/>
@@ -2624,6 +2639,7 @@
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_06_0259_RGBN20171026134800861"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_05_2015_1004_RGB_RECT20170330112501829"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_02_0076_RGBN20171026134740584"/>
+      <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="Union20180118164647340"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_05_0212_RGBN20171026134755731"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_05_0173_RGBN20171026134751299"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_22_2015_1004_RGB_RECT20170330112353188"/>
@@ -2646,8 +2662,8 @@
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_05_2015_1001_RGB_RECT20170330110902024"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_07_0276_RGBN20171026134803085"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_06_2015_1004_RGB_RECT20170330112501899"/>
-      <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_07_0296_RGBN20171026134805829"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="memory_20180118155431327"/>
+      <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_07_0296_RGBN20171026134805829"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_06_0224_RGBN20171026134757036"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_03_0116_RGBN20171026134744865"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100005" srcDatumTransform="-1" destDatumTransform="-1" layerid="x3323db_2015_L3a_hs20171122110358471"/>
@@ -2673,6 +2689,7 @@
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_23_2015_1001_RGB_RECT20170330110903117"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_03_0101_RGBN20171026134743206"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_10_2015_1004_RGB_RECT20170330112502187"/>
+      <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="memory_20180118155744406"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_01_0017_RGBN20171026134733913"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_07_0271_RGBN20171026134802408"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_07_0303_RGBN20171026134806797"/>
@@ -2761,6 +2778,7 @@
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_24_2015_1001_RGB_RECT20170330110903192"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="Point_ge20180118150546813"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_06_2015_1004_RGB_RECT20170330112351935"/>
+      <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="Union20180118163133908"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_02_0067_RGBN20171026134739635"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_04_0160_RGBN20171026134749837"/>
       <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="o3324c_2015_1004_06_0232_RGBN20171026134758012"/>
@@ -3099,7 +3117,6 @@
       <item>TOACorrected_056844553010_01_P001_OrthoPanSharpen_0564401520170809141333684</item>
       <item>TOACorrected_056844553010_01_P001_OrthoPanSharpen_05644015_copy20170810125646826</item>
       <item>SeweTchu_old_spekboomveld2_Vlok_SeweTchu_old_spekboomveld2_Vlok_kmz_Polygon20170811124255553</item>
-      <item>GEF5_Baviaans_Data20170811134206913</item>
       <item>s34_e024_1arc_v320170822170556971</item>
       <item>ThnuganuDegradedTrialPointsV220170831101259382</item>
       <item>SewefonteinIntactTrialPointsV220170831113851977</item>
@@ -3469,79 +3486,83 @@
       <item>Intersection20180118153043644</item>
       <item>Intersection20180118153043865</item>
       <item>GEF_Sampling_Areas_V220180118154257585</item>
+      <item>GEF_Ancillary_Data20180118162638155</item>
+      <item>memory_20180118163442111</item>
+      <item>Union20180118164647340</item>
+      <item>memory_20180118165008962</item>
     </custom-order>
   </layer-tree-canvas>
   <legend updateDrawingOrder="true">
     <legendgroup open="true" checked="Qt::PartiallyChecked" name="Baviaans Vector Data">
       <legendgroup open="true" checked="Qt::PartiallyChecked" name="GEF">
-        <legendgroup open="false" checked="Qt::Checked" name="Dec 2017 Sampling Points">
-          <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Point_ge" showFeatureCount="0">
+        <legendgroup open="false" checked="Qt::Unchecked" name="Dec 2017 Sampling Points">
+          <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Point_ge" showFeatureCount="0">
             <filegroup open="true" hidden="false">
-              <legendlayerfile isInOverview="0" layerid="Point_ge20171209220644583" visible="1"/>
+              <legendlayerfile isInOverview="0" layerid="Point_ge20171209220644583" visible="0"/>
             </filegroup>
           </legendlayer>
-          <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Point_ge" showFeatureCount="0">
+          <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Point_ge" showFeatureCount="0">
             <filegroup open="true" hidden="false">
-              <legendlayerfile isInOverview="0" layerid="Point_ge20171209220638859" visible="1"/>
+              <legendlayerfile isInOverview="0" layerid="Point_ge20171209220638859" visible="0"/>
             </filegroup>
           </legendlayer>
-          <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Point_ge" showFeatureCount="0">
+          <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Point_ge" showFeatureCount="0">
             <filegroup open="true" hidden="false">
-              <legendlayerfile isInOverview="0" layerid="Point_ge20171209220633507" visible="1"/>
+              <legendlayerfile isInOverview="0" layerid="Point_ge20171209220633507" visible="0"/>
             </filegroup>
           </legendlayer>
-          <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Point_ge" showFeatureCount="0">
+          <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Point_ge" showFeatureCount="0">
             <filegroup open="true" hidden="false">
-              <legendlayerfile isInOverview="0" layerid="Point_ge20171209220629268" visible="1"/>
+              <legendlayerfile isInOverview="0" layerid="Point_ge20171209220629268" visible="0"/>
             </filegroup>
           </legendlayer>
-          <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Point_ge" showFeatureCount="0">
+          <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Point_ge" showFeatureCount="0">
             <filegroup open="true" hidden="false">
-              <legendlayerfile isInOverview="0" layerid="Point_ge20171209220624567" visible="1"/>
+              <legendlayerfile isInOverview="0" layerid="Point_ge20171209220624567" visible="0"/>
             </filegroup>
           </legendlayer>
-          <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Point_ge" showFeatureCount="0">
+          <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Point_ge" showFeatureCount="0">
             <filegroup open="true" hidden="false">
-              <legendlayerfile isInOverview="0" layerid="Point_ge20171209220619914" visible="1"/>
+              <legendlayerfile isInOverview="0" layerid="Point_ge20171209220619914" visible="0"/>
             </filegroup>
           </legendlayer>
-          <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Point_ge" showFeatureCount="0">
+          <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Point_ge" showFeatureCount="0">
             <filegroup open="true" hidden="false">
-              <legendlayerfile isInOverview="0" layerid="Point_ge20171209220613626" visible="1"/>
+              <legendlayerfile isInOverview="0" layerid="Point_ge20171209220613626" visible="0"/>
             </filegroup>
           </legendlayer>
-          <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Point_ge" showFeatureCount="0">
+          <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Point_ge" showFeatureCount="0">
             <filegroup open="true" hidden="false">
-              <legendlayerfile isInOverview="0" layerid="Point_ge20171209220606618" visible="1"/>
+              <legendlayerfile isInOverview="0" layerid="Point_ge20171209220606618" visible="0"/>
             </filegroup>
           </legendlayer>
-          <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Point_ge" showFeatureCount="0">
+          <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Point_ge" showFeatureCount="0">
             <filegroup open="true" hidden="false">
-              <legendlayerfile isInOverview="0" layerid="Point_ge20171209220600079" visible="1"/>
+              <legendlayerfile isInOverview="0" layerid="Point_ge20171209220600079" visible="0"/>
             </filegroup>
           </legendlayer>
-          <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Point_ge" showFeatureCount="0">
+          <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Point_ge" showFeatureCount="0">
             <filegroup open="true" hidden="false">
-              <legendlayerfile isInOverview="0" layerid="Point_ge20171209220555118" visible="1"/>
+              <legendlayerfile isInOverview="0" layerid="Point_ge20171209220555118" visible="0"/>
             </filegroup>
           </legendlayer>
-          <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Point_ge" showFeatureCount="0">
+          <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Point_ge" showFeatureCount="0">
             <filegroup open="true" hidden="false">
-              <legendlayerfile isInOverview="0" layerid="Point_ge20171209220546564" visible="1"/>
+              <legendlayerfile isInOverview="0" layerid="Point_ge20171209220546564" visible="0"/>
             </filegroup>
           </legendlayer>
-          <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Point_ge" showFeatureCount="0">
+          <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Point_ge" showFeatureCount="0">
             <filegroup open="true" hidden="false">
-              <legendlayerfile isInOverview="0" layerid="Point_ge20171209220523330" visible="1"/>
+              <legendlayerfile isInOverview="0" layerid="Point_ge20171209220523330" visible="0"/>
             </filegroup>
           </legendlayer>
-          <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Point_ge" showFeatureCount="0">
+          <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Point_ge" showFeatureCount="0">
             <filegroup open="true" hidden="false">
-              <legendlayerfile isInOverview="0" layerid="Point_ge20171209220054712" visible="1"/>
+              <legendlayerfile isInOverview="0" layerid="Point_ge20171209220054712" visible="0"/>
             </filegroup>
           </legendlayer>
         </legendgroup>
-        <legendgroup open="true" checked="Qt::PartiallyChecked" name="Sept 2017 Trial">
+        <legendgroup open="false" checked="Qt::PartiallyChecked" name="Sept 2017 Trial">
           <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="ThnuganuDegradedTrialPointsV2" showFeatureCount="0">
             <filegroup open="true" hidden="false">
               <legendlayerfile isInOverview="0" layerid="ThnuganuDegradedTrialPointsV220170831101259382" visible="0"/>
@@ -3600,24 +3621,24 @@
             <legendlayerfile isInOverview="0" layerid="sewefontein_tchuganu_bound_wgs8420170304123226893" visible="0"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="GEF Property boundaries Property boundaries Polygon" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="GEF Property boundaries Property boundaries Polygon" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="GEF_Property_boundaries20171124113951351" visible="1"/>
+            <legendlayerfile isInOverview="0" layerid="GEF_Property_boundaries20171124113951351" visible="0"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="GEF Sampling Points" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="GEF Sampling Points" showFeatureCount="0">
+          <filegroup open="true" hidden="false">
+            <legendlayerfile isInOverview="0" layerid="GEF_Sampling_Points20171126190058329" visible="1"/>
+          </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="GEF Sampling Areas" showFeatureCount="0">
           <filegroup open="false" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="GEF_Sampling_Points20171126190058329" visible="0"/>
-          </filegroup>
-        </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="GEF Sampling Areas" showFeatureCount="0">
-          <filegroup open="true" hidden="false">
             <legendlayerfile isInOverview="0" layerid="GEF_Sampling_Areas20171126191058114" visible="0"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="GEF Sampling Areas V2" showFeatureCount="0">
-          <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="GEF_Sampling_Areas_V220180118154257585" visible="1"/>
+        <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="GEF Sampling Areas V2" showFeatureCount="0">
+          <filegroup open="false" hidden="false">
+            <legendlayerfile isInOverview="0" layerid="GEF_Sampling_Areas_V220180118154257585" visible="0"/>
           </filegroup>
         </legendlayer>
         <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="GEF Sampling Areas Bidolph" showFeatureCount="0">
@@ -3650,19 +3671,34 @@
             <legendlayerfile isInOverview="0" layerid="Intersection20180118153043865" visible="0"/>
           </filegroup>
         </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Multipart" showFeatureCount="0">
+          <filegroup open="true" hidden="false">
+            <legendlayerfile isInOverview="0" layerid="memory_20180118165008962" visible="0"/>
+          </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Union" showFeatureCount="0">
+          <filegroup open="true" hidden="false">
+            <legendlayerfile isInOverview="0" layerid="Union20180118164647340" visible="0"/>
+          </filegroup>
+        </legendlayer>
         <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Intersection" showFeatureCount="0">
           <filegroup open="true" hidden="false">
             <legendlayerfile isInOverview="0" layerid="Intersection20180118153043644" visible="0"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Plantable Degraded" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Plantable Degraded" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="Plantable_Degraded20180118152358212" visible="1"/>
+            <legendlayerfile isInOverview="0" layerid="Plantable_Degraded20180118152358212" visible="0"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="GEF5_Baviaans_Data" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Single parts" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="GEF5_Baviaans_Data20170811134206913" visible="1"/>
+            <legendlayerfile isInOverview="0" layerid="memory_20180118163442111" visible="0"/>
+          </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="GEF Ancillary Data" showFeatureCount="0">
+          <filegroup open="true" hidden="false">
+            <legendlayerfile isInOverview="0" layerid="GEF_Ancillary_Data20180118162638155" visible="1"/>
           </filegroup>
         </legendlayer>
       </legendgroup>
@@ -27268,18 +27304,12 @@ def my_form_open(dialog, layer, feature):
       <previewExpression>COALESCE( "Feat_Name", '&lt;NULL>' )</previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
-      <extent>
-        <xmin>23.93745221174792093</xmin>
-        <ymin>-33.61355353023630244</ymin>
-        <xmax>24.02510929806746987</xmax>
-        <ymax>-33.52711517462024915</ymax>
-      </extent>
-      <id>GEF5_Baviaans_Data20170811134206913</id>
-      <datasource>../Misc/Baviaanskloof/GEF5_Baviaans_Data.shp</datasource>
+      <id>GEF_Ancillary_Data20180118162638155</id>
+      <datasource>../../Data/GEF Sampling/GEF Ancillary Data.shp</datasource>
       <keywordList>
         <value></value>
       </keywordList>
-      <layername>GEF5_Baviaans_Data</layername>
+      <layername>GEF Ancillary Data</layername>
       <srs>
         <spatialrefsys>
           <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
@@ -27292,7 +27322,7 @@ def my_form_open(dialog, layer, feature):
           <geographicflag>true</geographicflag>
         </spatialrefsys>
       </srs>
-      <provider encoding="System">ogr</provider>
+      <provider encoding="UTF-8">ogr</provider>
       <vectorjoins/>
       <layerDependencies/>
       <expressionfields/>
@@ -27309,11 +27339,14 @@ def my_form_open(dialog, layer, feature):
       </edittypes>
       <renderer-v2 attr="Descr" forceraster="0" symbollevels="0" type="categorizedSymbol" enableorderby="0">
         <categories>
-          <category render="true" symbol="0" value="Plantable Degraded Spekboomveld" label="Plantable Degraded Spekboomveld"/>
-          <category render="true" symbol="1" value="Planted Area" label="Planted Area"/>
-          <category render="false" symbol="2" value="Sewefontein Border" label="Sewefontein Border"/>
-          <category render="false" symbol="3" value="Tchuganu Border" label="Tchuganu Border"/>
-          <category render="false" symbol="4" value="" label=""/>
+          <category render="true" symbol="0" value="" label=""/>
+          <category render="true" symbol="1" value="Beacosbek (Dr. van der Wat)" label="Beacosbek (Dr. van der Wat)"/>
+          <category render="true" symbol="2" value="Beacosnek (Mr. Biddulph)" label="Beacosnek (Mr. Biddulph)"/>
+          <category render="true" symbol="3" value="Bosdorp (ECPTA)" label="Bosdorp (ECPTA)"/>
+          <category render="true" symbol="4" value="Plantable Degraded Spekboomveld" label="Plantable Degraded Spekboomveld"/>
+          <category render="true" symbol="5" value="Planted Area" label="Planted Area"/>
+          <category render="true" symbol="6" value="Sewefontein" label="Sewefontein"/>
+          <category render="true" symbol="7" value="Tchnuganu" label="Tchnuganu"/>
         </categories>
         <symbols>
           <symbol alpha="1" clip_to_extent="1" type="fill" name="0">
@@ -27324,7 +27357,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="customdash_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="179,204,36,255"/>
+              <prop k="line_color" v="175,212,53,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="0.66"/>
               <prop k="line_width_unit" v="MM"/>
@@ -27343,7 +27376,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="customdash_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="164,50,205,255"/>
+              <prop k="line_color" v="90,44,229,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="0.66"/>
               <prop k="line_width_unit" v="MM"/>
@@ -27362,7 +27395,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="customdash_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="221,68,78,255"/>
+              <prop k="line_color" v="82,229,82,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="0.66"/>
               <prop k="line_width_unit" v="MM"/>
@@ -27381,7 +27414,7 @@ def my_form_open(dialog, layer, feature):
               <prop k="customdash_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="57,203,108,255"/>
+              <prop k="line_color" v="43,130,216,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="0.66"/>
               <prop k="line_width_unit" v="MM"/>
@@ -27400,7 +27433,64 @@ def my_form_open(dialog, layer, feature):
               <prop k="customdash_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="87,143,210,255"/>
+              <prop k="line_color" v="222,102,132,255"/>
+              <prop k="line_style" v="solid"/>
+              <prop k="line_width" v="0.66"/>
+              <prop k="line_width_unit" v="MM"/>
+              <prop k="offset" v="0"/>
+              <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="use_custom_dash" v="0"/>
+              <prop k="width_map_unit_scale" v="0,0,0,0,0,0"/>
+            </layer>
+          </symbol>
+          <symbol alpha="1" clip_to_extent="1" type="fill" name="5">
+            <layer pass="0" class="SimpleLine" locked="0">
+              <prop k="capstyle" v="square"/>
+              <prop k="customdash" v="5;2"/>
+              <prop k="customdash_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="customdash_unit" v="MM"/>
+              <prop k="draw_inside_polygon" v="0"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="line_color" v="84,227,192,255"/>
+              <prop k="line_style" v="solid"/>
+              <prop k="line_width" v="0.66"/>
+              <prop k="line_width_unit" v="MM"/>
+              <prop k="offset" v="0"/>
+              <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="use_custom_dash" v="0"/>
+              <prop k="width_map_unit_scale" v="0,0,0,0,0,0"/>
+            </layer>
+          </symbol>
+          <symbol alpha="1" clip_to_extent="1" type="fill" name="6">
+            <layer pass="0" class="SimpleLine" locked="0">
+              <prop k="capstyle" v="square"/>
+              <prop k="customdash" v="5;2"/>
+              <prop k="customdash_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="customdash_unit" v="MM"/>
+              <prop k="draw_inside_polygon" v="0"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="line_color" v="203,142,85,255"/>
+              <prop k="line_style" v="solid"/>
+              <prop k="line_width" v="0.66"/>
+              <prop k="line_width_unit" v="MM"/>
+              <prop k="offset" v="0"/>
+              <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="use_custom_dash" v="0"/>
+              <prop k="width_map_unit_scale" v="0,0,0,0,0,0"/>
+            </layer>
+          </symbol>
+          <symbol alpha="1" clip_to_extent="1" type="fill" name="7">
+            <layer pass="0" class="SimpleLine" locked="0">
+              <prop k="capstyle" v="square"/>
+              <prop k="customdash" v="5;2"/>
+              <prop k="customdash_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="customdash_unit" v="MM"/>
+              <prop k="draw_inside_polygon" v="0"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="line_color" v="224,52,224,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="0.66"/>
               <prop k="line_width_unit" v="MM"/>
@@ -27642,7 +27732,7 @@ def my_form_open(dialog, layer, feature):
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
       <attributeactions default="-1"/>
-      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="&quot;id&quot;" sortOrder="0">
         <columns>
           <column width="-1" hidden="0" type="field" name="id"/>
           <column width="296" hidden="0" type="field" name="Descr"/>
@@ -28171,7 +28261,7 @@ def my_form_open(dialog, layer, feature):
         <default field="drawOrder" expression=""/>
         <default field="icon" expression=""/>
       </defaults>
-      <previewExpression></previewExpression>
+      <previewExpression>COALESCE( "Name", '&lt;NULL>' )</previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <extent>
@@ -29961,7 +30051,7 @@ def my_form_open(dialog, layer, feature):
         <multilineenabled fieldname="" on=""/>
         <selectedonly on=""/>
       </labelattributes>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <aliases>
         <alias field="Name" index="0" name=""/>
         <alias field="descriptio" index="1" name=""/>
@@ -29981,10 +30071,10 @@ def my_form_open(dialog, layer, feature):
       <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="1">
         <columns/>
       </attributetableconfig>
-      <editform></editform>
+      <editform>.</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath></editforminitfilepath>
+      <editforminitfilepath>.</editforminitfilepath>
       <editforminitcode><![CDATA[]]></editforminitcode>
       <featformsuppress>0</featformsuppress>
       <editorlayout>generatedlayout</editorlayout>
@@ -30117,7 +30207,7 @@ def my_form_open(dialog, layer, feature):
         <multilineenabled fieldname="" on=""/>
         <selectedonly on=""/>
       </labelattributes>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <aliases>
         <alias field="Name" index="0" name=""/>
         <alias field="descriptio" index="1" name=""/>
@@ -30134,13 +30224,13 @@ def my_form_open(dialog, layer, feature):
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
       <attributeactions default="-1"/>
-      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="672046640">
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
         <columns/>
       </attributetableconfig>
-      <editform></editform>
+      <editform>.</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath></editforminitfilepath>
+      <editforminitfilepath>.</editforminitfilepath>
       <editforminitcode><![CDATA[]]></editforminitcode>
       <featformsuppress>0</featformsuppress>
       <editorlayout>generatedlayout</editorlayout>
@@ -30979,20 +31069,20 @@ def my_form_open(dialog, layer, feature):
         <multilineenabled fieldname="" on=""/>
         <selectedonly on=""/>
       </labelattributes>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <aliases/>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
       <attributeactions default="-1"/>
-      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="103636184">
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
         <columns>
           <column width="-1" hidden="1" type="actions"/>
         </columns>
       </attributetableconfig>
-      <editform></editform>
+      <editform>.</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath></editforminitfilepath>
+      <editforminitfilepath>.</editforminitfilepath>
       <editforminitcode><![CDATA[]]></editforminitcode>
       <featformsuppress>0</featformsuppress>
       <editorlayout>generatedlayout</editorlayout>
@@ -33574,20 +33664,20 @@ def my_form_open(dialog, layer, feature):
         <multilineenabled fieldname="" on=""/>
         <selectedonly on=""/>
       </labelattributes>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <aliases>
         <alias field="Comment" index="0" name=""/>
       </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
       <attributeactions default="-1"/>
-      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="115771720">
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
         <columns/>
       </attributetableconfig>
-      <editform></editform>
+      <editform>.</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath></editforminitfilepath>
+      <editforminitfilepath>.</editforminitfilepath>
       <editforminitcode><![CDATA[]]></editforminitcode>
       <featformsuppress>0</featformsuppress>
       <editorlayout>generatedlayout</editorlayout>
@@ -33693,20 +33783,20 @@ def my_form_open(dialog, layer, feature):
         <multilineenabled fieldname="" on=""/>
         <selectedonly on=""/>
       </labelattributes>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <aliases>
         <alias field="Comment" index="0" name=""/>
       </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
       <attributeactions default="-1"/>
-      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="116967272">
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
         <columns/>
       </attributetableconfig>
-      <editform></editform>
+      <editform>.</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath></editforminitfilepath>
+      <editforminitfilepath>.</editforminitfilepath>
       <editforminitcode><![CDATA[]]></editforminitcode>
       <featformsuppress>0</featformsuppress>
       <editorlayout>generatedlayout</editorlayout>
@@ -33812,20 +33902,20 @@ def my_form_open(dialog, layer, feature):
         <multilineenabled fieldname="" on=""/>
         <selectedonly on=""/>
       </labelattributes>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <aliases>
         <alias field="Comment" index="0" name=""/>
       </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
       <attributeactions default="-1"/>
-      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="116973272">
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
         <columns/>
       </attributetableconfig>
-      <editform></editform>
+      <editform>.</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath></editforminitfilepath>
+      <editforminitfilepath>.</editforminitfilepath>
       <editforminitcode><![CDATA[]]></editforminitcode>
       <featformsuppress>0</featformsuppress>
       <editorlayout>generatedlayout</editorlayout>
@@ -33931,20 +34021,20 @@ def my_form_open(dialog, layer, feature):
         <multilineenabled fieldname="" on=""/>
         <selectedonly on=""/>
       </labelattributes>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <aliases>
         <alias field="Comment" index="0" name=""/>
       </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
       <attributeactions default="-1"/>
-      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="116965272">
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
         <columns/>
       </attributetableconfig>
-      <editform></editform>
+      <editform>.</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath></editforminitfilepath>
+      <editforminitfilepath>.</editforminitfilepath>
       <editforminitcode><![CDATA[]]></editforminitcode>
       <featformsuppress>0</featformsuppress>
       <editorlayout>generatedlayout</editorlayout>
@@ -34050,20 +34140,20 @@ def my_form_open(dialog, layer, feature):
         <multilineenabled fieldname="" on=""/>
         <selectedonly on=""/>
       </labelattributes>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <aliases>
         <alias field="Comment" index="0" name=""/>
       </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
       <attributeactions default="-1"/>
-      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="116987272">
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
         <columns/>
       </attributetableconfig>
-      <editform></editform>
+      <editform>.</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath></editforminitfilepath>
+      <editforminitfilepath>.</editforminitfilepath>
       <editforminitcode><![CDATA[]]></editforminitcode>
       <featformsuppress>0</featformsuppress>
       <editorlayout>generatedlayout</editorlayout>
@@ -37439,6 +37529,141 @@ def my_form_open(dialog, layer, feature):
       <previewExpression></previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <id>Union20180118164647340</id>
+      <datasource>../../../../../../OSGEO4~1/bin/memory_0:.shp</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>Union</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+          <srsid>3452</srsid>
+          <srid>4326</srid>
+          <authid>EPSG:4326</authid>
+          <description>WGS 84</description>
+          <projectionacronym>longlat</projectionacronym>
+          <ellipsoidacronym>WGS84</ellipsoidacronym>
+          <geographicflag>true</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <provider encoding="UTF-8">ogr</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <expressionfields/>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <edittypes>
+        <edittype widgetv2type="TextEdit" name="Name">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Temp">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+      </edittypes>
+      <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol" enableorderby="0">
+        <symbols>
+          <symbol alpha="1" clip_to_extent="1" type="fill" name="0">
+            <layer pass="0" class="SimpleFill" locked="0">
+              <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="color" v="210,27,85,255"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="0,0,0,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0.26"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="style" v="solid"/>
+            </layer>
+          </symbol>
+        </symbols>
+        <rotation/>
+        <sizescale scalemethod="diameter"/>
+      </renderer-v2>
+      <labeling type="simple"/>
+      <customproperties/>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerTransparency>0</layerTransparency>
+      <displayfield>Name</displayfield>
+      <label>0</label>
+      <labelattributes>
+        <label fieldname="" text="Label"/>
+        <family fieldname="" name="MS Shell Dlg 2"/>
+        <size fieldname="" units="pt" value="12"/>
+        <bold fieldname="" on="0"/>
+        <italic fieldname="" on="0"/>
+        <underline fieldname="" on="0"/>
+        <strikeout fieldname="" on="0"/>
+        <color fieldname="" red="0" blue="0" green="0"/>
+        <x fieldname=""/>
+        <y fieldname=""/>
+        <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
+        <angle fieldname="" value="0" auto="0"/>
+        <alignment fieldname="" value="center"/>
+        <buffercolor fieldname="" red="255" blue="255" green="255"/>
+        <buffersize fieldname="" units="pt" value="1"/>
+        <bufferenabled fieldname="" on=""/>
+        <multilineenabled fieldname="" on=""/>
+        <selectedonly on=""/>
+      </labelattributes>
+      <annotationform>.</annotationform>
+      <aliases>
+        <alias field="Name" index="0" name=""/>
+        <alias field="Temp" index="1" name=""/>
+      </aliases>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <attributeactions default="-1"/>
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
+        <columns>
+          <column width="-1" hidden="0" type="field" name="Name"/>
+          <column width="-1" hidden="0" type="field" name="descriptio"/>
+          <column width="-1" hidden="0" type="field" name="timestamp"/>
+          <column width="-1" hidden="0" type="field" name="begin"/>
+          <column width="-1" hidden="0" type="field" name="end"/>
+          <column width="-1" hidden="0" type="field" name="altitudeMo"/>
+          <column width="-1" hidden="0" type="field" name="tessellate"/>
+          <column width="-1" hidden="0" type="field" name="extrude"/>
+          <column width="-1" hidden="0" type="field" name="visibility"/>
+          <column width="-1" hidden="0" type="field" name="drawOrder"/>
+          <column width="-1" hidden="0" type="field" name="icon"/>
+          <column width="-1" hidden="0" type="field" name="name_2"/>
+          <column width="-1" hidden="0" type="field" name="descript_1"/>
+          <column width="-1" hidden="0" type="field" name="timestamp_"/>
+          <column width="-1" hidden="0" type="field" name="begin_2"/>
+          <column width="-1" hidden="0" type="field" name="end_2"/>
+          <column width="-1" hidden="0" type="field" name="altitude_1"/>
+          <column width="-1" hidden="0" type="field" name="tessella_1"/>
+          <column width="-1" hidden="0" type="field" name="extrude_2"/>
+          <column width="-1" hidden="0" type="field" name="visibili_1"/>
+          <column width="-1" hidden="0" type="field" name="draworder_"/>
+          <column width="-1" hidden="0" type="field" name="icon_2"/>
+          <column width="-1" hidden="1" type="actions"/>
+        </columns>
+      </attributetableconfig>
+      <editform>.</editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath>.</editforminitfilepath>
+      <editforminitcode><![CDATA[]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <widgets/>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <defaults>
+        <default field="Name" expression=""/>
+        <default field="Temp" expression=""/>
+      </defaults>
+      <previewExpression>COALESCE( "Name", '&lt;NULL>' )</previewExpression>
+    </maplayer>
+    <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <extent>
         <xmin>16.45802000000009002</xmin>
         <ymin>-46.98249799999990728</ymin>
@@ -40525,6 +40750,328 @@ def my_form_open(dialog, layer, feature):
         <default field="AREA" expression=""/>
         <default field="HECTARES" expression=""/>
         <default field="HAS" expression=""/>
+      </defaults>
+      <previewExpression></previewExpression>
+    </maplayer>
+    <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <id>memory_20180118163442111</id>
+      <datasource>memory?geometry=Polygon&amp;crs=EPSG:4326&amp;field=Name:string(255,0)&amp;field=descriptio:string(255,0)&amp;field=timestamp:string(255,0)&amp;field=begin:string(255,0)&amp;field=end:string(255,0)&amp;field=altitudeMo:string(255,0)&amp;field=tessellate:string(255,0)&amp;field=extrude:string(255,0)&amp;field=visibility:string(255,0)&amp;field=drawOrder:string(255,0)&amp;field=icon:string(255,0)&amp;field=name_2:string(255,0)&amp;field=descript_1:string(255,0)&amp;field=timestamp_:string(255,0)&amp;field=begin_2:string(255,0)&amp;field=end_2:string(255,0)&amp;field=altitude_1:string(255,0)&amp;field=tessella_1:double(20,5)&amp;field=extrude_2:double(20,5)&amp;field=visibili_1:double(20,5)&amp;field=draworder_:double(20,5)&amp;field=icon_2:string(255,0)</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>Single parts</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+          <srsid>3452</srsid>
+          <srid>4326</srid>
+          <authid>EPSG:4326</authid>
+          <description>WGS 84</description>
+          <projectionacronym>longlat</projectionacronym>
+          <ellipsoidacronym>WGS84</ellipsoidacronym>
+          <geographicflag>true</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <provider encoding="UTF-8">memory</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <expressionfields/>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <edittypes>
+        <edittype widgetv2type="TextEdit" name="Name">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="descriptio">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="timestamp">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="begin">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="end">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="altitudeMo">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="tessellate">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="extrude">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="visibility">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="drawOrder">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="icon">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="name_2">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="descript_1">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="timestamp_">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="begin_2">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="end_2">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="altitude_1">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="tessella_1">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="extrude_2">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="visibili_1">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="draworder_">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="icon_2">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+      </edittypes>
+      <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol" enableorderby="0">
+        <symbols>
+          <symbol alpha="1" clip_to_extent="1" type="fill" name="0">
+            <layer pass="0" class="SimpleFill" locked="0">
+              <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="color" v="113,90,198,255"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="0,0,0,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0.26"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="style" v="solid"/>
+            </layer>
+          </symbol>
+        </symbols>
+        <rotation/>
+        <sizescale scalemethod="diameter"/>
+      </renderer-v2>
+      <labeling type="simple"/>
+      <customproperties/>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerTransparency>0</layerTransparency>
+      <displayfield>Name</displayfield>
+      <label>0</label>
+      <labelattributes>
+        <label fieldname="" text="Label"/>
+        <family fieldname="" name="MS Shell Dlg 2"/>
+        <size fieldname="" units="pt" value="12"/>
+        <bold fieldname="" on="0"/>
+        <italic fieldname="" on="0"/>
+        <underline fieldname="" on="0"/>
+        <strikeout fieldname="" on="0"/>
+        <color fieldname="" red="0" blue="0" green="0"/>
+        <x fieldname=""/>
+        <y fieldname=""/>
+        <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
+        <angle fieldname="" value="0" auto="0"/>
+        <alignment fieldname="" value="center"/>
+        <buffercolor fieldname="" red="255" blue="255" green="255"/>
+        <buffersize fieldname="" units="pt" value="1"/>
+        <bufferenabled fieldname="" on=""/>
+        <multilineenabled fieldname="" on=""/>
+        <selectedonly on=""/>
+      </labelattributes>
+      <annotationform>.</annotationform>
+      <aliases>
+        <alias field="Name" index="0" name=""/>
+        <alias field="descriptio" index="1" name=""/>
+        <alias field="timestamp" index="2" name=""/>
+        <alias field="begin" index="3" name=""/>
+        <alias field="end" index="4" name=""/>
+        <alias field="altitudeMo" index="5" name=""/>
+        <alias field="tessellate" index="6" name=""/>
+        <alias field="extrude" index="7" name=""/>
+        <alias field="visibility" index="8" name=""/>
+        <alias field="drawOrder" index="9" name=""/>
+        <alias field="icon" index="10" name=""/>
+        <alias field="name_2" index="11" name=""/>
+        <alias field="descript_1" index="12" name=""/>
+        <alias field="timestamp_" index="13" name=""/>
+        <alias field="begin_2" index="14" name=""/>
+        <alias field="end_2" index="15" name=""/>
+        <alias field="altitude_1" index="16" name=""/>
+        <alias field="tessella_1" index="17" name=""/>
+        <alias field="extrude_2" index="18" name=""/>
+        <alias field="visibili_1" index="19" name=""/>
+        <alias field="draworder_" index="20" name=""/>
+        <alias field="icon_2" index="21" name=""/>
+      </aliases>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <attributeactions default="-1"/>
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
+        <columns/>
+      </attributetableconfig>
+      <editform>.</editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath>.</editforminitfilepath>
+      <editforminitcode><![CDATA[]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <widgets/>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <defaults>
+        <default field="Name" expression=""/>
+        <default field="descriptio" expression=""/>
+        <default field="timestamp" expression=""/>
+        <default field="begin" expression=""/>
+        <default field="end" expression=""/>
+        <default field="altitudeMo" expression=""/>
+        <default field="tessellate" expression=""/>
+        <default field="extrude" expression=""/>
+        <default field="visibility" expression=""/>
+        <default field="drawOrder" expression=""/>
+        <default field="icon" expression=""/>
+        <default field="name_2" expression=""/>
+        <default field="descript_1" expression=""/>
+        <default field="timestamp_" expression=""/>
+        <default field="begin_2" expression=""/>
+        <default field="end_2" expression=""/>
+        <default field="altitude_1" expression=""/>
+        <default field="tessella_1" expression=""/>
+        <default field="extrude_2" expression=""/>
+        <default field="visibili_1" expression=""/>
+        <default field="draworder_" expression=""/>
+        <default field="icon_2" expression=""/>
+      </defaults>
+      <previewExpression></previewExpression>
+    </maplayer>
+    <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <id>memory_20180118165008962</id>
+      <datasource>memory?geometry=MultiPolygon&amp;crs=EPSG:4326&amp;field=Name:string(255,0)&amp;field=Temp:integer(-1,0)</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>Multipart</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+          <srsid>3452</srsid>
+          <srid>4326</srid>
+          <authid>EPSG:4326</authid>
+          <description>WGS 84</description>
+          <projectionacronym>longlat</projectionacronym>
+          <ellipsoidacronym>WGS84</ellipsoidacronym>
+          <geographicflag>true</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <provider encoding="UTF-8">memory</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <expressionfields/>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <edittypes>
+        <edittype widgetv2type="TextEdit" name="Name">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Temp">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+      </edittypes>
+      <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol" enableorderby="0">
+        <symbols>
+          <symbol alpha="1" clip_to_extent="1" type="fill" name="0">
+            <layer pass="0" class="SimpleFill" locked="0">
+              <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="color" v="153,184,117,255"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="0,0,0,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0.26"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="style" v="solid"/>
+            </layer>
+          </symbol>
+        </symbols>
+        <rotation/>
+        <sizescale scalemethod="diameter"/>
+      </renderer-v2>
+      <labeling type="simple"/>
+      <customproperties/>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerTransparency>0</layerTransparency>
+      <displayfield>Name</displayfield>
+      <label>0</label>
+      <labelattributes>
+        <label fieldname="" text="Label"/>
+        <family fieldname="" name="MS Shell Dlg 2"/>
+        <size fieldname="" units="pt" value="12"/>
+        <bold fieldname="" on="0"/>
+        <italic fieldname="" on="0"/>
+        <underline fieldname="" on="0"/>
+        <strikeout fieldname="" on="0"/>
+        <color fieldname="" red="0" blue="0" green="0"/>
+        <x fieldname=""/>
+        <y fieldname=""/>
+        <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
+        <angle fieldname="" value="0" auto="0"/>
+        <alignment fieldname="" value="center"/>
+        <buffercolor fieldname="" red="255" blue="255" green="255"/>
+        <buffersize fieldname="" units="pt" value="1"/>
+        <bufferenabled fieldname="" on=""/>
+        <multilineenabled fieldname="" on=""/>
+        <selectedonly on=""/>
+      </labelattributes>
+      <annotationform>.</annotationform>
+      <aliases>
+        <alias field="Name" index="0" name=""/>
+        <alias field="Temp" index="1" name=""/>
+      </aliases>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <attributeactions default="-1"/>
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
+        <columns/>
+      </attributetableconfig>
+      <editform>.</editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath>.</editforminitfilepath>
+      <editforminitcode><![CDATA[]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <widgets/>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <defaults>
+        <default field="Name" expression=""/>
+        <default field="Temp" expression=""/>
       </defaults>
       <previewExpression></previewExpression>
     </maplayer>
@@ -62632,12 +63179,16 @@ def my_form_open(dialog, layer, feature):
         <value>BMR_ROI20170304123226877</value>
         <value>Baviaans_contract_Data20170304123226846</value>
         <value>BaviiaansPeCorrectedGcpMay2017Combined20170720173845991</value>
-        <value>GEF5_Baviaans_Data20170811134206913</value>
+        <value>GEF_Ancillary_Data20180118162638155</value>
         <value>GEF_Property_boundaries20171124113951351</value>
         <value>GEF_Sampling_Areas20171126191058114</value>
         <value>GEF_Sampling_Areas_Bidolph20171124114452284</value>
+        <value>GEF_Sampling_Areas_V220180118154257585</value>
         <value>GEF_Sampling_Points20171126190058329</value>
+        <value>Intersection20180118153043644</value>
+        <value>Intersection20180118153043865</value>
         <value>Ngi2015_3324C_ROI20171028185721552</value>
+        <value>Plantable_Degraded20180118152358212</value>
         <value>Point_ge20170616222751098</value>
         <value>Point_ge20170616224351190</value>
         <value>Point_ge20170616224852956</value>
@@ -62654,6 +63205,11 @@ def my_form_open(dialog, layer, feature):
         <value>Point_ge20171209220633507</value>
         <value>Point_ge20171209220638859</value>
         <value>Point_ge20171209220644583</value>
+        <value>Point_ge20180118150511426</value>
+        <value>Point_ge20180118150525665</value>
+        <value>Point_ge20180118150536778</value>
+        <value>Point_ge20180118150546813</value>
+        <value>Point_ge20180118150557517</value>
         <value>QuickbirdGcp20170720173032402</value>
         <value>Quickbird_056844553010_01_Gcp20170802213252670</value>
         <value>SeweTchu_old_spekboomveld2_Vlok_SeweTchu_old_spekboomveld2_Vlok_kmz_Polygon20170811124255553</value>
@@ -62664,6 +63220,7 @@ def my_form_open(dialog, layer, feature):
         <value>SewefonteinTchuganuDegrMap20170703140304176</value>
         <value>Sheet_50K20170329124416633</value>
         <value>ThnuganuDegradedTrialPointsV220170831101259382</value>
+        <value>Union20180118164647340</value>
         <value>ZAF_adm120170804001858449</value>
         <value>abf_agc_191_plots20170727203413936</value>
         <value>abf_agc_191_plots_bound20170304123330439</value>
@@ -62672,21 +63229,17 @@ def my_form_open(dialog, layer, feature):
         <value>gps_coords_191plots20170727205628077</value>
         <value>initiativesa_spek_20170624101935911</value>
         <value>initiativessa20170624101501538</value>
+        <value>memory_20180118163442111</value>
+        <value>memory_20180118165008962</value>
         <value>sewefontein20170327111125203</value>
         <value>sewefontein_tchuganu_bound_wgs8420170304123226893</value>
         <value>vlokveg2010_Tm2520170304123226893</value>
         <value>vlokveg2010_Tm25_Degr_copy20170304124946370</value>
-        <value>Point_ge20180118150511426</value>
-        <value>Point_ge20180118150525665</value>
-        <value>Point_ge20180118150536778</value>
-        <value>Point_ge20180118150546813</value>
-        <value>Point_ge20180118150557517</value>
-        <value>Plantable_Degraded20180118152358212</value>
-        <value>Intersection20180118153043644</value>
-        <value>Intersection20180118153043865</value>
-        <value>GEF_Sampling_Areas_V220180118154257585</value>
       </LayerSnappingList>
       <LayerSnappingEnabledList type="QStringList">
+        <value>disabled</value>
+        <value>disabled</value>
+        <value>disabled</value>
         <value>disabled</value>
         <value>disabled</value>
         <value>disabled</value>
@@ -62805,8 +63358,14 @@ def my_form_open(dialog, layer, feature):
         <value>2</value>
         <value>2</value>
         <value>2</value>
+        <value>2</value>
+        <value>2</value>
+        <value>2</value>
       </LayerSnappingToleranceUnitList>
       <LayerSnapToList type="QStringList">
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
         <value>to_vertex_and_segment</value>
         <value>to_vertex_and_segment</value>
         <value>to_vertex_and_segment</value>
@@ -62868,6 +63427,9 @@ def my_form_open(dialog, layer, feature):
       <DefaultSnapType type="QString">off</DefaultSnapType>
       <DefaultSnapTolerance type="double">0</DefaultSnapTolerance>
       <LayerSnappingToleranceList type="QStringList">
+        <value>0.000000</value>
+        <value>0.000000</value>
+        <value>0.000000</value>
         <value>0.000000</value>
         <value>0.000000</value>
         <value>0.000000</value>

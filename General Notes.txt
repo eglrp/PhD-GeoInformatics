@@ -1262,7 +1262,8 @@ GEF Sampling Point Generation
 ------------------------------
 - This turned out to be quite involved practically in terms of sw tools
   1) Generate strata multipolygons in QGIS 
-  2) Generate random points in ArcGIS (QGIS buggy) using the 
+  2) Generate random points in ArcGIS (QGIS buggy) using the "Create Random Points" tool.  In layer->properties->definition query, one can filter the polygons inside which points are generated.  Save points to shapefile and import to QGIS.
+  3) Edit point attributes in QGIS add fields, populate "num" field with $rownum, then form ID field etc 
 
 
 NGI XCALIB Meeting
