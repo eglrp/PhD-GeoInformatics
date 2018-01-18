@@ -1257,6 +1257,14 @@ GEF Site Stratification
 - As per Cos' suggestion: number the plots randomly over the whole area.  Then start sampling from plot 1-N.  This way the plots are spread out randomly no matter how many we end up doing.  But -  we should then number each strata separately.  This also complicates/counters the clustering objective i.e. there will not be so many close clusters in a small random subsample of all the generated plots.  Still this seems the best way to go as then we don't need to know how many plots we are going to do up front (which we don't).  
 - We can prevent overlap with existing plots by manually shifting any that are too close together.  
 
+
+GEF Sampling Point Generation
+------------------------------
+- This turned out to be quite involved practically in terms of sw tools
+  1) Generate strata multipolygons in QGIS 
+  2) Generate random points in ArcGIS (QGIS buggy) using the 
+
+
 NGI XCALIB Meeting
 --------------------
 JPEG and 4 band issues
