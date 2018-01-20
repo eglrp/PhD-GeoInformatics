@@ -1,4 +1,6 @@
 # look at the spread of NDVI over planned GEF sampling points using NGI aerials
+# to get an idea of how good my stratification is and if we need any other classes
+
 
 import gdal
 import ogr
@@ -15,8 +17,8 @@ from scipy.stats import gaussian_kde
 from PIL import Image
 from PIL import ImageDraw
 
-tchnuganuImageFile = "V:/Data/NGI/Rectified/3324C_2015_1004/RGBN/o3324c_2015_1004_02_0044_RGBN_XCALIB.tif"
-vdwImageFile = "V:/Data/NGI/Rectified/3323D_2015_1001/RGBN/o3323d_2015_1001_02_0077_Lo25Wgs84_RGBN_XCALIB.tif"
+tchnuganuImageFile = "V:/Data/NGI/Rectified/3323D_2015_1001/RGBN/XCALIB/o3323d_2015_1001_02_0081_RGBN_XCALIB.tif"  # "V:/Data/NGI/Rectified/3324C_2015_1004/RGBN/o3324c_2015_1004_02_0044_RGBN_XCALIB.tif"
+vdwImageFile = "V:/Data/NGI/Rectified/3323D_2015_1001/RGBN/XCALIB/o3323d_2015_1001_02_0078_RGBN_XCALIB.tif"  # ""V:/Data/NGI/Rectified/3323D_2015_1001/RGBN/o3323d_2015_1001_02_0077_Lo25Wgs84_RGBN_XCALIB.tif"
 samplingPtFile = "C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/GEF Sampling Points.shp"
 pylab.close('all')
 
@@ -212,7 +214,8 @@ def extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_size=np.array((2
 
             # imbuf[:, :, 3] = imbuf[:, :, 3] / 2  # hack for NGI XCALIB
             if np.all(imbuf == 0):
-                print "imbuf zero"
+                print plot['ID'] + ": imbuf zero, assume NODATA ommitting"
+                break
             # for b in range(0, 4):
             #     imbuf[:, :, b] = imbuf[:, :, b] / max_im_vals_[b]
             if not win_mask.shape == imbuf.shape[0:2]:
@@ -307,7 +310,7 @@ def scatterd(x, y, labels=None, class_labels=None, thumbnails=None, regress=True
 
 ###########################################################################################################
 
-# read in cs gt
+# read in sampling pts
 ds = gdal.OpenEx(samplingPtFile, gdal.OF_VECTOR)
 if ds is None:
     print "Open failed./n"
@@ -341,7 +344,6 @@ ds = None
 
 
 # Read in the images
-
 tchnuganuDs = gdal.OpenEx(tchnuganuImageFile, gdal.OF_RASTER)
 if tchnuganuDs is None:
     print "Open failed./n"
@@ -358,7 +360,7 @@ if not geotransform is None:
 
 
 tchnuganuPlotDict = extract_all_features(tchnuganuDs, samplingPtSpatialRef, samplingPtDict, win_size=np.array([40, 40]),
-                                         win_rotation=0., plotFigures=True)
+                                  win_rotation=0., plotFigures=True)
 tchnuganuDs = None
 
 vdwDs = gdal.OpenEx(vdwImageFile, gdal.OF_RASTER)
