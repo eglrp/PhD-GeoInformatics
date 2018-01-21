@@ -377,17 +377,19 @@ if not geotransform is None:
     print 'Origin = (', geotransform[0], ',', geotransform[3], ')'
     print 'Pixel Size = (', geotransform[1], ',', geotransform[5], ')'
 
-vdwSewePlotDict = extract_all_features(vdwSeweDs, samplingPtSpatialRef, samplingPtDict, win_size=np.array([20, 20]),
+vdwSewePlotDict = extract_all_features(vdwSeweDs, samplingPtSpatialRef, samplingPtDict, win_size=np.array([40, 40]),
                                    win_rotation=0., plotFigures=True)
 vdwSeweDs = None
 
-plotDict = tchnuganuPlotDict.copy()
-plotDict.update(vdwSewePlotDict.copy())
-
+if False:
+    plotDict = tchnuganuPlotDict.copy()
+    plotDict.update(vdwSewePlotDict.copy())
+else:
+    plotDict = vdwSewePlotDict.copy()
 featureName = 'NDVI'
 featureVal = np.array([plot[featureName] for plot in plotDict.values()])
 # featureVal = np.log10(np.array([plot[featureName] for plot in plotDict.values()]))
-featureVal = np.float_power(10, np.array([plot[featureName] for plot in plotDict.values()]))
+# featureVal = np.float_power(10, np.array([plot[featureName] for plot in plotDict.values()]))
 xp = np.array([plot['Xp'] for plot in plotDict.values()])
 yp = np.array([plot['Yp'] for plot in plotDict.values()])
 xyp = np.hstack((np.vstack(xp),np.vstack(yp)))
@@ -412,24 +414,28 @@ class_labels = ['Severe', 'Moderate', 'Pristine'] #np.unique(classes)
 class_num = [35, 25, 30]
 featureValSub = np.array([])
 
+
+def variogram(distXy, distFeat, nbins=100):
+    sortIdx = np.argsort(distXy)
+    distXyGrid = np.linspace(distXy.min(), np.min((distXy.max(), 3500)), nbins + 1)
+    vg = np.zeros((nbins, 1))
+    for i in range(0, nbins):
+        idx = np.logical_and(distXy[sortIdx] > distXyGrid[i], distXy[sortIdx] <= distXyGrid[i + 1])
+        vg[i] = np.median(distFeat[sortIdx][idx])
+    return vg, distXyGrid[:-1] + np.diff(distXyGrid).mean()
+
+
 for i, cl in enumerate(class_labels):
     idx = classes == cl
     #idx = idx[:class_num[i]]
     #allIdx.append(idx)
     dxy = pdist(xyp[idx], 'euclidean')
     dfeat = pdist(np.vstack(featureVal[idx]), 'minkowski', p=1)
-    def variogram(distXy, distFeat, nbins=100):
-        sortIdx = np.argsort(distXy)
-        distXyGrid = np.linspace(distXy.min(), np.min((distXy.max(), 1500)), nbins+1)
-        vg = np.zeros((nbins, 1))
-        for i in range(0, nbins):
-            idx = np.logical_and(distXy[sortIdx] > distXyGrid[i], distXy[sortIdx] <= distXyGrid[i+1])
-            vg[i] = np.median(distFeat[sortIdx][idx])
-        return vg, distXyGrid[:-1] + np.diff(distXyGrid).mean()
     featVg, dBins = variogram(dxy, dfeat, nbins=30)
 
     pylab.subplot(2, 2, i+1)
-    pylab.plot(dBins, featVg, 'k-')
+    pylab.plot(dxy, dfeat, 'k.')
+    pylab.plot(dBins, featVg, 'r-', linewidth=2.)
     pylab.xlabel('Distance (m)')
     pylab.ylabel('NDVI')
     pylab.title(cl)
