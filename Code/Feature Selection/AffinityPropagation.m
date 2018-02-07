@@ -31,7 +31,7 @@ while true
         A(r, :) = Aineqj;
         A(r, r) = Aieqj;
     end
-    if count > 100 || sum(sum(abs(RAprev - (R + A)))) < 1e-6
+    if count > 100 || sum(sum(abs(RAprev - (R + A)))) < 1e-12
         break;
     end
     fprintf('.')
