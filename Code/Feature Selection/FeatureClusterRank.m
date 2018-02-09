@@ -1,6 +1,10 @@
 function res = FeatureClusterRank(data, varargin)
 
-clusterThresh = 0.2;
+clusterMethod = 'hierarchical';  %'ap'
+apclusterCrit = 'distance';  % proxm distance criterion for AP clustering 
+apclusterParam = 2;  % proxm distance criterion for AP clustering 
+
+clusterThresh = 0.2; %for hierarchical only
 criterion = naivebc;
 preferredFeatures = []; % preferred features to select from clusters in order of preference
 showFigures = false;
@@ -22,77 +26,106 @@ else  % TO DO - save this in the data set or do it outside of this call
     fl = strrep(fl, 'IrRat', 'RVI');
 end
 
-if useCorrelation
-    c = corr(+data);
-else
-    dataNorm = (10*(data*scalem(data, 'domain')));
-    c = zeros(size(dataNorm, 2), size(dataNorm, 2));
-    for i = 1:size(dataNorm, 2)
-        h(i) = entropy(+dataNorm(:, i));
+if strcmpi(clusterMethod, 'ap')  % affinity propagation
+    fprintf('Affinity propagation')
+    dataNorm = (data*scalem(data, 'variance'));
+    S = -(+dataNorm)' * proxm((+dataNorm)', apclusterCrit, apclusterParam);
+%     S = -distm((+dataNorm)'); % -ve euclidean distance betw feats
+    n = size(S, 1); % num feats
+    tmp = triu(S, 1) + tril(S, -1); % kind of unnecessary as Sii = 0 already
+    pref = sum(tmp(:)) / (n * (n - 1)); % from paper
+    
+    [idx, netsim, i, unconverged, dpsim, expref] = apcluster(S, pref);
+    nclust = length(unique(idx));
+    tmp(unique(idx)) = 1:nclust;
+    lab = tmp(idx); % labels 1 indexed
+    
+    if showFigures
+        fprintf('Number of clusters: %d\n', length(unique(idx)));
+        fprintf('Fitness (net similarity): %f\n', netsim);
+
+        exemplars = unique(idx);
+        count = 1;
+        for i = exemplars'
+            ii = find(idx == i);
+            fprintf('Cluster %d, Exemplar %sf\n', count, fl{i});
+            fprintf('%s, ',fl{ii});
+            fprintf('\n\n');
+            count = count + 1;
+        end            
     end
-    for i = 1:size(dataNorm, 2)
-        for j = i:size(dataNorm, 2)
-            c(i, j) = mi(+dataNorm(:, i), +dataNorm(:, j));
-            c(i, j) = c(i, j)/min(h(i), h(j)); % this should have a max of 1
+else
+    if useCorrelation
+        c = corr(+data);
+    else
+        dataNorm = (10*(data*scalem(data, 'domain')));
+        c = zeros(size(dataNorm, 2), size(dataNorm, 2));
+        for i = 1:size(dataNorm, 2)
+            h(i) = entropy(+dataNorm(:, i));
         end
+        for i = 1:size(dataNorm, 2)
+            for j = i:size(dataNorm, 2)
+                c(i, j) = mi(+dataNorm(:, i), +dataNorm(:, j));
+                c(i, j) = c(i, j)/min(h(i), h(j)); % this should have a max of 1
+            end
+        end
+        c = c + triu(c, 1)';   % + diag(ones(1, size(data, 2)));
+        c(h == 0, :) = 0;
+        c(:, h == 0) = 0;
     end
-    c = c + triu(c, 1)';   % + diag(ones(1, size(data, 2)));
-    c(h == 0, :) = 0;
-    c(:, h == 0) = 0;
-end
 
-if showFigures
-    figure;
-    hp = (imagesc(sqrt(abs(c))));
-    set(gca,'YTick',1:size(c,1))
-    set(gca,'YTickLabel',fl);
-    set(gca,'XTick',1:size(c,2))
-    set(gca,'XTickLabel',fl);
-%     rotatetl(gca,90,'top');
-    colormap gray
-    axis square
-end
-%heirarchical clustering
-fprintf('Heirarchical Clustering')
+    if showFigures
+        figure;
+        hp = (imagesc(sqrt(abs(c))));
+        set(gca,'YTick',1:size(c,1))
+        set(gca,'YTickLabel',fl);
+        set(gca,'XTick',1:size(c,2))
+        set(gca,'XTickLabel',fl);
+    %     rotatetl(gca,90,'top');
+        colormap gray
+        axis square
+    end
+    %heirarchical clustering
+    fprintf('Heirarchical Clustering')
 
-if useCorrelation
-    dendg = hclust(1-abs(c), clusterType); % dendrogra
-else
-    dendg = hclust(1-abs(c), clusterType); % dendrogra
-end
-%threshold correlation at 0.2
-nclust = sum(dendg(2, :) > clusterThresh); %13
-lab = hclust(1-abs(c), clusterType, nclust); % labels
+    if useCorrelation
+        dendg = hclust(1-abs(c), clusterType); % dendrogra
+    else
+        dendg = hclust(1-abs(c), clusterType); % dendrogra
+    end
+    %threshold correlation at 0.2
+    nclust = sum(dendg(2, :) > clusterThresh); %13
+    lab = hclust(1-abs(c), clusterType, nclust); % labels
 
-if showFigures
-    figure;
-    plotdg(dendg)
-    xidx = str2double(cellstr(get(gca, 'XTickLabel')));
-    set(gca, 'XTickLabel', fl(xidx));
-    % rotatetl(gca, 90, 'bottom');
-    hold on
-    hp = plot(0:length(xidx)+1, clusterThresh*ones(1,length(xidx)+2), 'k--');
-    axis tight
-    set(gca, 'TickDir', 'out')
-    set(gca, 'TickLength', [0 0])
-    set(gca, 'box', 'on')
-    set(gca, 'YGrid', 'on')
-    set(gca, 'FontSize', 9)
-    p = get(gca, 'Position');
-    p(2) = p(2)+p(end)*.15;
-    p(end) = p(end)*.85;
-    % set(gca, 'Position', p);
-    yl = get(gca, 'YTickLabel');
-    yln = str2double(cellstr(yl));
-    % set(gca, 'YTickLabel', max(yln)-yln);
-    ylabel('Dissimilarity', 'FontSize', 11)
-    xlabel('Features', 'FontSize', 11)
-%     view(90, 90)
-    hl = legend(hp, 'Diss. threshold', 'Location', 'NorthWest')
-    fontsize(11)
-    set(hl,'FontSize',11);
-end
-
+    if showFigures
+        figure;
+        plotdg(dendg)
+        xidx = str2double(cellstr(get(gca, 'XTickLabel')));
+        set(gca, 'XTickLabel', fl(xidx));
+        % rotatetl(gca, 90, 'bottom');
+        hold on
+        hp = plot(0:length(xidx)+1, clusterThresh*ones(1,length(xidx)+2), 'k--');
+        axis tight
+        set(gca, 'TickDir', 'out')
+        set(gca, 'TickLength', [0 0])
+        set(gca, 'box', 'on')
+        set(gca, 'YGrid', 'on')
+        set(gca, 'FontSize', 9)
+        p = get(gca, 'Position');
+        p(2) = p(2)+p(end)*.15;
+        p(end) = p(end)*.85;
+        % set(gca, 'Position', p);
+        yl = get(gca, 'YTickLabel');
+        yln = str2double(cellstr(yl));
+        % set(gca, 'YTickLabel', max(yln)-yln);
+        ylabel('Dissimilarity', 'FontSize', 11)
+        xlabel('Features', 'FontSize', 11)
+    %     view(90, 90)
+        hl = legend(hp, 'Diss. threshold', 'Location', 'NorthWest')
+        fontsize(11)
+        set(hl,'FontSize',11);
+    end
+end % hierarchical clustering
 
 % fprintf('K-Means Clustering')
 % lab = kmeans((dataAll')*scalem(dataAll', 'variance'), nclust);
