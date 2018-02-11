@@ -107,9 +107,10 @@ clear i m tr ts subData uci* hs* data feats cs idx fl
 numMethods = 2;
 %cdata = cdata([1,5])
 res = cell(numMethods, length(cdata));
+delete(gcp('nocreate'))
 parpool(4)
-ms = [1,8,9];
-is = [4,6];
+% ms = [1,8,9];
+% is = [4,6];
 for m = 1:numMethods
 %for mi = 1:3
 %    m = ms(mi);
@@ -121,10 +122,10 @@ for m = 1:numMethods
         innerClusterThresh = clusterThresh(i);
         innerNumFeatures = numFeatures(i);
         innerMethods = {...
-                FeatSelClusterRankM([], naivebc, 0, [], 'preferredFeatures', ...
-                    preferredFeatures{i}, 'clusterMethod', 'ap', 'showFigures', false, 'jmiFormulation', false);...
-                FeatSelClusterRankM([], naivebc, 0, [], 'preferredFeatures', ...
-                    preferredFeatures{i}, 'clusterThresh', innerClusterThresh, 'showFigures', false, 'jmiFormulation', false);...
+                FeatSelClusterRankM([], naivebc, 0, [], 'clusterMethod', 'ap', 'showFigures', false, ...
+                    'jmiFormulation', false); %, 'preferredFeatures', preferredFeatures{i});...
+                FeatSelClusterRankM([], naivebc, 0, [], 'clusterThresh', innerClusterThresh, 'showFigures', false, ...
+                    'jmiFormulation', false); %, 'preferredFeatures', preferredFeatures{i});...
             };
 
 %         innerMethods = {...
@@ -174,8 +175,11 @@ end
 methodMedianFsDuration = zeros(numMethods, length(cdata));
 methodMedianStability = zeros(numMethods, length(cdata));
 methodMedianAcc = zeros(numMethods, length(cdata));
-methodNames = {'featself-naivebc',...
-    'FCR-mi-jmi off-corr on'};
+methodNames = {'FCR-AP',...
+    'FCR-H'};
+
+% methodNames = {'featself-naivebc',...
+%     'FCR-mi-jmi off-corr on'};
 
 % methodNames = {'FCR-naivebc-jmi off-corr on', 'featseli-naivebc', 'featself-naivebc',...
 %     'featseli-mi', 'featself-mi', 'featself-nmi', 'JMI', 'FCR-mi-jmi off-corr on', 'FCR-mi-jmi on-corr on', ...
@@ -274,10 +278,13 @@ disp(methodNames(si)')
 disp('Methods ranked by speed:'); 
 disp(methodNames(si)')
 
+%%
 % resFeatIdx = res; % FCR res using preferred feats and featIdx for stability calcs 
 % save 'D:\Data\Development\Projects\PhD GeoInformatics\Data\Feature Selection\resFeatIdx.mat' resFeatIdx res
 save 'D:\Data\Development\Projects\PhD GeoInformatics\Data\Feature Selection\resHs4.mat' res resFci
 save 'D:\Data\Development\Projects\PhD GeoInformatics\Data\Feature Selection\CompareFsMethodsHs4.mat'
+
+save 'D:\Data\Development\Projects\PhD GeoInformatics\Data\Feature Selection\CompareFsMethodsApNoPrefFeat.mat'
 
 %% Make eg dendgrogram (for paper)
 close all;clear all;

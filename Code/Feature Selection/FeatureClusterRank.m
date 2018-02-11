@@ -27,21 +27,35 @@ else  % TO DO - save this in the data set or do it outside of this call
 end
 
 if strcmpi(clusterMethod, 'ap')  % affinity propagation
-    fprintf('Affinity propagation')
-    dataNorm = (data*scalem(data, 'variance'));
+    fprintf('Affinity propagation:\n')
+    % Note that the scaling below makes a huge difference to clustering
+    % performance.  Scaling to unit variance works much better, but the
+    % paper only talks of scaling to range [0,1].  Their dist similarity measure
+    % is a weakness as closely spaced features are not the only redundant
+    % ones, features that are linearly scaled versions of each will be
+    % redundant too but they are not close.  Then there are non-lin dependencies too.
+%     dataNorm = (data*scalem(data, 'domain'));  % according to chen et al 2017
+    dataNorm = (data*scalem(data, 'variance'));  
     S = -(+dataNorm)' * proxm((+dataNorm)', apclusterCrit, apclusterParam);
 %     S = -distm((+dataNorm)'); % -ve euclidean distance betw feats
     n = size(S, 1); % num feats
     tmp = triu(S, 1) + tril(S, -1); % kind of unnecessary as Sii = 0 already
-    pref = sum(tmp(:)) / (n * (n - 1)); % from paper
+    pref = 1.1*sum(tmp(:)) / (n * (n - 1)); % from paper but inc slightly otherwise we dont get enough features
     
     [idx, netsim, i, unconverged, dpsim, expref] = apcluster(S, pref);
+    if unconverged
+        S = S + 1e-9 * randn(size(S, 1), size(S, 2));
+        [idx, netsim, i, unconverged, dpsim, expref] = apcluster(S, pref, 'maxits', 1000, 'dampfact', 0.8);
+        if unconverged
+            error('ERROR: unconverged');
+        end
+    end
     nclust = length(unique(idx));
     tmp(unique(idx)) = 1:nclust;
     lab = tmp(idx); % labels 1 indexed
+    fprintf('Number of clusters: %d\n', length(unique(idx)));
     
     if showFigures
-        fprintf('Number of clusters: %d\n', length(unique(idx)));
         fprintf('Fitness (net similarity): %f\n', netsim);
 
         exemplars = unique(idx);
@@ -50,9 +64,10 @@ if strcmpi(clusterMethod, 'ap')  % affinity propagation
             ii = find(idx == i);
             fprintf('Cluster %d, Exemplar %sf\n', count, fl{i});
             fprintf('%s, ',fl{ii});
-            fprintf('\n\n');
+            fprintf('\n');
             count = count + 1;
         end            
+        fprintf('\n');
     end
 else
     if useCorrelation

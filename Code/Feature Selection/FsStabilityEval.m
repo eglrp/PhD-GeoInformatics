@@ -3,7 +3,11 @@ function res = FsStabilityEval(res, varargin)
 %   Evaluates feature stability
 
 ModifyDefaultArgs(varargin)
-numBootStraps = length(res.FeatIdx);
+if ~iscell(res.FeatIdx)
+    numBootStraps = size(res.FeatIdx, 2);
+else
+    numBootStraps = length(res.FeatIdx);
+end
 % find the Pearson correlation coefficient between importance scores if
 % they exist.  Note this only really works for ranking / featseli approaches and
 % not for fs, be etc.  Finds on full set of features.
