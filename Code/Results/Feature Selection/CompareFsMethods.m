@@ -108,13 +108,13 @@ numMethods = 2;
 %cdata = cdata([1,5])
 res = cell(numMethods, length(cdata));
 delete(gcp('nocreate'))
-parpool(4)
+% parpool(4)
 % ms = [1,8,9];
 % is = [4,6];
 for m = 1:numMethods
 %for mi = 1:3
 %    m = ms(mi);
-    parfor i = 1:length(cdata)
+    for i = 1:length(cdata)
 %    parfor ii = 1:2
 %        i = is(ii);
 %         fprintf('Method %d, Data %d -----------------------------------------------\n', m, i);
@@ -122,9 +122,10 @@ for m = 1:numMethods
         innerClusterThresh = clusterThresh(i);
         innerNumFeatures = numFeatures(i);
         innerMethods = {...
-                FeatSelClusterRankM([], naivebc, 0, [], 'clusterMethod', 'ap', 'showFigures', false, ...
-                    'jmiFormulation', false); %, 'preferredFeatures', preferredFeatures{i});...
-                FeatSelClusterRankM([], naivebc, 0, [], 'clusterThresh', innerClusterThresh, 'showFigures', false, ...
+%                 FeatSelClusterRankM([], naivebc, 0, [], 'clusterMethod', 'ap', 'showFigures', false, ...
+%                     'jmiFormulation', false); %, 'preferredFeatures', preferredFeatures{i});...
+             FeatSelLassoM([], 5, 0);...
+             FeatSelClusterRankM([], naivebc, 0, [], 'clusterThresh', innerClusterThresh, 'showFigures', false, ...
                     'jmiFormulation', false); %, 'preferredFeatures', preferredFeatures{i});...
             };
 
@@ -157,6 +158,7 @@ for m = 1:numMethods
 end
 delete(gcp('nocreate'))
 
+%%
 if false
     res_ = res; 
     load 'D:\Data\Development\Projects\PhD GeoInformatics\Data\Feature Selection\CompareFsMethodsHs3.mat'
@@ -175,7 +177,7 @@ end
 methodMedianFsDuration = zeros(numMethods, length(cdata));
 methodMedianStability = zeros(numMethods, length(cdata));
 methodMedianAcc = zeros(numMethods, length(cdata));
-methodNames = {'FCR-AP',...
+methodNames = {'LASSO',...
     'FCR-H'};
 
 % methodNames = {'featself-naivebc',...

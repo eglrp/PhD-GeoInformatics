@@ -71,3 +71,89 @@ for i = unique(idx)'
 end
 axis equal tight;
 
+
+%% Test lasso regression for feature selection
+
+close all; clear all;
+load 'D:\Data\Development\Projects\PhD GeoInformatics\Data\Feature Selection\Hyperspectral\BotswanaPr.mat';
+data = remclass(data);
+data = setprior(data, 0);
+cs = classsizes(data);
+myPreferredFeatures
+
+%%
+load('D:\Data\Development\Projects\PhD GeoInformatics\Data\Feature Selection\DataAllWin5NoBorder2.mat')
+data = changelablist(dataAll, 'Default');
+data = setprior(data, 0);
+fl = cellstr(getfeatlab(data));
+idx = strmatch('Lbp', fl);
+data(:, idx)=[];
+fl = strrep(fl, 'Ndvi', 'NDVI');
+fl = strrep(fl, 'irRat', 'RVI');
+fl = strrep(fl, 'IrRat', 'RVI');
+
+%%
+nl = getnlab(data);
+d = prdataset(+data);
+d = d*scalem(d, 'variance');
+d = setlabtype(d, 'targets');
+d = settargets(d, nl)
+
+if false
+    w = lassor(d, 100);
+
+    % NB the first coeff in w is the constant/offset and must be discarded
+    +w
+    sum(+w > 1e-6)
+
+    fl = cellstr(getfeatlab(dataAll));
+    fl(find(+w>0)+1)
+end
+
+w = FeatSelLassoM(data, 10, 0)
+
+fl(+w)
+
+%% test MVFS
+
+close all hidden; clear all;
+load('D:\Data\Development\Projects\PhD GeoInformatics\Data\Feature Selection\DataAllWin5NoBorder2.mat')
+dataAll = changelablist(dataAll, 'Default');
+dataAll = setprior(dataAll, 0);
+fl = cellstr(getfeatlab(dataAll));
+idx = strmatch('Lbp', fl);
+dataAll(:, idx)=[];
+fl = cellstr(getfeatlab(dataAll));
+
+cs = classsizes(dataAll);
+if true
+    cs(1) = cs(2);
+else
+    cs = min(cs)*ones(1,3);
+end
+randreset;
+data = gendat(dataAll, cs);
+data = changelablist(data, 'Default');
+data = setprior(data, 0);
+%%
+w = FeatSelMultiViewM(data, 1, 5)
+
+%% Making h for MVFS
+% 2 clusters 1:5 and 6:10
+x = 1:10;  
+h = [ones(5,5), zeros(5,5);ones(5,5), zeros(5,5)]
+h = [ones(5,5), zeros(5,5);zeros(5,5),ones(5,5)]
+x*h*x'
+sum(x(1:5)).^2 + sum(x(6:end)).^2
+
+clustIdx{1} = [1,3,2,7,9];
+clustIdx{2} = [5,4,6,8,10];
+h2 = zeros(10, 10);
+for i = 1:length(clustIdx)
+    for j = 1:length(clustIdx{i})
+        h2(clustIdx{i}(j), clustIdx{i}) = 1;
+    end
+end
+
+x*h2*x'
+sum(x(clustIdx{1})).^2 + sum(x(clustIdx{2})).^2

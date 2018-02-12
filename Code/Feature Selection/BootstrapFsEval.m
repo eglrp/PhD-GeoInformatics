@@ -101,20 +101,20 @@ for i = 1:numBootStraps
             opencvknnc([], 3)
             };
 
+    if numFeatures > 0
+        fr = res.FeatRank(res.FeatIdx{i}, i);
+        [fr_ fidx] = sort(fr);
+        %fprintf('res.FeatIdx{i}: %d, numFeatures: %d\n', length(res.FeatIdx{i}), numFeatures);
+        if numFeatures > length(fidx)  % we didn't get as many features as we wanted - something is wrong
+            fprintf('ERROR: not enough features - length(fidx): %d, numFeatures: %d\n', length(fidx), numFeatures);
+        end
+        res.FeatIdx{i} = res.FeatIdx{i}(fidx(1:min(numFeatures, length(fidx))));
+    end
     for ci = 1:length(clfrs)
         fprintf('    Clfr eval %i of %i\n', ci, length(clfrs));
         % limit the number of features for fs and be if spec'd
         % features are not necessarily in order of rank, so make sure we
         % choose the best ones 
-        if numFeatures > 0
-            fr = res.FeatRank(res.FeatIdx{i}, i);
-            [fr_ fidx] = sort(fr);
-            %fprintf('res.FeatIdx{i}: %d, numFeatures: %d\n', length(res.FeatIdx{i}), numFeatures);
-            if numFeatures > length(fidx)  % we didn't get as many features as we wanted - something is wrong
-                fprintf('ERROR: not enough features - length(fidx): %d, numFeatures: %d\n', length(fidx), numFeatures);
-            end
-            res.FeatIdx{i} = res.FeatIdx{i}(fidx(1:min(numFeatures, length(fidx))));
-        end
         % NB: all clfrs get data scaled to unit variance
         [err, cerr, nlabOut] = prcrossval(subData2(:, res.FeatIdx{i}), scalem([], 'variance')*clfrs{ci}, 5, 1);
         c = confmat(getnlab(subData2), nlabOut);
