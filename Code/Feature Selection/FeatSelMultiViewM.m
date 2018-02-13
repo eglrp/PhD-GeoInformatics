@@ -30,7 +30,7 @@ function [w, r] = FeatSelMultiViewM(varargin)
 varargin = shiftargin(varargin, {'char', 'prmapping'});
 argin = setdefaults(varargin, [], naivebc, 0, []);
 if mapping_task(argin, 'definition')
-    w = define_mapping(argin, 'untrained', 'Feature Clustering and Ranking');
+    w = define_mapping(argin, 'untrained', 'Multiview Featsel');
     return
 end
 fcrCell = {};
@@ -53,7 +53,6 @@ a = testdatasize(a);
 if isdataset(t)
     iscomdset(a, t);
 end
-
 
 fprintf('Affinity propagation:\n')
 % Note that the scaling below makes a huge difference to clustering
@@ -78,6 +77,7 @@ if unconverged
         error('ERROR: apcluster unconverged');
     end
 end
+
 nclust = length(unique(idx));
 tmp(unique(idx)) = 1:nclust;
 clustlab = tmp(idx); % labels 1 indexed
@@ -102,8 +102,8 @@ if true
 else
     H = spalloc(2*(n + m), 2*(n + m), sum(clustFeatCount.^2) + n*n);  %zeros(2*(n + m), 2*(n + m));
     clustOne = spalloc(n + m, n + m, sum(clustFeatCount.^2) + n*n);
-    clustOne(m+1:end, :) = 1; %I'm not sure of this but it is for E
-    clustOne(:, m+1:end) = 1; %I'm not sure of this but it is for E
+    clustOne(m+1:end, m+1:end) = 1; %I'm not sure of this but it is for E
+    %clustOne(:, m+1:end) = 1; %I'm not sure of this but it is for E
 end
 %H = spalloc(2*(n + m), 2*(n + m), (n + m)*(n + m));  %zeros(2*(n + m), 2*(n + m));
 for i = 1:nclust
@@ -116,7 +116,10 @@ H(n+m+1:end, n+m+1:end) = clustOne;
 
 % (n x 2(m+n)) . 2(m+n)
 Aeq = spalloc(n, 2*(m+n), m*n + n);
+% domain scaling is what they spec in the paper although it seems a poor
+% choice.  outliers would do weird things.
 Aeq = [+(a * scalem(a, 'domain')), lambda * speye(n), spalloc(n, m+n, 0)];
+%Aeq = [+a, lambda * speye(n), spalloc(n, m+n, 0)];
 beq = [getnlab(a)];
 beq = beq - mean(beq);
 
@@ -133,47 +136,13 @@ options = optimoptions('quadprog');
 [x, fval, exitflag, output, lambda] = quadprog(H, [], A, b, Aeq, beq, lb, [], [], options);
 
 [xsort, sortIdx] = sort(-abs(x(1:m)));
-x(sortIdx(1:ksel))
-fl(sortIdx(1:ksel))
-
-return
-
-if false
-    fprintf('Fitness (net similarity): %f\n', netsim);
-    
-    exemplars = unique(idx);
-    count = 1;
-    for i = exemplars'
-        ii = find(idx == i);
-        fprintf('Cluster %d, Exemplar %sf\n', count, fl{i});
-        fprintf('%s, ', fl{ii});
-        fprintf('\n');
-        count = count + 1;
-    end
-    fprintf('\n');
-end
-
-
-% TO DO: pass criterion and other varargin
-% res = FeatureClusterRank(a, 'criterion', lambda, fcrCell{:});
-% select 1 feat from each cluster now
-% [clustAcc_ clustIdx] = sort(res.ClustAcc);
-%
-% fprintf('Cluster Ranking:\n----------------\n');
-% feats = [];
-%
-% % choose the most accurate feature from each cluster
-% for i = 1:length(res.ClustAcc)
-%     clusterFeatIdx = res.ClustFeatNLab{clustIdx(i)};
-%     [featAcc_ sortClusterFeatIdx] = sort(res.FeatIndividualAcc(clusterFeatIdx));
-%     feats(i) = clusterFeatIdx(sortClusterFeatIdx(1));
-% end
-% TO DO: allow user to select best feats
+% x(sortIdx(1:ksel))
+% fl(sortIdx(1:ksel))
 
 % Sort the features by criterion value (maximum first).
 % note that last column is rank and not idx as in other feat selectors
-r = [[1:k]', res.FeatClustScore(:), res.FeatClustRank(:)];
-J = res.Feats(1:min(length(res.Feats), ksel))';
+r = [[1:k]', x(sortIdx(1:k)), sortIdx(1:k)];
+J = sortIdx(1:ksel)';
 %
 % [critval_sorted, J] = sort(-critval);
 % 	r = [[1:k]', -critval_sorted, J];
@@ -187,7 +156,6 @@ w = setsize(w, [k, length(J)]);
 if ~isempty(featlist)
     w = setlabels(w, featlist(J, :));
 end
-w = setname(w, 'Feature Clustering and Ranking');
-w = setuser(w, res);
+w = setname(w, 'MultiView FeatSel');
 
 return
