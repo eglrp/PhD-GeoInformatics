@@ -88,14 +88,24 @@ count = 1;
 for i = 1:nclust
     clustFeatIdx{i} = find(clustlab == i);
     clustFeatCount(i) = length(clustFeatIdx{i});
+    fl = cellstr(getfeatlab(a));
+    fprintf('Cluster %d, Exemplar %sf\n', i, fl{exemplars(i)});
+    fprintf('%s, ', fl{clustFeatIdx{i}});
+    fprintf('\n');
 end
 
 %% set up the matrices for quadprog as per the paper and my comments in Mendeley
 [n, m] = size(a); %beware of redef
-H = zeros(2*(n + m), 2*(n + m));
-clustOne = zeros(n+m, n+m);
-clustOne(m+1:end, :) = 1; %I'm not sure of this but it is for E
-clustOne(:, m+1:end) = 1; %I'm not sure of this but it is for E
+if true
+    H = spalloc(2*(n + m), 2*(n + m), sum(clustFeatCount.^2));  %zeros(2*(n + m), 2*(n + m));
+    clustOne = spalloc(n + m, n + m, sum(clustFeatCount.^2));
+else
+    H = spalloc(2*(n + m), 2*(n + m), sum(clustFeatCount.^2) + n*n);  %zeros(2*(n + m), 2*(n + m));
+    clustOne = spalloc(n + m, n + m, sum(clustFeatCount.^2) + n*n);
+    clustOne(m+1:end, :) = 1; %I'm not sure of this but it is for E
+    clustOne(:, m+1:end) = 1; %I'm not sure of this but it is for E
+end
+%H = spalloc(2*(n + m), 2*(n + m), (n + m)*(n + m));  %zeros(2*(n + m), 2*(n + m));
 for i = 1:nclust
     for j = 1:length(clustFeatIdx{i})
         clustOne(clustFeatIdx{i}(j), clustFeatIdx{i}) = 1;
@@ -105,19 +115,28 @@ end
 H(n+m+1:end, n+m+1:end) = clustOne;
 
 % (n x 2(m+n)) . 2(m+n)
-Aeq = [+a, lambda * eye(n, n), zeros(n, m+n)];
+Aeq = spalloc(n, 2*(m+n), m*n + n);
+Aeq = [+(a * scalem(a, 'domain')), lambda * speye(n), spalloc(n, m+n, 0)];
 beq = [getnlab(a)];
 beq = beq - mean(beq);
 
-A = [eye(m+n), -eye(m+n); -eye(m+n), -eye(m+n)];
+A = [speye(m+n), -speye(m+n); -speye(m+n), -speye(m+n)];
 b = zeros(2*(m + n), 1);
 
 lb = zeros(2*(m + n), 1);
 lb(1:m+n) = -inf;
 lb(m+n+1:end) = 0;
 
-[x, fval, exitflag, output, lambda] = quadprog(H, [], A, b, Aeq, beq, lb, []);
+options = optimoptions('quadprog');
+% options.Algorithm = 'trust-region-reflective';
 
+[x, fval, exitflag, output, lambda] = quadprog(H, [], A, b, Aeq, beq, lb, [], [], options);
+
+[xsort, sortIdx] = sort(-abs(x(1:m)));
+x(sortIdx(1:ksel))
+fl(sortIdx(1:ksel))
+
+return
 
 if false
     fprintf('Fitness (net similarity): %f\n', netsim);

@@ -30,12 +30,14 @@ if strcmpi(clusterMethod, 'ap')  % affinity propagation
     fprintf('Affinity propagation:\n')
     % Note that the scaling below makes a huge difference to clustering
     % performance.  Scaling to unit variance works much better, but the
-    % paper only talks of scaling to range [0,1].  Their dist similarity measure
+    % paper only talks of scaling to range [0,1].  BUT this scaling is not
+    % good for spectral data where relative scale matters.
+    % Their dist similarity measure
     % is a weakness as closely spaced features are not the only redundant
     % ones, features that are linearly scaled versions of each will be
     % redundant too but they are not close.  Then there are non-lin dependencies too.
 %     dataNorm = (data*scalem(data, 'domain'));  % according to chen et al 2017
-    dataNorm = (data*scalem(data, 'variance'));  
+    dataNorm = (data*scalem(data, 'variance'));
     S = -(+dataNorm)' * proxm((+dataNorm)', apclusterCrit, apclusterParam);
 %     S = -distm((+dataNorm)'); % -ve euclidean distance betw feats
     n = size(S, 1); % num feats

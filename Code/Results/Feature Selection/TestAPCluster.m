@@ -110,7 +110,7 @@ if false
     fl(find(+w>0)+1)
 end
 
-w = FeatSelLassoM(data, 10, 0)
+w = FeatSelLassoM(data, 100, 0)
 
 fl(+w)
 
@@ -136,7 +136,11 @@ data = gendat(dataAll, cs);
 data = changelablist(data, 'Default');
 data = setprior(data, 0);
 %%
-w = FeatSelMultiViewM(data, 1, 5)
+load('D:\Data\Development\Projects\PhD GeoInformatics\Data\Feature Selection\Synthetic.mat');
+
+
+%%
+w = FeatSelMultiViewM(data, 5, 7)
 
 %% Making h for MVFS
 % 2 clusters 1:5 and 6:10
