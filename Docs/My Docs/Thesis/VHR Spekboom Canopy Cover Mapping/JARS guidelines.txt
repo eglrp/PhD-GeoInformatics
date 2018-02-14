@@ -1,0 +1,20 @@
+For peer review, manuscripts should be submitted with the figures/tables and their captions incorporated into the same file as the manuscript text. However, upon first revision or acceptance, authors will be asked to submit individual figure files and a properly formatted manuscript for use in production.
+
+Claims of "new" or "novel" work or of being the "first" to report on a topic should be avoided unless they can be fully substantiated.
+
+Words should be spelled using American English. 
+
+Create equations using MathType or Equation Editor 3.0. If using Word 2007 or later, the native equation editor can be used, but the document must be saved as .docx.
+
+Biographies of authors are published with each paper. 
+
+References to published literature should be listed at the end of the manuscript and numbered consecutively in the order of their citation in the text. In-text citations can use superscript or bracketed reference numbers. Private communications or unpublished reports should be treated as references. Click here for sample book, journal, and Internet references. For references with three or fewer authors, list all authors. For references with four or more authors, list the first author only followed by "et al."
+
+Figues must be submitted via the online submission system in EPS, TIFF, PNG, or PDF format. We cannot accept application files, i.e., Corel Draw, Microsoft Word, etc. Number all figures in the order that they appear in the text. All figure parts/panels must be labeled (a), (b), etc. Submit high-resolution figures. The quality of the published figure is only as good as the original file—it cannot be improved by the typesetter.
+
+All figures submitted in color will be published in color online without charge. Authors should submit a single color version of the figure. The black-and-white figure for print will be derived from the color file submitted by the author. Authors who choose to submit color figures are responsible for ensuring that the captions and descriptions in the text are suitable for both the color online and black-and-white print versions of the journal, and that the figure itself will be readable in both versions
+
+300-600 pixels per inch (ppi). Should not exceed 2-3 MB per figure
+
+
+
