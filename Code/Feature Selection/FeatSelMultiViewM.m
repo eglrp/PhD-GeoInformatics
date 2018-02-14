@@ -96,13 +96,16 @@ end
 
 %% set up the matrices for quadprog as per the paper and my comments in Mendeley
 [n, m] = size(a); %beware of redef
-if true
+if false  % excl ||E||
     H = spalloc(2*(n + m), 2*(n + m), sum(clustFeatCount.^2));  %zeros(2*(n + m), 2*(n + m));
     clustOne = spalloc(n + m, n + m, sum(clustFeatCount.^2));
-else
-    H = spalloc(2*(n + m), 2*(n + m), sum(clustFeatCount.^2) + n*n);  %zeros(2*(n + m), 2*(n + m));
-    clustOne = spalloc(n + m, n + m, sum(clustFeatCount.^2) + n*n);
-    clustOne(m+1:end, m+1:end) = 1; %I'm not sure of this but it is for E
+else  % incl ||E||
+    H = spalloc(2*(n + m), 2*(n + m), sum(clustFeatCount.^2) + n);  %zeros(2*(n + m), 2*(n + m));
+    clustOne = spalloc(n + m, n + m, sum(clustFeatCount.^2) + n);
+    clustOne(m+1:end, m+1:end) = speye(n); %I think the paper has an issue here - 
+                                           %this should give an L2 norm for
+                                           %E, I can't figure out a way to
+                                           %get an L1,2 norm
     %clustOne(:, m+1:end) = 1; %I'm not sure of this but it is for E
 end
 %H = spalloc(2*(n + m), 2*(n + m), (n + m)*(n + m));  %zeros(2*(n + m), 2*(n + m));

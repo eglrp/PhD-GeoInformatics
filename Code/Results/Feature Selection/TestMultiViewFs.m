@@ -8,11 +8,22 @@ dataAll = setprior(dataAll, 0);
 fl = cellstr(getfeatlab(dataAll));
 idx = strmatch('Lbp', fl);
 dataAll(:, idx)=[];
-fl = strrep(fl, 'Ndvi', 'NDVI');
-fl = strrep(fl, 'irRat', 'RVI');
-fl = strrep(fl, 'IrRat', 'RVI');
+fl = cellstr(getfeatlab(dataAll));
 
-data = dataAll;
+feats = [9 15 20 23 7 6]; %ranked cluster
+fl(feats)
+
+cs = classsizes(dataAll);
+if true
+    cs(1) = cs(2);
+else
+    cs = min(cs)*ones(1,3);
+end
+randreset;
+subData = gendat(dataAll, cs);
+subData = changelablist(subData, 'Default');
+subData = setprior(subData, 0);
+data = subData;
 
 %% load data option 2
 close all hidden; clear all;
@@ -94,7 +105,7 @@ w = featself(data, 'mi', 5)
 
 fl(+w)
 
-% Note: forward selection does better than LASSO
+% Note: forward selection does better than LASSO.  LASSO is unstable.
 
 %% Test MVFS with synthetic data
 clear all
@@ -104,21 +115,28 @@ load('D:\Data\Development\Projects\PhD GeoInformatics\Data\Feature Selection\Syn
 %i.e. we should select 5 features from the 3 groups.  There should be >5
 %clusters (1,6,11), (2,7,12), (3,8,13), (4,9,14), (5, 10, 15), (16), (17).
 fl = cellstr(getfeatlab(data));
-data = gendat(data,1000)
+data = gendat(data, 1000)
 %%
-w = FeatSelMultiViewM(data, .1, 7)
+[w, r] = FeatSelMultiViewM(data, .1, 7)
+r
 fl(+w)
+
 % here there is not enough punishment of within view coeff's so we get
-% redundant feats
+% redundant feats, also there are no zero weights
 
-w = FeatSelMultiViewM(data, 10, 7)
+[w, r] = FeatSelMultiViewM(data, 10, 7)
+r
 fl(+w)
-% here we get better feats with less redundancy although still pretty
-% rubbish
+% here we get correct feats with no redundancy.  there are small weights
+% but no zero weights
 
-w = FeatSelMultiViewM(data, 100, 7)
+[w, r] = FeatSelMultiViewM(data, 100, 7)
+r
 fl(+w)
-% here we get a whole lot of redundancy again, so something is wrong...
+% here we get the noisy irrelevant features because redundancy is being
+% punished more than relevancy.  all weights are small but no zero weights.
+
+% the weights are never sparse
 
 
 
