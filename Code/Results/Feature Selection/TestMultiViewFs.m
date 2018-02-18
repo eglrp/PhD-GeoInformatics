@@ -17,7 +17,7 @@ cs = classsizes(dataAll);
 if true
     cs(1) = cs(2);
 else
-    cs = min(cs)*ones(1,3);
+    cs = min(cs) * ones(1,3);
 end
 randreset;
 subData = gendat(dataAll, cs);
