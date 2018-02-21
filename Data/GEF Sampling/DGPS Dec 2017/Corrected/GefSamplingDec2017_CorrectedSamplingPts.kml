@@ -1,7 +1,55 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
 <Document id="root_doc">
-<Folder><name>GefDec2017_CorrectedSamplingPts</name>
+<Folder><name>GefSamplingDec2017_CorrectedSamplingPts</name>
+  <Placemark>
+      <Point><coordinates>23.9899263940268,-33.5663957064625,638.643170237225</coordinates></Point>
+  </Placemark>
+  <Placemark>
+      <Point><coordinates>23.9898730228449,-33.5664236726701,639.423953794823</coordinates></Point>
+  </Placemark>
+  <Placemark>
+      <Point><coordinates>23.9899863094035,-33.5662298161211,633.858698287838</coordinates></Point>
+  </Placemark>
+  <Placemark>
+      <Point><coordinates>23.989963367741,-33.5661891775179,631.519614443943</coordinates></Point>
+  </Placemark>
+  <Placemark>
+      <Point><coordinates>23.9901828980652,-33.5662628508441,641.588804331547</coordinates></Point>
+  </Placemark>
+  <Placemark>
+      <Point><coordinates>23.9902334601764,-33.5662364760591,642.289240090828</coordinates></Point>
+  </Placemark>
+  <Placemark>
+      <Point><coordinates>23.990121661346,-33.5664338418022,645.885962815463</coordinates></Point>
+  </Placemark>
+  <Placemark>
+      <Point><coordinates>23.9901402070848,-33.5664692478585,647.773281922388</coordinates></Point>
+  </Placemark>
+  <Placemark>
+      <Point><coordinates>23.9941346395922,-33.5648214863611,587.949510682635</coordinates></Point>
+  </Placemark>
+  <Placemark>
+      <Point><coordinates>23.9941167721667,-33.5647818202488,587.219846442538</coordinates></Point>
+  </Placemark>
+  <Placemark>
+      <Point><coordinates>23.9939211879494,-33.5647032357839,586.580332960936</coordinates></Point>
+  </Placemark>
+  <Placemark>
+      <Point><coordinates>23.9938712929442,-33.5647202598594,587.079697516155</coordinates></Point>
+  </Placemark>
+  <Placemark>
+      <Point><coordinates>23.9940156543332,-33.5645476865548,581.574503013338</coordinates></Point>
+  </Placemark>
+  <Placemark>
+      <Point><coordinates>23.9939968122302,-33.5645034429238,580.505417146338</coordinates></Point>
+  </Placemark>
+  <Placemark>
+      <Point><coordinates>23.9942627477411,-33.5646110302025,579.854760730929</coordinates></Point>
+  </Placemark>
+  <Placemark>
+      <Point><coordinates>23.9942087026884,-33.5646270251465,581.474904058236</coordinates></Point>
+  </Placemark>
   <Placemark>
       <Point><coordinates>23.9877810455689,-33.5708816830238,659.509285071793</coordinates></Point>
   </Placemark>
@@ -97,30 +145,6 @@
   </Placemark>
   <Placemark>
       <Point><coordinates>23.9913300012978,-33.5678042621661,660.947698348885</coordinates></Point>
-  </Placemark>
-  <Placemark>
-      <Point><coordinates>23.9899263940268,-33.5663957064625,638.643170237225</coordinates></Point>
-  </Placemark>
-  <Placemark>
-      <Point><coordinates>23.9898730228449,-33.5664236726701,639.423953794823</coordinates></Point>
-  </Placemark>
-  <Placemark>
-      <Point><coordinates>23.9899863094035,-33.5662298161211,633.858698287838</coordinates></Point>
-  </Placemark>
-  <Placemark>
-      <Point><coordinates>23.989963367741,-33.5661891775179,631.519614443943</coordinates></Point>
-  </Placemark>
-  <Placemark>
-      <Point><coordinates>23.9901828980652,-33.5662628508441,641.588804331547</coordinates></Point>
-  </Placemark>
-  <Placemark>
-      <Point><coordinates>23.9902334601764,-33.5662364760591,642.289240090828</coordinates></Point>
-  </Placemark>
-  <Placemark>
-      <Point><coordinates>23.990121661346,-33.5664338418022,645.885962815463</coordinates></Point>
-  </Placemark>
-  <Placemark>
-      <Point><coordinates>23.9901402070848,-33.5664692478585,647.773281922388</coordinates></Point>
   </Placemark>
   <Placemark>
       <Point><coordinates>23.988559020227,-33.5727496210785,687.779294541304</coordinates></Point>
@@ -289,30 +313,6 @@
   </Placemark>
   <Placemark>
       <Point><coordinates>23.9904173450168,-33.5728485208317,695.311543708777</coordinates></Point>
-  </Placemark>
-  <Placemark>
-      <Point><coordinates>23.9941346395922,-33.5648214863611,587.949510682635</coordinates></Point>
-  </Placemark>
-  <Placemark>
-      <Point><coordinates>23.9941167721667,-33.5647818202488,587.219846442538</coordinates></Point>
-  </Placemark>
-  <Placemark>
-      <Point><coordinates>23.9939211879494,-33.5647032357839,586.580332960936</coordinates></Point>
-  </Placemark>
-  <Placemark>
-      <Point><coordinates>23.9938712929442,-33.5647202598594,587.079697516155</coordinates></Point>
-  </Placemark>
-  <Placemark>
-      <Point><coordinates>23.9940156543332,-33.5645476865548,581.574503013338</coordinates></Point>
-  </Placemark>
-  <Placemark>
-      <Point><coordinates>23.9939968122302,-33.5645034429238,580.505417146338</coordinates></Point>
-  </Placemark>
-  <Placemark>
-      <Point><coordinates>23.9942627477411,-33.5646110302025,579.854760730929</coordinates></Point>
-  </Placemark>
-  <Placemark>
-      <Point><coordinates>23.9942087026884,-33.5646270251465,581.474904058236</coordinates></Point>
   </Placemark>
 </Folder>
 </Document></kml>
