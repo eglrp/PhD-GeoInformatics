@@ -49,6 +49,15 @@ In 2017 I invoiced the following amounts:
 which leaves me with ~ R307894.5 - (24300+41700+48000) = R193894.5 for 2018
 which converts to 193894.5/300 = 646 hours = 646/7 = 92 days = 92/2 = 46 weeks, which is pretty much the whole year.  
 
+revised feb 2018 to allow more time for phd writeup
+---------
+see budget2018.py 
+q1: 1day/wk
+q2: 1day/wk 
+q3: 2.5day/wk 
+q4: 3 day/wk 
+
+
 2018 To Do
 -----------
 A) Tasks that don't require GEF GT 

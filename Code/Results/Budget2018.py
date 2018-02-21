@@ -19,7 +19,7 @@ print "2018 var (time worked) costs: ", varCosts2018
 print "2018 time: %f (hrs), %f (days), %f (wks), %f (months)" % (varCosts2018/myRate, varCosts2018/(myRate*hoursPerDay), varCosts2018/(myRate*hoursPerDay*2), varCosts2018/(myRate*hoursPerDay*2*4))
 
 # how to split time over quarters?
-daysPerWeekForQtr = np.array([1, 2, 2.5, 2.5])
+daysPerWeekForQtr = np.array([1, 1, 2.5, 3])
 # daysPerWeekForQtr = np.array([1., 2., 2.5, 2.5])
 (daysPerWeekForQtr*hoursPerDay*4*3).cumsum()
 (daysPerWeekForQtr*hoursPerDay*4*3).cumsum() - varCosts2018/myRate   #in which quarter do we complete the ttl hours?
