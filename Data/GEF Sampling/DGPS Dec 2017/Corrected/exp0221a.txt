@@ -1,0 +1,111 @@
+Export Version 5.20  5.20 Started.
+Using Export Setup: Baviaans ESRI Shapefile Setup
+The following files in D:\CGA\Users\Dugal\MSc GeoInformatics\Docs\GPS Pathfinder\GefSamplingDec2017 will be exported:
+    ST15.cor
+    ST17.cor
+    ST18.cor
+    ST19.cor
+    ST2.cor
+    ST22.cor
+    ST35.cor
+    ST39.cor
+    ST43.cor
+    ST45.cor
+    ST48.cor
+    ST49.cor
+    ST7.cor
+
+Reading file ST15.cor
+439 position(s) read.
+A total of 8 feature(s) read or created.
+  8 point feature(s) read.
+File ST15.cor read successfully
+
+Reading file ST17.cor
+363 position(s) read.
+A total of 8 feature(s) read or created.
+  8 point feature(s) read.
+File ST17.cor read successfully
+
+Reading file ST18.cor
+383 position(s) read.
+  Of these, 1 position(s) were filtered out.
+A total of 8 feature(s) read or created.
+  8 point feature(s) read.
+File ST18.cor read successfully
+
+Reading file ST19.cor
+368 position(s) read.
+A total of 8 feature(s) read or created.
+  8 point feature(s) read.
+File ST19.cor read successfully
+
+Reading file ST2.cor
+373 position(s) read.
+A total of 8 feature(s) read or created.
+  8 point feature(s) read.
+File ST2.cor read successfully
+
+Reading file ST22.cor
+371 position(s) read.
+  Of these, 2 position(s) were filtered out.
+A total of 8 feature(s) read or created.
+  8 point feature(s) read.
+File ST22.cor read successfully
+
+Reading file ST35.cor
+326 position(s) read.
+A total of 8 feature(s) read or created.
+  8 point feature(s) read.
+File ST35.cor read successfully
+
+Reading file ST39.cor
+322 position(s) read.
+A total of 8 feature(s) read or created.
+  8 point feature(s) read.
+File ST39.cor read successfully
+
+Reading file ST43.cor
+540 position(s) read.
+A total of 8 feature(s) read or created.
+  8 point feature(s) read.
+File ST43.cor read successfully
+
+Reading file ST45.cor
+425 position(s) read.
+A total of 8 feature(s) read or created.
+  8 point feature(s) read.
+File ST45.cor read successfully
+
+Reading file ST48.cor
+374 position(s) read.
+A total of 8 feature(s) read or created.
+  8 point feature(s) read.
+File ST48.cor read successfully
+
+Reading file ST49.cor
+351 position(s) read.
+A total of 8 feature(s) read or created.
+  8 point feature(s) read.
+File ST49.cor read successfully
+
+Reading file ST7.cor
+351 position(s) read.
+A total of 8 feature(s) read or created.
+  8 point feature(s) read.
+File ST7.cor read successfully
+
+13 input file(s) read.
+4986 position(s) read.
+  Of these, 3 position(s) were filtered out.
+A total of 104 feature(s) read or created.
+  104 point feature(s) read.
+104 feature(s) exported.
+3 output file(s) written to D:\CGA\Users\Dugal\MSc GeoInformatics\Docs\GPS Pathfinder\GefSamplingDec2017\Export
+    d:\cga\users\dugal\msc geoinformatics\docs\gps pathfinder\gefsamplingdec2017\export\point_ge.shp
+    d:\cga\users\dugal\msc geoinformatics\docs\gps pathfinder\gefsamplingdec2017\export\point_ge.shx
+    d:\cga\users\dugal\msc geoinformatics\docs\gps pathfinder\gefsamplingdec2017\export\point_ge.dbf
+
+The file D:\CGA\Users\Dugal\MSc GeoInformatics\Docs\GPS Pathfinder\GefSamplingDec2017\Export\ST15.inf contains information on the settings used.
+
+The file C:\ProgramData\Trimble\GPS Pathfinder Office\Config\\expfiles.txt contains a list of the files created.
