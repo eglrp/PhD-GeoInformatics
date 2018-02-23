@@ -3,7 +3,8 @@
 %% View features
 %--------------------------------------------------------------------------
 clear all; close all;
-load('F:\MSc GeoInformatics\Data\NGI\My Rectified\Ground Truth Images\DataAllWin5NoBorder2.mat');
+% load('F:\MSc GeoInformatics\Data\NGI\My Rectified\Ground Truth Images\DataAllWin5NoBorder2.mat');
+load('D:\Data\Development\Projects\PhD GeoInformatics\Data\Feature Selection\DataAllWin5NoBorder2.mat');
 dataAll = changelablist(dataAll, 'Default');
 fl = cellstr(getfeatlab(dataAll));
 %remove LBP
@@ -49,6 +50,14 @@ close all hidden
 cs = classsizes(dataAll);
 cs(1) = cs(2);
 
+rng('default') % so we get the same results every time and the same crossval folds.  
+            % note this doesn't apply to opencv clfr training which
+            % apparently uses its own randomiser (I guess unsuprisingly).
+            % There doesn't seem to be any mexopencv access to the c++
+            % random number generator
+s = RandStream('twister'); % this should make it work inside parfor
+RandStream.setGlobalStream(s);        
+
 subData = gendat(gendat(dataAll), cs); %if N spec'd no sample with repl ??
 % subData = gendat(dataAll, [5000 5000 5000]); %if N spec'd no sample with repl ??
 subData = setprior(subData, 0);
@@ -59,7 +68,7 @@ fl = cellstr(getfeatlab(dataAll));
 subData = gendat(dataAll, cs);
 subData = setprior(subData, 0);
 % FeatureClusterRankBe(subData);
-FeatureClusterRank(subData, 'clusterThresh', 0.175);
+resFeatureClusterRank(subData, 'clusterThresh', 0.2, 'showFigures', true);
 
 % Cluster 7, Accuracy 0.003
 % 	rN, 	nirN, 	NDVI, 	RVI, 	tc2, 	pc2, 	rc1, 	MeanRVI, 	MedianRVI, 	MeanNDVI, 	MedianNDVI, 

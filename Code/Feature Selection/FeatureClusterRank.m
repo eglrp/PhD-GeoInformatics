@@ -136,11 +136,13 @@ else
         yln = str2double(cellstr(yl));
         % set(gca, 'YTickLabel', max(yln)-yln);
         ylabel('Dissimilarity', 'FontSize', 11)
-        xlabel('Features', 'FontSize', 11)
+%         xlabel('Features', 'FontSize', 11)
     %     view(90, 90)
-        hl = legend(hp, 'Diss. threshold', 'Location', 'NorthWest')
+        hl = legend(hp, 'Dissimilarity threshold', 'Location', 'NorthWest')
         fontsize(11)
         set(hl,'FontSize',11);
+        view(90,90)   % for paper
+
     end
 end % hierarchical clustering
 
@@ -258,7 +260,7 @@ end
 if showFigures
     fprintf('Cluster Ranking:\n----------------\n');
     for i = 1:nclust
-        fprintf('Cluster %d, Accuracy %.3f\n', clustIdx(i), clustAcc(clustIdx(i)));
+        fprintf('Cluster %d, Accuracy %.3f\n', clustIdx(i), 100 - 100*clustAcc_(clustIdx(i)));
         fprintf('\t%s, ',clustFl{clustIdx(i)}{:});
         fprintf('\n');
     end
