@@ -1243,6 +1243,18 @@ How to import a shapefile
 - Back in file manager, if you change Location: to "Default" you should see the file you just imported
 - Now if you go to "Map" you will be able to select the background file you just imported as you did before.  And you will be able to navigate to the points in it. 
   	
+Using GPS Pathfinder to Import a shapefile indirectly on DGPS (eg as waypoint file)
+-----------------------------------------------------------------------------------
+see https://geoline.com/wp-content/uploads/2017/08/How-To-Transfer-a-Shapefile-to-Terrasync.pdf 	
+- Summary: 
+  - utilities->import to import shapefile
+  - utilities->data transfer to transfer to virtual device (i.e. local HD) and convert to terrasync format (?)
+	
+Import ACII as waypoint in GPS Pathfinder Office
+-------------------------------------------------'
+- https://fpimgis.wordpress.com/2015/11/03/tech-talk-importing-a-waypoint-ascii-file-in-gps-pathfinder-office/
+- NNB Options->Style of Display : Set format to decimal degrees or whatever is in your ascii file 
+- File->Wapoint->Ascii Import : Set format etc - see help 	
 	
 GEF Site Stratification
 -------------------------

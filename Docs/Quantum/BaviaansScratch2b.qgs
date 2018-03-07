@@ -11,7 +11,7 @@
         <customproperties/>
         <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="Dec 2017 Sampling Points">
           <customproperties/>
-          <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Point_ge20180221182521177" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/DGPS Dec 2017/Corrected/Point_ge.shp|layerid=0|subset=&quot;Comment&quot; = 'H1' OR &quot;Comment&quot; = 'H2'  OR &quot;Comment&quot; = 'H3'  OR &quot;Comment&quot; = 'H4'" name="Corrected">
+          <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Point_ge20180221182521177" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/DGPS Dec 2017/Corrected/Point_ge.shp|layerid=0" name="Corrected Points">
             <customproperties/>
           </layer-tree-layer>
           <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="Point_ge20171209220644583" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/DGPS Dec 2017/st49/Point_ge.shp" name="Point_ge">
@@ -20,7 +20,7 @@
           <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="Point_ge20171209220638859" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/DGPS Dec 2017/st48/Point_ge.shp" name="Point_ge">
             <customproperties/>
           </layer-tree-layer>
-          <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="Point_ge20171209220633507" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/DGPS Dec 2017/st45/Point_ge.shp" name="Point_ge">
+          <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="Point_ge20171209220633507" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/DGPS Dec 2017/st45/Point_ge.shp|layerid=0" name="Point_ge">
             <customproperties/>
           </layer-tree-layer>
           <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="Point_ge20171209220629268" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/DGPS Dec 2017/st43/Point_ge.shp" name="Point_ge">
@@ -54,9 +54,9 @@
             <customproperties/>
           </layer-tree-layer>
         </layer-tree-group>
-        <layer-tree-group expanded="0" checked="Qt::Unchecked" name="Sept 2017 Trial">
+        <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="Sept 2017 Trial">
           <customproperties/>
-          <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="Point_ge20180221172528422" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Field Trial/DGPS Sept 2017/Corrected/Point_ge.shp" name="Corrected Points">
+          <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Point_ge20180221172528422" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Field Trial/DGPS Sept 2017/Corrected/Point_ge.shp" name="Corrected Points">
             <customproperties/>
           </layer-tree-layer>
           <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="ThnuganuDegradedTrialPointsV220170831101259382" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/BMR ShapeFiles/ThnuganuDegradedTrialPointsV2.kml|layername=ThnuganuDegradedTrialPointsV2" name="ThnuganuDegradedTrialPointsV2">
@@ -74,21 +74,21 @@
           <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="SewefonteinIntactAreaForTrial_copy20171122104324818" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/BMR ShapeFiles/SewefonteinIntactAreaForTrial.shp" name="SewefonteinIntactAreaForTrial">
             <customproperties/>
           </layer-tree-layer>
-          <layer-tree-group expanded="1" checked="Qt::Unchecked" name="Sampling Points">
+          <layer-tree-group expanded="1" checked="Qt::Checked" name="Sampling Points">
             <customproperties/>
-            <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="Point_ge20180118150557517" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Field Trial/DGPS Sept 2017/tch3/Point_ge.shp" name="Point_ge">
+            <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Point_ge20180118150557517" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Field Trial/DGPS Sept 2017/tch3/Point_ge.shp" name="Point_ge">
               <customproperties/>
             </layer-tree-layer>
-            <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="Point_ge20180118150546813" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Field Trial/DGPS Sept 2017/tch1/Point_ge.shp" name="Point_ge">
+            <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Point_ge20180118150546813" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Field Trial/DGPS Sept 2017/tch1/Point_ge.shp" name="Point_ge">
               <customproperties/>
             </layer-tree-layer>
-            <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="Point_ge20180118150536778" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Field Trial/DGPS Sept 2017/int7/Point_ge.shp" name="Point_ge">
+            <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Point_ge20180118150536778" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Field Trial/DGPS Sept 2017/int7/Point_ge.shp" name="Point_ge">
               <customproperties/>
             </layer-tree-layer>
-            <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="Point_ge20180118150525665" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Field Trial/DGPS Sept 2017/int3/Point_ge.shp" name="Point_ge">
+            <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Point_ge20180118150525665" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Field Trial/DGPS Sept 2017/int3/Point_ge.shp" name="Point_ge">
               <customproperties/>
             </layer-tree-layer>
-            <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="Point_ge20180118150511426" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Field Trial/DGPS Sept 2017/int1/Point_ge.shp" name="Point_ge">
+            <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Point_ge20180118150511426" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Field Trial/DGPS Sept 2017/int1/Point_ge.shp" name="Point_ge">
               <customproperties/>
             </layer-tree-layer>
           </layer-tree-group>
@@ -105,7 +105,7 @@
         <layer-tree-layer expanded="0" providerKey="ogr" checked="Qt::Unchecked" id="GEF_Sampling_Areas20171126191058114" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/GEF Sampling Areas.shp" name="GEF Sampling Areas">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="0" providerKey="ogr" checked="Qt::Unchecked" id="GEF_Sampling_Areas_V220180118154257585" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/GEF Sampling Areas V2.shp" name="GEF Sampling Areas V2">
+        <layer-tree-layer expanded="0" providerKey="ogr" checked="Qt::Checked" id="GEF_Sampling_Areas_V220180118154257585" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/GEF Sampling Areas V2.shp" name="GEF Sampling Areas V2">
           <customproperties/>
         </layer-tree-layer>
         <layer-tree-layer expanded="0" providerKey="ogr" checked="Qt::Unchecked" id="GEF_Sampling_Areas_Bidolph20171124114452284" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/GEF Sampling Areas Bidolph.shp" name="GEF Sampling Areas Bidolph">
@@ -141,7 +141,7 @@
         <layer-tree-layer expanded="1" providerKey="memory" checked="Qt::Unchecked" id="memory_20180118163442111" source="memory?geometry=Polygon&amp;crs=EPSG:4326&amp;field=Name:string(255,0)&amp;field=descriptio:string(255,0)&amp;field=timestamp:string(255,0)&amp;field=begin:string(255,0)&amp;field=end:string(255,0)&amp;field=altitudeMo:string(255,0)&amp;field=tessellate:string(255,0)&amp;field=extrude:string(255,0)&amp;field=visibility:string(255,0)&amp;field=drawOrder:string(255,0)&amp;field=icon:string(255,0)&amp;field=name_2:string(255,0)&amp;field=descript_1:string(255,0)&amp;field=timestamp_:string(255,0)&amp;field=begin_2:string(255,0)&amp;field=end_2:string(255,0)&amp;field=altitude_1:string(255,0)&amp;field=tessella_1:double(20,5)&amp;field=extrude_2:double(20,5)&amp;field=visibili_1:double(20,5)&amp;field=draworder_:double(20,5)&amp;field=icon_2:string(255,0)" name="Single parts">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer expanded="0" providerKey="ogr" checked="Qt::Checked" id="GEF_Ancillary_Data20180118162638155" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/GEF Ancillary Data.shp" name="GEF Ancillary Data">
+        <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="GEF_Ancillary_Data20180118162638155" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/GEF Ancillary Data.shp" name="GEF Ancillary Data">
           <customproperties/>
         </layer-tree-layer>
       </layer-tree-group>
@@ -212,12 +212,12 @@
     <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Sheet_50K20170329124416633" source="D:\Data\Development\Projects\PhD GeoInformatics\Data/Misc/Sheet 50K/Sheet_50K.shp" name="Sheet_50K">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="SUDEM">
+    <layer-tree-group expanded="1" checked="Qt::Unchecked" name="SUDEM">
       <customproperties/>
       <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="x3323db_2015_L3a_Lo23Wgs8420171127150519448" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/CGA/SUDEM L3 Unedited/x3323db_2015_L3a_Lo23Wgs84.tif" name="x3323db_2015_L3a_Lo23Wgs84">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="x3323db_2015_L3a_GDAL_HS20171122132338478" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/CGA/SUDEM L3 Unedited/x3323db_2015_L3a_GDAL_HS.tif" name="x3323db_2015_L3a_GDAL_HS">
+      <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="x3323db_2015_L3a_GDAL_HS20171122132338478" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/CGA/SUDEM L3 Unedited/x3323db_2015_L3a_GDAL_HS.tif" name="x3323db_2015_L3a_GDAL_HS">
         <customproperties/>
       </layer-tree-layer>
       <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="x3323db_2015_L3a_GDAL_Roughness20171122132742152" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/CGA/SUDEM L3 Unedited/x3323db_2015_L3a_GDAL_Roughness.tif" name="x3323db_2015_L3a_GDAL_Roughness">
@@ -226,34 +226,34 @@
       <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="x3323db_2015_L3b20171127143603724" source="V:/SUDSM_Edited/x3323db_2015_L3b.tif" name="x3323db_2015_L3b">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="x3323db_2015_L3a_hs20171122110358471" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/CGA/SUDEM L3 Unedited/x3323db_2015_L3a_hs.tif" name="x3323db_2015_L3a_hs">
+      <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="x3323db_2015_L3a_hs20171122110358471" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/CGA/SUDEM L3 Unedited/x3323db_2015_L3a_hs.tif" name="x3323db_2015_L3a_hs">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="x3324a_15_15_L3_hs20171122110205072" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/CGA/SUDEM/x3324a_15_15_L3_hs.tif" name="x3324a_15_15_L3_hs">
+      <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="x3324a_15_15_L3_hs20171122110205072" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/CGA/SUDEM/x3324a_15_15_L3_hs.tif" name="x3324a_15_15_L3_hs">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="x3324cb_2015_L3a_hs20170930201853341" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/CGA/SUDEM L3 Unedited/x3324cb_2015_L3a_hs.tif" name="x3324cb_2015_L3a_hs">
+      <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="x3324cb_2015_L3a_hs20170930201853341" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/CGA/SUDEM L3 Unedited/x3324cb_2015_L3a_hs.tif" name="x3324cb_2015_L3a_hs">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="x3324cd_2015_L3a20170930104657832" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/CGA/SUDEM L3 Unedited/x3324cd_2015_L3a.tif" name="x3324cd_2015_L3a">
+      <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="x3324cd_2015_L3a20170930104657832" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/CGA/SUDEM L3 Unedited/x3324cd_2015_L3a.tif" name="x3324cd_2015_L3a">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="x3324cb_2015_L3a20170930104649723" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/CGA/SUDEM L3 Unedited/x3324cb_2015_L3a.tif" name="x3324cb_2015_L3a">
+      <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="x3324cb_2015_L3a20170930104649723" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/CGA/SUDEM L3 Unedited/x3324cb_2015_L3a.tif" name="x3324cb_2015_L3a">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="x3324ca_2015_L3a20170930104643256" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/CGA/SUDEM L3 Unedited/x3324ca_2015_L3a.tif" name="x3324ca_2015_L3a">
+      <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="x3324ca_2015_L3a20170930104643256" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/CGA/SUDEM L3 Unedited/x3324ca_2015_L3a.tif" name="x3324ca_2015_L3a">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="x3323db_2015_L3a20170930104632442" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/CGA/SUDEM L3 Unedited/x3323db_2015_L3a.tif" name="x3323db_2015_L3a">
+      <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="x3323db_2015_L3a20170930104632442" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/CGA/SUDEM L3 Unedited/x3323db_2015_L3a.tif" name="x3323db_2015_L3a">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="x3323da_2015_L3a20170930104517634" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/CGA/SUDEM L3 Unedited/x3323da_2015_L3a.tif" name="x3323da_2015_L3a">
+      <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="x3323da_2015_L3a20170930104517634" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/CGA/SUDEM L3 Unedited/x3323da_2015_L3a.tif" name="x3323da_2015_L3a">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="s34_e024_1arc_v320170822170556971" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/CGA/SRTM/s34_e024_1arc_v3.tif" name="s34_e024_1arc_v3">
+      <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="s34_e024_1arc_v320170822170556971" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/CGA/SRTM/s34_e024_1arc_v3.tif" name="s34_e024_1arc_v3">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="x3324c_15_15_L2a20170628211920603" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/CGA/SUDEM/x3324c_15_15_L2a.tif" name="x3324c_15_15_L2a">
+      <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="x3324c_15_15_L2a20170628211920603" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/CGA/SUDEM/x3324c_15_15_L2a.tif" name="x3324c_15_15_L2a">
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
@@ -2233,10 +2233,10 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>91803.49011001172766555</xmin>
-      <ymin>-3716218.82446142844855785</ymin>
-      <xmax>92580.0665167818806367</xmax>
-      <ymax>-3715734.32835008297115564</ymax>
+      <xmin>83659.75591261486988515</xmin>
+      <ymin>-3721552.67402057768777013</ymin>
+      <xmax>95525.9551182427094318</xmax>
+      <ymax>-3710082.92536569992080331</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
@@ -2290,8 +2290,8 @@
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_19_2015_1001_RGB_RECT20170330110902848"/>
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="USER:100006" srcDatumTransform="-1" destDatumTransform="-1" layerid="x3324cd_2015_L3a20170930104657832"/>
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="Point_ge20171209220644583"/>
-      <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_06_2015_1004_RGB_RECT20170330112501899"/>
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="s34_e024_1arc_v320170822170556971"/>
+      <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_06_2015_1004_RGB_RECT20170330112501899"/>
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="USER:100005" srcDatumTransform="-1" destDatumTransform="-1" layerid="x3323db_2015_L3a_GDAL_HS20171122132338478"/>
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="Point_ge20180221172528422"/>
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_16_2015_1005_RGB_RECT20170330112619540"/>
@@ -2302,8 +2302,8 @@
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="Point_ge20171209220546564"/>
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="GEF_Ancillary_Data20180118162638155"/>
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="Point_ge20180118150557517"/>
-      <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_03_2015_1004_RGB_RECT20170330112351754"/>
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="SewefonteinIntactAreaForTrial_copy20171122104324818"/>
+      <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_03_2015_1004_RGB_RECT20170330112351754"/>
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_08_2015_1004_RGB_RECT20170330112352121"/>
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_05_2015_1005_RGB_RECT20170330112618474"/>
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_11_2015_1005_RGB_RECT20170330112619059"/>
@@ -2353,11 +2353,11 @@
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_16_2015_1004_RGB_RECT20170330112502638"/>
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_12_2015_1005_RGB_RECT20170330112619169"/>
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="GefDec2017_CorrectedSamplingPts20180221183426387"/>
-      <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_01_2015_1004_RGB_RECT20170330112501680"/>
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="USER:100005" srcDatumTransform="-1" destDatumTransform="-1" layerid="x3323db_2015_L3a_hs20171122110358471"/>
-      <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_06_2015_1005_RGB_RECT20170330112618589"/>
-      <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="USER:100005" srcDatumTransform="-1" destDatumTransform="-1" layerid="x3323db_2015_L3b20171127143603724"/>
+      <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_01_2015_1004_RGB_RECT20170330112501680"/>
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="EPSG:4148" srcDatumTransform="-1" destDatumTransform="-1" layerid="x3324c_15_15_L2a20170628211920603"/>
+      <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="USER:100005" srcDatumTransform="-1" destDatumTransform="-1" layerid="x3323db_2015_L3b20171127143603724"/>
+      <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_06_2015_1005_RGB_RECT20170330112618589"/>
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_12_2015_1004_RGB_RECT20170330112502342"/>
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="USER:100005" srcDatumTransform="-1" destDatumTransform="-1" layerid="x3323db_2015_L3a20170930104632442"/>
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_18_2015_1001_RGB_RECT20170330110902778"/>
@@ -2377,8 +2377,9 @@
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_15_2015_1004_RGB_RECT20170330112502553"/>
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="SewefonteinIntactTrialPointsV220170831113851977"/>
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="BaviiaansPeCorrectedGcpMay2017Combined20170720173845991"/>
-      <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_17_2015_1004_RGB_RECT20170330112352808"/>
+      <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="GEF_Sampling_Areas_V220180118154257585"/>
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="USER:100006" srcDatumTransform="-1" destDatumTransform="-1" layerid="x3324ca_2015_L3a20170930104643256"/>
+      <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_17_2015_1004_RGB_RECT20170330112352808"/>
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_21_2015_1005_RGB_RECT20170330112621253"/>
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_11_2015_1004_RGB_RECT20170330112502267"/>
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_23_2015_1004_RGB_RECT20170330112503199"/>
@@ -3125,7 +3126,7 @@
     <legendgroup open="true" checked="Qt::PartiallyChecked" name="Baviaans Vector Data">
       <legendgroup open="true" checked="Qt::PartiallyChecked" name="GEF">
         <legendgroup open="true" checked="Qt::PartiallyChecked" name="Dec 2017 Sampling Points">
-          <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Corrected" showFeatureCount="0">
+          <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Corrected Points" showFeatureCount="0">
             <filegroup open="true" hidden="false">
               <legendlayerfile isInOverview="0" layerid="Point_ge20180221182521177" visible="1"/>
             </filegroup>
@@ -3196,10 +3197,10 @@
             </filegroup>
           </legendlayer>
         </legendgroup>
-        <legendgroup open="false" checked="Qt::Unchecked" name="Sept 2017 Trial">
-          <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Corrected Points" showFeatureCount="0">
+        <legendgroup open="true" checked="Qt::PartiallyChecked" name="Sept 2017 Trial">
+          <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Corrected Points" showFeatureCount="0">
             <filegroup open="true" hidden="false">
-              <legendlayerfile isInOverview="0" layerid="Point_ge20180221172528422" visible="0"/>
+              <legendlayerfile isInOverview="0" layerid="Point_ge20180221172528422" visible="1"/>
             </filegroup>
           </legendlayer>
           <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="ThnuganuDegradedTrialPointsV2" showFeatureCount="0">
@@ -3227,30 +3228,30 @@
               <legendlayerfile isInOverview="0" layerid="SewefonteinIntactAreaForTrial_copy20171122104324818" visible="0"/>
             </filegroup>
           </legendlayer>
-          <legendgroup open="true" checked="Qt::Unchecked" name="Sampling Points">
-            <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Point_ge" showFeatureCount="0">
+          <legendgroup open="true" checked="Qt::Checked" name="Sampling Points">
+            <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Point_ge" showFeatureCount="0">
               <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="Point_ge20180118150557517" visible="0"/>
+                <legendlayerfile isInOverview="0" layerid="Point_ge20180118150557517" visible="1"/>
               </filegroup>
             </legendlayer>
-            <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Point_ge" showFeatureCount="0">
+            <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Point_ge" showFeatureCount="0">
               <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="Point_ge20180118150546813" visible="0"/>
+                <legendlayerfile isInOverview="0" layerid="Point_ge20180118150546813" visible="1"/>
               </filegroup>
             </legendlayer>
-            <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Point_ge" showFeatureCount="0">
+            <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Point_ge" showFeatureCount="0">
               <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="Point_ge20180118150536778" visible="0"/>
+                <legendlayerfile isInOverview="0" layerid="Point_ge20180118150536778" visible="1"/>
               </filegroup>
             </legendlayer>
-            <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Point_ge" showFeatureCount="0">
+            <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Point_ge" showFeatureCount="0">
               <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="Point_ge20180118150525665" visible="0"/>
+                <legendlayerfile isInOverview="0" layerid="Point_ge20180118150525665" visible="1"/>
               </filegroup>
             </legendlayer>
-            <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Point_ge" showFeatureCount="0">
+            <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Point_ge" showFeatureCount="0">
               <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="Point_ge20180118150511426" visible="0"/>
+                <legendlayerfile isInOverview="0" layerid="Point_ge20180118150511426" visible="1"/>
               </filegroup>
             </legendlayer>
           </legendgroup>
@@ -3275,9 +3276,9 @@
             <legendlayerfile isInOverview="0" layerid="GEF_Sampling_Areas20171126191058114" visible="0"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="GEF Sampling Areas V2" showFeatureCount="0">
+        <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="GEF Sampling Areas V2" showFeatureCount="0">
           <filegroup open="false" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="GEF_Sampling_Areas_V220180118154257585" visible="0"/>
+            <legendlayerfile isInOverview="0" layerid="GEF_Sampling_Areas_V220180118154257585" visible="1"/>
           </filegroup>
         </legendlayer>
         <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="GEF Sampling Areas Bidolph" showFeatureCount="0">
@@ -3335,9 +3336,9 @@
             <legendlayerfile isInOverview="0" layerid="memory_20180118163442111" visible="0"/>
           </filegroup>
         </legendlayer>
-        <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="GEF Ancillary Data" showFeatureCount="0">
-          <filegroup open="false" hidden="false">
-            <legendlayerfile isInOverview="0" layerid="GEF_Ancillary_Data20180118162638155" visible="1"/>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="GEF Ancillary Data" showFeatureCount="0">
+          <filegroup open="true" hidden="false">
+            <legendlayerfile isInOverview="0" layerid="GEF_Ancillary_Data20180118162638155" visible="0"/>
           </filegroup>
         </legendlayer>
       </legendgroup>
@@ -3446,15 +3447,15 @@
         <legendlayerfile isInOverview="0" layerid="Sheet_50K20170329124416633" visible="1"/>
       </filegroup>
     </legendlayer>
-    <legendgroup open="true" checked="Qt::PartiallyChecked" name="SUDEM">
+    <legendgroup open="true" checked="Qt::Unchecked" name="SUDEM">
       <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="x3323db_2015_L3a_Lo23Wgs84" showFeatureCount="0">
         <filegroup open="true" hidden="false">
           <legendlayerfile isInOverview="0" layerid="x3323db_2015_L3a_Lo23Wgs8420171127150519448" visible="0"/>
         </filegroup>
       </legendlayer>
-      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="x3323db_2015_L3a_GDAL_HS" showFeatureCount="0">
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="x3323db_2015_L3a_GDAL_HS" showFeatureCount="0">
         <filegroup open="true" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="x3323db_2015_L3a_GDAL_HS20171122132338478" visible="1"/>
+          <legendlayerfile isInOverview="0" layerid="x3323db_2015_L3a_GDAL_HS20171122132338478" visible="0"/>
         </filegroup>
       </legendlayer>
       <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="x3323db_2015_L3a_GDAL_Roughness" showFeatureCount="0">
@@ -3467,54 +3468,54 @@
           <legendlayerfile isInOverview="0" layerid="x3323db_2015_L3b20171127143603724" visible="0"/>
         </filegroup>
       </legendlayer>
-      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="x3323db_2015_L3a_hs" showFeatureCount="0">
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="x3323db_2015_L3a_hs" showFeatureCount="0">
         <filegroup open="true" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="x3323db_2015_L3a_hs20171122110358471" visible="1"/>
+          <legendlayerfile isInOverview="0" layerid="x3323db_2015_L3a_hs20171122110358471" visible="0"/>
         </filegroup>
       </legendlayer>
-      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="x3324a_15_15_L3_hs" showFeatureCount="0">
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="x3324a_15_15_L3_hs" showFeatureCount="0">
         <filegroup open="true" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="x3324a_15_15_L3_hs20171122110205072" visible="1"/>
+          <legendlayerfile isInOverview="0" layerid="x3324a_15_15_L3_hs20171122110205072" visible="0"/>
         </filegroup>
       </legendlayer>
-      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="x3324cb_2015_L3a_hs" showFeatureCount="0">
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="x3324cb_2015_L3a_hs" showFeatureCount="0">
         <filegroup open="true" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="x3324cb_2015_L3a_hs20170930201853341" visible="1"/>
+          <legendlayerfile isInOverview="0" layerid="x3324cb_2015_L3a_hs20170930201853341" visible="0"/>
         </filegroup>
       </legendlayer>
-      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="x3324cd_2015_L3a" showFeatureCount="0">
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="x3324cd_2015_L3a" showFeatureCount="0">
         <filegroup open="true" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="x3324cd_2015_L3a20170930104657832" visible="1"/>
+          <legendlayerfile isInOverview="0" layerid="x3324cd_2015_L3a20170930104657832" visible="0"/>
         </filegroup>
       </legendlayer>
-      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="x3324cb_2015_L3a" showFeatureCount="0">
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="x3324cb_2015_L3a" showFeatureCount="0">
         <filegroup open="true" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="x3324cb_2015_L3a20170930104649723" visible="1"/>
+          <legendlayerfile isInOverview="0" layerid="x3324cb_2015_L3a20170930104649723" visible="0"/>
         </filegroup>
       </legendlayer>
-      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="x3324ca_2015_L3a" showFeatureCount="0">
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="x3324ca_2015_L3a" showFeatureCount="0">
         <filegroup open="true" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="x3324ca_2015_L3a20170930104643256" visible="1"/>
+          <legendlayerfile isInOverview="0" layerid="x3324ca_2015_L3a20170930104643256" visible="0"/>
         </filegroup>
       </legendlayer>
-      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="x3323db_2015_L3a" showFeatureCount="0">
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="x3323db_2015_L3a" showFeatureCount="0">
         <filegroup open="true" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="x3323db_2015_L3a20170930104632442" visible="1"/>
+          <legendlayerfile isInOverview="0" layerid="x3323db_2015_L3a20170930104632442" visible="0"/>
         </filegroup>
       </legendlayer>
-      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="x3323da_2015_L3a" showFeatureCount="0">
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="x3323da_2015_L3a" showFeatureCount="0">
         <filegroup open="true" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="x3323da_2015_L3a20170930104517634" visible="1"/>
+          <legendlayerfile isInOverview="0" layerid="x3323da_2015_L3a20170930104517634" visible="0"/>
         </filegroup>
       </legendlayer>
-      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="s34_e024_1arc_v3" showFeatureCount="0">
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="s34_e024_1arc_v3" showFeatureCount="0">
         <filegroup open="true" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="s34_e024_1arc_v320170822170556971" visible="1"/>
+          <legendlayerfile isInOverview="0" layerid="s34_e024_1arc_v320170822170556971" visible="0"/>
         </filegroup>
       </legendlayer>
-      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="x3324c_15_15_L2a" showFeatureCount="0">
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="x3324c_15_15_L2a" showFeatureCount="0">
         <filegroup open="true" hidden="false">
-          <legendlayerfile isInOverview="0" layerid="x3324c_15_15_L2a20170628211920603" visible="1"/>
+          <legendlayerfile isInOverview="0" layerid="x3324c_15_15_L2a20170628211920603" visible="0"/>
         </filegroup>
       </legendlayer>
     </legendgroup>
@@ -26943,6 +26944,12 @@ def my_form_open(dialog, layer, feature):
       <previewExpression>COALESCE( "Feat_Name", '&lt;NULL>' )</previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <extent>
+        <xmin>23.90442770679999995</xmin>
+        <ymin>-33.60416880769999892</ymin>
+        <xmax>24.00863891050000021</xmax>
+        <ymax>-33.51611431949999798</ymax>
+      </extent>
       <id>GEF_Ancillary_Data20180118162638155</id>
       <datasource>../../Data/GEF Sampling/GEF Ancillary Data.shp</datasource>
       <keywordList>
@@ -28330,6 +28337,12 @@ def my_form_open(dialog, layer, feature):
       <previewExpression>COALESCE( "Name", '&lt;NULL>' )</previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <extent>
+        <xmin>23.92628648692535265</xmin>
+        <ymin>-33.55975425802122203</ymin>
+        <xmax>23.936951650208659</xmax>
+        <ymax>-33.55015555018689355</ymax>
+      </extent>
       <id>GEF_Sampling_Areas_Bidolph20171124114452284</id>
       <datasource>../../Data/GEF Sampling/GEF Sampling Areas Bidolph.shp</datasource>
       <keywordList>
@@ -28732,6 +28745,12 @@ def my_form_open(dialog, layer, feature):
       <previewExpression>COALESCE( "ID", '&lt;NULL>' )</previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <extent>
+        <xmin>23.92628648692535265</xmin>
+        <ymin>-33.57399219842790217</ymin>
+        <xmax>23.99565790513549857</xmax>
+        <ymax>-33.54177818658929766</ymax>
+      </extent>
       <id>GEF_Sampling_Areas_V220180118154257585</id>
       <datasource>../../Data/GEF Sampling/GEF Sampling Areas V2.shp</datasource>
       <keywordList>
@@ -29582,6 +29601,12 @@ def my_form_open(dialog, layer, feature):
       <previewExpression>COALESCE( "ID", '&lt;NULL>' )</previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <extent>
+        <xmin>23.95036820395326771</xmin>
+        <ymin>-33.56992038358851005</ymin>
+        <xmax>23.9789910852537318</xmax>
+        <ymax>-33.54177818658929766</ymax>
+      </extent>
       <id>Intersection20180118153043644</id>
       <datasource>../../../../../../OSGEO4~1/bin/memory_3:.shp</datasource>
       <keywordList>
@@ -29738,6 +29763,12 @@ def my_form_open(dialog, layer, feature):
       <previewExpression></previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <extent>
+        <xmin>23.98653022031378867</xmin>
+        <ymin>-33.57399219842790217</ymin>
+        <xmax>23.99565790513549857</xmax>
+        <ymax>-33.56283408115618982</ymax>
+      </extent>
       <id>Intersection20180118153043865</id>
       <datasource>../../../../../../OSGEO4~1/bin/memory_4:.shp</datasource>
       <keywordList>
@@ -32862,7 +32893,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>-33.56685162485812413</ymax>
       </extent>
       <id>Point_ge20171209220633507</id>
-      <datasource>../../Data/GEF Sampling/DGPS Dec 2017/st45/Point_ge.shp</datasource>
+      <datasource>../../Data/GEF Sampling/DGPS Dec 2017/st45/Point_ge.shp|layerid=0</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -33842,6 +33873,42 @@ def my_form_open(dialog, layer, feature):
         <edittype widgetv2type="TextEdit" name="Comment">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
+        <edittype widgetv2type="TextEdit" name="Corr_Type">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="GPS_Date">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="GPS_Time">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Update_Sta">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Feat_Name">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Datafile">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Unfilt_Pos">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Filt_Pos">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="GNSS_Heigh">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Vert_Prec">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Horz_Prec">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Std_Dev">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
       </edittypes>
       <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol" enableorderby="0">
         <symbols>
@@ -34043,6 +34110,7 @@ def my_form_open(dialog, layer, feature):
       <SingleCategoryDiagramRenderer diagramType="Histogram" sizeLegend="0" attributeLegend="1">
         <DiagramCategory penColor="#000000" labelPlacementMethod="XHeight" penWidth="0" diagramOrientation="Up" sizeScale="0,0,0,0,0,0" minimumSize="0" barWidth="5" penAlpha="255" maxScaleDenominator="1e+08" backgroundColor="#ffffff" transparency="0" width="15" scaleDependency="Area" backgroundAlpha="255" angleOffset="1440" scaleBasedVisibility="0" enabled="0" height="15" lineSizeScale="0,0,0,0,0,0" sizeType="MM" lineSizeType="MM" minScaleDenominator="inf">
           <fontProperties description="MS Shell Dlg 2,7.5,-1,5,50,0,0,0,0,0" style=""/>
+          <attribute field="" color="#000000" label=""/>
         </DiagramCategory>
         <symbol alpha="1" clip_to_extent="1" type="marker" name="sizeSymbol">
           <layer pass="0" class="SimpleMarker" locked="0">
@@ -34068,9 +34136,21 @@ def my_form_open(dialog, layer, feature):
         </symbol>
       </SingleCategoryDiagramRenderer>
       <DiagramLayerSettings yPosColumn="-1" showColumn="-1" linePlacementFlags="10" placement="0" dist="0" xPosColumn="-1" priority="0" obstacle="0" zIndex="0" showAll="1"/>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <aliases>
         <alias field="Comment" index="0" name=""/>
+        <alias field="Corr_Type" index="1" name=""/>
+        <alias field="GPS_Date" index="2" name=""/>
+        <alias field="GPS_Time" index="3" name=""/>
+        <alias field="Update_Sta" index="4" name=""/>
+        <alias field="Feat_Name" index="5" name=""/>
+        <alias field="Datafile" index="6" name=""/>
+        <alias field="Unfilt_Pos" index="7" name=""/>
+        <alias field="Filt_Pos" index="8" name=""/>
+        <alias field="GNSS_Heigh" index="9" name=""/>
+        <alias field="Vert_Prec" index="10" name=""/>
+        <alias field="Horz_Prec" index="11" name=""/>
+        <alias field="Std_Dev" index="12" name=""/>
       </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
@@ -34081,10 +34161,10 @@ def my_form_open(dialog, layer, feature):
           <column width="-1" hidden="1" type="actions"/>
         </columns>
       </attributetableconfig>
-      <editform></editform>
+      <editform>.</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath></editforminitfilepath>
+      <editforminitfilepath>.</editforminitfilepath>
       <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
 """
 QGIS forms can have a Python function that is called when the form is
@@ -34111,22 +34191,34 @@ def my_form_open(dialog, layer, feature):
       </conditionalstyles>
       <defaults>
         <default field="Comment" expression=""/>
+        <default field="Corr_Type" expression=""/>
+        <default field="GPS_Date" expression=""/>
+        <default field="GPS_Time" expression=""/>
+        <default field="Update_Sta" expression=""/>
+        <default field="Feat_Name" expression=""/>
+        <default field="Datafile" expression=""/>
+        <default field="Unfilt_Pos" expression=""/>
+        <default field="Filt_Pos" expression=""/>
+        <default field="GNSS_Heigh" expression=""/>
+        <default field="Vert_Prec" expression=""/>
+        <default field="Horz_Prec" expression=""/>
+        <default field="Std_Dev" expression=""/>
       </defaults>
       <previewExpression></previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="0" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <extent>
-        <xmin>23.98778104556891222</xmin>
-        <ymin>-33.57361641532425978</ymin>
-        <xmax>23.9948708123880543</xmax>
+        <xmin>23.98774244021823066</xmin>
+        <ymin>-33.57365129092590195</ymin>
+        <xmax>23.99488906417683509</xmax>
         <ymax>-33.56406191800782324</ymax>
       </extent>
       <id>Point_ge20180221182521177</id>
-      <datasource>../../Data/GEF Sampling/DGPS Dec 2017/Corrected/Point_ge.shp|layerid=0|subset="Comment" = 'H1' OR "Comment" = 'H2'  OR "Comment" = 'H3'  OR "Comment" = 'H4'</datasource>
+      <datasource>../../Data/GEF Sampling/DGPS Dec 2017/Corrected/Point_ge.shp|layerid=0</datasource>
       <keywordList>
         <value></value>
       </keywordList>
-      <layername>Corrected</layername>
+      <layername>Corrected Points</layername>
       <srs>
         <spatialrefsys>
           <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
@@ -34150,7 +34242,28 @@ def my_form_open(dialog, layer, feature):
         <edittype widgetv2type="TextEdit" name="Comment">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
+        <edittype widgetv2type="TextEdit" name="Corr_Type">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="GPS_Date">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="GPS_Time">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Update_Sta">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Feat_Name">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
         <edittype widgetv2type="TextEdit" name="Datafile">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Unfilt_Pos">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Filt_Pos">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="GNSS_Heigh">
@@ -34162,7 +34275,7 @@ def my_form_open(dialog, layer, feature):
         <edittype widgetv2type="TextEdit" name="Horz_Prec">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
-        <edittype widgetv2type="TextEdit" name="Point_ID">
+        <edittype widgetv2type="TextEdit" name="Std_Dev">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
       </edittypes>
@@ -34366,6 +34479,7 @@ def my_form_open(dialog, layer, feature):
       <SingleCategoryDiagramRenderer diagramType="Histogram" sizeLegend="0" attributeLegend="1">
         <DiagramCategory penColor="#000000" labelPlacementMethod="XHeight" penWidth="0" diagramOrientation="Up" sizeScale="0,0,0,0,0,0" minimumSize="0" barWidth="5" penAlpha="255" maxScaleDenominator="1e+08" backgroundColor="#ffffff" transparency="0" width="15" scaleDependency="Area" backgroundAlpha="255" angleOffset="1440" scaleBasedVisibility="0" enabled="0" height="15" lineSizeScale="0,0,0,0,0,0" sizeType="MM" lineSizeType="MM" minScaleDenominator="inf">
           <fontProperties description="MS Shell Dlg 2,7.5,-1,5,50,0,0,0,0,0" style=""/>
+          <attribute field="" color="#000000" label=""/>
         </DiagramCategory>
         <symbol alpha="1" clip_to_extent="1" type="marker" name="sizeSymbol">
           <layer pass="0" class="SimpleMarker" locked="0">
@@ -34391,14 +34505,21 @@ def my_form_open(dialog, layer, feature):
         </symbol>
       </SingleCategoryDiagramRenderer>
       <DiagramLayerSettings yPosColumn="-1" showColumn="-1" linePlacementFlags="10" placement="0" dist="0" xPosColumn="-1" priority="0" obstacle="0" zIndex="0" showAll="1"/>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <aliases>
         <alias field="Comment" index="0" name=""/>
-        <alias field="Datafile" index="1" name=""/>
-        <alias field="GNSS_Heigh" index="2" name=""/>
-        <alias field="Vert_Prec" index="3" name=""/>
-        <alias field="Horz_Prec" index="4" name=""/>
-        <alias field="Point_ID" index="5" name=""/>
+        <alias field="Corr_Type" index="1" name=""/>
+        <alias field="GPS_Date" index="2" name=""/>
+        <alias field="GPS_Time" index="3" name=""/>
+        <alias field="Update_Sta" index="4" name=""/>
+        <alias field="Feat_Name" index="5" name=""/>
+        <alias field="Datafile" index="6" name=""/>
+        <alias field="Unfilt_Pos" index="7" name=""/>
+        <alias field="Filt_Pos" index="8" name=""/>
+        <alias field="GNSS_Heigh" index="9" name=""/>
+        <alias field="Vert_Prec" index="10" name=""/>
+        <alias field="Horz_Prec" index="11" name=""/>
+        <alias field="Std_Dev" index="12" name=""/>
       </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
@@ -34410,14 +34531,21 @@ def my_form_open(dialog, layer, feature):
           <column width="-1" hidden="0" type="field" name="GNSS_Heigh"/>
           <column width="-1" hidden="0" type="field" name="Vert_Prec"/>
           <column width="-1" hidden="0" type="field" name="Horz_Prec"/>
-          <column width="-1" hidden="0" type="field" name="Point_ID"/>
           <column width="-1" hidden="1" type="actions"/>
+          <column width="-1" hidden="0" type="field" name="Corr_Type"/>
+          <column width="-1" hidden="0" type="field" name="GPS_Date"/>
+          <column width="-1" hidden="0" type="field" name="GPS_Time"/>
+          <column width="-1" hidden="0" type="field" name="Update_Sta"/>
+          <column width="-1" hidden="0" type="field" name="Feat_Name"/>
+          <column width="-1" hidden="0" type="field" name="Unfilt_Pos"/>
+          <column width="-1" hidden="0" type="field" name="Filt_Pos"/>
+          <column width="-1" hidden="0" type="field" name="Std_Dev"/>
         </columns>
       </attributetableconfig>
-      <editform></editform>
+      <editform>.</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath></editforminitfilepath>
+      <editforminitfilepath>.</editforminitfilepath>
       <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
 """
 QGIS forms can have a Python function that is called when the form is
@@ -34444,11 +34572,18 @@ def my_form_open(dialog, layer, feature):
       </conditionalstyles>
       <defaults>
         <default field="Comment" expression=""/>
+        <default field="Corr_Type" expression=""/>
+        <default field="GPS_Date" expression=""/>
+        <default field="GPS_Time" expression=""/>
+        <default field="Update_Sta" expression=""/>
+        <default field="Feat_Name" expression=""/>
         <default field="Datafile" expression=""/>
+        <default field="Unfilt_Pos" expression=""/>
+        <default field="Filt_Pos" expression=""/>
         <default field="GNSS_Heigh" expression=""/>
         <default field="Vert_Prec" expression=""/>
         <default field="Horz_Prec" expression=""/>
-        <default field="Point_ID" expression=""/>
+        <default field="Std_Dev" expression=""/>
       </defaults>
       <previewExpression>COALESCE( "Point_ID", '&lt;NULL>' )</previewExpression>
     </maplayer>
@@ -37814,6 +37949,12 @@ def my_form_open(dialog, layer, feature):
       <previewExpression></previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <extent>
+        <xmin>23.95036820395326771</xmin>
+        <ymin>-33.57399219842790217</ymin>
+        <xmax>23.99565790513549857</xmax>
+        <ymax>-33.54177818658929766</ymax>
+      </extent>
       <id>Union20180118164647340</id>
       <datasource>../../../../../../OSGEO4~1/bin/memory_0:.shp</datasource>
       <keywordList>
@@ -63449,8 +63590,8 @@ def my_form_open(dialog, layer, feature):
       <Delete type="QStringList"/>
     </WFSTLayers>
     <WCSLayers type="QStringList"/>
-    <WPhDontactPerson type="QString"></WPhDontactPerson>
     <WMSRestrictedLayers type="QStringList"/>
+    <WPhDontactPerson type="QString"></WPhDontactPerson>
     <WMSFees type="QString">conditions unknown</WMSFees>
     <Macros>
       <pythonCode type="QString"></pythonCode>
