@@ -79,6 +79,19 @@ for correctedShapeFileName in correctedShapeFileNames:
 
 ds = None
 
+## Read in available CS ground truth
+from csv import DictReader
+
+plotCsGt = {}
+csGtFilenames = ['C:\Data\Development\Projects\PhD GeoInformatics\Code\Results\Baviaans2017FieldTrialAnalysis\Summary - Woody.csv']
+for csGtFilename in csGtFilenames:
+    with open(csGtFilename, 'rb') as csGtFile:
+        reader = DictReader(csGtFile)
+        # print reader.fieldnames
+        for row in reader:
+            plotCsGt[row['plot']] = row
+
+
 ## Create output shapefile
 # set up the shapefile driver
 
@@ -90,7 +103,7 @@ layer = ds.CreateLayer(outShapeFileName[:-4], dgpsSrs, ogr.wkbMultiPolygon)
 # field_name = ogr.FieldDefn("Name", ogr.OFTString)
 # field_name.SetWidth(64)
 layer.CreateField(ogr.FieldDefn("Name", ogr.OFTString))
-layer.CreateField(ogr.FieldDefn("WoodyCS", ogr.OFTReal))
+layer.CreateField(ogr.FieldDefn("Yc", ogr.OFTReal))
 
 
 plotNames = np.array([f['PlotName'] for f in dgpsDict.values()])
@@ -104,7 +117,11 @@ for plotName in np.unique(plotNames):
     print plotName,
     feature = ogr.Feature(layer.GetLayerDefn())
     feature.SetField("Name", plotName)
-    feature.SetField("WoodyCS", 0.)
+    if plotCsGt.has_key(plotName):
+        feature.SetField("Yc", plotCsGt[plotName]['yc'])
+    else:
+        print 'yc not found for %s'
+        feature.SetField("Yc", 0.)
 
     # plotLinRing = ogr.Geometry(ogr.wkbLinearRing)
     # OGR / GDAL has very unintuitive behaviour with making polygon from points - the below is the best/only way I could get it done

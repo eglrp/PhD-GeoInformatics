@@ -143,6 +143,7 @@ for ws in wb:
         record['yc'] = yc
         plot.append(record)
     plots[ws.title] = plot
+
     outFileName = 'C:\Data\Development\Projects\PhD GeoInformatics\Code\Results\Baviaans2017FieldTrialAnalysis\%s - Woody.csv' % (ws.title)
     with open(outFileName,'wb') as outfile:
         writer = DictWriter(outfile, plot[0].keys())
@@ -157,10 +158,12 @@ pylab.close('all')
 i = 1
 ycTtl = 0.
 pylab.figure()
+plotSummary = []
 for plotKey, plot in plots.iteritems():
     yc = np.array([record['yc'] for record in plot])
     height = np.float64([record['height'] for record in plot])
     ycTtl += yc.sum()
+    plotSummary.append({'plot': plotKey.replace('-','_'), 'yc': yc.sum(), 'N': yc.__len__()})
 
     kde = gaussian_kde(height)  #, bw_method=bandwidth / height.std(ddof=1))
     heightGrid = np.linspace(0, 300, 100)
@@ -206,6 +209,14 @@ for plotKey, plot in plots.iteritems():
     print "Hgt>50: ", str(yc[idx].sum())
     print "Hgt>50/Plot Ttl: ", str(yc[idx].sum()/yc.sum())
     print "Hgt>50/Ttl: ", str(yc[idx].sum()/ycTtl)
+
+# write out summary ground truth for each plot
+outFileName = 'C:\Data\Development\Projects\PhD GeoInformatics\Code\Results\Baviaans2017FieldTrialAnalysis\Summary - Woody.csv'
+with open(outFileName, 'wb') as outfile:
+    writer = DictWriter(outfile, plotSummary[0].keys())
+    writer.writeheader()
+    writer.writerows(plotSummary)
+
 
 #----------------------------------------------------------------------------------------------------------------------
 # Analyse edge behaviour

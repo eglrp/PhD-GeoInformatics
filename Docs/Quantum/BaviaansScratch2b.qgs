@@ -11,6 +11,9 @@
         <customproperties/>
         <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="Dec 2017 Sampling Points">
           <customproperties/>
+          <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="GefSamplingCorrectedPolygonsWithGt20180308171641326" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/GefSamplingCorrectedPolygonsWithGt.shp" name="GefSamplingCorrectedPolygonsWithGt">
+            <customproperties/>
+          </layer-tree-layer>
           <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Point_ge20180221182521177" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/DGPS Dec 2017/Corrected/Point_ge.shp|layerid=0" name="Corrected Points">
             <customproperties/>
           </layer-tree-layer>
@@ -2233,10 +2236,10 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>90226.03927300125360489</xmin>
-      <ymin>-3717325.14913983037695289</ymin>
-      <xmax>94010.03243445628322661</xmax>
-      <ymax>-3715093.49538893019780517</ymax>
+      <xmin>87586.98855938884662464</xmin>
+      <ymin>-3714797.99413103889673948</ymin>
+      <xmax>87630.24386173309176229</xmax>
+      <ymax>-3714772.48381598200649023</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
@@ -2353,6 +2356,7 @@
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="Convex_hull20180308121136647"/>
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_17_2015_1004_RGB_RECT20170330112502712"/>
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_14_2015_1005_RGB_RECT20170330112619400"/>
+      <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="GefSamplingCorrectedPolygonsWithGt20180308160246339"/>
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="Convex_hull20180308121130869"/>
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="Convex_hull20180308121139070"/>
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_07_2015_1004_RGB_RECT20170330112352049"/>
@@ -2414,6 +2418,7 @@
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_15_2015_1004_RGB_RECT20170330112502553"/>
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="Convex_hull20180308121131032"/>
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="SewefonteinIntactTrialPointsV220170831113851977"/>
+      <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="GefSamplingCorrectedPolygonsWithGt20180308171641326"/>
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="Convex_hull20180308121138770"/>
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="Convex_hull20180308121132614"/>
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="GEF_Sampling_Areas_V220180118154257585"/>
@@ -2455,6 +2460,7 @@
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="Point_ge20171209220606618"/>
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_25_2015_1004_RGB_RECT20170330112353424"/>
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="Point_ge20180221180006474"/>
+      <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="GefSamplingCorrectedPolygonsWithGt20180308170759775"/>
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_02_2015_1005_RGB_RECT20170330112618296"/>
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="USER:100001" srcDatumTransform="-1" destDatumTransform="-1" layerid="3323DB_07_2015_1001_RGB_RECT20170330110902072"/>
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="Convex_hull20180308121133211"/>
@@ -3173,12 +3179,18 @@
       <item>memory_20180118165008962</item>
       <item>Point_ge20180221172528422</item>
       <item>Point_ge20180221182521177</item>
+      <item>GefSamplingCorrectedPolygonsWithGt20180308171641326</item>
     </custom-order>
   </layer-tree-canvas>
   <legend updateDrawingOrder="true">
     <legendgroup open="true" checked="Qt::PartiallyChecked" name="Baviaans Vector Data">
       <legendgroup open="true" checked="Qt::PartiallyChecked" name="GEF">
         <legendgroup open="true" checked="Qt::PartiallyChecked" name="Dec 2017 Sampling Points">
+          <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="GefSamplingCorrectedPolygonsWithGt" showFeatureCount="0">
+            <filegroup open="true" hidden="false">
+              <legendlayerfile isInOverview="0" layerid="GefSamplingCorrectedPolygonsWithGt20180308171641326" visible="0"/>
+            </filegroup>
+          </legendlayer>
           <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Corrected Points" showFeatureCount="0">
             <filegroup open="true" hidden="false">
               <legendlayerfile isInOverview="0" layerid="Point_ge20180221182521177" visible="1"/>
@@ -29652,6 +29664,121 @@ def my_form_open(dialog, layer, feature):
         <default field="Farm" expression=""/>
       </defaults>
       <previewExpression>COALESCE( "ID", '&lt;NULL>' )</previewExpression>
+    </maplayer>
+    <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <id>GefSamplingCorrectedPolygonsWithGt20180308171641326</id>
+      <datasource>../../Data/GEF Sampling/GefSamplingCorrectedPolygonsWithGt.shp</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>GefSamplingCorrectedPolygonsWithGt</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+          <srsid>3452</srsid>
+          <srid>4326</srid>
+          <authid>EPSG:4326</authid>
+          <description>WGS 84</description>
+          <projectionacronym>longlat</projectionacronym>
+          <ellipsoidacronym>WGS84</ellipsoidacronym>
+          <geographicflag>true</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <provider encoding="System">ogr</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <expressionfields/>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <edittypes>
+        <edittype widgetv2type="TextEdit" name="Name">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Yc">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+      </edittypes>
+      <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol" enableorderby="0">
+        <symbols>
+          <symbol alpha="1" clip_to_extent="1" type="fill" name="0">
+            <layer pass="0" class="SimpleFill" locked="0">
+              <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="color" v="72,151,165,255"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="0,0,0,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0.26"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="style" v="solid"/>
+            </layer>
+          </symbol>
+        </symbols>
+        <rotation/>
+        <sizescale scalemethod="diameter"/>
+      </renderer-v2>
+      <labeling type="simple"/>
+      <customproperties/>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerTransparency>0</layerTransparency>
+      <displayfield>Name</displayfield>
+      <label>0</label>
+      <labelattributes>
+        <label fieldname="" text="Label"/>
+        <family fieldname="" name="MS Shell Dlg 2"/>
+        <size fieldname="" units="pt" value="12"/>
+        <bold fieldname="" on="0"/>
+        <italic fieldname="" on="0"/>
+        <underline fieldname="" on="0"/>
+        <strikeout fieldname="" on="0"/>
+        <color fieldname="" red="0" blue="0" green="0"/>
+        <x fieldname=""/>
+        <y fieldname=""/>
+        <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
+        <angle fieldname="" value="0" auto="0"/>
+        <alignment fieldname="" value="center"/>
+        <buffercolor fieldname="" red="255" blue="255" green="255"/>
+        <buffersize fieldname="" units="pt" value="1"/>
+        <bufferenabled fieldname="" on=""/>
+        <multilineenabled fieldname="" on=""/>
+        <selectedonly on=""/>
+      </labelattributes>
+      <annotationform></annotationform>
+      <aliases>
+        <alias field="Name" index="0" name=""/>
+        <alias field="Yc" index="1" name=""/>
+      </aliases>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <attributeactions default="-1"/>
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="&quot;Yc&quot;" sortOrder="1">
+        <columns>
+          <column width="-1" hidden="0" type="field" name="Name"/>
+          <column width="248" hidden="0" type="field" name="Yc"/>
+          <column width="-1" hidden="1" type="actions"/>
+        </columns>
+      </attributetableconfig>
+      <editform></editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath></editforminitfilepath>
+      <editforminitcode><![CDATA[]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <widgets/>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <defaults>
+        <default field="Name" expression=""/>
+        <default field="Yc" expression=""/>
+      </defaults>
+      <previewExpression>COALESCE( "Name", '&lt;NULL>' )</previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <extent>
