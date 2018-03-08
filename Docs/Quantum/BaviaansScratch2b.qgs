@@ -11,7 +11,7 @@
         <customproperties/>
         <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="Dec 2017 Sampling Points">
           <customproperties/>
-          <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Point_ge20180221182521177" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/DGPS Dec 2017/Corrected/Point_ge.shp|layerid=0" name="Corrected Points">
+          <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Point_ge20180221182521177" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/DGPS Dec 2017/Corrected/Point_ge.shp|layerid=0|subset=&quot;Comment&quot; LIKE 'H%'" name="Corrected Points">
             <customproperties/>
           </layer-tree-layer>
           <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="Point_ge20171209220644583" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/DGPS Dec 2017/st49/Point_ge.shp" name="Point_ge">
@@ -20,7 +20,7 @@
           <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="Point_ge20171209220638859" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/DGPS Dec 2017/st48/Point_ge.shp" name="Point_ge">
             <customproperties/>
           </layer-tree-layer>
-          <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="Point_ge20171209220633507" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/DGPS Dec 2017/st45/Point_ge.shp|layerid=0" name="Point_ge">
+          <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="Point_ge20171209220633507" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/DGPS Dec 2017/st45/Point_ge.shp" name="Point_ge">
             <customproperties/>
           </layer-tree-layer>
           <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="Point_ge20171209220629268" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/DGPS Dec 2017/st43/Point_ge.shp" name="Point_ge">
@@ -56,7 +56,7 @@
         </layer-tree-group>
         <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="Sept 2017 Trial">
           <customproperties/>
-          <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Point_ge20180221172528422" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Field Trial/DGPS Sept 2017/Corrected/Point_ge.shp" name="Corrected Points">
+          <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Point_ge20180221172528422" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Field Trial/DGPS Sept 2017/Corrected/Point_ge.shp|layerid=0|subset=&quot;Comment&quot; LIKE 'H%'" name="Corrected Points">
             <customproperties/>
           </layer-tree-layer>
           <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="ThnuganuDegradedTrialPointsV220170831101259382" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/BMR ShapeFiles/ThnuganuDegradedTrialPointsV2.kml|layername=ThnuganuDegradedTrialPointsV2" name="ThnuganuDegradedTrialPointsV2">
@@ -74,21 +74,21 @@
           <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="SewefonteinIntactAreaForTrial_copy20171122104324818" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/BMR ShapeFiles/SewefonteinIntactAreaForTrial.shp" name="SewefonteinIntactAreaForTrial">
             <customproperties/>
           </layer-tree-layer>
-          <layer-tree-group expanded="1" checked="Qt::Checked" name="Sampling Points">
+          <layer-tree-group expanded="1" checked="Qt::Unchecked" name="Sampling Points">
             <customproperties/>
-            <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Point_ge20180118150557517" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Field Trial/DGPS Sept 2017/tch3/Point_ge.shp" name="Point_ge">
+            <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="Point_ge20180118150557517" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Field Trial/DGPS Sept 2017/tch3/Point_ge.shp" name="Point_ge">
               <customproperties/>
             </layer-tree-layer>
-            <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Point_ge20180118150546813" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Field Trial/DGPS Sept 2017/tch1/Point_ge.shp" name="Point_ge">
+            <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="Point_ge20180118150546813" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Field Trial/DGPS Sept 2017/tch1/Point_ge.shp" name="Point_ge">
               <customproperties/>
             </layer-tree-layer>
-            <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Point_ge20180118150536778" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Field Trial/DGPS Sept 2017/int7/Point_ge.shp" name="Point_ge">
+            <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="Point_ge20180118150536778" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Field Trial/DGPS Sept 2017/int7/Point_ge.shp" name="Point_ge">
               <customproperties/>
             </layer-tree-layer>
-            <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Point_ge20180118150525665" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Field Trial/DGPS Sept 2017/int3/Point_ge.shp" name="Point_ge">
+            <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="Point_ge20180118150525665" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Field Trial/DGPS Sept 2017/int3/Point_ge.shp" name="Point_ge">
               <customproperties/>
             </layer-tree-layer>
-            <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Point_ge20180118150511426" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Field Trial/DGPS Sept 2017/int1/Point_ge.shp" name="Point_ge">
+            <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="Point_ge20180118150511426" source="C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Field Trial/DGPS Sept 2017/int1/Point_ge.shp" name="Point_ge">
               <customproperties/>
             </layer-tree-layer>
           </layer-tree-group>
@@ -2233,10 +2233,10 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>83659.75591261486988515</xmin>
-      <ymin>-3721552.67402057768777013</ymin>
-      <xmax>95525.9551182427094318</xmax>
-      <ymax>-3710082.92536569992080331</ymax>
+      <xmin>92118.60979437213973142</xmin>
+      <ymin>-3716031.94704250991344452</ymin>
+      <xmax>92212.67612432609894313</xmax>
+      <ymax>-3715976.0390683114528656</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
@@ -2376,8 +2376,8 @@
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_18_2015_1004_RGB_RECT20170330112502793"/>
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CB_15_2015_1004_RGB_RECT20170330112502553"/>
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="SewefonteinIntactTrialPointsV220170831113851977"/>
-      <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="BaviiaansPeCorrectedGcpMay2017Combined20170720173845991"/>
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="GEF_Sampling_Areas_V220180118154257585"/>
+      <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="BaviiaansPeCorrectedGcpMay2017Combined20170720173845991"/>
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="USER:100006" srcDatumTransform="-1" destDatumTransform="-1" layerid="x3324ca_2015_L3a20170930104643256"/>
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324CA_17_2015_1004_RGB_RECT20170330112352808"/>
       <layer_coordinate_transform destAuthId="USER:100001" srcAuthId="USER:100000" srcDatumTransform="-1" destDatumTransform="-1" layerid="3324DA_21_2015_1005_RGB_RECT20170330112621253"/>
@@ -3228,30 +3228,30 @@
               <legendlayerfile isInOverview="0" layerid="SewefonteinIntactAreaForTrial_copy20171122104324818" visible="0"/>
             </filegroup>
           </legendlayer>
-          <legendgroup open="true" checked="Qt::Checked" name="Sampling Points">
-            <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Point_ge" showFeatureCount="0">
+          <legendgroup open="true" checked="Qt::Unchecked" name="Sampling Points">
+            <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Point_ge" showFeatureCount="0">
               <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="Point_ge20180118150557517" visible="1"/>
+                <legendlayerfile isInOverview="0" layerid="Point_ge20180118150557517" visible="0"/>
               </filegroup>
             </legendlayer>
-            <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Point_ge" showFeatureCount="0">
+            <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Point_ge" showFeatureCount="0">
               <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="Point_ge20180118150546813" visible="1"/>
+                <legendlayerfile isInOverview="0" layerid="Point_ge20180118150546813" visible="0"/>
               </filegroup>
             </legendlayer>
-            <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Point_ge" showFeatureCount="0">
+            <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Point_ge" showFeatureCount="0">
               <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="Point_ge20180118150536778" visible="1"/>
+                <legendlayerfile isInOverview="0" layerid="Point_ge20180118150536778" visible="0"/>
               </filegroup>
             </legendlayer>
-            <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Point_ge" showFeatureCount="0">
+            <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Point_ge" showFeatureCount="0">
               <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="Point_ge20180118150525665" visible="1"/>
+                <legendlayerfile isInOverview="0" layerid="Point_ge20180118150525665" visible="0"/>
               </filegroup>
             </legendlayer>
-            <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Point_ge" showFeatureCount="0">
+            <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Point_ge" showFeatureCount="0">
               <filegroup open="true" hidden="false">
-                <legendlayerfile isInOverview="0" layerid="Point_ge20180118150511426" visible="1"/>
+                <legendlayerfile isInOverview="0" layerid="Point_ge20180118150511426" visible="0"/>
               </filegroup>
             </legendlayer>
           </legendgroup>
@@ -32893,7 +32893,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>-33.56685162485812413</ymax>
       </extent>
       <id>Point_ge20171209220633507</id>
-      <datasource>../../Data/GEF Sampling/DGPS Dec 2017/st45/Point_ge.shp|layerid=0</datasource>
+      <datasource>../../Data/GEF Sampling/DGPS Dec 2017/st45/Point_ge.shp</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -33845,7 +33845,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>-33.55456838991933921</ymax>
       </extent>
       <id>Point_ge20180221172528422</id>
-      <datasource>../../Data/GEF Field Trial/DGPS Sept 2017/Corrected/Point_ge.shp</datasource>
+      <datasource>../../Data/GEF Field Trial/DGPS Sept 2017/Corrected/Point_ge.shp|layerid=0|subset="Comment" LIKE 'H%'</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -33964,9 +33964,9 @@ def my_form_open(dialog, layer, feature):
         <property key="labeling/dist" value="0"/>
         <property key="labeling/distInMapUnits" value="false"/>
         <property key="labeling/distMapUnitScale" value="0,0,0,0,0,0"/>
-        <property key="labeling/drawLabels" value="false"/>
-        <property key="labeling/enabled" value="false"/>
-        <property key="labeling/fieldName" value=""/>
+        <property key="labeling/drawLabels" value="true"/>
+        <property key="labeling/enabled" value="true"/>
+        <property key="labeling/fieldName" value="concat(left(Datafile,strpos(Datafile,'.cor')-1), '-',  Comment)"/>
         <property key="labeling/fitInPolygonOnly" value="false"/>
         <property key="labeling/fontCapitals" value="0"/>
         <property key="labeling/fontFamily" value="MS Shell Dlg 2"/>
@@ -34159,6 +34159,18 @@ def my_form_open(dialog, layer, feature):
         <columns>
           <column width="-1" hidden="0" type="field" name="Comment"/>
           <column width="-1" hidden="1" type="actions"/>
+          <column width="-1" hidden="0" type="field" name="Corr_Type"/>
+          <column width="-1" hidden="0" type="field" name="GPS_Date"/>
+          <column width="-1" hidden="0" type="field" name="GPS_Time"/>
+          <column width="-1" hidden="0" type="field" name="Update_Sta"/>
+          <column width="-1" hidden="0" type="field" name="Feat_Name"/>
+          <column width="-1" hidden="0" type="field" name="Datafile"/>
+          <column width="-1" hidden="0" type="field" name="Unfilt_Pos"/>
+          <column width="-1" hidden="0" type="field" name="Filt_Pos"/>
+          <column width="-1" hidden="0" type="field" name="GNSS_Heigh"/>
+          <column width="-1" hidden="0" type="field" name="Vert_Prec"/>
+          <column width="-1" hidden="0" type="field" name="Horz_Prec"/>
+          <column width="-1" hidden="0" type="field" name="Std_Dev"/>
         </columns>
       </attributetableconfig>
       <editform>.</editform>
@@ -34214,7 +34226,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>-33.56406191800782324</ymax>
       </extent>
       <id>Point_ge20180221182521177</id>
-      <datasource>../../Data/GEF Sampling/DGPS Dec 2017/Corrected/Point_ge.shp|layerid=0</datasource>
+      <datasource>../../Data/GEF Sampling/DGPS Dec 2017/Corrected/Point_ge.shp|layerid=0|subset="Comment" LIKE 'H%'</datasource>
       <keywordList>
         <value></value>
       </keywordList>

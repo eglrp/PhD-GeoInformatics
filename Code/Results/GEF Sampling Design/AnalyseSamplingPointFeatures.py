@@ -430,3 +430,5 @@ scatterd(gn, ndvi, labels=id, class_labels=classes, thumbnails=thumbnails, regre
 
 
 # plotDict.values()[0].keys()
+
+
