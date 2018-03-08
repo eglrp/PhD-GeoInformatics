@@ -21,7 +21,7 @@ correctedShapeFileNames = [
     'C:\Data\Development\Projects\PhD GeoInformatics\Data\GEF Field Trial\DGPS Sept 2017\Corrected\Point_ge.shp',
     'C:\Data\Development\Projects\PhD GeoInformatics\Data\GEF Sampling\DGPS Dec 2017\Corrected\Point_ge.shp']
 
-outShapeFileName = 'C:\Data\Development\Projects\PhD GeoInformatics\Data\GEF Sampling\GefFieldSamplingGt.shp'
+outShapeFileName = 'C:\Data\Development\Projects\PhD GeoInformatics\Data\GEF Sampling\GefSamplingCorrectedPolygonsWithGt.shp'
 
 def world2Pixel(geoMatrix, x, y):
     """
@@ -107,6 +107,7 @@ for plotName in np.unique(plotNames):
     feature.SetField("WoodyCS", 0.)
 
     # plotLinRing = ogr.Geometry(ogr.wkbLinearRing)
+    # OGR / GDAL has very unintuitive behaviour with making polygon from points - the below is the best/only way I could get it done
     plotGeomColl = ogr.Geometry(ogr.wkbGeometryCollection)
     for plotCnr in plotCnrs:
         plotGeomColl.AddGeometry(plotCnr['geom'])
