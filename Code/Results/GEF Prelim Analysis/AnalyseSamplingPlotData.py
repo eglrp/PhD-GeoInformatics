@@ -293,7 +293,7 @@ plotDict.update(vdwPlotDict.copy())
 
 
 gn = np.log10(np.array([plot['g_n'] for plot in plotDict.values()]))
-ndvi = np.array([plot['NDVI'] for plot in plotDict.values()])
+ndvi = (np.array([plot['NDVI'] for plot in plotDict.values()]))
 id = np.array([plot['ID'] for plot in plotDict.values()])
 yc = np.array([plot['Yc'] for plot in plotDict.values()])
 
@@ -302,5 +302,5 @@ thumbnails = [plot['thumbnail'] for plot in plotDict.values()]
 # class_labels = ['Severe', 'Moderate', 'Pristine'] #np.unique(classes)
 
 pylab.figure()
-ScatterD(gn, yc, labels=id, thumbnails=thumbnails, regress=False, xlabel='NDVI', ylabel='Yc')
+ScatterD(ndvi, np.log10(yc), labels=id, thumbnails=thumbnails, regress=True, xlabel='NDVI', ylabel='Yc')
 
