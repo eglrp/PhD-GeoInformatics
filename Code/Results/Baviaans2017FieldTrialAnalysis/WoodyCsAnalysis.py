@@ -163,7 +163,7 @@ for plotKey, plot in plots.iteritems():
     yc = np.array([record['yc'] for record in plot])
     height = np.float64([record['height'] for record in plot])
     ycTtl += yc.sum()
-    plotSummary.append({'plot': plotKey.replace('-','_'), 'yc': yc.sum(), 'N': yc.__len__()})
+    plotSummary.append({'ID': plotKey.replace('-','_'), 'Yc': yc.sum(), 'N': yc.__len__()})
 
     kde = gaussian_kde(height)  #, bw_method=bandwidth / height.std(ddof=1))
     heightGrid = np.linspace(0, 300, 100)

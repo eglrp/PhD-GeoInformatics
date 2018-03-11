@@ -12,16 +12,13 @@ from scipy import ndimage as ndimage
 from PIL import Image
 from PIL import ImageDraw
 
-import os
-os.environ["GDAL_DATA"] = 'C:\OSGeo4W64\share\gdal'
-
 
 # |layerid=0|subset="Comment" LIKE 'H%'
 correctedShapeFileNames = [
     'C:\Data\Development\Projects\PhD GeoInformatics\Data\GEF Field Trial\DGPS Sept 2017\Corrected\Point_ge.shp',
     'C:\Data\Development\Projects\PhD GeoInformatics\Data\GEF Sampling\DGPS Dec 2017\Corrected\Point_ge.shp']
 
-outShapeFileName = 'C:\Data\Development\Projects\PhD GeoInformatics\Data\GEF Sampling\GefSamplingCorrectedPolygonsWithGt.shp'
+outShapeFileName = 'C:\Data\Development\Projects\PhD GeoInformatics\Data\GEF Sampling\GEF Plot Polygons with Yc.shp'
 
 def world2Pixel(geoMatrix, x, y):
     """
@@ -89,7 +86,7 @@ for csGtFilename in csGtFilenames:
         reader = DictReader(csGtFile)
         # print reader.fieldnames
         for row in reader:
-            plotCsGt[row['plot']] = row
+            plotCsGt[row['ID']] = row
 
 
 ## Create output shapefile
@@ -102,7 +99,7 @@ layer = ds.CreateLayer(outShapeFileName[:-4], dgpsSrs, ogr.wkbMultiPolygon)
 # Add the fields we're interested in
 # field_name = ogr.FieldDefn("Name", ogr.OFTString)
 # field_name.SetWidth(64)
-layer.CreateField(ogr.FieldDefn("Name", ogr.OFTString))
+layer.CreateField(ogr.FieldDefn("ID", ogr.OFTString))
 layer.CreateField(ogr.FieldDefn("Yc", ogr.OFTReal))
 
 
@@ -116,15 +113,16 @@ for plotName in np.unique(plotNames):
     plotCnrs = plotPoints[cnrIdx]
     print plotName,
     feature = ogr.Feature(layer.GetLayerDefn())
-    feature.SetField("Name", plotName)
+    feature.SetField("ID", plotName)
     if plotCsGt.has_key(plotName):
-        feature.SetField("Yc", plotCsGt[plotName]['yc'])
+        feature.SetField("Yc", plotCsGt[plotName]['Yc'])
     else:
-        print 'yc not found for %s'
+        print 'Yc not found for %s'
         feature.SetField("Yc", 0.)
 
     # plotLinRing = ogr.Geometry(ogr.wkbLinearRing)
     # OGR / GDAL has very unintuitive behaviour with making polygon from points - the below is the best/only way I could get it done
+    # Note that a polygon can have holes, so it is not simply a list of points but a collection of ring geometries which are each a list of points
     plotGeomColl = ogr.Geometry(ogr.wkbGeometryCollection)
     for plotCnr in plotCnrs:
         plotGeomColl.AddGeometry(plotCnr['geom'])

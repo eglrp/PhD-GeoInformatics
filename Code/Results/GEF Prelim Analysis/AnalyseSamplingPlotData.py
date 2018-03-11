@@ -1,5 +1,4 @@
-# look at the spread of NDVI over planned GEF sampling points using NGI aerials
-# to get an idea of how good my stratification is and if we need any other classes
+# look at the relationship between NDVI and actual yc from GEF sampling data to date
 
 
 import gdal
@@ -19,11 +18,13 @@ from PIL import ImageDraw
 
 tchnuganuImageFile = "V:/Data/NGI/Rectified/3323D_2015_1001/RGBN/XCALIB/o3323d_2015_1001_02_0081_RGBN_XCALIB.tif"  # "V:/Data/NGI/Rectified/3324C_2015_1004/RGBN/o3324c_2015_1004_02_0044_RGBN_XCALIB.tif"
 vdwImageFile = "V:/Data/NGI/Rectified/3323D_2015_1001/RGBN/XCALIB/o3323d_2015_1001_02_0078_RGBN_XCALIB.tif"  # ""V:/Data/NGI/Rectified/3323D_2015_1001/RGBN/o3323d_2015_1001_02_0077_Lo25Wgs84_RGBN_XCALIB.tif"
-samplingPtFile = "C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/GEF Sampling Points.shp"
+# samplingPtFile = "C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/GEF Sampling Points.shp"
+samplingPlotGtFile = "C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/GEF Plot Polygons with Yc.shp"
+
 
 pylab.close('all')
 
-def world2Pixel(geoMatrix, x, y):
+def World2Pixel(geoMatrix, x, y):
     """
     Uses a gdal geomatrix (gdal.GetGeoTransform()) to calculate
     the pixel location of a geospatial coordinate
@@ -39,34 +40,8 @@ def world2Pixel(geoMatrix, x, y):
     return (pixel, line)
 
 
-# def extract_patch_features(imbuf):
-#     imbuf = np.float64(imbuf)  # values are in percent?
-#     s = np.sum(imbuf, 2)
-#     cn = imbuf / np.tile(s[:, :, None], (1, 1, imbuf.shape[2]))
-#     b_i = 2
-#     g_i = 1
-#     r_i = 0
-#     ir_i = 3
-#     ndvi = (imbuf[:, :, ir_i] - imbuf[:, :, r_i]) / (imbuf[:, :, ir_i] + imbuf[:, :, r_i])
-#     ir_rat = imbuf[:, :, ir_i] / imbuf[:, :, r_i]
-#     L = 0.05
-#     savi = (1 + L) * (imbuf[:, :, ir_i] - imbuf[:, :, r_i]) / (L + imbuf[:, :, ir_i] + imbuf[:, :, r_i])
-#     feat = {}
-#     feat['r_n'] = cn[:, :, r_i].mean()
-#     feat['g_n'] = cn[:, :, g_i].mean()
-#     feat['b_n'] = cn[:, :, b_i].mean()
-#     feat['ir_n'] = cn[:, :, ir_i].mean()
-#     feat['NDVI'] = ndvi.mean()
-#     feat['SAVI'] = savi.mean()
-#     feat['ir_rat'] = ir_rat.mean()
-#     feat['i'] = (s / np.prod(s.shape[0:2])).mean()
-#     feat['i_std'] = (s / np.prod(s.shape[0:2])).std()
-#     feat['NDVI_std'] = ndvi.std()
-#
-#     return feat
 
-
-def extract_patch_features(imbuf, mask):
+def ExtractPatchFeatures(imbuf, mask):
     mask = np.bool8(mask)
     imbuf_mask = np.ndarray(shape=(np.int32(mask.sum()), imbuf.shape[2]), dtype=np.float64)
     for i in range(0, imbuf.shape[2]):
@@ -97,121 +72,53 @@ def extract_patch_features(imbuf, mask):
 
     return feat
 
-
-def extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_size=np.array((20, 20)),
-                         win_origin='TL', win_rotation=27., plotFigures=False):  # , axis_signs=[1, 1]):
-    # win_sizes - the OL and other window sizes in pixels
-    # win_origin - the corner of the plot where the CS plot gps loc was recorded (BL,TL,TR,BR = SW,NW,NE,SE)
-    #              the image (and any numpy matrix) origin is TL and increasing pixels L->R is W->E and T->B is N->S
-    #              so eg if the plot origin is BL, one would want to start reading at TL to end at BL
-    # win_rotation - the rotation of the plots (magnetic N offset from TN)
+def ExtractAllFeatures(ds, csGtSpatialRef, csGtDict, plotFigures=False):  # , axis_signs=[1, 1]):
     # Note         A way around all this confusion may to be to layout plot co-ords in world co-ords and then convert to
     #              to pixel co-ords using world2pixel.  this would avoid all the fiddling and confusion in pixel space
-    win_cnrs = np.array([[0, 0], [0, 1], [1, 1], [1, 0]])  # TL origin by default
-
-    if win_origin == 'BL':
-        win_cnrs[:, 1] = win_cnrs[:, 1] - 1
-    elif win_origin == 'TL':
-        # win_cnrs[:,1] = win_cnrs[:,1]-1
-        win_cnrs = win_cnrs
-    elif win_origin == 'TR':
-        win_cnrs[:, 0] = win_cnrs[:, 0] - 1
-        # win_cnrs[:,1] = win_cnrs[:,1]-1
-    elif win_origin == 'BR':
-        win_cnrs[:, 0] = win_cnrs[:, 0] - 1
-        win_cnrs[:, 1] = win_cnrs[:, 1] - 1
-    else:
-        raise Exception('Unknown win_origin')
-
-    # where is the right place to apply this?
-    # win_cnrs[:, 0] = win_cnrs[:, 0] * axis_signs[0]
-    # win_cnrs[:, 1] = win_cnrs[:, 1] * axis_signs[1]
-
-    win_coord = win_cnrs.copy()
-
-    theta = -np.radians(win_rotation)  # -ve angle for inverted y axis (valid for rotation<90)
-    c, s = np.cos(theta), np.sin(theta)
-    R = np.array([[c, -s], [s, c]])
-    # win_coords_ = [[], []]
-    win_coord = win_cnrs * np.tile(win_size, [4, 1])  # note -1
-    win_coord_ = np.dot(win_coord, R.transpose())
-        # where is the right place to apply this?  also, it can be incorporated into R more neatly
-        # win_coords[i][:, 0] = win_coords[i][:, 0] * axis_signs[0]
-        # win_coords[i][:, 1] = win_coords[i][:, 1] * axis_signs[1]
-        # win_coords_[i][:, 0] = win_coords_[i][:, 0] * axis_signs[0]
-        # win_coords_[i][:, 1] = win_coords_[i][:, 1] * axis_signs[1]
-
-    if plotFigures:
-        f = pylab.figure()
-        p = pylab.plot(win_coord[:, 0], win_coord[:, 1])
-        pylab.plot(win_coord_[:, 0], win_coord_[:, 1], 'r')
-        pylab.axis('equal')
-        f.gca().invert_yaxis()
-
-    win_mask = np.zeros(win_size)
-    win_mask_size = []
-    if win_rotation is not None:
-        print 'rotating'
-
-        # for win_mask, win_rotation, win_size in izip(win_masks, win_rotations, win_sizes):
-        if True:
-            mn = (np.min(win_coord_, 0))
-            mx = (np.max(win_coord_, 0))
-            win_size_r = np.int32(np.ceil(mx - mn))
-
-            img = Image.fromarray(np.zeros(win_size_r))
-
-            # Draw a rotated rectangle on the image.
-            draw = ImageDraw.Draw(img)
-            # rect = get_rect(x=120, y=80, width=100, height=40, angle=30.0)
-            draw.polygon([tuple((p - mn)) for p in win_coord_], fill=1)
-            # Convert the Image data to a numpy array.
-            win_mask = np.asarray(img)
-            # win_masks[i] = np.flipud(win_masks[i])  # ??? why is this necessary
-        else:
-            win_mask = ndimage.rotate(win_mask, win_rotation)
-            # if axis_signs[0] < 0:
-            #     win_masks[i] = np.fliplr(win_masks[i])
-            # if axis_signs[1] < 0:
-            #     win_masks[i] = np.flipud(win_masks[i])
-
-            win_mask_size = win_mask.shape
-
-    if plotFigures:
-        pylab.figure()
-        pylab.imshow(np.bool8(win_mask))
 
     geotransform = ds.GetGeoTransform()
-    transform = osr.CoordinateTransformation(cs_gt_spatial_ref, osr.SpatialReference(ds.GetProjection()))
+    transform = osr.CoordinateTransformation(csGtSpatialRef, osr.SpatialReference(ds.GetProjection()))
     i = 0
     plot_dict = {}
     # plotTagcDict = {}
     # class_labels = ['Pristine', 'Moderate', 'Severe']
     max_im_vals = np.zeros((4))
-    for plot in cs_gt_dict.values():
-        point = ogr.Geometry(ogr.wkbPoint)
-        point.AddPoint(plot['X'], plot['Y'])
-        point.Transform(transform)  # xform into im projection
-        (pixel, line) = world2Pixel(geotransform, point.GetX(), point.GetY())
+    for plot in csGtDict.values():
+        # transform plot corners into ds pixel space
+        plotCnrsWorld = plot['points']
+        plotCnrsPixel = []
+        for cnr in plotCnrsWorld:
+            point = ogr.Geometry(ogr.wkbPoint)
+            point.AddPoint(cnr[0], cnr[1])
+            point.Transform(transform)  # xform into im projection
+            (pixel, line) = World2Pixel(geotransform, point.GetX(), point.GetY())
+            plotCnrsPixel.append((pixel,line))
+        plotCnrsPixel = np.array(plotCnrsPixel)
+
         # not all the point fall inside the image
-        if pixel >= 0 and line >= 0 and pixel < ds.RasterXSize and line < ds.RasterYSize:
-            # win_size = win_sizes[0]
-            # win_mask = win_masks[0]
-            win_coord = win_coord_
+        if np.all(plotCnrsPixel >=0) and  np.all(plotCnrsPixel[:,0] < ds.RasterXSize) \
+                and np.all(plotCnrsPixel[:,1] < ds.RasterYSize):
 
-            # ci = class_labels.index(plot['DegrClass'])
+            # get winddow extents
+            ulCnr = np.floor(np.min(plotCnrsPixel, 0))
+            lrCnr = np.ceil(np.max(plotCnrsPixel, 0))
+            plotSizePixel = np.int32(lrCnr - ulCnr)
 
-            # think about window size for co-ord xform
-            mn = (np.min(win_coord, 0))
-            mx = (np.max(win_coord, 0))
-            win_size_r = np.int32(np.ceil(mx - mn))
-            imbuf = np.zeros((win_size_r[0], win_size_r[1], 4), dtype=float)
+            # make a mask for this plot
+            img = Image.fromarray(np.zeros((plotSizePixel[1], plotSizePixel[0])))
 
+            # Draw a rotated rectangle on the image.
+            draw = ImageDraw.Draw(img)
+            # rect = get_rect(x=120, y=80, width=100, height=40, angle=30.0)
+            draw.polygon([tuple((p - ulCnr)) for p in plotCnrsPixel], fill=1)
+            # Convert the Image data to a numpy array.
+            plotMask = np.asarray(img)
+
+            # extract image patch with mask
+            imbuf = np.zeros((plotSizePixel[1], plotSizePixel[0], 4), dtype=float)
             for b in range(1, 5):
-                pixel_start = np.int(np.round((pixel + mn[0])))
-                line_start = np.int(np.round((line + mn[1])))
-                imbuf[:, :, b - 1] = ds.GetRasterBand(b).ReadAsArray(pixel_start, line_start, win_size_r[0],
-                                                                     win_size_r[1])
+                imbuf[:, :, b - 1] = ds.GetRasterBand(b).ReadAsArray(ulCnr[0], ulCnr[1], plotSizePixel[0],
+                                                                     plotSizePixel[1])
 
             # imbuf[:, :, 3] = imbuf[:, :, 3] / 2  # hack for NGI XCALIB
             if np.all(imbuf == 0):
@@ -219,20 +126,18 @@ def extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_size=np.array((2
                 break
             # for b in range(0, 4):
             #     imbuf[:, :, b] = imbuf[:, :, b] / max_im_vals_[b]
-            if not win_mask.shape == imbuf.shape[0:2]:
+            if not plotMask.shape == imbuf.shape[0:2]:
                 print "error - mask and buf different sizes"
                 raise Exception("error - mask and buf different sizes")
-            feat = extract_patch_features(imbuf.copy(), win_mask)
-            # feat['classi'] = ci
-            # feat['class'] = class_labels[ci]
-            # fields = ['TAGC', 'Z_P_AFRA', 'ALLOMETRY', 'HERB', 'LITTER']
+            feat = ExtractPatchFeatures(imbuf.copy(), plotMask)
+
             fields = plot.keys()
             for f in fields:
-                feat[f] = cs_gt_dict[plot['ID']][f]
+                feat[f] = csGtDict[plot['ID']][f]
             feat['thumbnail'] = np.float32(imbuf.copy())
             plot_dict[plot['ID']] = feat
-            # plotTagcDict[plot['PLOT']] = cs_gt_dict[plot['PLOT']]['TAGC']
-            tmp = np.reshape(feat['thumbnail'], (np.prod(win_size_r), 4))
+            # plotTagcDict[plot['PLOT']] = csGtDict[plot['PLOT']]['TAGC']
+            tmp = np.reshape(feat['thumbnail'], (np.prod(plotSizePixel), 4))
             # max_tmp = tmp.max(axis=0)
             max_tmp = np.percentile(tmp, 98., axis=0)
             max_im_vals[max_tmp > max_im_vals] = max_tmp[max_tmp > max_im_vals]
@@ -312,16 +217,16 @@ def scatterd(x, y, labels=None, class_labels=None, thumbnails=None, regress=True
 ###########################################################################################################
 
 # read in sampling pts
-ds = gdal.OpenEx(samplingPtFile, gdal.OF_VECTOR)
+ds = gdal.OpenEx(samplingPlotGtFile, gdal.OF_VECTOR)
 if ds is None:
     print "Open failed./n"
 
 lyr = ds.GetLayerByIndex(0)
 lyr.ResetReading()
-samplingPtSpatialRef = lyr.GetSpatialRef()
+samplingPlotSpatialRef = lyr.GetSpatialRef()
 
 # gcpList = []
-samplingPtDict = {}
+samplingPlotGtDict = {}
 for (i, feat) in enumerate(lyr):
     print '.',
     feat_defn = lyr.GetLayerDefn()
@@ -330,15 +235,18 @@ for (i, feat) in enumerate(lyr):
         field_defn = feat_defn.GetFieldDefn(i)
         f[field_defn.GetName()] = feat.GetField(i)
     geom = feat.GetGeometryRef()
-    if geom is not None and (geom.GetGeometryType() == ogr.wkbPoint or geom.GetGeometryType() == ogr.wkbPoint25D):
-        print "%s %.6f, %.6f" % (f['ID'], geom.GetX(), geom.GetY())
-        f['geom'] = geom
-        f['X'] = geom.GetX()
-        f['Y'] = geom.GetY()
+    if geom is not None and (geom.GetGeometryType() == ogr.wkbPolygon):
+        print "%s N Pts: %d" % (f['ID'], geom.GetGeometryRef(0).GetPointCount())
+        f['geom'] = geom.Clone()
+        f['points'] = geom.GetGeometryRef(0).GetPoints()[:-1]
+        # pixCnr = []
+        # for point in f['points']:
+        #     pixCnr.append(World2Pixel(geotransform, point[0], point[1]))
+
     else:
-        print "no point geometry/n"
+        print "no polygon geometry/n"
     # gcpList.append(f)
-    samplingPtDict[f['ID']] = f
+    samplingPlotGtDict[f['ID']] = f
 print ' '
 
 ds = None
@@ -360,8 +268,7 @@ if not geotransform is None:
     print 'Pixel Size = (', geotransform[1], ',', geotransform[5], ')'
 
 
-tchnuganuPlotDict = extract_all_features(tchnuganuDs, samplingPtSpatialRef, samplingPtDict, win_size=np.array([40, 40]),
-                                  win_rotation=0., plotFigures=True)
+tchnuganuPlotDict = ExtractAllFeatures(tchnuganuDs, samplingPlotSpatialRef, samplingPlotGtDict, plotFigures=True)
 tchnuganuDs = None
 
 vdwDs = gdal.OpenEx(vdwImageFile, gdal.OF_RASTER)
@@ -372,12 +279,14 @@ if not geotransform is None:
     print 'Origin = (', geotransform[0], ',', geotransform[3], ')'
     print 'Pixel Size = (', geotransform[1], ',', geotransform[5], ')'
 
-vdwPlotDict = extract_all_features(vdwDs, samplingPtSpatialRef, samplingPtDict, win_size=np.array([20, 20]),
-                                   win_rotation=0., plotFigures=True)
+vdwPlotDict = ExtractAllFeatures(vdwDs, samplingPlotSpatialRef, samplingPlotGtDict, plotFigures=True)
 vdwDs = None
 
 plotDict = tchnuganuPlotDict.copy()
 plotDict.update(vdwPlotDict.copy())
+
+
+
 
 featureName = 'NDVI'
 
