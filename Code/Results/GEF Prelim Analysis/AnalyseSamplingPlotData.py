@@ -48,7 +48,7 @@ def ExtractPatchFeatures(imbuf, mask):
         imbuf_mask[:, i] = np.float64(band[mask]) / 5000.  # 5000 is scale for MODIS / XCALIB
     # imbuf_mask[:, 3] = imbuf_mask[:,  3]/2.
     s = np.sum(imbuf_mask[:,:3], 1)   # NNB only sum r,g,b as ir confuses things in g_n
-    s = np.sum(imbuf_mask[:,:4], 1)   # ??? check this
+    # s = np.sum(imbuf_mask[:,:4], 1)   # ??? check this
     cn = imbuf_mask / np.tile(s[:, None], (1, imbuf_mask.shape[1]))
     b_i = 2
     g_i = 1
@@ -113,6 +113,12 @@ def ExtractAllFeatures(ds, csGtSpatialRef, csGtDict, plotFigures=False):  # , ax
             draw.polygon([tuple((p - ulCnr)) for p in plotCnrsPixel], fill=1)
             # Convert the Image data to a numpy array.
             plotMask = np.asarray(img)
+
+            # adjust yc if it exists
+            if plot.has_key('Yc'):
+                plot['Yc'] = plot['Yc'] / plotMask.sum()
+            else:
+                print '%s - no yc' % (plot['ID'])
 
             # extract image patch with mask
             imbuf = np.zeros((plotSizePixel[1], plotSizePixel[0], 4), dtype=float)
@@ -286,7 +292,7 @@ plotDict = tchnuganuPlotDict.copy()
 plotDict.update(vdwPlotDict.copy())
 
 
-gn = np.array([plot['g_n'] for plot in plotDict.values()])
+gn = np.log10(np.array([plot['g_n'] for plot in plotDict.values()]))
 ndvi = np.array([plot['NDVI'] for plot in plotDict.values()])
 id = np.array([plot['ID'] for plot in plotDict.values()])
 yc = np.array([plot['Yc'] for plot in plotDict.values()])
@@ -296,9 +302,5 @@ thumbnails = [plot['thumbnail'] for plot in plotDict.values()]
 # class_labels = ['Severe', 'Moderate', 'Pristine'] #np.unique(classes)
 
 pylab.figure()
-ScatterD(ndvi, yc, labels=id, thumbnails=thumbnails, regress=False, xlabel='NDVI', ylabel='Yc')
-
-
-# plotDict.values()[0].keys()
-
+ScatterD(gn, yc, labels=id, thumbnails=thumbnails, regress=False, xlabel='NDVI', ylabel='Yc')
 

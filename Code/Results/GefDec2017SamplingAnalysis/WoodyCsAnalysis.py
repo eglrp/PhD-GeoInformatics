@@ -2,7 +2,7 @@
 # Read in Allometric model parameters
 
 allometryFileName = "C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Field Trial/AllometricModels.xlsx"
-woodyFileName = "C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Field Trial/GEF_Woody canopy_2017.10.16_Mdoda.xlsx"
+woodyFileName = "C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/Sampling Dec 2017/GEF_Woody spp_2018.03.10_MdodaQC.xlsx"
 
 from openpyxl import load_workbook
 import numpy as np
@@ -41,8 +41,8 @@ def EvalRecordCs(allometricModels, record):
     if model['useWdRatio']:
         if model.__contains__('wdRatio'):
             Yc = Yc * model['wdRatio']
-        else:
-            print "WD Ratio for ", record['species'], " not found - using 1."
+        # else:
+        #     print "WD Ratio for ", record['species'], " not found - using 1."
 
     return Yc
 
@@ -111,20 +111,20 @@ wb = None
 
 wb = load_workbook(woodyFileName)
 
-plots = collections.OrderedDict()
+nestedPlots = {}
 for ws in wb:
     print ws.title, ' rows: ', ws.max_row
-    first_row = ws[0 + 5]
+    first_row = ws[1]
     header = []
     for c in first_row:
         header.append(c.value)
 
-    plot = []
-    for r in ws[6:ws.max_row]:
-        if r[1].value is None:
+    plots = collections.OrderedDict()
+    for r in ws[2:ws.max_row]:
+        if r[0].value is None:
             break
         record = OrderedDict()
-        species = str(r[1].value).strip()
+        species = str(r[2].value).strip()
         # hack for unknown plants
         if species == 'A. ferox' or species.__contains__('Aloe'):
             species = 'A. speciosa'
@@ -133,50 +133,107 @@ for ws in wb:
             species = 'A. capensis'
         if species.__contains__('Crassula') or species.__contains__('horns'):
             species = 'C. ovata'
+        if species == 'Euclea sp1':
+            species = 'E. undulata'
+        if species.__contains__('Euphorbia'):
+            species = 'E. coerulescens'
+        if species == 'Schotia sp1':
+            species = 'S. afra'
+        if str.lower(species).__contains__('grewia'):
+            species = 'G. robusta'
+        if species.__contains__('Lycium'):
+            species = 'L. ferocissimum'
+        if species.__contains__('Ysterhout') or species.__contains__('Acacia'):   # very crude guesses
+            species = 'P. capensis'
+        if species.__contains__('Gymnosporia'):   # very crude guesses
+            species = 'G. polyacantha'
+        if species.__contains__('Boscia'):
+            species = 'B. oleoides'
+        if species == 'A. striatus':
+            species = 'A. striata'
+        if species.__contains__('Rhigozum'):   # very crude guesses
+            species = 'R. obovatum'
 
+        id = str(r[0].value).strip().replace('-','')
+        idNum = np.int32(id[2:])  # get rid of leading zeros
+        id = '%s%d' % (id[:2], idNum)
+
+        record['ID'] = id
+        record['degrClass'] = str(r[1].value)
         record['species'] = str(species).strip()
-        record['canopyWidth'] = r[2].value
-        record['canopyLength'] = r[3].value
-        record['height'] = r[4].value
-        record['bsd'] = r[5].value
+        record['canopyWidth'] = r[3].value
+        record['canopyLength'] = r[4].value
+        record['height'] = r[5].value
+
+        # zerp empty records
+        fields = ['canopyWidth', 'canopyLength', 'height']
+        for f in fields:
+            if record[f] is None:
+                record[f] = 0
+
+        if r.__len__() > 6:
+            record['bsd'] = str(r[6].value)
+        else:
+            record['bsd'] = ""
         yc = EvalRecordCs(allometricModels, record)
         record['yc'] = yc
-        plot.append(record)
-    id = str(ws.title).replace('-','_')
-    plots[id] = plot
+        if plots.has_key(id):
+            plots[id].append(record)
+        else:
+            plots[id] = [record]
+    nestedPlots[ws.title] = plots
 
-    outFileName = 'C:\Data\Development\Projects\PhD GeoInformatics\Code\Results\Baviaans2017FieldTrialAnalysis\%s - Woody.csv' % (id)
+    # outFileName = 'C:\Data\Development\Projects\PhD GeoInformatics\Code\Results\Baviaans2017FieldTrialAnalysis\%s - Woody.csv' % (ws.title)
+    # with open(outFileName,'wb') as outfile:
+    #     writer = DictWriter(outfile, plot[0].keys())
+    #     writer.writeheader()
+    #     writer.writerows(plot)
+
+    outFileName = 'C:\Data\Development\Projects\PhD GeoInformatics\Data\GEF Sampling\Sampling Dec 2017\%s - Woody.csv' % (ws.title)
     with open(outFileName,'wb') as outfile:
-        writer = DictWriter(outfile, plot[0].keys())
+        writer = DictWriter(outfile, plots.values()[0][0].keys())
         writer.writeheader()
-        writer.writerows(plot)
+        for plot in plots.values():
+            writer.writerows(plot)
 
 wb = None
 
-# find ttl yc per plot
+#---------------------------------------------------------------------------------------------------------------
+# extrapolate 5x5m subplots to full size
+# (separate contributions from 5x5m plants ><50cm high, extrap <50 to full size, add >50 to full size)
+subPlots = nestedPlots['5x5m']
+outerPlots = nestedPlots['20 x 20m']
 summaryPlots = {}
-for id, plot in plots.iteritems():
-    yc = np.array([r['yc'] for r in plot])
+for id, subPlot in subPlots.iteritems():
+    subHeight = np.array([r['height'] for r in subPlot])
+    subYc = np.array([r['yc'] for r in subPlot])
+    smallIdx = subHeight < 50
+    outerPlot = outerPlots[id]
+    # outerHeight = np.array([r['height'] for r in outerPlot])
+    outerYc = np.array([r['yc'] for r in outerPlot])
     summaryPlots[id] = {}
-    summaryYc = yc.sum()
-    outerSize = 10
+    # nb the 16 needs to change for other plot sizes
+    summaryYc = 16 * subYc[smallIdx].sum() + subYc[np.logical_not(smallIdx)].sum() + outerYc.sum()
+    outerSize = 20
     summaryPlots[id]['ID'] = id
     summaryPlots[id]['Yc'] = summaryYc
     summaryPlots[id]['Size'] = outerSize
     summaryPlots[id]['YcHa'] = (100.**2) * summaryYc/(outerSize**2)
-    summaryPlots[id]['N'] = yc.__len__()
+    summaryPlots[id]['N'] = 16 * smallIdx.sum() + (subYc.__len__() - smallIdx.sum()) + outerYc.__len__()
 
 
 # write out summary ground truth for each plot
-# write out summary ground truth for each plot
-outFileName = 'C:\Data\Development\Projects\PhD GeoInformatics\Code\Results\Baviaans2017FieldTrialAnalysis\Summary - Woody2.csv'
+outFileName = 'C:\Data\Development\Projects\PhD GeoInformatics\Data\GEF Sampling\Sampling Dec 2017\Summary - Woody.csv'
 with open(outFileName, 'wb') as outfile:
     writer = DictWriter(outfile, summaryPlots.values()[0].keys())
     writer.writeheader()
     writer.writerows(summaryPlots.values())
 
 
+#-----------------------------------------------------------------------------------------------------------------
+#  look at height & yc distribution for 5x5m plots
 
+plots = nestedPlots['5x5m']
 # vars = [model['vars'] for model in allometricModels.values()]
 # print np.unique(vars)
 pylab.close('all')
@@ -193,14 +250,14 @@ for plotKey, plot in plots.iteritems():
     kde = gaussian_kde(height)  #, bw_method=bandwidth / height.std(ddof=1))
     heightGrid = np.linspace(0, 300, 100)
     heightKde = kde.evaluate(heightGrid)
-    pylab.subplot(2, 3, i)
+    pylab.subplot(3, 5, i)
     pylab.plot(heightGrid, heightKde)
     axLim = pylab.axis()
     h = pylab.plot([50, 50], [0, heightKde.max()], 'r')
     pylab.grid('on')
     pylab.xlabel('Plant Height (cm)', fontdict={'size':fontSize})
     pylab.ylabel('Prob.(height)', fontdict={'size':fontSize})
-    pylab.title('Height distribution for plot %s' % (plotKey), fontdict={'size':fontSize})
+    pylab.title('Height dist. for %s' % (plotKey), fontdict={'size':fontSize})
     if i >= plots.__len__():
         pylab.legend(h, ['50cm threshold'], loc='upper left', bbox_to_anchor=(1.2, 1), prop={'size':fontSize})
     pylab.axis([axLim[0], axLim[1], 0, heightKde.max()])
@@ -214,16 +271,16 @@ for plotKey, plot in plots.iteritems():
     idx = np.argsort(height)
 
     ycCumSum = np.cumsum(yc[idx])
-    pylab.subplot(2, 3, i)
+    pylab.subplot(3, 5, i)
     pylab.plot(height[idx], ycCumSum)
     axLim = pylab.axis()
     h = pylab.plot([50, 50], [axLim[2], axLim[3]], 'r')
     pylab.axis(axLim)
     pylab.grid('on')
     pylab.xlabel('Plant Height (cm)', fontdict={'size':fontSize})
-    pylab.ylabel('Cum. Distr.(C. stock) (kg)', fontdict={'size':fontSize})
+    pylab.ylabel('Cum. Distr.(Yc) (kg)', fontdict={'size':fontSize})
     pylab.xlim([0, 350])
-    pylab.title('Height / C. stock relation for plot %s' % (plotKey), fontdict={'size':fontSize})
+    pylab.title('Height/Yc for plot %s' % (plotKey), fontdict={'size':fontSize})
     if i >= plots.__len__():
         pylab.legend(h, ['50cm threshold'], loc='upper left', bbox_to_anchor=(1.2, 1), prop={'size':fontSize})
     i += 1
@@ -235,117 +292,6 @@ for plotKey, plot in plots.iteritems():
     print "Hgt>50/Plot Ttl: ", str(yc[idx].sum()/yc.sum())
     print "Hgt>50/Ttl: ", str(yc[idx].sum()/ycTtl)
 
-# # write out summary ground truth for each plot
-# outFileName = 'C:\Data\Development\Projects\PhD GeoInformatics\Code\Results\Baviaans2017FieldTrialAnalysis\Summary - Woody.csv'
-# with open(outFileName, 'wb') as outfile:
-#     writer = DictWriter(outfile, plotSummary[0].keys())
-#     writer.writeheader()
-#     writer.writerows(plotSummary)
-
-
-#----------------------------------------------------------------------------------------------------------------------
-# Analyse edge behaviour
-
-# find the area of a slice of the ellipse (x/a)**2 + (x/b)**2 = 1 where the slice is theta = (0 to theta)
-def EllipseOriginSliceArea(a, b, theta):
-    #area = (0.5) * a * b * (0.5*np.sin(2*theta) + theta)
-    area = a*b*0.5*(theta - np.arctan((b-a)*np.sin(2*theta)/(b+a+(b-a)*np.cos(2*theta))))
-    return area
-
-# find the area of a slice of the ellipse (x/a)**2 + (x/b)**2 = 1 where the slice is theta = (thetaStart to thetaEnd)
-def EllipseSliceArea(a, b, thetaStart, thetaEnd):
-    return EllipseOriginSliceArea(a, b, thetaEnd) - EllipseOriginSliceArea(a, b, thetaStart)
-
-# find the area of a section of the ellipse (x/a)**2 + (x/b)**2 = 1 where the section is x = (-a to x_section)
-def EllipseSectionArea(a, b, xSection):
-    xSign = 1.
-    if xSection < 0:
-        print "WARNING: xSection should positive"
-        xSection = np.abs(xSection)
-        xSign = -1.
-    if xSection > a:
-        print "WARNING: xSection should be less than a"
-        xSection = a
-
-    ySection = b*np.sqrt(1-(xSection/a)**2)
-    triArea = 0.5*xSection*ySection
-    ellipseSliceArea = EllipseSliceArea(a, b, np.arctan(ySection/xSection), np.pi)
-    ellipseSectionArea = 2*(triArea + ellipseSliceArea)
-    ellipseArea = np.pi*a*b
-
-    ellipseOtherSliceArea = EllipseSliceArea(a, b, 0, np.arctan(ySection/xSection))
-    ellipseOtherSectionArea = 2*(ellipseOtherSliceArea - triArea)
-    print ellipseOtherSectionArea + ellipseSectionArea
-    print ellipseArea
-    # sectionLength = 2*ySection
-    print ellipseSectionArea, ySection
-    if xSign < 0:
-        ellipseSectionArea = ellipseOtherSectionArea
-
-    return ellipseSectionArea, ySection
-
-def CircleSectionArea(a, b, xSection):
-    a = b = (a + b)/2   # Simply for Marius' formula for CD/2
-    xSign = 1.
-    if xSection < 0:
-        print "WARNING: xSection should positive"
-        xSection = np.abs(xSection)
-        xSign = -1.
-    if xSection > a:
-        print "WARNING: xSection should be less than a"
-        xSection = a
-
-    ySection = b*np.sqrt(1 - (xSection/a)**2)
-    triArea = 0.5*xSection*ySection
-    ellipseSliceArea = EllipseSliceArea(a, b, np.arctan(ySection/xSection), np.pi)
-    ellipseSectionArea = 2*(triArea + ellipseSliceArea)
-    ellipseArea = np.pi*a*b
-
-    ellipseOtherSliceArea = EllipseSliceArea(a, b, 0, np.arctan(ySection/xSection))
-    ellipseOtherSectionArea = 2*(ellipseOtherSliceArea - triArea)
-    print ellipseOtherSectionArea + ellipseSectionArea
-    print ellipseArea
-    if xSign < 0:
-        ellipseSectionArea = ellipseOtherSectionArea
-    # sectionLength = 2*ySection
-    return ellipseSectionArea, ySection
-
-#---------------------------------------------------------------------------------------------------------------
-# simulate ellipse section areas and areas of full ellipses with a = (a+xSection)/2 and b=ySection
-# to see how close the areas are
-from scipy import stats
-av = np.abs(np.random.randn(100)+0.5)
-bv = np.abs(np.random.randn(100)+0.5)
-xSectionV = 0.5*(av+bv)*np.abs(0.3*np.random.randn(100))
-all(xSectionV<av)
-
-sectionAreaV = []
-circleAreaV = []
-for a, b, xSection in zip(av, bv, xSectionV):
-    sa, bnew = CircleSectionArea(a, b, xSection)
-    sectionAreaV.append(sa)
-    # circleAreaV.append((a+xSection)*0.5*bnew*4)  # rectangular area
-    circleAreaV.append(np.pi*(((a+xSection)*0.5 + bnew)/2)**2)
-
-sectionAreaV = np.array(sectionAreaV)
-circleAreaV = np.array(circleAreaV)
-
-(slope, intercept, r, p, stde) = stats.linregress(sectionAreaV, circleAreaV)
-
-pylab.figure()
-# pylab.subplot(1, 2, 1)
-# pylab.plot(av, bv, 'kx')
-# pylab.subplot(1, 2, 2)
-pylab.plot(sectionAreaV, circleAreaV, 'bx')
-m = np.max([sectionAreaV.max(), circleAreaV.max()])
-h, = pylab.plot([0, m], [0, m], 'r')
-pylab.text(m*0.6, m*0.1, str.format('$R^2$ = {0:.2f}', np.round(r ** 2, 2)), fontdict={'size':fontSize})
-pylab.grid()
-pylab.legend([h], ['1:1'], prop={'size':fontSize})
-pylab.xlabel('Canopy Area to Edge', fontdict={'size':fontSize})
-pylab.ylabel('Approx. Circular Area', fontdict={'size':fontSize})
-pylab.title('Edge intersected canopy area approximation', fontdict={'size':fontSize})
-# for model, species in allometricModels.iteritems():
 
 
 #---------------------------------------------------------------------------------------------------------------

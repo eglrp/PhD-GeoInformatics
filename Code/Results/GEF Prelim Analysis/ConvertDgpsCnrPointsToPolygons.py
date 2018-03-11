@@ -80,7 +80,8 @@ ds = None
 from csv import DictReader
 
 plotCsGt = {}
-csGtFilenames = ['C:\Data\Development\Projects\PhD GeoInformatics\Code\Results\Baviaans2017FieldTrialAnalysis\Summary - Woody.csv']
+csGtFilenames = ['C:\Data\Development\Projects\PhD GeoInformatics\Code\Results\Baviaans2017FieldTrialAnalysis\Summary - Woody2.csv',
+                 'C:\Data\Development\Projects\PhD GeoInformatics\Data\GEF Sampling\Sampling Dec 2017\Summary - Woody.csv']
 for csGtFilename in csGtFilenames:
     with open(csGtFilename, 'rb') as csGtFile:
         reader = DictReader(csGtFile)
@@ -101,6 +102,9 @@ layer = ds.CreateLayer(outShapeFileName[:-4], dgpsSrs, ogr.wkbMultiPolygon)
 # field_name.SetWidth(64)
 layer.CreateField(ogr.FieldDefn("ID", ogr.OFTString))
 layer.CreateField(ogr.FieldDefn("Yc", ogr.OFTReal))
+layer.CreateField(ogr.FieldDefn("YcHa", ogr.OFTReal))
+layer.CreateField(ogr.FieldDefn("Size", ogr.OFTReal))
+layer.CreateField(ogr.FieldDefn("N", ogr.OFTReal))
 
 
 plotNames = np.array([f['PlotName'] for f in dgpsDict.values()])
@@ -115,7 +119,9 @@ for plotName in np.unique(plotNames):
     feature = ogr.Feature(layer.GetLayerDefn())
     feature.SetField("ID", plotName)
     if plotCsGt.has_key(plotName):
-        feature.SetField("Yc", plotCsGt[plotName]['Yc'])
+        fields = ['Yc','YcHa','Size','N']
+        for f in fields:
+            feature.SetField(f, plotCsGt[plotName][f])
     else:
         print 'Yc not found for %s'
         feature.SetField("Yc", 0.)
