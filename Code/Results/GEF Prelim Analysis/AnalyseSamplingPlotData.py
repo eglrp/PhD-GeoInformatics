@@ -40,15 +40,15 @@ def World2Pixel(geoMatrix, x, y):
     return (pixel, line)
 
 
-
 def ExtractPatchFeatures(imbuf, mask):
     mask = np.bool8(mask)
     imbuf_mask = np.ndarray(shape=(np.int32(mask.sum()), imbuf.shape[2]), dtype=np.float64)
     for i in range(0, imbuf.shape[2]):
         band = imbuf[:, :, i]
-        imbuf_mask[:, i] = np.float64(band[mask]) / 100.
+        imbuf_mask[:, i] = np.float64(band[mask]) / 5000.  # 5000 is scale for MODIS / XCALIB
     # imbuf_mask[:, 3] = imbuf_mask[:,  3]/2.
     s = np.sum(imbuf_mask[:,:3], 1)   # NNB only sum r,g,b as ir confuses things in g_n
+    s = np.sum(imbuf_mask[:,:4], 1)   # ??? check this
     cn = imbuf_mask / np.tile(s[:, None], (1, imbuf_mask.shape[1]))
     b_i = 2
     g_i = 1
@@ -161,7 +161,7 @@ def ExtractAllFeatures(ds, csGtSpatialRef, csGtDict, plotFigures=False):  # , ax
     return plot_dict
 
 
-def scatterd(x, y, labels=None, class_labels=None, thumbnails=None, regress=True, xlabel=None, ylabel=None):
+def ScatterD(x, y, labels=None, class_labels=None, thumbnails=None, regress=True, xlabel=None, ylabel=None):
     if class_labels is None:
         class_labels = np.zeros(x.__len__())
     classes = np.unique(class_labels)
@@ -286,57 +286,17 @@ plotDict = tchnuganuPlotDict.copy()
 plotDict.update(vdwPlotDict.copy())
 
 
-
-
-featureName = 'NDVI'
-
-featureVal = np.array([plot[featureName] for plot in plotDict.values()])
-# featureVal = np.log10(np.array([plot[featureName] for plot in plotDict.values()]))
-
-featureGrid = np.linspace(featureVal.min(), featureVal.max(), 100)
-
-pylab.figure()
-
-classes = np.array([p['DegrClass'] for p in plotDict.values()])
-class_labels = ['Severe', 'Moderate', 'Pristine'] #np.unique(classes)
-class_num = [35, 25, 30]
-featureValSub = np.array([])
-for i, cl in enumerate(class_labels):
-    idx = classes == cl
-    #idx = idx[:class_num[i]]
-    #allIdx.append(idx)
-    classFeatureVal = featureVal[idx][:class_num[i]]
-    featureValSub = np.concatenate((featureValSub, classFeatureVal))
-    kde = gaussian_kde(classFeatureVal)  # , bw_method=bandwidth / height.std(ddof=1))
-    # ndviGrid = np.linspace(ndvi.min(), ndvi.max(), 100)
-    featureKde = kde.evaluate(featureGrid)
-
-    pylab.subplot(2, 2, i+1)
-    pylab.plot(featureGrid, featureKde)
-    pylab.xlabel(featureName)
-    pylab.ylabel('Density')
-    pylab.title(cl)
-    pylab.grid()
-    pylab.text(0.9*featureGrid.max(), 0.9*featureKde.max(),'N=%d'%(class_num[i]))
-
-kde = gaussian_kde(np.array(featureValSub))  # , bw_method=bandwidth / height.std(ddof=1))
-featureKde = kde.evaluate(featureGrid)
-
-pylab.subplot(2, 2, 4)
-pylab.plot(featureGrid, featureKde)
-pylab.xlabel(featureName)
-pylab.ylabel('Density')
-pylab.title('All')
-pylab.grid()
-
-
 gn = np.array([plot['g_n'] for plot in plotDict.values()])
 ndvi = np.array([plot['NDVI'] for plot in plotDict.values()])
 id = np.array([plot['ID'] for plot in plotDict.values()])
+yc = np.array([plot['Yc'] for plot in plotDict.values()])
+
 thumbnails = [plot['thumbnail'] for plot in plotDict.values()]
+# classes = np.array([p['DegrClass'] for p in plotDict.values()])
+# class_labels = ['Severe', 'Moderate', 'Pristine'] #np.unique(classes)
 
 pylab.figure()
-scatterd(gn, ndvi, labels=id, class_labels=classes, thumbnails=thumbnails, regress=False, xlabel='gn', ylabel='NDVI')
+ScatterD(ndvi, yc, labels=id, thumbnails=thumbnails, regress=False, xlabel='NDVI', ylabel='Yc')
 
 
 # plotDict.values()[0].keys()
