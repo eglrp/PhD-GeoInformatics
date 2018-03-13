@@ -200,7 +200,7 @@ def ScatterD(x, y, labels=None, class_labels=None, thumbnails=None, regress=True
                     patches.Rectangle((xx - xd / (2 * ims), yy - yd / (2 * ims)), xd / ims, yd / ims, fill=False,
                                       edgecolor=colour, linewidth=2.))
                 # pylab.plot(mPixels[::step], dRawPixels[::step], color='k', marker='.', linestyle='', markersize=.5)
-        if regress and classes.__len__() > 1:  # and False:
+        if regress and classes.__len__() > 1 and False:
             (slope, intercept, r, p, stde) = stats.linregress(x[class_idx], y[class_idx])
             pylab.text(xlim[0] + xd * 0.7, ylim[0] + yd * 0.05 * (ci + 2),
                        str.format('{1}: $R^2$ = {0:.2f}', np.round(r ** 2, 2), classes[ci]),
@@ -208,7 +208,7 @@ def ScatterD(x, y, labels=None, class_labels=None, thumbnails=None, regress=True
 
     if regress:
         (slope, intercept, r, p, stde) = stats.linregress(x, y)
-        pylab.text((xlim[0] + xd * 0.4), (ylim[0] + yd * 0.05), str.format('All: $R^2$ = {0:.2f}', np.round(r ** 2, 2)),
+        pylab.text((xlim[0] + xd * 0.7), (ylim[0] + yd * 0.05), str.format('$R^2$ = {0:.2f}', np.round(r ** 2, 2)),
                    fontdict={'size': 12})
 
     if xlabel is not None:
@@ -240,6 +240,17 @@ for (i, feat) in enumerate(lyr):
     for i in range(feat_defn.GetFieldCount()):
         field_defn = feat_defn.GetFieldDefn(i)
         f[field_defn.GetName()] = feat.GetField(i)
+
+    id = f['ID']
+    if id[0] == 'S' or id[:3] == 'TCH':
+        f['DegrClass'] = 'Severe'
+    elif id[0] == 'M':
+        f['DegrClass'] = 'Moderate'
+    elif id[0] == 'P' or id[:3] == 'INT':
+        f['DegrClass'] = 'Pristine'
+    else:
+        f['DegrClass'] = '?'
+
     geom = feat.GetGeometryRef()
     if geom is not None and (geom.GetGeometryType() == ogr.wkbPolygon):
         print "%s N Pts: %d" % (f['ID'], geom.GetGeometryRef(0).GetPointCount())
@@ -293,14 +304,16 @@ plotDict.update(vdwPlotDict.copy())
 
 
 gn = np.log10(np.array([plot['g_n'] for plot in plotDict.values()]))
-ndvi = (np.array([plot['NDVI'] for plot in plotDict.values()]))
+ndvi = np.log10(np.array([plot['NDVI'] for plot in plotDict.values()]))
 id = np.array([plot['ID'] for plot in plotDict.values()])
-yc = np.array([plot['Yc'] for plot in plotDict.values()])
+yc = np.array([plot['Yc'] for plot in plotDict.values()])*(100.**2)/(0.5**2)
+classes = np.array([plot['DegrClass'] for plot in plotDict.values()])
 
 thumbnails = [plot['thumbnail'] for plot in plotDict.values()]
 # classes = np.array([p['DegrClass'] for p in plotDict.values()])
 # class_labels = ['Severe', 'Moderate', 'Pristine'] #np.unique(classes)
 
-pylab.figure()
-ScatterD(ndvi, np.log10(yc), labels=id, thumbnails=thumbnails, regress=True, xlabel='NDVI', ylabel='Yc')
-
+fig = pylab.figure()
+ScatterD(ndvi, yc/1000., class_labels=classes, labels=None, thumbnails=thumbnails, regress=True, xlabel='log(NDVI)', ylabel='AGB (t/ha)')
+pylab.grid()
+# fig.tight_layout()
