@@ -196,18 +196,21 @@ def extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_size=np.array((2
         point.Transform(transform)  # xform into im projection
         (pixel, line) = world2Pixel(geotransform, point.GetX(), point.GetY())
         # not all the point fall inside the image
-        if pixel >= 0 and line >= 0 and pixel < ds.RasterXSize and line < ds.RasterYSize:
-            # win_size = win_sizes[0]
-            # win_mask = win_masks[0]
-            win_coord = win_coord_
 
-            # ci = class_labels.index(plot['DegrClass'])
+        # win_size = win_sizes[0]
+        # win_mask = win_masks[0]
+        win_coord = win_coord_
 
-            # think about window size for co-ord xform
-            mn = (np.min(win_coord, 0))
-            mx = (np.max(win_coord, 0))
-            win_size_r = np.int32(np.ceil(mx - mn))
-            imbuf = np.zeros((win_size_r[0], win_size_r[1], 4), dtype=float)
+        # ci = class_labels.index(plot['DegrClass'])
+
+        # think about window size for co-ord xform
+        mn = (np.min(win_coord, 0))
+        mx = (np.max(win_coord, 0))
+        win_size_r = np.int32(np.ceil(mx - mn))
+
+        if pixel >= 0 and line >= 0 and pixel < ds.RasterXSize and line < ds.RasterYSize and \
+            pixel + win_size_r[0]  < ds.RasterXSize and line + win_size_r[1]  < ds.RasterYSize:
+            imbuf = np.zeros((win_size_r[1], win_size_r[0], 4), dtype=float)
 
             for b in range(1, 5):
                 pixel_start = np.int(np.round((pixel + mn[0])))
@@ -218,31 +221,31 @@ def extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_size=np.array((2
             # imbuf[:, :, 3] = imbuf[:, :, 3] / 2  # hack for NGI XCALIB
             if np.all(imbuf == 0):
                 print plot['ID'] + ": imbuf zero, assume NODATA ommitting"
-                break
-            # for b in range(0, 4):
-            #     imbuf[:, :, b] = imbuf[:, :, b] / max_im_vals_[b]
-            if not win_mask.shape == imbuf.shape[0:2]:
-                print "error - mask and buf different sizes"
-                raise Exception("error - mask and buf different sizes")
-            feat = extract_patch_features(imbuf.copy(), win_mask)
-            # feat['classi'] = ci
-            # feat['class'] = class_labels[ci]
-            # fields = ['TAGC', 'Z_P_AFRA', 'ALLOMETRY', 'HERB', 'LITTER']
-            fields = plot.keys()
-            for f in fields:
-                feat[f] = cs_gt_dict[plot['ID']][f]
-            feat['Xp'] = point.GetX()  # projected co-ords
-            feat['Yp'] = point.GetY()
+            else:
+                # for b in range(0, 4):
+                #     imbuf[:, :, b] = imbuf[:, :, b] / max_im_vals_[b]
+                if not win_mask.shape == imbuf.shape[0:2]:
+                    print "error - mask and buf different sizes"
+                    raise Exception("error - mask and buf different sizes")
+                feat = extract_patch_features(imbuf.copy(), win_mask)
+                # feat['classi'] = ci
+                # feat['class'] = class_labels[ci]
+                # fields = ['TAGC', 'Z_P_AFRA', 'ALLOMETRY', 'HERB', 'LITTER']
+                fields = plot.keys()
+                for f in fields:
+                    feat[f] = cs_gt_dict[plot['ID']][f]
+                feat['Xp'] = point.GetX()  # projected co-ords
+                feat['Yp'] = point.GetY()
 
-            feat['thumbnail'] = np.float32(imbuf.copy())
-            plot_dict[plot['ID']] = feat
-            # plotTagcDict[plot['PLOT']] = cs_gt_dict[plot['PLOT']]['TAGC']
-            tmp = np.reshape(feat['thumbnail'], (np.prod(win_size_r), 4))
-            # max_tmp = tmp.max(axis=0)
-            max_tmp = np.percentile(tmp, 98., axis=0)
-            max_im_vals[max_tmp > max_im_vals] = max_tmp[max_tmp > max_im_vals]
-            # print plot['PLOT']
-            i = i + 1
+                feat['thumbnail'] = np.float32(imbuf.copy())
+                plot_dict[plot['ID']] = feat
+                # plotTagcDict[plot['PLOT']] = cs_gt_dict[plot['PLOT']]['TAGC']
+                tmp = np.reshape(feat['thumbnail'], (np.prod(win_size_r), 4))
+                # max_tmp = tmp.max(axis=0)
+                max_tmp = np.percentile(tmp, 98., axis=0)
+                max_im_vals[max_tmp > max_im_vals] = max_tmp[max_tmp > max_im_vals]
+                # print plot['PLOT']
+                i = i + 1
         else:
             print "x-" + plot['ID']
 
@@ -377,7 +380,7 @@ if not geotransform is None:
     print 'Origin = (', geotransform[0], ',', geotransform[3], ')'
     print 'Pixel Size = (', geotransform[1], ',', geotransform[5], ')'
 
-vdwSewePlotDict = extract_all_features(vdwSeweDs, samplingPtSpatialRef, samplingPtDict, win_size=np.array([40, 40]),
+vdwSewePlotDict = extract_all_features(vdwSeweDs, samplingPtSpatialRef, samplingPtDict, win_size=np.array([30, 30]),
                                    win_rotation=0., plotFigures=True)
 vdwSeweDs = None
 
@@ -408,7 +411,6 @@ pylab.colorbar()
 
 dxyGrid = np.linspace(dfeat.min(), dfeat.max(), 100)
 
-pylab.figure()
 classes = np.array([p['DegrClass'] for p in plotDict.values()])
 class_labels = ['Severe', 'Moderate', 'Pristine'] #np.unique(classes)
 class_num = [35, 25, 30]
@@ -421,10 +423,11 @@ def variogram(distXy, distFeat, nbins=100):
     vg = np.zeros((nbins, 1))
     for i in range(0, nbins):
         idx = np.logical_and(distXy[sortIdx] > distXyGrid[i], distXy[sortIdx] <= distXyGrid[i + 1])
-        vg[i] = np.median(distFeat[sortIdx][idx])
+        vg[i] = np.nanmedian(distFeat[sortIdx][idx])
     return vg, distXyGrid[:-1] + np.diff(distXyGrid).mean()
 
-
+fig = pylab.figure()
+fontSize = 16
 for i, cl in enumerate(class_labels):
     idx = classes == cl
     #idx = idx[:class_num[i]]
@@ -433,13 +436,13 @@ for i, cl in enumerate(class_labels):
     dfeat = pdist(np.vstack(featureVal[idx]), 'minkowski', p=1)
     featVg, dBins = variogram(dxy, dfeat, nbins=30)
 
-    pylab.subplot(2, 2, i+1)
+    pylab.subplot(1, 3, i+1)
     pylab.plot(dxy, dfeat, 'k.')
     pylab.plot(dBins, featVg, 'r-', linewidth=2.)
-    pylab.xlabel('Distance (m)')
-    pylab.ylabel('NDVI')
-    pylab.title(cl)
+    pylab.xlabel('Dist. (m)', fontdict={'size':fontSize})
+    pylab.ylabel(r'$\Delta$(NDVI)', fontdict={'size':fontSize})
+    pylab.title(cl, fontdict={'size':fontSize})
     pylab.grid()
 
-
+fig.tight_layout()
 # plotDict.values()[0].keys()

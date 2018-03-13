@@ -19,7 +19,7 @@ from PIL import ImageDraw
 
 tchnuganuImageFile = "V:/Data/NGI/Rectified/3323D_2015_1001/RGBN/XCALIB/o3323d_2015_1001_02_0081_RGBN_XCALIB.tif"  # "V:/Data/NGI/Rectified/3324C_2015_1004/RGBN/o3324c_2015_1004_02_0044_RGBN_XCALIB.tif"
 vdwImageFile = "V:/Data/NGI/Rectified/3323D_2015_1001/RGBN/XCALIB/o3323d_2015_1001_02_0078_RGBN_XCALIB.tif"  # ""V:/Data/NGI/Rectified/3323D_2015_1001/RGBN/o3323d_2015_1001_02_0077_Lo25Wgs84_RGBN_XCALIB.tif"
-samplingPtFile = "C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/GEF Sampling Points.shp"
+samplingPtFile = "C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/GEF Sampling Points V2.shp"
 
 pylab.close('all')
 
@@ -205,7 +205,7 @@ def extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_size=np.array((2
             mn = (np.min(win_coord, 0))
             mx = (np.max(win_coord, 0))
             win_size_r = np.int32(np.ceil(mx - mn))
-            imbuf = np.zeros((win_size_r[0], win_size_r[1], 4), dtype=float)
+            imbuf = np.zeros((win_size_r[1], win_size_r[0], 4), dtype=float)
 
             for b in range(1, 5):
                 pixel_start = np.int(np.round((pixel + mn[0])))
@@ -216,28 +216,29 @@ def extract_all_features(ds, cs_gt_spatial_ref, cs_gt_dict, win_size=np.array((2
             # imbuf[:, :, 3] = imbuf[:, :, 3] / 2  # hack for NGI XCALIB
             if np.all(imbuf == 0):
                 print plot['ID'] + ": imbuf zero, assume NODATA ommitting"
-                break
-            # for b in range(0, 4):
-            #     imbuf[:, :, b] = imbuf[:, :, b] / max_im_vals_[b]
-            if not win_mask.shape == imbuf.shape[0:2]:
-                print "error - mask and buf different sizes"
-                raise Exception("error - mask and buf different sizes")
-            feat = extract_patch_features(imbuf.copy(), win_mask)
-            # feat['classi'] = ci
-            # feat['class'] = class_labels[ci]
-            # fields = ['TAGC', 'Z_P_AFRA', 'ALLOMETRY', 'HERB', 'LITTER']
-            fields = plot.keys()
-            for f in fields:
-                feat[f] = cs_gt_dict[plot['ID']][f]
-            feat['thumbnail'] = np.float32(imbuf.copy())
-            plot_dict[plot['ID']] = feat
-            # plotTagcDict[plot['PLOT']] = cs_gt_dict[plot['PLOT']]['TAGC']
-            tmp = np.reshape(feat['thumbnail'], (np.prod(win_size_r), 4))
-            # max_tmp = tmp.max(axis=0)
-            max_tmp = np.percentile(tmp, 98., axis=0)
-            max_im_vals[max_tmp > max_im_vals] = max_tmp[max_tmp > max_im_vals]
-            # print plot['PLOT']
-            i = i + 1
+            else:
+                # break
+                # for b in range(0, 4):
+                #     imbuf[:, :, b] = imbuf[:, :, b] / max_im_vals_[b]
+                if not win_mask.shape == imbuf.shape[0:2]:
+                    print "error - mask and buf different sizes"
+                    raise Exception("error - mask and buf different sizes")
+                feat = extract_patch_features(imbuf.copy(), win_mask)
+                # feat['classi'] = ci
+                # feat['class'] = class_labels[ci]
+                # fields = ['TAGC', 'Z_P_AFRA', 'ALLOMETRY', 'HERB', 'LITTER']
+                fields = plot.keys()
+                for f in fields:
+                    feat[f] = cs_gt_dict[plot['ID']][f]
+                feat['thumbnail'] = np.float32(imbuf.copy())
+                plot_dict[plot['ID']] = feat
+                # plotTagcDict[plot['PLOT']] = cs_gt_dict[plot['PLOT']]['TAGC']
+                tmp = np.reshape(feat['thumbnail'], (np.prod(win_size_r), 4))
+                # max_tmp = tmp.max(axis=0)
+                max_tmp = np.percentile(tmp, 98., axis=0)
+                max_im_vals[max_tmp > max_im_vals] = max_tmp[max_tmp > max_im_vals]
+                # print plot['PLOT']
+                i = i + 1
         else:
             print "x-" + plot['ID']
 
@@ -386,11 +387,13 @@ featureVal = np.array([plot[featureName] for plot in plotDict.values()])
 
 featureGrid = np.linspace(featureVal.min(), featureVal.max(), 100)
 
-pylab.figure()
+
+fontSize = 16
+fig = pylab.figure()
 
 classes = np.array([p['DegrClass'] for p in plotDict.values()])
 class_labels = ['Severe', 'Moderate', 'Pristine'] #np.unique(classes)
-class_num = [35, 25, 30]
+class_num = [30, 20, 40]
 featureValSub = np.array([])
 for i, cl in enumerate(class_labels):
     idx = classes == cl
@@ -404,27 +407,31 @@ for i, cl in enumerate(class_labels):
 
     pylab.subplot(2, 2, i+1)
     pylab.plot(featureGrid, featureKde)
-    pylab.xlabel(featureName)
-    pylab.ylabel('Density')
-    pylab.title(cl)
+    pylab.xlabel(featureName, fontdict={'size':fontSize})
+    pylab.ylabel('Prob. Density', fontdict={'size':fontSize})
+    pylab.title(cl, fontdict={'size':fontSize})
     pylab.grid()
-    pylab.text(0.9*featureGrid.max(), 0.9*featureKde.max(),'N=%d'%(class_num[i]))
+    pylab.axis('tight')
+    pylab.text(0.9*featureGrid.max(), 0.9*featureKde.max(),'N=%d'%(class_num[i]), fontdict={'size':fontSize})
 
 kde = gaussian_kde(np.array(featureValSub))  # , bw_method=bandwidth / height.std(ddof=1))
 featureKde = kde.evaluate(featureGrid)
 
 pylab.subplot(2, 2, 4)
 pylab.plot(featureGrid, featureKde)
-pylab.xlabel(featureName)
-pylab.ylabel('Density')
-pylab.title('All')
+pylab.xlabel(featureName, fontdict={'size':fontSize})
+pylab.ylabel('Prob. Density', fontdict={'size':fontSize})
+pylab.title('All', fontdict={'size':fontSize})
 pylab.grid()
+pylab.text(0.9 * featureGrid.max(), 0.9 * featureKde.max(), 'N=%d' % (np.sum(class_num)), fontdict={'size': fontSize})
 
+fig.tight_layout()
 
 gn = np.array([plot['g_n'] for plot in plotDict.values()])
 ndvi = np.array([plot['NDVI'] for plot in plotDict.values()])
 id = np.array([plot['ID'] for plot in plotDict.values()])
 thumbnails = [plot['thumbnail'] for plot in plotDict.values()]
+
 
 pylab.figure()
 scatterd(gn, ndvi, labels=id, class_labels=classes, thumbnails=thumbnails, regress=False, xlabel='gn', ylabel='NDVI')
