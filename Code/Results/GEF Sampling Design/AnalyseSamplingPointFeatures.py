@@ -393,7 +393,7 @@ fig = pylab.figure()
 
 classes = np.array([p['DegrClass'] for p in plotDict.values()])
 class_labels = ['Severe', 'Moderate', 'Pristine'] #np.unique(classes)
-class_num = [30, 20, 40]
+class_num = [30, 30, 30]
 featureValSub = np.array([])
 for i, cl in enumerate(class_labels):
     idx = classes == cl
