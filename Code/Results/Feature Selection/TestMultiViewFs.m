@@ -159,3 +159,41 @@ end
 
 x*h2*x'
 sum(x(clustIdx{1})).^2 + sum(x(clustIdx{2})).^2
+
+
+%% Experiment with MI algorithms
+t = linspace(0, 10*pi, 100);
+x = sin(t);
+y = 1 + exp(sin(t)) + 0.1*rand(size(x));
+
+f = 20000;
+xi = (round(x*f));
+yi = (round(y*f));
+hx = entropy(x(:));
+hy = entropy(y(:));
+tic
+c = mi(xi(:), yi(:))   %/min(hx, hy)
+toc
+
+tic
+kc = kernelmi(f*x, f*y/10)
+toc
+
+tic
+% cc = mutualinfo(f*x, f*y)
+toc
+%%
+        dataNorm = (10*(data*scalem(data, 'domain')));
+        c = zeros(size(dataNorm, 2), size(dataNorm, 2));
+        for i = 1:size(dataNorm, 2)
+            h(i) = entropy(+dataNorm(:, i));
+        end
+        for i = 1:size(dataNorm, 2)
+            for j = i:size(dataNorm, 2)
+                c(i, j) = mi(+dataNorm(:, i), +dataNorm(:, j));
+                c(i, j) = c(i, j)/min(h(i), h(j)); % this should have a max of 1
+            end
+        end
+        c = c + triu(c, 1)';   % + diag(ones(1, size(data, 2)));
+        c(h == 0, :) = 0;
+        c(:, h == 0) = 0;

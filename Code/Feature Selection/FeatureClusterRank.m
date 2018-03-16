@@ -75,20 +75,36 @@ else
     if useCorrelation
         c = corr(+data);
     else
-        dataNorm = (10*(data*scalem(data, 'domain')));
+%         dataNorm = (10*(data*scalem(data, 'domain')));
         c = zeros(size(dataNorm, 2), size(dataNorm, 2));
-        for i = 1:size(dataNorm, 2)
-            h(i) = entropy(+dataNorm(:, i));
-        end
+%         for i = 1:size(dataNorm, 2)
+%             h(i) = entropy(+dataNorm(:, i));
+%         end
         for i = 1:size(dataNorm, 2)
             for j = i:size(dataNorm, 2)
-                c(i, j) = mi(+dataNorm(:, i), +dataNorm(:, j));
-                c(i, j) = c(i, j)/min(h(i), h(j)); % this should have a max of 1
+                c(i, j) = kernelmi(+dataNorm(:, i), +dataNorm(:, j));
+%                 c(i, j) = c(i, j)/min(h(i), h(j)); % this should have a max of 1
             end
         end
         c = c + triu(c, 1)';   % + diag(ones(1, size(data, 2)));
         c(h == 0, :) = 0;
         c(:, h == 0) = 0;
+        
+%     else
+%         dataNorm = (10*(data*scalem(data, 'domain')));
+%         c = zeros(size(dataNorm, 2), size(dataNorm, 2));
+%         for i = 1:size(dataNorm, 2)
+%             h(i) = entropy(+dataNorm(:, i));
+%         end
+%         for i = 1:size(dataNorm, 2)
+%             for j = i:size(dataNorm, 2)
+%                 c(i, j) = mi(+dataNorm(:, i), +dataNorm(:, j));
+%                 c(i, j) = c(i, j)/min(h(i), h(j)); % this should have a max of 1
+%             end
+%         end
+%         c = c + triu(c, 1)';   % + diag(ones(1, size(data, 2)));
+%         c(h == 0, :) = 0;
+%         c(:, h == 0) = 0;
     end
 
     if showFigures
