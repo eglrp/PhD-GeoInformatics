@@ -25,9 +25,12 @@ In response to concerns about the novelty of the manuscript, I would like to hig
 3) Our method is distinct in that it allows factors such as computation time and measurement cost to be considered, in addition to relevance, when selecting features from correlated clusters.
 4) There are very few studies that address feature selection in the context of remote sensing in general.  
 
-We have addressed the referees' comments around recently proposed feature selection approaches, structured sparisty regularisation, and the Chen et al (2017) paper, "Supervised Multiview Feature Selection Exploring Homogeneity and Heterogeneity With l1,2-Norm and Automatic View Generation".  Specifically, we have differentiated our method from the general approach of structured sparisty regularisation, and the  Multiview Feature Selection (MultiviewFS) technique of Chen et el (2017).  To summarise: 
-1) Structured sparsity regularisation approaches optimise a cost function that assumes a linear dependence between features and class labels.  FCR uses a ranking heuristic to select features that does not make assumptions of linearity.
-2) MultiviewFS performs feature clustering using a Euclidean distance measure while FCR uses correlation.  Euclidean distance describes feature similarity, while correlation is a broader description of redundancy that captures general linear dependence.  
+I believe we have addressed the referees' comments around recently proposed feature selection approaches, structured sparisty regularisation, and the Chen et al (2017) paper, "Supervised Multiview Feature Selection Exploring Homogeneity and Heterogeneity With l1,2-Norm and Automatic View Generation".  Specifically, we have differentiated our method from the general approach of structured sparisty regularisation, and the  Multiview Feature Selection (MultiviewFS) technique of Chen et el (2017).  In summary: 
+1) Structured sparsity regularisation approaches minimise an objective function that assumes a linear dependence between features and class labels.  FCR uses a ranking heuristic to select features that does not make assumptions of linearity.
+2) MultiviewFS performs redundant feature clustering using a Euclidean distance measure while FCR uses correlation.  Euclidean distance describes feature similarity or proximity, while correlation is a broader description of redundancy that captures general linear dependence.  
+Other points raised by the referees have also been accommodated to in the revised manuscript.
 
+I hope that this revision 
 
 The attention to and quantification of stability has not been addressed in any remote sensing journal that I have seen.  The combination of hierarchical clustering and naive Bayes criterion has also never been published, although feature selection methods with other forms of clustering and importance measure have been published.  It also has an element of novelty in that it compares traditional methods on remote sensing data sets which has only been done in a few papers that I have seen and not with the methods or data in my paper.  Admittedly, it is far from revolutionary, but don't these things make it novel enough?
+
