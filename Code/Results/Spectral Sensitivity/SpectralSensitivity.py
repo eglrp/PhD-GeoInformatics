@@ -10,6 +10,24 @@ import scipy.stats
 import matplotlib.pyplot as pyplot
 import matplotlib as mpl
 
+def ReadLandsatRsr(fileName):
+    from openpyxl import load_workbook
+    wb = load_workbook(fileName)
+    sheetNames = ['Blue-L7', 'Green-L7', 'Red-L7', 'NIR-L7']
+    wavelenList = []
+    rsrList = []
+    for sheetName in sheetNames:
+        sheet = wb[sheetName]
+        wavelen = []
+        rsr = []
+        for row in sheet.iter_rows('A{}:B{}'.format(sheet.min_row+1, sheet.max_row)):
+            wavelen.append(row[0].value)
+            rsr.append(row[1].value)
+        wavelenList.append(wavelen)
+        rsrList.append(rsr)
+    return wavelenList, rsrList
+
+
 def ReadModisRsr(filename, ch = 5):
     t = np.loadtxt(filename, dtype = float, comments = '#')
     #wavelen = t[:,2]
@@ -89,6 +107,9 @@ modisFn = ["C:/Data/Development/Projects/PhD GeoInformatics/Data/Spectral Sensit
 spotFn = "C:/Data/Development/Projects/PhD GeoInformatics/Data/Spectral Sensitivities/SPOT r453_9_spectralsensivity.xlsx"
 
 asterDir = "C:/Data/Development/Projects/PhD GeoInformatics/Data/Spectral Sensitivities"
+
+landsatFn = "C:/Data/Development/Projects/PhD GeoInformatics/Data/Spectral Sensitivities/L7_RSR.xlsx"
+
 
 # Note on units:
 #
@@ -176,6 +197,13 @@ pylab.plot(spotWaveLen, spotRsr, '-')
 pylab.legend(['B3', 'B2', 'B1'])
 
 
+(landsatWaveLenList,landsatRsrList) = ReadLandsatRsr(landsatFn)
+pylab.figure('Landsat')
+for (wavelen, rsr) in zip(landsatWaveLenList,landsatRsrList):
+    pylab.plot(wavelen, rsr, '-')
+# pylab.legend(['B3', 'B2', 'B1'])
+
+
 ##
 # interp all to dmc wavelen
 pylab.figure('Interp')
@@ -228,6 +256,15 @@ for i in range(3):
 
 pylab.figure('QB Interp')
 hQb = pylab.plot(dmcWaveLen, np.asarray(qbRsrInterp).transpose(), 'r-')
+
+landsatRsrInterp = []
+for (wavelen, rsr) in zip(landsatWaveLenList,landsatRsrList):
+    rsrInterp = np.interp(dmcWaveLen, wavelen, np.array(rsr), left=0, right=0)
+    landsatRsrInterp.append(rsrInterp)
+
+pylab.figure('Landsat Interp')
+hQb = pylab.plot(dmcWaveLen, np.asarray(landsatRsrInterp).transpose(), 'r-')
+
 
 
 dmcMeas = []
@@ -470,6 +507,29 @@ pylab.tight_layout()
 
 f1.savefig('C:/Data/Development/Projects/PhD GeoInformatics/Docs/My Docs/Thesis/Retrieval of Surface Reflectance '
            'from Aerial Imagery/Figure 11 - DMC and SPOT5 RSRs.eps', dpi=1200)
+
+
+pylab.figure('MODIS, DMC and Landsat Spectral Sensitivities')
+colors = ['k','r','g','b']
+hModis = []
+hDmc = []
+hSpot = []
+for i in range(0, 4):
+#    hModis.append(pylab.plot(modisWaveLen[i], modisRsr[i], color=colors[i], linestyle='-'))
+    hModis.append(pylab.plot(modisWaveLen[i], modisRsr[i], color='k', linestyle='-'))
+    pylab.hold('on')
+    mask = dmcRsr[:, i] > 0.001
+#    hDmc.append(pylab.plot(dmcWaveLen[mask], dmcRsr[mask, i], color=colors[i], linestyle='--'))
+    hDmc.append(pylab.plot(dmcWaveLen[mask], dmcRsr[mask, i], color='k', linestyle='--'))
+    if i<np.shape(landsatRsrList)[0]:
+        mask = np.array(landsatRsrList[i]) > 0.001
+        hSpot.append(pylab.plot(np.array(landsatWaveLenList[i])[mask], np.array(landsatRsrList[i])[mask], color=colors[i], linestyle=':'))
+
+pylab.legend((hModis[0][0], hDmc[0][0], hSpot[0][0]), ('MODIS', 'DMC', 'Landsat'))
+pylab.xlabel('Wavelength ($\mu m$)')
+pylab.ylabel('Relative spectral response')
+pylab.tight_layout()
+
 
 # MODIS, DMC RSR and ASTER spectra for paper
 # pylab.close('all')
