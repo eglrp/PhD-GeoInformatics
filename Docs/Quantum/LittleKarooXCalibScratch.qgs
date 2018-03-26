@@ -1,46 +1,101 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis projectname="" version="2.18.13">
+<qgis projectname="" version="3.0.0-Girona">
   <title></title>
   <autotransaction active="0"/>
   <evaluateDefaultValues active="0"/>
-  <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="">
+  <trust active="0"/>
+  <projectCrs>
+    <spatialrefsys>
+      <proj4>+proj=tmerc +lat_0=0 +lon_0=21 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +units=m +no_defs</proj4>
+      <srsid>100000</srsid>
+      <srid>0</srid>
+      <authid>USER:100000</authid>
+      <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=21 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +units=m +no_defs)</description>
+      <projectionacronym>tmerc</projectionacronym>
+      <ellipsoidacronym>WGS84</ellipsoidacronym>
+      <geographicflag>false</geographicflag>
+    </spatialrefsys>
+  </projectCrs>
+  <layer-tree-group>
     <customproperties/>
-    <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="LE07_L1TP_173083_20100203_20161217_01_T1_sr_MERGE20180321141226966" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/Landsat/LE71730832010034ASN00/LE07_L1TP_173083_20100203_20161217_01_T1_sr_MERGE.tif" name="LE07_L1TP_173083_20100203_20161217_01_T1_sr_MERGE">
+    <layer-tree-layer expanded="1" source="D:\Data\Development\Projects\PhD GeoInformatics\Data\Misc\Sheet 50K\Sheet_50K.shp" id="Sheet_50K_a667d6ba_3f77_43d9_8f02_9df92a55ec7a" providerKey="ogr" checked="Qt::Checked" name="Sheet_50K">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="ReducedStudyArea220180321124201199" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/Little Karoo ShapeFiles/ReducedStudyArea2.shp" name="ReducedStudyArea2">
+    <layer-tree-layer expanded="1" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/SPOT/S131022114824832/SCENE01/IMAGERY.TIF" id="IMAGERY_54703782_3ab6_4146_9e9b_1c8535de353b" providerKey="gdal" checked="Qt::Unchecked" name="IMAGERY">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="StudyAreaXCalibMosaicSpotMask20180321130031185" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/Cross Calibration/Mosaics/StudyAreaXCalibMosaicSpotMask.tif" name="StudyAreaXCalibMosaicSpotMask">
+    <layer-tree-layer expanded="1" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/CGA/SRTM/s34_e024_1arc_v3.tif" id="s34_e024_1arc_v3_5a5345f6_2393_45dc_80c1_5a066d06a5d6" providerKey="gdal" checked="Qt::Unchecked" name="s34_e024_1arc_v3">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="spotInt16_220180321125425975" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/Cross Calibration/Mosaics/spotInt16_2.tif" name="spotInt16_2">
+    <layer-tree-layer expanded="1" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/SPOT/S131022114824832/ATCOR/AATCORCorrected_oS131022114824832b_278400201_Uint16.tif" id="AATCORCorrected_oS131022114824832b_278400201_Uint16_4cf013ee_82ec_4a21_897a_e173841eda71" providerKey="gdal" checked="Qt::Unchecked" name="AATCORCorrected_oS131022114824832b_278400201_Uint16">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="ReducedStudyArea20180321124142218" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/ReducedStudyArea.shp" name="ReducedStudyArea">
+    <layer-tree-layer expanded="1" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/CGA/ASTER DEM/ASTGTM2_S34E021_dem.tif" id="ASTGTM2_S34E021_dem_d3bf2b6d_dd59_4001_b7bd_6fb887264a03" providerKey="gdal" checked="Qt::Unchecked" name="ASTGTM2_S34E021_dem">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="Modis_CropStudyArea_Float3220180321160449904" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/Cross Calibration/Mosaics/Modis_CropStudyArea_Float32.tif" name="Modis_CropStudyArea_Float32">
+    <layer-tree-layer expanded="1" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/CGA/SRTM/s34_e021_1arc_v3.tif" id="s34_e021_1arc_v3_b97d6e69_21d4_401b_be36_a161b098a05d" providerKey="gdal" checked="Qt::Unchecked" name="s34_e021_1arc_v3">
       <customproperties/>
     </layer-tree-layer>
+    <layer-tree-layer expanded="1" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/CGA/SRTM/s34_e022_1arc_v3.tif" id="s34_e022_1arc_v3_55241e42_c5ed_45b5_b5a7_532151405066" providerKey="gdal" checked="Qt::Unchecked" name="s34_e022_1arc_v3">
+      <customproperties/>
+    </layer-tree-layer>
+    <layer-tree-layer expanded="1" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/Landsat/LE71730832010034ASN00/LE07_L1TP_173083_20100203_20161217_01_T1_sr_MERGE.tif" id="LE07_L1TP_173083_20100203_20161217_01_T1_sr_MERGE20180321141226966" providerKey="gdal" checked="Qt::Unchecked" name="LE07_L1TP_173083_20100203_20161217_01_T1_sr_MERGE">
+      <customproperties/>
+    </layer-tree-layer>
+    <layer-tree-layer expanded="1" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/Little Karoo ShapeFiles/ReducedStudyArea2.shp" id="ReducedStudyArea220180321124201199" providerKey="ogr" checked="Qt::Unchecked" name="ReducedStudyArea2">
+      <customproperties/>
+    </layer-tree-layer>
+    <layer-tree-layer expanded="1" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/Cross Calibration/Mosaics/spotInt16_2.tif" id="spotInt16_220180321125425975" providerKey="gdal" checked="Qt::Unchecked" name="spotInt16_2">
+      <customproperties/>
+    </layer-tree-layer>
+    <layer-tree-layer expanded="1" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/Cross Calibration/Mosaics/StudyAreaXCalibMosaicSpotMask.tif" id="StudyAreaXCalibMosaicSpotMask20180321130031185" providerKey="gdal" checked="Qt::Unchecked" name="StudyAreaXCalibMosaicSpotMask">
+      <customproperties/>
+    </layer-tree-layer>
+    <layer-tree-layer expanded="1" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/ReducedStudyArea.shp" id="ReducedStudyArea20180321124142218" providerKey="ogr" checked="Qt::Unchecked" name="ReducedStudyArea">
+      <customproperties/>
+    </layer-tree-layer>
+    <layer-tree-layer expanded="1" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/Cross Calibration/Mosaics/Modis_CropStudyArea_Float32.tif" id="Modis_CropStudyArea_Float3220180321160449904" providerKey="gdal" checked="Qt::Unchecked" name="Modis_CropStudyArea_Float32">
+      <customproperties/>
+    </layer-tree-layer>
+    <custom-order enabled="0">
+      <item>LE07_L1TP_173083_20100203_20161217_01_T1_sr_MERGE20180321141226966</item>
+      <item>ReducedStudyArea220180321124201199</item>
+      <item>StudyAreaXCalibMosaicSpotMask20180321130031185</item>
+      <item>spotInt16_220180321125425975</item>
+      <item>ReducedStudyArea20180321124142218</item>
+      <item>Modis_CropStudyArea_Float3220180321160449904</item>
+      <item>AATCORCorrected_oS131022114824832b_278400201_Uint16_4cf013ee_82ec_4a21_897a_e173841eda71</item>
+      <item>s34_e024_1arc_v3_5a5345f6_2393_45dc_80c1_5a066d06a5d6</item>
+      <item>IMAGERY_54703782_3ab6_4146_9e9b_1c8535de353b</item>
+      <item>s34_e022_1arc_v3_55241e42_c5ed_45b5_b5a7_532151405066</item>
+      <item>s34_e021_1arc_v3_b97d6e69_21d4_401b_be36_a161b098a05d</item>
+      <item>ASTGTM2_S34E021_dem_d3bf2b6d_dd59_4001_b7bd_6fb887264a03</item>
+      <item>Sheet_50K_a667d6ba_3f77_43d9_8f02_9df92a55ec7a</item>
+    </custom-order>
   </layer-tree-group>
+  <snapping-settings type="1" intersection-snapping="0" enabled="0" unit="2" mode="1" tolerance="0">
+    <individual-layer-settings>
+      <layer-setting units="2" type="2" enabled="0" id="ReducedStudyArea220180321124201199" tolerance="0"/>
+      <layer-setting units="2" type="2" enabled="0" id="ReducedStudyArea20180321124142218" tolerance="0"/>
+      <layer-setting units="1" type="1" enabled="0" id="Sheet_50K_a667d6ba_3f77_43d9_8f02_9df92a55ec7a" tolerance="12"/>
+    </individual-layer-settings>
+  </snapping-settings>
   <relations/>
-  <mapcanvas>
+  <mapcanvas annotationsVisible="1" name="theMapCanvas">
     <units>meters</units>
     <extent>
-      <xmin>95028.77461381637840532</xmin>
-      <ymin>-3697727.17389054363593459</ymin>
-      <xmax>97545.29383812405285425</xmax>
-      <ymax>-3694896.80048371898010373</ymax>
+      <xmin>-52414.96746625527885044</xmin>
+      <ymin>-3847997.62775577278807759</ymin>
+      <xmax>143895.69280166682437994</xmax>
+      <ymax>-3614067.71396882506087422</ymax>
     </extent>
     <rotation>0</rotation>
-    <projections>1</projections>
     <destinationsrs>
       <spatialrefsys>
         <proj4>+proj=tmerc +lat_0=0 +lon_0=21 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +units=m +no_defs</proj4>
-        <srsid>100003</srsid>
+        <srsid>100000</srsid>
         <srid>0</srid>
-        <authid>USER:100003</authid>
+        <authid>USER:100000</authid>
         <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=21 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +units=m +no_defs)</description>
         <projectionacronym>tmerc</projectionacronym>
         <ellipsoidacronym>WGS84</ellipsoidacronym>
@@ -48,58 +103,439 @@
       </spatialrefsys>
     </destinationsrs>
     <rendermaptile>0</rendermaptile>
-    <layer_coordinate_transform_info>
-      <layer_coordinate_transform destAuthId="USER:100003" srcAuthId="USER:100003" srcDatumTransform="-1" destDatumTransform="-1" layerid="spotInt16_220180321125425975"/>
-      <layer_coordinate_transform destAuthId="USER:100003" srcAuthId="EPSG:4326" srcDatumTransform="-1" destDatumTransform="-1" layerid="ReducedStudyArea20180321124142218"/>
-      <layer_coordinate_transform destAuthId="USER:100003" srcAuthId="USER:100003" srcDatumTransform="-1" destDatumTransform="-1" layerid="Modis_CropStudyArea_Float3220180321160449904"/>
-      <layer_coordinate_transform destAuthId="USER:100003" srcAuthId="USER:100008" srcDatumTransform="-1" destDatumTransform="-1" layerid="StudyAreaXCalibMosaicSpotMask20180321130031185"/>
-      <layer_coordinate_transform destAuthId="USER:100003" srcAuthId="EPSG:32634" srcDatumTransform="-1" destDatumTransform="-1" layerid="LE07_L1TP_173083_20100203_20161217_01_T1_sr_MERGE20180321141226966"/>
-    </layer_coordinate_transform_info>
   </mapcanvas>
-  <layer-tree-canvas>
-    <custom-order enabled="0">
-      <item>ReducedStudyArea20180321124142218</item>
-      <item>ReducedStudyArea220180321124201199</item>
-      <item>spotInt16_220180321125425975</item>
-      <item>StudyAreaXCalibMosaicSpotMask20180321130031185</item>
-      <item>LE07_L1TP_173083_20100203_20161217_01_T1_sr_MERGE20180321141226966</item>
-      <item>Modis_CropStudyArea_Float3220180321160449904</item>
-    </custom-order>
-  </layer-tree-canvas>
   <legend updateDrawingOrder="true">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Sheet_50K" showFeatureCount="0">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile visible="1" layerid="Sheet_50K_a667d6ba_3f77_43d9_8f02_9df92a55ec7a" isInOverview="0"/>
+      </filegroup>
+    </legendlayer>
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="IMAGERY" showFeatureCount="0">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile visible="0" layerid="IMAGERY_54703782_3ab6_4146_9e9b_1c8535de353b" isInOverview="0"/>
+      </filegroup>
+    </legendlayer>
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="s34_e024_1arc_v3" showFeatureCount="0">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile visible="0" layerid="s34_e024_1arc_v3_5a5345f6_2393_45dc_80c1_5a066d06a5d6" isInOverview="0"/>
+      </filegroup>
+    </legendlayer>
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="AATCORCorrected_oS131022114824832b_278400201_Uint16" showFeatureCount="0">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile visible="0" layerid="AATCORCorrected_oS131022114824832b_278400201_Uint16_4cf013ee_82ec_4a21_897a_e173841eda71" isInOverview="0"/>
+      </filegroup>
+    </legendlayer>
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="ASTGTM2_S34E021_dem" showFeatureCount="0">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile visible="0" layerid="ASTGTM2_S34E021_dem_d3bf2b6d_dd59_4001_b7bd_6fb887264a03" isInOverview="0"/>
+      </filegroup>
+    </legendlayer>
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="s34_e021_1arc_v3" showFeatureCount="0">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile visible="0" layerid="s34_e021_1arc_v3_b97d6e69_21d4_401b_be36_a161b098a05d" isInOverview="0"/>
+      </filegroup>
+    </legendlayer>
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="s34_e022_1arc_v3" showFeatureCount="0">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile visible="0" layerid="s34_e022_1arc_v3_55241e42_c5ed_45b5_b5a7_532151405066" isInOverview="0"/>
+      </filegroup>
+    </legendlayer>
     <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="LE07_L1TP_173083_20100203_20161217_01_T1_sr_MERGE" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="LE07_L1TP_173083_20100203_20161217_01_T1_sr_MERGE20180321141226966" visible="0"/>
+        <legendlayerfile visible="0" layerid="LE07_L1TP_173083_20100203_20161217_01_T1_sr_MERGE20180321141226966" isInOverview="0"/>
       </filegroup>
     </legendlayer>
     <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="ReducedStudyArea2" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="ReducedStudyArea220180321124201199" visible="0"/>
+        <legendlayerfile visible="0" layerid="ReducedStudyArea220180321124201199" isInOverview="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="StudyAreaXCalibMosaicSpotMask" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="spotInt16_2" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="StudyAreaXCalibMosaicSpotMask20180321130031185" visible="1"/>
+        <legendlayerfile visible="0" layerid="spotInt16_220180321125425975" isInOverview="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="spotInt16_2" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="StudyAreaXCalibMosaicSpotMask" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="spotInt16_220180321125425975" visible="1"/>
+        <legendlayerfile visible="0" layerid="StudyAreaXCalibMosaicSpotMask20180321130031185" isInOverview="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="ReducedStudyArea" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="ReducedStudyArea" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="ReducedStudyArea20180321124142218" visible="1"/>
+        <legendlayerfile visible="0" layerid="ReducedStudyArea20180321124142218" isInOverview="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Modis_CropStudyArea_Float32" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Modis_CropStudyArea_Float32" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="Modis_CropStudyArea_Float3220180321160449904" visible="1"/>
+        <legendlayerfile visible="0" layerid="Modis_CropStudyArea_Float3220180321160449904" isInOverview="0"/>
       </filegroup>
     </legendlayer>
   </legend>
+  <mapViewDocks/>
+  <mapViewDocks3D/>
+  <mapcanvas annotationsVisible="1" name="mAreaCanvas">
+    <units>degrees</units>
+    <extent>
+      <xmin>0</xmin>
+      <ymin>0</ymin>
+      <xmax>0</xmax>
+      <ymax>0</ymax>
+    </extent>
+    <rotation>0</rotation>
+    <destinationsrs>
+      <spatialrefsys>
+        <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+        <srsid>3452</srsid>
+        <srid>4326</srid>
+        <authid>EPSG:4326</authid>
+        <description>WGS 84</description>
+        <projectionacronym>longlat</projectionacronym>
+        <ellipsoidacronym>WGS84</ellipsoidacronym>
+        <geographicflag>true</geographicflag>
+      </spatialrefsys>
+    </destinationsrs>
+    <rendermaptile>0</rendermaptile>
+  </mapcanvas>
+  <mapcanvas annotationsVisible="1" name="mAreaCanvas">
+    <units>degrees</units>
+    <extent>
+      <xmin>0</xmin>
+      <ymin>0</ymin>
+      <xmax>0</xmax>
+      <ymax>0</ymax>
+    </extent>
+    <rotation>0</rotation>
+    <destinationsrs>
+      <spatialrefsys>
+        <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+        <srsid>3452</srsid>
+        <srid>4326</srid>
+        <authid>EPSG:4326</authid>
+        <description>WGS 84</description>
+        <projectionacronym>longlat</projectionacronym>
+        <ellipsoidacronym>WGS84</ellipsoidacronym>
+        <geographicflag>true</geographicflag>
+      </spatialrefsys>
+    </destinationsrs>
+    <rendermaptile>0</rendermaptile>
+  </mapcanvas>
+  <mapcanvas annotationsVisible="1" name="mAreaCanvas">
+    <units>degrees</units>
+    <extent>
+      <xmin>0</xmin>
+      <ymin>0</ymin>
+      <xmax>0</xmax>
+      <ymax>0</ymax>
+    </extent>
+    <rotation>0</rotation>
+    <destinationsrs>
+      <spatialrefsys>
+        <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+        <srsid>3452</srsid>
+        <srid>4326</srid>
+        <authid>EPSG:4326</authid>
+        <description>WGS 84</description>
+        <projectionacronym>longlat</projectionacronym>
+        <ellipsoidacronym>WGS84</ellipsoidacronym>
+        <geographicflag>true</geographicflag>
+      </spatialrefsys>
+    </destinationsrs>
+    <rendermaptile>0</rendermaptile>
+  </mapcanvas>
   <projectlayers>
-    <maplayer minimumScale="inf" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+    <maplayer maxScale="inf" type="raster" hasScaleBasedVisibilityFlag="0" minScale="1e+8" refreshOnNotifyEnabled="0" refreshOnNotifyMessage="" autoRefreshEnabled="0" autoRefreshTime="0">
+      <extent>
+        <xmin>45900</xmin>
+        <ymin>-3736410</ymin>
+        <xmax>112290</xmax>
+        <ymax>-3661740</ymax>
+      </extent>
+      <id>AATCORCorrected_oS131022114824832b_278400201_Uint16_4cf013ee_82ec_4a21_897a_e173841eda71</id>
+      <datasource>D:/Data/Development/Projects/PhD GeoInformatics/Data/SPOT/S131022114824832/ATCOR/AATCORCorrected_oS131022114824832b_278400201_Uint16.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>AATCORCorrected_oS131022114824832b_278400201_Uint16</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=21 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100001</srsid>
+          <srid>0</srid>
+          <authid>USER:100001</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=21 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <customproperties>
+        <property value="Value" key="identify/format"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList useSrcNoData="1" bandNo="1"/>
+        <noDataList useSrcNoData="1" bandNo="2"/>
+        <noDataList useSrcNoData="1" bandNo="3"/>
+        <noDataList useSrcNoData="1" bandNo="4"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer opacity="1" redBand="1" type="multibandcolor" blueBand="3" alphaBand="-1" greenBand="2">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>None</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <redContrastEnhancement>
+            <minValue>0</minValue>
+            <maxValue>4000</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>0</minValue>
+            <maxValue>2400</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>0</minValue>
+            <maxValue>1800</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast contrast="0" brightness="0"/>
+        <huesaturation colorizeBlue="128" colorizeGreen="128" colorizeRed="255" colorizeOn="0" saturation="0" grayscaleMode="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer maxScale="0" type="raster" hasScaleBasedVisibilityFlag="0" minScale="1e+8" refreshOnNotifyEnabled="0" refreshOnNotifyMessage="" autoRefreshEnabled="0" autoRefreshTime="0">
+      <extent>
+        <xmin>20.99986111111111242</xmin>
+        <ymin>-34.00013888888888403</ymin>
+        <xmax>22.00013888888889113</xmax>
+        <ymax>-32.99986111111110887</ymax>
+      </extent>
+      <id>ASTGTM2_S34E021_dem_d3bf2b6d_dd59_4001_b7bd_6fb887264a03</id>
+      <datasource>D:/Data/Development/Projects/PhD GeoInformatics/Data/CGA/ASTER DEM/ASTGTM2_S34E021_dem.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>ASTGTM2_S34E021_dem</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+          <srsid>3452</srsid>
+          <srid>4326</srid>
+          <authid>EPSG:4326</authid>
+          <description>WGS 84</description>
+          <projectionacronym>longlat</projectionacronym>
+          <ellipsoidacronym>WGS84</ellipsoidacronym>
+          <geographicflag>true</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <customproperties>
+        <property value="Value" key="identify/format"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList useSrcNoData="0" bandNo="1"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer opacity="1" type="singlebandgray" gradient="BlackToWhite" alphaBand="-1" grayBand="1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>MinMax</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <contrastEnhancement>
+            <minValue>28</minValue>
+            <maxValue>2256</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </contrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast contrast="0" brightness="0"/>
+        <huesaturation colorizeBlue="128" colorizeGreen="128" colorizeRed="255" colorizeOn="0" saturation="0" grayscaleMode="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer maxScale="-2.14748e+9" type="raster" hasScaleBasedVisibilityFlag="0" minScale="1e+8" refreshOnNotifyEnabled="0" refreshOnNotifyMessage="" autoRefreshEnabled="0" autoRefreshTime="0">
+      <extent>
+        <xmin>21.38418330259180777</xmin>
+        <ymin>-33.7495664494794525</ymin>
+        <xmax>22.2033299652902798</xmax>
+        <ymax>-33.08143346917209016</ymax>
+      </extent>
+      <id>IMAGERY_54703782_3ab6_4146_9e9b_1c8535de353b</id>
+      <datasource>D:/Data/Development/Projects/PhD GeoInformatics/Data/SPOT/S131022114824832/SCENE01/IMAGERY.TIF</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>IMAGERY</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+          <srsid>3452</srsid>
+          <srid>4326</srid>
+          <authid>EPSG:4326</authid>
+          <description>WGS 84</description>
+          <projectionacronym>longlat</projectionacronym>
+          <ellipsoidacronym>WGS84</ellipsoidacronym>
+          <geographicflag>true</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent>
+          <spatial dimensions="2" minz="0" crs="" miny="0" minx="0" maxz="0" maxx="0" maxy="0"/>
+          <temporal>
+            <period>
+              <start></start>
+              <end></end>
+            </period>
+          </temporal>
+        </extent>
+        <contact>
+          <name></name>
+          <organization></organization>
+          <position></position>
+          <voice></voice>
+          <fax></fax>
+          <email></email>
+          <role></role>
+        </contact>
+        <links/>
+      </resourceMetadata>
+      <customproperties>
+        <property value="false" key="WMSBackgroundLayer"/>
+        <property value="false" key="WMSPublishDataSourceUrl"/>
+        <property value="0" key="embeddedWidgets/count"/>
+        <property value="Value" key="identify/format"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList useSrcNoData="0" bandNo="1"/>
+        <noDataList useSrcNoData="0" bandNo="2"/>
+        <noDataList useSrcNoData="0" bandNo="3"/>
+        <noDataList useSrcNoData="0" bandNo="4"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer opacity="1" redBand="1" type="multibandcolor" blueBand="3" alphaBand="-1" greenBand="2">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>CumulativeCut</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <redContrastEnhancement>
+            <minValue>0</minValue>
+            <maxValue>138</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>0</minValue>
+            <maxValue>181</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>0</minValue>
+            <maxValue>164</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast contrast="0" brightness="0"/>
+        <huesaturation colorizeBlue="128" colorizeGreen="128" colorizeRed="255" colorizeOn="0" saturation="0" grayscaleMode="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer maxScale="inf" type="raster" hasScaleBasedVisibilityFlag="0" minScale="1e+8" refreshOnNotifyEnabled="0" refreshOnNotifyMessage="" autoRefreshEnabled="0" autoRefreshTime="0">
       <extent>
         <xmin>463785</xmin>
         <ymin>-3777915</ymin>
@@ -124,25 +560,57 @@
           <geographicflag>false</geographicflag>
         </spatialrefsys>
       </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
       <customproperties>
-        <property key="embeddedWidgets/count" value="0"/>
-        <property key="identify/format" value="Value"/>
+        <property value="0" key="embeddedWidgets/count"/>
+        <property value="Value" key="identify/format"/>
       </customproperties>
       <provider>gdal</provider>
       <noData>
-        <noDataList bandNo="1" useSrcNoData="1"/>
-        <noDataList bandNo="2" useSrcNoData="1"/>
-        <noDataList bandNo="3" useSrcNoData="1"/>
-        <noDataList bandNo="4" useSrcNoData="1"/>
-        <noDataList bandNo="5" useSrcNoData="1"/>
-        <noDataList bandNo="6" useSrcNoData="1"/>
+        <noDataList useSrcNoData="1" bandNo="1"/>
+        <noDataList useSrcNoData="1" bandNo="2"/>
+        <noDataList useSrcNoData="1" bandNo="3"/>
+        <noDataList useSrcNoData="1" bandNo="4"/>
+        <noDataList useSrcNoData="1" bandNo="5"/>
+        <noDataList useSrcNoData="1" bandNo="6"/>
       </noData>
-      <map-layer-style-manager current="">
-        <map-layer-style name=""/>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
       </map-layer-style-manager>
       <pipe>
-        <rasterrenderer opacity="1" alphaBand="0" blueBand="2" greenBand="3" type="multibandcolor" redBand="4">
+        <rasterrenderer opacity="1" redBand="4" type="multibandcolor" blueBand="2" alphaBand="0" greenBand="3">
           <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>None</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
           <redContrastEnhancement>
             <minValue>0</minValue>
             <maxValue>4000</maxValue>
@@ -159,13 +627,13 @@
             <algorithm>StretchToMinimumMaximum</algorithm>
           </blueContrastEnhancement>
         </rasterrenderer>
-        <brightnesscontrast brightness="0" contrast="0"/>
-        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
+        <brightnesscontrast contrast="0" brightness="0"/>
+        <huesaturation colorizeBlue="128" colorizeGreen="128" colorizeRed="255" colorizeOn="0" saturation="0" grayscaleMode="0" colorizeStrength="100"/>
         <rasterresampler maxOversampling="2"/>
       </pipe>
       <blendMode>0</blendMode>
     </maplayer>
-    <maplayer minimumScale="inf" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+    <maplayer maxScale="inf" type="raster" hasScaleBasedVisibilityFlag="0" minScale="1e+8" refreshOnNotifyEnabled="0" refreshOnNotifyMessage="" autoRefreshEnabled="0" autoRefreshTime="0">
       <extent>
         <xmin>45500</xmin>
         <ymin>-3765500</ymin>
@@ -181,32 +649,64 @@
       <srs>
         <spatialrefsys>
           <proj4>+proj=tmerc +lat_0=0 +lon_0=21 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +units=m +no_defs</proj4>
-          <srsid>100003</srsid>
+          <srsid>100000</srsid>
           <srid>0</srid>
-          <authid>USER:100003</authid>
+          <authid>USER:100000</authid>
           <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=21 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +units=m +no_defs)</description>
           <projectionacronym>tmerc</projectionacronym>
           <ellipsoidacronym>WGS84</ellipsoidacronym>
           <geographicflag>false</geographicflag>
         </spatialrefsys>
       </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
       <customproperties>
-        <property key="embeddedWidgets/count" value="0"/>
-        <property key="identify/format" value="Value"/>
+        <property value="0" key="embeddedWidgets/count"/>
+        <property value="Value" key="identify/format"/>
       </customproperties>
       <provider>gdal</provider>
       <noData>
-        <noDataList bandNo="1" useSrcNoData="1"/>
-        <noDataList bandNo="2" useSrcNoData="1"/>
-        <noDataList bandNo="3" useSrcNoData="1"/>
-        <noDataList bandNo="4" useSrcNoData="1"/>
+        <noDataList useSrcNoData="1" bandNo="1"/>
+        <noDataList useSrcNoData="1" bandNo="2"/>
+        <noDataList useSrcNoData="1" bandNo="3"/>
+        <noDataList useSrcNoData="1" bandNo="4"/>
       </noData>
-      <map-layer-style-manager current="">
-        <map-layer-style name=""/>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
       </map-layer-style-manager>
       <pipe>
-        <rasterrenderer opacity="1" alphaBand="0" blueBand="2" greenBand="1" type="multibandcolor" redBand="4">
+        <rasterrenderer opacity="1" redBand="4" type="multibandcolor" blueBand="2" alphaBand="0" greenBand="1">
           <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>None</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
           <redContrastEnhancement>
             <minValue>0</minValue>
             <maxValue>4000</maxValue>
@@ -223,13 +723,19 @@
             <algorithm>StretchToMinimumMaximum</algorithm>
           </blueContrastEnhancement>
         </rasterrenderer>
-        <brightnesscontrast brightness="0" contrast="0"/>
-        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
+        <brightnesscontrast contrast="0" brightness="0"/>
+        <huesaturation colorizeBlue="128" colorizeGreen="128" colorizeRed="255" colorizeOn="0" saturation="0" grayscaleMode="0" colorizeStrength="100"/>
         <rasterresampler maxOversampling="2"/>
       </pipe>
       <blendMode>0</blendMode>
     </maplayer>
-    <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+    <maplayer simplifyAlgorithm="0" simplifyLocal="1" simplifyDrawingHints="1" geometry="Polygon" simplifyMaxScale="1" simplifyDrawingTol="1" maxScale="0" type="vector" hasScaleBasedVisibilityFlag="0" minScale="1e+8" refreshOnNotifyEnabled="0" refreshOnNotifyMessage="" autoRefreshEnabled="0" autoRefreshTime="0" labelsEnabled="1" readOnly="0">
+      <extent>
+        <xmin>21.5</xmin>
+        <ymin>-33.99993896484375</ymin>
+        <xmax>22.5001220703125</xmax>
+        <ymax>-33</ymax>
+      </extent>
       <id>ReducedStudyArea20180321124142218</id>
       <datasource>D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/ReducedStudyArea.shp</datasource>
       <keywordList>
@@ -248,25 +754,46 @@
           <geographicflag>true</geographicflag>
         </spatialrefsys>
       </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
       <provider encoding="System">ogr</provider>
       <vectorjoins/>
       <layerDependencies/>
+      <dataDependencies/>
       <expressionfields/>
-      <map-layer-style-manager current="">
-        <map-layer-style name=""/>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
       </map-layer-style-manager>
-      <edittypes>
-        <edittype widgetv2type="TextEdit" name="Id">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-      </edittypes>
-      <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol" enableorderby="0">
+      <auxiliaryLayer/>
+      <renderer-v2 type="singleSymbol" enableorderby="0" symbollevels="0" forceraster="0">
         <symbols>
-          <symbol alpha="1" clip_to_extent="1" type="fill" name="0">
-            <layer pass="0" class="SimpleLine" locked="0">
+          <symbol clip_to_extent="1" alpha="1" type="fill" name="0">
+            <layer class="SimpleLine" enabled="1" pass="0" locked="0">
               <prop k="capstyle" v="square"/>
               <prop k="customdash" v="5;2"/>
-              <prop k="customdash_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="customdash_map_unit_scale" v="3x:0,0,0,0,0,0"/>
               <prop k="customdash_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
@@ -275,225 +802,77 @@
               <prop k="line_width" v="0.86"/>
               <prop k="line_width_unit" v="MM"/>
               <prop k="offset" v="0"/>
-              <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
               <prop k="offset_unit" v="MM"/>
               <prop k="use_custom_dash" v="0"/>
-              <prop k="width_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option type="QString" value="" name="name"/>
+                  <Option name="properties"/>
+                  <Option type="QString" value="collection" name="type"/>
+                </Option>
+              </data_defined_properties>
             </layer>
           </symbol>
         </symbols>
         <rotation/>
-        <sizescale scalemethod="diameter"/>
+        <sizescale/>
       </renderer-v2>
-      <labeling type="simple"/>
       <customproperties>
-        <property key="embeddedWidgets/count" value="0"/>
-        <property key="labeling" value="pal"/>
-        <property key="labeling/addDirectionSymbol" value="false"/>
-        <property key="labeling/angleOffset" value="0"/>
-        <property key="labeling/blendMode" value="0"/>
-        <property key="labeling/bufferBlendMode" value="0"/>
-        <property key="labeling/bufferColorA" value="255"/>
-        <property key="labeling/bufferColorB" value="255"/>
-        <property key="labeling/bufferColorG" value="255"/>
-        <property key="labeling/bufferColorR" value="255"/>
-        <property key="labeling/bufferDraw" value="false"/>
-        <property key="labeling/bufferJoinStyle" value="128"/>
-        <property key="labeling/bufferNoFill" value="false"/>
-        <property key="labeling/bufferSize" value="1"/>
-        <property key="labeling/bufferSizeInMapUnits" value="false"/>
-        <property key="labeling/bufferSizeMapUnitScale" value="0,0,0,0,0,0"/>
-        <property key="labeling/bufferTransp" value="0"/>
-        <property key="labeling/centroidInside" value="false"/>
-        <property key="labeling/centroidWhole" value="false"/>
-        <property key="labeling/decimals" value="3"/>
-        <property key="labeling/displayAll" value="false"/>
-        <property key="labeling/dist" value="0"/>
-        <property key="labeling/distInMapUnits" value="false"/>
-        <property key="labeling/distMapUnitScale" value="0,0,0,0,0,0"/>
-        <property key="labeling/drawLabels" value="false"/>
-        <property key="labeling/enabled" value="false"/>
-        <property key="labeling/fieldName" value=""/>
-        <property key="labeling/fitInPolygonOnly" value="false"/>
-        <property key="labeling/fontCapitals" value="0"/>
-        <property key="labeling/fontFamily" value="MS Shell Dlg 2"/>
-        <property key="labeling/fontItalic" value="false"/>
-        <property key="labeling/fontLetterSpacing" value="0"/>
-        <property key="labeling/fontLimitPixelSize" value="false"/>
-        <property key="labeling/fontMaxPixelSize" value="10000"/>
-        <property key="labeling/fontMinPixelSize" value="3"/>
-        <property key="labeling/fontSize" value="8.25"/>
-        <property key="labeling/fontSizeInMapUnits" value="false"/>
-        <property key="labeling/fontSizeMapUnitScale" value="0,0,0,0,0,0"/>
-        <property key="labeling/fontStrikeout" value="false"/>
-        <property key="labeling/fontUnderline" value="false"/>
-        <property key="labeling/fontWeight" value="50"/>
-        <property key="labeling/fontWordSpacing" value="0"/>
-        <property key="labeling/formatNumbers" value="false"/>
-        <property key="labeling/isExpression" value="true"/>
-        <property key="labeling/labelOffsetInMapUnits" value="true"/>
-        <property key="labeling/labelOffsetMapUnitScale" value="0,0,0,0,0,0"/>
-        <property key="labeling/labelPerPart" value="false"/>
-        <property key="labeling/leftDirectionSymbol" value="&lt;"/>
-        <property key="labeling/limitNumLabels" value="false"/>
-        <property key="labeling/maxCurvedCharAngleIn" value="25"/>
-        <property key="labeling/maxCurvedCharAngleOut" value="-25"/>
-        <property key="labeling/maxNumLabels" value="2000"/>
-        <property key="labeling/mergeLines" value="false"/>
-        <property key="labeling/minFeatureSize" value="0"/>
-        <property key="labeling/multilineAlign" value="4294967295"/>
-        <property key="labeling/multilineHeight" value="1"/>
-        <property key="labeling/namedStyle" value="Normal"/>
-        <property key="labeling/obstacle" value="true"/>
-        <property key="labeling/obstacleFactor" value="1"/>
-        <property key="labeling/obstacleType" value="0"/>
-        <property key="labeling/offsetType" value="0"/>
-        <property key="labeling/placeDirectionSymbol" value="0"/>
-        <property key="labeling/placement" value="1"/>
-        <property key="labeling/placementFlags" value="10"/>
-        <property key="labeling/plussign" value="false"/>
-        <property key="labeling/predefinedPositionOrder" value="TR,TL,BR,BL,R,L,TSR,BSR"/>
-        <property key="labeling/preserveRotation" value="true"/>
-        <property key="labeling/previewBkgrdColor" value="#ffffff"/>
-        <property key="labeling/priority" value="5"/>
-        <property key="labeling/quadOffset" value="4"/>
-        <property key="labeling/repeatDistance" value="0"/>
-        <property key="labeling/repeatDistanceMapUnitScale" value="0,0,0,0,0,0"/>
-        <property key="labeling/repeatDistanceUnit" value="1"/>
-        <property key="labeling/reverseDirectionSymbol" value="false"/>
-        <property key="labeling/rightDirectionSymbol" value=">"/>
-        <property key="labeling/scaleMax" value="10000000"/>
-        <property key="labeling/scaleMin" value="1"/>
-        <property key="labeling/scaleVisibility" value="false"/>
-        <property key="labeling/shadowBlendMode" value="6"/>
-        <property key="labeling/shadowColorB" value="0"/>
-        <property key="labeling/shadowColorG" value="0"/>
-        <property key="labeling/shadowColorR" value="0"/>
-        <property key="labeling/shadowDraw" value="false"/>
-        <property key="labeling/shadowOffsetAngle" value="135"/>
-        <property key="labeling/shadowOffsetDist" value="1"/>
-        <property key="labeling/shadowOffsetGlobal" value="true"/>
-        <property key="labeling/shadowOffsetMapUnitScale" value="0,0,0,0,0,0"/>
-        <property key="labeling/shadowOffsetUnits" value="1"/>
-        <property key="labeling/shadowRadius" value="1.5"/>
-        <property key="labeling/shadowRadiusAlphaOnly" value="false"/>
-        <property key="labeling/shadowRadiusMapUnitScale" value="0,0,0,0,0,0"/>
-        <property key="labeling/shadowRadiusUnits" value="1"/>
-        <property key="labeling/shadowScale" value="100"/>
-        <property key="labeling/shadowTransparency" value="30"/>
-        <property key="labeling/shadowUnder" value="0"/>
-        <property key="labeling/shapeBlendMode" value="0"/>
-        <property key="labeling/shapeBorderColorA" value="255"/>
-        <property key="labeling/shapeBorderColorB" value="128"/>
-        <property key="labeling/shapeBorderColorG" value="128"/>
-        <property key="labeling/shapeBorderColorR" value="128"/>
-        <property key="labeling/shapeBorderWidth" value="0"/>
-        <property key="labeling/shapeBorderWidthMapUnitScale" value="0,0,0,0,0,0"/>
-        <property key="labeling/shapeBorderWidthUnits" value="1"/>
-        <property key="labeling/shapeDraw" value="false"/>
-        <property key="labeling/shapeFillColorA" value="255"/>
-        <property key="labeling/shapeFillColorB" value="255"/>
-        <property key="labeling/shapeFillColorG" value="255"/>
-        <property key="labeling/shapeFillColorR" value="255"/>
-        <property key="labeling/shapeJoinStyle" value="64"/>
-        <property key="labeling/shapeOffsetMapUnitScale" value="0,0,0,0,0,0"/>
-        <property key="labeling/shapeOffsetUnits" value="1"/>
-        <property key="labeling/shapeOffsetX" value="0"/>
-        <property key="labeling/shapeOffsetY" value="0"/>
-        <property key="labeling/shapeRadiiMapUnitScale" value="0,0,0,0,0,0"/>
-        <property key="labeling/shapeRadiiUnits" value="1"/>
-        <property key="labeling/shapeRadiiX" value="0"/>
-        <property key="labeling/shapeRadiiY" value="0"/>
-        <property key="labeling/shapeRotation" value="0"/>
-        <property key="labeling/shapeRotationType" value="0"/>
-        <property key="labeling/shapeSVGFile" value=""/>
-        <property key="labeling/shapeSizeMapUnitScale" value="0,0,0,0,0,0"/>
-        <property key="labeling/shapeSizeType" value="0"/>
-        <property key="labeling/shapeSizeUnits" value="1"/>
-        <property key="labeling/shapeSizeX" value="0"/>
-        <property key="labeling/shapeSizeY" value="0"/>
-        <property key="labeling/shapeTransparency" value="0"/>
-        <property key="labeling/shapeType" value="0"/>
-        <property key="labeling/substitutions" value="&lt;substitutions/>"/>
-        <property key="labeling/textColorA" value="255"/>
-        <property key="labeling/textColorB" value="0"/>
-        <property key="labeling/textColorG" value="0"/>
-        <property key="labeling/textColorR" value="0"/>
-        <property key="labeling/textTransp" value="0"/>
-        <property key="labeling/upsidedownLabels" value="0"/>
-        <property key="labeling/useSubstitutions" value="false"/>
-        <property key="labeling/wrapChar" value=""/>
-        <property key="labeling/xOffset" value="0"/>
-        <property key="labeling/yOffset" value="0"/>
-        <property key="labeling/zIndex" value="0"/>
+        <property value="0" key="embeddedWidgets/count"/>
         <property key="variableNames"/>
         <property key="variableValues"/>
       </customproperties>
       <blendMode>0</blendMode>
       <featureBlendMode>0</featureBlendMode>
-      <layerTransparency>0</layerTransparency>
-      <displayfield>Id</displayfield>
-      <label>0</label>
-      <labelattributes>
-        <label fieldname="" text="Label"/>
-        <family fieldname="" name="MS Shell Dlg 2"/>
-        <size fieldname="" units="pt" value="12"/>
-        <bold fieldname="" on="0"/>
-        <italic fieldname="" on="0"/>
-        <underline fieldname="" on="0"/>
-        <strikeout fieldname="" on="0"/>
-        <color fieldname="" red="0" blue="0" green="0"/>
-        <x fieldname=""/>
-        <y fieldname=""/>
-        <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
-        <angle fieldname="" value="0" auto="0"/>
-        <alignment fieldname="" value="center"/>
-        <buffercolor fieldname="" red="255" blue="255" green="255"/>
-        <buffersize fieldname="" units="pt" value="1"/>
-        <bufferenabled fieldname="" on=""/>
-        <multilineenabled fieldname="" on=""/>
-        <selectedonly on=""/>
-      </labelattributes>
-      <SingleCategoryDiagramRenderer diagramType="Histogram" sizeLegend="0" attributeLegend="1">
-        <DiagramCategory penColor="#000000" labelPlacementMethod="XHeight" penWidth="0" diagramOrientation="Up" sizeScale="0,0,0,0,0,0" minimumSize="0" barWidth="5" penAlpha="255" maxScaleDenominator="1e+08" backgroundColor="#ffffff" transparency="0" width="15" scaleDependency="Area" backgroundAlpha="255" angleOffset="1440" scaleBasedVisibility="0" enabled="0" height="15" lineSizeScale="0,0,0,0,0,0" sizeType="MM" lineSizeType="MM" minScaleDenominator="inf">
-          <fontProperties description="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0" style=""/>
-          <attribute field="" color="#000000" label=""/>
+      <layerOpacity>1</layerOpacity>
+      <SingleCategoryDiagramRenderer attributeLegend="1" diagramType="Histogram">
+        <DiagramCategory lineSizeScale="3x:0,0,0,0,0,0" enabled="0" backgroundColor="#ffffff" minimumSize="0" maxScaleDenominator="1e+8" lineSizeType="MM" sizeScale="3x:0,0,0,0,0,0" barWidth="5" labelPlacementMethod="XHeight" width="15" scaleDependency="Area" rotationOffset="270" minScaleDenominator="inf" scaleBasedVisibility="0" diagramOrientation="Up" penColor="#000000" penWidth="0" height="15" penAlpha="255" backgroundAlpha="255" opacity="1" sizeType="MM">
+          <fontProperties style="" description="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0"/>
+          <attribute label="" color="#000000" field=""/>
         </DiagramCategory>
-        <symbol alpha="1" clip_to_extent="1" type="marker" name="sizeSymbol">
-          <layer pass="0" class="SimpleMarker" locked="0">
-            <prop k="angle" v="0"/>
-            <prop k="color" v="255,0,0,255"/>
-            <prop k="horizontal_anchor_point" v="1"/>
-            <prop k="joinstyle" v="bevel"/>
-            <prop k="name" v="circle"/>
-            <prop k="offset" v="0,0"/>
-            <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
-            <prop k="offset_unit" v="MM"/>
-            <prop k="outline_color" v="0,0,0,255"/>
-            <prop k="outline_style" v="solid"/>
-            <prop k="outline_width" v="0"/>
-            <prop k="outline_width_map_unit_scale" v="0,0,0,0,0,0"/>
-            <prop k="outline_width_unit" v="MM"/>
-            <prop k="scale_method" v="diameter"/>
-            <prop k="size" v="2"/>
-            <prop k="size_map_unit_scale" v="0,0,0,0,0,0"/>
-            <prop k="size_unit" v="MM"/>
-            <prop k="vertical_anchor_point" v="1"/>
-          </layer>
-        </symbol>
       </SingleCategoryDiagramRenderer>
-      <DiagramLayerSettings yPosColumn="-1" showColumn="-1" linePlacementFlags="10" placement="0" dist="0" xPosColumn="-1" priority="0" obstacle="0" zIndex="0" showAll="1"/>
-      <annotationform>.</annotationform>
+      <DiagramLayerSettings priority="0" zIndex="0" linePlacementFlags="10" placement="0" dist="0" obstacle="0" showAll="1">
+        <properties>
+          <Option type="Map">
+            <Option type="QString" value="" name="name"/>
+            <Option name="properties"/>
+            <Option type="QString" value="collection" name="type"/>
+          </Option>
+        </properties>
+      </DiagramLayerSettings>
+      <fieldConfiguration>
+        <field name="Id">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option type="QString" value="0" name="IsMultiline"/>
+                <Option type="QString" value="0" name="UseHtml"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+      </fieldConfiguration>
       <aliases>
-        <alias field="Id" index="0" name=""/>
+        <alias index="0" field="Id" name=""/>
       </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
-      <attributeactions default="-1"/>
-      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
+      <defaults>
+        <default expression="" field="Id" applyOnUpdate="0"/>
+      </defaults>
+      <constraints>
+        <constraint unique_strength="0" field="Id" notnull_strength="0" constraints="0" exp_strength="0"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint exp="" field="Id" desc=""/>
+      </constraintExpressions>
+      <attributeactions/>
+      <attributetableconfig sortExpression="" actionWidgetStyle="dropDown" sortOrder="0">
         <columns>
-          <column width="-1" hidden="0" type="field" name="Id"/>
-          <column width="-1" hidden="1" type="actions"/>
+          <column type="field" width="-1" name="Id" hidden="0"/>
+          <column type="actions" width="-1" hidden="1"/>
         </columns>
       </attributetableconfig>
       <editform>.</editform>
@@ -519,17 +898,24 @@ def my_form_open(dialog, layer, feature):
 ]]></editforminitcode>
       <featformsuppress>0</featformsuppress>
       <editorlayout>generatedlayout</editorlayout>
+      <editable/>
+      <labelOnTop/>
       <widgets/>
       <conditionalstyles>
         <rowstyles/>
         <fieldstyles/>
       </conditionalstyles>
-      <defaults>
-        <default field="Id" expression=""/>
-      </defaults>
-      <previewExpression></previewExpression>
+      <expressionfields/>
+      <previewExpression>"Id"</previewExpression>
+      <mapTip></mapTip>
     </maplayer>
-    <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+    <maplayer simplifyAlgorithm="0" simplifyLocal="1" simplifyDrawingHints="1" geometry="Polygon" simplifyMaxScale="1" simplifyDrawingTol="1" maxScale="0" type="vector" hasScaleBasedVisibilityFlag="0" minScale="1e+8" refreshOnNotifyEnabled="0" refreshOnNotifyMessage="" autoRefreshEnabled="0" autoRefreshTime="0" labelsEnabled="1" readOnly="0">
+      <extent>
+        <xmin>21.49999999999998579</xmin>
+        <ymin>-33.94937975705681765</ymin>
+        <xmax>22.50012207031248934</xmax>
+        <ymax>-33.30998183028114568</ymax>
+      </extent>
       <id>ReducedStudyArea220180321124201199</id>
       <datasource>D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/Little Karoo ShapeFiles/ReducedStudyArea2.shp</datasource>
       <keywordList>
@@ -548,86 +934,141 @@ def my_form_open(dialog, layer, feature):
           <geographicflag>true</geographicflag>
         </spatialrefsys>
       </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
       <provider encoding="System">ogr</provider>
       <vectorjoins/>
       <layerDependencies/>
+      <dataDependencies/>
       <expressionfields/>
-      <map-layer-style-manager current="">
-        <map-layer-style name=""/>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
       </map-layer-style-manager>
-      <edittypes>
-        <edittype widgetv2type="TextEdit" name="FID_karoo_">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="DISS">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="FID_Reduce">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Id">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-      </edittypes>
-      <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol" enableorderby="0">
+      <auxiliaryLayer/>
+      <renderer-v2 type="singleSymbol" enableorderby="0" symbollevels="0" forceraster="0">
         <symbols>
-          <symbol alpha="1" clip_to_extent="1" type="fill" name="0">
-            <layer pass="0" class="SimpleFill" locked="0">
-              <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
+          <symbol clip_to_extent="1" alpha="1" type="fill" name="0">
+            <layer class="SimpleFill" enabled="1" pass="0" locked="0">
+              <prop k="border_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
               <prop k="color" v="128,64,58,255"/>
               <prop k="joinstyle" v="bevel"/>
               <prop k="offset" v="0,0"/>
-              <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
               <prop k="offset_unit" v="MM"/>
               <prop k="outline_color" v="0,0,0,255"/>
               <prop k="outline_style" v="solid"/>
               <prop k="outline_width" v="0.26"/>
               <prop k="outline_width_unit" v="MM"/>
               <prop k="style" v="solid"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option type="QString" value="" name="name"/>
+                  <Option name="properties"/>
+                  <Option type="QString" value="collection" name="type"/>
+                </Option>
+              </data_defined_properties>
             </layer>
           </symbol>
         </symbols>
         <rotation/>
-        <sizescale scalemethod="diameter"/>
+        <sizescale/>
       </renderer-v2>
-      <labeling type="simple"/>
       <customproperties/>
       <blendMode>0</blendMode>
       <featureBlendMode>0</featureBlendMode>
-      <layerTransparency>0</layerTransparency>
-      <displayfield>FID_karoo_</displayfield>
-      <label>0</label>
-      <labelattributes>
-        <label fieldname="" text="Label"/>
-        <family fieldname="" name="MS Shell Dlg 2"/>
-        <size fieldname="" units="pt" value="12"/>
-        <bold fieldname="" on="0"/>
-        <italic fieldname="" on="0"/>
-        <underline fieldname="" on="0"/>
-        <strikeout fieldname="" on="0"/>
-        <color fieldname="" red="0" blue="0" green="0"/>
-        <x fieldname=""/>
-        <y fieldname=""/>
-        <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
-        <angle fieldname="" value="0" auto="0"/>
-        <alignment fieldname="" value="center"/>
-        <buffercolor fieldname="" red="255" blue="255" green="255"/>
-        <buffersize fieldname="" units="pt" value="1"/>
-        <bufferenabled fieldname="" on=""/>
-        <multilineenabled fieldname="" on=""/>
-        <selectedonly on=""/>
-      </labelattributes>
-      <annotationform>.</annotationform>
+      <layerOpacity>1</layerOpacity>
+      <fieldConfiguration>
+        <field name="FID_karoo_">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option type="QString" value="0" name="IsMultiline"/>
+                <Option type="QString" value="0" name="UseHtml"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="DISS">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option type="QString" value="0" name="IsMultiline"/>
+                <Option type="QString" value="0" name="UseHtml"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="FID_Reduce">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option type="QString" value="0" name="IsMultiline"/>
+                <Option type="QString" value="0" name="UseHtml"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+        <field name="Id">
+          <editWidget type="TextEdit">
+            <config>
+              <Option type="Map">
+                <Option type="QString" value="0" name="IsMultiline"/>
+                <Option type="QString" value="0" name="UseHtml"/>
+              </Option>
+            </config>
+          </editWidget>
+        </field>
+      </fieldConfiguration>
       <aliases>
-        <alias field="FID_karoo_" index="0" name=""/>
-        <alias field="DISS" index="1" name=""/>
-        <alias field="FID_Reduce" index="2" name=""/>
-        <alias field="Id" index="3" name=""/>
+        <alias index="0" field="FID_karoo_" name=""/>
+        <alias index="1" field="DISS" name=""/>
+        <alias index="2" field="FID_Reduce" name=""/>
+        <alias index="3" field="Id" name=""/>
       </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
-      <attributeactions default="-1"/>
-      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
+      <defaults>
+        <default expression="" field="FID_karoo_" applyOnUpdate="0"/>
+        <default expression="" field="DISS" applyOnUpdate="0"/>
+        <default expression="" field="FID_Reduce" applyOnUpdate="0"/>
+        <default expression="" field="Id" applyOnUpdate="0"/>
+      </defaults>
+      <constraints>
+        <constraint unique_strength="0" field="FID_karoo_" notnull_strength="0" constraints="0" exp_strength="0"/>
+        <constraint unique_strength="0" field="DISS" notnull_strength="0" constraints="0" exp_strength="0"/>
+        <constraint unique_strength="0" field="FID_Reduce" notnull_strength="0" constraints="0" exp_strength="0"/>
+        <constraint unique_strength="0" field="Id" notnull_strength="0" constraints="0" exp_strength="0"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint exp="" field="FID_karoo_" desc=""/>
+        <constraint exp="" field="DISS" desc=""/>
+        <constraint exp="" field="FID_Reduce" desc=""/>
+        <constraint exp="" field="Id" desc=""/>
+      </constraintExpressions>
+      <attributeactions/>
+      <attributetableconfig sortExpression="" actionWidgetStyle="dropDown" sortOrder="0">
         <columns/>
       </attributetableconfig>
       <editform>.</editform>
@@ -637,20 +1078,349 @@ def my_form_open(dialog, layer, feature):
       <editforminitcode><![CDATA[]]></editforminitcode>
       <featformsuppress>0</featformsuppress>
       <editorlayout>generatedlayout</editorlayout>
+      <editable/>
+      <labelOnTop/>
       <widgets/>
       <conditionalstyles>
         <rowstyles/>
         <fieldstyles/>
       </conditionalstyles>
-      <defaults>
-        <default field="FID_karoo_" expression=""/>
-        <default field="DISS" expression=""/>
-        <default field="FID_Reduce" expression=""/>
-        <default field="Id" expression=""/>
-      </defaults>
-      <previewExpression></previewExpression>
+      <expressionfields/>
+      <previewExpression>"FID_karoo_"</previewExpression>
+      <mapTip></mapTip>
     </maplayer>
-    <maplayer minimumScale="inf" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+    <maplayer simplifyAlgorithm="0" simplifyLocal="1" simplifyDrawingHints="1" geometry="Polygon" simplifyMaxScale="1" simplifyDrawingTol="1" maxScale="0" type="vector" hasScaleBasedVisibilityFlag="0" minScale="1e+8" refreshOnNotifyEnabled="0" refreshOnNotifyMessage="" autoRefreshEnabled="0" autoRefreshTime="0" labelsEnabled="1" readOnly="0">
+      <extent>
+        <xmin>16.25000000019502977</xmin>
+        <ymin>-34.85000000305296908</ymin>
+        <xmax>32.99999999980531129</xmax>
+        <ymax>-22.00000000232518005</ymax>
+      </extent>
+      <id>Sheet_50K_a667d6ba_3f77_43d9_8f02_9df92a55ec7a</id>
+      <datasource>D:\Data\Development\Projects\PhD GeoInformatics\Data\Misc\Sheet 50K\Sheet_50K.shp</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>Sheet_50K</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+          <srsid>3452</srsid>
+          <srid>4326</srid>
+          <authid>EPSG:4326</authid>
+          <description>WGS 84</description>
+          <projectionacronym>longlat</projectionacronym>
+          <ellipsoidacronym>WGS84</ellipsoidacronym>
+          <geographicflag>true</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent>
+          <spatial dimensions="2" minz="0" crs="" miny="0" minx="0" maxz="0" maxx="0" maxy="0"/>
+          <temporal>
+            <period>
+              <start></start>
+              <end></end>
+            </period>
+          </temporal>
+        </extent>
+        <contact>
+          <name></name>
+          <organization></organization>
+          <position></position>
+          <voice></voice>
+          <fax></fax>
+          <email></email>
+          <role></role>
+        </contact>
+        <links/>
+      </resourceMetadata>
+      <provider encoding="System">ogr</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <dataDependencies/>
+      <expressionfields/>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <auxiliaryLayer/>
+      <renderer-v2 type="singleSymbol" enableorderby="0" symbollevels="0" forceraster="0">
+        <symbols>
+          <symbol clip_to_extent="1" alpha="1" type="fill" name="0">
+            <layer class="SimpleLine" enabled="1" pass="0" locked="0">
+              <prop k="capstyle" v="square"/>
+              <prop k="customdash" v="5;2"/>
+              <prop k="customdash_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="customdash_unit" v="MM"/>
+              <prop k="draw_inside_polygon" v="0"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="line_color" v="35,35,35,255"/>
+              <prop k="line_style" v="solid"/>
+              <prop k="line_width" v="0.46"/>
+              <prop k="line_width_unit" v="MM"/>
+              <prop k="offset" v="0"/>
+              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="use_custom_dash" v="0"/>
+              <prop k="width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option type="QString" value="" name="name"/>
+                  <Option name="properties"/>
+                  <Option type="QString" value="collection" name="type"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+        </symbols>
+        <rotation/>
+        <sizescale/>
+      </renderer-v2>
+      <labeling type="simple">
+        <settings>
+          <text-style multilineHeight="1" fieldName="sh_no" fontCapitals="0" fontSizeMapUnitScale="3x:0,0,0,0,0,0" previewBkgrdColor="#ffffff" fontSize="10" namedStyle="Regular" textColor="0,0,0,255" blendMode="0" useSubstitutions="0" fontLetterSpacing="0" fontWordSpacing="0" fontFamily="MS Shell Dlg 2" fontUnderline="0" fontStrikeout="0" textOpacity="1" fontItalic="0" fontWeight="50" fontSizeUnit="Point" isExpression="0">
+            <text-buffer bufferSizeUnits="MM" bufferBlendMode="0" bufferSize="1" bufferColor="255,255,255,255" bufferOpacity="1" bufferNoFill="1" bufferDraw="0" bufferJoinStyle="128" bufferSizeMapUnitScale="3x:0,0,0,0,0,0"/>
+            <background shapeOpacity="1" shapeRotation="0" shapeBorderWidthUnit="MM" shapeSizeX="0" shapeOffsetX="0" shapeRadiiUnit="MM" shapeBorderWidth="0" shapeSizeY="0" shapeSizeMapUnitScale="3x:0,0,0,0,0,0" shapeFillColor="255,255,255,255" shapeJoinStyle="64" shapeSizeType="0" shapeSVGFile="" shapeBorderColor="128,128,128,255" shapeRadiiX="0" shapeBorderWidthMapUnitScale="3x:0,0,0,0,0,0" shapeDraw="0" shapeSizeUnit="MM" shapeRotationType="0" shapeBlendMode="0" shapeRadiiY="0" shapeOffsetUnit="MM" shapeOffsetY="0" shapeOffsetMapUnitScale="3x:0,0,0,0,0,0" shapeRadiiMapUnitScale="3x:0,0,0,0,0,0" shapeType="0"/>
+            <shadow shadowOffsetDist="1" shadowOffsetUnit="MM" shadowOpacity="0.7" shadowOffsetAngle="135" shadowRadiusMapUnitScale="3x:0,0,0,0,0,0" shadowBlendMode="6" shadowDraw="0" shadowScale="100" shadowOffsetMapUnitScale="3x:0,0,0,0,0,0" shadowUnder="0" shadowColor="0,0,0,255" shadowRadius="1.5" shadowOffsetGlobal="1" shadowRadiusUnit="MM" shadowRadiusAlphaOnly="0"/>
+            <substitutions/>
+          </text-style>
+          <text-format reverseDirectionSymbol="0" plussign="0" rightDirectionSymbol=">" multilineAlign="4294967295" wrapChar="" addDirectionSymbol="0" placeDirectionSymbol="0" formatNumbers="0" decimals="3" leftDirectionSymbol="&lt;"/>
+          <placement maxCurvedCharAngleOut="-25" placementFlags="10" maxCurvedCharAngleIn="25" quadOffset="4" offsetType="0" dist="0" yOffset="0" distUnits="MM" priority="5" centroidInside="0" predefinedPositionOrder="TR,TL,BR,BL,R,L,TSR,BSR" xOffset="0" fitInPolygonOnly="0" repeatDistanceUnits="MM" placement="0" preserveRotation="1" repeatDistanceMapUnitScale="3x:0,0,0,0,0,0" offsetUnits="MM" repeatDistance="0" rotationAngle="0" distMapUnitScale="3x:0,0,0,0,0,0" labelOffsetMapUnitScale="3x:0,0,0,0,0,0" centroidWhole="0"/>
+          <rendering mergeLines="0" limitNumLabels="0" fontMaxPixelSize="10000" labelPerPart="0" obstacleType="0" scaleVisibility="0" zIndex="0" upsidedownLabels="0" fontMinPixelSize="3" displayAll="0" obstacle="1" obstacleFactor="1" minFeatureSize="0" maxNumLabels="2000" scaleMin="0" scaleMax="0" drawLabels="1" fontLimitPixelSize="0"/>
+          <dd_properties>
+            <Option type="Map">
+              <Option type="QString" value="" name="name"/>
+              <Option name="properties"/>
+              <Option type="QString" value="collection" name="type"/>
+            </Option>
+          </dd_properties>
+        </settings>
+      </labeling>
+      <customproperties>
+        <property value="0" key="embeddedWidgets/count"/>
+        <property key="variableNames"/>
+        <property key="variableValues"/>
+      </customproperties>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerOpacity>1</layerOpacity>
+      <SingleCategoryDiagramRenderer attributeLegend="1" diagramType="Histogram">
+        <DiagramCategory lineSizeScale="3x:0,0,0,0,0,0" enabled="0" backgroundColor="#ffffff" minimumSize="0" maxScaleDenominator="1e+8" lineSizeType="MM" sizeScale="3x:0,0,0,0,0,0" barWidth="5" labelPlacementMethod="XHeight" width="15" scaleDependency="Area" rotationOffset="270" minScaleDenominator="0" scaleBasedVisibility="0" diagramOrientation="Up" penColor="#000000" penWidth="0" height="15" penAlpha="255" backgroundAlpha="255" opacity="1" sizeType="MM">
+          <fontProperties style="" description="MS Shell Dlg 2,8.25,-1,5,50,0,0,0,0,0"/>
+        </DiagramCategory>
+      </SingleCategoryDiagramRenderer>
+      <DiagramLayerSettings priority="0" zIndex="0" linePlacementFlags="18" placement="0" dist="0" obstacle="0" showAll="1">
+        <properties>
+          <Option type="Map">
+            <Option type="QString" value="" name="name"/>
+            <Option name="properties"/>
+            <Option type="QString" value="collection" name="type"/>
+          </Option>
+        </properties>
+      </DiagramLayerSettings>
+      <fieldConfiguration>
+        <field name="sh_nme">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="sh_no">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="edition">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="year_">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="comment">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="opp_ha50">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="shape_leng">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="SE_Area_sh">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="SE_Length_">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+      </fieldConfiguration>
+      <aliases>
+        <alias index="0" field="sh_nme" name=""/>
+        <alias index="1" field="sh_no" name=""/>
+        <alias index="2" field="edition" name=""/>
+        <alias index="3" field="year_" name=""/>
+        <alias index="4" field="comment" name=""/>
+        <alias index="5" field="opp_ha50" name=""/>
+        <alias index="6" field="shape_leng" name=""/>
+        <alias index="7" field="SE_Area_sh" name=""/>
+        <alias index="8" field="SE_Length_" name=""/>
+      </aliases>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <defaults>
+        <default expression="" field="sh_nme" applyOnUpdate="0"/>
+        <default expression="" field="sh_no" applyOnUpdate="0"/>
+        <default expression="" field="edition" applyOnUpdate="0"/>
+        <default expression="" field="year_" applyOnUpdate="0"/>
+        <default expression="" field="comment" applyOnUpdate="0"/>
+        <default expression="" field="opp_ha50" applyOnUpdate="0"/>
+        <default expression="" field="shape_leng" applyOnUpdate="0"/>
+        <default expression="" field="SE_Area_sh" applyOnUpdate="0"/>
+        <default expression="" field="SE_Length_" applyOnUpdate="0"/>
+      </defaults>
+      <constraints>
+        <constraint unique_strength="0" field="sh_nme" notnull_strength="0" constraints="0" exp_strength="0"/>
+        <constraint unique_strength="0" field="sh_no" notnull_strength="0" constraints="0" exp_strength="0"/>
+        <constraint unique_strength="0" field="edition" notnull_strength="0" constraints="0" exp_strength="0"/>
+        <constraint unique_strength="0" field="year_" notnull_strength="0" constraints="0" exp_strength="0"/>
+        <constraint unique_strength="0" field="comment" notnull_strength="0" constraints="0" exp_strength="0"/>
+        <constraint unique_strength="0" field="opp_ha50" notnull_strength="0" constraints="0" exp_strength="0"/>
+        <constraint unique_strength="0" field="shape_leng" notnull_strength="0" constraints="0" exp_strength="0"/>
+        <constraint unique_strength="0" field="SE_Area_sh" notnull_strength="0" constraints="0" exp_strength="0"/>
+        <constraint unique_strength="0" field="SE_Length_" notnull_strength="0" constraints="0" exp_strength="0"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint exp="" field="sh_nme" desc=""/>
+        <constraint exp="" field="sh_no" desc=""/>
+        <constraint exp="" field="edition" desc=""/>
+        <constraint exp="" field="year_" desc=""/>
+        <constraint exp="" field="comment" desc=""/>
+        <constraint exp="" field="opp_ha50" desc=""/>
+        <constraint exp="" field="shape_leng" desc=""/>
+        <constraint exp="" field="SE_Area_sh" desc=""/>
+        <constraint exp="" field="SE_Length_" desc=""/>
+      </constraintExpressions>
+      <attributeactions>
+        <defaultAction value="{00000000-0000-0000-0000-000000000000}" key="Canvas"/>
+      </attributeactions>
+      <attributetableconfig sortExpression="" actionWidgetStyle="dropDown" sortOrder="0">
+        <columns>
+          <column type="field" width="-1" name="sh_nme" hidden="0"/>
+          <column type="field" width="-1" name="sh_no" hidden="0"/>
+          <column type="field" width="-1" name="edition" hidden="0"/>
+          <column type="field" width="-1" name="year_" hidden="0"/>
+          <column type="field" width="-1" name="comment" hidden="0"/>
+          <column type="field" width="-1" name="opp_ha50" hidden="0"/>
+          <column type="field" width="-1" name="shape_leng" hidden="0"/>
+          <column type="field" width="-1" name="SE_Area_sh" hidden="0"/>
+          <column type="field" width="-1" name="SE_Length_" hidden="0"/>
+          <column type="actions" width="-1" hidden="1"/>
+        </columns>
+      </attributetableconfig>
+      <editform></editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath></editforminitfilepath>
+      <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
+"""
+QGIS forms can have a Python function that is called when the form is
+opened.
+
+Use this function to add extra logic to your forms.
+
+Enter the name of the function in the "Python Init function"
+field.
+An example follows:
+"""
+from qgis.PyQt.QtWidgets import QWidget
+
+def my_form_open(dialog, layer, feature):
+	geom = feature.geometry()
+	control = dialog.findChild(QWidget, "MyLineEdit")
+]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <editable>
+        <field editable="1" name="SE_Area_sh"/>
+        <field editable="1" name="SE_Length_"/>
+        <field editable="1" name="comment"/>
+        <field editable="1" name="edition"/>
+        <field editable="1" name="opp_ha50"/>
+        <field editable="1" name="sh_nme"/>
+        <field editable="1" name="sh_no"/>
+        <field editable="1" name="shape_leng"/>
+        <field editable="1" name="year_"/>
+      </editable>
+      <labelOnTop>
+        <field labelOnTop="0" name="SE_Area_sh"/>
+        <field labelOnTop="0" name="SE_Length_"/>
+        <field labelOnTop="0" name="comment"/>
+        <field labelOnTop="0" name="edition"/>
+        <field labelOnTop="0" name="opp_ha50"/>
+        <field labelOnTop="0" name="sh_nme"/>
+        <field labelOnTop="0" name="sh_no"/>
+        <field labelOnTop="0" name="shape_leng"/>
+        <field labelOnTop="0" name="year_"/>
+      </labelOnTop>
+      <widgets/>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <expressionfields/>
+      <previewExpression>sh_nme</previewExpression>
+      <mapTip></mapTip>
+    </maplayer>
+    <maplayer maxScale="inf" type="raster" hasScaleBasedVisibilityFlag="0" minScale="1e+8" refreshOnNotifyEnabled="0" refreshOnNotifyMessage="" autoRefreshEnabled="0" autoRefreshTime="0">
       <extent>
         <xmin>45900</xmin>
         <ymin>-3736410</ymin>
@@ -666,31 +1436,63 @@ def my_form_open(dialog, layer, feature):
       <srs>
         <spatialrefsys>
           <proj4>+proj=tmerc +lat_0=0 +lon_0=21 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
-          <srsid>100008</srsid>
+          <srsid>100001</srsid>
           <srid>0</srid>
-          <authid>USER:100008</authid>
+          <authid>USER:100001</authid>
           <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=21 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
           <projectionacronym>tmerc</projectionacronym>
           <ellipsoidacronym></ellipsoidacronym>
           <geographicflag>false</geographicflag>
         </spatialrefsys>
       </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
       <customproperties>
-        <property key="embeddedWidgets/count" value="0"/>
-        <property key="identify/format" value="Value"/>
+        <property value="0" key="embeddedWidgets/count"/>
+        <property value="Value" key="identify/format"/>
       </customproperties>
       <provider>gdal</provider>
       <noData>
-        <noDataList bandNo="1" useSrcNoData="1"/>
-        <noDataList bandNo="2" useSrcNoData="1"/>
-        <noDataList bandNo="3" useSrcNoData="1"/>
+        <noDataList useSrcNoData="1" bandNo="1"/>
+        <noDataList useSrcNoData="1" bandNo="2"/>
+        <noDataList useSrcNoData="1" bandNo="3"/>
       </noData>
-      <map-layer-style-manager current="">
-        <map-layer-style name=""/>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
       </map-layer-style-manager>
       <pipe>
-        <rasterrenderer opacity="1" alphaBand="-1" blueBand="3" greenBand="2" type="multibandcolor" redBand="1">
+        <rasterrenderer opacity="1" redBand="1" type="multibandcolor" blueBand="3" alphaBand="-1" greenBand="2">
           <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>None</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
           <redContrastEnhancement>
             <minValue>0</minValue>
             <maxValue>4000</maxValue>
@@ -707,13 +1509,259 @@ def my_form_open(dialog, layer, feature):
             <algorithm>StretchToMinimumMaximum</algorithm>
           </blueContrastEnhancement>
         </rasterrenderer>
-        <brightnesscontrast brightness="0" contrast="0"/>
-        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
+        <brightnesscontrast contrast="0" brightness="0"/>
+        <huesaturation colorizeBlue="128" colorizeGreen="128" colorizeRed="255" colorizeOn="0" saturation="0" grayscaleMode="0" colorizeStrength="100"/>
         <rasterresampler maxOversampling="2"/>
       </pipe>
       <blendMode>0</blendMode>
     </maplayer>
-    <maplayer minimumScale="inf" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+    <maplayer maxScale="0" type="raster" hasScaleBasedVisibilityFlag="0" minScale="1e+8" refreshOnNotifyEnabled="0" refreshOnNotifyMessage="" autoRefreshEnabled="0" autoRefreshTime="0">
+      <extent>
+        <xmin>20.99986111111111242</xmin>
+        <ymin>-34.00013888888889113</ymin>
+        <xmax>22.00013888888889113</xmax>
+        <ymax>-32.99986111111111597</ymax>
+      </extent>
+      <id>s34_e021_1arc_v3_b97d6e69_21d4_401b_be36_a161b098a05d</id>
+      <datasource>D:/Data/Development/Projects/PhD GeoInformatics/Data/CGA/SRTM/s34_e021_1arc_v3.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>s34_e021_1arc_v3</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+          <srsid>3452</srsid>
+          <srid>4326</srid>
+          <authid>EPSG:4326</authid>
+          <description>WGS 84</description>
+          <projectionacronym>longlat</projectionacronym>
+          <ellipsoidacronym>WGS84</ellipsoidacronym>
+          <geographicflag>true</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <customproperties>
+        <property value="Value" key="identify/format"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList useSrcNoData="1" bandNo="1"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer opacity="1" type="singlebandgray" gradient="BlackToWhite" alphaBand="-1" grayBand="1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>MinMax</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <contrastEnhancement>
+            <minValue>67</minValue>
+            <maxValue>1830</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </contrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast contrast="0" brightness="0"/>
+        <huesaturation colorizeBlue="128" colorizeGreen="128" colorizeRed="255" colorizeOn="0" saturation="0" grayscaleMode="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer maxScale="0" type="raster" hasScaleBasedVisibilityFlag="0" minScale="1e+8" refreshOnNotifyEnabled="0" refreshOnNotifyMessage="" autoRefreshEnabled="0" autoRefreshTime="0">
+      <extent>
+        <xmin>21.99986111111111242</xmin>
+        <ymin>-34.00013888888889113</ymin>
+        <xmax>23.00013888888889113</xmax>
+        <ymax>-32.99986111111111597</ymax>
+      </extent>
+      <id>s34_e022_1arc_v3_55241e42_c5ed_45b5_b5a7_532151405066</id>
+      <datasource>D:/Data/Development/Projects/PhD GeoInformatics/Data/CGA/SRTM/s34_e022_1arc_v3.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>s34_e022_1arc_v3</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+          <srsid>3452</srsid>
+          <srid>4326</srid>
+          <authid>EPSG:4326</authid>
+          <description>WGS 84</description>
+          <projectionacronym>longlat</projectionacronym>
+          <ellipsoidacronym>WGS84</ellipsoidacronym>
+          <geographicflag>true</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <customproperties>
+        <property value="Value" key="identify/format"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList useSrcNoData="1" bandNo="1"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer opacity="1" type="singlebandgray" gradient="BlackToWhite" alphaBand="-1" grayBand="1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>MinMax</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <contrastEnhancement>
+            <minValue>5</minValue>
+            <maxValue>1739</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </contrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast contrast="0" brightness="0"/>
+        <huesaturation colorizeBlue="128" colorizeGreen="128" colorizeRed="255" colorizeOn="0" saturation="0" grayscaleMode="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer maxScale="0" type="raster" hasScaleBasedVisibilityFlag="0" minScale="1e+8" refreshOnNotifyEnabled="0" refreshOnNotifyMessage="" autoRefreshEnabled="0" autoRefreshTime="0">
+      <extent>
+        <xmin>23.99986111111111242</xmin>
+        <ymin>-34.00013888888889113</ymin>
+        <xmax>25.00013888888889113</xmax>
+        <ymax>-32.99986111111111597</ymax>
+      </extent>
+      <id>s34_e024_1arc_v3_5a5345f6_2393_45dc_80c1_5a066d06a5d6</id>
+      <datasource>D:/Data/Development/Projects/PhD GeoInformatics/Data/CGA/SRTM/s34_e024_1arc_v3.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>s34_e024_1arc_v3</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+          <srsid>3452</srsid>
+          <srid>4326</srid>
+          <authid>EPSG:4326</authid>
+          <description>WGS 84</description>
+          <projectionacronym>longlat</projectionacronym>
+          <ellipsoidacronym>WGS84</ellipsoidacronym>
+          <geographicflag>true</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <customproperties>
+        <property value="Value" key="identify/format"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList useSrcNoData="1" bandNo="1"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer opacity="1" type="singlebandgray" gradient="BlackToWhite" alphaBand="-1" grayBand="1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>MinMax</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <contrastEnhancement>
+            <minValue>-6</minValue>
+            <maxValue>1550</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </contrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast contrast="0" brightness="0"/>
+        <huesaturation colorizeBlue="128" colorizeGreen="128" colorizeRed="255" colorizeOn="0" saturation="0" grayscaleMode="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer maxScale="inf" type="raster" hasScaleBasedVisibilityFlag="0" minScale="1e+8" refreshOnNotifyEnabled="0" refreshOnNotifyMessage="" autoRefreshEnabled="0" autoRefreshTime="0">
       <extent>
         <xmin>45900</xmin>
         <ymin>-3736410</ymin>
@@ -729,32 +1777,64 @@ def my_form_open(dialog, layer, feature):
       <srs>
         <spatialrefsys>
           <proj4>+proj=tmerc +lat_0=0 +lon_0=21 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +units=m +no_defs</proj4>
-          <srsid>100003</srsid>
+          <srsid>100000</srsid>
           <srid>0</srid>
-          <authid>USER:100003</authid>
+          <authid>USER:100000</authid>
           <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=21 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +units=m +no_defs)</description>
           <projectionacronym>tmerc</projectionacronym>
           <ellipsoidacronym>WGS84</ellipsoidacronym>
           <geographicflag>false</geographicflag>
         </spatialrefsys>
       </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
       <customproperties>
-        <property key="embeddedWidgets/count" value="0"/>
-        <property key="identify/format" value="Value"/>
+        <property value="0" key="embeddedWidgets/count"/>
+        <property value="Value" key="identify/format"/>
       </customproperties>
       <provider>gdal</provider>
       <noData>
-        <noDataList bandNo="1" useSrcNoData="1"/>
-        <noDataList bandNo="2" useSrcNoData="1"/>
-        <noDataList bandNo="3" useSrcNoData="1"/>
-        <noDataList bandNo="4" useSrcNoData="1"/>
+        <noDataList useSrcNoData="1" bandNo="1"/>
+        <noDataList useSrcNoData="1" bandNo="2"/>
+        <noDataList useSrcNoData="1" bandNo="3"/>
+        <noDataList useSrcNoData="1" bandNo="4"/>
       </noData>
-      <map-layer-style-manager current="">
-        <map-layer-style name=""/>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
       </map-layer-style-manager>
       <pipe>
-        <rasterrenderer opacity="1" alphaBand="-1" blueBand="3" greenBand="2" type="multibandcolor" redBand="1">
+        <rasterrenderer opacity="1" redBand="1" type="multibandcolor" blueBand="3" alphaBand="-1" greenBand="2">
           <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>None</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
           <redContrastEnhancement>
             <minValue>0</minValue>
             <maxValue>4000</maxValue>
@@ -771,123 +1851,141 @@ def my_form_open(dialog, layer, feature):
             <algorithm>StretchToMinimumMaximum</algorithm>
           </blueContrastEnhancement>
         </rasterrenderer>
-        <brightnesscontrast brightness="0" contrast="0"/>
-        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
+        <brightnesscontrast contrast="0" brightness="0"/>
+        <huesaturation colorizeBlue="128" colorizeGreen="128" colorizeRed="255" colorizeOn="0" saturation="0" grayscaleMode="0" colorizeStrength="100"/>
         <rasterresampler maxOversampling="2"/>
       </pipe>
       <blendMode>0</blendMode>
     </maplayer>
   </projectlayers>
+  <layerorder>
+    <layer id="LE07_L1TP_173083_20100203_20161217_01_T1_sr_MERGE20180321141226966"/>
+    <layer id="ReducedStudyArea220180321124201199"/>
+    <layer id="StudyAreaXCalibMosaicSpotMask20180321130031185"/>
+    <layer id="spotInt16_220180321125425975"/>
+    <layer id="ReducedStudyArea20180321124142218"/>
+    <layer id="Modis_CropStudyArea_Float3220180321160449904"/>
+    <layer id="AATCORCorrected_oS131022114824832b_278400201_Uint16_4cf013ee_82ec_4a21_897a_e173841eda71"/>
+    <layer id="s34_e024_1arc_v3_5a5345f6_2393_45dc_80c1_5a066d06a5d6"/>
+    <layer id="IMAGERY_54703782_3ab6_4146_9e9b_1c8535de353b"/>
+    <layer id="s34_e022_1arc_v3_55241e42_c5ed_45b5_b5a7_532151405066"/>
+    <layer id="s34_e021_1arc_v3_b97d6e69_21d4_401b_be36_a161b098a05d"/>
+    <layer id="ASTGTM2_S34E021_dem_d3bf2b6d_dd59_4001_b7bd_6fb887264a03"/>
+    <layer id="Sheet_50K_a667d6ba_3f77_43d9_8f02_9df92a55ec7a"/>
+  </layerorder>
   <properties>
-    <Variables>
-      <variableNames type="QStringList"/>
-      <variableValues type="QStringList"/>
-    </Variables>
-    <WMSContactPerson type="QString"></WMSContactPerson>
-    <WMSOnlineResource type="QString"></WMSOnlineResource>
-    <WMSUseLayerIDs type="bool">false</WMSUseLayerIDs>
-    <WMSContactOrganization type="QString"></WMSContactOrganization>
-    <WMSKeywordList type="QStringList">
-      <value></value>
-    </WMSKeywordList>
-    <WFSUrl type="QString"></WFSUrl>
-    <Paths>
-      <Absolute type="bool">false</Absolute>
-    </Paths>
-    <WMSServiceTitle type="QString"></WMSServiceTitle>
-    <WFSLayers type="QStringList"/>
-    <WMSRestrictedLayers type="QStringList"/>
-    <WMSContactMail type="QString"></WMSContactMail>
-    <WMSRestrictedComposers type="QStringList"/>
-    <PositionPrecision>
-      <DecimalPlaces type="int">2</DecimalPlaces>
-      <Automatic type="bool">true</Automatic>
-      <DegreeFormat type="QString">MU</DegreeFormat>
-    </PositionPrecision>
-    <WCSUrl type="QString"></WCSUrl>
-    <WMSServiceCapabilities type="bool">false</WMSServiceCapabilities>
-    <WMSContactPhone type="QString"></WMSContactPhone>
-    <WMSServiceAbstract type="QString"></WMSServiceAbstract>
-    <WMSContactPosition type="QString"></WMSContactPosition>
     <WMSAddWktGeometry type="bool">false</WMSAddWktGeometry>
-    <Measure>
-      <Ellipsoid type="QString">WGS84</Ellipsoid>
-    </Measure>
-    <WMSPrecision type="QString">8</WMSPrecision>
+    <WMSAccessConstraints type="QString">None</WMSAccessConstraints>
     <WMSSegmentizeFeatureInfoGeometry type="bool">false</WMSSegmentizeFeatureInfoGeometry>
-    <WFSTLayers>
-      <Insert type="QStringList"/>
-      <Update type="QStringList"/>
-      <Delete type="QStringList"/>
-    </WFSTLayers>
-    <Gui>
-      <SelectionColorBluePart type="int">0</SelectionColorBluePart>
-      <CanvasColorGreenPart type="int">255</CanvasColorGreenPart>
-      <CanvasColorRedPart type="int">255</CanvasColorRedPart>
-      <SelectionColorRedPart type="int">255</SelectionColorRedPart>
-      <SelectionColorAlphaPart type="int">255</SelectionColorAlphaPart>
-      <SelectionColorGreenPart type="int">255</SelectionColorGreenPart>
-      <CanvasColorBluePart type="int">255</CanvasColorBluePart>
-    </Gui>
+    <WMSFees type="QString">conditions unknown</WMSFees>
     <Digitizing>
-      <DefaultSnapToleranceUnit type="int">2</DefaultSnapToleranceUnit>
+      <DefaultSnapTolerance type="double">0</DefaultSnapTolerance>
       <LayerSnappingList type="QStringList">
         <value>ReducedStudyArea20180321124142218</value>
         <value>ReducedStudyArea220180321124201199</value>
       </LayerSnappingList>
+      <LayerSnapToList type="QStringList">
+        <value>to_vertex_and_segment</value>
+        <value>to_vertex_and_segment</value>
+      </LayerSnapToList>
       <LayerSnappingEnabledList type="QStringList">
         <value>disabled</value>
         <value>disabled</value>
       </LayerSnappingEnabledList>
       <SnappingMode type="QString">current_layer</SnappingMode>
-      <AvoidIntersectionsList type="QStringList"/>
-      <LayerSnappingToleranceUnitList type="QStringList">
-        <value>2</value>
-        <value>2</value>
-      </LayerSnappingToleranceUnitList>
-      <LayerSnapToList type="QStringList">
-        <value>to_vertex_and_segment</value>
-        <value>to_vertex_and_segment</value>
-      </LayerSnapToList>
-      <DefaultSnapType type="QString">off</DefaultSnapType>
-      <DefaultSnapTolerance type="double">0</DefaultSnapTolerance>
       <LayerSnappingToleranceList type="QStringList">
         <value>0.000000</value>
         <value>0.000000</value>
       </LayerSnappingToleranceList>
+      <DefaultSnapToleranceUnit type="int">2</DefaultSnapToleranceUnit>
+      <LayerSnappingToleranceUnitList type="QStringList">
+        <value>2</value>
+        <value>2</value>
+      </LayerSnappingToleranceUnitList>
+      <AvoidIntersectionsList type="QStringList"/>
+      <DefaultSnapType type="QString">off</DefaultSnapType>
     </Digitizing>
-    <Identify>
-      <disabledLayers type="QStringList"/>
-    </Identify>
-    <Macros>
-      <pythonCode type="QString"></pythonCode>
-    </Macros>
-    <WMSAccessConstraints type="QString">None</WMSAccessConstraints>
+    <WMSContactOrganization type="QString"></WMSContactOrganization>
     <WCSLayers type="QStringList"/>
     <Legend>
       <filterByMap type="bool">false</filterByMap>
     </Legend>
-    <SpatialRefSys>
-      <ProjectCRSProj4String type="QString">+proj=tmerc +lat_0=0 +lon_0=21 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +units=m +no_defs</ProjectCRSProj4String>
-      <ProjectCrs type="QString">USER:100003</ProjectCrs>
-      <ProjectCRSID type="int">100003</ProjectCRSID>
-      <ProjectionsEnabled type="int">1</ProjectionsEnabled>
-    </SpatialRefSys>
+    <WMSRestrictedComposers type="QStringList"/>
+    <Identify>
+      <disabledLayers type="QStringList"/>
+    </Identify>
+    <Measurement>
+      <AreaUnits type="QString">m2</AreaUnits>
+      <DistanceUnits type="QString">meters</DistanceUnits>
+    </Measurement>
+    <WMSUseLayerIDs type="bool">false</WMSUseLayerIDs>
+    <Measure>
+      <Ellipsoid type="QString">WGS84</Ellipsoid>
+    </Measure>
+    <WMSImageQuality type="int">90</WMSImageQuality>
+    <WMSOnlineResource type="QString"></WMSOnlineResource>
+    <WFSLayers type="QStringList"/>
+    <WMSUrl type="QString"></WMSUrl>
+    <WMSRestrictedLayers type="QStringList"/>
+    <WCSUrl type="QString"></WCSUrl>
+    <WMSContactPosition type="QString"></WMSContactPosition>
+    <Macros>
+      <pythonCode type="QString"></pythonCode>
+    </Macros>
+    <WMSContactPerson type="QString"></WMSContactPerson>
+    <WMSServiceCapabilities type="bool">false</WMSServiceCapabilities>
+    <WMSContactPhone type="QString"></WMSContactPhone>
     <DefaultStyles>
       <Fill type="QString"></Fill>
-      <Line type="QString"></Line>
       <Marker type="QString"></Marker>
-      <RandomColors type="bool">true</RandomColors>
-      <AlphaInt type="int">255</AlphaInt>
+      <Line type="QString"></Line>
       <ColorRamp type="QString"></ColorRamp>
+      <AlphaInt type="int">255</AlphaInt>
+      <RandomColors type="bool">true</RandomColors>
     </DefaultStyles>
-    <WMSFees type="QString">conditions unknown</WMSFees>
-    <WMSImageQuality type="int">90</WMSImageQuality>
-    <Measurement>
-      <DistanceUnits type="QString">meters</DistanceUnits>
-      <AreaUnits type="QString">m2</AreaUnits>
-    </Measurement>
-    <WMSUrl type="QString"></WMSUrl>
+    <WMSContactMail type="QString"></WMSContactMail>
+    <Gui>
+      <CanvasColorBluePart type="int">255</CanvasColorBluePart>
+      <SelectionColorAlphaPart type="int">255</SelectionColorAlphaPart>
+      <SelectionColorGreenPart type="int">255</SelectionColorGreenPart>
+      <CanvasColorRedPart type="int">255</CanvasColorRedPart>
+      <SelectionColorRedPart type="int">255</SelectionColorRedPart>
+      <CanvasColorGreenPart type="int">255</CanvasColorGreenPart>
+      <SelectionColorBluePart type="int">0</SelectionColorBluePart>
+    </Gui>
+    <WMSServiceTitle type="QString"></WMSServiceTitle>
+    <Variables>
+      <variableNames type="QStringList"/>
+      <variableValues type="QStringList"/>
+    </Variables>
+    <Paths>
+      <Absolute type="bool">false</Absolute>
+    </Paths>
+    <WMSServiceAbstract type="QString"></WMSServiceAbstract>
+    <WFSUrl type="QString"></WFSUrl>
+    <WFSTLayers>
+      <Update type="QStringList"/>
+      <Delete type="QStringList"/>
+      <Insert type="QStringList"/>
+    </WFSTLayers>
+    <PositionPrecision>
+      <DegreeFormat type="QString">MU</DegreeFormat>
+      <Automatic type="bool">true</Automatic>
+      <DecimalPlaces type="int">2</DecimalPlaces>
+    </PositionPrecision>
+    <SpatialRefSys>
+      <ProjectCRSID type="int">100003</ProjectCRSID>
+      <ProjectCrs type="QString">USER:100003</ProjectCrs>
+      <ProjectionsEnabled type="int">1</ProjectionsEnabled>
+      <ProjectCRSProj4String type="QString">+proj=tmerc +lat_0=0 +lon_0=21 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +units=m +no_defs</ProjectCRSProj4String>
+    </SpatialRefSys>
+    <WMSKeywordList type="QStringList">
+      <value></value>
+    </WMSKeywordList>
+    <WMSPrecision type="QString">8</WMSPrecision>
   </properties>
   <visibility-presets/>
+  <transformContext/>
+  <Annotations/>
+  <Layouts/>
 </qgis>

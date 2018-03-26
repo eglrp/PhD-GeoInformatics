@@ -17,9 +17,10 @@ REM echo off
 SET OSGEO4W_ROOT=C:\OSGeo4W64\
 REM SET OTB=%OSGEO4W_ROOT%apps\orfeotoolbox
 
-CALL %OSGEO4W_ROOT%bin\o4w_env.bat
+REM CALL %OSGEO4W_ROOT%bin\o4w_env.bat
 
 setlocal EnableDelayedExpansion
+set PATH=%PATH%;"C:\Data\Development\Projects\PhD GeoInformatics\Code\Misc Tools"
 
 REM del mosaic.tif
 REM echo "%~d1%~p1"
@@ -38,6 +39,8 @@ REM gdal_translate -a_srs "+proj=tmerc +lat_0=0 +lon_0=21 +k=1 +x_0=0 +y_0=0 +da
 REM  pause 
 
 REM add tiffs to mosaic 
+del %2
+
 gdalwarp --config GDAL_CACHEMAX 3000 -wm 3000 -t_srs "+proj=tmerc +lat_0=0 +lon_0=21 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs" -tr %tpix% %tpix% -r cubicspline -tap -srcnodata 0 -dstnodata 0 %1 %2
 
 gdaladdo -ro -r average --config COMPRESS_OVERVIEW DEFLATE %2 2 4 8 16 32 64
@@ -52,4 +55,4 @@ echo                             can include path eg C:/dirName/*_RGBN.tif
 echo    [output file]: Name of mosaic file
 echo    [tgt pixel size]: Target pixel size in m (optional - default=500)
 goto :eof
-
+ 
