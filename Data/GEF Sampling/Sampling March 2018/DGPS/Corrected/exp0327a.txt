@@ -1,0 +1,129 @@
+Export Version 5.20  5.20 Started.
+Using Export Setup: Baviaans ESRI Shapefile Setup
+The following files in D:\CGA\Users\Dugal\MSc GeoInformatics\Docs\GPS Pathfinder\GefSamplingMarch2018 will be exported:
+    PV1.cor
+    PV12.cor
+    PV13.cor
+    PV15.cor
+    PV16.cor
+    PV17.cor
+    PV18.cor
+    PV2.cor
+    PV20.cor
+    PV3.cor
+    PV4.cor
+    PV6.cor
+    PV7.cor
+    PV8.cor
+    PV9.cor
+
+Reading file PV1.cor
+534 position(s) read.
+  Of these, 59 position(s) were filtered out.
+A total of 8 feature(s) read or created.
+  8 point feature(s) read.
+File PV1.cor read successfully
+
+Reading file PV12.cor
+492 position(s) read.
+A total of 8 feature(s) read or created.
+  8 point feature(s) read.
+File PV12.cor read successfully
+
+Reading file PV13.cor
+685 position(s) read.
+  Of these, 8 position(s) were filtered out.
+A total of 8 feature(s) read or created.
+  8 point feature(s) read.
+File PV13.cor read successfully
+
+Reading file PV15.cor
+435 position(s) read.
+  Of these, 1 position(s) were filtered out.
+A total of 8 feature(s) read or created.
+  8 point feature(s) read.
+File PV15.cor read successfully
+
+Reading file PV16.cor
+411 position(s) read.
+  Of these, 1 position(s) were filtered out.
+A total of 8 feature(s) read or created.
+  8 point feature(s) read.
+File PV16.cor read successfully
+
+Reading file PV17.cor
+502 position(s) read.
+A total of 8 feature(s) read or created.
+  8 point feature(s) read.
+File PV17.cor read successfully
+
+Reading file PV18.cor
+543 position(s) read.
+  Of these, 6 position(s) were filtered out.
+A total of 8 feature(s) read or created.
+  8 point feature(s) read.
+File PV18.cor read successfully
+
+Reading file PV2.cor
+426 position(s) read.
+A total of 8 feature(s) read or created.
+  8 point feature(s) read.
+File PV2.cor read successfully
+
+Reading file PV20.cor
+571 position(s) read.
+A total of 8 feature(s) read or created.
+  8 point feature(s) read.
+File PV20.cor read successfully
+
+Reading file PV3.cor
+453 position(s) read.
+A total of 8 feature(s) read or created.
+  8 point feature(s) read.
+File PV3.cor read successfully
+
+Reading file PV4.cor
+453 position(s) read.
+A total of 8 feature(s) read or created.
+  8 point feature(s) read.
+File PV4.cor read successfully
+
+Reading file PV6.cor
+469 position(s) read.
+  Of these, 4 position(s) were filtered out.
+A total of 8 feature(s) read or created.
+  8 point feature(s) read.
+File PV6.cor read successfully
+
+Reading file PV7.cor
+249 position(s) read.
+A total of 5 feature(s) read or created.
+  5 point feature(s) read.
+File PV7.cor read successfully
+
+Reading file PV8.cor
+244 position(s) read.
+A total of 5 feature(s) read or created.
+  5 point feature(s) read.
+File PV8.cor read successfully
+
+Reading file PV9.cor
+414 position(s) read.
+A total of 8 feature(s) read or created.
+  8 point feature(s) read.
+File PV9.cor read successfully
+
+15 input file(s) read.
+6881 position(s) read.
+  Of these, 79 position(s) were filtered out.
+A total of 114 feature(s) read or created.
+  114 point feature(s) read.
+114 feature(s) exported.
+3 output file(s) written to D:\CGA\Users\Dugal\MSc GeoInformatics\Docs\GPS Pathfinder\GefSamplingMarch2018\Export
+    d:\cga\users\dugal\msc geoinformatics\docs\gps pathfinder\gefsamplingmarch2018\export\point_ge.shp
+    d:\cga\users\dugal\msc geoinformatics\docs\gps pathfinder\gefsamplingmarch2018\export\point_ge.shx
+    d:\cga\users\dugal\msc geoinformatics\docs\gps pathfinder\gefsamplingmarch2018\export\point_ge.dbf
+
+The file D:\CGA\Users\Dugal\MSc GeoInformatics\Docs\GPS Pathfinder\GefSamplingMarch2018\Export\PV1.inf contains information on the settings used.
+
+The file C:\ProgramData\Trimble\GPS Pathfinder Office\Config\\expfiles.txt contains a list of the files created.

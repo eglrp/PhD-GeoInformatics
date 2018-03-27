@@ -1256,6 +1256,16 @@ Import ACII as waypoint in GPS Pathfinder Office
 - NNB Options->Style of Display : Set format to decimal degrees or whatever is in your ascii file 
 - File->Wapoint->Ascii Import : Set format etc - see help 	
 	
+Import DGPS field data files onto PC
+---------------------------------
+A) The old method with the SD card - painful as each file must be copied individually
+B) See https://compasstoolsinc.com/windows-mobile-device-center-not-working-windows-10-update/
+   - Change "Windows Mobile 2003 ..." service to log on as "local system acc" and check "allow interact with desktop"
+   - On device: settings-> connections->usb to pc and uncheck "enable advanced..."
+   - start windows mobile device center and browse to "my documents/terrasync" on the device and then copy 
+C) Use free version of GPS Pathfinder ?  Not sure that this provides any advantage over B   
+
+	
 GEF Site Stratification
 -------------------------
 - We want a fairly even spread of plots over TAGC for the regression.  There is not an even spread of these by area in the site.  Therefore we stratify into Degraded/ Moderate / Pristine classes and make sure we get enough plots in each class.
