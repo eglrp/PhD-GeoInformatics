@@ -15,9 +15,10 @@ MathModel: SRIT
 
 ; Projections
 ;
-GeorefTable: 2 1 1
+GeorefTable: 3 1 1
 Georef: "METRE           " 0 0 1 1
 Georef: "UTM    34 J D000" 0 0 1 1
+Georef: "TM          D000"   0.000000000000000000E+00   0.000000000000000000E+00   1.000000000000000000E+00   1.000000000000000000E+00 "0 0 21 0 0 0 0 0 1 0 0 0 0 0 0 0 0 2"
 
 ; Photos
 ;
@@ -41,7 +42,7 @@ Photo:
 	Size: 6000 6000
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: OK
+	OrthoStatus: Stale
 	NormalizeMethod: 0
 	OrthoXY: 0   5.35710000000000E+05   6.33952000000000E+06
 	OrthoXY: 1   6.12150000000000E+05   6.26510000000000E+06
@@ -69,23 +70,23 @@ Model:
 {
 	PhotoId: "ATCORCorrected_METADATA_00812098"
 	N0x2:  1.2769500496595303e+07
-	aa:  3.5647100639429294e-04
+	aa:  3.8688906122210081e-04
 	SmALPHA:  1.1924961786187300e-05
-	bb: -8.5430207483072625e-10
+	bb: -5.3705036181839241e-09
 	C0:  3.0000000000000000e+03
-	cc: -9.2844257602441888e-10
-	COS_KHI:  9.9995326615617153e-01
-	DELTA_GAMMA:  7.6846056454879116e-09
-	GAMMA:  2.6450206281896904e-01
-	K_1:  1.3518033289556291e-06
+	cc:  8.9740072636022453e-10
+	COS_KHI:  9.9996784646318648e-01
+	DELTA_GAMMA:  5.6027235052267708e-09
+	GAMMA:  2.6444757642002026e-01
+	K_1:  1.3491496100524437e-06
 	L0:  3.0000000000000000e+03
-	P:  1.0012296609230491e+01
-	Q:  8.7960371097111155e+05
-	TAU: -9.6682077047273354e-03
-	THETA: -2.1220654312674730e-01
-	THETA_SEC: -2.1221646081768500e-01
-	X0:  5.7402587503970729e+05
-	Y0:  6.3022559108603811e+06
+	P:  1.0012335840869945e+01
+	Q:  8.7959876439170307e+05
+	TAU: -8.0193625251469575e-03
+	THETA: -2.0733669521643169e-01
+	THETA_SEC: -2.0734336203885606e-01
+	X0:  5.7402350117042020e+05
+	Y0:  6.3022528836116577e+06
 	delh:  0.0000000000000000e+00
 	COEF_Y2:  0.0000000000000000e+00
 	Sensor: SPOT5_MULTI
@@ -95,6 +96,7 @@ GCP:
 {
 	PhotoId: "ATCORCorrected_METADATA_00812098"
 	Id: "G0001"
+	Status: Check
 	Elevation: 298.7900
 	ElevationErr: 1.0000
 	PhotoPL: 2137.436 4440.463
@@ -106,6 +108,7 @@ GCP:
 {
 	PhotoId: "ATCORCorrected_METADATA_00812098"
 	Id: "G0002"
+	Status: Check
 	Elevation: 431.2530
 	ElevationErr: 1.0000
 	PhotoPL: 1285.515 2227.511
@@ -194,6 +197,7 @@ GCP:
 {
 	PhotoId: "ATCORCorrected_METADATA_00812098"
 	Id: "G0010"
+	Status: Check
 	Elevation: 500.0000
 	ElevationErr: 1.0000
 	PhotoPL: 3106.471 790.448
@@ -205,6 +209,7 @@ GCP:
 {
 	PhotoId: "ATCORCorrected_METADATA_00812098"
 	Id: "G0011"
+	Status: Check
 	Elevation: 425.0000
 	ElevationErr: 1.0000
 	PhotoPL: 593.315 450.435
@@ -227,6 +232,7 @@ GCP:
 {
 	PhotoId: "ATCORCorrected_METADATA_00812098"
 	Id: "G0013"
+	Status: Check
 	Elevation: 571.0000
 	ElevationErr: 1.0000
 	PhotoPL: 4421.455 124.542
@@ -238,6 +244,7 @@ GCP:
 {
 	PhotoId: "ATCORCorrected_METADATA_00812098"
 	Id: "G0014"
+	Status: Check
 	Elevation: 613.3890
 	ElevationErr: 1.0000
 	PhotoPL: 4552.581 386.473
@@ -260,6 +267,7 @@ GCP:
 {
 	PhotoId: "ATCORCorrected_METADATA_00812098"
 	Id: "G0016"
+	Status: Check
 	Elevation: 713.8220
 	ElevationErr: 1.0000
 	PhotoPL: 2803.472 2274.487
@@ -271,6 +279,7 @@ GCP:
 {
 	PhotoId: "ATCORCorrected_METADATA_00812098"
 	Id: "G0017"
+	Status: Check
 	Elevation: 715.8940
 	ElevationErr: 1.0000
 	PhotoPL: 3000.446 2184.512
@@ -331,6 +340,2388 @@ GCP:
 	PhotoPL: 770.846 4232.987
 	PhotoPLErr: 0.100 0.100
 	GeorefXY: 1 548212.5822 6296450.7625
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1270"
+	Elevation: 533.2767
+	ElevationErr: 10.0000
+	PhotoPL: 1917 1917
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 66011.7700 -3685813.3691
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1222"
+	Elevation: 1036.6636
+	ElevationErr: 10.0000
+	PhotoPL: 1104 3543
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 53563.2507 -3699323.5645
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1267"
+	Elevation: 446.0576
+	ElevationErr: 10.0000
+	PhotoPL: 1917 1104
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 68118.6108 -3677949.3384
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1304"
+	Elevation: 411.4479
+	ElevationErr: 10.0000
+	PhotoPL: 2459 833
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 74333.2666 -3676819.6045
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1430"
+	Elevation: 419.0310
+	ElevationErr: 10.0000
+	PhotoPL: 4085 3814
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 82957.4512 -3710087.2852
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1420"
+	Elevation: 593.0578
+	ElevationErr: 10.0000
+	PhotoPL: 4085 562
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 91513.0664 -3678662.6477
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1458"
+	Elevation: 647.9995
+	ElevationErr: 10.0000
+	PhotoPL: 4627 562
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 96968.6182 -3680139.7095
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1194"
+	Elevation: 735.5626
+	ElevationErr: 10.0000
+	PhotoPL: 562 2730
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 50080.0751 -3689937.6562
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1273"
+	Status: Check
+	Elevation: 589.3917
+	ElevationErr: 10.0000
+	PhotoPL: 1917 2730
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 63879.8352 -3693677.2314
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1234"
+	Elevation: 393.2397
+	ElevationErr: 10.0000
+	PhotoPL: 1375 1646
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 61166.8689 -3681688.2275
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1292"
+	Elevation: 707.8401
+	ElevationErr: 10.0000
+	PhotoPL: 2188 3272
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 65248.6133 -3699672.3022
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1472"
+	Elevation: 563.3475
+	ElevationErr: 10.0000
+	PhotoPL: 4627 5711
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 83457.0581 -3729908.0029
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1529"
+	Elevation: 247.9963
+	ElevationErr: 10.0000
+	PhotoPL: 5711 4627
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 97097.6904 -3722350.4834
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1474"
+	Elevation: 752.1211
+	ElevationErr: 10.0000
+	PhotoPL: 4898 833
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 98991.3086 -3683502.0312
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1254"
+	Status: Check
+	Elevation: 915.2558
+	ElevationErr: 10.0000
+	PhotoPL: 1646 3272
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 59768.9563 -3698188.7134
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1211"
+	Status: Check
+	Elevation: 848.3578
+	ElevationErr: 10.0000
+	PhotoPL: 833 4085
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 49319.2264 -3703796.4697
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1367"
+	Elevation: 918.1180
+	ElevationErr: 10.0000
+	PhotoPL: 3272 2188
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 79109.2041 -3692179.1528
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1524"
+	Elevation: 550.5631
+	ElevationErr: 10.0000
+	PhotoPL: 5711 3272
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 100694.8535 -3709267.9980
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1427"
+	Elevation: 586.4260
+	ElevationErr: 10.0000
+	PhotoPL: 4085 3001
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 85118.4766 -3702237.6392
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1247"
+	Elevation: 467.3718
+	ElevationErr: 10.0000
+	PhotoPL: 1646 1104
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 65363.1238 -3677202.3865
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1408"
+	Status: Check
+	Elevation: 577.1338
+	ElevationErr: 10.0000
+	PhotoPL: 3814 3001
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 82379.3506 -3701496.7114
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1532"
+	Elevation: 425.0289
+	ElevationErr: 10.0000
+	PhotoPL: 5711 5440
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 94991.8066 -3730216.6699
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1181"
+	Elevation: 571.9508
+	ElevationErr: 10.0000
+	PhotoPL: 291 1646
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 50098.2498 -3678692.8455
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1421"
+	Elevation: 632.9239
+	ElevationErr: 10.0000
+	PhotoPL: 4085 833
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 90810.0586 -3681282.0776
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1389"
+	Elevation: 653.5156
+	ElevationErr: 10.0000
+	PhotoPL: 3543 3272
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 78959.0967 -3703381.8750
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1379"
+	Elevation: 303.0352
+	ElevationErr: 10.0000
+	PhotoPL: 3272 5711
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 69759.6875 -3726199.9805
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1527"
+	Elevation: 297.0319
+	ElevationErr: 10.0000
+	PhotoPL: 5711 4085
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 98524.0137 -3717112.9639
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1299"
+	Elevation: 297.1591
+	ElevationErr: 10.0000
+	PhotoPL: 2188 5169
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 60184.3286 -3717983.1836
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1409"
+	Elevation: 573.2014
+	ElevationErr: 10.0000
+	PhotoPL: 3814 3272
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 81673.3862 -3704120.9131
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1495"
+	Elevation: 249.6511
+	ElevationErr: 10.0000
+	PhotoPL: 5169 4627
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 91679.1699 -3720882.6855
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1478"
+	Status: Check
+	Elevation: 558.7002
+	ElevationErr: 10.0000
+	PhotoPL: 4898 2730
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 93979.3994 -3701827.4170
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1469"
+	Elevation: 224.7737
+	ElevationErr: 10.0000
+	PhotoPL: 4627 4898
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 85531.1841 -3722031.5381
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1525"
+	Elevation: 456.0297
+	ElevationErr: 10.0000
+	PhotoPL: 5711 3543
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 99969.2285 -3711881.2061
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1412"
+	Elevation: 339.0605
+	ElevationErr: 10.0000
+	PhotoPL: 3814 4085
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 79501.7871 -3711962.9687
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1386"
+	Elevation: 1207.0466
+	ElevationErr: 10.0000
+	PhotoPL: 3543 1646
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 83330.7080 -3687699.7681
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1314"
+	Elevation: 315.0821
+	ElevationErr: 10.0000
+	PhotoPL: 2459 4085
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 65787.6318 -3708251.6992
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1218"
+	Elevation: 395.3453
+	ElevationErr: 10.0000
+	PhotoPL: 1104 1375
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 59101.4563 -3678317.8333
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1493"
+	Elevation: 365.1488
+	ElevationErr: 10.0000
+	PhotoPL: 5169 4085
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 93117.3242 -3715648.1201
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1422"
+	Elevation: 714.8593
+	ElevationErr: 10.0000
+	PhotoPL: 4085 1104
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 90112.6123 -3683909.1211
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1298"
+	Elevation: 252.1632
+	ElevationErr: 10.0000
+	PhotoPL: 2188 4898
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 60891.3330 -3715362.4023
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1445"
+	Elevation: 743.9577
+	ElevationErr: 10.0000
+	PhotoPL: 4356 2730
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 88580.0049 -3700367.7905
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1385"
+	Elevation: 832.0528
+	ElevationErr: 10.0000
+	PhotoPL: 3543 1375
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 83963.3936 -3685057.3145
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1257"
+	Elevation: 292.2203
+	ElevationErr: 10.0000
+	PhotoPL: 1646 4085
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 57509.9854 -3706008.1055
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1190"
+	Elevation: 459.4906
+	ElevationErr: 10.0000
+	PhotoPL: 562 1104
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 54278.0890 -3674197.9968
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1405"
+	Elevation: 1166.7424
+	ElevationErr: 10.0000
+	PhotoPL: 3814 1917
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 85341.0962 -3691057.2144
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1339"
+	Elevation: 202.1515
+	ElevationErr: 10.0000
+	PhotoPL: 2730 5440
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 64960.8276 -3722089.0137
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1311"
+	Elevation: 643.7822
+	ElevationErr: 10.0000
+	PhotoPL: 2459 3272
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 67979.6484 -3700410.8569
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1276"
+	Elevation: 420.8518
+	ElevationErr: 10.0000
+	PhotoPL: 1917 3814
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 61009.3054 -3704145.5811
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1271"
+	Elevation: 1167.8873
+	ElevationErr: 10.0000
+	PhotoPL: 1917 2188
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 65428.8098 -3688477.5195
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1241"
+	Elevation: 426.0196
+	ElevationErr: 10.0000
+	PhotoPL: 1375 5440
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 51224.8376 -3718371.4355
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1526"
+	Elevation: 343.3389
+	ElevationErr: 10.0000
+	PhotoPL: 5711 3814
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 99240.6299 -3714495.6006
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1203"
+	Elevation: 432.8798
+	ElevationErr: 10.0000
+	PhotoPL: 833 1375
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 56337.3523 -3677570.2148
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1279"
+	Elevation: 567.4758
+	ElevationErr: 10.0000
+	PhotoPL: 1917 4898
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 58200.2490 -3714637.0605
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1319"
+	Elevation: 266.3087
+	ElevationErr: 10.0000
+	PhotoPL: 2459 5440
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 62224.0479 -3721348.9258
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1450"
+	Elevation: 298.1277
+	ElevationErr: 10.0000
+	PhotoPL: 4356 4356
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 84240.1196 -3716058.5986
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1415"
+	Elevation: 252.7508
+	ElevationErr: 10.0000
+	PhotoPL: 3814 4898
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 77356.5894 -3719818.3008
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1191"
+	Elevation: 478.8654
+	ElevationErr: 10.0000
+	PhotoPL: 562 1375
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 53570.6958 -3676820.7520
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1286"
+	Elevation: 409.2919
+	ElevationErr: 10.0000
+	PhotoPL: 2188 1104
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 70869.2041 -3678692.6355
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1310"
+	Elevation: 1162.9250
+	ElevationErr: 10.0000
+	PhotoPL: 2459 2730
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 69513.1616 -3695201.5674
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1471"
+	Elevation: 453.0591
+	ElevationErr: 10.0000
+	PhotoPL: 4627 5440
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 84147.7100 -3727280.4687
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1263"
+	Elevation: 585.4590
+	ElevationErr: 10.0000
+	PhotoPL: 1646 5711
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 53309.9036 -3721750.3711
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1236"
+	Elevation: 811.9241
+	ElevationErr: 10.0000
+	PhotoPL: 1375 3272
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 56983.6816 -3697433.3398
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1209"
+	Elevation: 1024.3813
+	ElevationErr: 10.0000
+	PhotoPL: 833 3272
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 51498.2410 -3695947.1338
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1175"
+	Status: Check
+	Elevation: 488.8764
+	ElevationErr: 10.0000
+	PhotoPL: 20 291
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 50858.1232 -3664835.7608
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1359"
+	Elevation: 306.7456
+	ElevationErr: 10.0000
+	PhotoPL: 3001 5711
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 67020.1318 -3725459.6240
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1510"
+	Elevation: 395.7084
+	ElevationErr: 10.0000
+	PhotoPL: 5440 3543
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 97252.1387 -3711144.9902
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1287"
+	Elevation: 409.4355
+	ElevationErr: 10.0000
+	PhotoPL: 2188 1375
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 70157.9492 -3681310.6445
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1410"
+	Elevation: 640.6182
+	ElevationErr: 10.0000
+	PhotoPL: 3814 3543
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 80971.7285 -3706741.7090
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1180"
+	Elevation: 494.3749
+	ElevationErr: 10.0000
+	PhotoPL: 291 1375
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 50793.1824 -3676067.6514
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1371"
+	Elevation: 610.8735
+	ElevationErr: 10.0000
+	PhotoPL: 3272 3543
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 75502.7588 -3705259.1553
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1352"
+	Elevation: 556.2576
+	ElevationErr: 10.0000
+	PhotoPL: 3001 3814
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 72041.1865 -3707132.2607
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1518"
+	Elevation: 744.2006
+	ElevationErr: 10.0000
+	PhotoPL: 5440 5711
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 91630.9424 -3732120.3564
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1424"
+	Elevation: 1243.6509
+	ElevationErr: 10.0000
+	PhotoPL: 4085 1917
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 88076.2207 -3691797.2437
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1275"
+	Elevation: 493.7591
+	ElevationErr: 10.0000
+	PhotoPL: 1917 3543
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 61728.7109 -3701529.0332
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1305"
+	Elevation: 427.0556
+	ElevationErr: 10.0000
+	PhotoPL: 2459 1104
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 73626.1621 -3679439.7729
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1351"
+	Elevation: 599.9281
+	ElevationErr: 10.0000
+	PhotoPL: 3001 3543
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 72758.6646 -3704512.9199
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1428"
+	Elevation: 564.9725
+	ElevationErr: 10.0000
+	PhotoPL: 4085 3272
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 84398.7939 -3704852.6904
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1454"
+	Elevation: 325.0595
+	ElevationErr: 10.0000
+	PhotoPL: 4356 5440
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 81402.5098 -3726538.7988
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1452"
+	Elevation: 241.9243
+	ElevationErr: 10.0000
+	PhotoPL: 4356 4898
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 82810.2612 -3721295.7129
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1374"
+	Elevation: 337.3434
+	ElevationErr: 10.0000
+	PhotoPL: 3272 4356
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 73318.9990 -3713102.4121
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1204"
+	Elevation: 521.5552
+	ElevationErr: 10.0000
+	PhotoPL: 833 1646
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 55651.7542 -3680195.6287
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1521"
+	Elevation: 992.5699
+	ElevationErr: 10.0000
+	PhotoPL: 5711 2459
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 102896.3623 -3701429.7046
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1238"
+	Elevation: 504.8434
+	ElevationErr: 10.0000
+	PhotoPL: 1375 3814
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 55498.2617 -3702656.3770
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1193"
+	Elevation: 503.8826
+	ElevationErr: 10.0000
+	PhotoPL: 562 2459
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 50735.3992 -3687300.6494
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1485"
+	Elevation: 233.9904
+	ElevationErr: 10.0000
+	PhotoPL: 4898 4898
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 88251.1426 -3722766.7773
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1252"
+	Elevation: 380.9733
+	ElevationErr: 10.0000
+	PhotoPL: 1646 2730
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 61080.2307 -3692916.5820
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1296"
+	Elevation: 298.1740
+	ElevationErr: 10.0000
+	PhotoPL: 2188 4356
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 62320.0037 -3710123.8965
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1480"
+	Elevation: 467.9901
+	ElevationErr: 10.0000
+	PhotoPL: 4898 3543
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 91839.4434 -3709680.7959
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1482"
+	Elevation: 351.4731
+	ElevationErr: 10.0000
+	PhotoPL: 4898 4085
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 90399.5410 -3714912.5049
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1465"
+	Elevation: 399.1648
+	ElevationErr: 10.0000
+	PhotoPL: 4627 3814
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 88399.4189 -3711560.6006
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1431"
+	Elevation: 337.0853
+	ElevationErr: 10.0000
+	PhotoPL: 4085 4085
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 82230.3564 -3712701.7383
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1481"
+	Elevation: 423.6737
+	ElevationErr: 10.0000
+	PhotoPL: 4898 3814
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 91121.7432 -3712297.5293
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1402"
+	Elevation: 610.2044
+	ElevationErr: 10.0000
+	PhotoPL: 3814 833
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 88077.8564 -3680543.7915
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1492"
+	Elevation: 444.8977
+	ElevationErr: 10.0000
+	PhotoPL: 5169 3814
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 93839.5459 -3713033.0225
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1418"
+	Elevation: 296.8817
+	ElevationErr: 10.0000
+	PhotoPL: 3814 5711
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 75232.6099 -3727681.0059
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1377"
+	Elevation: 251.5402
+	ElevationErr: 10.0000
+	PhotoPL: 3272 5169
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 71170.7666 -3720958.2178
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1226"
+	Elevation: 780.0606
+	ElevationErr: 10.0000
+	PhotoPL: 1104 5169
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 49238.9294 -3715025.3223
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1514"
+	Elevation: 249.1237
+	ElevationErr: 10.0000
+	PhotoPL: 5440 4627
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 94388.9453 -3721615.4980
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1466"
+	Elevation: 348.3885
+	ElevationErr: 10.0000
+	PhotoPL: 4627 4085
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 87680.3223 -3714177.8906
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1463"
+	Elevation: 743.1219
+	ElevationErr: 10.0000
+	PhotoPL: 4627 3001
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 90589.7168 -3703718.7842
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1436"
+	Elevation: 277.4353
+	ElevationErr: 10.0000
+	PhotoPL: 4085 5440
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 78668.1714 -3725798.7646
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1437"
+	Elevation: 360.0123
+	ElevationErr: 10.0000
+	PhotoPL: 4085 5711
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 77978.6157 -3728424.3701
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1353"
+	Elevation: 454.3895
+	ElevationErr: 10.0000
+	PhotoPL: 3001 4085
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 71310.2734 -3709746.1768
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1324"
+	Elevation: 488.0269
+	ElevationErr: 10.0000
+	PhotoPL: 2730 1104
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 76388.0200 -3680188.0847
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1432"
+	Elevation: 317.8687
+	ElevationErr: 10.0000
+	PhotoPL: 4085 4356
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 81516.9238 -3715320.0732
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1536"
+	Elevation: 261.2406
+	ElevationErr: 10.0000
+	PhotoPL: 5978 4627
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 99761.8555 -3723070.7910
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1297"
+	Elevation: 234.1317
+	ElevationErr: 10.0000
+	PhotoPL: 2188 4627
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 61596.2402 -3712740.1318
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1449"
+	Elevation: 355.1778
+	ElevationErr: 10.0000
+	PhotoPL: 4356 4085
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 84959.3042 -3713441.1475
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1248"
+	Elevation: 456.5916
+	ElevationErr: 10.0000
+	PhotoPL: 1646 1375
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 64650.5969 -3679821.4026
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1429"
+	Elevation: 653.5588
+	ElevationErr: 10.0000
+	PhotoPL: 4085 3543
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 83708.0054 -3707481.5918
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1441"
+	Elevation: 758.6606
+	ElevationErr: 10.0000
+	PhotoPL: 4356 1104
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 92846.8652 -3684650.9985
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1378"
+	Elevation: 230.4432
+	ElevationErr: 10.0000
+	PhotoPL: 3272 5440
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 70456.4014 -3723575.9180
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1516"
+	Elevation: 519.5282
+	ElevationErr: 10.0000
+	PhotoPL: 5440 5169
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 93011.5332 -3726870.7471
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1330"
+	Elevation: 965.0455
+	ElevationErr: 10.0000
+	PhotoPL: 2730 3001
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 71509.9512 -3698555.5640
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1354"
+	Elevation: 348.0015
+	ElevationErr: 10.0000
+	PhotoPL: 3001 4356
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 70578.1616 -3712361.1572
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1475"
+	Elevation: 1436.0872
+	ElevationErr: 10.0000
+	PhotoPL: 4898 1646
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 96977.5146 -3691397.6318
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1268"
+	Elevation: 468.2606
+	ElevationErr: 10.0000
+	PhotoPL: 1917 1375
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 67413.9868 -3680569.9268
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1484"
+	Elevation: 269.9134
+	ElevationErr: 10.0000
+	PhotoPL: 4898 4627
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 88966.0254 -3720148.5205
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1206"
+	Elevation: 602.3163
+	ElevationErr: 10.0000
+	PhotoPL: 833 2459
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 53532.1167 -3688061.9092
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1293"
+	Elevation: 569.5397
+	ElevationErr: 10.0000
+	PhotoPL: 2188 3543
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 64502.5879 -3702279.9390
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1504"
+	Elevation: 1556.4657
+	ElevationErr: 10.0000
+	PhotoPL: 5440 1375
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 103127.1191 -3690250.2002
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1337"
+	Elevation: 239.0172
+	ElevationErr: 10.0000
+	PhotoPL: 2730 4898
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 66389.0918 -3716851.3184
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1312"
+	Elevation: 381.2980
+	ElevationErr: 10.0000
+	PhotoPL: 2459 3543
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 67220.7593 -3703013.8037
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1369"
+	Elevation: 726.1466
+	ElevationErr: 10.0000
+	PhotoPL: 3272 3001
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 76944.4043 -3700027.5781
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1396"
+	Elevation: 217.2342
+	ElevationErr: 10.0000
+	PhotoPL: 3543 5169
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 73902.9150 -3721696.9775
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1356"
+	Elevation: 252.9274
+	ElevationErr: 10.0000
+	PhotoPL: 3001 4898
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 69138.4424 -3717595.6201
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1467"
+	Elevation: 318.6131
+	ElevationErr: 10.0000
+	PhotoPL: 4627 4356
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 86963.9258 -3716797.0117
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1329"
+	Elevation: 1494.4766
+	ElevationErr: 10.0000
+	PhotoPL: 2730 2730
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 72328.2373 -3695969.6558
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1494"
+	Elevation: 313.0000
+	ElevationErr: 10.0000
+	PhotoPL: 5169 4356
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 92397.3193 -3718266.1279
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1358"
+	Elevation: 225.4515
+	ElevationErr: 10.0000
+	PhotoPL: 3001 5440
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 67713.2715 -3722833.2080
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1444"
+	Elevation: 1294.9299
+	ElevationErr: 10.0000
+	PhotoPL: 4356 2188
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 90101.9629 -3695157.1777
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1448"
+	Elevation: 493.7404
+	ElevationErr: 10.0000
+	PhotoPL: 4356 3814
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 85693.9111 -3710828.9014
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1228"
+	Elevation: 909.7916
+	ElevationErr: 10.0000
+	PhotoPL: 1104 5711
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 47850.4637 -3720275.1221
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1195"
+	Elevation: 974.7712
+	ElevationErr: 10.0000
+	PhotoPL: 562 3001
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 49421.7383 -3692574.2334
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1443"
+	Elevation: 1460.4907
+	ElevationErr: 10.0000
+	PhotoPL: 4356 1917
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 90842.3340 -3692548.9624
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1394"
+	Elevation: 289.4305
+	ElevationErr: 10.0000
+	PhotoPL: 3543 4627
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 75336.1548 -3716460.9766
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1307"
+	Elevation: 539.8853
+	ElevationErr: 10.0000
+	PhotoPL: 2459 1646
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 72226.8188 -3684686.8066
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1534"
+	Elevation: 427.3945
+	ElevationErr: 10.0000
+	PhotoPL: 5711 5978
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 93588.9063 -3735419.7168
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1295"
+	Elevation: 430.7979
+	ElevationErr: 10.0000
+	PhotoPL: 2188 4085
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 63057.0239 -3707512.3096
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1451"
+	Elevation: 259.7066
+	ElevationErr: 10.0000
+	PhotoPL: 4356 4627
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 83522.4463 -3718675.4883
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1325"
+	Elevation: 505.4138
+	ElevationErr: 10.0000
+	PhotoPL: 2730 1375
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 75683.7817 -3682810.1367
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1497"
+	Elevation: 349.3193
+	ElevationErr: 10.0000
+	PhotoPL: 5169 5169
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 90276.1816 -3726127.1777
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1306"
+	Elevation: 531.6047
+	ElevationErr: 10.0000
+	PhotoPL: 2459 1375
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 72940.5347 -3682067.2693
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1433"
+	Elevation: 293.3243
+	ElevationErr: 10.0000
+	PhotoPL: 4085 4627
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 80801.1841 -3717940.2686
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1262"
+	Elevation: 462.8249
+	ElevationErr: 10.0000
+	PhotoPL: 1646 5440
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 53993.4814 -3719120.8887
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1393"
+	Elevation: 338.3148
+	ElevationErr: 10.0000
+	PhotoPL: 3543 4356
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 76056.1670 -3713842.5000
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1398"
+	Elevation: 253.5506
+	ElevationErr: 10.0000
+	PhotoPL: 3543 5711
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 72490.5688 -3726937.7441
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1453"
+	Elevation: 225.1792
+	ElevationErr: 10.0000
+	PhotoPL: 4356 5169
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 82098.0688 -3723912.5586
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1281"
+	Elevation: 382.0545
+	ElevationErr: 10.0000
+	PhotoPL: 1917 5440
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 56737.6941 -3719862.1973
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1313"
+	Elevation: 335.4366
+	ElevationErr: 10.0000
+	PhotoPL: 2459 3814
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 66497.1851 -3705629.8486
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1318"
+	Elevation: 228.0569
+	ElevationErr: 10.0000
+	PhotoPL: 2459 5169
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 62927.4890 -3718725.9814
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1364"
+	Elevation: 546.6742
+	ElevationErr: 10.0000
+	PhotoPL: 3272 1104
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 81886.6309 -3681679.8730
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1239"
+	Elevation: 444.1367
+	ElevationErr: 10.0000
+	PhotoPL: 1375 4356
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 54064.1760 -3707891.4258
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1334"
+	Elevation: 440.0958
+	ElevationErr: 10.0000
+	PhotoPL: 2730 4085
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 68561.4160 -3709001.8994
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1328"
+	Elevation: 1354.5056
+	ElevationErr: 10.0000
+	PhotoPL: 2730 2459
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 73006.8921 -3693340.5005
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1370"
+	Elevation: 559.2358
+	ElevationErr: 10.0000
+	PhotoPL: 3272 3272
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 76199.2114 -3702636.7212
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1413"
+	Elevation: 376.0944
+	ElevationErr: 10.0000
+	PhotoPL: 3814 4356
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 78796.9751 -3714585.0635
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1350"
+	Elevation: 470.0056
+	ElevationErr: 10.0000
+	PhotoPL: 3001 3272
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 73439.8047 -3701888.0688
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1258"
+	Elevation: 288.6830
+	ElevationErr: 10.0000
+	PhotoPL: 1646 4356
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 56796.9287 -3708627.0312
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1376"
+	Elevation: 259.3309
+	ElevationErr: 10.0000
+	PhotoPL: 3272 4898
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 71881.9775 -3718337.7832
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1280"
+	Elevation: 334.9565
+	ElevationErr: 10.0000
+	PhotoPL: 1917 5169
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 57439.9475 -3717240.2832
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1505"
+	Elevation: 779.6185
+	ElevationErr: 10.0000
+	PhotoPL: 5440 1917
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 101577.4561 -3695448.8062
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1300"
+	Elevation: 342.3843
+	ElevationErr: 10.0000
+	PhotoPL: 2188 5440
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 59487.3193 -3720606.0742
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1515"
+	Elevation: 383.4167
+	ElevationErr: 10.0000
+	PhotoPL: 5440 4898
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 93698.1299 -3724242.2803
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1425"
+	Elevation: 976.4359
+	ElevationErr: 10.0000
+	PhotoPL: 4085 2459
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 86609.1187 -3697021.5454
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1487"
+	Elevation: 426.3421
+	ElevationErr: 10.0000
+	PhotoPL: 4898 5440
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 86862.8613 -3728017.0605
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1414"
+	Elevation: 327.9754
+	ElevationErr: 10.0000
+	PhotoPL: 3814 4627
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 78077.7319 -3717202.7100
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1397"
+	Elevation: 202.0088
+	ElevationErr: 10.0000
+	PhotoPL: 3543 5440
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 73189.8193 -3724313.4375
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1332"
+	Elevation: 403.8159
+	ElevationErr: 10.0000
+	PhotoPL: 2730 3543
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 69970.9985 -3703759.6240
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1447"
+	Elevation: 695.8353
+	ElevationErr: 10.0000
+	PhotoPL: 4356 3543
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 86437.5415 -3708219.4531
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1434"
+	Elevation: 255.0891
+	ElevationErr: 10.0000
+	PhotoPL: 4085 4898
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 80084.2090 -3720557.5635
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1373"
+	Elevation: 446.3664
+	ElevationErr: 10.0000
+	PhotoPL: 3272 4085
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 74046.4209 -3710486.7773
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1335"
+	Elevation: 342.8215
+	ElevationErr: 10.0000
+	PhotoPL: 2730 4356
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 67829.4580 -3711616.9336
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1390"
+	Elevation: 785.7969
+	ElevationErr: 10.0000
+	PhotoPL: 3543 3543
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 78268.6938 -3706009.5166
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1392"
+	Elevation: 420.4720
+	ElevationErr: 10.0000
+	PhotoPL: 3543 4085
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 76781.0181 -3711227.8516
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1207"
+	Elevation: 1148.9465
+	ElevationErr: 10.0000
+	PhotoPL: 833 2730
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 52947.3035 -3690717.2876
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1225"
+	Elevation: 962.8485
+	ElevationErr: 10.0000
+	PhotoPL: 1104 4898
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 49991.2451 -3712417.4707
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1309"
+	Elevation: 1243.9415
+	ElevationErr: 10.0000
+	PhotoPL: 2459 2188
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 70950.0293 -3689970.7788
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1345"
+	Elevation: 578.8351
+	ElevationErr: 10.0000
+	PhotoPL: 3001 1375
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 78440.7764 -3683556.0181
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1348"
+	Elevation: 704.1443
+	ElevationErr: 10.0000
+	PhotoPL: 3001 2188
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 76332.6025 -3691424.2529
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1464"
+	Elevation: 566.1362
+	ElevationErr: 10.0000
+	PhotoPL: 4627 3272
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 89846.7188 -3706329.1260
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1235"
+	Elevation: 403.0940
+	ElevationErr: 10.0000
+	PhotoPL: 1375 1917
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 60453.6108 -3684307.6538
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1417"
+	Elevation: 235.7479
+	ElevationErr: 10.0000
+	PhotoPL: 3814 5440
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 75930.9644 -3725056.4844
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1509"
+	Elevation: 608.8896
+	ElevationErr: 10.0000
+	PhotoPL: 5440 3272
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 97994.2920 -3708537.9004
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1336"
+	Elevation: 272.9733
+	ElevationErr: 10.0000
+	PhotoPL: 2730 4627
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 67106.8994 -3714232.2656
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1317"
+	Elevation: 214.5582
+	ElevationErr: 10.0000
+	PhotoPL: 2459 4898
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 63635.4211 -3716104.1211
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1387"
+	Elevation: 1085.9155
+	ElevationErr: 10.0000
+	PhotoPL: 3543 1917
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 82593.3716 -3690310.9448
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1219"
+	Elevation: 440.7603
+	ElevationErr: 10.0000
+	PhotoPL: 1104 1646
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 58403.8000 -3680939.1858
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1395"
+	Elevation: 249.3952
+	ElevationErr: 10.0000
+	PhotoPL: 3543 4898
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 74618.9160 -3719077.7002
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1224"
+	Elevation: 849.1981
+	ElevationErr: 10.0000
+	PhotoPL: 1104 4356
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 51386.8390 -3707167.4805
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1513"
+	Elevation: 291.0000
+	ElevationErr: 10.0000
+	PhotoPL: 5440 4356
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 95103.5205 -3718998.5547
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1333"
+	Elevation: 462.7986
+	ElevationErr: 10.0000
+	PhotoPL: 2730 3814
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 69273.1982 -3706383.1641
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1375"
+	Elevation: 286.0584
+	ElevationErr: 10.0000
+	PhotoPL: 3272 4627
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 72597.5488 -3715718.3887
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1220"
+	Elevation: 411.3498
+	ElevationErr: 10.0000
+	PhotoPL: 1104 2188
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 56974.1919 -3686177.1533
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1512"
+	Elevation: 416.9561
+	ElevationErr: 10.0000
+	PhotoPL: 5440 4085
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 95833.2178 -3716384.2383
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1416"
+	Elevation: 212.3369
+	ElevationErr: 10.0000
+	PhotoPL: 3814 5169
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 76637.1338 -3722435.4443
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1446"
+	Elevation: 742.7739
+	ElevationErr: 10.0000
+	PhotoPL: 4356 3272
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 87156.2793 -3705603.1641
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1483"
+	Elevation: 317.5198
+	ElevationErr: 10.0000
+	PhotoPL: 4898 4356
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 89682.1924 -3717531.3330
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1461"
+	Elevation: 708.9813
+	ElevationErr: 10.0000
+	PhotoPL: 4627 2459
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 92003.1738 -3698478.9771
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1384"
+	Elevation: 586.0277
+	ElevationErr: 10.0000
+	PhotoPL: 3543 1104
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 84631.6699 -3682422.8027
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1530"
+	Elevation: 378.1849
+	ElevationErr: 10.0000
+	PhotoPL: 5711 4898
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 96406.5576 -3724974.4873
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1506"
+	Elevation: 798.3036
+	ElevationErr: 10.0000
+	PhotoPL: 5440 2188
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 100868.4131 -3698068.7744
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1357"
+	Elevation: 241.0805
+	ElevationErr: 10.0000
+	PhotoPL: 3001 5169
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 68426.4429 -3720212.9443
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1315"
+	Elevation: 266.9232
+	ElevationErr: 10.0000
+	PhotoPL: 2459 4356
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 65064.5459 -3710867.1191
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1511"
+	Elevation: 345.2779
+	ElevationErr: 10.0000
+	PhotoPL: 5440 3814
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 96531.1816 -3713761.3525
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1202"
+	Elevation: 416.6727
+	ElevationErr: 10.0000
+	PhotoPL: 833 1104
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 57049.8035 -3674948.1006
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1355"
+	Elevation: 301.9792
+	ElevationErr: 10.0000
+	PhotoPL: 3001 4627
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 69858.0908 -3714977.0508
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1347"
+	Elevation: 1382.8649
+	ElevationErr: 10.0000
+	PhotoPL: 3001 1917
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 77178.2544 -3688845.7520
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1468"
+	Elevation: 302.2320
+	ElevationErr: 10.0000
+	PhotoPL: 4627 4627
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 86250.9814 -3719413.4473
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1338"
+	Elevation: 203.6625
+	ElevationErr: 10.0000
+	PhotoPL: 2730 5169
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 65673.1030 -3719467.6123
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1435"
+	Elevation: 217.7059
+	ElevationErr: 10.0000
+	PhotoPL: 4085 5169
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 79368.6011 -3723174.2920
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1470"
+	Elevation: 258.0000
+	ElevationErr: 10.0000
+	PhotoPL: 4627 5169
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 84824.4116 -3724651.1719
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1288"
+	Elevation: 412.7406
+	ElevationErr: 10.0000
+	PhotoPL: 2188 1646
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 69449.3262 -3683931.9238
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1486"
+	Elevation: 282.4993
+	ElevationErr: 10.0000
+	PhotoPL: 4898 5169
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 87548.1299 -3725388.7598
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1496"
+	Elevation: 295.0051
+	ElevationErr: 10.0000
+	PhotoPL: 5169 4898
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 90973.9307 -3723503.7305
+	GeorefXYErr: 1.0000 1.0000
+}
+GCP:
+{
+	PhotoId: "ATCORCorrected_METADATA_00812098"
+	Id: "AG1528"
+	Elevation: 303.5882
+	ElevationErr: 10.0000
+	PhotoPL: 5711 4356
+	PhotoPLErr: 0.100 0.100
+	GeorefXY: 2 97811.8945 -3719731.4844
 	GeorefXYErr: 1.0000 1.0000
 }
 PhotoCutline:
@@ -575,7 +2966,7 @@ ElevDatum: Mean_Sea_Level
 AverElevation: -100000000000000000000.000000
 OrthoType: PCIDSK
 OrthoChannel: DEFAULT
-NextGCP: 23
+NextGCP: 1537
 NextTP: 1
 NextEP: 1
 Resample: Cubic
