@@ -16,9 +16,9 @@ reflScale = 5000.
 if True:
     numBands = 4
 
-    modisFileName = "D:/Data/Development/Projects/MSc GeoInformatics/Data/NGI/Cross Calibration/Mosaics/Modis_CropStudyArea_Float32.tif"
-    ngiRawFileName = "D:/Data/Development/Projects/MSc GeoInformatics/Data/NGI/Cross Calibration/Mosaics/StudyAreaUncalibratedMosaic500mCs_CropStudyArea_Float32.tif"
-    ngiCalibFileName = "D:/Data/Development/Projects/MSc GeoInformatics/Data/NGI/Cross Calibration/Mosaics/StudyAreaMosaic500mCs_CropStudyArea_Float32.tif"
+    modisFileName = "D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/Cross Calibration/Mosaics/Modis_CropStudyArea_Float32.tif"
+    ngiRawFileName = "D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/Cross Calibration/Mosaics/StudyAreaUncalibratedMosaic500mCs_CropStudyArea_Float32.tif"
+    ngiCalibFileName = "D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/Cross Calibration/Mosaics/StudyAreaMosaic500mCs_CropStudyArea_Float32.tif"
     #ngiCalibFileName = "F:/MSc GeoInformatics/Data/NGI/Cross Calibration/Mosaics/MasterXCalibMosaic500mCsSeamLineFix_CropStudyArea_Float32.tif"
 
     modisDs = gdal.Open(modisFileName, gdal.GA_ReadOnly)
@@ -183,34 +183,45 @@ print str.format("Std Dev error (%): {0}", ePixels.std())
 ##
 #make a scatter plot of SPOT vs NGI
 
-spotFileName = "D:\Data\Development\Projects\MSc GeoInformatics\Data\NGI\My Rectified\spotInt16_2.tif"
-ngiRawFileName = "D:\Data\Development\Projects\MSc GeoInformatics\Data\NGI\Cross Calibration\Mosaics\StudyAreaUncalibratedMosaicSpotMask.tif"
-ngiCalibFileName = "D:\Data\Development\Projects\MSc GeoInformatics\Data\NGI\My Rectified\StudyAreaXCalibMosaicSpotMask.tif"
+spotFileName = "D:\Data\Development\Projects\PhD GeoInformatics\Data\NGI\My Rectified\spotInt16_2.tif"  #old version
+spotFileNameNew = "D:\Data\Development\Projects\PhD GeoInformatics\Data\SPOT\S131022114824832\Orthorectification\oATCORCorrected_METADATA_00812098_AutoGCP_NgiFormat.tif"  #improved orthorect
+ngiRawFileName = "D:\Data\Development\Projects\PhD GeoInformatics\Data\NGI\Cross Calibration\Mosaics\StudyAreaUncalibratedMosaicSpotMask.tif"
+ngiCalibFileName = "D:\Data\Development\Projects\PhD GeoInformatics\Data\NGI\My Rectified\StudyAreaXCalibMosaicSpotMask.tif"
 
 spotDs = gdal.Open(spotFileName, gdal.GA_ReadOnly)
+spotNewDs = gdal.Open(spotFileNameNew, gdal.GA_ReadOnly)
 ngiRawDs = gdal.Open(ngiRawFileName, gdal.GA_ReadOnly)
 ngiCalibDs = gdal.Open(ngiCalibFileName, gdal.GA_ReadOnly)
 
 spotIm = np.zeros((spotDs.RasterYSize, spotDs.RasterXSize, 3), dtype = np.float32)
+spotNewIm = np.zeros((spotNewDs.RasterYSize, spotNewDs.RasterXSize, 3), dtype = np.float32)
 ngiRawIm = np.zeros((ngiRawDs.RasterYSize, ngiRawDs.RasterXSize, 3), dtype = np.float32)
 ngiCalibIm = np.zeros((ngiCalibDs.RasterYSize, ngiCalibDs.RasterXSize, 3), dtype = np.float32)
+diffIm = np.zeros((ngiCalibDs.RasterYSize, ngiCalibDs.RasterXSize, 3), dtype = np.float32)
+diffNewIm = np.zeros((ngiCalibDs.RasterYSize, ngiCalibDs.RasterXSize, 3), dtype = np.float32)
 
 ngiCalibMask = np.bool8(ngiCalibDs.GetRasterBand(1).GetMaskBand().ReadAsArray())
 
 mask = np.bool8(spotDs.GetRasterBand(1).GetMaskBand().ReadAsArray())
 mask2 = np.bool8(ngiCalibDs.GetRasterBand(1).GetMaskBand().ReadAsArray())
-mask = mask & mask2
+mask3 = np.bool8(spotNewDs.GetRasterBand(1).GetMaskBand().ReadAsArray())
+mask = mask & mask2 & mask3
 
 for b in range(1,4):
     sb = spotDs.GetRasterBand(b).ReadAsArray()
     sb[~mask] = 0
     spotIm[:,:,b-1] = np.float32(sb)/reflScale
+    sbNew = spotNewDs.GetRasterBand(b).ReadAsArray()
+    sbNew[~mask] = 0
+    spotNewIm[:,:,b-1] = np.float32(sbNew)/reflScale
     nrb = ngiRawDs.GetRasterBand(b).ReadAsArray()
     nrb[~mask] = 0
     ngiRawIm[:,:,b-1] = np.float32(nrb)
     ncd = ngiCalibDs.GetRasterBand(b).ReadAsArray()
     ncd[~mask] = 0
     ngiCalibIm[:,:,b-1] = np.float32(ncd)/reflScale
+    diffIm[:, :, b - 1] = (np.float32(sb)-np.float32(ncd)) / reflScale
+    diffNewIm[:, :, b - 1] = (np.float32(sbNew) - np.float32(ncd)) / reflScale
 
 # get ngi ranges to justify c=0
 # pylab.figure()
@@ -238,6 +249,7 @@ for b in range(1,4):
 #     n, bins, patches = pylab.hist(nrb[mask], 200, range=(0,4096))
 
 spotDs = None
+spotNewDs = None
 ngiRawDs = None
 ngiCalibDs = None
 
@@ -251,6 +263,16 @@ if False:
     pylab.imshow(ngiCalibIm/ngiCalibIm.max())
     pylab.subplot(2, 2, 4)
     pylab.imshow(mask)
+
+    pylab.figure()
+    for i in range(0,3):
+        if i == 0:
+            ax = pylab.subplot(2, 3, 1)
+        else:
+            pylab.subplot(2, 3, 1 + i, sharex=ax, sharey=ax)
+        pylab.imshow(diffIm[:,:,i], vmin=-0.15, vmax=.15)
+        pylab.subplot(2, 3, 4 + i, sharex=ax, sharey=ax)
+        pylab.imshow(diffNewIm[:,:,i], vmin=-0.15, vmax=.15)
 
 # spotDs = gdal.Open(spotFileName, gdal.GA_ReadOnly)
 # ngiDs = gdal.Open(ngiCalibFileName, gdal.GA_ReadOnly)
@@ -284,21 +306,25 @@ pn = 1
 # fontSize = 24.
 # mpl.rcParams.update({'font.size': fontSize})
 
-f1 = pylab.figure('Uncalibrated2')
+f1 = pylab.figure('Uncalibrated')
 f1.set_size_inches(16., 5.25, forward=True)
-f2 = pylab.figure('Calibrated2')
+f2 = pylab.figure('Calibrated')
 f2.set_size_inches(16., 5.25, forward=True)
 
-
+## NB
+spotIm = spotNewIm
 ePixels = []
+slopes = []
+intercepts = []
 for b in bands:
     sPixels = spotIm[:, :, b][mask]
     dRawPixels = ngiRawIm[:, :, b][mask]
-    dCalibPixels = ngiCalibIm[:, :, b][mask]
-    ePixels.append(sPixels - dCalibPixels)
+    dCalibPixels = 0.96*ngiCalibIm[:, :, b][mask]
+    e = sPixels -dCalibPixels
+    ePixels.append(e)
 
     (slope, intercept, r, p, stde) = scipy.stats.linregress(sPixels.flatten(), dRawPixels.flatten())
-    pylab.figure('Uncalibrated2')
+    pylab.figure('Uncalibrated')
     pylab.subplot(1, 3, pn)
     pylab.plot(sPixels[::step], dRawPixels[::step], color='k', marker='.', linestyle='', markersize=.5)
     xl = pylab.gca().get_xlim()
@@ -317,7 +343,9 @@ for b in bands:
     #pylab.hold('on')
 
     (slope, intercept, r, p, stde) = scipy.stats.linregress(sPixels.flatten(), dCalibPixels.flatten())
-    pylab.figure('Calibrated2')
+    slopes.append(slope)
+    intercepts.append(intercept)
+    pylab.figure('Calibrated')
     pylab.subplot(1, 3, pn)
     pylab.plot(sPixels[::step], dCalibPixels[::step], color='k', marker='.', linestyle='', markersize=.5)
     pylab.hold(True)

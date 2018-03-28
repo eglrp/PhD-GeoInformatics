@@ -354,6 +354,7 @@ for i in range(0, np.shape(spotMeas)[1]):
     pylab.text(x.mean()*1.0, y.mean()*0.6, '$R^2$ = ' + str.format('{0:.2f}', r**2) + str.format(' y = {0:.2f}x + {1:.2f}', slope, intercept), fontsize=fontSize+1)
     pylab.xlabel('SPOT5')
     pylab.ylabel('DMC')
+    pylab.grid()
     # for j in range(asterFnF.__len__()):
     #     pylab.text(x[j]+0.2, y[j], asterFnF[j])
 

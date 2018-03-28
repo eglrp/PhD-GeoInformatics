@@ -28,7 +28,7 @@ Photo:
 	AddDate: 03/27/2018
 	UpdateDate: 03/27/2018
 	PhotoFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\SPOT\S131022114824832\ATCOR\ATCORCorrected_METADATA_00812098.pix"
-	OrthoFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\SPOT\S131022114824832\Orthorectification\oATCORCorrected_METADATA_00812098.pix"
+	OrthoFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\SPOT\S131022114824832\Orthorectification\oATCORCorrected_METADATA_00812098_AutoGCP.tif"
 	DEMFile: "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SRTM\s34_e021_e022_1arc_v3_Mosaic.tif" 1 0
 	DEMAux: -32767
 	ElevScale: 1
@@ -42,7 +42,7 @@ Photo:
 	Size: 6000 6000
 	ClipRect: -1 -1 -1 -1
 	BundleStatus: OK
-	OrthoStatus: Stale
+	OrthoStatus: OK
 	NormalizeMethod: 0
 	OrthoXY: 0   5.35710000000000E+05   6.33952000000000E+06
 	OrthoXY: 1   6.12150000000000E+05   6.26510000000000E+06
@@ -57,8 +57,8 @@ Photo:
 	CutlineIsVisible: 1
 	LocalMaskIsVisible: 0
 	MatchAreaIsVisible: 0
-	OrthoFormatType: PIX
-	OrthoFormatOptions: ""
+	OrthoFormatType: TIF
+	OrthoFormatOptions: "Pixel LZW BIGTIFF=AUTO"
 	OrthoNoDataValue: 0
 	OrthoEdgeClip: 0
 	ElevationType: DEMFile

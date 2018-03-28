@@ -353,6 +353,15 @@ ATCOR (PCI) SPOT
   - Elevation: const ~700m
   - Constant visibility 40km
   
+- Options used March 2018:
+  - Viewing geom + band cal from metadata.dim
+  - No cloud mask, no water mask, no haze removal
+  - Aerosol type: rural, condition: dry
+  - Sensor viewing angle: metadata.dim - "VIEWING_ANGLE" - NB take abs value!
+  - Sensor azimuth: 90 + 14.710456 (see Geometry_and_Calibration_Files_for_SPOT_in_ATCOR.pdf Fig 2)
+  - Elevation: const 563m
+  - Constant visibility 40km
+  
   
 HDF
 ---
