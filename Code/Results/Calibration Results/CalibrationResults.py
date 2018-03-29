@@ -161,10 +161,10 @@ for b in bands:
     pylab.tight_layout()
     #title(str.format('Calib r = {}', r))
 
-f1.savefig('C:/Data/Development/Projects/MSc GeoInformatics/Docs/My Docs/Thesis/Retrieval of Surface Reflectance'
-           ' from Aerial Imagery/Figure 8 - DMC DN and MODIS Surface Reflectance Correlation.eps', dpi=1200)
-f2.savefig('C:/Data/Development/Projects/MSc GeoInformatics/Docs/My Docs/Thesis/Retrieval of Surface Reflectance'
-           ' from Aerial Imagery/FFigure 9 - DMC Homogenised and MODIS Surface Reflectance Correlation.eps', dpi=1200)
+f1.savefig('C:/Data/Development/Projects/PhD GeoInformatics/Docs/My Docs/Thesis/Retrieval of Surface Reflectance'
+           ' from Aerial Imagery/Figure 8 - DMC DN and MODIS Surface Reflectance Correlation V2.eps', dpi=1200)
+f2.savefig('C:/Data/Development/Projects/PhD GeoInformatics/Docs/My Docs/Thesis/Retrieval of Surface Reflectance'
+           ' from Aerial Imagery/FFigure 9 - DMC Homogenised and MODIS Surface Reflectance Correlation V2.eps', dpi=1200)
 
 print str.format("N (num points plotted): {0}, step: {1}", mPixels[::step].__len__(), step)
 
@@ -187,6 +187,8 @@ spotFileName = "D:\Data\Development\Projects\PhD GeoInformatics\Data\NGI\My Rect
 spotFileNameNew = "D:\Data\Development\Projects\PhD GeoInformatics\Data\SPOT\S131022114824832\Orthorectification\oATCORCorrected_METADATA_00812098_AutoGCP_NgiFormat.tif"  #improved orthorect
 ngiRawFileName = "D:\Data\Development\Projects\PhD GeoInformatics\Data\NGI\Cross Calibration\Mosaics\StudyAreaUncalibratedMosaicSpotMask.tif"
 ngiCalibFileName = "D:\Data\Development\Projects\PhD GeoInformatics\Data\NGI\My Rectified\StudyAreaXCalibMosaicSpotMask.tif"
+# ngiCalibFileName = "W:\PhD GeoInformatics\Data\NGI\Cross Calibration\XCalibMosaic10m.tif"
+
 
 spotDs = gdal.Open(spotFileName, gdal.GA_ReadOnly)
 spotNewDs = gdal.Open(spotFileNameNew, gdal.GA_ReadOnly)
@@ -200,12 +202,23 @@ ngiCalibIm = np.zeros((ngiCalibDs.RasterYSize, ngiCalibDs.RasterXSize, 3), dtype
 diffIm = np.zeros((ngiCalibDs.RasterYSize, ngiCalibDs.RasterXSize, 3), dtype = np.float32)
 diffNewIm = np.zeros((ngiCalibDs.RasterYSize, ngiCalibDs.RasterXSize, 3), dtype = np.float32)
 
+# to fix some weirdness in NGI calib mosaic nodata
 ngiCalibMask = np.bool8(ngiCalibDs.GetRasterBand(1).GetMaskBand().ReadAsArray())
+for b in range(1,4):
+    ncd = ngiCalibDs.GetRasterBand(b).ReadAsArray()
+    ngiCalibMask = (ngiCalibMask & (ncd > 0))
 
 mask = np.bool8(spotDs.GetRasterBand(1).GetMaskBand().ReadAsArray())
-mask2 = np.bool8(ngiCalibDs.GetRasterBand(1).GetMaskBand().ReadAsArray())
+mask2 = np.bool8(ngiRawDs.GetRasterBand(1).GetMaskBand().ReadAsArray())
 mask3 = np.bool8(spotNewDs.GetRasterBand(1).GetMaskBand().ReadAsArray())
-mask = mask & mask2 & mask3
+mask = mask & mask2 & mask3 & ngiCalibMask
+
+if False:
+    pylab.figure()
+    ax = pylab.subplot(1,2,1)
+    pylab.imshow(mask)
+    pylab.subplot(1,2,2, sharex=ax, sharey=ax)
+    pylab.imshow(ngiCalibMask)
 
 for b in range(1,4):
     sb = spotDs.GetRasterBand(b).ReadAsArray()
@@ -319,7 +332,8 @@ intercepts = []
 for b in bands:
     sPixels = spotIm[:, :, b][mask]
     dRawPixels = ngiRawIm[:, :, b][mask]
-    dCalibPixels = 0.96*ngiCalibIm[:, :, b][mask]
+    # dCalibPixels = 0.96*ngiCalibIm[:, :, b][mask]
+    dCalibPixels = ngiCalibIm[:, :, b][mask]
     e = sPixels -dCalibPixels
     ePixels.append(e)
 
@@ -372,10 +386,10 @@ for b in bands:
     #pylab.hold('on')
     pn += 1
 
-f1.savefig('C:/Data/Development/Projects/MSc GeoInformatics/Docs/My Docs/Thesis/Retrieval of Surface Reflectance '
-           'from Aerial Imagery/Figure 12 - DMC DN and SPOT5 Surface Reflectance Correlation.eps', dpi=1200)
-f2.savefig('C:/Data/Development/Projects/MSc GeoInformatics/Docs/My Docs/Thesis/Retrieval of Surface Reflectance '
-           'from Aerial Imagery/Figure 13 - DMC Homogenised and SPOT5 Surface Reflectance Correlation.eps', dpi=1200)
+f1.savefig('C:/Data/Development/Projects/PhD GeoInformatics/Docs/My Docs/Thesis/Retrieval of Surface Reflectance '
+           'from Aerial Imagery/Figure 12 - DMC DN and SPOT5 Surface Reflectance Correlation V2.eps', dpi=1200)
+f2.savefig('C:/Data/Development/Projects/PhD GeoInformatics/Docs/My Docs/Thesis/Retrieval of Surface Reflectance '
+           'from Aerial Imagery/Figure 13 - DMC Homogenised and SPOT5 Surface Reflectance Correlation V2.eps', dpi=1200)
 
 print str.format("N (num points plotted): {0}, step: {1}", sPixels[::step].__len__(), step)
 
@@ -383,13 +397,13 @@ print str.format("N (num points plotted): {0}, step: {1}", sPixels[::step].__len
 # errors
 # std dev(abs error), std dev(rms) etc dont really make sense and one measure of error variation is good enough i.e. std dev
 # so i.e. use dont use the rhs () bracket vals but rather the third and last rows for error variation
-ePixels = np.array(ePixels)*100
-print str.format("Per band Abs error (%): {0} ({1})", np.abs(ePixels).mean(axis=1), np.abs(ePixels).std(axis=1))
-print str.format("Per band RMS error (%): {0} ({1})", np.sqrt((ePixels**2).mean(axis=1)), np.sqrt((ePixels**2).std(axis=1)))  # does root-std-sqr make any sense?
-print str.format("Per band Std Dev error (%): {0}", ePixels.std(axis=1))
-print str.format("Mean Abs error (%): {0} ({1})", np.abs(ePixels).mean(), np.abs(ePixels).std())
-print str.format("Mean RMS error (%): {0} ({1})", np.sqrt((ePixels**2).mean()), np.sqrt((ePixels**2).std()))  # does root-std-sqr make any sense?
-print str.format("Std Dev error (%): {0}", ePixels.std())
+ePixels = np.array(np.float64(ePixels))*100
+print str.format("Per band Abs error (%): {0} ({1})", np.abs(ePixels).mean(axis=1).round(decimals=2), np.abs(ePixels).std(axis=1).round(decimals=2))
+print str.format("Per band RMS error (%): {0} ({1})", np.sqrt((ePixels**2).mean(axis=1)).round(decimals=2), np.sqrt((ePixels**2).std(axis=1)).round(decimals=2))  # does root-std-sqr make any sense?
+print str.format("Per band Std Dev error (%): {0}", ePixels.std(axis=1).round(decimals=2))
+print str.format("Mean Abs error (%): {0:.2f} ({1:.2f})", np.abs(ePixels).mean(), np.abs(ePixels).std())
+print str.format("Mean RMS error (%): {0:.2f} ({1:.2f})", np.sqrt((ePixels**2).mean()), np.sqrt((ePixels**2).std()))  # does root-std-sqr make any sense?
+print str.format("Std Dev error (%): {0:.2f}", ePixels.std())
 
 
 
