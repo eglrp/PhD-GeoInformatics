@@ -187,6 +187,8 @@ spotFileName = "D:\Data\Development\Projects\PhD GeoInformatics\Data\NGI\My Rect
 spotFileNameNew = "D:\Data\Development\Projects\PhD GeoInformatics\Data\SPOT\S131022114824832\Orthorectification\oATCORCorrected_METADATA_00812098_AutoGCP_NgiFormat.tif"  #improved orthorect
 ngiRawFileName = "D:\Data\Development\Projects\PhD GeoInformatics\Data\NGI\Cross Calibration\Mosaics\StudyAreaUncalibratedMosaicSpotMask.tif"
 ngiCalibFileName = "D:\Data\Development\Projects\PhD GeoInformatics\Data\NGI\My Rectified\StudyAreaXCalibMosaicSpotMask.tif"
+ngiCalibFileName = "W:\PhD GeoInformatics\Data\NGI\Cross Calibration\XCalibMosaic10m_SpotExtent.tif"   #seamline fix mosaic
+
 # ngiCalibFileName = "W:\PhD GeoInformatics\Data\NGI\Cross Calibration\XCalibMosaic10m.tif"
 
 
@@ -572,6 +574,176 @@ print str.format("Mean Abs error (%): {0} ({1})", np.abs(ePixels).mean(), np.abs
 print str.format("Mean RMS error (%): {0} ({1})", np.sqrt((ePixels**2).mean()), np.sqrt((ePixels**2).std()))  # does root-std-sqr make any sense?
 print str.format("Std Dev error (%): {0}", ePixels.std())
 
+
+
+
+
+##
+#make a scatter plot of Landsat vs NGI
+
+landsatFileName = "D:\Data\Development\Projects\PhD GeoInformatics\Data\Landsat\LE71730832010034ASN00\LE07_L1TP_173083_20100203_20161217_01_T1_sr_MERGE_NgiFormat_SpotMask.tif"  #old version
+ngiCalibFileName = "W:\PhD GeoInformatics\Data\NGI\Cross Calibration\XCalibMosaic30m_SpotMask.tif"
+
+landsatDs = gdal.Open(landsatFileName, gdal.GA_ReadOnly)
+ngiCalibDs = gdal.Open(ngiCalibFileName, gdal.GA_ReadOnly)
+
+landsatIm = np.zeros((landsatDs.RasterYSize, landsatDs.RasterXSize, 4), dtype = np.float32)
+ngiCalibIm = np.zeros((ngiCalibDs.RasterYSize, ngiCalibDs.RasterXSize, 4), dtype = np.float32)
+diffIm = np.zeros((ngiCalibDs.RasterYSize, ngiCalibDs.RasterXSize, 4), dtype = np.float32)
+
+# to fix some weirdness in NGI calib mosaic nodata
+ngiCalibMask = np.bool8(ngiCalibDs.GetRasterBand(1).GetMaskBand().ReadAsArray())
+for b in range(1, 5):
+    ncd = ngiCalibDs.GetRasterBand(b).ReadAsArray()
+    ngiCalibMask = (ngiCalibMask & (ncd > 0))
+
+mask = np.bool8(landsatDs.GetRasterBand(1).GetMaskBand().ReadAsArray())
+for b in range(1,5):
+    sb = landsatDs.GetRasterBand(b).ReadAsArray()
+    sb[~mask] = 0
+    landsatIm[:,:,b-1] = np.float32(sb)/reflScale
+
+# make a rough attempt to mask out clouds and their shadows
+cloudAndShadowMask = np.zeros((landsatDs.RasterYSize, landsatDs.RasterXSize, 4), dtype = np.bool)
+cloudAndShadowMask = np.logical_not(np.all(np.logical_or(landsatIm > 0.35, landsatIm < 0.12), axis=2))
+
+pylab.figure()
+ax = pylab.subplot(1,2,1)
+pylab.imshow(landsatIm[:,:,0], vmin=0.1, vmax=.5)
+pylab.subplot(1,2,2, sharex=ax, sharey=ax)
+pylab.imshow(cloudAndShadowMask)
+
+mask = mask & ngiCalibMask & cloudAndShadowMask
+
+if False:
+    pylab.figure()
+    ax = pylab.subplot(1,2,1)
+    pylab.imshow(mask)
+    pylab.subplot(1,2,2, sharex=ax, sharey=ax)
+    pylab.imshow(ngiCalibMask)
+
+for b in range(1,5):
+    sb = landsatDs.GetRasterBand(b).ReadAsArray()
+    sb[~mask] = 0
+    landsatIm[:,:,b-1] = np.float32(sb)/reflScale
+    ncd = ngiCalibDs.GetRasterBand(b).ReadAsArray()
+    ncd[~mask] = 0
+    ngiCalibIm[:,:,b-1] = np.float32(ncd)/reflScale
+    diffIm[:, :, b-1] = (np.float32(sb)-np.float32(ncd)) / reflScale
+
+if False:
+    pylab.figure()
+    pylab.subplot(1, 2, 1)
+    pylab.imshow(landsatIm/landsatIm.max())
+    pylab.subplot(1, 2, 2)
+    pylab.imshow(ngiCalibIm/ngiCalibIm.max())
+
+    pylab.figure()
+    for i in range(0,4):
+        if i == 0:
+            ax = pylab.subplot(2, 2, 1)
+        else:
+            pylab.subplot(2, 2, 1 + i, sharex=ax, sharey=ax)
+        pylab.imshow(diffIm[:,:,i], vmin=-0.15, vmax=.15)
+
+# landsatDs = gdal.Open(landsatFileName, gdal.GA_ReadOnly)
+# ngiDs = gdal.Open(ngiCalibFileName, gdal.GA_ReadOnly)
+#
+# landsatIm = np.zeros((landsatDs.RasterYSize, landsatDs.RasterXSize, 3), dtype = np.float32)
+# ngiIm = np.zeros_like(landsatIm)
+#
+# for b in range(1,numBands):
+#     landsatIm[:,:,b-1] = landsatDs.GetRasterBand(b).ReadAsArray()
+#     ngiIm[:,:,b-1] = ngiDs.GetRasterBand(b).ReadAsArray()
+#
+# pylab.figure()
+# pylab.subplot(1, 2, 1)
+# pylab.imshow(landsatIm/landsatIm.max())
+# pylab.subplot(1, 2, 2)
+# pylab.imshow(ngiIm/ngiIm.max())
+#
+#
+# mask = np.bool8(landsatDs.GetRasterBand(1).GetMaskBand().ReadAsArray())
+# mask2 = np.bool8(ngiDs.GetRasterBand(1).GetMaskBand().ReadAsArray())
+# mask = mask&mask2
+pylab.close('all')
+bands = (0, 1, 2, 3)
+colors = ( 'r', 'g', 'b', 'orange')
+legend = ('Red', 'Green', 'Blue', 'NIR')
+step = 100
+fn = pylab.gcf().number
+pn = 1
+#
+#
+# fontSize = 24.
+# mpl.rcParams.update({'font.size': fontSize})
+
+f2 = pylab.figure('Calibrated')
+f2.set_size_inches(11., 10.5, forward=True)
+
+## NB
+ePixels = []
+slopes = []
+intercepts = []
+for b in bands:
+    sPixels = landsatIm[:, :, b][mask]
+    dCalibPixels = ngiCalibIm[:, :, b][mask]
+    e = sPixels -dCalibPixels
+    ePixels.append(e)
+
+    (slope, intercept, r, p, stde) = scipy.stats.linregress(sPixels.flatten(), dCalibPixels.flatten())
+    slopes.append(slope)
+    intercepts.append(intercept)
+    pylab.figure('Calibrated')
+    pylab.subplot(2, 2, pn)
+    pylab.plot(sPixels[::step], dCalibPixels[::step], color='k', marker='.', linestyle='', markersize=.5)
+    # pylab.plot(sPixels, dCalibPixels, color='k', marker='.', linestyle='', markersize=.5)
+    pylab.hold(True)
+    m = 1. #np.min([np.max([np.percentile(sPixels[::step], 99.99), np.percentile(dCalibPixels[::step], 99.99)]), 1.])
+    oneLineH, = pylab.plot([0, m], [0, m], color='k', marker='', linestyle='--', label='1:1')
+    pylab.gca().set_xlim([0, m])
+    pylab.gca().set_ylim([0, m])
+    xl = pylab.gca().get_xlim()
+    yl = pylab.gca().get_ylim()
+    pylab.text((xl[0] + np.diff(xl)*0.05)[0], (yl[0] + np.diff(yl)*0.8)[0], str.format('$R^2$ = {0:.2f}',
+                                                                                       np.round(r**2, 2)))
+    # pylab.text((xl[0] + np.diff(xl)*0.05)[0], (yl[0] + np.diff(yl)*0.9)[0], str.format('y = {0:.2f} x + {1:.3f}',
+    #                                                                                    slope, intercept))
+    pylab.title(legend[b])
+    # pylab.xlabel(r'SPOT5 $\rho_t$')
+    # pylab.ylabel(r'DMC $\rho_t$')
+    pylab.xlabel(r'Landsat surface refl.')
+    pylab.ylabel(r'DMC surface refl.')
+    pylab.grid('on')
+    pylab.legend(handles=[oneLineH], prop={'size':20}, loc=4)
+    pylab.tight_layout()
+    pyplot.locator_params(axis='y', nbins=5)#to specify number of ticks on both or any single axes
+    pyplot.locator_params(axis='x', nbins=5)
+    #pylab.hold('on')
+    pn += 1
+
+f2.savefig('C:/Data/Development/Projects/PhD GeoInformatics/Docs/My Docs/Thesis/Retrieval of Surface Reflectance '
+           'from Aerial Imagery/Figure 13 - DMC Homogenised and Landsat Surface Reflectance Correlation.eps', dpi=1200)
+
+print str.format("N (num points plotted): {0}, step: {1}", sPixels[::step].__len__(), step)
+
+landsatDs = None
+ngiCalibDs = None
+
+# errors
+# std dev(abs error), std dev(rms) etc dont really make sense and one measure of error variation is good enough i.e. std dev
+# so i.e. use dont use the rhs () bracket vals but rather the third and last rows for error variation
+ePixels = np.array(np.float64(ePixels))*100
+print str.format("Per band Abs error (%): {0} ({1})", np.abs(ePixels).mean(axis=1).round(decimals=2), np.abs(ePixels).std(axis=1).round(decimals=2))
+print str.format("Per band RMS error (%): {0} ({1})", np.sqrt((ePixels**2).mean(axis=1)).round(decimals=2), np.sqrt((ePixels**2).std(axis=1)).round(decimals=2))  # does root-std-sqr make any sense?
+print str.format("Per band Std Dev error (%): {0}", ePixels.std(axis=1).round(decimals=2))
+print str.format("Mean Abs error (%): {0:.2f} ({1:.2f})", np.abs(ePixels).mean(), np.abs(ePixels).std())
+print str.format("Mean RMS error (%): {0:.2f} ({1:.2f})", np.sqrt((ePixels**2).mean()), np.sqrt((ePixels**2).std()))  # does root-std-sqr make any sense?
+print str.format("Std Dev error (%): {0:.2f}", ePixels.std())
+
+
+
+#p
 
 ## calculation of actual viewing geometry variations for the case study geometry
 import numpy as np
