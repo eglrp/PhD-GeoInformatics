@@ -334,6 +334,18 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	if (err != CPLErr::CE_None)
 		throw string("refDataSet->RasterIO failure");
 
+	//(int ndims, const int* sizes, int type, void* data, const size_t* steps=0)
+	int refSubSizes[3] = { srcDsDataSet->GetRasterYSize(), srcDsDataSet->GetRasterXSize(), srcDsDataSet->GetRasterCount() };  // order of x & y?
+	cv::Mat tmp(3, refSubSizes, CV_64FC(1), cv::Scalar::all(0));
+	int sz[3] = { 2,2,2 };
+	cv::Mat L(3, sz, CV_8UC(2), cv::Scalar::all(0));
+	cv::Mat tmp2 = L.reshape(2, 0);
+	cv::Mat refSubMat(3, refSubSizes, CV_64FC(1), (void*)refSubData.Buf());    // 3 dims or CV_64C(srcDsDataSet->GetRasterCount())?
+	cv::Mat srcDsMat(3, refSubSizes, CV_64FC(1), (void*)srcDsData.Buf());
+	cout << refSubMat.rows << ", " << refSubMat.cols << endl;
+
+	cv::Mat tmp3(2, 2, CV_64FC1, cv::Scalar::all(0));
+
 #if SEAMLINE_COVERAGE_FIX && SEAMLINE_EXTRAP_FIX
 	//read the ds mask
 	GDALDataset* srcMaskDsDataSet = (GDALDataset*)GDALOpen(srcMaskDsFileName.c_str(), GDALAccess::GA_ReadOnly);
@@ -394,20 +406,75 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 #endif //#if SEAMLINE_FIX
 
 	//gainDsDataSet->GetRasterBand(1)->Mas
+#if TRUE //new opencv mx+c solver with win size >=1
+	cv::Range winRanges[3];
+	//(int rows, int cols, int type, const Scalar& s)
+	cv::Mat onesVec(winSize[0] * winSize[1], 1, CV_64FC1, cv::Scalar(1.));
+	cv::Mat refLsMat(winSize[0] * winSize[1], 2, CV_64FC1, cv::Scalar(0.));
 
 	int n = srcDsDataSet->GetRasterYSize(), m = srcDsDataSet->GetRasterXSize();
+
 	for (int k = 0; k < srcDsDataSet->GetRasterCount(); k++)
 	{
 		err = gainDsDataSet->GetRasterBand(k+1)->SetNoDataValue(0);
+		winRanges[2] = cv::Range(k, k + 1);
+		for (int j = 0; j < m - winSize[1] + 1; j++)
+		{
+			//average gain over the sliding window
+			//int colIdx[2] = {max<int>(j-(winSize[1]-1)/2, 0), min<int>(m-1, j+(winSize[1]-1)/2)};
+			winRanges[1] = cv::Range(j, j + winSize[1]);
+			for (int i = 0; i < n - winSize[0] + 1; i++) 
+			{
+				//int rowIdx[2] = {max<int>(i-(winSize[0]-1)/2, 0), min<int>(n-1, i+(winSize[0]-1)/2)};
+				//double sum = 0;
+				//int count = 0;
+				winRanges[0] = cv::Range(i, i + winSize[0]);
+				cv::Mat srcDsWin = srcDsMat(winRanges);
+				cv::Mat refSubWin = refSubMat(winRanges);
+				cv:hconcat(refSubWin.reshape(0, winSize[0] * winSize[0]), onesVec, refLsMat);  //to do if gain only, leave this concat out
+				
+				//solve(InputArray src1, InputArray src2, OutputArray dst, int flags=DECOMP_LU)
+				cv::Mat lsSoln;
+				cv::solve(refLsMat, srcDsWin.reshape(0, winSize[0] * winSize[0]), lsSoln, cv::DECOMP_LU);
+				gainDsData(i, j, k) = lsSoln.at<double>(0, 0);
+				
+				//for (int jw = colIdx[0]; jw <= colIdx[1]; jw++)
+				//{
+				//	for (int iw = rowIdx[0]; iw <= rowIdx[1]; iw++)
+				//	{
+				//		if (srcDsData(iw, jw, k) != 0 && refSubData(iw, jw, k) != 0) //ignore nodata
+				//		{
+				//			sum += (double)refSubData(iw, jw, k)/(double)srcDsData(iw, jw, k);
+				//			count++;
+				//		}
+				//	}
+				//}
+//#if SEAMLINE_FIX  //to do
+//				if (count > 0 && srcMaskDsData(i, j, 0) >= 0.95*255.0)
+//#else
+//				if (count > 0)
+//#endif
+//					gainDsData(i, j, k) = sum / (double)count;
+//				else
+//					gainDsData(i, j, k) = 0;
+			}
+		}
+	}
+#else  //old 1x1 gain only method
+	int n = srcDsDataSet->GetRasterYSize(), m = srcDsDataSet->GetRasterXSize();
+	for (int k = 0; k < srcDsDataSet->GetRasterCount(); k++)
+	{
+		err = gainDsDataSet->GetRasterBand(k + 1)->SetNoDataValue(0);
 		for (int j = 0; j < m; j++)
 		{
 			//average gain over the sliding window
-			int colIdx[2] = {max<int>(j-(winSize[1]-1)/2, 0), min<int>(m-1, j+(winSize[1]-1)/2)};
-			for (int i = 0; i < n; i++) 			//omit the border pixels so that we are only using ds pixels fully covered by src pixels
+			int colIdx[2] = { max<int>(j - (winSize[1] - 1) / 2, 0), min<int>(m - 1, j + (winSize[1] - 1) / 2) };
+			for (int i = 0; i < n; i++)
 			{
-				int rowIdx[2] = {max<int>(i-(winSize[0]-1)/2, 0), min<int>(n-1, i+(winSize[0]-1)/2)};
+				int rowIdx[2] = { max<int>(i - (winSize[0] - 1) / 2, 0), min<int>(n - 1, i + (winSize[0] - 1) / 2) };
 				double sum = 0;
 				int count = 0;
+
 				for (int jw = colIdx[0]; jw <= colIdx[1]; jw++)
 				{
 					for (int iw = rowIdx[0]; iw <= rowIdx[1]; iw++)
@@ -430,6 +497,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 			}
 		}
 	}
+#endif 
 
 	//write out gains to file
 	err = gainDsDataSet->RasterIO(GDALRWFlag::GF_Write, 0, 0, gainDsDataSet->GetRasterXSize(), gainDsDataSet->GetRasterYSize(),
