@@ -441,7 +441,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 				//int valid = (cv::compare( refSubWin == 0);
 				if (modelForm == ModelForms::GAIN_ONLY)
 				{
-					double gain = cv::mean(refSubWin / srcDsWin, coverageMask).val[0];
+					double gain = cv::mean(refSubWin / srcDsWin, coverageMask).val[0];  //TODO check this is zero when coverMask is all false
 					paramDsData(i + (winSize[0] - 1) / 2, j + (winSize[1] - 1) / 2, k) = gain;
 				}
 				else if (modelForm == ModelForms::GAIN_AND_OFFSET)
@@ -469,7 +469,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 				}
 				else if (modelForm == ModelForms::OFFSET_ONLY)
 				{
-					double offset = cv::mean(refSubWin - srcDsWin, coverageMask).val[0];
+					double offset = cv::mean(refSubWin - srcDsWin, coverageMask).val[0];  
 					paramDsData(i + (winSize[0] - 1) / 2, j + (winSize[1] - 1) / 2, k) = offset;
 				}
 
@@ -651,6 +651,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	//TODO: consider rewriting to make sure it is by block (xcalib block size is 256x256)
 
 	//process by row (usually same size as block so should be fast)
+	int nSrcBands = srcDataSet->GetRasterCount();
 	for (int j = 0; j < srcDataSet->GetRasterYSize(); j++)
 	{
 		err = paramDataSet->RasterIO(GDALRWFlag::GF_Read, (int)paramUlI, (int)paramUlJ+j, srcDataSet->GetRasterXSize(), 1,
@@ -665,25 +666,35 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 		if (err != CPLErr::CE_None)
 			throw string("srcDataSet->RasterIO failure");
 
-#if SEAMLINE_COVERAGE_FIX
+#if SEAMLINE_COVERAGE_FIX  //TODO remove - see below
 		err = erodeMaskDataSet->RasterIO(GDALRWFlag::GF_Read, (int)paramUlI, (int)paramUlJ + j, srcDataSet->GetRasterXSize(), 1,
 			erodeMaskSubData.Buf(), srcDataSet->GetRasterXSize(), 1, GDALDataType::GDT_Byte,
 			1, NULL, 0, 0, 0); //nLineSpace is wrong I think but not used (?)
 		if (err != CPLErr::CE_None)
 			throw string("erodeMaskDataSet->RasterIO failure");
 #endif
-		for (int k = 0; k < srcDataSet->GetRasterCount(); k++)
+		for (int k = 0; k < nSrcBands; k++)
 		{
 			for (int i = 0; i < srcDataSet->GetRasterXSize(); i++)
 			{
 				//TO DO: will threading help speed things up here?  Eg sim read and write and or mult threads for applying params
 				//TO DO: rather just set a nodata mask post proc than read and check the mask for each pixel
+#if TRUE
+				// params are zero outside of coverage zone, so no need for mask here (?) 
+				if (modelForm == ModelForms::GAIN_ONLY)
+					calibData(0, i, k) = paramSubData(0, i, k) * srcData(0, i, k);
+				else if (modelForm == ModelForms::GAIN_AND_OFFSET)
+					calibData(0, i, k) = paramSubData(0, i, k) * srcData(0, i, k) + paramSubData(0, i, k + nSrcBands);
+				else if (modelForm == ModelForms::OFFSET_ONLY)
+					calibData(0, i, k) = paramSubData(0, i, k) + srcData(0, i, k);
+#else  //old gain only code
 #if SEAMLINE_COVERAGE_FIX
 				if (erodeMaskSubData(0, i, 0) <= (unsigned char)0.95*255.0)
 					calibData(0, i, k) = 0;
 				else
 #endif
 					calibData(0, i, k) = paramSubData(0, i, k) * srcData(0, i, k);
+#endif
 			}
 		}
 		err = calibDataSet->RasterIO(GDALRWFlag::GF_Write, (int)0, (int)j, srcDataSet->GetRasterXSize(), 1,
