@@ -12,6 +12,7 @@ import scipy.ndimage
 import matplotlib.image
 from matplotlib import pyplot
 
+
 reflScale = 5000.
 if True:
     numBands = 4

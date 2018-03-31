@@ -26,13 +26,14 @@
  * DEALINGS IN THE SOFTWARE.
  ****************************************************************************/
 #pragma once
+#include <opencv2/core/core.hpp>
 
 template <typename T>
 class A2D 
 {
     T *m_buf;
-    size_t m_n;
-    size_t m_m;
+    size_t m_n; 
+    size_t m_m; 
 public:
     A2D(T *buf, const size_t &n, const size_t &m)
         : m_buf(buf), m_n(n), m_m(m) { }
@@ -49,11 +50,12 @@ class Buf3d
 {
 private:
     T* m_buf;
-    size_t m_n;
-    size_t m_m;
-    size_t m_o;
+    size_t m_n; //rows
+    size_t m_m; //cols
+    size_t m_o; //bands 
 
 public:
+	// rows, cols, bands
     Buf3d(const size_t &n, const size_t &m, const size_t &o)
         : m_n(n), m_m(m), m_o(o) 
 	{ 
@@ -65,7 +67,8 @@ public:
 		delete[] (this->m_buf);
 	}
 
-    T& operator()(const size_t &i, const size_t &j, const size_t &k)
+	// row, col, band
+    T& operator()(const size_t &i, const size_t &j, const size_t &k)  
     {
 		return *(this->m_buf + j + (i * this->m_m) + (k * this->m_m * this->m_n));
     }
@@ -74,5 +77,37 @@ public:
 	{
 		return m_buf;
 	}
+
+	// open cv Mat data ordering is channel (i.e. a pixel is stored as all channels in the image), col, row while gdal (geotiff) gives col, row, channel
+	// this means we cannot simply wrap a multiband gdal raster with a opencv Mat header
+	// so this function creates a vector of Mats that point to each band of the gdal raster
+	// (newer versions of opencv support n-dimensional Mats - I would think that a 3 dim Mat should then follow the gdal ordering, but the 2.4.8 opencv does
+	// not seem to support this properly or at all and I don't particularly want to upgrade wo good reason)
+	std::vector<cv::Mat> ToMatVec()   
+	{
+		std::vector<cv::Mat> bandVec(this->m_o);
+		for (int band = 0; band < this->m_o; band++)
+		{
+			// C++: Mat::Mat(int rows, int cols, int type, void* data, size_t step=AUTO_STEP)
+			// crude switch to support templates - m
+			if (sizeof(T) == 8)
+				bandVec[band] = cv::Mat(this->m_n, this->m_m, CV_64F, this->m_buf + (band * this->m_m * this->m_n));
+			else if (sizeof(T) == 4)
+				bandVec[band] = cv::Mat(this->m_n, this->m_m, CV_32F, this->m_buf + (band * this->m_m * this->m_n));
+			else if (sizeof(T) == 2)
+				bandVec[band] = cv::Mat(this->m_n, this->m_m, CV_16U, this->m_buf + (band * this->m_m * this->m_n));
+			else if (sizeof(T) == 1)
+				bandVec[band] = cv::Mat(this->m_n, this->m_m, CV_8U, this->m_buf + (band * this->m_m * this->m_n));
+			else
+				throw new std::exception("Unsupported data type for conversion cv::Mat");
+		}
+		return bandVec;
+	}
 };
 
+enum ModelForms
+{
+	GAIN_ONLY = 1,
+	GAIN_AND_OFFSET = 2,
+	OFFSET_ONLY = 3
+};
