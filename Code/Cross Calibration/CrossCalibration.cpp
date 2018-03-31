@@ -339,12 +339,12 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 		throw string("refDataSet->RasterIO failure");
 
 
-#if SEAMLINE_COVERAGE_FIX && SEAMLINE_EXTRAP_FIX
+#if SEAMLINE_COVERAGE_FIX
 	//read the ds mask
 	GDALDataset* srcMaskDsDataSet = (GDALDataset*)GDALOpen(srcMaskDsFileName.c_str(), GDALAccess::GA_ReadOnly);
 	if (srcMaskDsDataSet == NULL)
 		throw string("Could not open: " + srcMaskDsFileName);
-	Buf3d<double> srcMaskDsData(srcDsDataSet->GetRasterYSize(), srcDsDataSet->GetRasterXSize(), srcDsDataSet->GetRasterCount());
+	Buf3d<double> srcMaskDsData(srcMaskDsDataSet->GetRasterYSize(), srcMaskDsDataSet->GetRasterXSize(), srcMaskDsDataSet->GetRasterCount());
 
 	err = srcMaskDsDataSet->RasterIO(GDALRWFlag::GF_Read, 0, 0, srcMaskDsDataSet->GetRasterXSize(), srcMaskDsDataSet->GetRasterYSize(),
 		srcMaskDsData.Buf(), srcMaskDsDataSet->GetRasterXSize(), srcMaskDsDataSet->GetRasterYSize(), GDALDataType::GDT_Float64,
@@ -352,7 +352,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 
 	if (err != CPLErr::CE_None)
 		throw string("srcMaskDsData->RasterIO failure");
-
+#if SEAMLINE_EXTRAP_FIX
 	//make eroded mask for application to upsampled images
 	//string winTitle = "mask";
 	cv::Mat cvMask(srcMaskDsDataSet->GetRasterYSize(), srcMaskDsDataSet->GetRasterXSize(), CV_64FC1, (void*)srcMaskDsData.Buf());
@@ -392,17 +392,20 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 
 	erodeMaskDsDataSet->FlushCache();
 	GDALClose(erodeMaskDsDataSet);
-	GDALClose(srcMaskDsDataSet);
 
-#elif SEAMLINE_COVERAGE_FIX
+#else //SEAMLINE_COVERAGE_FIX
 	string erodeMaskDsFileName = srcMaskDsFileName;  // don't do erosion
-#endif //#if SEAMLINE_FIX
+#endif  //#if SEAMLINE_EXTRAP_FIX
+	GDALClose(srcMaskDsDataSet);
+#endif  //#if SEAMLINE_COVERAGE_FIX
 
 #if TRUE //new opencv mx+c solver with win size >=1
 	cv::Range winRanges[2];
 
 	std::vector<cv::Mat>& refSubBands = refSubData.ToMatVec();
 	std::vector<cv::Mat>& srcDsBands = srcDsData.ToMatVec();
+	std::vector<cv::Mat>& tmp = srcMaskDsData.ToMatVec();
+	cv::Mat& srcMaskDsMat = tmp[0];
 	cv::Mat onesVec(winSize[0] * winSize[1], 1, CV_64FC1, cv::Scalar(1.));  //(int rows, int cols, int type, const Scalar& s)
 	cv::Mat srcDsConcatMat(winSize[0] * winSize[1], 2, CV_64FC1, cv::Scalar(0.));
 
@@ -425,27 +428,48 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 				//int rowIdx[2] = {max<int>(i-(winSize[0]-1)/2, 0), min<int>(n-1, i+(winSize[0]-1)/2)};
 				winRanges[0] = cv::Range(i, i + winSize[0]);
 				// extract sliding window ROI - (i, j) is UL cnr
-				cv::Mat srcDsWin = srcDsBand(winRanges);  
-				cv::Mat refSubWin = refSubBand(winRanges);
-				std::cout << refSubWin.depth() << endl;
+				const cv::Mat srcDsWin = srcDsBand(winRanges);  
+				const cv::Mat refSubWin = refSubBand(winRanges);
+				const cv::Mat srcDsMaskDsWin = srcMaskDsMat(winRanges);
+#if SEAMLINE_COVERAGE_FIX
+				cv::Mat coverageMask = srcDsMaskDsWin >= 0.95*255.0;
+#else
+				cv::Mat coverageMask = srcDsMaskDsWin > 0.;  
+#endif
 				// convert sliding win data to col vectors etc suitable for LS
-				cv::Mat lsSoln;
 				// find LS param estimates
+				//int valid = (cv::compare( refSubWin == 0);
 				if (modelForm == ModelForms::GAIN_ONLY)
 				{
-					double gain = cv::mean(refSubWin / srcDsWin).val[0];
+					double gain = cv::mean(refSubWin / srcDsWin, coverageMask).val[0];
 					paramDsData(i + (winSize[0] - 1) / 2, j + (winSize[1] - 1) / 2, k) = gain;
 				}
 				else if (modelForm == ModelForms::GAIN_AND_OFFSET)
 				{
-					cv:hconcat(srcDsWin.clone().reshape(1, winSize[0] * winSize[0]), onesVec, srcDsConcatMat);
-					cv::solve(srcDsConcatMat, refSubWin.clone().reshape(1, winSize[0] * winSize[0]), lsSoln, cv::DECOMP_QR);
+					cv::Mat lsSoln;
+					double coverage = cv::sum(coverageMask).val[0];
+					if (coverage >= 255.*2)  //check we have at least 2 pieces of valid data for our 2 params
+					{
+						if (coverage < winSize[0] * winSize[0] * 255)
+						{
+							cv::hconcat(srcDsWin.clone().setTo(0, ~coverageMask).reshape(1, winSize[0] * winSize[0]), onesVec, srcDsConcatMat);
+							cv::solve(srcDsConcatMat, refSubWin.clone().setTo(0, ~coverageMask).reshape(1, winSize[0] * winSize[0]), lsSoln, cv::DECOMP_QR);
+						}
+						else
+						{
+							cv::hconcat(srcDsWin.clone().reshape(1, winSize[0] * winSize[0]), onesVec, srcDsConcatMat);
+							cv::solve(srcDsConcatMat, refSubWin.clone().reshape(1, winSize[0] * winSize[0]), lsSoln, cv::DECOMP_QR);
+						}
+					}
+					else
+						lsSoln = cv::Mat(2, 1, CV_64F, cv::Scalar::all(0));  // if we dont have enough coverage, set params to zero 
+
 					paramDsData(i + (winSize[0] - 1) / 2, j + (winSize[1] - 1) / 2, k) = lsSoln.at<double>(0,0);
 					paramDsData(i + (winSize[0] - 1) / 2, j + (winSize[1] - 1) / 2, k + srcDsDataSet->GetRasterCount()) = lsSoln.at<double>(1, 0);
 				}
 				else if (modelForm == ModelForms::OFFSET_ONLY)
 				{
-					double offset = cv::mean(refSubWin - srcDsWin).val[0];
+					double offset = cv::mean(refSubWin - srcDsWin, coverageMask).val[0];
 					paramDsData(i + (winSize[0] - 1) / 2, j + (winSize[1] - 1) / 2, k) = offset;
 				}
 

@@ -197,3 +197,23 @@ toc
         c = c + triu(c, 1)';   % + diag(ones(1, size(data, 2)));
         c(h == 0, :) = 0;
         c(:, h == 0) = 0;
+
+        
+%%
+
+src1 = round(rand(10,1)*100)
+src2 = round(rand(10,1)*100)
+mask = logical(round(rand(10,1)))
+
+params = [src1, ones(size(src1))]\src2
+
+src1m = src1;
+src1m(~mask) = 0
+src2m = src2;
+src2m(~mask) = 0
+
+paramsm1 = [src1m, double(mask)]\src2m
+
+paramsm2 = [src1(mask), ones(size(src1(mask)))]\src2(mask)
+
+
