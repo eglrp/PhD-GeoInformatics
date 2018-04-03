@@ -352,7 +352,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 
 	if (err != CPLErr::CE_None)
 		throw string("srcMaskDsData->RasterIO failure");
-#if SEAMLINE_EXTRAP_FIX
+#if SEAMLINE_EXTRAP_FIX  //TODO change the coverage mask to a vector cutline that can be shrunk inwards for the extrap fix.  then we don't have to create & store us and ds mask images which is clumsy, space and time consuming
 	//make eroded mask for application to upsampled images
 	//string winTitle = "mask";
 	cv::Mat cvMask(srcMaskDsDataSet->GetRasterYSize(), srcMaskDsDataSet->GetRasterXSize(), CV_64FC1, (void*)srcMaskDsData.Buf());
@@ -402,10 +402,9 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 #if TRUE //new opencv mx+c solver with win size >=1
 	cv::Range winRanges[2];
 
-	std::vector<cv::Mat>& refSubBands = refSubData.ToMatVec();
-	std::vector<cv::Mat>& srcDsBands = srcDsData.ToMatVec();
-	std::vector<cv::Mat>& tmp = srcMaskDsData.ToMatVec();
-	cv::Mat& srcMaskDsMat = tmp[0];
+	std::vector<cv::Mat_<double>>& refSubBands = refSubData.ToMatVec();
+	std::vector<cv::Mat_<double>>& srcDsBands = srcDsData.ToMatVec();
+	cv::Mat& srcMaskDsMat = srcMaskDsData.ToMat(0);
 	cv::Mat onesVec(winSize[0] * winSize[1], 1, CV_64FC1, cv::Scalar(1.));  //(int rows, int cols, int type, const Scalar& s)
 	cv::Mat srcDsConcatMat(winSize[0] * winSize[1], 2, CV_64FC1, cv::Scalar(0.));
 
@@ -648,7 +647,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	if (erodeMaskDataSet == NULL)
 	throw string("Could not open: " + erodeMaskUsFileName);*/
 #endif
-	//TODO: consider rewriting to make sure it is by block (xcalib block size is 256x256)
+	//TODO: consider rewriting to make sure it is by block (xcalib block size is 256x256), src and param blocks are rows
 
 	//process by row (usually same size as block so should be fast)
 	int nSrcBands = srcDataSet->GetRasterCount();
@@ -686,7 +685,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 				else if (modelForm == ModelForms::GAIN_AND_OFFSET)
 					calibData(0, i, k) = paramSubData(0, i, k) * srcData(0, i, k) + paramSubData(0, i, k + nSrcBands);
 				else if (modelForm == ModelForms::OFFSET_ONLY)
-					calibData(0, i, k) = paramSubData(0, i, k) + srcData(0, i, k);
+					calibData(0, i, k) = srcData(0, i, k) + paramSubData(0, i, k);
 #else  //old gain only code
 #if SEAMLINE_COVERAGE_FIX
 				if (erodeMaskSubData(0, i, 0) <= (unsigned char)0.95*255.0)
@@ -723,7 +722,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	GDALClose(calibDataSet);
 	GDALClose(srcDataSet);
 	GDALClose(paramDataSet);
-#if SEAMLINE_FIX
+#if SEAMLINE_EXTRAP_FIX
 	GDALClose(erodeMaskDataSet);
 #endif
 	return res;

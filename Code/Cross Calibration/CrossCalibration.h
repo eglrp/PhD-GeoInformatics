@@ -83,25 +83,33 @@ public:
 	// so this function creates a vector of Mats that point to each band of the gdal raster
 	// (newer versions of opencv support n-dimensional Mats - I would think that a 3 dim Mat should then follow the gdal ordering, but the 2.4.8 opencv does
 	// not seem to support this properly or at all and I don't particularly want to upgrade wo good reason)
-	std::vector<cv::Mat> ToMatVec()   
+	std::vector<cv::Mat_<T>> ToMatVec()   
 	{
-		std::vector<cv::Mat> bandVec(this->m_o);
+		std::vector<cv::Mat_<T>> bandVec(this->m_o);
 		for (int band = 0; band < this->m_o; band++)
 		{
+			bandVec[band] = this->ToMat(band);  //cv::Mat_<T>(this->m_n, this->m_m, this->m_buf + (band * this->m_m * this->m_n));
 			// C++: Mat::Mat(int rows, int cols, int type, void* data, size_t step=AUTO_STEP)
 			// crude switch to support templates - m
-			if (sizeof(T) == 8)
-				bandVec[band] = cv::Mat(this->m_n, this->m_m, CV_64F, this->m_buf + (band * this->m_m * this->m_n));
-			else if (sizeof(T) == 4)
-				bandVec[band] = cv::Mat(this->m_n, this->m_m, CV_32F, this->m_buf + (band * this->m_m * this->m_n));
-			else if (sizeof(T) == 2)
-				bandVec[band] = cv::Mat(this->m_n, this->m_m, CV_16U, this->m_buf + (band * this->m_m * this->m_n));
-			else if (sizeof(T) == 1)
-				bandVec[band] = cv::Mat(this->m_n, this->m_m, CV_8U, this->m_buf + (band * this->m_m * this->m_n));
-			else
-				throw new std::exception("Unsupported data type for conversion cv::Mat");
+			//if (sizeof(T) == 8)
+			//	bandVec[band] = cv::Mat(this->m_n, this->m_m, CV_64F, this->m_buf + (band * this->m_m * this->m_n));
+			//else if (sizeof(T) == 4)
+			//	bandVec[band] = cv::Mat(this->m_n, this->m_m, CV_32F, this->m_buf + (band * this->m_m * this->m_n));
+			//else if (sizeof(T) == 2)
+			//	bandVec[band] = cv::Mat(this->m_n, this->m_m, CV_16U, this->m_buf + (band * this->m_m * this->m_n));
+			//else if (sizeof(T) == 1)
+			//	bandVec[band] = cv::Mat(this->m_n, this->m_m, CV_8U, this->m_buf + (band * this->m_m * this->m_n));
+			//else
+			//	throw new std::exception("Unsupported data type for conversion cv::Mat");
 		}
 		return bandVec;
+	}
+
+	cv::Mat_<T> ToMat(int band)
+	{
+		//Mat_(int _rows, int _cols, _Tp* _data, size_t _step = AUTO_STEP);
+		cv::Mat_<T> bandMat = cv::Mat_<T>(this->m_n, this->m_m, this->m_buf + (band * this->m_m * this->m_n));
+		return bandMat;
 	}
 };
 

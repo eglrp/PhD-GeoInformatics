@@ -42,7 +42,7 @@
     <layer-tree-layer id="LE07_L1TP_173083_20100203_20161217_01_T1_b1_5d9f28f6_e8ec_4b47_8784_65c5071abd7e" expanded="1" checked="Qt::Unchecked" providerKey="gdal" name="LE07_L1TP_173083_20100203_20161217_01_T1_b1" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/Landsat/LE71730832010034ASN00/LE07_L1TP_173083_20100203_20161217_01_T1_b1.tif">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer id="LE07_L1TP_173083_20100203_20161217_01_T1_sr_MERGE_NgiFormat_SpotMask_a813694d_76fc_4264_a70d_445e84208416" expanded="1" checked="Qt::Unchecked" providerKey="gdal" name="LE07_L1TP_173083_20100203_20161217_01_T1_sr_MERGE_NgiFormat_SpotMask" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/Landsat/LE71730832010034ASN00/LE07_L1TP_173083_20100203_20161217_01_T1_sr_MERGE_NgiFormat_SpotMask.tif">
+    <layer-tree-layer id="LE07_L1TP_173083_20100203_20161217_01_T1_sr_MERGE_NgiFormat_SpotMask_a813694d_76fc_4264_a70d_445e84208416" expanded="1" checked="Qt::Checked" providerKey="gdal" name="LE07_L1TP_173083_20100203_20161217_01_T1_sr_MERGE_NgiFormat_SpotMask" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/Landsat/LE71730832010034ASN00/LE07_L1TP_173083_20100203_20161217_01_T1_sr_MERGE_NgiFormat_SpotMask.tif">
       <customproperties/>
     </layer-tree-layer>
     <layer-tree-layer id="XCalibMosaic10m_SpotExtent_f71ac0c5_9154_476d_8cbd_8fc528cf632a" expanded="1" checked="Qt::Unchecked" providerKey="gdal" name="XCalibMosaic10m_SpotExtent" source="W:/PhD GeoInformatics/Data/NGI/Cross Calibration/XCalibMosaic10m_SpotExtent.tif">
@@ -108,22 +108,7 @@
     <layer-tree-layer id="spotInt16_2_4570d77f_de71_4825_bc57_6f68be666f39" expanded="1" checked="Qt::Unchecked" providerKey="gdal" name="spotInt16_2" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/NGI/My Rectified/spotInt16_2.tif">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer id="ATCORCorrected_METADATA_14120066_f4e721f0_57e8_444f_b9e2_71cd273a2f3d" expanded="1" checked="Qt::Unchecked" providerKey="gdal" name="ATCORCorrected_METADATA_14120066" source="../../../../../../PCI Geomatics/Geomatica 2017/user/ATCORCorrected_METADATA_14120066.pix">
-      <customproperties/>
-    </layer-tree-layer>
-    <layer-tree-layer id="ATCORCorrected_METADATA_14120060_52bf18c9_f342_42b5_a3be_a9632931250f" expanded="1" checked="Qt::Unchecked" providerKey="gdal" name="ATCORCorrected_METADATA_14120060" source="../../../../../../PCI Geomatics/Geomatica 2017/user/ATCORCorrected_METADATA_14120060.pix">
-      <customproperties/>
-    </layer-tree-layer>
-    <layer-tree-layer id="ATCORCorrected_METADATA_14120003_309a71f2_4d2d_4870_96a9_cb6c2c1d1046" expanded="1" checked="Qt::Unchecked" providerKey="gdal" name="ATCORCorrected_METADATA_14120003" source="../../../../../../PCI Geomatics/Geomatica 2017/user/ATCORCorrected_METADATA_14120003.pix">
-      <customproperties/>
-    </layer-tree-layer>
-    <layer-tree-layer id="ATCORCorrected_METADATA_14120009_c272728b_febd_43ce_b2ab_b6762688c07b" expanded="1" checked="Qt::Unchecked" providerKey="gdal" name="ATCORCorrected_METADATA_14120009" source="../../../../../../PCI Geomatics/Geomatica 2017/user/ATCORCorrected_METADATA_14120009.pix">
-      <customproperties/>
-    </layer-tree-layer>
     <layer-tree-layer id="ReducedStudyArea20180321124142218" expanded="1" checked="Qt::Unchecked" providerKey="ogr" name="ReducedStudyArea" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/Misc/ReducedStudyArea.shp">
-      <customproperties/>
-    </layer-tree-layer>
-    <layer-tree-layer id="ATCORCorrected_METADATA_14120054_55e269b4_4905_4046_9aef_5e5dbe295655" expanded="1" checked="Qt::Unchecked" providerKey="gdal" name="ATCORCorrected_METADATA_14120054" source="../../../../../../PCI Geomatics/Geomatica 2017/user/ATCORCorrected_METADATA_14120054.pix">
       <customproperties/>
     </layer-tree-layer>
     <layer-tree-layer id="SudemL2_LittleKaroo_Mosaic_570838b9_e25e_4f86_8f26_212b61a222fd" expanded="1" checked="Qt::Unchecked" providerKey="gdal" name="SudemL2_LittleKaroo_Mosaic" source="W:/PhD GeoInformatics/Data/CGA/DEMs/SUDEM/SudemL2_LittleKaroo_Mosaic.tif">
@@ -151,12 +136,7 @@
       <item>StudyAreaXCalibMosaicSpotExtent_16569ca7_f053_4da9_b8db_0668cb179e05</item>
       <item>StudyAreaXCalibMosaicSpotMask_5ef31efe_e257_473b_bba3_17495f574481</item>
       <item>SudemL2_LittleKaroo_Mosaic_570838b9_e25e_4f86_8f26_212b61a222fd</item>
-      <item>ATCORCorrected_METADATA_14120009_c272728b_febd_43ce_b2ab_b6762688c07b</item>
-      <item>ATCORCorrected_METADATA_14120003_309a71f2_4d2d_4870_96a9_cb6c2c1d1046</item>
-      <item>ATCORCorrected_METADATA_14120054_55e269b4_4905_4046_9aef_5e5dbe295655</item>
-      <item>ATCORCorrected_METADATA_14120060_52bf18c9_f342_42b5_a3be_a9632931250f</item>
       <item>OUTPUT_ded20c82_ab20_48b8_99cb_dfd731e1ac34</item>
-      <item>ATCORCorrected_METADATA_14120066_f4e721f0_57e8_444f_b9e2_71cd273a2f3d</item>
       <item>XCalibMosaic10m_6d1b7bb9_8f13_42ea_8fc1_8e4d9843a554</item>
       <item>XCalibMosaic30m_c2a6933a_91e3_46ae_b55d_b2ae4611102e</item>
       <item>LE07_L1TP_173083_20100203_20161217_01_T1_b1_5d9f28f6_e8ec_4b47_8784_65c5071abd7e</item>
@@ -185,10 +165,10 @@
   <mapcanvas annotationsVisible="1" name="theMapCanvas">
     <units>degrees</units>
     <extent>
-      <xmin>21.51436221279901773</xmin>
-      <ymin>-33.85331595620925782</ymin>
-      <xmax>22.25949534597144819</xmax>
-      <ymax>-33.15192341612305427</ymax>
+      <xmin>24.31525472783251018</xmin>
+      <ymin>-33.6224907319825661</ymin>
+      <xmax>24.35819918813163554</xmax>
+      <ymax>-33.55829145495670218</ymax>
     </extent>
     <rotation>0</rotation>
     <destinationsrs>
@@ -246,9 +226,9 @@
         <legendlayerfile isInOverview="0" layerid="LE07_L1TP_173083_20100203_20161217_01_T1_b1_5d9f28f6_e8ec_4b47_8784_65c5071abd7e" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer open="true" checked="Qt::Unchecked" name="LE07_L1TP_173083_20100203_20161217_01_T1_sr_MERGE_NgiFormat_SpotMask" drawingOrder="-1" showFeatureCount="0">
+    <legendlayer open="true" checked="Qt::Checked" name="LE07_L1TP_173083_20100203_20161217_01_T1_sr_MERGE_NgiFormat_SpotMask" drawingOrder="-1" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="LE07_L1TP_173083_20100203_20161217_01_T1_sr_MERGE_NgiFormat_SpotMask_a813694d_76fc_4264_a70d_445e84208416" visible="0"/>
+        <legendlayerfile isInOverview="0" layerid="LE07_L1TP_173083_20100203_20161217_01_T1_sr_MERGE_NgiFormat_SpotMask_a813694d_76fc_4264_a70d_445e84208416" visible="1"/>
       </filegroup>
     </legendlayer>
     <legendlayer open="true" checked="Qt::Unchecked" name="XCalibMosaic10m_SpotExtent" drawingOrder="-1" showFeatureCount="0">
@@ -356,34 +336,9 @@
         <legendlayerfile isInOverview="0" layerid="spotInt16_2_4570d77f_de71_4825_bc57_6f68be666f39" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer open="true" checked="Qt::Unchecked" name="ATCORCorrected_METADATA_14120066" drawingOrder="-1" showFeatureCount="0">
-      <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="ATCORCorrected_METADATA_14120066_f4e721f0_57e8_444f_b9e2_71cd273a2f3d" visible="0"/>
-      </filegroup>
-    </legendlayer>
-    <legendlayer open="true" checked="Qt::Unchecked" name="ATCORCorrected_METADATA_14120060" drawingOrder="-1" showFeatureCount="0">
-      <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="ATCORCorrected_METADATA_14120060_52bf18c9_f342_42b5_a3be_a9632931250f" visible="0"/>
-      </filegroup>
-    </legendlayer>
-    <legendlayer open="true" checked="Qt::Unchecked" name="ATCORCorrected_METADATA_14120003" drawingOrder="-1" showFeatureCount="0">
-      <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="ATCORCorrected_METADATA_14120003_309a71f2_4d2d_4870_96a9_cb6c2c1d1046" visible="0"/>
-      </filegroup>
-    </legendlayer>
-    <legendlayer open="true" checked="Qt::Unchecked" name="ATCORCorrected_METADATA_14120009" drawingOrder="-1" showFeatureCount="0">
-      <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="ATCORCorrected_METADATA_14120009_c272728b_febd_43ce_b2ab_b6762688c07b" visible="0"/>
-      </filegroup>
-    </legendlayer>
     <legendlayer open="true" checked="Qt::Unchecked" name="ReducedStudyArea" drawingOrder="-1" showFeatureCount="0">
       <filegroup open="true" hidden="false">
         <legendlayerfile isInOverview="0" layerid="ReducedStudyArea20180321124142218" visible="0"/>
-      </filegroup>
-    </legendlayer>
-    <legendlayer open="true" checked="Qt::Unchecked" name="ATCORCorrected_METADATA_14120054" drawingOrder="-1" showFeatureCount="0">
-      <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="ATCORCorrected_METADATA_14120054_55e269b4_4905_4046_9aef_5e5dbe295655" visible="0"/>
       </filegroup>
     </legendlayer>
     <legendlayer open="true" checked="Qt::Unchecked" name="SudemL2_LittleKaroo_Mosaic" drawingOrder="-1" showFeatureCount="0">
@@ -475,521 +430,6 @@
             <maxValue>2256</maxValue>
             <algorithm>StretchToMinimumMaximum</algorithm>
           </contrastEnhancement>
-        </rasterrenderer>
-        <brightnesscontrast contrast="0" brightness="0"/>
-        <huesaturation colorizeRed="255" saturation="0" colorizeGreen="128" grayscaleMode="0" colorizeOn="0" colorizeBlue="128" colorizeStrength="100"/>
-        <rasterresampler maxOversampling="2"/>
-      </pipe>
-      <blendMode>0</blendMode>
-    </maplayer>
-    <maplayer refreshOnNotifyEnabled="0" type="raster" hasScaleBasedVisibilityFlag="0" autoRefreshTime="0" refreshOnNotifyMessage="" minScale="1e+8" autoRefreshEnabled="0" maxScale="0">
-      <extent>
-        <xmin>535557.32949328911490738</xmin>
-        <ymin>6265093.19119383115321398</ymin>
-        <xmax>612021.57077635196037591</xmax>
-        <ymax>6339527.68052970990538597</ymax>
-      </extent>
-      <id>ATCORCorrected_METADATA_14120003_309a71f2_4d2d_4870_96a9_cb6c2c1d1046</id>
-      <datasource>../../../../../../PCI Geomatics/Geomatica 2017/user/ATCORCorrected_METADATA_14120003.pix</datasource>
-      <keywordList>
-        <value></value>
-      </keywordList>
-      <layername>ATCORCorrected_METADATA_14120003</layername>
-      <srs>
-        <spatialrefsys>
-          <proj4>+proj=utm +zone=34 +south +datum=WGS84 +units=m +no_defs</proj4>
-          <srsid>3184</srsid>
-          <srid>32734</srid>
-          <authid>EPSG:32734</authid>
-          <description>WGS 84 / UTM zone 34S</description>
-          <projectionacronym>utm</projectionacronym>
-          <ellipsoidacronym>WGS84</ellipsoidacronym>
-          <geographicflag>false</geographicflag>
-        </spatialrefsys>
-      </srs>
-      <resourceMetadata>
-        <identifier></identifier>
-        <parentidentifier></parentidentifier>
-        <language></language>
-        <type></type>
-        <title></title>
-        <abstract></abstract>
-        <fees></fees>
-        <encoding></encoding>
-        <crs>
-          <spatialrefsys>
-            <proj4></proj4>
-            <srsid>0</srsid>
-            <srid>0</srid>
-            <authid></authid>
-            <description></description>
-            <projectionacronym></projectionacronym>
-            <ellipsoidacronym></ellipsoidacronym>
-            <geographicflag>false</geographicflag>
-          </spatialrefsys>
-        </crs>
-        <extent>
-          <spatial crs="" miny="0" maxx="0" minz="0" maxy="0" maxz="0" dimensions="2" minx="0"/>
-          <temporal>
-            <period>
-              <start></start>
-              <end></end>
-            </period>
-          </temporal>
-        </extent>
-        <contact>
-          <name></name>
-          <organization></organization>
-          <position></position>
-          <voice></voice>
-          <fax></fax>
-          <email></email>
-          <role></role>
-        </contact>
-        <links/>
-      </resourceMetadata>
-      <customproperties>
-        <property value="false" key="WMSBackgroundLayer"/>
-        <property value="false" key="WMSPublishDataSourceUrl"/>
-        <property value="0" key="embeddedWidgets/count"/>
-        <property value="Value" key="identify/format"/>
-      </customproperties>
-      <provider>gdal</provider>
-      <noData>
-        <noDataList bandNo="1" useSrcNoData="0"/>
-        <noDataList bandNo="2" useSrcNoData="0"/>
-        <noDataList bandNo="3" useSrcNoData="0"/>
-        <noDataList bandNo="4" useSrcNoData="0"/>
-      </noData>
-      <map-layer-style-manager current="default">
-        <map-layer-style name="default"/>
-      </map-layer-style-manager>
-      <pipe>
-        <rasterrenderer type="multibandcolor" greenBand="2" blueBand="3" opacity="1" alphaBand="-1" redBand="1">
-          <rasterTransparency/>
-          <minMaxOrigin>
-            <limits>None</limits>
-            <extent>WholeRaster</extent>
-            <statAccuracy>Estimated</statAccuracy>
-            <cumulativeCutLower>0.02</cumulativeCutLower>
-            <cumulativeCutUpper>0.98</cumulativeCutUpper>
-            <stdDevFactor>2</stdDevFactor>
-          </minMaxOrigin>
-          <redContrastEnhancement>
-            <minValue>0</minValue>
-            <maxValue>29.5316</maxValue>
-            <algorithm>StretchToMinimumMaximum</algorithm>
-          </redContrastEnhancement>
-          <greenContrastEnhancement>
-            <minValue>0</minValue>
-            <maxValue>20.9594</maxValue>
-            <algorithm>StretchToMinimumMaximum</algorithm>
-          </greenContrastEnhancement>
-          <blueContrastEnhancement>
-            <minValue>0</minValue>
-            <maxValue>14.5676</maxValue>
-            <algorithm>StretchToMinimumMaximum</algorithm>
-          </blueContrastEnhancement>
-        </rasterrenderer>
-        <brightnesscontrast contrast="0" brightness="0"/>
-        <huesaturation colorizeRed="255" saturation="0" colorizeGreen="128" grayscaleMode="0" colorizeOn="0" colorizeBlue="128" colorizeStrength="100"/>
-        <rasterresampler maxOversampling="2"/>
-      </pipe>
-      <blendMode>0</blendMode>
-    </maplayer>
-    <maplayer refreshOnNotifyEnabled="0" type="raster" hasScaleBasedVisibilityFlag="0" autoRefreshTime="0" refreshOnNotifyMessage="" minScale="1e+8" autoRefreshEnabled="0" maxScale="0">
-      <extent>
-        <xmin>535557.32949328911490738</xmin>
-        <ymin>6265093.19119383115321398</ymin>
-        <xmax>612021.57077635196037591</xmax>
-        <ymax>6339527.68052970990538597</ymax>
-      </extent>
-      <id>ATCORCorrected_METADATA_14120009_c272728b_febd_43ce_b2ab_b6762688c07b</id>
-      <datasource>../../../../../../PCI Geomatics/Geomatica 2017/user/ATCORCorrected_METADATA_14120009.pix</datasource>
-      <keywordList>
-        <value></value>
-      </keywordList>
-      <layername>ATCORCorrected_METADATA_14120009</layername>
-      <srs>
-        <spatialrefsys>
-          <proj4>+proj=utm +zone=34 +south +datum=WGS84 +units=m +no_defs</proj4>
-          <srsid>3184</srsid>
-          <srid>32734</srid>
-          <authid>EPSG:32734</authid>
-          <description>WGS 84 / UTM zone 34S</description>
-          <projectionacronym>utm</projectionacronym>
-          <ellipsoidacronym>WGS84</ellipsoidacronym>
-          <geographicflag>false</geographicflag>
-        </spatialrefsys>
-      </srs>
-      <resourceMetadata>
-        <identifier></identifier>
-        <parentidentifier></parentidentifier>
-        <language></language>
-        <type></type>
-        <title></title>
-        <abstract></abstract>
-        <fees></fees>
-        <encoding></encoding>
-        <crs>
-          <spatialrefsys>
-            <proj4></proj4>
-            <srsid>0</srsid>
-            <srid>0</srid>
-            <authid></authid>
-            <description></description>
-            <projectionacronym></projectionacronym>
-            <ellipsoidacronym></ellipsoidacronym>
-            <geographicflag>false</geographicflag>
-          </spatialrefsys>
-        </crs>
-        <extent/>
-        <links/>
-      </resourceMetadata>
-      <customproperties>
-        <property value="Value" key="identify/format"/>
-      </customproperties>
-      <provider>gdal</provider>
-      <noData>
-        <noDataList bandNo="1" useSrcNoData="0"/>
-        <noDataList bandNo="2" useSrcNoData="0"/>
-        <noDataList bandNo="3" useSrcNoData="0"/>
-        <noDataList bandNo="4" useSrcNoData="0"/>
-      </noData>
-      <map-layer-style-manager current="default">
-        <map-layer-style name="default"/>
-      </map-layer-style-manager>
-      <pipe>
-        <rasterrenderer type="multibandcolor" greenBand="2" blueBand="3" opacity="1" alphaBand="-1" redBand="1">
-          <rasterTransparency/>
-          <minMaxOrigin>
-            <limits>CumulativeCut</limits>
-            <extent>WholeRaster</extent>
-            <statAccuracy>Estimated</statAccuracy>
-            <cumulativeCutLower>0.02</cumulativeCutLower>
-            <cumulativeCutUpper>0.98</cumulativeCutUpper>
-            <stdDevFactor>2</stdDevFactor>
-          </minMaxOrigin>
-          <redContrastEnhancement>
-            <minValue>0</minValue>
-            <maxValue>29.531563415527344</maxValue>
-            <algorithm>StretchToMinimumMaximum</algorithm>
-          </redContrastEnhancement>
-          <greenContrastEnhancement>
-            <minValue>0</minValue>
-            <maxValue>20.959402124404907</maxValue>
-            <algorithm>StretchToMinimumMaximum</algorithm>
-          </greenContrastEnhancement>
-          <blueContrastEnhancement>
-            <minValue>0</minValue>
-            <maxValue>14.567586948394775</maxValue>
-            <algorithm>StretchToMinimumMaximum</algorithm>
-          </blueContrastEnhancement>
-        </rasterrenderer>
-        <brightnesscontrast contrast="0" brightness="0"/>
-        <huesaturation colorizeRed="255" saturation="0" colorizeGreen="128" grayscaleMode="0" colorizeOn="0" colorizeBlue="128" colorizeStrength="100"/>
-        <rasterresampler maxOversampling="2"/>
-      </pipe>
-      <blendMode>0</blendMode>
-    </maplayer>
-    <maplayer refreshOnNotifyEnabled="0" type="raster" hasScaleBasedVisibilityFlag="0" autoRefreshTime="0" refreshOnNotifyMessage="" minScale="1e+8" autoRefreshEnabled="0" maxScale="0">
-      <extent>
-        <xmin>535557.32949328911490738</xmin>
-        <ymin>6265093.19119383115321398</ymin>
-        <xmax>612021.57077635196037591</xmax>
-        <ymax>6339527.68052970990538597</ymax>
-      </extent>
-      <id>ATCORCorrected_METADATA_14120054_55e269b4_4905_4046_9aef_5e5dbe295655</id>
-      <datasource>../../../../../../PCI Geomatics/Geomatica 2017/user/ATCORCorrected_METADATA_14120054.pix</datasource>
-      <keywordList>
-        <value></value>
-      </keywordList>
-      <layername>ATCORCorrected_METADATA_14120054</layername>
-      <srs>
-        <spatialrefsys>
-          <proj4>+proj=utm +zone=34 +south +datum=WGS84 +units=m +no_defs</proj4>
-          <srsid>3184</srsid>
-          <srid>32734</srid>
-          <authid>EPSG:32734</authid>
-          <description>WGS 84 / UTM zone 34S</description>
-          <projectionacronym>utm</projectionacronym>
-          <ellipsoidacronym>WGS84</ellipsoidacronym>
-          <geographicflag>false</geographicflag>
-        </spatialrefsys>
-      </srs>
-      <resourceMetadata>
-        <identifier></identifier>
-        <parentidentifier></parentidentifier>
-        <language></language>
-        <type></type>
-        <title></title>
-        <abstract></abstract>
-        <fees></fees>
-        <encoding></encoding>
-        <crs>
-          <spatialrefsys>
-            <proj4></proj4>
-            <srsid>0</srsid>
-            <srid>0</srid>
-            <authid></authid>
-            <description></description>
-            <projectionacronym></projectionacronym>
-            <ellipsoidacronym></ellipsoidacronym>
-            <geographicflag>false</geographicflag>
-          </spatialrefsys>
-        </crs>
-        <extent/>
-        <links/>
-      </resourceMetadata>
-      <customproperties>
-        <property value="Value" key="identify/format"/>
-      </customproperties>
-      <provider>gdal</provider>
-      <noData>
-        <noDataList bandNo="1" useSrcNoData="0"/>
-        <noDataList bandNo="2" useSrcNoData="0"/>
-        <noDataList bandNo="3" useSrcNoData="0"/>
-        <noDataList bandNo="4" useSrcNoData="0"/>
-      </noData>
-      <map-layer-style-manager current="default">
-        <map-layer-style name="default"/>
-      </map-layer-style-manager>
-      <pipe>
-        <rasterrenderer type="multibandcolor" greenBand="2" blueBand="3" opacity="1" alphaBand="-1" redBand="1">
-          <rasterTransparency/>
-          <minMaxOrigin>
-            <limits>CumulativeCut</limits>
-            <extent>WholeRaster</extent>
-            <statAccuracy>Estimated</statAccuracy>
-            <cumulativeCutLower>0.02</cumulativeCutLower>
-            <cumulativeCutUpper>0.98</cumulativeCutUpper>
-            <stdDevFactor>2</stdDevFactor>
-          </minMaxOrigin>
-          <redContrastEnhancement>
-            <minValue>0</minValue>
-            <maxValue>29.531563415527344</maxValue>
-            <algorithm>StretchToMinimumMaximum</algorithm>
-          </redContrastEnhancement>
-          <greenContrastEnhancement>
-            <minValue>0</minValue>
-            <maxValue>20.959402124404907</maxValue>
-            <algorithm>StretchToMinimumMaximum</algorithm>
-          </greenContrastEnhancement>
-          <blueContrastEnhancement>
-            <minValue>0</minValue>
-            <maxValue>14.567586948394775</maxValue>
-            <algorithm>StretchToMinimumMaximum</algorithm>
-          </blueContrastEnhancement>
-        </rasterrenderer>
-        <brightnesscontrast contrast="0" brightness="0"/>
-        <huesaturation colorizeRed="255" saturation="0" colorizeGreen="128" grayscaleMode="0" colorizeOn="0" colorizeBlue="128" colorizeStrength="100"/>
-        <rasterresampler maxOversampling="2"/>
-      </pipe>
-      <blendMode>0</blendMode>
-    </maplayer>
-    <maplayer refreshOnNotifyEnabled="0" type="raster" hasScaleBasedVisibilityFlag="0" autoRefreshTime="0" refreshOnNotifyMessage="" minScale="1e+8" autoRefreshEnabled="0" maxScale="0">
-      <extent>
-        <xmin>535557.32949328911490738</xmin>
-        <ymin>6265093.19119383115321398</ymin>
-        <xmax>612021.57077635196037591</xmax>
-        <ymax>6339527.68052970990538597</ymax>
-      </extent>
-      <id>ATCORCorrected_METADATA_14120060_52bf18c9_f342_42b5_a3be_a9632931250f</id>
-      <datasource>../../../../../../PCI Geomatics/Geomatica 2017/user/ATCORCorrected_METADATA_14120060.pix</datasource>
-      <keywordList>
-        <value></value>
-      </keywordList>
-      <layername>ATCORCorrected_METADATA_14120060</layername>
-      <srs>
-        <spatialrefsys>
-          <proj4>+proj=utm +zone=34 +south +datum=WGS84 +units=m +no_defs</proj4>
-          <srsid>3184</srsid>
-          <srid>32734</srid>
-          <authid>EPSG:32734</authid>
-          <description>WGS 84 / UTM zone 34S</description>
-          <projectionacronym>utm</projectionacronym>
-          <ellipsoidacronym>WGS84</ellipsoidacronym>
-          <geographicflag>false</geographicflag>
-        </spatialrefsys>
-      </srs>
-      <resourceMetadata>
-        <identifier></identifier>
-        <parentidentifier></parentidentifier>
-        <language></language>
-        <type></type>
-        <title></title>
-        <abstract></abstract>
-        <fees></fees>
-        <encoding></encoding>
-        <crs>
-          <spatialrefsys>
-            <proj4></proj4>
-            <srsid>0</srsid>
-            <srid>0</srid>
-            <authid></authid>
-            <description></description>
-            <projectionacronym></projectionacronym>
-            <ellipsoidacronym></ellipsoidacronym>
-            <geographicflag>false</geographicflag>
-          </spatialrefsys>
-        </crs>
-        <extent/>
-        <links/>
-      </resourceMetadata>
-      <customproperties>
-        <property value="Value" key="identify/format"/>
-      </customproperties>
-      <provider>gdal</provider>
-      <noData>
-        <noDataList bandNo="1" useSrcNoData="0"/>
-        <noDataList bandNo="2" useSrcNoData="0"/>
-        <noDataList bandNo="3" useSrcNoData="0"/>
-        <noDataList bandNo="4" useSrcNoData="0"/>
-      </noData>
-      <map-layer-style-manager current="default">
-        <map-layer-style name="default"/>
-      </map-layer-style-manager>
-      <pipe>
-        <rasterrenderer type="multibandcolor" greenBand="2" blueBand="3" opacity="1" alphaBand="-1" redBand="1">
-          <rasterTransparency/>
-          <minMaxOrigin>
-            <limits>CumulativeCut</limits>
-            <extent>WholeRaster</extent>
-            <statAccuracy>Estimated</statAccuracy>
-            <cumulativeCutLower>0.02</cumulativeCutLower>
-            <cumulativeCutUpper>0.98</cumulativeCutUpper>
-            <stdDevFactor>2</stdDevFactor>
-          </minMaxOrigin>
-          <redContrastEnhancement>
-            <minValue>0</minValue>
-            <maxValue>29.531563415527344</maxValue>
-            <algorithm>StretchToMinimumMaximum</algorithm>
-          </redContrastEnhancement>
-          <greenContrastEnhancement>
-            <minValue>0</minValue>
-            <maxValue>20.959402124404907</maxValue>
-            <algorithm>StretchToMinimumMaximum</algorithm>
-          </greenContrastEnhancement>
-          <blueContrastEnhancement>
-            <minValue>0</minValue>
-            <maxValue>14.567586948394775</maxValue>
-            <algorithm>StretchToMinimumMaximum</algorithm>
-          </blueContrastEnhancement>
-        </rasterrenderer>
-        <brightnesscontrast contrast="0" brightness="0"/>
-        <huesaturation colorizeRed="255" saturation="0" colorizeGreen="128" grayscaleMode="0" colorizeOn="0" colorizeBlue="128" colorizeStrength="100"/>
-        <rasterresampler maxOversampling="2"/>
-      </pipe>
-      <blendMode>0</blendMode>
-    </maplayer>
-    <maplayer refreshOnNotifyEnabled="0" type="raster" hasScaleBasedVisibilityFlag="0" autoRefreshTime="0" refreshOnNotifyMessage="" minScale="1e+8" autoRefreshEnabled="0" maxScale="0">
-      <extent>
-        <xmin>535557.32949328911490738</xmin>
-        <ymin>6265093.19119383115321398</ymin>
-        <xmax>612021.57077635196037591</xmax>
-        <ymax>6339527.68052970990538597</ymax>
-      </extent>
-      <id>ATCORCorrected_METADATA_14120066_f4e721f0_57e8_444f_b9e2_71cd273a2f3d</id>
-      <datasource>../../../../../../PCI Geomatics/Geomatica 2017/user/ATCORCorrected_METADATA_14120066.pix</datasource>
-      <keywordList>
-        <value></value>
-      </keywordList>
-      <layername>ATCORCorrected_METADATA_14120066</layername>
-      <srs>
-        <spatialrefsys>
-          <proj4>+proj=utm +zone=34 +south +datum=WGS84 +units=m +no_defs</proj4>
-          <srsid>3184</srsid>
-          <srid>32734</srid>
-          <authid>EPSG:32734</authid>
-          <description>WGS 84 / UTM zone 34S</description>
-          <projectionacronym>utm</projectionacronym>
-          <ellipsoidacronym>WGS84</ellipsoidacronym>
-          <geographicflag>false</geographicflag>
-        </spatialrefsys>
-      </srs>
-      <resourceMetadata>
-        <identifier></identifier>
-        <parentidentifier></parentidentifier>
-        <language></language>
-        <type></type>
-        <title></title>
-        <abstract></abstract>
-        <fees></fees>
-        <encoding></encoding>
-        <crs>
-          <spatialrefsys>
-            <proj4></proj4>
-            <srsid>0</srsid>
-            <srid>0</srid>
-            <authid></authid>
-            <description></description>
-            <projectionacronym></projectionacronym>
-            <ellipsoidacronym></ellipsoidacronym>
-            <geographicflag>false</geographicflag>
-          </spatialrefsys>
-        </crs>
-        <extent>
-          <spatial crs="" miny="0" maxx="0" minz="0" maxy="0" maxz="0" dimensions="2" minx="0"/>
-          <temporal>
-            <period>
-              <start></start>
-              <end></end>
-            </period>
-          </temporal>
-        </extent>
-        <contact>
-          <name></name>
-          <organization></organization>
-          <position></position>
-          <voice></voice>
-          <fax></fax>
-          <email></email>
-          <role></role>
-        </contact>
-        <links/>
-      </resourceMetadata>
-      <customproperties>
-        <property value="false" key="WMSBackgroundLayer"/>
-        <property value="false" key="WMSPublishDataSourceUrl"/>
-        <property value="0" key="embeddedWidgets/count"/>
-        <property value="Value" key="identify/format"/>
-      </customproperties>
-      <provider>gdal</provider>
-      <noData>
-        <noDataList bandNo="1" useSrcNoData="0"/>
-        <noDataList bandNo="2" useSrcNoData="0"/>
-        <noDataList bandNo="3" useSrcNoData="0"/>
-        <noDataList bandNo="4" useSrcNoData="0"/>
-      </noData>
-      <map-layer-style-manager current="default">
-        <map-layer-style name="default"/>
-      </map-layer-style-manager>
-      <pipe>
-        <rasterrenderer type="multibandcolor" greenBand="2" blueBand="3" opacity="1" alphaBand="-1" redBand="1">
-          <rasterTransparency/>
-          <minMaxOrigin>
-            <limits>None</limits>
-            <extent>WholeRaster</extent>
-            <statAccuracy>Estimated</statAccuracy>
-            <cumulativeCutLower>0.02</cumulativeCutLower>
-            <cumulativeCutUpper>0.98</cumulativeCutUpper>
-            <stdDevFactor>2</stdDevFactor>
-          </minMaxOrigin>
-          <redContrastEnhancement>
-            <minValue>0</minValue>
-            <maxValue>29.5316</maxValue>
-            <algorithm>StretchToMinimumMaximum</algorithm>
-          </redContrastEnhancement>
-          <greenContrastEnhancement>
-            <minValue>0</minValue>
-            <maxValue>20.9594</maxValue>
-            <algorithm>StretchToMinimumMaximum</algorithm>
-          </greenContrastEnhancement>
-          <blueContrastEnhancement>
-            <minValue>0</minValue>
-            <maxValue>14.5676</maxValue>
-            <algorithm>StretchToMinimumMaximum</algorithm>
-          </blueContrastEnhancement>
         </rasterrenderer>
         <brightnesscontrast contrast="0" brightness="0"/>
         <huesaturation colorizeRed="255" saturation="0" colorizeGreen="128" grayscaleMode="0" colorizeOn="0" colorizeBlue="128" colorizeStrength="100"/>
@@ -1548,10 +988,30 @@
             <geographicflag>false</geographicflag>
           </spatialrefsys>
         </crs>
-        <extent/>
+        <extent>
+          <spatial crs="" miny="0" maxx="0" minz="0" maxy="0" maxz="0" dimensions="2" minx="0"/>
+          <temporal>
+            <period>
+              <start></start>
+              <end></end>
+            </period>
+          </temporal>
+        </extent>
+        <contact>
+          <name></name>
+          <organization></organization>
+          <position></position>
+          <voice></voice>
+          <fax></fax>
+          <email></email>
+          <role></role>
+        </contact>
         <links/>
       </resourceMetadata>
       <customproperties>
+        <property value="false" key="WMSBackgroundLayer"/>
+        <property value="false" key="WMSPublishDataSourceUrl"/>
+        <property value="0" key="embeddedWidgets/count"/>
         <property value="Value" key="identify/format"/>
       </customproperties>
       <provider>gdal</provider>
@@ -1565,7 +1025,7 @@
         <map-layer-style name="default"/>
       </map-layer-style-manager>
       <pipe>
-        <rasterrenderer type="multibandcolor" greenBand="2" blueBand="3" opacity="1" alphaBand="-1" redBand="1">
+        <rasterrenderer type="multibandcolor" greenBand="1" blueBand="2" opacity="1" alphaBand="-1" redBand="4">
           <rasterTransparency/>
           <minMaxOrigin>
             <limits>CumulativeCut</limits>
@@ -1576,18 +1036,18 @@
             <stdDevFactor>2</stdDevFactor>
           </minMaxOrigin>
           <redContrastEnhancement>
-            <minValue>600</minValue>
-            <maxValue>1831</maxValue>
+            <minValue>1118</minValue>
+            <maxValue>2848</maxValue>
             <algorithm>StretchToMinimumMaximum</algorithm>
           </redContrastEnhancement>
           <greenContrastEnhancement>
-            <minValue>511</minValue>
-            <maxValue>1328</maxValue>
+            <minValue>600</minValue>
+            <maxValue>1831</maxValue>
             <algorithm>StretchToMinimumMaximum</algorithm>
           </greenContrastEnhancement>
           <blueContrastEnhancement>
-            <minValue>375</minValue>
-            <maxValue>929</maxValue>
+            <minValue>511</minValue>
+            <maxValue>1328</maxValue>
             <algorithm>StretchToMinimumMaximum</algorithm>
           </blueContrastEnhancement>
         </rasterrenderer>
@@ -4709,12 +4169,7 @@ def my_form_open(dialog, layer, feature):
     <layer id="StudyAreaXCalibMosaicSpotExtent_16569ca7_f053_4da9_b8db_0668cb179e05"/>
     <layer id="StudyAreaXCalibMosaicSpotMask_5ef31efe_e257_473b_bba3_17495f574481"/>
     <layer id="SudemL2_LittleKaroo_Mosaic_570838b9_e25e_4f86_8f26_212b61a222fd"/>
-    <layer id="ATCORCorrected_METADATA_14120009_c272728b_febd_43ce_b2ab_b6762688c07b"/>
-    <layer id="ATCORCorrected_METADATA_14120003_309a71f2_4d2d_4870_96a9_cb6c2c1d1046"/>
-    <layer id="ATCORCorrected_METADATA_14120054_55e269b4_4905_4046_9aef_5e5dbe295655"/>
-    <layer id="ATCORCorrected_METADATA_14120060_52bf18c9_f342_42b5_a3be_a9632931250f"/>
     <layer id="OUTPUT_ded20c82_ab20_48b8_99cb_dfd731e1ac34"/>
-    <layer id="ATCORCorrected_METADATA_14120066_f4e721f0_57e8_444f_b9e2_71cd273a2f3d"/>
     <layer id="XCalibMosaic10m_6d1b7bb9_8f13_42ea_8fc1_8e4d9843a554"/>
     <layer id="XCalibMosaic30m_c2a6933a_91e3_46ae_b55d_b2ae4611102e"/>
     <layer id="LE07_L1TP_173083_20100203_20161217_01_T1_b1_5d9f28f6_e8ec_4b47_8784_65c5071abd7e"/>
