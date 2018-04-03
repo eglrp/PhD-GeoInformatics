@@ -264,8 +264,14 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	string srcDsFileName = string(CPLGetCurrentDir()) + "\\SourceDs.tif"; //reuse the same file
 #endif
 	//
-	sprintf_s(gdalString, MAX_PATH, "gdalwarp~-multi~-overwrite~-srcnodata~\"0\"~-dstnodata~\"0\"~-r~cubicspline~-tap~-tr~%d~%d~%s~%s~", (int)abs(refGeoTransform[1]), (int)abs(refGeoTransform[5]), 
-		srcFileName.c_str(), srcDsFileName.c_str());
+
+	//TODO if the raster already has average(/cubicspline? - to test) overviews, it seems this downsampling can go much faster
+	if (modelForm == ModelForms::OFFSET_ONLY)
+		sprintf_s(gdalString, MAX_PATH, "gdalwarp~-multi~-overwrite~-srcnodata~\"0\"~-dstnodata~\"0\"~-r~average~-tap~-tr~%d~%d~%s~%s~", (int)abs(refGeoTransform[1]), (int)abs(refGeoTransform[5]),
+			srcFileName.c_str(), srcDsFileName.c_str());
+	else
+		sprintf_s(gdalString, MAX_PATH, "gdalwarp~-multi~-overwrite~-srcnodata~\"0\"~-dstnodata~\"0\"~-r~cubicspline~-tap~-tr~%d~%d~%s~%s~", (int)abs(refGeoTransform[1]), (int)abs(refGeoTransform[5]), 
+			srcFileName.c_str(), srcDsFileName.c_str());
 	res = GdalWarpWrapper(gdalString);
 
 	if (res != 0)
@@ -412,6 +418,19 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	//TODO: add option for 1 or 2 param fit and output (into one parameter raster)
 	//TODO: erode params after estimation rather than src before estimation
 	int n = srcDsDataSet->GetRasterYSize(), m = srcDsDataSet->GetRasterXSize();
+	
+	std::vector<double> bandScaleForOffsetModel(srcDsDataSet->GetRasterCount(), 0);
+	if (modelForm == ModelForms::OFFSET_ONLY)  // find crude scales for each band for offset only model
+	{
+		for (int k = 0; k < srcDsDataSet->GetRasterCount(); k++)
+		{
+			cv::Scalar srcMean, srcStd, refSubMean, refSubStd;
+			cv::meanStdDev(srcDsBands[k], srcMean, srcStd, srcMaskDsMat >= 0.95*255.0);
+			cv::meanStdDev(refSubBands[k], refSubMean, refSubStd, srcMaskDsMat >= 0.95*255.0);
+			bandScaleForOffsetModel[k] = refSubStd.val[0] / srcStd.val[0];
+		}
+	}
+
 
 	for (int k = 0; k < srcDsDataSet->GetRasterCount(); k++)
 	{
@@ -468,7 +487,10 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 				}
 				else if (modelForm == ModelForms::OFFSET_ONLY)
 				{
-					double offset = cv::mean(refSubWin - srcDsWin, coverageMask).val[0];  
+					double offset = cv::mean(refSubWin - srcDsWin * bandScaleForOffsetModel[k], coverageMask).val[0];
+					//double offset2 = cv::mean(refSubWin - srcDsWin).val[0];
+					//double offset3 = refSubWin.at<double>(0, 0) - srcDsWin.at<double>(0, 0);
+					//double tmp = (srcDsWin.at<double>(0, 0) + offset3) - refSubWin.at<double>(0, 0);
 					paramDsData(i + (winSize[0] - 1) / 2, j + (winSize[1] - 1) / 2, k) = offset;
 				}
 
@@ -525,6 +547,19 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	}
 #endif 
 
+	//cv::Mat tst = paramDsData.ToMat(1) + srcDsBands[1] - refSubBands[1];
+	//double thing = cv::mean(tst == 0, srcMaskDsMat>=0.95*255).val[0];
+	//cv::namedWindow("tst", CV_WINDOW_NORMAL | CV_WINDOW_KEEPRATIO | CV_GUI_NORMAL);
+	//cv::imshow("tst", srcMaskDsMat >= 0.95 * 255);
+	//cv::imshow("tst", refSubBands[1]/2000.);
+	//cv::imshow("tst", srcDsBands[1]/2000.);
+	//cv::imshow("tst", (srcDsBands[1] + paramDsData.ToMat(1))/2000.);
+	//cv::imshow("tst", tst);
+	//cv::waitKey(0);
+	//cv::destroyAllWindows();
+
+
+	//TODO change params to float32 to save disk space (& speed?)
 	//write out params to file
 	err = paramDsDataSet->RasterIO(GDALRWFlag::GF_Write, 0, 0, paramDsDataSet->GetRasterXSize(), paramDsDataSet->GetRasterYSize(),
 		paramDsData.Buf(), paramDsDataSet->GetRasterXSize(), paramDsDataSet->GetRasterYSize(), GDALDataType::GDT_Float64, 
@@ -550,8 +585,12 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	std::cout << "Interpolating calibration params (" << paramUsFileName << ")" << endl << endl;
 
 #if BIGTIFF
-	sprintf_s(gdalString, MAX_PATH, "gdalwarp~-multi~-wo~NUM_THREADS=ALL_CPUS~-co~BIGTIFF=YES~-multi~-wo~NUM_THREADS=ALL_CPUS~-overwrite~-srcnodata~0~-dstnodata~0~-wm~2048~-r~cubicspline~-tr~%f~%f~%s~%s~",
-		fabs(srcGeoTransform[1]), fabs(srcGeoTransform[5]), paramDsFileName.c_str(), paramUsFileName.c_str());
+	/*if (modelForm == ModelForms::OFFSET_ONLY)
+		sprintf_s(gdalString, MAX_PATH, "gdalwarp~-multi~-wo~NUM_THREADS=ALL_CPUS~-co~BIGTIFF=YES~-multi~-wo~NUM_THREADS=ALL_CPUS~-overwrite~-srcnodata~0~-dstnodata~0~-wm~2048~-r~average~-tr~%f~%f~%s~%s~",
+			fabs(srcGeoTransform[1]), fabs(srcGeoTransform[5]), paramDsFileName.c_str(), paramUsFileName.c_str());
+	else*/
+		sprintf_s(gdalString, MAX_PATH, "gdalwarp~-multi~-wo~NUM_THREADS=ALL_CPUS~-co~BIGTIFF=YES~-multi~-wo~NUM_THREADS=ALL_CPUS~-overwrite~-srcnodata~0~-dstnodata~0~-wm~2048~-r~cubicspline~-tr~%f~%f~%s~%s~",
+			fabs(srcGeoTransform[1]), fabs(srcGeoTransform[5]), paramDsFileName.c_str(), paramUsFileName.c_str());
 #else
 	sprintf_s(gdalString, MAX_PATH, "gdalwarp~-multi~-wo~NUM_THREADS=ALL_CPUS~-overwrite~-srcnodata~0~-dstnodata~0~-wm~2048~-r~cubicspline~-tr~%f~%f~%s~%s~",
 		fabs(srcGeoTransform[1]), fabs(srcGeoTransform[5]), paramDsFileName.c_str(), paramUsFileName.c_str());
@@ -591,7 +630,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	papszOptions = CSLSetNameValue(papszOptions, "BIGTIFF", "YES");
 #endif
 	GDALDataset* calibDataSet = srcDataSet->GetDriver()->Create(calibFileName.c_str(), srcDataSet->GetRasterXSize(), 
-		srcDataSet->GetRasterYSize(), 4, GDALDataType::GDT_UInt16, papszOptions);
+		srcDataSet->GetRasterYSize(), 4, GDALDataType::GDT_Int16, papszOptions);  //TODO int16 to allow -ve values for offset models gone wrong
 
 	if (calibDataSet == NULL)
 		throw string("Could not create: " + calibFileName);
@@ -617,8 +656,8 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	Buf3d<double> paramSubData(1, srcDataSet->GetRasterXSize(), nParamBands);
 	Buf3d<double> calibData(1, srcDataSet->GetRasterXSize(), srcDataSet->GetRasterCount());
 	int prog = 0;
-
-#if SEAMLINE_COVERAGE_FIX
+	int updateProgNum = 0;
+#if SEAMLINE_EXTRAP_FIX
 	//upsample eroded mask to source resolution
 #if XCALIB_DEBUG
 	string erodeMaskUsFileName = srcMaskFileName.substr(0, srcFileName.length() - 4) + "_MASK_US_ERODE.tif";
@@ -648,7 +687,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	throw string("Could not open: " + erodeMaskUsFileName);*/
 #endif
 	//TODO: consider rewriting to make sure it is by block (xcalib block size is 256x256), src and param blocks are rows
-
+	//TODO would gdal_calc do this any faster? 
 	//process by row (usually same size as block so should be fast)
 	int nSrcBands = srcDataSet->GetRasterCount();
 	for (int j = 0; j < srcDataSet->GetRasterYSize(); j++)
@@ -665,7 +704,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 		if (err != CPLErr::CE_None)
 			throw string("srcDataSet->RasterIO failure");
 
-#if SEAMLINE_COVERAGE_FIX  //TODO remove - see below
+#if SEAMLINE_EXTRAP_FIX  
 		err = erodeMaskDataSet->RasterIO(GDALRWFlag::GF_Read, (int)paramUlI, (int)paramUlJ + j, srcDataSet->GetRasterXSize(), 1,
 			erodeMaskSubData.Buf(), srcDataSet->GetRasterXSize(), 1, GDALDataType::GDT_Byte,
 			1, NULL, 0, 0, 0); //nLineSpace is wrong I think but not used (?)
@@ -680,14 +719,27 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 				//TO DO: rather just set a nodata mask post proc than read and check the mask for each pixel
 #if TRUE
 				// params are zero outside of coverage zone, so no need for mask here (?) 
-				if (modelForm == ModelForms::GAIN_ONLY)
-					calibData(0, i, k) = paramSubData(0, i, k) * srcData(0, i, k);
-				else if (modelForm == ModelForms::GAIN_AND_OFFSET)
-					calibData(0, i, k) = paramSubData(0, i, k) * srcData(0, i, k) + paramSubData(0, i, k + nSrcBands);
-				else if (modelForm == ModelForms::OFFSET_ONLY)
-					calibData(0, i, k) = srcData(0, i, k) + paramSubData(0, i, k);
+#if SEAMLINE_EXTRAP_FIX
+				if (erodeMaskSubData(0, i, 0) <= (unsigned char)0.95*255.0)
+					calibData(0, i, k) = 0;
+				else
+#else
+				{
+					if (modelForm == ModelForms::GAIN_ONLY)
+						calibData(0, i, k) = paramSubData(0, i, k) * srcData(0, i, k);
+					else if (modelForm == ModelForms::GAIN_AND_OFFSET)
+						calibData(0, i, k) = paramSubData(0, i, k) * srcData(0, i, k) + paramSubData(0, i, k + nSrcBands);
+					else if (modelForm == ModelForms::OFFSET_ONLY)
+					{
+						if (paramSubData(0, i, k) != 0.)  //hack to make xcalib image 0 outside of coverage zone TODO wont work if offet is 0 for real
+							calibData(0, i, k) = bandScaleForOffsetModel[k] * srcData(0, i, k) + paramSubData(0, i, k);
+						else
+							calibData(0, i, k) = 0;
+					}
+				}
+#endif
 #else  //old gain only code
-#if SEAMLINE_COVERAGE_FIX
+#if SEAMLINE_EXTRAP_FIX
 				if (erodeMaskSubData(0, i, 0) <= (unsigned char)0.95*255.0)
 					calibData(0, i, k) = 0;
 				else
@@ -703,10 +755,16 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 		if (err != CPLErr::CE_None)
 			throw string("calibDataSet->RasterIO failure");
 
-		if ((100*j) / srcDataSet->GetRasterYSize() > prog)
+		if ((40*(j+1)) / srcDataSet->GetRasterYSize() > prog)
 		{
-			prog = (100*j) / srcDataSet->GetRasterYSize();
-			std::cout << ".";
+			prog = (40*(j+1)) / srcDataSet->GetRasterYSize();
+			if (2.5*prog > updateProgNum)
+			{
+				std::cout << updateProgNum;
+				updateProgNum += 10;
+			}
+			else
+				std::cout << ".";
 		}
 			
 	}
