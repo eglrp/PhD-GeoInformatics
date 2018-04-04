@@ -50,7 +50,7 @@ using namespace std;
 #define SEAMLINE_EXTRAP_FIX 0					// erodes away one boundary pixel to exclude extrapolated params, SEAMLINE_COVERAGE_FIX must be 1
 #define DO_COMPRESS_OUTPUT 1
 #define BIGTIFF 1
-
+#define COVERAGE_PORTION 0.95
 int defaultWinSize[2] = {1, 1};
 int gdalwarp(int argc, char ** argv);
 int gdal_translate(int argc, char ** argv);
@@ -266,17 +266,16 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	//
 
 	//TODO if the raster already has average(/cubicspline? - to test) overviews, it seems this downsampling can go much faster
-	if (modelForm == ModelForms::OFFSET_ONLY)
+	/*if (modelForm == ModelForms::OFFSET_ONLY)
 		sprintf_s(gdalString, MAX_PATH, "gdalwarp~-multi~-overwrite~-srcnodata~\"0\"~-dstnodata~\"0\"~-r~average~-tap~-tr~%d~%d~%s~%s~", (int)abs(refGeoTransform[1]), (int)abs(refGeoTransform[5]),
 			srcFileName.c_str(), srcDsFileName.c_str());
-	else
+	else*/
 		sprintf_s(gdalString, MAX_PATH, "gdalwarp~-multi~-overwrite~-srcnodata~\"0\"~-dstnodata~\"0\"~-r~cubicspline~-tap~-tr~%d~%d~%s~%s~", (int)abs(refGeoTransform[1]), (int)abs(refGeoTransform[5]), 
 			srcFileName.c_str(), srcDsFileName.c_str());
 	res = GdalWarpWrapper(gdalString);
 
 	if (res != 0)
 		throw string("Could not warp " + srcFileName);
-
 
 	//--------------------------------------------------------------------------------------------------------------
 	//Find the ROI in the ref file that corresponds to the source file
@@ -309,9 +308,9 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	if (modelForm == ModelForms::GAIN_AND_OFFSET)  // store both gain and offset in same raster (gain first, then offset)
 		nParamBands *= 2;
 
-	Buf3d<double> srcDsData(srcDsDataSet->GetRasterYSize(), srcDsDataSet->GetRasterXSize(), srcDsDataSet->GetRasterCount());
-	Buf3d<double> refSubData(srcDsDataSet->GetRasterYSize(), srcDsDataSet->GetRasterXSize(), srcDsDataSet->GetRasterCount());
-	Buf3d<double> paramDsData(srcDsDataSet->GetRasterYSize(), srcDsDataSet->GetRasterXSize(), nParamBands);
+	Buf3d<float> srcDsData(srcDsDataSet->GetRasterYSize(), srcDsDataSet->GetRasterXSize(), srcDsDataSet->GetRasterCount());
+	Buf3d<float> refSubData(srcDsDataSet->GetRasterYSize(), srcDsDataSet->GetRasterXSize(), srcDsDataSet->GetRasterCount());
+	Buf3d<float> paramDsData(srcDsDataSet->GetRasterYSize(), srcDsDataSet->GetRasterXSize(), nParamBands);
 
 #if XCALIB_DEBUG
 	string paramDsFileName = srcDsFileName.substr(0, srcDsFileName.length() - 4) + "_PARAMS.tif"; //make separate files for each source file
@@ -322,7 +321,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	std::cout << "Calculating calibration params (" << paramDsFileName << ")" << endl << endl;
 
 	GDALDataset* paramDsDataSet = srcDsDataSet->GetDriver()->Create(paramDsFileName.c_str(), srcDsDataSet->GetRasterXSize(), 
-		srcDsDataSet->GetRasterYSize(), nParamBands, GDALDataType::GDT_Float64, NULL);
+		srcDsDataSet->GetRasterYSize(), nParamBands, GDALDataType::GDT_Float32, NULL);
 
 	if (paramDsDataSet == NULL)
 		throw string("Could not create: " + paramDsFileName);
@@ -331,14 +330,14 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	paramDsDataSet->SetProjection(srcDsDataSet->GetProjectionRef());	
 
 	CPLErr err = srcDsDataSet->RasterIO(GDALRWFlag::GF_Read, 0, 0, srcDsDataSet->GetRasterXSize(), srcDsDataSet->GetRasterYSize(),
-		srcDsData.Buf(), srcDsDataSet->GetRasterXSize(), srcDsDataSet->GetRasterYSize(), GDALDataType::GDT_Float64, 
+		srcDsData.Buf(), srcDsDataSet->GetRasterXSize(), srcDsDataSet->GetRasterYSize(), GDALDataType::GDT_Float32, 
 		srcDsDataSet->GetRasterCount(), NULL, 0, 0, 0);
 	
 	if (err != CPLErr::CE_None)
 		throw string("srcDsDataSet->RasterIO failure");
 
 	err = refDataSet->RasterIO(GDALRWFlag::GF_Read, (int)refUlI, (int)refUlJ, srcDsDataSet->GetRasterXSize(), srcDsDataSet->GetRasterYSize(),
-		refSubData.Buf(), srcDsDataSet->GetRasterXSize(), srcDsDataSet->GetRasterYSize(), GDALDataType::GDT_Float64, 
+		refSubData.Buf(), srcDsDataSet->GetRasterXSize(), srcDsDataSet->GetRasterYSize(), GDALDataType::GDT_Float32, 
 		srcDsDataSet->GetRasterCount(), NULL, 0, 0, 0);
 
 	if (err != CPLErr::CE_None)
@@ -350,10 +349,10 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	GDALDataset* srcMaskDsDataSet = (GDALDataset*)GDALOpen(srcMaskDsFileName.c_str(), GDALAccess::GA_ReadOnly);
 	if (srcMaskDsDataSet == NULL)
 		throw string("Could not open: " + srcMaskDsFileName);
-	Buf3d<double> srcMaskDsData(srcMaskDsDataSet->GetRasterYSize(), srcMaskDsDataSet->GetRasterXSize(), srcMaskDsDataSet->GetRasterCount());
+	Buf3d<float> srcMaskDsData(srcMaskDsDataSet->GetRasterYSize(), srcMaskDsDataSet->GetRasterXSize(), srcMaskDsDataSet->GetRasterCount());
 
 	err = srcMaskDsDataSet->RasterIO(GDALRWFlag::GF_Read, 0, 0, srcMaskDsDataSet->GetRasterXSize(), srcMaskDsDataSet->GetRasterYSize(),
-		srcMaskDsData.Buf(), srcMaskDsDataSet->GetRasterXSize(), srcMaskDsDataSet->GetRasterYSize(), GDALDataType::GDT_Float64,
+		srcMaskDsData.Buf(), srcMaskDsDataSet->GetRasterXSize(), srcMaskDsDataSet->GetRasterYSize(), GDALDataType::GDT_Float32,
 		srcMaskDsDataSet->GetRasterCount(), NULL, 0, 0, 0);
 
 	if (err != CPLErr::CE_None)
@@ -361,7 +360,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 #if SEAMLINE_EXTRAP_FIX  //TODO change the coverage mask to a vector cutline that can be shrunk inwards for the extrap fix.  then we don't have to create & store us and ds mask images which is clumsy, space and time consuming
 	//make eroded mask for application to upsampled images
 	//string winTitle = "mask";
-	cv::Mat cvMask(srcMaskDsDataSet->GetRasterYSize(), srcMaskDsDataSet->GetRasterXSize(), CV_64FC1, (void*)srcMaskDsData.Buf());
+	cv::Mat cvMask(srcMaskDsDataSet->GetRasterYSize(), srcMaskDsDataSet->GetRasterXSize(), CV_32FC1, (void*)srcMaskDsData.Buf());
 	//cv::namedWindow(winTitle, cv::WINDOW_NORMAL | CV_WINDOW_KEEPRATIO | CV_GUI_EXPANDED);
 	//cv::imshow(winTitle, cvMask / 255);
 	//cv::waitKey(0);
@@ -408,49 +407,46 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 #if TRUE //new opencv mx+c solver with win size >=1
 	cv::Range winRanges[2];
 
-	std::vector<cv::Mat_<double>>& refSubBands = refSubData.ToMatVec();
-	std::vector<cv::Mat_<double>>& srcDsBands = srcDsData.ToMatVec();
+	std::vector<cv::Mat_<float>>& refSubBands = refSubData.ToMatVec();
+	std::vector<cv::Mat_<float>>& srcDsBands = srcDsData.ToMatVec();
 	cv::Mat& srcMaskDsMat = srcMaskDsData.ToMat(0);
 	cv::Mat onesVec;  //(int rows, int cols, int type, const Scalar& s)
 	cv::Mat srcDsConcatMat;
 
-	//TODO: deal with nodata and sliding window boundary conditions (we should erode after, not before I think)
-	//TODO: add option for 1 or 2 param fit and output (into one parameter raster)
-	//TODO: erode params after estimation rather than src before estimation
 	int n = srcDsDataSet->GetRasterYSize(), m = srcDsDataSet->GetRasterXSize();
 	
-	std::vector<double> imageGain(srcDsDataSet->GetRasterCount(), 1);
-	std::vector<double> imageOffset(srcDsDataSet->GetRasterCount(), 0);
+	std::vector<float> imageGain(srcDsDataSet->GetRasterCount(), 1);
+	std::vector<float> imageOffset(srcDsDataSet->GetRasterCount(), 0);
 	for (int k = 0; k < srcDsDataSet->GetRasterCount(); k++)
 	{
 #if TRUE   // suspect this is not valid... give some more thought
 		cv::Scalar srcMean, srcStd, refSubMean, refSubStd;
-		cv::meanStdDev(srcDsBands[k], srcMean, srcStd, srcMaskDsMat >= 0.95*255.0);
-		cv::meanStdDev(refSubBands[k], refSubMean, refSubStd, srcMaskDsMat >= 0.95*255.0);
+		cv::meanStdDev(srcDsBands[k], srcMean, srcStd, srcMaskDsMat >= COVERAGE_PORTION*255.0);
+		cv::meanStdDev(refSubBands[k], refSubMean, refSubStd, srcMaskDsMat >= COVERAGE_PORTION*255.0);
 		if (modelForm == ModelForms::IMAGE_GAIN_AND_OFFSET)  // find per band gains for IMAGE_GAIN_AND_OFFSET model
 			imageGain[k] = refSubStd.val[0] / srcStd.val[0];
 		else if (modelForm == ModelForms::GAIN_AND_IMAGE_OFFSET)  // find per band offsets for GAIN_AND_IMAGE_OFFSET model
 		{
-			cv::meanStdDev(srcDsBands[k] * refSubStd.val[0] / srcStd.val[0], srcMean, srcStd, srcMaskDsMat >= 0.95*255.0);
+			cv::meanStdDev(srcDsBands[k] * refSubStd.val[0] / srcStd.val[0], srcMean, srcStd, srcMaskDsMat >= COVERAGE_PORTION*255.0);
 			imageOffset[k] = refSubMean.val[0] - srcMean.val[0];
 		}
 #else
-		cv::Mat coverageMask = srcMaskDsMat >= 0.95*255.0;
-		onesVec = cv::Mat(n*m, 1, CV_64FC1, cv::Scalar(1.));  //(int rows, int cols, int type, const Scalar& s)
-		//srcDsConcatMat = cv::Mat(n*m, 2, CV_64FC1, cv::Scalar(0.));
+		cv::Mat coverageMask = srcMaskDsMat >= COVERAGE_PORTION*255.0;
+		onesVec = cv::Mat(n*m, 1, CV_32FC1, cv::Scalar(1.));  //(int rows, int cols, int type, const Scalar& s)
+		//srcDsConcatMat = cv::Mat(n*m, 2, CV_32FC1, cv::Scalar(0.));
 		cv::Mat lsSoln;
 		cv::hconcat(srcDsBands[k].clone().setTo(0, coverageMask).reshape(1, n*m), onesVec, srcDsConcatMat);
 		cv::solve(srcDsConcatMat, refSubBands[k].clone().setTo(0, ~coverageMask).reshape(1, n*m), lsSoln, cv::DECOMP_QR);
 		cv::solve(srcDsConcatMat, refSubBands[k].clone().setTo(0, ~coverageMask).reshape(1, n*m), lsSoln, cv::DECOMP_SVD);
 		if (modelForm == ModelForms::IMAGE_GAIN_AND_OFFSET)  // find per band gains for IMAGE_GAIN_AND_OFFSET model
-			imageGain[k] = lsSoln.at<double>(0);
+			imageGain[k] = lsSoln.at<float>(0);
 		else if (modelForm == ModelForms::GAIN_AND_IMAGE_OFFSET)  // find per band offsets for GAIN_AND_IMAGE_OFFSET model
-			imageOffset[k] = lsSoln.at<double>(1);
+			imageOffset[k] = lsSoln.at<float>(1);
 #endif
 	}
 
-	onesVec = cv::Mat(winSize[0] * winSize[1], 1, CV_64FC1, cv::Scalar(1.));  //(int rows, int cols, int type, const Scalar& s)
-	srcDsConcatMat = cv::Mat(winSize[0] * winSize[1], 2, CV_64FC1, cv::Scalar(0.));
+	onesVec = cv::Mat(winSize[0] * winSize[1], 1, CV_32FC1, cv::Scalar(1.));  //(int rows, int cols, int type, const Scalar& s)
+	srcDsConcatMat = cv::Mat(winSize[0] * winSize[1], 2, CV_32FC1, cv::Scalar(0.));
 
 
 	for (int k = 0; k < srcDsDataSet->GetRasterCount(); k++)
@@ -458,6 +454,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 		err = paramDsDataSet->GetRasterBand(k+1)->SetNoDataValue(0);
 		cv::Mat& srcDsBand = srcDsBands[k];
 		cv::Mat& refSubBand = refSubBands[k];
+		//TODO (add option to) make i,j the window center not UL cnr - that way we will have more valid xcalib data
 		for (int j = 0; j < m - winSize[1] + 1; j++)
 		{
 			//int colIdx[2] = {max<int>(j-(winSize[1]-1)/2, 0), min<int>(m-1, j+(winSize[1]-1)/2)};
@@ -471,7 +468,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 				const cv::Mat refSubWin = refSubBand(winRanges);
 				const cv::Mat srcDsMaskDsWin = srcMaskDsMat(winRanges);
 #if SEAMLINE_COVERAGE_FIX
-				cv::Mat coverageMask = srcDsMaskDsWin >= 0.95*255.0;
+				cv::Mat coverageMask = srcDsMaskDsWin >= COVERAGE_PORTION*255.0;
 #else
 				cv::Mat coverageMask = srcDsMaskDsWin > 0.;  
 #endif
@@ -480,25 +477,26 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 				//int valid = (cv::compare( refSubWin == 0);
 				if (modelForm == ModelForms::GAIN_ONLY || modelForm == ModelForms::GAIN_AND_IMAGE_OFFSET)
 				{
-					double gain = cv::mean(refSubWin / (srcDsWin + imageOffset[k]), coverageMask).val[0];  //TODO check this is zero when coverMask is all false
+					float gain = cv::mean(refSubWin / (srcDsWin + imageOffset[k]), coverageMask).val[0];
 					paramDsData(i + (winSize[0] - 1) / 2, j + (winSize[1] - 1) / 2, k) = gain;
 				}
 				else if (modelForm == ModelForms::GAIN_AND_OFFSET)
 				{
 					cv::Mat lsSoln;
-					double coverage = cv::sum(coverageMask).val[0];
+					float coverage = cv::sum(coverageMask).val[0];
 					if (coverage >= 255.*2)  //check we have at least 2 pieces of valid data for our 2 params
 					{
 						if (coverage < winSize[0] * winSize[0] * 255)
 						{
 							//cv::Mat srcDsWinClone = srcDsWin.clone();
-							//cout << srcDsWinClone.at<double>(0, 0) << ", " << srcDsWinClone.at<double>(1, 1) << endl;
+							//cout << srcDsWinClone.at<float>(0, 0) << ", " << srcDsWinClone.at<float>(1, 1) << endl;
 							//srcDsWinClone.setTo(0., ~coverageMask);
-							//cout << srcDsWinClone.at<double>(0, 0) << ", " << srcDsWinClone.at<double>(1, 1) << endl;
+							//cout << srcDsWinClone.at<float>(0, 0) << ", " << srcDsWinClone.at<float>(1, 1) << endl;
 							//srcDsWinClone.reshape(1, winSize[0] * winSize[0]);
-							//cout << srcDsWinClone.at<double>(0) << ", " << srcDsWinClone.at<double>(4) << endl;
+							//cout << srcDsWinClone.at<float>(0) << ", " << srcDsWinClone.at<float>(4) << endl;
 
-							cv::hconcat(srcDsWin.clone().setTo(0, ~coverageMask).reshape(1, winSize[0] * winSize[0]), onesVec, srcDsConcatMat);
+							cv::hconcat(srcDsWin.clone().setTo(0, ~coverageMask).reshape(1, winSize[0] * winSize[0]), 
+								onesVec.setTo(0, ~coverageMask.reshape(1, winSize[0] * winSize[0])), srcDsConcatMat);
 							cv::solve(srcDsConcatMat, refSubWin.clone().setTo(0, ~coverageMask).reshape(1, winSize[0] * winSize[0]), lsSoln, cv::DECOMP_SVD);
 						}
 						else
@@ -508,17 +506,19 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 						}
 					}
 					else
-						lsSoln = cv::Mat(2, 1, CV_64F, cv::Scalar::all(0));  // if we dont have enough coverage, set params to zero 
+						lsSoln = cv::Mat(2, 1, CV_32F, cv::Scalar::all(0));  // if we dont have enough coverage, set params to zero 
 
-					paramDsData(i + (winSize[0] - 1) / 2, j + (winSize[1] - 1) / 2, k) = lsSoln.at<double>(0,0);
-					paramDsData(i + (winSize[0] - 1) / 2, j + (winSize[1] - 1) / 2, k + srcDsDataSet->GetRasterCount()) = lsSoln.at<double>(1, 0);
+					paramDsData(i + (winSize[0] - 1) / 2, j + (winSize[1] - 1) / 2, k) = lsSoln.at<float>(0,0);
+					paramDsData(i + (winSize[0] - 1) / 2, j + (winSize[1] - 1) / 2, k + srcDsDataSet->GetRasterCount()) = lsSoln.at<float>(1, 0);
 				}
 				else if (modelForm == ModelForms::OFFSET_ONLY || modelForm == ModelForms::IMAGE_GAIN_AND_OFFSET)
 				{
-					double offset = cv::mean(refSubWin - srcDsWin * imageGain[k], coverageMask).val[0];
-					//double offset2 = cv::mean(refSubWin - srcDsWin).val[0];
-					//double offset3 = refSubWin.at<double>(0, 0) - srcDsWin.at<double>(0, 0);
-					//double tmp = (srcDsWin.at<double>(0, 0) + offset3) - refSubWin.at<double>(0, 0);
+					float offset = 0.;
+					if (cv::sum(coverageMask).val[0] > 0.)
+						offset = cv::mean(refSubWin - srcDsWin * imageGain[k], coverageMask).val[0];
+					//float offset2 = cv::mean(refSubWin - srcDsWin).val[0];
+					//float offset3 = refSubWin.at<float>(0, 0) - srcDsWin.at<float>(0, 0);
+					//float tmp = (srcDsWin.at<float>(0, 0) + offset3) - refSubWin.at<float>(0, 0);
 					paramDsData(i + (winSize[0] - 1) / 2, j + (winSize[1] - 1) / 2, k) = offset;
 				}
 
@@ -526,11 +526,11 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 				
 
 //#if SEAMLINE_COVERAGE_FIX  //to do
-//				if (count > 0 && srcMaskDsData(i, j, 0) >= 0.95*255.0)
+//				if (count > 0 && srcMaskDsData(i, j, 0) >= COVERAGE_PORTION*255.0)
 //#else
 //				if (count > 0)
 //#endif
-//					paramDsData(i, j, k) = sum / (double)count;
+//					paramDsData(i, j, k) = sum / (float)count;
 //				else
 //					paramDsData(i, j, k) = 0;
 			}
@@ -548,7 +548,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 			for (int i = 0; i < n; i++)
 			{
 				int rowIdx[2] = { max<int>(i - (winSize[0] - 1) / 2, 0), min<int>(n - 1, i + (winSize[0] - 1) / 2) };
-				double sum = 0;
+				float sum = 0;
 				int count = 0;
 
 				for (int jw = colIdx[0]; jw <= colIdx[1]; jw++)
@@ -557,17 +557,17 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 					{
 						if (srcDsData(iw, jw, k) != 0 && refSubData(iw, jw, k) != 0) //ignore nodata
 						{
-							sum += (double)refSubData(iw, jw, k)/(double)srcDsData(iw, jw, k);
+							sum += (float)refSubData(iw, jw, k)/(float)srcDsData(iw, jw, k);
 							count++;
 						}
 					}
 				}
 #if SEAMLINE_COVERAGE_FIX  
-				if (count > 0 && srcMaskDsData(i, j, 0) >= 0.95*255.0)
+				if (count > 0 && srcMaskDsData(i, j, 0) >= COVERAGE_PORTION*255.0)
 #else
 				if (count > 0)
 #endif
-					paramDsData(i, j, k) = sum / (double)count;
+					paramDsData(i, j, k) = sum / (float)count;
 				else
 					paramDsData(i, j, k) = 0;
 			}
@@ -576,9 +576,9 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 #endif 
 
 	//cv::Mat tst = paramDsData.ToMat(1) + srcDsBands[1] - refSubBands[1];
-	//double thing = cv::mean(tst == 0, srcMaskDsMat>=0.95*255).val[0];
+	//float thing = cv::mean(tst == 0, srcMaskDsMat>=COVERAGE_PORTION*255).val[0];
 	//cv::namedWindow("tst", CV_WINDOW_NORMAL | CV_WINDOW_KEEPRATIO | CV_GUI_NORMAL);
-	//cv::imshow("tst", srcMaskDsMat >= 0.95 * 255);
+	//cv::imshow("tst", srcMaskDsMat >= COVERAGE_PORTION * 255);
 	//cv::imshow("tst", refSubBands[1]/2000.);
 	//cv::imshow("tst", srcDsBands[1]/2000.);
 	//cv::imshow("tst", (srcDsBands[1] + paramDsData.ToMat(1))/2000.);
@@ -586,11 +586,9 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	//cv::waitKey(0);
 	//cv::destroyAllWindows();
 
-
-	//TODO change params to float32 to save disk space (& speed?)
 	//write out params to file
 	err = paramDsDataSet->RasterIO(GDALRWFlag::GF_Write, 0, 0, paramDsDataSet->GetRasterXSize(), paramDsDataSet->GetRasterYSize(),
-		paramDsData.Buf(), paramDsDataSet->GetRasterXSize(), paramDsDataSet->GetRasterYSize(), GDALDataType::GDT_Float64, 
+		paramDsData.Buf(), paramDsDataSet->GetRasterXSize(), paramDsDataSet->GetRasterYSize(), GDALDataType::GDT_Float32, 
 		nParamBands, NULL, 0, 0, 0);
 
 	if (err != CPLErr::CE_None)
@@ -660,7 +658,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	papszOptions = CSLSetNameValue(papszOptions, "BIGTIFF", "YES");
 #endif
 	GDALDataset* calibDataSet = srcDataSet->GetDriver()->Create(calibFileName.c_str(), srcDataSet->GetRasterXSize(), 
-		srcDataSet->GetRasterYSize(), 4, GDALDataType::GDT_Int16, papszOptions);  //TODO int16 to allow -ve values for offset models gone wrong
+		srcDataSet->GetRasterYSize(), 4, GDALDataType::GDT_Int16, papszOptions);  //int16 to allow -ve values for offset models gone wrong
 
 	if (calibDataSet == NULL)
 		throw string("Could not create: " + calibFileName);
@@ -682,9 +680,9 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	GDALApplyGeoTransform(paramInvGeoTransform, ulX, ulY, &paramUlI, &paramUlJ);
 	GDALApplyGeoTransform(paramInvGeoTransform, brX, brY, &paramBrI, &paramBrJ);
 
-	Buf3d<double> srcData(1, srcDataSet->GetRasterXSize(), srcDataSet->GetRasterCount());
-	Buf3d<double> paramSubData(1, srcDataSet->GetRasterXSize(), nParamBands);
-	Buf3d<double> calibData(1, srcDataSet->GetRasterXSize(), srcDataSet->GetRasterCount());
+	Buf3d<float> srcData(1, srcDataSet->GetRasterXSize(), srcDataSet->GetRasterCount());
+	Buf3d<float> paramSubData(1, srcDataSet->GetRasterXSize(), nParamBands);
+	Buf3d<float> calibData(1, srcDataSet->GetRasterXSize(), srcDataSet->GetRasterCount());
 	int prog = 0;
 	int updateProgNum = 0;
 #if SEAMLINE_EXTRAP_FIX
@@ -717,19 +715,20 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	throw string("Could not open: " + erodeMaskUsFileName);*/
 #endif
 	//TODO: consider rewriting to make sure it is by block (xcalib block size is 256x256), src and param blocks are rows
-	//TODO would gdal_calc do this any faster? 
+	//TODO would gdal_calc do this any faster?  if so, how
+	//TODO: check the implications of storage pixel vs band ordering i.e. in terms of RasterIO speed 
 	//process by row (usually same size as block so should be fast)
 	int nSrcBands = srcDataSet->GetRasterCount();
 	for (int j = 0; j < srcDataSet->GetRasterYSize(); j++)
 	{
 		err = paramDataSet->RasterIO(GDALRWFlag::GF_Read, (int)paramUlI, (int)paramUlJ+j, srcDataSet->GetRasterXSize(), 1,
-			paramSubData.Buf(), srcDataSet->GetRasterXSize(), 1, GDALDataType::GDT_Float64, 
+			paramSubData.Buf(), srcDataSet->GetRasterXSize(), 1, GDALDataType::GDT_Float32, 
 			nParamBands, NULL, 0, 0, 0);
 		if (err != CPLErr::CE_None)
 			throw string("paramDataSet->RasterIO failure");
 
 		err = srcDataSet->RasterIO(GDALRWFlag::GF_Read, (int)0, (int)j, srcDataSet->GetRasterXSize(), 1,
-			srcData.Buf(), srcDataSet->GetRasterXSize(), 1, GDALDataType::GDT_Float64, 
+			srcData.Buf(), srcDataSet->GetRasterXSize(), 1, GDALDataType::GDT_Float32, 
 			srcDataSet->GetRasterCount(), NULL, 0, 0, 0);
 		if (err != CPLErr::CE_None)
 			throw string("srcDataSet->RasterIO failure");
@@ -750,7 +749,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 #if TRUE
 				// params are zero outside of coverage zone, so no need for mask here (?) 
 #if SEAMLINE_EXTRAP_FIX
-				if (erodeMaskSubData(0, i, 0) <= (unsigned char)0.95*255.0)
+				if (erodeMaskSubData(0, i, 0) <= (unsigned char)COVERAGE_PORTION*255.0)
 					calibData(0, i, k) = 0;
 				else
 #else
@@ -761,7 +760,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 						calibData(0, i, k) = paramSubData(0, i, k) * srcData(0, i, k) + paramSubData(0, i, k + nSrcBands);
 					else if (modelForm == ModelForms::OFFSET_ONLY || modelForm == ModelForms::IMAGE_GAIN_AND_OFFSET)
 					{
-						if (paramSubData(0, i, k) != 0.)  //hack to make xcalib image 0 outside of coverage zone TODO wont work if offet is 0 for real
+						if (paramSubData(0, i, k) != 0.)  // make xcalib image 0 outside of coverage zone
 							calibData(0, i, k) = imageGain[k] * srcData(0, i, k) + paramSubData(0, i, k);
 						else
 							calibData(0, i, k) = 0;
@@ -770,7 +769,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 #endif
 #else  //old gain only code
 #if SEAMLINE_EXTRAP_FIX
-				if (erodeMaskSubData(0, i, 0) <= (unsigned char)0.95*255.0)
+				if (erodeMaskSubData(0, i, 0) <= (unsigned char)COVERAGE_PORTION*255.0)
 					calibData(0, i, k) = 0;
 				else
 #endif
@@ -779,7 +778,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 			}
 		}
 		err = calibDataSet->RasterIO(GDALRWFlag::GF_Write, (int)0, (int)j, srcDataSet->GetRasterXSize(), 1,
-			calibData.Buf(), srcDataSet->GetRasterXSize(), 1, GDALDataType::GDT_Float64, 
+			calibData.Buf(), srcDataSet->GetRasterXSize(), 1, GDALDataType::GDT_Float32, 
 			srcDataSet->GetRasterCount(), NULL, 0, 0, 0);
 		
 		if (err != CPLErr::CE_None)
