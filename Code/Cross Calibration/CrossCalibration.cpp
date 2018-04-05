@@ -38,7 +38,7 @@
 #include <opencv2/core/core.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 #include <opencv2/highgui/highgui.hpp>
-
+#include <omp.h>
 
 #include "CrossCalibration.h"
 
@@ -51,7 +51,7 @@ using namespace std;
 #define DO_COMPRESS_OUTPUT 1
 #define BIGTIFF 1
 #define COVERAGE_PORTION 0.95
-#define SLIDE_WIN_CENTER 1
+#define SLIDE_WIN_CENTER 0
 
 int defaultWinSize[2] = {1, 1};
 int gdalwarp(int argc, char ** argv);
@@ -309,7 +309,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	int nParamBands = srcDsDataSet->GetRasterCount();
 	if (modelForm == ModelForms::GAIN_AND_OFFSET)  // store both gain and offset in same raster (gain first, then offset)
 		nParamBands *= 2;
-
+	//TODO remove all Buf3d and use only cv::Mat
 	Buf3d<float> srcDsData(srcDsDataSet->GetRasterYSize(), srcDsDataSet->GetRasterXSize(), srcDsDataSet->GetRasterCount());
 	Buf3d<float> refSubData(srcDsDataSet->GetRasterYSize(), srcDsDataSet->GetRasterXSize(), srcDsDataSet->GetRasterCount());
 	Buf3d<float> paramDsData(srcDsDataSet->GetRasterYSize(), srcDsDataSet->GetRasterXSize(), nParamBands);
@@ -416,8 +416,8 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 
 	int n = srcDsDataSet->GetRasterYSize(), m = srcDsDataSet->GetRasterXSize();
 	
-	std::vector<float> imageGain(srcDsDataSet->GetRasterCount(), 1);
-	std::vector<float> imageOffset(srcDsDataSet->GetRasterCount(), 0);
+	std::vector<float> imageGain(srcDsDataSet->GetRasterCount(), 1.);
+	std::vector<float> imageOffset(srcDsDataSet->GetRasterCount(), 0.);
 	for (int k = 0; k < srcDsDataSet->GetRasterCount(); k++)
 	{
 #if TRUE   // suspect this is not valid... give some more thought
@@ -454,6 +454,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 		cv::Mat& srcDsBand = srcDsBands[k];
 		cv::Mat& refSubBand = refSubBands[k];
 		//TODO (add option to) make i,j the window center not UL cnr - that way we will have more valid xcalib data
+		//TODO make notes on SLIDE_WIN_CENTER behaviour, disk storage ordering, compression bottlenecks
 #if SLIDE_WIN_CENTER	
 		for (int j = 0; j < m; j++)
 		{
@@ -685,11 +686,12 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	// make block size same as src?  to speed writing?
 	int xBlockSize = 0, yBlockSize = 0;
 	srcDataSet->GetRasterBand(1)->GetBlockSize(&xBlockSize, &yBlockSize);
-
-	papszOptions = CSLSetNameValue(papszOptions, "COMPRESS", "DEFLATE");
+	// the bottleneck in the xcalib creation below is mostly in the deflate compression, then in disk access
+	papszOptions = CSLSetNameValue(papszOptions, "COMPRESS", "DEFLATE");  //LZW instead of DEFLATE makes a big difference to speed
 	papszOptions = CSLSetNameValue(papszOptions, "PREDICTOR", "2");
-	papszOptions = CSLSetNameValue(papszOptions, "BLOCKYSIZE", std::to_string(yBlockSize).c_str());
 	papszOptions = CSLSetNameValue(papszOptions, "BLOCKXSIZE", std::to_string(xBlockSize).c_str());
+	papszOptions = CSLSetNameValue(papszOptions, "BLOCKYSIZE", std::to_string(yBlockSize).c_str());
+	papszOptions = CSLSetNameValue(papszOptions, "NUM_THREADS", "ALL_CPUS");
 	//the below causes srcDataSet->GetDriver()->Create to crash with above block size.  
 	//it seems tiff creates a default block size of a row though for large tiffs (if TILED=NO or not specified I think).
 	//the above options seem to force this default behaviour which is what we want for now 
@@ -724,9 +726,6 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	GDALApplyGeoTransform(paramInvGeoTransform, ulX, ulY, &paramUlI, &paramUlJ);
 	GDALApplyGeoTransform(paramInvGeoTransform, brX, brY, &paramBrI, &paramBrJ);
 
-	/*Buf3d<float> srcData(1, srcDataSet->GetRasterXSize(), srcDataSet->GetRasterCount());
-	Buf3d<float> paramSubData(1, srcDataSet->GetRasterXSize(), nParamBands);
-	Buf3d<float> calibData(1, srcDataSet->GetRasterXSize(), srcDataSet->GetRasterCount());*/
 	cv::Mat_<float> srcData(srcDataSet->GetRasterXSize(), srcDataSet->GetRasterCount());
 	cv::Mat_<float> paramSubData(srcDataSet->GetRasterXSize(), nParamBands);
 	cv::Mat_<float> calibData(srcDataSet->GetRasterXSize(), srcDataSet->GetRasterCount());
@@ -736,12 +735,10 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	cv::Mat_<float> imageGainMat(srcDataSet->GetRasterXSize(), srcDataSet->GetRasterCount(), 1.);
 	for (int i = 0; i < srcDataSet->GetRasterCount(); i++)
 		imageGainMat.row(i) *= imageGain[i];
-	//calibData = srcData * paramSubData;
-	/*cv::multiply(srcData, paramSubData, calibData);
-	calibData = srcData.mul(paramSubData);
-	cv::Mat bob = srcData.mul(paramSubData);*/
+
 	int prog = 0;
 	int updateProgNum = 0;
+
 #if SEAMLINE_EXTRAP_FIX
 	//upsample eroded mask to source resolution
 #if XCALIB_DEBUG
@@ -776,96 +773,76 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	//TODO: consider rewriting to make sure it is by block (xcalib block size is 256x256), src and param blocks are rows
 	//TODO would gdal_calc do this any faster?  if so, how
 	//process by row (usually same size as block so should be fast)
-	//TODO remove GetRaster*Size calls!!! 
 	int nSrcBands = srcDataSet->GetRasterCount();
 	n = srcDataSet->GetRasterYSize(); m = srcDataSet->GetRasterXSize();
-
+//#pragma omp parallel
+//#pragma omp for ordered schedule(dynamic)
 	for (int j = 0; j < n; j++)
 	{
 		//TODO: check the implications of storage pixel vs band ordering i.e. in terms of RasterIO speed i.e. is the data stored on disk in the same way we are reading it?
-		//TODO: also if disk timing read and write is at all similar to processing time then thread this stuff
-		err = paramDataSet->RasterIO(GDALRWFlag::GF_Read, (int)paramUlI, (int)paramUlJ+j, m, 1,
-			paramSubData.data, m, 1, GDALDataType::GDT_Float32, 
-			nParamBands, NULL, 0, 0, 0);
-		if (err != CPLErr::CE_None)
-			throw string("paramDataSet->RasterIO failure");
-
-		err = srcDataSet->RasterIO(GDALRWFlag::GF_Read, (int)0, (int)j, m, 1,
-			srcData.data, m, 1, GDALDataType::GDT_Float32, 
-			nSrcBands, NULL, 0, 0, 0);
-		if (err != CPLErr::CE_None)
-			throw string("srcDataSet->RasterIO failure");
-
-#if SEAMLINE_EXTRAP_FIX  
-		err = erodeMaskDataSet->RasterIO(GDALRWFlag::GF_Read, (int)paramUlI, (int)paramUlJ + j, srcDataSet->GetRasterXSize(), 1,
-			erodeMaskSubData.Buf(), srcDataSet->GetRasterXSize(), 1, GDALDataType::GDT_Byte,
-			1, NULL, 0, 0, 0); //nLineSpace is wrong I think but not used (?)
-		if (err != CPLErr::CE_None)
-			throw string("erodeMaskDataSet->RasterIO failure");
-#endif
-#if TRUE
-#if SEAMLINE_EXTRAP_FIX
-			if (erodeMaskSubData(0, i, 0) <= (unsigned char)COVERAGE_PORTION*255.0)
-				calibData(0, i, k) = 0;
-			else
-#else
+#pragma omp parallel sections  // do disk read/writes in parallel in case files are on different disks
+		{
+#pragma omp section
 			{
-				//TODO rather use CV mats and CV matrix algebra - will be much faster although disk is probably the bottle neck
-				if (modelForm == ModelForms::GAIN_ONLY || modelForm == ModelForms::GAIN_AND_IMAGE_OFFSET)
-					calibData = paramSubData.mul(srcData) + imageOffsetMat; // +imageOffset[k]);					
-				else if (modelForm == ModelForms::GAIN_AND_OFFSET)
-					calibData = paramSubData(cv::Range::all(), cv::Range(0, nSrcBands)).mul(srcData) + 
-						paramSubData(cv::Range::all(), cv::Range(nSrcBands, nParamBands));
-				else if (modelForm == ModelForms::OFFSET_ONLY || modelForm == ModelForms::IMAGE_GAIN_AND_OFFSET)
-					paramSubData = (imageGainMat * srcData + paramSubData) * (paramSubData != 0.);
+				err = paramDataSet->RasterIO(GDALRWFlag::GF_Read, (int)paramUlI, (int)paramUlJ + j, m, 1,
+					paramSubData.data, m, 1, GDALDataType::GDT_Float32,
+					nParamBands, NULL, 0, 0, 0);
+				if (err != CPLErr::CE_None)
+					throw string("paramDataSet->RasterIO failure");
+			}
+#pragma omp section
+			{
+				err = srcDataSet->RasterIO(GDALRWFlag::GF_Read, (int)0, (int)j, m, 1,
+					srcData.data, m, 1, GDALDataType::GDT_Float32,
+					nSrcBands, NULL, 0, 0, 0);
+				if (err != CPLErr::CE_None)
+					throw string("srcDataSet->RasterIO failure");
+			}
+#if SEAMLINE_EXTRAP_FIX  
+#pragma omp section
+			{
+				err = erodeMaskDataSet->RasterIO(GDALRWFlag::GF_Read, (int)paramUlI, (int)paramUlJ + j, m, 1,
+					erodeMaskSubData.data, m, 1, GDALDataType::GDT_Byte,
+					1, NULL, 0, 0, 0); //nLineSpace is wrong I think but not used (?)
+				if (err != CPLErr::CE_None)
+					throw string("erodeMaskDataSet->RasterIO failure");
 			}
 #endif
-#else
-		for (int k = 0; k < nSrcBands; k++)
-		{
-			for (int i = 0; i < m; i++)
+#pragma omp section
+			if (j > 0) // write calibData from the previous loop in parallel with above reads 
 			{
-				//TO DO: will threading help speed things up here?  Eg sim read and write and or mult threads for applying params
-				//TO DO: rather just set a nodata mask post proc than read and check the mask for each pixel
-#if TRUE
-				// params are zero outside of coverage zone, so no need for mask here (?) 
-#if SEAMLINE_EXTRAP_FIX
-				if (erodeMaskSubData(0, i, 0) <= (unsigned char)COVERAGE_PORTION*255.0)
-					calibData(0, i, k) = 0;
-				else
-#else
-				{
-					//TODO rather use CV mats and CV matrix algebra - will be much faster although disk is probably the bottle neck
-					if (modelForm == ModelForms::GAIN_ONLY || modelForm == ModelForms::GAIN_AND_IMAGE_OFFSET)
-						calibData(0, i, k) = paramSubData(0, i, k) * (srcData(0, i, k) + imageOffset[k]);
-					else if (modelForm == ModelForms::GAIN_AND_OFFSET)
-						calibData(0, i, k) = paramSubData(0, i, k) * srcData(0, i, k) + paramSubData(0, i, k + nSrcBands);
-					else if (modelForm == ModelForms::OFFSET_ONLY || modelForm == ModelForms::IMAGE_GAIN_AND_OFFSET)
-					{
-						if (paramSubData(0, i, k) != 0.)  // make xcalib image 0 outside of coverage zone
-							calibData(0, i, k) = imageGain[k] * srcData(0, i, k) + paramSubData(0, i, k);
-						else
-							calibData(0, i, k) = 0;
-					}
-				}
-#endif
-#else  //old gain only code
-#if SEAMLINE_EXTRAP_FIX
-				if (erodeMaskSubData(0, i, 0) <= (unsigned char)COVERAGE_PORTION*255.0)
-					calibData(0, i, k) = 0;
-				else
-#endif
-					calibData(0, i, k) = paramSubData(0, i, k) * srcData(0, i, k);
-#endif
+				err = calibDataSet->RasterIO(GDALRWFlag::GF_Write, (int)0, (int)j, m, 1,
+					calibData.data, m, 1, GDALDataType::GDT_Float32,
+					nSrcBands, NULL, 0, 0, 0);
+
+				if (err != CPLErr::CE_None)
+					throw string("calibDataSet->RasterIO failure");
 			}
 		}
+#pragma omp barrier
+		{
+			//TODO rather use CV mats and CV matrix algebra - will be much faster although disk&compression is probably the bottle neck
+			if (modelForm == ModelForms::GAIN_ONLY || modelForm == ModelForms::GAIN_AND_IMAGE_OFFSET)
+				calibData = paramSubData.mul(srcData) + imageOffsetMat; // +imageOffset[k]);					
+			else if (modelForm == ModelForms::GAIN_AND_OFFSET)
+				calibData = paramSubData(cv::Range::all(), cv::Range(0, nSrcBands)).mul(srcData) +
+					paramSubData(cv::Range::all(), cv::Range(nSrcBands, nParamBands));
+			else if (modelForm == ModelForms::OFFSET_ONLY || modelForm == ModelForms::IMAGE_GAIN_AND_OFFSET)
+				//calibData = (imageGainMat.mul(srcData) + paramSubData).mul(cv::Mat_<float>(paramSubData != 0.));
+				calibData = imageGainMat.mul(srcData) + paramSubData;
+		}
+		//if (erodeMaskSubData(0, i, 0) <= (unsigned char)COVERAGE_PORTION*255.0)
+			//	calibData(0, i, k) = 0;
+			//else
+#if SEAMLINE_EXTRAP_FIX
+		calibData = (erodeMaskSubData < (unsigned char)COVERAGE_PORTION*255.0).mul(calibData);
 #endif
-		err = calibDataSet->RasterIO(GDALRWFlag::GF_Write, (int)0, (int)j, m, 1,
-			calibData.data, m, 1, GDALDataType::GDT_Float32, 
-			nSrcBands, NULL, 0, 0, 0);
-		
-		if (err != CPLErr::CE_None)
-			throw string("calibDataSet->RasterIO failure");
+		//err = calibDataSet->RasterIO(GDALRWFlag::GF_Write, (int)0, (int)j, m, 1,
+		//	calibData.data, m, 1, GDALDataType::GDT_Float32, 
+		//	nSrcBands, NULL, 0, 0, 0);
+		//
+		//if (err != CPLErr::CE_None)
+		//	throw string("calibDataSet->RasterIO failure");
 
 		if ((40*(j+1)) / n > prog)
 		{
@@ -879,6 +856,15 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 				std::cout << ".";
 		}
 			
+	}
+	//write out calibData from final loop
+	{
+		err = calibDataSet->RasterIO(GDALRWFlag::GF_Write, (int)0, (int)n-1, m, 1,
+			calibData.data, m, 1, GDALDataType::GDT_Float32,
+			nSrcBands, NULL, 0, 0, 0);
+
+		if (err != CPLErr::CE_None)
+			throw string("calibDataSet->RasterIO failure");
 	}
 	std::cout << endl << endl;
 		
