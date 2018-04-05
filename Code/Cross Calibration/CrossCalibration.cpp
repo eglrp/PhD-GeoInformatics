@@ -425,7 +425,13 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 		cv::meanStdDev(srcDsBands[k], srcMean, srcStd, srcMaskDsMat >= COVERAGE_PORTION*255.0);
 		cv::meanStdDev(refSubBands[k], refSubMean, refSubStd, srcMaskDsMat >= COVERAGE_PORTION*255.0);
 		if (modelForm == ModelForms::IMAGE_GAIN_AND_OFFSET)  // find per band gains for IMAGE_GAIN_AND_OFFSET model
+		{
+			//cv::Scalar srcMean, srcStd, refSubMean, refSubStd;
+			//cv::meanStdDev(srcDsBands[k], srcMean, srcStd, srcMaskDsMat >= 0.95*255.0);
+			//cv::meanStdDev(refSubBands[k], refSubMean, refSubStd, srcMaskDsMat >= 0.95*255.0);
+			//bandScaleForOffsetModel[k] = refSubStd.val[0] / srcStd.val[0];
 			imageGain[k] = refSubStd.val[0] / srcStd.val[0];
+		}
 		else if (modelForm == ModelForms::GAIN_AND_IMAGE_OFFSET)  // find per band offsets for GAIN_AND_IMAGE_OFFSET model
 		{
 			cv::meanStdDev(srcDsBands[k] * refSubStd.val[0] / srcStd.val[0], srcMean, srcStd, srcMaskDsMat >= COVERAGE_PORTION*255.0);
@@ -590,9 +596,9 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 				}
 				else if (modelForm == ModelForms::OFFSET_ONLY || modelForm == ModelForms::IMAGE_GAIN_AND_OFFSET)
 				{
-					float offset = 0.;
-					if (cv::sum(coverageMask).val[0] > 0.)
-						offset = cv::mean(refSubWin - srcDsWin * imageGain[k], coverageMask).val[0];
+					//double offset = cv::mean(refSubWin - srcDsWin * bandScaleForOffsetModel[k], coverageMask).val[0];
+					//paramDsData(i + (winSize[0] - 1) / 2, j + (winSize[1] - 1) / 2, k) = offset;
+					float offset = cv::mean(refSubWin - srcDsWin * imageGain[k], coverageMask).val[0];
 					paramDsData(i + winCenterOffset[0], j + winCenterOffset[1], k) = offset;
 				}
 
@@ -611,6 +617,8 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 		}
 #endif
 	}
+	//float dum = cv::max(paramDsData.ToMat(0), -9999);
+	//std::cout << paramDsData.ToMat(0) << endl;
 
 	//cv::Mat tst = paramDsData.ToMat(1) + srcDsBands[1] - refSubBands[1];
 	//float thing = cv::mean(tst == 0, srcMaskDsMat>=COVERAGE_PORTION*255).val[0];
@@ -731,10 +739,10 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	cv::Mat_<float> calibData(srcDataSet->GetRasterXSize(), srcDataSet->GetRasterCount());
 	cv::Mat_<float> imageOffsetMat(srcDataSet->GetRasterXSize(), srcDataSet->GetRasterCount(), 0.);
 	for (int i = 0; i < srcDataSet->GetRasterCount(); i++)
-		imageOffsetMat.row(i) += imageOffset[i];
+		imageOffsetMat.col(i).setTo(imageOffset[i]);
 	cv::Mat_<float> imageGainMat(srcDataSet->GetRasterXSize(), srcDataSet->GetRasterCount(), 1.);
 	for (int i = 0; i < srcDataSet->GetRasterCount(); i++)
-		imageGainMat.row(i) *= imageGain[i];
+		imageGainMat.col(i).setTo(imageGain[i]);
 
 	int prog = 0;
 	int updateProgNum = 0;
@@ -828,14 +836,21 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 				calibData = paramSubData(cv::Range::all(), cv::Range(0, nSrcBands)).mul(srcData) +
 					paramSubData(cv::Range::all(), cv::Range(nSrcBands, nParamBands));
 			else if (modelForm == ModelForms::OFFSET_ONLY || modelForm == ModelForms::IMAGE_GAIN_AND_OFFSET)
-				//calibData = (imageGainMat.mul(srcData) + paramSubData).mul(cv::Mat_<float>(paramSubData != 0.));
-				calibData = imageGainMat.mul(srcData) + paramSubData;
+				calibData = (srcData.mul(imageGainMat) + paramSubData).mul(cv::Mat_<float>(paramSubData != 0.)/255);
+			//else if (modelForm == ModelForms::OFFSET_ONLY)
+			//{
+			//	if (paramSubData(0, i, k) != 0.)  //hack to make xcalib image 0 outside of coverage zone TODO wont work if offet is 0 for real
+			//		calibData(0, i, k) = bandScaleForOffsetModel[k] * srcData(0, i, k) + paramSubData(0, i, k);
+			//	else
+			//		calibData(0, i, k) = 0;
+			//}
+				//calibData = imageGainMat.mul(srcData) + paramSubData;
 		}
 		//if (erodeMaskSubData(0, i, 0) <= (unsigned char)COVERAGE_PORTION*255.0)
 			//	calibData(0, i, k) = 0;
 			//else
 #if SEAMLINE_EXTRAP_FIX
-		calibData = (erodeMaskSubData < (unsigned char)COVERAGE_PORTION*255.0).mul(calibData);
+		calibData = (erodeMaskSubData < (unsigned char)COVERAGE_PORTION*255.0).mul(calibData)/255.;
 #endif
 		//err = calibDataSet->RasterIO(GDALRWFlag::GF_Write, (int)0, (int)j, m, 1,
 		//	calibData.data, m, 1, GDALDataType::GDT_Float32, 
@@ -855,7 +870,6 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 			else
 				std::cout << ".";
 		}
-			
 	}
 	//write out calibData from final loop
 	{
