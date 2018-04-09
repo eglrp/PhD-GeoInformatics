@@ -9,11 +9,11 @@
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <LocalDebuggerCommandArguments>-o -w 3 3 -p 5 "D:\Data\Development\Projects\PhD GeoInformatics\Data\MODIS\MCD43A4.A2015241.h20v12.005.2015260133130\MCD43A4.A2015241.h20v12.005.2015260133130.NgiBandOrder.Lo25Wgs84.tif" "C:\Data\Development\Projects\PhD GeoInformatics\Code\Cross Calibration\o3324c_2015_1004_03_0100_RGBN.tif"</LocalDebuggerCommandArguments>
+    <LocalDebuggerCommandArguments>-o -w 3 3 -p 2 "D:\Data\Development\Projects\PhD GeoInformatics\Data\MODIS\MCD43A4.A2015241.h20v12.005.2015260133130\MCD43A4.A2015241.h20v12.005.2015260133130.NgiBandOrder.Lo25Wgs84.tif" "C:\Data\Development\Projects\PhD GeoInformatics\Code\Cross Calibration\o3324c_2015_1004_03_0100_RGBN.tif"</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <LocalDebuggerCommandArguments>-o -w 3 3 -p 2 "D:\Data\Development\Projects\PhD GeoInformatics\Data\MODIS\MCD43A4.A2015241.h20v12.005.2015260133130\MCD43A4.A2015241.h20v12.005.2015260133130.NgiBandOrder.Lo25Wgs84.tif" "C:\Data\Development\Projects\PhD GeoInformatics\Code\Cross Calibration\o3324c_2015_1004_03_0100_RGBN.tif"</LocalDebuggerCommandArguments>
+    <LocalDebuggerCommandArguments>-o -w 3 3 -p 4 "D:\Data\Development\Projects\PhD GeoInformatics\Data\MODIS\MCD43A4.A2015241.h20v12.005.2015260133130\MCD43A4.A2015241.h20v12.005.2015260133130.NgiBandOrder.Lo25Wgs84.tif" "C:\Data\Development\Projects\PhD GeoInformatics\Code\Cross Calibration\o3324c_2015_1004_03_0100_RGBN.tif"</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
 </Project>
