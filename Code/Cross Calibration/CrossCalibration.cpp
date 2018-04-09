@@ -320,7 +320,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	//-------------------------------------------------------------------------------------------------
 
 	int nParamBands = srcDsDataSet->GetRasterCount();
-	if (modelForm == ModelForms::GAIN_AND_OFFSET)  // store both gain and offset in same raster (gain first, then offset)
+	if (modelForm == ModelForms::GAIN_AND_OFFSET || modelForm == ModelForms::GAIN_AND_OFFSET_IND_WIN)  // store both gain and offset in same raster (gain first, then offset)
 		nParamBands *= 2;
 	//TODO remove all Buf3d and use only cv::Mat - will need to be a 3D Mat though which is not working in this version
 	Buf3d<float> srcDsData(srcDsDataSet->GetRasterYSize(), srcDsDataSet->GetRasterXSize(), srcDsDataSet->GetRasterCount());
@@ -466,10 +466,13 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	}
 
 	int winCenterOffset[2] = {(winSize[0] - 1)/2, (winSize[1] - 1)/2};
+	//TODO: As an alternative to the GAIN_AND_IMAGE_OFFSET model above, we could have different window sizes for gain and offset 
+	//params, use the setTo(0) & onesVec in conjunction with Mx+C model to implement this.  This way we could have a larger offset window
+	//and smaller gain window.  Or perhaps just set offset window to full image by default.
 
 	for (int k = 0; k < srcDsDataSet->GetRasterCount(); k++)
 	{
-		err = paramDsDataSet->GetRasterBand(k+1)->SetNoDataValue(0);
+		err = paramDsDataSet->GetRasterBand(k + 1)->SetNoDataValue(0);
 		cv::Mat& srcDsBand = srcDsBands[k];
 		cv::Mat& refSubBand = refSubBands[k];
 		//TODO (add option to) make i,j the window center not UL cnr - that way we will have more valid xcalib data
@@ -477,20 +480,20 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 #if SLIDE_WIN_CENTER	
 		for (int j = 0; j < nCols; j++)
 		{
-			winRanges[1] = cv::Range(max<int>(j - winCenterOffset[1], 0), min<int>(nCols, j + winSize[1]- winCenterOffset[1]));
+			winRanges[1] = cv::Range(max<int>(j - winCenterOffset[1], 0), min<int>(nCols, j + winSize[1] - winCenterOffset[1]));
 			for (int i = 0; i < nRows; i++)
 			{
 				winRanges[0] = cv::Range(max<int>(i - winCenterOffset[0], 0), min<int>(nRows, i + winSize[0] - winCenterOffset[0]));
 				// extract sliding window ROI - (i, j) is center
-				const cv::Mat srcDsWin = srcDsBand(winRanges);  
+				const cv::Mat srcDsWin = srcDsBand(winRanges);
 				const cv::Mat refSubWin = refSubBand(winRanges);
 				const cv::Mat srcDsMaskDsWin = srcMaskDsMat(winRanges);
 				const cv::Mat::MSize coveredWinSize = srcDsWin.size;
 
 #if SEAMLINE_COVERAGE_FIX
-				cv::Mat coverageMask = srcDsMaskDsWin >= COVERAGE_PORTION*255.0;
+				cv::Mat coverageMask = srcDsMaskDsWin >= (COVERAGE_PORTION*255.0);
 #else
-				cv::Mat coverageMask = srcDsMaskDsWin > 0.;  
+				cv::Mat coverageMask = srcDsMaskDsWin > 0.;
 #endif
 				// convert sliding win data to col vectors etc suitable for LS
 				// find LS param estimates
@@ -504,31 +507,49 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 				{
 					cv::Mat lsSoln;
 					float coverage = cv::sum(coverageMask).val[0];
-					
-					cv::Mat onesVec = cv::Mat(coveredWinSize[0] * coveredWinSize[1], 1, CV_32FC1, cv::Scalar(1.));  //(int rows, int cols, int type, const Scalar& s)
-					cv::Mat srcDsConcatMat = cv::Mat(coveredWinSize[0] * coveredWinSize[1], 2, CV_32FC1, cv::Scalar(0.));
-					cv::Mat srcVec = srcDsWin.clone().setTo(0, ~coverageMask).reshape(1, coveredWinSize[0]*coveredWinSize[1]);
-					cv::Mat refVec = refSubWin.clone().setTo(0, ~coverageMask).reshape(1, coveredWinSize[0] * coveredWinSize[1]);
-					cv::Mat coveredOnesVec = onesVec.setTo(0, ~coverageMask.reshape(1, coveredWinSize[0] * coveredWinSize[1]));
-					if (coverage >= 255.*2)  //check we have at least 2 pieces of valid data for our 2 params
+
+
+					//#if XCALIB_DEBUG
+					//#endif
+					if (coverage >= 255. * 2)  //check we have at least 2 pieces of valid data for our 2 params
 					{
+						cv::Mat onesVec = cv::Mat(coveredWinSize[0] * coveredWinSize[1], 1, CV_32FC1, cv::Scalar(1.));  //(int rows, int cols, int type, const Scalar& s)
+						cv::Mat srcDsConcatMat = cv::Mat(coveredWinSize[0] * coveredWinSize[1], 2, CV_32FC1, cv::Scalar(0.));
+						cv::Mat srcVec = srcDsWin.clone().setTo(0, ~coverageMask).reshape(1, coveredWinSize[0] * coveredWinSize[1]);
+						cv::Mat refVec = refSubWin.clone().setTo(0, ~coverageMask).reshape(1, coveredWinSize[0] * coveredWinSize[1]);
+						cv::Mat coveredOnesVec = onesVec.setTo(0, ~coverageMask.reshape(1, coveredWinSize[0] * coveredWinSize[1]));
+						/*cout << "(i, j)" << i << ", " << j << endl;
+						cout << "coverageMask:" << coverageMask << endl;
+						cout << "onesVec:" << onesVec << endl;
+						cout << "coveredOnesVec:" << coveredOnesVec << endl;
+						cout << "srcDsConcatMat:" << srcDsConcatMat << endl;
+						cout << "srcDsWin:" << srcDsWin << endl;
+						cout << "srcVec:" << srcVec << endl;
+						cout << "refSubWin:" << refSubWin << endl;
+						cout << "refVec:" << refVec << endl;*/
 						//if (coverage < winSize[0] * winSize[0] * 255)
 						{
 							cv::hconcat(srcVec, coveredOnesVec, srcDsConcatMat);
-							cv::solve(srcDsConcatMat, refVec, lsSoln, cv::DECOMP_SVD);
+							cv::solve(srcDsConcatMat, refVec, lsSoln, cv::DECOMP_QR);
 						}
+						//cout << "lsSoln:" << lsSoln << endl;
 						//else
 						//{
 						//	cv::Mat srcVec = srcDsWin.clone().reshape(1, srcDsWin.rows*srcDsWin.cols);
 						//	cv::hconcat(srcVec, onesVec, srcDsConcatMat);
 						//	cv::solve(srcDsConcatMat, refSubWin.clone().reshape(1, refSubWin.rows*refSubWin.cols), lsSoln, cv::DECOMP_SVD);
 						//}
+
 					}
 					else
 						lsSoln = cv::Mat(2, 1, CV_32F, cv::Scalar::all(0));  // if we dont have enough coverage, set params to zero 
 
-					paramDsData(i, j, k) = lsSoln.at<float>(0,0);
+					paramDsData(i, j, k) = lsSoln.at<float>(0, 0);
 					paramDsData(i, j, k + srcDsDataSet->GetRasterCount()) = lsSoln.at<float>(1, 0);
+				}
+				else if (modelForm == ModelForms::GAIN_AND_OFFSET_IND_WIN)
+				{
+
 				}
 				else if (modelForm == ModelForms::OFFSET_ONLY || modelForm == ModelForms::IMAGE_GAIN_AND_OFFSET)
 				{
@@ -542,8 +563,9 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 			}
 		}
 #else  //SLIDE_WIN_ULCNR
-		onesVec = cv::Mat(winSize[0] * winSize[1], 1, CV_32FC1, cv::Scalar(1.));  //(int rows, int cols, int type, const Scalar& s)
-		srcDsConcatMat = cv::Mat(winSize[0] * winSize[1], 2, CV_32FC1, cv::Scalar(0.));
+
+		cv::Mat onesVec = cv::Mat(winSize[0] * winSize[1], 1, CV_32FC1, cv::Scalar(1.));  //(int rows, int cols, int type, const Scalar& s)
+		cv::Mat srcDsConcatMat = cv::Mat(winSize[0] * winSize[1], 2, CV_32FC1, cv::Scalar(0.));
 
 		for (int j = 0; j < nCols - winSize[1] + 1; j++)
 		{
@@ -576,17 +598,40 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 					float coverage = cv::sum(coverageMask).val[0];
 					if (coverage >= 255. * 2)  //check we have at least 2 pieces of valid data for our 2 params
 					{
-						if (coverage < winSize[0] * winSize[0] * 255)
-						{
-							cv::hconcat(srcDsWin.clone().setTo(0, ~coverageMask).reshape(1, winSize[0] * winSize[0]),
-								onesVec.setTo(0, ~coverageMask.reshape(1, winSize[0] * winSize[0])), srcDsConcatMat);
-							cv::solve(srcDsConcatMat, refSubWin.clone().setTo(0, ~coverageMask).reshape(1, winSize[0] * winSize[0]), lsSoln, cv::DECOMP_SVD);
-						}
-						else
-						{
-							cv::hconcat(srcDsWin.clone().reshape(1, winSize[0] * winSize[0]), onesVec, srcDsConcatMat);
-							cv::solve(srcDsConcatMat, refSubWin.clone().reshape(1, winSize[0] * winSize[0]), lsSoln, cv::DECOMP_SVD);
-						}
+						//cv::Mat onesVec = cv::Mat(winSize[0] * winSize[1], 1, CV_32FC1, cv::Scalar(1.));  //(int rows, int cols, int type, const Scalar& s)
+						//cv::Mat srcDsConcatMat = cv::Mat(winSize[0] * winSize[1], 2, CV_32FC1, cv::Scalar(0.));
+						onesVec.setTo(1.);   //NB
+						cv::Mat srcVec = srcDsWin.clone().setTo(0, ~coverageMask).reshape(1, winSize[0] * winSize[1]);
+						cv::Mat refVec = refSubWin.clone().setTo(0, ~coverageMask).reshape(1, winSize[0] * winSize[1]);
+						cv::Mat coveredOnesVec = onesVec.setTo(0, ~coverageMask.reshape(1, winSize[0] * winSize[1]));
+
+						cout << "(i, j)" << i << ", " << j << endl;
+						cout << "coverageMask:" << coverageMask << endl;
+						cout << "onesVec:" << onesVec << endl;
+						cout << "coveredOnesVec:" << coveredOnesVec << endl;
+						cout << "srcDsConcatMat:" << srcDsConcatMat << endl;
+						cout << "srcDsWin:" << srcDsWin << endl;
+						cout << "srcVec:" << srcVec << endl;
+						cout << "refSubWin:" << refSubWin << endl;
+						cout << "refVec:" << refVec << endl;
+
+						cv::hconcat(srcVec, coveredOnesVec, srcDsConcatMat);
+						cv::solve(srcDsConcatMat, refVec, lsSoln, cv::DECOMP_SVD);
+
+						cout << "lsSoln:" << lsSoln << endl;
+
+
+						//if (coverage < winSize[0] * winSize[0] * 255)
+						//{
+						//	cv::hconcat(srcDsWin.clone().setTo(0, ~coverageMask).reshape(1, winSize[0] * winSize[0]),
+						//		onesVec.setTo(0, ~coverageMask.reshape(1, winSize[0] * winSize[0])), srcDsConcatMat);
+						//	cv::solve(srcDsConcatMat, refSubWin.clone().setTo(0, ~coverageMask).reshape(1, winSize[0] * winSize[0]), lsSoln, cv::DECOMP_SVD);
+						//}
+						//else
+						//{
+						//	cv::hconcat(srcDsWin.clone().reshape(1, winSize[0] * winSize[0]), onesVec, srcDsConcatMat);
+						//	cv::solve(srcDsConcatMat, refSubWin.clone().reshape(1, winSize[0] * winSize[0]), lsSoln, cv::DECOMP_SVD);
+						//}
 					}
 					else
 						lsSoln = cv::Mat(2, 1, CV_32F, cv::Scalar::all(0));  // if we dont have enough coverage, set params to zero 
@@ -601,7 +646,6 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 					float offset = cv::mean(refSubWin - srcDsWin * imageGain[k], coverageMask).val[0];
 					paramDsData(i + winCenterOffset[0], j + winCenterOffset[1], k) = offset;
 				}
-
 			}
 		}
 #endif

@@ -470,6 +470,8 @@ Mat imread_geo( const string& filename, const int& imageType ){
 */
 int main( int argc, char* argv[] )
 {
+	cv::Mat_<float> tmp(3, 4, 0.);
+	cout << tmp << endl;
 
 	if( argc < 2 )
 	{
@@ -477,6 +479,8 @@ int main( int argc, char* argv[] )
 		cerr << "usage: " << argv[0] << " [input image] [optional: output image]" << endl;
 		return 1;
 	}
+
+
 
 	try
 

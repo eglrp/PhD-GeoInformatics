@@ -85,8 +85,8 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(ProjectDir)$(Platform)\$(Configuration)\</OutDir>
-    <IncludePath>C:\Data\Development\Toolboxes\OpenCV-2.4.8\build\include;C:\OSGeo4W64\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\OSGeo4W64\lib;C:\Data\Development\Toolboxes\OpenCV-2.4.8\build\x64\vc12\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Data\Development\Toolboxes\OpenCV-2.4.8\buildVs2017x64\install\include;C:\OSGeo4W64\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\OSGeo4W64\lib;C:\Data\Development\Toolboxes\OpenCV-2.4.8\buildVs2017x64\install\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -97,8 +97,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>C:\OSGeo4W64\include;C:\Data\Development\Toolboxes\OpenCV-2.4.8\build\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\OSGeo4W64\lib;C:\Data\Development\Toolboxes\OpenCV-2.4.8\build\x64\vc12\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\OSGeo4W64\include;C:\Data\Development\Toolboxes\OpenCV-2.4.8\buildVs2017x64\install\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\OSGeo4W64\lib;C:\Data\Development\Toolboxes\OpenCV-2.4.8\buildVs2017x64\install\lib;$(LibraryPath)</LibraryPath>
     <ReferencePath />
     <ExcludePath>$(WindowsSdkDir)include;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkMSBuildTools);$(VCInstallDir)atlmfc\lib\amd64;$(VCInstallDir)lib\amd64</ExcludePath>
     <OutDir>$(ProjectDir)$(Platform)\$(Configuration)\</OutDir>
@@ -135,7 +135,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>gdal_i.lib;opencv_core248.lib;opencv_imgproc248.lib;opencv_highgui248.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>gdal_i.lib;opencv_core248d.lib;opencv_imgproc248d.lib;opencv_highgui248d.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
       <IgnoreSpecificDefaultLibraries>
       </IgnoreSpecificDefaultLibraries>
