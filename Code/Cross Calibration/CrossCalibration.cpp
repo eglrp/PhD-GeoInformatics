@@ -72,7 +72,7 @@ using namespace std;
 #define DO_COMPRESS_OUTPUT 1
 #define BIGTIFF 1
 #define COVERAGE_PORTION 0.95
-#define SLIDE_WIN_CENTER 1
+#define SLIDE_WIN_CENTER 0
 
 int defaultWinSize[2] = {1, 1};
 int gdalwarp(int argc, char ** argv);
@@ -81,6 +81,8 @@ int gdal_translate(int argc, char ** argv);
 //-------------------------------------------------------------------------------------------------
 //Parses argString and calls gdalwarp backend
 //-------------------------------------------------------------------------------------------------
+//TODO: I don't think we actually need gdalwarp - gdaltranslate can resample.  gdalwarp is for reprojecting / mosaicing.  
+//TODO: Also, we may not need gdal_translate as it essentially seems to be a call to CopyDataset (or something similar...)
 int GdalWarpWrapper(const string& argString)
 {
 	int numFields = (int)count(argString.begin(), argString.end(), '~');
@@ -320,7 +322,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	//-------------------------------------------------------------------------------------------------
 
 	int nParamBands = srcDsDataSet->GetRasterCount();
-	if (modelForm == ModelForms::GAIN_AND_OFFSET || modelForm == ModelForms::GAIN_AND_OFFSET_IND_WIN)  // store both gain and offset in same raster (gain first, then offset)
+	if (modelForm == ModelForms::GAIN_AND_OFFSET)  // store both gain and offset in same raster (gain first, then offset)
 		nParamBands *= 2;
 	//TODO remove all Buf3d and use only cv::Mat - will need to be a 3D Mat though which is not working in this version
 	Buf3d<float> srcDsData(srcDsDataSet->GetRasterYSize(), srcDsDataSet->GetRasterXSize(), srcDsDataSet->GetRasterCount());
@@ -413,17 +415,19 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	erodeMaskDsDataSet->FlushCache();
 	GDALClose(erodeMaskDsDataSet);
 
-#else //SEAMLINE_COVERAGE_FIX
+#else //#if SEAMLINE_EXTRAP_FIX
 	string erodeMaskDsFileName = srcMaskDsFileName;  // don't do erosion
 #endif  //#if SEAMLINE_EXTRAP_FIX
 	GDALClose(srcMaskDsDataSet);
+	cv::Mat& srcMaskDsMat = srcMaskDsData.ToMat(0);
+#else 
+	cv::Mat_<unsigned char> srcMaskDsMat(srcDsDataSet->GetRasterYSize(), srcDsDataSet->GetRasterXSize(), (unsigned char)255);
 #endif  //#if SEAMLINE_COVERAGE_FIX
 
 	cv::Range winRanges[2];
 
 	std::vector<cv::Mat_<float>>& refSubBands = refSubData.ToMatVec();
 	std::vector<cv::Mat_<float>>& srcDsBands = srcDsData.ToMatVec();
-	cv::Mat& srcMaskDsMat = srcMaskDsData.ToMat(0);
 	//cv::Mat onesVec;  //(int rows, int cols, int type, const Scalar& s)
 	//cv::Mat srcDsConcatMat;
 
@@ -490,11 +494,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 				const cv::Mat srcDsMaskDsWin = srcMaskDsMat(winRanges);
 				const cv::Mat::MSize coveredWinSize = srcDsWin.size;
 
-#if SEAMLINE_COVERAGE_FIX
 				cv::Mat coverageMask = srcDsMaskDsWin >= (COVERAGE_PORTION*255.0);
-#else
-				cv::Mat coverageMask = srcDsMaskDsWin > 0.;
-#endif
 				// convert sliding win data to col vectors etc suitable for LS
 				// find LS param estimates
 				//int valid = (cv::compare( refSubWin == 0);
@@ -547,10 +547,6 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 					paramDsData(i, j, k) = lsSoln.at<float>(0, 0);
 					paramDsData(i, j, k + srcDsDataSet->GetRasterCount()) = lsSoln.at<float>(1, 0);
 				}
-				else if (modelForm == ModelForms::GAIN_AND_OFFSET_IND_WIN)
-				{
-
-				}
 				else if (modelForm == ModelForms::OFFSET_ONLY || modelForm == ModelForms::IMAGE_GAIN_AND_OFFSET)
 				{
 					float offset = 0.;
@@ -579,11 +575,8 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 				const cv::Mat srcDsWin = srcDsBand(winRanges);
 				const cv::Mat refSubWin = refSubBand(winRanges);
 				const cv::Mat srcDsMaskDsWin = srcMaskDsMat(winRanges);
-#if SEAMLINE_COVERAGE_FIX
 				cv::Mat coverageMask = srcDsMaskDsWin >= COVERAGE_PORTION * 255.0;
-#else
-				cv::Mat coverageMask = srcDsMaskDsWin > 0.;
-#endif
+
 				// convert sliding win data to col vectors etc suitable for LS
 				// find LS param estimates
 				//int valid = (cv::compare( refSubWin == 0);
@@ -605,7 +598,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 						cv::Mat refVec = refSubWin.clone().setTo(0, ~coverageMask).reshape(1, winSize[0] * winSize[1]);
 						cv::Mat coveredOnesVec = onesVec.setTo(0, ~coverageMask.reshape(1, winSize[0] * winSize[1]));
 
-						cout << "(i, j)" << i << ", " << j << endl;
+						/*cout << "(i, j)" << i << ", " << j << endl;
 						cout << "coverageMask:" << coverageMask << endl;
 						cout << "onesVec:" << onesVec << endl;
 						cout << "coveredOnesVec:" << coveredOnesVec << endl;
@@ -613,12 +606,12 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 						cout << "srcDsWin:" << srcDsWin << endl;
 						cout << "srcVec:" << srcVec << endl;
 						cout << "refSubWin:" << refSubWin << endl;
-						cout << "refVec:" << refVec << endl;
+						cout << "refVec:" << refVec << endl;*/
 
 						cv::hconcat(srcVec, coveredOnesVec, srcDsConcatMat);
 						cv::solve(srcDsConcatMat, refVec, lsSoln, cv::DECOMP_SVD);
 
-						cout << "lsSoln:" << lsSoln << endl;
+						//cout << "lsSoln:" << lsSoln << endl;
 
 
 						//if (coverage < winSize[0] * winSize[0] * 255)
@@ -790,7 +783,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 		throw string("Could not open: " + erodeMaskUsFileName);
 
 	//Buf3d<unsigned char> erodeMaskSubData(1, srcDataSet->GetRasterXSize(), 1);
-	cv::Mat_<float> erodeMaskSubData(m, 1);
+	cv::Mat_<unsigned char> erodeMaskSubData(1, nCols, 0.);
 
 	/*GDALDataset* erodeMaskDataSet = (GDALDataset*)GDALOpen(erodeMaskUsFileName.c_str(), GDALAccess::GA_ReadOnly);
 	if (erodeMaskDataSet == NULL)
@@ -823,7 +816,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 #if SEAMLINE_EXTRAP_FIX  
 #pragma omp section
 			{
-				err = erodeMaskDataSet->RasterIO(GDALRWFlag::GF_Read, (int)paramUlJ, (int)paramUlI + i, m, 1,
+				err = erodeMaskDataSet->RasterIO(GDALRWFlag::GF_Read, (int)paramUlJ, (int)paramUlI + i, nCols, 1,
 					erodeMaskSubData.data, nCols, 1, GDALDataType::GDT_Byte,
 					1, NULL, 0, 0, 0); //nLineSpace is wrong I think but not used (?)
 				if (err != CPLErr::CE_None)
@@ -843,21 +836,32 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 		}
 #pragma omp barrier
 		{
-			cv::Mat nodataMask = cv::Mat_<float>(paramSubData(cv::Range(0, nSrcBands), cv::Range::all()) != 0. & srcData != 0) / 255.;  // necessary for SLIDE_WIN_CENTER which usually has no nodata in paramDs
+			//cv::Mat nodataMask = cv::Mat_<float>(paramSubData(cv::Range(0, nSrcBands), cv::Range::all()) != 0. & srcData != 0) / 255.;  
 			if (modelForm == ModelForms::GAIN_ONLY || modelForm == ModelForms::GAIN_AND_IMAGE_OFFSET)
-				calibData = paramSubData.mul(srcData + imageOffsetMat).mul(nodataMask); // +imageOffset[k]);
+				calibData = paramSubData.mul(srcData + imageOffsetMat); // +imageOffset[k]);
 			else if (modelForm == ModelForms::GAIN_AND_OFFSET)
 			{
 				cv::Mat_<float> M = paramSubData(cv::Range(0, nSrcBands), cv::Range::all());
 				cv::Mat_<float> C = paramSubData(cv::Range(nSrcBands, nParamBands), cv::Range::all());
-				calibData = (M.mul(srcData) + C).mul(nodataMask);
+				//calibData = (M.mul(srcData) + C).mul(nodataMask);
+				calibData = M.mul(srcData) + C;
 			}
 			else if (modelForm == ModelForms::OFFSET_ONLY || modelForm == ModelForms::IMAGE_GAIN_AND_OFFSET)
-				calibData = (srcData.mul(imageGainMat) + paramSubData).mul(nodataMask);
-		}
-#if SEAMLINE_EXTRAP_FIX
-		calibData = (erodeMaskSubData < (unsigned char)COVERAGE_PORTION*255.0).mul(calibData)/255.;
+			{
+				calibData = srcData.mul(imageGainMat) + paramSubData;
+				calibData.setTo(0, paramSubData == 0.);
+			}
+#if SLIDE_WIN_CENTER
+			//cv::Mat nodataMask = cv::Mat_<float>(srcData == 0) / 255.;  // necessary for SLIDE_WIN_CENTER which usually has no nodata in paramDs
+			//calibData = calibData.mul(nodataMask);
+			calibData.setTo(0, srcData == 0);  // necessary for SLIDE_WIN_CENTER which usually has no nodata in paramDs
 #endif
+#if SEAMLINE_EXTRAP_FIX
+			cv::Mat erodeMask = erodeMaskSubData == 0;
+			for (int k = 0; k < nSrcBands; k++)
+				calibData.row(k).setTo(0, erodeMask);
+#endif
+		}
 
 		if ((40*(i+1)) / nRows > prog)
 		{
