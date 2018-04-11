@@ -41,7 +41,7 @@ REM  pause
 REM add tiffs to mosaic 
 del %2
 
-gdalwarp --config GDAL_CACHEMAX 3000 -wm 3000 -t_srs "+proj=tmerc +lat_0=0 +lon_0=21 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs" -tr %tpix% %tpix% -r cubicspline -tap -srcnodata 0 -dstnodata 0 %1 %2
+gdalwarp --config GDAL_CACHEMAX 3000 -wm 3000 -co NUM_THREADS=ALL_CPUS -t_srs "+proj=tmerc +lat_0=0 +lon_0=21 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs" -tr %tpix% %tpix% -r cubicspline -tap -srcnodata 0 -dstnodata 0 %1 %2
 
 gdaladdo -ro -r average --config COMPRESS_OVERVIEW DEFLATE %2 2 4 8 16 32 64
 
