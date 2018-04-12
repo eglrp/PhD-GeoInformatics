@@ -1,5 +1,7 @@
 import subprocess
 import os
+import glob
+import shutil
 ####################################################################################################
 # NOTE
 # CrossCalibration or any code linked with osgeo4w does cannot be called from anaconda
@@ -25,22 +27,33 @@ inputDir = 'D:\Data\Development\Projects\PhD GeoInformatics\Data\NGI\XCalib Expe
 inputFiles = ['3322a_320_09_0295_rgbn_CMP.tif', '3322a_320_09_0296_rgbn_CMP.tif', '3322a_320_09_0297_rgbn_CMP.tif', '3322a_320_09_0298_rgbn_CMP.tif',
               '3322a_320_10_0359_rgbn_CMP.tif', '3322a_320_10_0360_rgbn_CMP.tif', '3322a_320_10_0361_rgbn_CMP.tif', '3322a_320_10_0362_rgbn_CMP.tif',
               '3322a_320_11_0373_rgbn_CMP.tif', '3322a_320_11_0374_rgbn_CMP.tif', '3322a_320_11_0375_rgbn_CMP.tif', '3322a_320_11_0376_rgbn_CMP.tif']
-refFile = 'D:\Data\Development\Projects\PhD GeoInformatics\Data\MODIS\MCD43A4.Mosaic.NgiBandOrder.Lo23Wgs84.tif'
+refFile = 'D:\Data\Development\Projects\PhD GeoInformatics\Data\MODIS\MCD43A4.A2010025.h19v12.005.2010043064233.Lo23.RGBN.tif'
 xcalibExe = 'C:/Data/Development/Projects/PhD GeoInformatics/Code/Cross Calibration//x64/Release/CrossCalibration'
+calibRootDir = 'D:\Data\Development\Projects\PhD GeoInformatics\Data\NGI\XCalib Experiments\Calibrated\\'
 
-for inputFile in inputFiles:
-    print '------------------------------------------------------------------------------------------------------------'
-    print 'Processing {0:%s}' % (inputFile)
-    subprocess.call('"{0}" -o -w 5 5 -p 1 "{1}" "{2}"'.format(xcalibExe, refFile, inputDir + inputFile), shell=True)
-    # subprocess.call([xcalibExe, '-o', 'w 1 1', '-p 1', '"%s"'%refFile, '"%s"'%(inputDir+inputFile)], shell=True,
-    #                 stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+paramList = ['-w 1 1 -p 1', '-w 3 1 -p 1', '-w 3 3 -p 1', '-w 5 5 -p 1'] #, '-w 1 1 -p 4', '-w 3 1 -p 4', '-w 3 3 -p 4', '-w 5 5 -p 4']
+paramList = ['-w 1 1 -p 4', '-w 3 1 -p 4', '-w 3 3 -p 4', '-w 5 5 -p 4']
+for param in  paramList:
+    for inputFile in inputFiles:
+        print '------------------------------------------------------------------------------------------------------------'
+        print 'Processing {0:%s}' % (inputFile)
+        subprocess.call('"{0}" -o {1} "{2}" "{3}"'.format(xcalibExe, param, refFile, inputDir + inputFile), shell=True)
+        # subprocess.call([xcalibExe, '-o', 'w 1 1', '-p 1', '"%s"'%refFile, '"%s"'%(inputDir+inputFile)], shell=True,
+        #                 stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    # move the xcalib files to a subdir
+    subDir = param.replace(' ', '')
+    subDir = subDir.replace('-', '')
+    subDir = os.path.join(calibRootDir, subDir)
+    if not os.path.exists(subDir):
+        os.mkdir(subDir)
+    for file in glob.glob(os.path.join(inputDir, '*_CMP_XCALIB.tif')):
+        shutil.move(file, subDir)
 
 
 ########################################################################################################
 # Add overviews and make mosaic
 import os
 
-calibRootDir = 'D:\Data\Development\Projects\PhD GeoInformatics\Data\NGI\XCalib Experiments\Calibrated\\'
 
 
 # add overviews
@@ -66,5 +79,7 @@ for subDir in os.listdir(calibRootDir):
         print subDir
         outFile = os.path.join(calibRootDir, subDir, subDir + '_Mosaic10m.tif')
         if not os.path.exists(outFile):
-            subprocess.call('mosaic.bat {0} {1} 10', os.path.join(calibRootDir, subDir, '*_CMP_XCALIB.tif'), outFile,
+            print 'Mosaic ' + subDir
+            subprocess.call('mosaic.bat "{0}" "{1}" 10'.format(os.path.join(calibRootDir, subDir, '*_CMP_XCALIB.tif'), outFile),
                             shell=True)
+

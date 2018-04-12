@@ -234,13 +234,19 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 
 	ErrorCheckDatasets(srcDataSet, refDataSet);
 
+
 	srcDataSet->GetGeoTransform(srcGeoTransform);
 	int srcXSize = srcDataSet->GetRasterXSize();
 	int srcYSize = srcDataSet->GetRasterYSize();
 	GDALClose(srcDataSet);
 
 	std::cout << "------------------------------------------------------------" << endl;
-	std::cout << "Processing: " << srcFileName << endl << endl;
+	std::cout << "Processing: " << srcFileName << endl;
+	cout << "Reference file: " << srcFileName << endl;
+	cout << "Window size: " << winSize[0] << ", " << winSize[1] << endl;
+	cout << "Model: " << ModelFormsToString(modelForm) << endl;
+	std::cout << "------------------------------------------------------------" << endl;
+
 #if SEAMLINE_COVERAGE_FIX   // TO DO: somehow change seamline fix to improve processing Eg only downsample/upsample fully covered ref areas to reduce processing by figuring 
 					// out the full coverage mask, then update nodata in source im with this.  OR: avoid upsampling the DS mask - just make one rather than being lazy 
 	std::cout << "Extracting mask from: " << srcFileName << endl << endl;
@@ -278,7 +284,8 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 #if XCALIB_DEBUG
 	string srcDsFileName = srcFileName.substr(0, srcFileName.length() - 4) + "_DS.tif"; //make separate files for each source file
 #else
-	string srcDsFileName = string(CPLGetCurrentDir()) + "\\SourceDs.tif"; //reuse the same file
+	//string srcDsFileName = string(CPLGetCurrentDir()) + "\\SourceDs.tif"; //reuse the same file
+	string srcDsFileName = srcFileName.substr(0, srcFileName.length() - 4) + "_DS.tif"; //make separate files for each source file
 #endif
 	//
 
@@ -332,7 +339,8 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 #if XCALIB_DEBUG
 	string paramDsFileName = srcDsFileName.substr(0, srcDsFileName.length() - 4) + "_PARAMS.tif"; //make separate files for each source file
 #else
-	string paramDsFileName = string(CPLGetCurrentDir()) + "\\ParamDs.tif"; //reuse the same file
+	//string paramDsFileName = string(CPLGetCurrentDir()) + "\\ParamDs.tif"; //reuse the same file
+	string paramDsFileName = srcDsFileName.substr(0, srcDsFileName.length() - 4) + "_PARAMS.tif"; //HACK for now - these files are tiny
 #endif
 
 	std::cout << "Calculating calibration params (" << paramDsFileName << ")" << endl << endl;
@@ -435,9 +443,10 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	
 	std::vector<float> imageGain(srcDsDataSet->GetRasterCount(), 1.);
 	std::vector<float> imageOffset(srcDsDataSet->GetRasterCount(), 0.);
+	cout << "Image (gain, offset): ";
 	for (int k = 0; k < srcDsDataSet->GetRasterCount(); k++)
 	{
-#if TRUE   // suspect this is not valid... give some more thought
+#if FALSE   // suspect this is not valid... give some more thought
 		cv::Scalar srcMean, srcStd, refSubMean, refSubStd;
 		cv::meanStdDev(srcDsBands[k], srcMean, srcStd, srcMaskDsMat >= COVERAGE_PORTION*255.0);
 		cv::meanStdDev(refSubBands[k], refSubMean, refSubStd, srcMaskDsMat >= COVERAGE_PORTION*255.0);
@@ -456,18 +465,21 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 		}
 #else
 		cv::Mat coverageMask = srcMaskDsMat >= COVERAGE_PORTION*255.0;
-		onesVec = cv::Mat(n*m, 1, CV_32FC1, cv::Scalar(1.));  //(int rows, int cols, int type, const Scalar& s)
-		//srcDsConcatMat = cv::Mat(n*m, 2, CV_32FC1, cv::Scalar(0.));
+		cv::Mat onesVec(nCols*nRows, 1, CV_32FC1, cv::Scalar(1.));  //(int rows, int cols, int type, const Scalar& s)
+		cv::Mat srcDsConcatMat(nCols*nRows, 2, CV_32FC1, cv::Scalar(1.));  //(int rows, int cols, int type, const Scalar& s)
+																	//srcDsConcatMat = cv::Mat(n*m, 2, CV_32FC1, cv::Scalar(0.));
 		cv::Mat lsSoln;
-		cv::hconcat(srcDsBands[k].clone().setTo(0, coverageMask).reshape(1, n*m), onesVec, srcDsConcatMat);
-		cv::solve(srcDsConcatMat, refSubBands[k].clone().setTo(0, ~coverageMask).reshape(1, n*m), lsSoln, cv::DECOMP_QR);
-		cv::solve(srcDsConcatMat, refSubBands[k].clone().setTo(0, ~coverageMask).reshape(1, n*m), lsSoln, cv::DECOMP_SVD);
+		cv::hconcat(srcDsBands[k].clone().setTo(0, ~coverageMask).reshape(1, nCols*nRows), onesVec, srcDsConcatMat);
+		cv::solve(srcDsConcatMat, refSubBands[k].clone().setTo(0, ~coverageMask).reshape(1, nCols*nRows), lsSoln, cv::DECOMP_SVD);
+		//cv::solve(srcDsConcatMat, refSubBands[k].clone().setTo(0, ~coverageMask).reshape(1, nCols*nRows), lsSoln, cv::DECOMP_SVD);
 		if (modelForm == ModelForms::IMAGE_GAIN_AND_OFFSET)  // find per band gains for IMAGE_GAIN_AND_OFFSET model
-			imageGain[k] = lsSoln.at<float>(0);
+			imageGain[k] = 1./lsSoln.at<float>(0);
 		else if (modelForm == ModelForms::GAIN_AND_IMAGE_OFFSET)  // find per band offsets for GAIN_AND_IMAGE_OFFSET model
-			imageOffset[k] = lsSoln.at<float>(1);
+			imageOffset[k] = lsSoln.at<float>(1)/lsSoln.at<float>(0);
 #endif
+		cout << "(" << imageGain[k] << ", " << imageOffset[k] << "), ";
 	}
+	cout << endl;
 
 	int winCenterOffset[2] = {(winSize[0] - 1)/2, (winSize[1] - 1)/2};
 	//TODO: As an alternative to the GAIN_AND_IMAGE_OFFSET model above, we could have different window sizes for gain and offset 
@@ -502,6 +514,12 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 				{
 					float gain = cv::mean(refSubWin / (srcDsWin + imageOffset[k]), coverageMask).val[0];
 					paramDsData(i, j, k) = gain;
+					if (abs(gain) > 10)
+					{
+						cout << "coverageMask" << coverageMask << endl;
+						cout << "refSubWin" << refSubWin << endl;
+						cout << "srcDsWin" << srcDsWin << endl;
+					}
 				}
 				else if (modelForm == ModelForms::GAIN_AND_OFFSET)
 				{
@@ -719,11 +737,22 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 #if BIGTIFF
 	papszOptions = CSLSetNameValue(papszOptions, "BIGTIFF", "YES");
 #endif
-	GDALDataset* calibDataSet = srcDataSet->GetDriver()->Create(calibFileName.c_str(), srcDataSet->GetRasterXSize(), 
+	char ** pMetaData = NULL;
+	std::string tag = "Win: (" + std::to_string(winSize[0]) + "," + std::to_string(winSize[1]) +
+		") Model: " + ModelFormsToString(modelForm); // +" Ref: " + refFileName.substr(refFileName.find_last_of("/\\") + 1);
+	pMetaData = CSLSetNameValue(pMetaData, "TIFFTAG_IMAGEDESCRIPTION", tag.c_str());
+	//srcDataSet->SetDescription(tag.c_str());
+	//papszOptions = CSLSetNameValue(papszOptions, "TIFFTAG_IMAGEDESCRIPTION", tag.c_str());
+	//srcDataSet->SetDescription(tag.c_str());
+	err = srcDataSet->SetMetadata(pMetaData, NULL);
+
+	GDALDataset* calibDataSet = srcDataSet->GetDriver()->Create(calibFileName.c_str(), srcDataSet->GetRasterXSize(),
 		srcDataSet->GetRasterYSize(), 4, GDALDataType::GDT_Int16, papszOptions);  //int16 to allow -ve values for offset models gone wrong
-	
 	if (calibDataSet == NULL)
 		throw string("Could not create: " + calibFileName);
+	//srcDataSet->SetDescription(tag.c_str());
+	err = srcDataSet->SetMetadata(pMetaData);
+	//CSLDestroy(pMetaData);
 
 	calibDataSet->SetGeoTransform(srcGeoTransform);
 	calibDataSet->SetProjection(srcDataSet->GetProjectionRef());
@@ -851,7 +880,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 				calibData = srcData.mul(imageGainMat) + paramSubData;
 				calibData.setTo(0, paramSubData == 0.);
 			}
-#if SLIDE_WIN_CENTER
+#if TRUE //SLIDE_WIN_CENTER  this can also be necessary for SLIDE_WIN_CENTER = 0 eg partial pixels have param vals because of win size
 			//cv::Mat nodataMask = cv::Mat_<float>(srcData == 0) / 255.;  // necessary for SLIDE_WIN_CENTER which usually has no nodata in paramDs
 			//calibData = calibData.mul(nodataMask);
 			calibData.setTo(0, srcData == 0);  // necessary for SLIDE_WIN_CENTER which usually has no nodata in paramDs
@@ -899,6 +928,9 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 #if SEAMLINE_EXTRAP_FIX
 	GDALClose(erodeMaskDataSet);
 #endif
+	CSLDestroy(papszOptions);
+	CSLDestroy(pMetaData);
+
 	return res;
 }
 

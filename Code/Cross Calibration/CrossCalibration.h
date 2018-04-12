@@ -122,3 +122,29 @@ enum ModelForms
 	IMAGE_GAIN_AND_OFFSET = 5,
 	//GAIN_AND_OFFSET_IND_WIN = 6
 };
+
+std::string ModelFormsToString(const int& val)
+{
+	std::string res = "UNKNOWN";
+	switch (val)
+	{
+	case ModelForms::GAIN_ONLY:
+		res = "GAIN_ONLY";
+		break;
+	case ModelForms::GAIN_AND_OFFSET:
+		res = "GAIN_AND_OFFSET";
+		break;
+	case ModelForms::OFFSET_ONLY:
+		res = "OFFSET_ONLY";
+		break;
+	case ModelForms::GAIN_AND_IMAGE_OFFSET:
+		res = "GAIN_AND_IMAGE_OFFSET";
+		break;
+	case ModelForms::IMAGE_GAIN_AND_OFFSET:
+		res = "IMAGE_GAIN_AND_OFFSET";
+		break;
+	}
+	std::to_string(123);
+
+	return res;
+}
