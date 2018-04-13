@@ -446,7 +446,11 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	cout << "Image (gain, offset): ";
 	for (int k = 0; k < srcDsDataSet->GetRasterCount(); k++)
 	{
-#if FALSE   // suspect this is not valid... give some more thought
+#if FALSE   // this approach has a problem
+		// the offset src can go close to zero which means the ref/(src+offset) gains can grow large and change +ve to -ve
+		// this makes a mess of things when upsampling and these wildly varying gains must be interpolated between.
+		// also, I don't think it is physically valid.  It should be more like the min(src) should be offset to be similar to
+		// min(ref) which the alternative below seems to achieve 
 		cv::Scalar srcMean, srcStd, refSubMean, refSubStd;
 		cv::meanStdDev(srcDsBands[k], srcMean, srcStd, srcMaskDsMat >= COVERAGE_PORTION*255.0);
 		cv::meanStdDev(refSubBands[k], refSubMean, refSubStd, srcMaskDsMat >= COVERAGE_PORTION*255.0);
@@ -737,21 +741,18 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 #if BIGTIFF
 	papszOptions = CSLSetNameValue(papszOptions, "BIGTIFF", "YES");
 #endif
-	char ** pMetaData = NULL;
-	std::string tag = "Win: (" + std::to_string(winSize[0]) + "," + std::to_string(winSize[1]) +
-		") Model: " + ModelFormsToString(modelForm); // +" Ref: " + refFileName.substr(refFileName.find_last_of("/\\") + 1);
-	pMetaData = CSLSetNameValue(pMetaData, "TIFFTAG_IMAGEDESCRIPTION", tag.c_str());
-	//srcDataSet->SetDescription(tag.c_str());
-	//papszOptions = CSLSetNameValue(papszOptions, "TIFFTAG_IMAGEDESCRIPTION", tag.c_str());
-	//srcDataSet->SetDescription(tag.c_str());
-	err = srcDataSet->SetMetadata(pMetaData, NULL);
 
 	GDALDataset* calibDataSet = srcDataSet->GetDriver()->Create(calibFileName.c_str(), srcDataSet->GetRasterXSize(),
 		srcDataSet->GetRasterYSize(), 4, GDALDataType::GDT_Int16, papszOptions);  //int16 to allow -ve values for offset models gone wrong
 	if (calibDataSet == NULL)
 		throw string("Could not create: " + calibFileName);
-	//srcDataSet->SetDescription(tag.c_str());
-	err = srcDataSet->SetMetadata(pMetaData);
+	//err = srcDataSet->SetMetadata(pMetaData, "TIFFTAG_GDAL_METADATA");
+	//store param info in the file - use "gdalinfo -mdd "TIFFTAG_GDAL_METADATA"" to see this 
+	std::string tag = "Radiom. Homogenised - Win: (" + std::to_string(winSize[0]) + "," + std::to_string(winSize[1]) +
+		") Model: " + ModelFormsToString(modelForm) +" Ref: " + refFileName.substr(refFileName.find_last_of("/\\") + 1);
+	err = calibDataSet->SetMetadataItem("IMAGEDESCRIPTION", tag.c_str());
+	err = calibDataSet->SetMetadataItem("TIFFTAG_IMAGEDESCRIPTION", tag.c_str(), "TIFFTAG_GDAL_METADATA");
+	calibDataSet->SetDescription(tag.c_str());
 	//CSLDestroy(pMetaData);
 
 	calibDataSet->SetGeoTransform(srcGeoTransform);
@@ -929,7 +930,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	GDALClose(erodeMaskDataSet);
 #endif
 	CSLDestroy(papszOptions);
-	CSLDestroy(pMetaData);
+	//CSLDestroy(pMetaData);
 
 	return res;
 }

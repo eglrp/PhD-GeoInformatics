@@ -33,6 +33,7 @@ calibRootDir = 'D:\Data\Development\Projects\PhD GeoInformatics\Data\NGI\XCalib 
 
 paramList = ['-w 1 1 -p 1', '-w 3 1 -p 1', '-w 3 3 -p 1', '-w 5 5 -p 1'] #, '-w 1 1 -p 4', '-w 3 1 -p 4', '-w 3 3 -p 4', '-w 5 5 -p 4']
 paramList = ['-w 1 1 -p 4', '-w 3 1 -p 4', '-w 3 3 -p 4', '-w 5 5 -p 4']
+paramList = ['-w 3 3 -p 2', '-w 5 5 -p 2', '-w 7 7 -p 2']
 for param in  paramList:
     for inputFile in inputFiles:
         print '------------------------------------------------------------------------------------------------------------'
@@ -46,7 +47,7 @@ for param in  paramList:
     subDir = os.path.join(calibRootDir, subDir)
     if not os.path.exists(subDir):
         os.mkdir(subDir)
-    for file in glob.glob(os.path.join(inputDir, '*_CMP_XCALIB.tif')):
+    for file in glob.glob(os.path.join(inputDir, '*_CMP_*.tif')):
         shutil.move(file, subDir)
 
 
