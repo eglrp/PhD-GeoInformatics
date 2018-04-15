@@ -43,7 +43,22 @@
  * means channel dimension first.  Data is stored tile-by-tile so that individual tiles are contiguous and can be read from disk as such.  When there is no
  * tiling specified, the tile can still be thought of to be the size of 1 row (and gdal_info reports the block/tile size as such).  
  * A row tile may not be ideal for display or compression purposes where a 2d ROI is what is actually been accessed and operated on.  
-
+ *
+ * On boundary effects/treatment:
+ * Larger windows exhibit boundary effects.  As the code is, when the win center is on or near the boundary, there wont necessarily be complete window coverage,
+ * that pixel then gets a param that is biased and perhaps wrong as it is not based on surrounding winSize pixels but on what is available.  
+ * The bigger the window size, the more noticable will be this effect.
+ * The SEAMLINE_EXTRAP_FIX goes some way to alleviating this but currently only removes a single edge pixel whereas it should remove 1+(winSize-1)/2 pixels.  (The "1+"
+ * is the existing removal.)
+ * Unfortunately this would mean that we lose too much of images and find that images no longer meet each other for larger windows.  
+ * Really, for large windows to work, we need to find boundary parameters using bordering images.  This could look like we make a 10m mosaic of all images and use this 
+ * for finding parameters (or at least for boundary pixels).  And may not actually be that hard. 
+ * This (above) could still introduce some seamlines (as we are no longer basing the params on each individual image's own pixels) but would avoid the kind of artefacts we are
+ * seeing with large windows and eg GAIN_AND_IMAGE_OFFSET model.
+ * SLIDE_WIN_CENTER = 0, helps all this as only windows that fit completely in the image+nodata area are used i.e. border windows should only be biased by a lost pixel
+ * border of around 1.  SLIDE_WIN_CENTER = 0, will force nodata for a border of (winSize-1)/2 pixels I think, so is kind of similar to SEAMLINE_EXTRAP_FIX but strictly,
+ * we should add another pixel to the nodata.
+ * As a rough rule of thumb, bigger windows are going to be more problematic for seamlines/homogeneity.
  ******************************************************************************/
 
  //
@@ -68,7 +83,7 @@ using namespace std;
 #define XCALIB_DEBUG 0
 #define MAX_PATH 1024
 #define SEAMLINE_COVERAGE_FIX 1					// excludes partially covered ref pixels
-#define SEAMLINE_EXTRAP_FIX 0					// erodes away one boundary pixel to exclude extrapolated params, SEAMLINE_COVERAGE_FIX must be 1
+#define SEAMLINE_EXTRAP_FIX 1					// erodes away one boundary pixel to exclude extrapolated params, SEAMLINE_COVERAGE_FIX must be 1
 #define DO_COMPRESS_OUTPUT 1
 #define BIGTIFF 1
 #define COVERAGE_PORTION 0.95
@@ -389,7 +404,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	//cv::namedWindow(winTitle, cv::WINDOW_NORMAL | CV_WINDOW_KEEPRATIO | CV_GUI_EXPANDED);
 	//cv::imshow(winTitle, cvMask / 255);
 	//cv::waitKey(0);
-	cv::Mat kernel = cv::getStructuringElement(cv::MORPH_RECT, cv::Size(3, 3));
+	cv::Mat kernel = cv::getStructuringElement(cv::MORPH_RECT, cv::Size(3, 3));  //TODO: this should be adjusted according to winSize but then we will have overlap problems
 	cv::Mat cvMaskErode;
 	//string winTitle2 = "maskErode";
 	//cv::namedWindow(winTitle2, cv::WINDOW_NORMAL | CV_WINDOW_KEEPRATIO | CV_GUI_EXPANDED);
@@ -748,8 +763,18 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 		throw string("Could not create: " + calibFileName);
 	//err = srcDataSet->SetMetadata(pMetaData, "TIFFTAG_GDAL_METADATA");
 	//store param info in the file - use "gdalinfo -mdd "TIFFTAG_GDAL_METADATA"" to see this 
-	std::string tag = "Radiom. Homogenised - Win: (" + std::to_string(winSize[0]) + "," + std::to_string(winSize[1]) +
-		") Model: " + ModelFormsToString(modelForm) +" Ref: " + refFileName.substr(refFileName.find_last_of("/\\") + 1);
+	std::string tag = "Radiom. Homogenised\nWin: (" + std::to_string(winSize[0]) + "," + std::to_string(winSize[1]) +
+		")\n Model: " + ModelFormsToString(modelForm) +"\nRef: " + refFileName.substr(refFileName.find_last_of("/\\") + 1);
+#ifdef SEAMLINE_EXTRAP_FIX
+	tag += "\nSeamline Extrap. Fix: On";
+#else 
+	tag += "\nSeamline Extrap. Fix: Off";
+#endif
+#ifdef SEAMLINE_COVERAGE_FIX
+	tag += "\nSeamline Coverage Fix: On";
+#else
+	tag += "\nSeamline Coverage Fix: Off";
+#endif
 	err = calibDataSet->SetMetadataItem("IMAGEDESCRIPTION", tag.c_str());
 	err = calibDataSet->SetMetadataItem("TIFFTAG_IMAGEDESCRIPTION", tag.c_str(), "TIFFTAG_GDAL_METADATA");
 	calibDataSet->SetDescription(tag.c_str());
