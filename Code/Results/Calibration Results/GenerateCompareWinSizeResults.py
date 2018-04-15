@@ -35,6 +35,7 @@ calibRootDir = 'D:\Data\Development\Projects\PhD GeoInformatics\Data\NGI\XCalib 
 paramList = ['-w 1 1 -p 1', '-w 2 2 -p 1', '-w 3 3 -p 1', '-w 4 4 -p 1', '-w 5 5 -p 1', '-w 7 7 -p 1'] #, '-w 1 1 -p 4', '-w 3 1 -p 4', '-w 3 3 -p 4', '-w 5 5 -p 4']
 paramList = ['-w 3 1 -p 1', '-w 1 1 -p 4', '-w 3 1 -p 4', '-w 3 3 -p 4', '-w 5 5 -p 4', '-w 7 7 -p 4'] #, '-w 1 1 -p 4', '-w 3 1 -p 4', '-w 3 3 -p 4', '-w 5 5 -p 4']
 paramList = ['-w 3 3 -p 2', '-w 5 5 -p 2', '-w 7 7 -p 2'] #, '-w 1 1 -p 4', '-w 3 1 -p 4', '-w 3 3 -p 4', '-w 5 5 -p 4']
+paramList = ['-w 5 3 -p 1', '-w 9 9 -p 1'] #, '-w 1 1 -p 4', '-w 3 1 -p 4', '-w 3 3 -p 4', '-w 5 5 -p 4']
 # paramList = ['-w 1 1 -p 4', '-w 2 2 -p 4', '-w 3 3 -p 4', '-w 4 4 -p 4', '-w 5 5 -p 4', '-w 7 7 -p 4'] #, '-w 1 1 -p 4', '-w 3 1 -p 4', '-w 3 3 -p 4', '-w 5 5 -p 4']
 # paramList = ['-w 1 1 -p 4', '-w 3 1 -p 4', '-w 3 3 -p 4', '-w 5 5 -p 4']
 # paramList = ['-w 3 3 -p 2', '-w 5 5 -p 2', '-w 7 7 -p 2']
