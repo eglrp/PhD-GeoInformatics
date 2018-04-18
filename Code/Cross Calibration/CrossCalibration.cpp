@@ -305,10 +305,10 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	//
 
 	//TODO if the raster already has average(/cubicspline? - to test) overviews, it seems this downsampling can go much faster
-	/*if (modelForm == ModelForms::OFFSET_ONLY)
-		sprintf_s(gdalString, MAX_PATH, "gdalwarp~-multi~-overwrite~-srcnodata~\"0\"~-dstnodata~\"0\"~-r~average~-tap~-tr~%d~%d~%s~%s~", (int)abs(refGeoTransform[1]), (int)abs(refGeoTransform[5]),
-			srcFileName.c_str(), srcDsFileName.c_str());
-	else*/
+	//if (FALSE)
+	//	sprintf_s(gdalString, MAX_PATH, "gdalwarp~-multi~-overwrite~-srcnodata~\"0\"~-dstnodata~\"0\"~-r~average~-tap~-tr~%d~%d~%s~%s~", (int)abs(refGeoTransform[1]), (int)abs(refGeoTransform[5]),
+	//		srcFileName.c_str(), srcDsFileName.c_str());
+	//else
 		sprintf_s(gdalString, MAX_PATH, "gdalwarp~-multi~-overwrite~-srcnodata~\"0\"~-dstnodata~\"0\"~-r~cubicspline~-tap~-tr~%d~%d~%s~%s~", (int)abs(refGeoTransform[1]), (int)abs(refGeoTransform[5]), 
 			srcFileName.c_str(), srcDsFileName.c_str());
 	res = GdalWarpWrapper(gdalString);

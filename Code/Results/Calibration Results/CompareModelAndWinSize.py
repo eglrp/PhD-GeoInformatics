@@ -8,7 +8,7 @@ import matplotlib as mpl
 
 spotFileName = "D:\Data\Development\Projects\PhD GeoInformatics\Data\SPOT\S131022114824832\Orthorectification\oATCORCorrected_METADATA_00812098_AutoGCP_NgiFormat.tif"  # improved orthorect
 modisFileName = 'D:\Data\Development\Projects\PhD GeoInformatics\Data\MODIS\MCD43A4.A2010025.h19v12.005.2010043064233.Lo23.RGBN.tif'
-calibRootDir = 'D:\Data\Development\Projects\PhD GeoInformatics\Data\NGI\XCalib Experiments\Calibrated2\\'
+calibRootDir = 'D:\Data\Development\Projects\PhD GeoInformatics\Data\NGI\XCalib Experiments\CalibratedDsAvg\\'
 
 mosaicFileName = "D:\Data\Development\Projects\PhD GeoInformatics\Data\NGI\XCalib Experiments\Calibrated\w11p1\w33p1_Mosaic10m.tif"
 mosaicFileName = "D:\Data\Development\Projects\PhD GeoInformatics\Data\NGI\XCalib Experiments\Calibrated\w44p2\w44p2_Mosaic10m.tif"
@@ -111,7 +111,7 @@ for mi, model in enumerate(np.unique(models)):
             diffIm[:, :, sb][~mask] =  0
             sPixels = spotSubIm[:, :, sb][mask]
             dCalibPixels = ngiCalibIm[:, :, nb][mask]
-            e = sPixels - dCalibPixels  - (sPixels.min() - dCalibPixels.min())   # naughty hack
+            e = sPixels - dCalibPixels  #  - (sPixels.min() - dCalibPixels.min())   # naughty hack
             # e = e-np.mean(e)
             ePixels.append(e)
 
@@ -170,24 +170,69 @@ for mi, model in enumerate(np.unique(models)):
 
 maes = np.array([r['mae'] for r in results.values()])
 r2s = np.array([r['mean(rs2)'] for r in results.values()])
+rmss = np.array([r['rms'] for r in results.values()])
 
 pylab.figure()
 for model in np.unique(models):
     modelIdx = models == model
     modelWinAreas = winAreas[modelIdx]
     sortIdx = np.argsort(modelWinAreas)
-    pylab.subplot(2, 1, 1)
+    pylab.subplot(3, 1, 1)
     pylab.plot(modelWinAreas[sortIdx], (maes[modelIdx])[sortIdx], 'x-')
-    pylab.subplot(2, 1, 2)
+    pylab.subplot(3, 1, 2)
     pylab.plot(modelWinAreas[sortIdx], (r2s[modelIdx])[sortIdx], 'x-')
+    pylab.subplot(3, 1, 3)
+    pylab.plot(modelWinAreas[sortIdx], (rmss[modelIdx])[sortIdx], 'x-')
 
-pylab.subplot(2, 1, 1)
-pylab.xlabel('Win area')
-pylab.ylabel('MAE')
+pylab.subplot(3, 1, 1)
+pylab.xlabel('Win. area (pixels)')
+pylab.ylabel('Mean Abs. error (%)')
+pylab.title('Effect of sliding window size on SPOT comparison')
 pylab.grid()
 pylab.legend(np.unique(models))
-pylab.subplot(2, 1, 2)
-pylab.xlabel('Win area')
-pylab.ylabel('R2')
+# pylab.legend('Gain only model')
+pylab.subplot(3, 1, 2)
+pylab.xlabel('Win. area (pixels)')
+pylab.ylabel('$R^2$')
 pylab.grid()
-pylab.legend(np.unique(models))
+# pylab.title('$R^2$ vs window size')
+pylab.subplot(3, 1, 3)
+pylab.xlabel('Win. area (pixels)')
+pylab.ylabel('RMS error (%)')
+pylab.grid()
+# pylab.title('RMS error vs window size')
+pylab.tight_layout()
+
+
+
+# for avn meet:
+pylab.figure()
+for model in [1]:
+    modelIdx = models == model
+    modelWinAreas = winAreas[modelIdx]
+    sortIdx = np.argsort(modelWinAreas)
+    pylab.subplot(3, 1, 1)
+    pylab.plot(modelWinAreas[sortIdx], (maes[modelIdx])[sortIdx], 'x-')
+    pylab.subplot(3, 1, 2)
+    pylab.plot(modelWinAreas[sortIdx], (r2s[modelIdx])[sortIdx], 'x-')
+    pylab.subplot(3, 1, 3)
+    pylab.plot(modelWinAreas[sortIdx], (rmss[modelIdx])[sortIdx], 'x-')
+
+pylab.subplot(3, 1, 1)
+pylab.xlabel('Win. area (pixels)')
+pylab.ylabel('Mean Abs. error (%)')
+pylab.title('Effect of sliding window size on SPOT comparison (gain only model)')
+pylab.grid()
+# pylab.legend('Gain only model')
+pylab.subplot(3, 1, 2)
+pylab.xlabel('Win. area (pixels)')
+pylab.ylabel('$R^2$')
+pylab.grid()
+# pylab.title('$R^2$ vs window size')
+pylab.subplot(3, 1, 3)
+pylab.xlabel('Win. area (pixels)')
+pylab.ylabel('RMS error (%)')
+pylab.grid()
+# pylab.title('RMS error vs window size')
+pylab.tight_layout()
+
