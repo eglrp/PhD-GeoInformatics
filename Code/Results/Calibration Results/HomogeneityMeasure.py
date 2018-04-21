@@ -73,77 +73,8 @@ tileIndexDs = None
 
 
 # read a ROI of a raster with windowCnrs in projected co-ords, optionally read the same ROI but from the overviews
-# mmm - this overview thing is not going to work well - the overviews of different ims are not tapped / aligned to the same grid
-def ReadRasterWindow(rasterDs, roiCnrs = None, ovwLevel = None):
-    geoTransform = np.array(rasterDs.GetGeoTransform())
-    if ovwLevel is not None:  # adjust the geotransform to be for larger pixels
-        geoTransform[1] = geoTransform[1] * (2. ** (ovwLevel+1))
-        geoTransform[5] = geoTransform[5] * (2. ** (ovwLevel+1))
-    affine = Affine.from_gdal(*geoTransform)
-
-    if roiCnrs is None:
-        origin = np.int32([0, 0])
-        counts = np.int32([rasterDs.XSize, rasterDs.YSize])
-    else:
-        roiPlCnrs = np.array(~affine * roiCnrs.transpose()).transpose()
-        origin = np.min(roiPlCnrs, axis=0)
-        counts = np.max(roiPlCnrs, axis=0) - origin
-        print 'origin: ' + str(origin)
-        print 'counts: ' + str(counts)
-        origin = np.int32(np.round(origin))
-        counts = np.int32(np.round(counts))
-
-    rasterRoi = np.zeros([counts[1], counts[0], rasterDs.RasterCount], dtype=np.float32)
-    for b in range(0, rasterDs.RasterCount):
-        if ovwLevel is not None:
-             band = rasterDs.GetRasterBand(b + 1).GetOverview(ovwLevel)
-        else:
-            band = rasterDs.GetRasterBand(b + 1)
-        bandArray = band.ReadAsArray(origin[0], origin[1], counts[0], counts[1], None, None, gdal.GDT_Float32)
-        rasterRoi[:, :, b] = bandArray
-
-    # use last band to get mask - assume mask same for all bands
-    rasterMask = band.GetMaskBand().ReadAsArray(origin[0], origin[1], counts[0], counts[1])
-    return rasterRoi, rasterMask  #, origin, counts
-
-
-# read a ROI of a raster with windowCnrs in projected co-ords, optionally read the same ROI but from the overviews
-# mmm - this overview thing is not going to work well - the overviews of different ims are not tapped / aligned to the same grid
-def ReadRasterWindow(rasterDs, roiCnrs = None, ovwLevel = None):
-    geoTransform = np.array(rasterDs.GetGeoTransform())
-    if ovwLevel is not None:  # adjust the geotransform to be for larger pixels
-        geoTransform[1] = geoTransform[1] * (2. ** (ovwLevel+1))
-        geoTransform[5] = geoTransform[5] * (2. ** (ovwLevel+1))
-    affine = Affine.from_gdal(*geoTransform)
-
-    if roiCnrs is None:
-        origin = np.int32([0, 0])
-        counts = np.int32([rasterDs.XSize, rasterDs.YSize])
-    else:
-        roiPlCnrs = np.array(~affine * roiCnrs.transpose()).transpose()
-        origin = np.min(roiPlCnrs, axis=0)
-        counts = np.max(roiPlCnrs, axis=0) - origin
-        print 'origin: ' + str(origin)
-        print 'counts: ' + str(counts)
-        origin = np.int32(np.round(origin))
-        counts = np.int32(np.round(counts))
-
-    rasterRoi = np.zeros([counts[1], counts[0], rasterDs.RasterCount], dtype=np.float32)
-    for b in range(0, rasterDs.RasterCount):
-        if ovwLevel is not None:
-             band = rasterDs.GetRasterBand(b + 1).GetOverview(ovwLevel)
-        else:
-            band = rasterDs.GetRasterBand(b + 1)
-        bandArray = band.ReadAsArray(origin[0], origin[1], counts[0], counts[1], None, None, gdal.GDT_Float32)
-        rasterRoi[:, :, b] = bandArray
-
-    # use last band to get mask - assume mask same for all bands
-    rasterMask = band.GetMaskBand().ReadAsArray(origin[0], origin[1], counts[0], counts[1])
-    return rasterRoi, rasterMask  #, origin, counts
-
-
-# read a ROI of a raster with windowCnrs in projected co-ords, optionally read the same ROI but from the overviews
-# mmm - this overview thing is not going to work well - the overviews of different ims are not tapped / aligned to the same grid
+# NB NOTE - overviews are not tapped/grid aligned and so will not spatially align properly between adjacent images
+# we should recode overviews as our own downsampled ims - should be quite easy with numpy (if not slow)
 def ReadRasterWindow(rasterDs, roiCnrs = None, ovwLevel = None):
     geoTransform = np.array(rasterDs.GetGeoTransform())
     if ovwLevel is not None:  # adjust the geotransform to be for larger pixels
@@ -162,11 +93,21 @@ def ReadRasterWindow(rasterDs, roiCnrs = None, ovwLevel = None):
         print 'counts: ' + str(counts)
         origin = np.int32(np.round(origin))  # only round after counts calc
         counts = np.int32(np.round(counts))
+        if ovwLevel is not None:
+            band = rasterDs.GetRasterBand(1).GetOverview(ovwLevel)
+        else:
+            band = rasterDs.GetRasterBand(1)
+        rasterSize = np.array([band.XSize, band.YSize])
+        # Note A - it is possible that the ROI extends past the image boundary due to rounding - fix this below
+        mask = (origin + counts) > rasterSize
+        counts[mask] = (rasterSize - origin)[mask]
+        print 'origin: ' + str(origin)
+        print 'counts: ' + str(counts)
 
     rasterRoi = np.zeros([counts[1], counts[0], rasterDs.RasterCount], dtype=np.float32)
     for b in range(0, rasterDs.RasterCount):
         if ovwLevel is not None:
-             band = rasterDs.GetRasterBand(b + 1).GetOverview(ovwLevel)
+            band = rasterDs.GetRasterBand(b + 1).GetOverview(ovwLevel)
         else:
             band = rasterDs.GetRasterBand(b + 1)
         bandArray = band.ReadAsArray(origin[0], origin[1], counts[0], counts[1], None, None, gdal.GDT_Float32)
@@ -177,49 +118,60 @@ def ReadRasterWindow(rasterDs, roiCnrs = None, ovwLevel = None):
     return rasterRoi, rasterMask  #, origin, counts
 
 
+absDiffAccum = [0.,0.,0.,0.]
+numPixelAccum = 0.
+reflScale = 5000
 for (outerI, outerTile) in enumerate(tileList):
     # print 'outerI: ' + str(outerI)
     for (innerI, innerTile) in enumerate(tileList[outerI + 1:]):
         # print 'innerI: ' + str(innerI)
         if outerTile['geom'].Intersects(innerTile['geom']):
             print os.path.basename(outerTile['location']) + ' intersects ' + os.path.basename(innerTile['location'])
+            # if '3321D_319_02_0060_RGBN_CMP_XCALIB.tif' == os.path.basename(outerTile['location']) and '3321D_319_02_0062_RGBN_CMP_XCALIB.tif' == os.path.basename(innerTile['location']):
+            #     break
+
+            # break
             intersectionPoly = outerTile['geom'].Intersection(innerTile['geom'])
             intersectionCnrs = np.array(intersectionPoly.GetBoundary().GetPoints())[0:-1]
             outerDs = gdal.OpenEx(outerTile['location'], gdal.OF_RASTER)
             innerDs = gdal.OpenEx(innerTile['location'], gdal.OF_RASTER)
-            outerRaster, outerMask = ReadRasterWindow(outerDs, intersectionCnrs, ovwLevel=0)
-            innerRaster, innerMask = ReadRasterWindow(innerDs, intersectionCnrs, ovwLevel=0)
+            try:
+                outerRaster, outerMask = ReadRasterWindow(outerDs, intersectionCnrs, ovwLevel=2)
+                innerRaster, innerMask = ReadRasterWindow(innerDs, intersectionCnrs, ovwLevel=2)
+            finally:
+                outerDs = None
+                innerDs = None
+            # due to Note A, it is possible the above may be different sizes - fix this
+            sizeFix = np.array([outerMask.shape, innerMask.shape]).min(axis=0)
+            outerRaster = outerRaster[:sizeFix[0], :sizeFix[1]]
+            outerMask = outerMask[:sizeFix[0], :sizeFix[1]]
+            innerRaster = innerRaster[:sizeFix[0], :sizeFix[1]]
+            innerMask = innerMask[:sizeFix[0], :sizeFix[1]]
+
             intersectionMask = outerMask & innerMask
             diffRaster = np.abs(outerRaster - innerRaster)
             diffRaster[np.logical_not(intersectionMask)] = 0.  # broadcast across dims
+            if False:
+                pylab.figure()
+                ax = pylab.subplot(2, 2, 1)
+                pylab.imshow(outerRaster[:, :, [3, 0, 1]] / np.max(outerRaster[:, :, [3, 0, 1]], axis=(0, 1)))
+                pylab.subplot(2, 2, 2, sharex=ax, sharey=ax)
+                pylab.imshow(innerRaster[:, :, [3, 0, 1]] / np.max(innerRaster[:, :, [3, 0, 1]], axis=(0, 1)))
+                pylab.subplot(2, 2, 3, sharex=ax, sharey=ax)
+                pylab.imshow(diffRaster[:, :, [3, 0, 1]] / np.max(diffRaster[:, :, [3, 0, 1]], axis=(0, 1)))
+                pylab.subplot(2, 2, 4, sharex=ax, sharey=ax)
+                pylab.imshow(intersectionMask)
 
-            # outerAffine = Affine.from_gdal(*outerRaster.GetGeoTransform())
-            # innerAffine = Affine.from_gdal(*innerRaster.GetGeoTransform())
-            # outerCnrs = np.array(~outerAffine * intersectionCnrs.transpose()).transpose()
-            # innerCnrs = np.array(~innerAffine * intersectionCnrs.transpose()).transpose()
-            # outerUl = np.min(outerCnrs, axis=0)
-            # outerSize = np.max(outerCnrs, axis=0) - outerUl
-            # innerUl = np.min(innerCnrs, axis=0)
-            # innerSize = np.max(innerCnrs, axis=0) - innerUl
+            nPixel = (intersectionMask > 0).sum()
+            sumAbsDiff = np.sum(np.abs(diffRaster[intersectionMask > 0]), axis=0)  #mean for each band
+            numPixelAccum += nPixel
+            absDiffAccum += sumAbsDiff/reflScale
 
-
-            # tmp = outerRaster.read(None, window=((0,0),(10,10)))
-            break
-    break
-
-
-rasterDs = innerDs
+print 'Mean Abs Error: {0}'.format(100.*np.float32(absDiffAccum)/numPixelAccum)
+#
+#
+rasterDs = outerDs
 roiCnrs = intersectionCnrs
-ovwLevel = 0
+ovwLevel = 2
 b = 0
-
-pylab.figure()
-ax = pylab.subplot(2,2,1)
-pylab.imshow(outerRaster[:,:,[3,0,1]]/np.max(outerRaster[:,:,[3,0,1]], axis=(0,1)))
-pylab.subplot(2,2,2, sharex=ax, sharey=ax)
-pylab.imshow(innerRaster[:,:,[3,0,1]]/np.max(innerRaster[:,:,[3,0,1]], axis=(0,1)))
-pylab.subplot(2,2,3, sharex=ax, sharey=ax)
-pylab.imshow(diffRaster[:,:,[3,0,1]]/np.max(diffRaster[:,:,[3,0,1]], axis=(0,1)))
-pylab.subplot(2,2,4, sharex=ax, sharey=ax)
-pylab.imshow(intersectionMask)
 
