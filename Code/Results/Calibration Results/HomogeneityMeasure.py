@@ -13,10 +13,16 @@ os.environ['PATH'] += "C:\ProgramData\Anaconda3\envs\py27\Library\\bin"
 os.environ['GDAL_DATA'] = "C:\ProgramData\Anaconda3\envs\py27\Library\share\gdal"
 os.environ['GDAL_DRIVER_PATH']="C:\ProgramData\Anaconda3\envs\py27\Library\\bin\gdalplugins"
 
-sourceDir = "D:\Data\Development\Projects\PhD GeoInformatics\Data\NGI\XCalib Experiments\Calibrated2\w77p1"
 gdaltindexExe = "C:\ProgramData\Anaconda3\envs\py27\Library\\bin\gdaltindex.exe"  # Use anaconda version as osgeo4w wont run under Anaconda
 rootDir = "D:\Data\Development\Projects\PhD GeoInformatics\Data\NGI\XCalib Experiments\Calibrated2"
-
+doRaw = False
+ovwLevel = 0
+if doRaw:
+    tileIndexWildCard = '*_CMP.tif'
+    rootDir = "D:\Data\Development\Projects\PhD GeoInformatics\Data\NGI\XCalib Experiments"
+else:
+    tileIndexWildCard = '*_CMP_XCALIB.tif'
+    rootDir = "D:\Data\Development\Projects\PhD GeoInformatics\Data\NGI\XCalib Experiments\Calibrated2"
 
 # read a ROI of a raster with windowCnrs in projected co-ords, optionally read the same ROI but from the overviews
 # NB NOTE - overviews are not tapped/grid aligned and so will not spatially align properly between adjacent images
@@ -63,20 +69,20 @@ def ReadRasterWindow(rasterDs, roiCnrs = None, ovwLevel = None):
     rasterMask = band.GetMaskBand().ReadAsArray(origin[0], origin[1], counts[0], counts[1])
     return rasterRoi, rasterMask  #, origin, counts
 
+if doRaw:
+    subDirs = ['Source2']
+else:
+    subDirs = os.listdir(rootDir)
+    results = {}
 
-
-results = {}
-for dirItem in os.listdir(rootDir):
+for dirItem in subDirs:
     if not os.path.isdir(os.path.join(rootDir, dirItem)):
         continue
-    if True:
-        sourceDir = os.path.join(rootDir, dirItem)
-        print 'Processing {0:%s}' % (sourceDir)
-        print 'Generating tile index'
-        tileIndexFileName = os.path.join(sourceDir, os.path.basename(sourceDir) + '_TileIndex.shp')
-    else:
-        sourceDir = 'D:\Data\Development\Projects\PhD GeoInformatics\Data\NGI\XCalib Experiments\Source2'
-        tileIndexFileName = os.path.join(sourceDir, os.path.basename(sourceDir) + '_TileIndex.shp')
+    sourceDir = os.path.join(rootDir, dirItem)
+    print 'Processing {0:%s}' % (sourceDir)
+    print 'Generating tile index'
+    tileIndexFileName = os.path.join(sourceDir, os.path.basename(sourceDir) + '_TileIndex.shp')
+
     if False:
         if os.path.exists(tileIndexFileName):
             for file in glob.glob(os.path.splitext(tileIndexFileName)[0] + '.*'):
@@ -84,7 +90,7 @@ for dirItem in os.listdir(rootDir):
                 os.remove(file)
 
     if not os.path.exists(tileIndexFileName):
-        for file in glob.glob(os.path.join(sourceDir, '*_CMP_XCALIB.tif')):
+        for file in glob.glob(os.path.join(sourceDir, tileIndexWildCard)):
             subprocess.call('{0} "{1}" "{2}"'.format(gdaltindexExe, tileIndexFileName, file), shell=True, env=os.environ)
             print 'Adding ' + file
 
@@ -143,8 +149,8 @@ for dirItem in os.listdir(rootDir):
                 outerDs = gdal.OpenEx(outerTile['location'], gdal.OF_RASTER)
                 innerDs = gdal.OpenEx(innerTile['location'], gdal.OF_RASTER)
                 try:
-                    outerRaster, outerMask = ReadRasterWindow(outerDs, intersectionCnrs, ovwLevel=2)
-                    innerRaster, innerMask = ReadRasterWindow(innerDs, intersectionCnrs, ovwLevel=2)
+                    outerRaster, outerMask = ReadRasterWindow(outerDs, intersectionCnrs, ovwLevel=ovwLevel)
+                    innerRaster, innerMask = ReadRasterWindow(innerDs, intersectionCnrs, ovwLevel=ovwLevel)
                 finally:
                     outerDs = None
                     innerDs = None
@@ -196,9 +202,14 @@ for dirItem in os.listdir(rootDir):
         #     break
     result = {}
     result['name'] = os.path.basename(sourceDir)
-    result['winSize'] = (np.int(result['name'][1]), np.int(result['name'][2]))
-    result['winArea'] = np.int(result['name'][1]) * np.int(result['name'][2])
-    result['model'] = np.int(result['name'][4])
+    if doRaw:
+        result['winSize'] = -1
+        result['winArea'] = -1
+        result['model'] = -1
+    else:
+        result['winSize'] = (np.int(result['name'][1]), np.int(result['name'][2]))
+        result['winArea'] = np.int(result['name'][1]) * np.int(result['name'][2])
+        result['model'] = np.int(result['name'][4])
 
     result['mae'] = 100.*np.float64(absDiffAccum)/(reflScale*numPixelAccum)
     result['mean(mae)'] = np.mean(result['mae'])
@@ -261,7 +272,7 @@ pylab.xlabel('Win. area (pixels)')
 pylab.ylabel('Homog. (%)')
 pylab.grid()
 pylab.legend(np.unique(models))
-pylab.subplot(3, 1, 2)
+pylab.subplot(3, 1, 3)
 pylab.xlabel('Win. area (pixels)')
 pylab.ylabel('Norm AE (%)')
 pylab.grid()
