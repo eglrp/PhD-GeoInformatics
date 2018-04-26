@@ -4,6 +4,10 @@ import glob
 import os
 import pylab
 
+
+# This finds AOD stats for the little karoo study area for NGI survey days
+# it is crude as it does not take into account the sub areas surveyed on each day
+
 sourceDir = 'D:\Data\Development\Projects\PhD GeoInformatics\Data\MODIS\MOD04'
 
 def world2Pixel(geoMatrix, x, y):
@@ -58,12 +62,14 @@ median = [res['median'] for res in resList]
 shapes = [res['imRoi'].shape for res in resList]
 
 pylab.figure()
-pylab.plot(mx, 'x-')
-pylab.plot(mn, 'x-')
-pylab.plot(mean, 'x-')
-pylab.plot(median, 'x-')
+pylab.plot(mx, 'x-', label='max')
+pylab.plot(mn, 'x-', label='min')
+pylab.plot(mean, 'x-', label='mean')
+pylab.plot(median, 'x-', label='median')
+pylab.legend()
 
-np.median(mean)
+print 'Mean AOD over surveys: %.3f' % (np.mean(mean))
+print 'Median AOD over surveys: %.3f' % (np.median(mean))
 
 
 # subDsList = ds.GetSubDatasets()
