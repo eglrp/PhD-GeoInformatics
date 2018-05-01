@@ -443,6 +443,7 @@ from matplotlib import pyplot
 reflScale = 5000.
 
 spotFileName = "D:\Data\Development\Projects\MSc GeoInformatics\Data\NGI\My Rectified\SpotInt16CsDs.tif"
+# spotFileNameNew = "D:\Data\Development\Projects\PhD GeoInformatics\Data\SPOT\S131022114824832\Orthorectification\oATCORCorrected_METADATA_00812098_AutoGCP_NgiFormat.tif"  #improved orthorect
 modisFileName = "D:\Data\Development\Projects\MSc GeoInformatics\Data\NGI\Cross Calibration\Mosaics\ModisSpotExtent.tif"
 
 spotDs = gdal.Open(spotFileName, gdal.GA_ReadOnly)

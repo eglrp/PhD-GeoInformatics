@@ -8,7 +8,7 @@ import matplotlib as mpl
 
 spotFileName = "D:\Data\Development\Projects\PhD GeoInformatics\Data\SPOT\S131022114824832\Orthorectification\oATCORCorrected_METADATA_00812098_AutoGCP_NgiFormat.tif"  # improved orthorect
 modisFileName = 'D:\Data\Development\Projects\PhD GeoInformatics\Data\MODIS\MCD43A4.A2010025.h19v12.005.2010043064233.Lo23.RGBN.tif'
-calibRootDir = 'D:\Data\Development\Projects\PhD GeoInformatics\Data\NGI\XCalib Experiments\CalibratedDsAvg\\'
+calibRootDir = 'D:\Data\Development\Projects\PhD GeoInformatics\Data\NGI\XCalib Experiments\Calibrated2\\'
 
 mosaicFileName = "D:\Data\Development\Projects\PhD GeoInformatics\Data\NGI\XCalib Experiments\Calibrated\w11p1\w33p1_Mosaic10m.tif"
 mosaicFileName = "D:\Data\Development\Projects\PhD GeoInformatics\Data\NGI\XCalib Experiments\Calibrated\w44p2\w44p2_Mosaic10m.tif"

@@ -77,3 +77,10 @@ print 'Median AOD over surveys: %.3f' % (np.median(mean))
 # subDs = gdal.OpenEx(subDsList[idx[0]][0], gdal.OF_RASTER)
 # im = subDs.ReadAsArray()
 # nodataMask = im < -1   # ?
+
+
+# landsat FOV
+np.arctan(0.5*185./705.)*180./np.pi
+
+#NGI approx FOV
+np.arctan(0.5*(0.5*13000)./5000.)*180./np.pi   #swath is 13000 0.5 pixels
