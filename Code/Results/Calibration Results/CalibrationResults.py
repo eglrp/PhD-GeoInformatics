@@ -114,7 +114,7 @@ for b in bands:
     pylab.title(legend[b])
     pylab.grid('on')
     pylab.tight_layout()
-    pyplot.locator_params(axis='y', nbins=5)#to specify number of ticks on both or any single axes
+    pyplot.locator_params(axis='y', nbins=5)  #to specify number of ticks on both or any single axes
     pyplot.locator_params(axis='x', nbins=6)
     #pylab.hold('on')
 

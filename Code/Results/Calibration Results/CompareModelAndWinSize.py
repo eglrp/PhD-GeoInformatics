@@ -236,3 +236,44 @@ pylab.grid()
 # pylab.title('RMS error vs window size')
 pylab.tight_layout()
 
+
+
+# for paper:
+import matplotlib as mpl
+fontSize = 16
+pylab.close('all')
+mpl.rcParams.update({'font.size': fontSize})
+f = pylab.figure('Effect of sliding win size')
+f.set_size_inches(9., 4., forward=True)
+for model in [1]:
+    modelIdx = models == model
+    modelWinAreas = winAreas[modelIdx]
+    sortIdx = np.argsort(modelWinAreas)
+    modelWinSizes = winSizes[modelIdx][sortIdx]
+    modelWinAreas = modelWinAreas[sortIdx]
+    modelMaes = (maes[modelIdx])[sortIdx]
+    pylab.plot(modelWinAreas, modelMaes, 'kx-')
+
+xtickLabels=[]
+for i, winSize in enumerate(modelWinSizes):
+    # xtickLabels.append('{0:1d}x{1:1d}'.format(winSize[0], winSize[1]))
+    # pylab.text(modelWinAreas[i], modelMaes[i], str.format('({0:1d}x{1:1d})', winSize[0], winSize[1]), fontsize = fontSize/2.)
+    if i == 0:
+        xytext = (-15, 5)
+    elif i == 1:
+        xytext = (-3, 5)
+    else:
+        xytext = (5, -10)
+
+    pylab.annotate(str.format('{0:1d}x{1:1d}', winSize[0], winSize[1]), xy=(modelWinAreas[i], modelMaes[i]),
+                   xytext=xytext, textcoords='offset points', fontsize = fontSize/1.6)
+
+# pylab.xticks(modelWinAreas, xtickLabels, fontsize=fontSize/2.)
+# xticks(np.arange(5), ('Tom', 'Dick', 'Harry', 'Sally', 'Sue'))
+pylab.xlabel('Window area (pixels)')
+pylab.ylabel('Mean Absolute Difference (%)')
+pylab.grid()
+pylab.tight_layout()
+
+f.savefig('C:/Data/Development/Projects/PhD GeoInformatics/Docs/My Docs/Thesis/Retrieval of Surface Reflectance'
+           ' from Aerial Imagery/Figure 15 - Effect of sliding window size on SPOT 5 comparison .eps', dpi=1200)
