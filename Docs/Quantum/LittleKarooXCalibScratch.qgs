@@ -297,7 +297,7 @@
         </layer-tree-group>
         <layer-tree-group checked="Qt::Checked" expanded="1" name="XCalib Mosaic">
           <customproperties/>
-          <layer-tree-layer providerKey="ogr" checked="Qt::Checked" id="WinSizeExpExtent_d03a6b68_d452_4168_92fe_331268de6560" expanded="1" name="WinSizeExpExtent" source="D:\Data\Development\Projects\PhD GeoInformatics\Data\Misc\Little Karoo ShapeFiles\WinSizeExpExtent.shp">
+          <layer-tree-layer providerKey="ogr" checked="Qt::Checked" id="WinSizeExpExtent_518f7efc_533f_4b70_a5c8_b33670e09062" expanded="1" name="WinSizeExpExtent" source="D:\Data\Development\Projects\PhD GeoInformatics\Data\Misc\Little Karoo ShapeFiles\WinSizeExpExtent.shp">
             <customproperties/>
           </layer-tree-layer>
           <layer-tree-layer providerKey="gdal" checked="Qt::Checked" id="w11p1_Mosaic10m_f7f0c07d_dc05_4318_80f7_e7308bc14391" expanded="1" name="w11p1_Mosaic10m" source="D:\Data\Development\Projects\PhD GeoInformatics\Data\NGI\XCalib Experiments\Calibrated2\w11p1\w11p1_Mosaic10m.tif">
@@ -431,12 +431,12 @@
       <item>HDF4_EOS_EOS_SWATH__MOD04_L2_A2010040_0800_061_2017310221002__mod04_AOD_550_Dark_Target_Deep_Blue_Combined_1ecc0f4a_ee54_4583_b9e4_09abd7634608</item>
       <item>MOD04_L2_A2010040_0800_061_2017310221002___AOD_550_Dark_Target_Deep_Blue_Combined_90448d72_21e5_4d87_ad55_784e361fd713</item>
       <item>w11p1_Mosaic10m_f7f0c07d_dc05_4318_80f7_e7308bc14391</item>
-      <item>WinSizeExpExtent_d03a6b68_d452_4168_92fe_331268de6560</item>
+      <item>WinSizeExpExtent_518f7efc_533f_4b70_a5c8_b33670e09062</item>
     </custom-order>
   </layer-tree-group>
   <snapping-settings enabled="0" mode="1" tolerance="0" intersection-snapping="0" type="1" unit="2">
     <individual-layer-settings>
-      <layer-setting enabled="0" id="WinSizeExpExtent_d03a6b68_d452_4168_92fe_331268de6560" tolerance="12" units="1" type="1"/>
+      <layer-setting enabled="0" id="WinSizeExpExtent_518f7efc_533f_4b70_a5c8_b33670e09062" tolerance="12" units="1" type="1"/>
       <layer-setting enabled="0" id="Sheet_50K_a667d6ba_3f77_43d9_8f02_9df92a55ec7a" tolerance="12" units="1" type="1"/>
       <layer-setting enabled="0" id="3321D_2010_319_XCALIB_footprint_5f4569e0_1131_4eb5_9bcf_e861168a8b4f" tolerance="12" units="1" type="1"/>
       <layer-setting enabled="0" id="3321B_2010_317_XCALIB_footprint_93cd5e75_798c_428f_b25d_ba0e2d586e16" tolerance="12" units="1" type="1"/>
@@ -451,10 +451,10 @@
   <mapcanvas annotationsVisible="1" name="theMapCanvas">
     <units>degrees</units>
     <extent>
-      <xmin>20.36127637811600977</xmin>
-      <ymin>-34.88884497258352013</ymin>
-      <xmax>22.89617183124878608</xmax>
-      <ymax>-31.8803681087291082</ymax>
+      <xmin>21.73899005012021846</xmin>
+      <ymin>-33.62564063095740607</ymin>
+      <xmax>22.05585198176181549</xmax>
+      <ymax>-33.24958102297560458</ymax>
     </extent>
     <rotation>0</rotation>
     <destinationsrs>
@@ -911,7 +911,7 @@
         <legendgroup checked="Qt::Checked" open="true" name="XCalib Mosaic">
           <legendlayer showFeatureCount="0" checked="Qt::Checked" drawingOrder="-1" open="true" name="WinSizeExpExtent">
             <filegroup open="true" hidden="false">
-              <legendlayerfile isInOverview="0" layerid="WinSizeExpExtent_d03a6b68_d452_4168_92fe_331268de6560" visible="1"/>
+              <legendlayerfile isInOverview="0" layerid="WinSizeExpExtent_518f7efc_533f_4b70_a5c8_b33670e09062" visible="1"/>
             </filegroup>
           </legendlayer>
           <legendlayer showFeatureCount="0" checked="Qt::Checked" drawingOrder="-1" open="true" name="w11p1_Mosaic10m">
@@ -9484,7 +9484,7 @@ def my_form_open(dialog, layer, feature):
         <xmax>21.9304995932104525</xmax>
         <ymax>-33.40823462449112213</ymax>
       </extent>
-      <id>WinSizeExpExtent_d03a6b68_d452_4168_92fe_331268de6560</id>
+      <id>WinSizeExpExtent_518f7efc_533f_4b70_a5c8_b33670e09062</id>
       <datasource>D:\Data\Development\Projects\PhD GeoInformatics\Data\Misc\Little Karoo ShapeFiles\WinSizeExpExtent.shp</datasource>
       <keywordList>
         <value></value>
@@ -9538,22 +9538,18 @@ def my_form_open(dialog, layer, feature):
       <renderer-v2 forceraster="0" enableorderby="0" type="singleSymbol" symbollevels="0">
         <symbols>
           <symbol clip_to_extent="1" alpha="1" name="0" type="fill">
-            <layer locked="0" enabled="1" pass="0" class="SimpleLine">
-              <prop k="capstyle" v="square"/>
-              <prop k="customdash" v="5;2"/>
-              <prop k="customdash_map_unit_scale" v="3x:0,0,0,0,0,0"/>
-              <prop k="customdash_unit" v="MM"/>
-              <prop k="draw_inside_polygon" v="0"/>
+            <layer locked="0" enabled="1" pass="0" class="SimpleFill">
+              <prop k="border_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="color" v="249,145,9,255"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="227,26,28,255"/>
-              <prop k="line_style" v="solid"/>
-              <prop k="line_width" v="0.86"/>
-              <prop k="line_width_unit" v="MM"/>
-              <prop k="offset" v="0"/>
+              <prop k="offset" v="0,0"/>
               <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
               <prop k="offset_unit" v="MM"/>
-              <prop k="use_custom_dash" v="0"/>
-              <prop k="width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="outline_color" v="35,35,35,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0.26"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="style" v="solid"/>
               <data_defined_properties>
                 <Option type="Map">
                   <Option value="" name="name" type="QString"/>
@@ -9642,6 +9638,34 @@ def my_form_open(dialog, layer, feature):
             </config>
           </editWidget>
         </field>
+        <field name="width_1">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="height_1">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="area_1">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="perimeter">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
       </fieldConfiguration>
       <aliases>
         <alias field="MINX" name="" index="0"/>
@@ -9654,6 +9678,10 @@ def my_form_open(dialog, layer, feature):
         <alias field="PERIM" name="" index="7"/>
         <alias field="HEIGHT" name="" index="8"/>
         <alias field="WIDTH" name="" index="9"/>
+        <alias field="width_1" name="" index="10"/>
+        <alias field="height_1" name="" index="11"/>
+        <alias field="area_1" name="" index="12"/>
+        <alias field="perimeter" name="" index="13"/>
       </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
@@ -9668,6 +9696,10 @@ def my_form_open(dialog, layer, feature):
         <default applyOnUpdate="0" expression="" field="PERIM"/>
         <default applyOnUpdate="0" expression="" field="HEIGHT"/>
         <default applyOnUpdate="0" expression="" field="WIDTH"/>
+        <default applyOnUpdate="0" expression="" field="width_1"/>
+        <default applyOnUpdate="0" expression="" field="height_1"/>
+        <default applyOnUpdate="0" expression="" field="area_1"/>
+        <default applyOnUpdate="0" expression="" field="perimeter"/>
       </defaults>
       <constraints>
         <constraint unique_strength="0" constraints="0" field="MINX" notnull_strength="0" exp_strength="0"/>
@@ -9680,6 +9712,10 @@ def my_form_open(dialog, layer, feature):
         <constraint unique_strength="0" constraints="0" field="PERIM" notnull_strength="0" exp_strength="0"/>
         <constraint unique_strength="0" constraints="0" field="HEIGHT" notnull_strength="0" exp_strength="0"/>
         <constraint unique_strength="0" constraints="0" field="WIDTH" notnull_strength="0" exp_strength="0"/>
+        <constraint unique_strength="0" constraints="0" field="width_1" notnull_strength="0" exp_strength="0"/>
+        <constraint unique_strength="0" constraints="0" field="height_1" notnull_strength="0" exp_strength="0"/>
+        <constraint unique_strength="0" constraints="0" field="area_1" notnull_strength="0" exp_strength="0"/>
+        <constraint unique_strength="0" constraints="0" field="perimeter" notnull_strength="0" exp_strength="0"/>
       </constraints>
       <constraintExpressions>
         <constraint field="MINX" desc="" exp=""/>
@@ -9692,6 +9728,10 @@ def my_form_open(dialog, layer, feature):
         <constraint field="PERIM" desc="" exp=""/>
         <constraint field="HEIGHT" desc="" exp=""/>
         <constraint field="WIDTH" desc="" exp=""/>
+        <constraint field="width_1" desc="" exp=""/>
+        <constraint field="height_1" desc="" exp=""/>
+        <constraint field="area_1" desc="" exp=""/>
+        <constraint field="perimeter" desc="" exp=""/>
       </constraintExpressions>
       <attributeactions>
         <defaultAction value="{00000000-0000-0000-0000-000000000000}" key="Canvas"/>
@@ -11298,7 +11338,7 @@ def my_form_open(dialog, layer, feature):
     <layer id="HDF4_EOS_EOS_SWATH__MOD04_L2_A2010040_0800_061_2017310221002__mod04_AOD_550_Dark_Target_Deep_Blue_Combined_1ecc0f4a_ee54_4583_b9e4_09abd7634608"/>
     <layer id="MOD04_L2_A2010040_0800_061_2017310221002___AOD_550_Dark_Target_Deep_Blue_Combined_90448d72_21e5_4d87_ad55_784e361fd713"/>
     <layer id="w11p1_Mosaic10m_f7f0c07d_dc05_4318_80f7_e7308bc14391"/>
-    <layer id="WinSizeExpExtent_d03a6b68_d452_4168_92fe_331268de6560"/>
+    <layer id="WinSizeExpExtent_518f7efc_533f_4b70_a5c8_b33670e09062"/>
   </layerorder>
   <properties>
     <WMSServiceCapabilities type="bool">false</WMSServiceCapabilities>
