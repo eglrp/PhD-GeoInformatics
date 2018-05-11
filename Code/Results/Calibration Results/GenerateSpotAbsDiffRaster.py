@@ -25,3 +25,5 @@ subprocess.call('gdal_merge -o "{3}" -separate "{0}" "{1}" "{2}"'.format(
 
 subprocess.call('gdaladdo -ro -r cubicspline --config COMPRESS_OVERVIEW DEFLATE "{0}" 2 4 8 16 32 64'.format(outFileName),
                     shell=True)
+
+
