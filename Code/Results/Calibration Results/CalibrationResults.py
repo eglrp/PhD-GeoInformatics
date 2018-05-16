@@ -319,8 +319,9 @@ fn = pylab.gcf().number
 pn = 1
 #
 #
-# fontSize = 24.
-# mpl.rcParams.update({'font.size': fontSize})
+import matplotlib as mpl
+fontSize = 24.
+mpl.rcParams.update({'font.size': fontSize})
 
 f1 = pylab.figure('Uncalibrated')
 f1.set_size_inches(16., 5.25, forward=True)
