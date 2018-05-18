@@ -240,11 +240,11 @@ pylab.tight_layout()
 
 # for paper:
 import matplotlib as mpl
-fontSize = 16
+fontSize = 16/1.5
 pylab.close('all')
 mpl.rcParams.update({'font.size': fontSize})
 f = pylab.figure('Effect of sliding win size')
-f.set_size_inches(9., 4., forward=True)
+f.set_size_inches(9./1.5, 4./1.5, forward=True)
 for model in [1]:
     modelIdx = models == model
     modelWinAreas = winAreas[modelIdx]
@@ -266,7 +266,7 @@ for i, winSize in enumerate(modelWinSizes):
         xytext = (5, -10)
 
     pylab.annotate(str.format('{0:1d}x{1:1d}', winSize[0], winSize[1]), xy=(modelWinAreas[i], modelMaes[i]),
-                   xytext=xytext, textcoords='offset points', fontsize = fontSize/1.6)
+                   xytext=xytext, textcoords='offset points', fontsize = fontSize/1.2)
 
 # pylab.xticks(modelWinAreas, xtickLabels, fontsize=fontSize/2.)
 # xticks(np.arange(5), ('Tom', 'Dick', 'Harry', 'Sally', 'Sue'))
@@ -276,4 +276,4 @@ pylab.grid()
 pylab.tight_layout()
 
 f.savefig('C:/Data/Development/Projects/PhD GeoInformatics/Docs/My Docs/Thesis/Retrieval of Surface Reflectance'
-           ' from Aerial Imagery/Figure 15 - Effect of sliding window size on SPOT 5 comparison .eps', dpi=1200)
+           ' from Aerial Imagery/Figure 15 - Effect of sliding window size on SPOT 5 comparison.eps', dpi=600)

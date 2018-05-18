@@ -79,15 +79,15 @@ step = 5
 fn = pylab.gcf().number
 pn = 1
 
-fontSize = 24.
+fontSize = 12.
 import matplotlib as mpl
 from matplotlib import pyplot
 mpl.rcParams.update({'font.size': fontSize})
 
 f1 = pylab.figure('Uncalibrated')
-f1.set_size_inches(12, 9, forward=True)
+f1.set_size_inches(6, 4.5, forward=True)
 f2 = pylab.figure('Calibrated')
-f2.set_size_inches(12, 9, forward=True)
+f2.set_size_inches(6, 4.5, forward=True)
 
 ePixels = []
 for b in bands:
@@ -136,12 +136,12 @@ for b in bands:
     pylab.xlabel(r'MODIS surface refl.')
     #pylab.ylabel(r'DMC $\rho_t$')
     pylab.ylabel(r'DMC surface refl.')
-    pylab.legend(handles=[oneLineH], prop={'size':20}, loc=4)
+    pylab.legend(handles=[oneLineH], prop={'size':fontSize-2}, loc=4)
     pylab.grid('on')
 
     pylab.tight_layout()
     pyplot.locator_params(axis='y', nbins=5)#to specify number of ticks on both or any single axes
-    pyplot.locator_params(axis='x', nbins=6)
+    pyplot.locator_params(axis='x', nbins=5)
 
     #pylab.hold('on')
     pn += 1
@@ -160,12 +160,14 @@ for b in bands:
     pylab.plot(mX, dCalibH, linestyle=':', color=colors[b])
     pylab.plot(dRawX, dRawH, linestyle='--', color=colors[b])
     pylab.tight_layout()
+    pyplot.locator_params(axis='y', nbins=5)#to specify number of ticks on both or any single axes
+    pyplot.locator_params(axis='x', nbins=5)
     #title(str.format('Calib r = {}', r))
 
 f1.savefig('C:/Data/Development/Projects/PhD GeoInformatics/Docs/My Docs/Thesis/Retrieval of Surface Reflectance'
-           ' from Aerial Imagery/Figure 8 - DMC DN and MODIS Surface Reflectance Correlation V2.eps', dpi=1200)
+           ' from Aerial Imagery/Figure 8 - DMC DN and MODIS Surface Reflectance Correlation V2.eps', dpi=600)
 f2.savefig('C:/Data/Development/Projects/PhD GeoInformatics/Docs/My Docs/Thesis/Retrieval of Surface Reflectance'
-           ' from Aerial Imagery/FFigure 9 - DMC Homogenised and MODIS Surface Reflectance Correlation V2.eps', dpi=1200)
+           ' from Aerial Imagery/Figure 9 - DMC Homogenised and MODIS Surface Reflectance Correlation V2.eps', dpi=600)
 
 print str.format("N (num points plotted): {0}, step: {1}", mPixels[::step].__len__(), step)
 
@@ -314,19 +316,19 @@ pylab.close('all')
 bands = (0, 1, 2)
 colors = ( 'orange', 'r', 'g')
 legend = ('NIR', 'Red', 'Green')
-step = 1000
+step = 5000
 fn = pylab.gcf().number
 pn = 1
 #
 #
 import matplotlib as mpl
-fontSize = 24.
+fontSize = 12.
 mpl.rcParams.update({'font.size': fontSize})
 
 f1 = pylab.figure('Uncalibrated')
-f1.set_size_inches(16., 5.25, forward=True)
+f1.set_size_inches(8., 5.25/2, forward=True)
 f2 = pylab.figure('Calibrated')
-f2.set_size_inches(16., 5.25, forward=True)
+f2.set_size_inches(8., 5.25/2, forward=True)
 
 ## NB
 spotIm = spotNewIm
@@ -345,8 +347,12 @@ for b in bands:
     pylab.figure('Uncalibrated')
     pylab.subplot(1, 3, pn)
     pylab.plot(sPixels[::step], dRawPixels[::step], color='k', marker='.', linestyle='', markersize=.5)
+
     xl = pylab.gca().get_xlim()
     yl = pylab.gca().get_ylim()
+    # pylab.xticks(np.arange(xl[0], xl[1], 0.2))
+    # pylab.yticks(np.arange(yl[0], yl[1], 500))
+
     pylab.text((xl[0] + np.diff(xl)*0.05)[0], (yl[0] + np.diff(yl)*0.8)[0], str.format('$R^2$ = {0:.2f}',
                                                                                        np.round(r**2, 2)))
     # pylab.xlabel(r'SPOT5 $\rho_t$')
@@ -356,7 +362,7 @@ for b in bands:
     pylab.grid('on')
     pylab.tight_layout()
     pyplot.locator_params(axis='y', nbins=5)#to specify number of ticks on both or any single axes
-    pyplot.locator_params(axis='x', nbins=6)
+    pyplot.locator_params(axis='x', nbins=5)
 
     #pylab.hold('on')
 
@@ -372,6 +378,7 @@ for b in bands:
     pylab.gca().set_xlim([0, m])
     pylab.gca().set_ylim([0, m])
     xl = pylab.gca().get_xlim()
+    xl = pylab.gca().set_xlim()
     yl = pylab.gca().get_ylim()
     pylab.text((xl[0] + np.diff(xl)*0.05)[0], (yl[0] + np.diff(yl)*0.8)[0], str.format('$R^2$ = {0:.2f}',
                                                                                        np.round(r**2, 2)))
@@ -383,7 +390,7 @@ for b in bands:
     pylab.xlabel(r'SPOT5 surface refl.')
     pylab.ylabel(r'DMC surface refl.')
     pylab.grid('on')
-    pylab.legend(handles=[oneLineH], prop={'size':20}, loc=4)
+    pylab.legend(handles=[oneLineH], prop={'size':fontSize-2}, loc=4)
     pylab.tight_layout()
     pyplot.locator_params(axis='y', nbins=5)#to specify number of ticks on both or any single axes
     pyplot.locator_params(axis='x', nbins=5)
@@ -391,9 +398,9 @@ for b in bands:
     pn += 1
 
 f1.savefig('C:/Data/Development/Projects/PhD GeoInformatics/Docs/My Docs/Thesis/Retrieval of Surface Reflectance '
-           'from Aerial Imagery/Figure 12 - DMC DN and SPOT5 Surface Reflectance Correlation V2.eps', dpi=1200)
+           'from Aerial Imagery/Figure 12 - DMC DN and SPOT5 Surface Reflectance Correlation V2.eps', dpi=600)
 f2.savefig('C:/Data/Development/Projects/PhD GeoInformatics/Docs/My Docs/Thesis/Retrieval of Surface Reflectance '
-           'from Aerial Imagery/Figure 13 - DMC Homogenised and SPOT5 Surface Reflectance Correlation V2.eps', dpi=1200)
+           'from Aerial Imagery/Figure 13 - DMC Homogenised and SPOT5 Surface Reflectance Correlation V2.eps', dpi=600)
 
 print str.format("N (num points plotted): {0}, step: {1}", sPixels[::step].__len__(), step)
 
@@ -443,9 +450,9 @@ import matplotlib.image
 from matplotlib import pyplot
 reflScale = 5000.
 
-spotFileName = "D:\Data\Development\Projects\MSc GeoInformatics\Data\NGI\My Rectified\SpotInt16CsDs.tif"
+spotFileName = "D:\Data\Development\Projects\PhD GeoInformatics\Data\NGI\My Rectified\SpotInt16CsDs.tif"
 # spotFileNameNew = "D:\Data\Development\Projects\PhD GeoInformatics\Data\SPOT\S131022114824832\Orthorectification\oATCORCorrected_METADATA_00812098_AutoGCP_NgiFormat.tif"  #improved orthorect
-modisFileName = "D:\Data\Development\Projects\MSc GeoInformatics\Data\NGI\Cross Calibration\Mosaics\ModisSpotExtent.tif"
+modisFileName = "D:\Data\Development\Projects\PhD GeoInformatics\Data\NGI\Cross Calibration\Mosaics\ModisSpotExtent.tif"
 
 spotDs = gdal.Open(spotFileName, gdal.GA_ReadOnly)
 modisDs = gdal.Open(modisFileName, gdal.GA_ReadOnly)
@@ -510,13 +517,13 @@ pn = 1
 # fontSize = 24.
 # mpl.rcParams.update({'font.size': fontSize})
 
-fontSize = 24.
+fontSize = 12.
 import matplotlib as mpl
 from matplotlib import pyplot
 mpl.rcParams.update({'font.size': fontSize})
 
 f1 = pylab.figure('MODIS vs SPOT')
-f1.set_size_inches(16., 5.25, forward=True)
+f1.set_size_inches(16./2, 5.25/2, forward=True)
 
 ePixels = []
 spotModisSlope = []
@@ -552,15 +559,15 @@ for b in bands:
     pylab.xlabel(r'SPOT5 surface refl.')
     pylab.ylabel(r'MODIS surface refl.')
     pylab.grid('on')
-    pylab.legend(handles=[oneLineH], prop={'size':20}, loc=4)
+    pylab.legend(handles=[oneLineH], prop={'size':fontSize-2}, loc=4)
     pylab.tight_layout()
     pyplot.locator_params(axis='y', nbins=5)#to specify number of ticks on both or any single axes
     pyplot.locator_params(axis='x', nbins=5)
     #pylab.hold('on')
     pn += 1
 
-f1.savefig('C:/Data/Development/Projects/MSc GeoInformatics/Docs/My Docs/Thesis/Retrieval of Surface Reflectance '
-           'from Aerial Imagery/Figure 14 - MODIS and SPOT5 Surface Reflectance Correlation.eps', dpi=1200)
+f1.savefig('C:/Data/Development/Projects/PhD GeoInformatics/Docs/My Docs/Thesis/Retrieval of Surface Reflectance '
+           'from Aerial Imagery/Figure 14 - MODIS and SPOT5 Surface Reflectance Correlation.eps', dpi=600)
 # f2.savefig('C:/Data/Development/Projects/MSc GeoInformatics/Docs/My Docs/Thesis/Retrieval of Surface Reflectance from Aerial Imagery/dmc_surf_refl_spot_surf_refl_scatter_v2.png', dpi=300)
 
 print str.format("N (num points plotted): {0}, step: {1}", sPixels[::step].__len__(), step)
@@ -682,7 +689,7 @@ pn = 1
 # mpl.rcParams.update({'font.size': fontSize})
 
 f2 = pylab.figure('Calibrated')
-f2.set_size_inches(11., 10.5, forward=True)
+f2.set_size_inches(11./2, 10.5/2, forward=True)
 
 ## NB
 ePixels = []
@@ -726,7 +733,7 @@ for b in bands:
     pn += 1
 
 f2.savefig('C:/Data/Development/Projects/PhD GeoInformatics/Docs/My Docs/Thesis/Retrieval of Surface Reflectance '
-           'from Aerial Imagery/Figure 13 - DMC Homogenised and Landsat Surface Reflectance Correlation.eps', dpi=1200)
+           'from Aerial Imagery/Figure X - DMC Homogenised and Landsat Surface Reflectance Correlation.eps', dpi=600)
 
 print str.format("N (num points plotted): {0}, step: {1}", sPixels[::step].__len__(), step)
 

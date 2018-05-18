@@ -1,24 +1,24 @@
 %%
 clear all;
 close all; 
-spotImFilenames = {'D:\Data\Development\Projects\MSc GeoInformatics\Code\Results\Cross Calibration\AtcorSpotCIR1.png';...
-    'D:\Data\Development\Projects\MSc GeoInformatics\Code\Results\Cross Calibration\AtcorSpotCIR2.png';...
-    'D:\Data\Development\Projects\MSc GeoInformatics\Code\Results\Cross Calibration\AtcorSpotCIR3.png';...    
+spotImFilenames = {'D:\Data\Development\Projects\PhD GeoInformatics\Code\Results\Cross Calibration\AtcorSpotCIR1.png';...
+    'D:\Data\Development\Projects\PhD GeoInformatics\Code\Results\Cross Calibration\AtcorSpotCIR2.png';...
+    'D:\Data\Development\Projects\PhD GeoInformatics\Code\Results\Cross Calibration\AtcorSpotCIR3.png';...    
     };
 
-xcalibImFilenames = {'D:\Data\Development\Projects\MSc GeoInformatics\Code\Results\Cross Calibration\XCalib2CIR1.png';...
-    'D:\Data\Development\Projects\MSc GeoInformatics\Code\Results\Cross Calibration\XCalib2CIR2.png';...
-    'D:\Data\Development\Projects\MSc GeoInformatics\Code\Results\Cross Calibration\XCalib2CIR3.png';...    
+xcalibImFilenames = {'D:\Data\Development\Projects\PhD GeoInformatics\Code\Results\Cross Calibration\XCalib2CIR1.png';...
+    'D:\Data\Development\Projects\PhD GeoInformatics\Code\Results\Cross Calibration\XCalib2CIR2.png';...
+    'D:\Data\Development\Projects\PhD GeoInformatics\Code\Results\Cross Calibration\XCalib2CIR3.png';...    
     };
 
-modisImFilenames = {'D:\Data\Development\Projects\MSc GeoInformatics\Code\Results\Cross Calibration\ModisCIR1.png';...
-    'D:\Data\Development\Projects\MSc GeoInformatics\Code\Results\Cross Calibration\ModisCIR2.png';...
-    'D:\Data\Development\Projects\MSc GeoInformatics\Code\Results\Cross Calibration\ModisCIR3.png';...    
+modisImFilenames = {'D:\Data\Development\Projects\PhD GeoInformatics\Code\Results\Cross Calibration\ModisCIR1.png';...
+    'D:\Data\Development\Projects\PhD GeoInformatics\Code\Results\Cross Calibration\ModisCIR2.png';...
+    'D:\Data\Development\Projects\PhD GeoInformatics\Code\Results\Cross Calibration\ModisCIR3.png';...    
     };
 
 whiteBal = [];
 scaleFactor = 50/255;
-cd 'D:\Data\Development\Projects\MSc GeoInformatics\Code\Results\Cross Calibration\';
+cd 'D:\Data\Development\Projects\PhD GeoInformatics\Code\Results\Cross Calibration\';
 
 for i = 1:length(spotImFilenames)
     
@@ -126,23 +126,23 @@ clear all;
 % 
 close all; 
 
-spotImFilenames = {'D:\Data\Development\Projects\MSc GeoInformatics\Code\Results\Cross Calibration\AtcorSpotCIR1.png';...
-    'D:\Data\Development\Projects\MSc GeoInformatics\Code\Results\Cross Calibration\AtcorSpotCIR2.png';...
-    'D:\Data\Development\Projects\MSc GeoInformatics\Code\Results\Cross Calibration\AtcorSpotCIR3.png';...    
+spotImFilenames = {'D:\Data\Development\Projects\PhD GeoInformatics\Code\Results\Cross Calibration\AtcorSpotCIR1.png';...
+    'D:\Data\Development\Projects\PhD GeoInformatics\Code\Results\Cross Calibration\AtcorSpotCIR2.png';...
+    'D:\Data\Development\Projects\PhD GeoInformatics\Code\Results\Cross Calibration\AtcorSpotCIR3.png';...    
     };
 
-xcalibImFilenames = {'D:\Data\Development\Projects\MSc GeoInformatics\Code\Results\Cross Calibration\XCalib2CIR1.png';...
-    'D:\Data\Development\Projects\MSc GeoInformatics\Code\Results\Cross Calibration\XCalib2CIR2.png';...
-    'D:\Data\Development\Projects\MSc GeoInformatics\Code\Results\Cross Calibration\XCalib2CIR3.png';...    
+xcalibImFilenames = {'D:\Data\Development\Projects\PhD GeoInformatics\Code\Results\Cross Calibration\XCalib2CIR1.png';...
+    'D:\Data\Development\Projects\PhD GeoInformatics\Code\Results\Cross Calibration\XCalib2CIR2.png';...
+    'D:\Data\Development\Projects\PhD GeoInformatics\Code\Results\Cross Calibration\XCalib2CIR3.png';...    
     };
 
-modisImFilenames = {'D:\Data\Development\Projects\MSc GeoInformatics\Code\Results\Cross Calibration\ModisCIR1.png';...
-    'D:\Data\Development\Projects\MSc GeoInformatics\Code\Results\Cross Calibration\ModisCIR2.png';...
-    'D:\Data\Development\Projects\MSc GeoInformatics\Code\Results\Cross Calibration\ModisCIR3.png';...    
+modisImFilenames = {'D:\Data\Development\Projects\PhD GeoInformatics\Code\Results\Cross Calibration\ModisCIR1.png';...
+    'D:\Data\Development\Projects\PhD GeoInformatics\Code\Results\Cross Calibration\ModisCIR2.png';...
+    'D:\Data\Development\Projects\PhD GeoInformatics\Code\Results\Cross Calibration\ModisCIR3.png';...    
     };
 whiteBal = [];
 scaleFactor = 50/255;
-cd 'D:\Data\Development\Projects\MSc GeoInformatics\Code\Results';
+cd 'D:\Data\Development\Projects\PhD GeoInformatics\Code\Results';
 
 
 for i = 1:length(spotImFilenames)
@@ -236,7 +236,7 @@ spotIm = spotIm(:,:,1:3);
 %%
 errorIm = (spotIm - ngiIm);
 % errorIm(spotIm==0)=nan;
-% imwrite(errorIm, 'G:\MSc GeoInformatics\Data\NGI\My Rectified\errorIm.tif');
+% imwrite(errorIm, 'G:\PhD GeoInformatics\Data\NGI\My Rectified\errorIm.tif');
 
 fprintf('\tRMS\n');
 fprintf('\tBand\tMean\tStd\tMedian\tMad\n');
@@ -282,8 +282,8 @@ fprintf('-------------------------------\n');
 
 %% Look at relationship
 close all; clear all;
-spotFileName = 'G:\MSc GeoInformatics\Data\NGI\My Rectified\AATCORCorrected_oS131022114824832b_278400201_Uint16.tif';
-ngiFileName = 'G:\MSc GeoInformatics\Data\NGI\My Rectified\StudyAreaXCalibMosaicSpotExtent.tif';
+spotFileName = 'G:\PhD GeoInformatics\Data\NGI\My Rectified\AATCORCorrected_oS131022114824832b_278400201_Uint16.tif';
+ngiFileName = 'G:\PhD GeoInformatics\Data\NGI\My Rectified\StudyAreaXCalibMosaicSpotExtent.tif';
 
 spotIm = int16(imread(spotFileName));
 ngiIm = int16(imread(ngiFileName));
@@ -299,7 +299,7 @@ end
 
 %% 2017
 % Check min vals of raw ngi im to justify C=0
-ngiRawFileName = 'F:\MSc GeoInformatics\Data\NGI\Cross Calibration\Mosaics\StudyAreaUncalibratedMosaicSpotMask.tif'
+ngiRawFileName = 'F:\PhD GeoInformatics\Data\NGI\Cross Calibration\Mosaics\StudyAreaUncalibratedMosaicSpotMask.tif'
 im = imread(ngiRawFileName);
 im(im<0)=0;
 imd = double(im)/4096;
@@ -314,12 +314,12 @@ for i = 1:3
 end
 
 %% compare SPOT and DMC spectra in invariant locations
-% spotFileName = 'F:\MSc GeoInformatics\Data\NGI\My Rectified\spotInt16_2.tif';
-% ngiRawFileName = 'F:\MSc GeoInformatics\Data\NGI\Cross Calibration\Mosaics\StudyAreaUncalibratedMosaicSpotMask.tif';
-% ngiCalibFileName = 'F:\MSc GeoInformatics\Data\NGI\My Rectified\StudyAreaXCalibMosaicSpotMask.tif';
-spotFileName = 'D:\Data\Development\Projects\MSc GeoInformatics\Data\NGI\My Rectified\spotInt16_2.tif';
-ngiRawFileName = 'D:\Data\Development\Projects\MSc GeoInformatics\Data\NGI\Cross Calibration\Mosaics\StudyAreaUncalibratedMosaicSpotMask.tif';
-ngiCalibFileName = 'D:\Data\Development\Projects\MSc GeoInformatics\Data\NGI\My Rectified\StudyAreaXCalibMosaicSpotMask.tif';
+% spotFileName = 'F:\PhD GeoInformatics\Data\NGI\My Rectified\spotInt16_2.tif';
+% ngiRawFileName = 'F:\PhD GeoInformatics\Data\NGI\Cross Calibration\Mosaics\StudyAreaUncalibratedMosaicSpotMask.tif';
+% ngiCalibFileName = 'F:\PhD GeoInformatics\Data\NGI\My Rectified\StudyAreaXCalibMosaicSpotMask.tif';
+spotFileName = 'D:\Data\Development\Projects\PhD GeoInformatics\Data\NGI\My Rectified\spotInt16_2.tif';
+ngiRawFileName = 'D:\Data\Development\Projects\PhD GeoInformatics\Data\NGI\Cross Calibration\Mosaics\StudyAreaUncalibratedMosaicSpotMask.tif';
+ngiCalibFileName = 'D:\Data\Development\Projects\PhD GeoInformatics\Data\NGI\My Rectified\StudyAreaXCalibMosaicSpotMask.tif';
 
 spotIm = imread(spotFileName);
 ngiCalibIm = imread(ngiCalibFileName);
@@ -358,9 +358,9 @@ mean(errorImF, 1)/reflFactor
 %%
 [Spectra, IjLocs] = PlotMultibandImages2({single(spotIm(:, :, 1:3))/reflFactor, single(ngiCalibIm)/reflFactor}, IjLocs);
 labels = {'Water', 'Shadow', 'Vegetation 1', 'Bright Sand 1', 'Bright Sand 2', 'Bright Sand 3', 'Bare Ground 1', 'Bare Ground 2', 'Vegetation 3', 'Vegetation 2'}
-save 'C:\Data\Development\Projects\MSc GeoInformatics\Code\Results\Cross Calibration\SpotDmcSpectra2.mat' Spectra IjLocs labels
+save 'C:\Data\Development\Projects\PhD GeoInformatics\Code\Results\Cross Calibration\SpotDmcSpectra2.mat' Spectra IjLocs labels
 
-save 'C:\Data\Development\Projects\MSc GeoInformatics\Code\Results\Cross Calibration\SpotDmcSpectra.mat' Spectra SpectraN IjLocs IjLocsN
+save 'C:\Data\Development\Projects\PhD GeoInformatics\Code\Results\Cross Calibration\SpotDmcSpectra.mat' Spectra SpectraN IjLocs IjLocsN
 % SpectraN = Spectra
 % IjLocsN = IjLocs
 
@@ -377,7 +377,7 @@ end
 legend({'Spot', 'DMC'})
 
 %% plot for paper
-load 'C:\Data\Development\Projects\MSc GeoInformatics\Code\Results\Cross Calibration\SpotDmcSpectra2.mat'
+load 'C:\Data\Development\Projects\PhD GeoInformatics\Code\Results\Cross Calibration\SpotDmcSpectra2.mat'
 labels = {'Water', 'Shadow', 'Vegetation 1', 'Bright Sand', 'Bright Sand 2', 'Bright Sand 3', 'Bare Ground', 'Bare Ground', 'Vegetation 3', 'Vegetation 2'};
 
 % get raw dn spectra for ij locs
@@ -386,7 +386,7 @@ mask = ~(ngiRawIm < 0);
 ngiRawIm(~mask)=0;
 SpectraDn = [];
 [SpectraDn, IjLocsDn] = PlotMultibandImages2({single(spotIm(:, :, 1:3))/reflFactor, ngiRawIm}, IjLocs);
-save 'C:\Data\Development\Projects\MSc GeoInformatics\Code\Results\Cross Calibration\SpotDmcSpectra2.mat' Spectra IjLocs labels SpectraDn
+save 'C:\Data\Development\Projects\PhD GeoInformatics\Code\Results\Cross Calibration\SpotDmcSpectra2.mat' Spectra IjLocs labels SpectraDn
 % %4 conn spectrum
 % for i = 1:size(IjLocs, 1)
 %     CoOrd = repmat(round(IjLocs(i, :)), 5, 1) + [0 1;0 -1;1 0;-1 0;0 0];
@@ -401,12 +401,12 @@ save 'C:\Data\Development\Projects\MSc GeoInformatics\Code\Results\Cross Calibra
 %     plot(SpectraDn{2}(specIdx(i), bandIdx), 'k-x');
 % end
 %%
-load 'C:\Data\Development\Projects\MSc GeoInformatics\Code\Results\Cross Calibration\SpotDmcSpectra2.mat'
+load 'C:\Data\Development\Projects\PhD GeoInformatics\Code\Results\Cross Calibration\SpotDmcSpectra2.mat'
 labels = {'Water', 'Shadow', 'Vegetation 1', 'Bright sand', 'Bright sand 2', 'Bright sand 3', 'Bare ground', 'Bare ground', 'Vegetation 3', 'Vegetation 2'};
 bandIdx = [3 2 1];
 bandLabels = {'Green', 'Red', 'NIR'};
 specIdx = [1 4 8 3 10];
-
+fontSize = 12;
 % close all;
 figure
 for i = 1:length(specIdx)
@@ -429,11 +429,11 @@ for i = 1:length(specIdx)
     ax.YTick = [0:0.2:1];
     ax.XTick = [1 2 3];
     ax.XTickLabels = bandLabels;
-    title(labels(specIdx(i)), 'FontWeight', 'Normal')
+    title(labels(specIdx(i)), 'FontWeight', 'Normal', 'FontSize', fontSize)
     set(gca, 'FontName', 'Arial')
-    set(gca, 'FontSize', 15)
+    set(gca, 'FontSize', fontSize-1)
 end
-legend({'SPOT 5 Surface Refl.', 'DMC Surface Refl.', 'DMC DN'}, 'Location', 'NorthWest', 'FontSize', 15)
+legend({'SPOT 5 Surface Refl.', 'DMC Surface Refl.', 'DMC DN'}, 'Location', 'NorthWest', 'FontSize', fontSize)
 subplot(2,3,6)
 axis off
 mad = mean(mean(abs(Spectra{2}(specIdx,:)-Spectra{1}(specIdx,:))))
@@ -443,12 +443,12 @@ s = sprintf('MAD: %1.2f %%\nRMS: %1.2f %%', mad*100, rms*100)
 t = annotation('textbox');
 t.String = s;
 s = t.FontSize;
-t.FontSize = 16;
+t.FontSize = fontSize;
 t.FontName = 'Arial';
 t.BackgroundColor = 'white';
 t.Position(1:2) = [0.7 0.1];
 
-print('C:\Data\Development\Projects\MSc GeoInformatics\Docs\My Docs\Thesis\Retrieval of Surface Reflectance from Aerial Imagery\Figure 15 - Comparison of DMC and SPOT Spectra.eps',... 
+print('C:\Data\Development\Projects\PhD GeoInformatics\Docs\My Docs\Thesis\Retrieval of Surface Reflectance from Aerial Imagery\Figure 16 - Comparison of DMC and SPOT Spectra.eps',... 
     '-depsc', '-r600')
 %%
 

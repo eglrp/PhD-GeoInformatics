@@ -1,6 +1,6 @@
 function res = FeatureClusterRank(data, varargin)
 
-clusterMethod = 'hierarchical';  %'ap'
+clusterMethod = 'ap';  %'ap'
 apclusterCrit = 'distance';  % proxm distance criterion for AP clustering 
 apclusterParam = 2;  % proxm distance criterion for AP clustering 
 
@@ -37,21 +37,31 @@ if strcmpi(clusterMethod, 'ap')  % affinity propagation
     % ones, features that are linearly scaled versions of each will be
     % redundant too but they are not close.  Then there are non-lin dependencies too.
 %     dataNorm = (data*scalem(data, 'domain'));  % according to chen et al 2017
+%     dataNorm = (data*scalem(data, 'variance'));
     dataNorm = (data*scalem(data, 'variance'));
-    S = -(+dataNorm)' * proxm((+dataNorm)', apclusterCrit, apclusterParam);
+    S = -(+dataNorm)' * proxm2((+dataNorm)', apclusterCrit, apclusterParam);
 %     S = -distm((+dataNorm)'); % -ve euclidean distance betw feats
     n = size(S, 1); % num feats
     tmp = triu(S, 1) + tril(S, -1); % kind of unnecessary as Sii = 0 already
-    pref = 1.1*sum(tmp(:)) / (n * (n - 1)); % from paper but inc slightly otherwise we dont get enough features
+    %pref = 1.4*sum(tmp(:)) / (n * (n - 1)); % from paper but inc slightly otherwise we dont get enough features
+    %pref = 1.2*median(S(:));
+    if strcmpi(apclusterCrit, 'correlation')
+        pref = 0.99;
+    else
+        pref = 1.1*median(S(:));
+    end
     
-    [idx, netsim, i, unconverged, dpsim, expref] = apcluster(S, pref);
-    if unconverged
-        S = S + 1e-9 * randn(size(S, 1), size(S, 2));
-        [idx, netsim, i, unconverged, dpsim, expref] = apcluster(S, pref, 'maxits', 1000, 'dampfact', 0.8);
+    S = S + 1e-9 * randn(size(S, 1), size(S, 2));
+    [idx, netsim, i, unconverged, dpsim, expref] = apcluster(S, pref, 'maxits', 10000, 'dampfact', 0.9);
+%     [idx, netsim, i, unconverged, dpsim, expref] = apcluster(S, pref);
+%     if unconverged
+%         print('unconverged\n')
+%         S = S + 1e-9 * randn(size(S, 1), size(S, 2));
+%         [idx, netsim, i, unconverged, dpsim, expref] = apcluster(S, pref, 'maxits', 1000, 'dampfact', 0.8);
         if unconverged
             error('ERROR: unconverged');
         end
-    end
+%     end
     nclust = length(unique(idx));
     tmp(unique(idx)) = 1:nclust;
     lab = tmp(idx); % labels 1 indexed

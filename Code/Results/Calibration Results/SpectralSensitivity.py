@@ -279,13 +279,13 @@ for asterR in asterReflInterpF:
 
 # figures for paper of linear rel betw real world meas
 pylab.close('all')
-fontSize = 24.
+fontSize = 12.
 mpl.rcParams.update({'font.size': fontSize})
 
 f1=pylab.figure('MODIS vs DMC')
-f1.set_size_inches(12, 9, forward=True)
+f1.set_size_inches(6, 4.5, forward=True)
 f2=pylab.figure('MODIS vs DMC 2')
-f2.set_size_inches(12, 9, forward=True)
+f2.set_size_inches(6, 4.5, forward=True)
 colors = ['orange', 'red', 'green', 'blue']
 legend = ['NIR', 'Red', 'Green', 'Blue']
 markers = ['v', 'o', '^', 's']
@@ -327,7 +327,7 @@ for i in range(0, np.shape(modisMeas)[1]):
     #pylab.text(xi[-1]*1.05, yi[-1]*0.95, '$R^2$ = ' + str.format('{0:.2f}', r**2), color=colors[i])
 
 f1.savefig('C:/Data/Development/Projects/PhD GeoInformatics/Docs/My Docs/Thesis/Retrieval of Surface Reflectance '
-           'from Aerial Imagery/Figure 4 - DMC vs MODIS Band Averaged Relationship.eps', dpi=1200)
+           'from Aerial Imagery/Figure 4 - DMC vs MODIS Band Averaged Relationship.eps', dpi=600)
 
 
 pylab.figure('MODIS vs DMC 2')
@@ -398,12 +398,12 @@ for i in range(0, np.shape(modisMeas)[1]):
 ########################################################################################################################
 # MODIS, DMC RSR for paper
 ########################################################################################################################
-fontSize = 24.
+fontSize = 12.
 mpl.rcParams.update({'font.size': fontSize})
 
 pylab.close('all')
 f1 = pylab.figure('DMC Spectral Sensitivities')
-f1.set_size_inches(12, 9, forward=True)
+f1.set_size_inches(6, 4.5, forward=True)
 colors = ['k', 'r', 'g', 'b']
 hModis = []
 hDmc = []
@@ -419,10 +419,10 @@ pylab.xlabel('Wavelength ($\mu m$)')
 pylab.ylabel('Relative spectral response')
 pylab.tight_layout()
 f1.savefig('C:/Data/Development/Projects/PhD GeoInformatics/Docs/My Docs/Thesis/Retrieval of Surface Reflectance '
-           'from Aerial Imagery/Figure - DMC RSR.eps', dpi=1200)
+           'from Aerial Imagery/Figure - DMC RSR.eps', dpi=600)
 
 f1 = pylab.figure('MODIS and DMC Spectral Sensitivities')
-f1.set_size_inches(12, 9, forward=True)
+f1.set_size_inches(6, 4.5, forward=True)
 colors = ['k', 'r', 'g', 'b']
 hModis = []
 hDmc = []
@@ -433,13 +433,13 @@ for i in range(0, 4):
     mask = dmcRsr[:, i] > 0.001
 #    hDmc.append(pylab.plot(dmcWaveLen[mask], dmcRsr[mask, i], color=colors[i], linestyle='--'))
     hDmc.append(pylab.plot(dmcWaveLen[mask], dmcRsr[mask, i], color='k', linestyle='--'))
-pylab.legend((hModis[0][0], hDmc[0][0]), ('MODIS', 'DMC'), fontsize=fontSize-3.)
+pylab.legend((hModis[0][0], hDmc[0][0]), ('MODIS', 'DMC'), fontsize=fontSize-2.)
 pylab.xlabel('Wavelength ($\mu m$)')
 pylab.ylabel('Relative spectral response')
 pylab.tight_layout()
 
 f1.savefig('C:/Data/Development/Projects/PhD GeoInformatics/Docs/My Docs/Thesis/Retrieval of Surface Reflectance '
-           'from Aerial Imagery/Figure 2 - MODIS and DMC RSRs.eps', dpi=1200)
+           'from Aerial Imagery/Figure 2 - MODIS and DMC RSRs.eps', dpi=600)
 
 
 pylab.figure('MODIS, DMC and SPOT Spectral Sensitivities')
@@ -485,7 +485,7 @@ pylab.ylabel('Relative spectral response')
 pylab.tight_layout()
 
 f1 = pylab.figure('DMC and SPOT Spectral Sensitivities')
-f1.set_size_inches(12, 9, forward=True)
+f1.set_size_inches(6, 4.5, forward=True)
 colors = ['k','r','g','b']
 # hModis = []
 hDmc = []
@@ -501,13 +501,13 @@ for i in range(0, 4):
         # hSpot.append(pylab.plot(np.array(spotWaveLen)[mask], np.array(spotRsr)[mask, i], color=colors[i], linestyle='-'))
         hSpot.append(pylab.plot(np.array(spotWaveLen)[mask], np.array(spotRsr)[mask, i], color='k', linestyle='-'))
 
-pylab.legend((hDmc[0][0], hSpot[0][0]), ('DMC', 'SPOT5'), fontsize=fontSize-3.)
+pylab.legend((hDmc[0][0], hSpot[0][0]), ('DMC', 'SPOT5'), fontsize=fontSize-2.)
 pylab.xlabel('Wavelength ($\mu m$)')
 pylab.ylabel('Relative spectral response')
 pylab.tight_layout()
 
 f1.savefig('C:/Data/Development/Projects/PhD GeoInformatics/Docs/My Docs/Thesis/Retrieval of Surface Reflectance '
-           'from Aerial Imagery/Figure 11 - DMC and SPOT5 RSRs.eps', dpi=1200)
+           'from Aerial Imagery/Figure 11 - DMC and SPOT5 RSRs.eps', dpi=600)
 
 
 pylab.figure('MODIS, DMC and Landsat Spectral Sensitivities')
