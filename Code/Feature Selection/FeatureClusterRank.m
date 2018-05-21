@@ -1,8 +1,8 @@
 function res = FeatureClusterRank(data, varargin)
 
 clusterMethod = 'ap';  %'ap'
-apclusterCrit = 'distance';  % proxm distance criterion for AP clustering 
-apclusterParam = 2;  % proxm distance criterion for AP clustering 
+apclusterCrit = 'correlation';  % proxm distance criterion for AP clustering 
+apclusterParam = [];  % proxm distance criterion for AP clustering 
 
 clusterThresh = 0.2; %for hierarchical only
 criterion = naivebc;
@@ -39,20 +39,25 @@ if strcmpi(clusterMethod, 'ap')  % affinity propagation
 %     dataNorm = (data*scalem(data, 'domain'));  % according to chen et al 2017
 %     dataNorm = (data*scalem(data, 'variance'));
     dataNorm = (data*scalem(data, 'variance'));
-    S = -(+dataNorm)' * proxm2((+dataNorm)', apclusterCrit, apclusterParam);
+    S = -((+dataNorm)' * proxm2((+dataNorm)', apclusterCrit, apclusterParam));
 %     S = -distm((+dataNorm)'); % -ve euclidean distance betw feats
     n = size(S, 1); % num feats
     tmp = triu(S, 1) + tril(S, -1); % kind of unnecessary as Sii = 0 already
-    %pref = 1.4*sum(tmp(:)) / (n * (n - 1)); % from paper but inc slightly otherwise we dont get enough features
-    %pref = 1.2*median(S(:));
-    if strcmpi(apclusterCrit, 'correlation')
-        pref = 0.99;
-    else
-        pref = 1.1*median(S(:));
-    end
+    pref = 2.5*sum(tmp(:)) / (n * (n - 1)); % from paper but inc slightly otherwise we dont get enough features
+    pref = 1.35*median(S(:));
+    %pref = 1.4*median(S(:));
+%     if strcmpi(apclusterCrit, 'correlation')
+%         pref = 0.99;
+%     else
+%         pref = 2*median(S(:))
+%     end
     
     S = S + 1e-9 * randn(size(S, 1), size(S, 2));
     [idx, netsim, i, unconverged, dpsim, expref] = apcluster(S, pref, 'maxits', 10000, 'dampfact', 0.9);
+    
+    if length(unique(idx)) > size(+data, 2)/2  % if there are too many clusters, do it again with default pref
+        [idx, netsim, i, unconverged, dpsim, expref] = apcluster(S, median(S(:)), 'maxits', 10000, 'dampfact', 0.9);
+    end
 %     [idx, netsim, i, unconverged, dpsim, expref] = apcluster(S, pref);
 %     if unconverged
 %         print('unconverged\n')

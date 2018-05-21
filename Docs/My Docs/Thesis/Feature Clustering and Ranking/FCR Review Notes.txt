@@ -4,13 +4,22 @@ FCR weaknesses:
 3) Linear correlation similarity measure is limited 
 4) 
 
-Improments
+Improvents
 1) Use AP with MI (?) - we need a better discrete MI with just 10 bins though.  Distances are only calc once and only between ind objects
 2) a) Branch and bound on exemplar features
    b) Forward Sel or JMI type on exemplar features (JMI was tested already and we know it did bad overall, so rather use forward / backward selection)
    c) LASSO on exemplars from all clusters (this is like a simiplified version of MultiviewFS that assumes the clustering adequately captures redundancy and that a lin feature-label dependency is a good idea)
 3) See https://www.mathworks.com/matlabcentral/fileexchange/30998-kernel-estimate-for--conditional--mutual-information    
    
+   
+   
+Review 2 To Do
+----------------
+- Compare AP with single pref param to hierarchical clustering 
+- Compare hist MI to kernel MI for cluster ranking 
+- Do AP exemplar features work better than naivebc etc ranked features
+- Compare correlation to distance correlation (to kernelmi)
+
    
 Letter to editor:   
 
