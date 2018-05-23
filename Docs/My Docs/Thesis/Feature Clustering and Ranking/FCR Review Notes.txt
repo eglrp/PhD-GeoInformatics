@@ -12,6 +12,12 @@ Improvents
 3) See https://www.mathworks.com/matlabcentral/fileexchange/30998-kernel-estimate-for--conditional--mutual-information    
    
    
+Feature comparison to do
+-------------------------
+- Data bootstraps must be identical for each method - with parfor, this may mean not using gendat
+  also note that bootstraps should be sampling with replacement whereas gendat([], 0.5) is not sampling with replacement 
+- consider tryinh naivebc with >10 bins or with a density estimator    
+   
    
 Review 2 To Do
 ----------------
@@ -19,7 +25,19 @@ Review 2 To Do
 - Compare hist MI to kernel MI for cluster ranking 
 - Do AP exemplar features work better than naivebc etc ranked features
 - Compare correlation to distance correlation (to kernelmi)
+- Consider other cluster rankings like performance on exemplar or distance correlation with class labs 
+- Dataset 2 should maybe only get 4 features 
+- Is min accuracy feature more stable than the exemplar 
 
+
+Notes
+------
+- Min accuracy vs exemplar vs median accuracy to rank features from each cluster:
+  - for the first 3 datasets, min accuracy is more stable (we get consistency of 1 with feature not cluster indices), 
+  for the last 3 datasets, it is not more stable
+- Exemplar feature 
+- RenumClustAcrossBootstraps is done in BootstrapFsEval - the stuff in CompareFsMethods should not really be necessary - but this changes things, so what is going on?
+- Naivebc with more bins improves things across all data seemingly
    
 Letter to editor:   
 

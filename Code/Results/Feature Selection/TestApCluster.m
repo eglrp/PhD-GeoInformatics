@@ -1,11 +1,11 @@
 % test apcluster and compare to hierarchical
 
 %% manually load data from CompareFsMethods
-ii = 1;
+ii = 3;
 data = cdata{ii};
 clusterThresh_ = clusterThresh(ii);
 numFeatures(ii)
-
+preferredFeatures{ii}
 % ii=5, for pref > median(S), num clusters = num features
 % ii=4, for pref = 1.35*median(S), num ap clusters << num hier. clusters (49)
 % ii=6, for pref = 1.35*median(S), num ap clusters is quite sensitive to
@@ -16,8 +16,9 @@ numFeatures(ii)
 %%
 fl = cellstr(getfeatlab(data));
 
-dataNorm = (data*scalem(data, 'variance'));
+dataNorm = gendat(data*scalem(data, 'variance'));
 S = -((+dataNorm)' * proxm2((+dataNorm)', 'correlation'));
+[prefmin, prefmax] = preferenceRange(S, 'exact')
 % c = corr(+data);
 % S = abs(c);
 %     S = -distm((+dataNorm)'); % -ve euclidean distance betw feats
@@ -26,7 +27,7 @@ tmp = triu(S, 1) + tril(S, -1); % kind of unnecessary as Sii = 0 already
 pref = 2.5*sum(tmp(:)) / (n * (n - 1)); % from paper but inc slightly otherwise we dont get enough features
 %pref = 1.2*median(S(:));
 % pref = 0.99;
-pref = 1.35*median(S(:));
+pref = median(S(:));
 
 S = S + 1e-9 * randn(size(S, 1), size(S, 2));
 [idx, netsim, i, unconverged, dpsim, expref] = apcluster(S, pref, 'maxits', 10000, 'dampfact', 0.9);
@@ -110,3 +111,7 @@ for i = 1:nclust
     end
 end
 
+%% FCR 
+w = FeatSelClusterRankM([], naivebc([], 25), 0, [], 'clusterThresh', clusterThresh(ii), 'showFigures', true, ...
+        'jmiFormulation', false, 'clusterMethod', 'ap'); %,'preferredFeatures', preferredFeatures{i});...
+w = data*w

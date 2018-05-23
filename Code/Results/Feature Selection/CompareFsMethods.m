@@ -15,12 +15,13 @@ feats = [9 15 20 23 7 6]; %ranked cluster
 fl(feats)
 
 cs = classsizes(dataAll);
-if false
+if true
     cs(1) = cs(2);
 else
     cs = min(cs)*ones(1,3);
 end
-randreset;
+% randreset(2);
+% randreset
 subData = gendat(dataAll, cs);
 subData = changelablist(subData, 'Default');
 subData = setprior(subData, 0);
@@ -83,6 +84,7 @@ end
 
 
 %%  Compare the methods
+close all
 clear my*
 clear i m tr ts subData uci* hs* data feats cs idx fl
 % clusterThresh?
@@ -104,17 +106,18 @@ clear i m tr ts subData uci* hs* data feats cs idx fl
 %         FeatSelClusterRankM([], 'mi', 0, [], 'preferredFeatures', ...
 %             preferredFeatures{i}, 'clusterThresh', 0.2, 'showFigures', false, 'jmiFormulation', true, 'useCorrelation', false);...
 %     };
-numMethods = 2;
+numMethods = 1;
+numFeatures(5)=6;
 %cdata = cdata([1,5])
 res = cell(numMethods, length(cdata));
 delete(gcp('nocreate'))
-parpool(4)
+% parpool(4)
 % ms = [1,8,9];
 % is = [4,6];
 for m = 1:numMethods
 %for mi = 1:3
 %    m = ms(mi);
-    parfor i = 1:length(cdata)
+    for i = 1:length(cdata)
 %    parfor ii = 1:2
 %        i = is(ii);
 %         fprintf('Method %d, Data %d -----------------------------------------------\n', m, i);
@@ -125,10 +128,10 @@ for m = 1:numMethods
 %                 FeatSelClusterRankM([], naivebc, 0, [], 'clusterMethod', 'ap', 'showFigures', false, ...
 %                     'jmiFormulation', false); %, 'preferredFeatures', preferredFeatures{i});...
 %              FeatSelMultiViewM([], 10, 0);...
-             FeatSelClusterRankM([], naivebc, 0, [], 'clusterThresh', innerClusterThresh, 'showFigures', true, ...
-                    'jmiFormulation', false, 'clusterMethod', 'ap'); %,'preferredFeatures', preferredFeatures{i});...
+%              FeatSelClusterRankM([], naivebc([], 25), 0, [], 'clusterThresh', innerClusterThresh, 'showFigures', false, ...
+%                     'jmiFormulation', false, 'clusterMethod', 'ap'); %,'preferredFeatures', preferredFeatures{i});...
              FeatSelClusterRankM([], naivebc, 0, [], 'clusterThresh', innerClusterThresh, 'showFigures', false, ...
-                    'jmiFormulation', false, 'clusterMethod', 'heirarchical'); %, 'preferredFeatures', preferredFeatures{i});...
+                    'jmiFormulation', false, 'clusterMethod', 'heirarchical', 'preferredFeatures', preferredFeatures{i});...
             };
 
 %         innerMethods = {...
@@ -313,6 +316,8 @@ save 'D:\Data\Development\Projects\PhD GeoInformatics\Data\Feature Selection\Com
 
 save 'D:\Data\Development\Projects\PhD GeoInformatics\Data\Feature Selection\CompareFsMethodsApNoPrefFeat.mat'
 save 'D:\Data\Development\Projects\PhD GeoInformatics\Data\Feature Selection\CompareFsMethodsFCR_MVFS.mat'
+
+save 'D:\Data\Development\Projects\PhD GeoInformatics\Data\Feature Selection\CompareFsMethodsFCR_AP.mat'
 
 %% Make eg dendgrogram (for paper)
 close all;clear all;

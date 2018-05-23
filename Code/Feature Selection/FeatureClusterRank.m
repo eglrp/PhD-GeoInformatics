@@ -44,7 +44,7 @@ if strcmpi(clusterMethod, 'ap')  % affinity propagation
     n = size(S, 1); % num feats
     tmp = triu(S, 1) + tril(S, -1); % kind of unnecessary as Sii = 0 already
     pref = 2.5*sum(tmp(:)) / (n * (n - 1)); % from paper but inc slightly otherwise we dont get enough features
-    pref = 1.35*median(S(:));
+    pref = median(S(:));
     %pref = 1.4*median(S(:));
 %     if strcmpi(apclusterCrit, 'correlation')
 %         pref = 0.99;
@@ -52,12 +52,12 @@ if strcmpi(clusterMethod, 'ap')  % affinity propagation
 %         pref = 2*median(S(:))
 %     end
     
-    S = S + 1e-9 * randn(size(S, 1), size(S, 2));
+%     S = S + 1e-9 * randn(size(S, 1), size(S, 2));
     [idx, netsim, i, unconverged, dpsim, expref] = apcluster(S, pref, 'maxits', 10000, 'dampfact', 0.9);
     
-    if length(unique(idx)) > size(+data, 2)/2  % if there are too many clusters, do it again with default pref
-        [idx, netsim, i, unconverged, dpsim, expref] = apcluster(S, median(S(:)), 'maxits', 10000, 'dampfact', 0.9);
-    end
+%     if length(unique(idx)) > size(+data, 2)/2  % if there are too many clusters, do it again with default pref
+%         [idx, netsim, i, unconverged, dpsim, expref] = apcluster(S, 0.8*median(S(:)), 'maxits', 10000, 'dampfact', 0.8);
+%     end
 %     [idx, netsim, i, unconverged, dpsim, expref] = apcluster(S, pref);
 %     if unconverged
 %         print('unconverged\n')
@@ -232,7 +232,11 @@ end
 %find average accuracy per cluster
 clustAcc = [];
 for i = 1:nclust
-    clustAcc(i) = median(featAcc(lab==i));
+    if exist('exemplars', 'var')
+        clustAcc(i) = min(featAcc(lab==i));  %featAcc(exemplars(i));  %
+    else
+        clustAcc(i) = median(featAcc(lab==i));
+    end
 end
 
 [clustAcc_ clustIdx] = sort(clustAcc);
@@ -246,8 +250,11 @@ if true
     lab = clustRank(lab);  % equivalent?
     res.FeatClusterNLab = lab; % cluster numbers for each feature
     %res.ClustFeatNLab = res.ClustFeatNLab{clustIdx};
-    clustIdx = 1:nclust;
+    clustIdx = 1:nclust;  % DH 2018 this is dodgy and leading to a bug where features are not in order of clustAcc see line 348
     res.ClustAcc = clustAcc_;
+    if exist('exemplars', 'var')
+        exemplars = exemplars(clustRank);
+    end
 else
     res.ClustAcc = clustAcc;
 end
@@ -277,8 +284,12 @@ for i = 1:length(res.ClustAcc)
         end
     end
     if bestFeats(i) == 0  % else use the "best" (highest scored) feature
-        [featAcc_ sortClusterFeatIdx] = sort(res.FeatIndividualAcc(clusterFeatIdx));
-        bestFeats(i) = clusterFeatIdx(sortClusterFeatIdx(1));
+        if exist('exemplars', 'var')
+            bestFeats(i) = exemplars(i);
+        else
+            [featAcc_ sortClusterFeatIdx] = sort(res.FeatIndividualAcc(clusterFeatIdx));
+            bestFeats(i) = clusterFeatIdx(sortClusterFeatIdx(1));
+        end
     end
 end
 

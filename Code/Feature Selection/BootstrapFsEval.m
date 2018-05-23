@@ -11,8 +11,11 @@ rng('default') % so we get the same results every time and the same crossval fol
             % apparently uses its own randomiser (I guess unsuprisingly).
             % There doesn't seem to be any mexopencv access to the c++
             % random number generator
-s = RandStream('twister'); % this should make it work inside parfor
-RandStream.setGlobalStream(s);        
+randreset;
+g = RandStream('twister'); % this should make it work inside parfor
+RandStream.setGlobalStream(g);
+s = RandStream('twister', 'Seed', 1); % NB make a local randstream that should make same bootstraps each time
+
     
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % scale data for any MI type measure which needs to find histograms
@@ -26,6 +29,8 @@ for i = 1:numBootStraps
     fprintf('Boot strap %i of %i\n', i, numBootStraps);
     if true
         [subData1, subData2] = gendat(data, 0.5);  % TO DO: seed the sampling so that the same bootstraps can be repeated for different clfrs
+        %[subData1, subData2] = gendat2(data, 0.5, i);  % give same random seeds on each call so that we get identical bootstraps for different calls and threahds
+        %randi(10,1,10)
     else  % classify on feat sel data
           % TO DO: seed the sampling so that the same bootstraps can be repeated for different clfrs
         if i == 1
@@ -148,9 +153,9 @@ if strcmpi(struct(w).name, 'Feature Clustering and Ranking')
             res.FeatIdx{i} = res.FeatClustIdx(res.FeatIdx{i}, i);
         end
         res.FeatIdxOrig = featIdx;
-    end
-    
+    end    
 end
+
 res.ClfMeanAcc = mean(res.ClfAcc, 1);
 res.ClfStdAcc = std(res.ClfAcc, 1);
 res.FsMeanDuration = mean(res.FsDuration);
