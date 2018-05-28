@@ -90,7 +90,7 @@ else
     if useCorrelation
         c = corr(+data);
     else
-%         dataNorm = (10*(data*scalem(data, 'domain')));
+        dataNorm = (10*(data*scalem(data, 'domain')));
         c = zeros(size(dataNorm, 2), size(dataNorm, 2));
 %         for i = 1:size(dataNorm, 2)
 %             h(i) = entropy(+dataNorm(:, i));
@@ -233,7 +233,7 @@ end
 clustAcc = [];
 for i = 1:nclust
     if exist('exemplars', 'var')
-        clustAcc(i) = min(featAcc(lab==i));  %featAcc(exemplars(i));  %
+        clustAcc(i) = median(featAcc(lab==i));  %featAcc(exemplars(i));  %
     else
         clustAcc(i) = median(featAcc(lab==i));
     end
@@ -250,6 +250,7 @@ if true
     lab = clustRank(lab);  % equivalent?
     res.FeatClusterNLab = lab; % cluster numbers for each feature
     %res.ClustFeatNLab = res.ClustFeatNLab{clustIdx};
+    clustIdx_ = clustIdx;
     clustIdx = 1:nclust;  % DH 2018 this is dodgy and leading to a bug where features are not in order of clustAcc see line 348
     res.ClustAcc = clustAcc_;
     if exist('exemplars', 'var')
@@ -309,6 +310,7 @@ if showFigures
 end
 % ranks and scores for measuring stability
 res.FeatClustScore = res.ClustAcc(res.FeatClusterNLab);
+
 
 if false
     clustRank(clustIdx) = 1:length(clustIdx);

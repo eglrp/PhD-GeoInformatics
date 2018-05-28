@@ -21,7 +21,7 @@ else
     cs = min(cs)*ones(1,3);
 end
 % randreset(2);
-% randreset
+randreset
 subData = gendat(dataAll, cs);
 subData = changelablist(subData, 'Default');
 subData = setprior(subData, 0);
@@ -84,9 +84,12 @@ end
 
 
 %%  Compare the methods
+load 'D:\Data\Development\Projects\PhD GeoInformatics\Data\Feature Selection\CompareFsMethodsHs4.mat'
+% cdata = cdata(1)
 close all
 clear my*
 clear i m tr ts subData uci* hs* data feats cs idx fl
+
 % clusterThresh?
 % res = {};
 % methods = {...
@@ -106,18 +109,18 @@ clear i m tr ts subData uci* hs* data feats cs idx fl
 %         FeatSelClusterRankM([], 'mi', 0, [], 'preferredFeatures', ...
 %             preferredFeatures{i}, 'clusterThresh', 0.2, 'showFigures', false, 'jmiFormulation', true, 'useCorrelation', false);...
 %     };
-numMethods = 1;
-numFeatures(5)=6;
+numMethods = 2;
+%numFeatures(5)=6;
 %cdata = cdata([1,5])
 res = cell(numMethods, length(cdata));
 delete(gcp('nocreate'))
-% parpool(4)
+parpool(4)
 % ms = [1,8,9];
 % is = [4,6];
 for m = 1:numMethods
 %for mi = 1:3
 %    m = ms(mi);
-    for i = 1:length(cdata)
+    parfor i = 1:length(cdata)
 %    parfor ii = 1:2
 %        i = is(ii);
 %         fprintf('Method %d, Data %d -----------------------------------------------\n', m, i);
@@ -125,13 +128,15 @@ for m = 1:numMethods
         innerClusterThresh = clusterThresh(i);
         innerNumFeatures = numFeatures(i);
         innerMethods = {...
-%                 FeatSelClusterRankM([], naivebc, 0, [], 'clusterMethod', 'ap', 'showFigures', false, ...
-%                     'jmiFormulation', false); %, 'preferredFeatures', preferredFeatures{i});...
-%              FeatSelMultiViewM([], 10, 0);...
-%              FeatSelClusterRankM([], naivebc([], 25), 0, [], 'clusterThresh', innerClusterThresh, 'showFigures', false, ...
-%                     'jmiFormulation', false, 'clusterMethod', 'ap'); %,'preferredFeatures', preferredFeatures{i});...
              FeatSelClusterRankM([], naivebc, 0, [], 'clusterThresh', innerClusterThresh, 'showFigures', false, ...
                     'jmiFormulation', false, 'clusterMethod', 'heirarchical', 'preferredFeatures', preferredFeatures{i});...
+             FeatSelClusterRankM([], 'mi', 0, [], 'clusterThresh', innerClusterThresh, 'showFigures', false, ...
+                    'jmiFormulation', false, 'clusterMethod', 'heirarchical', 'preferredFeatures', preferredFeatures{i});...
+%                 featseli([], naivebc, innerNumFeatures, 5);...
+%                 featself([], naivebc, innerNumFeatures, 5);...
+%                 featseli([], 'mi', innerNumFeatures);...
+%                 featself([], 'mi', innerNumFeatures);...
+%                 featself([], naivebc([], 30), innerNumFeatures);...
             };
 
 %         innerMethods = {...
@@ -166,7 +171,9 @@ delete(gcp('nocreate'))
 %%
 if false
     res_ = res; 
-    load 'D:\Data\Development\Projects\PhD GeoInformatics\Data\Feature Selection\CompareFsMethodsHs3.mat'
+%     load 'D:\Data\Development\Projects\PhD GeoInformatics\Data\Feature Selection\CompareFsMethodsHs3.mat'
+    load 'D:\Data\Development\Projects\PhD GeoInformatics\Data\Feature Selection\CompareFsMethodsHs4.mat'
+    
     ms = [1,8,9];
     is = [4,6];
 
@@ -179,11 +186,13 @@ if false
         end
     end
 end
+
 methodMedianFsDuration = zeros(numMethods, length(cdata));
 methodMedianStability = zeros(numMethods, length(cdata));
 methodMedianAcc = zeros(numMethods, length(cdata));
-methodNames = {'FCR-AP',...
-    'FCR-H'};
+
+methodNames = {'FCR-H-naivebc', 'FCR-H-mi'};
+methodNames = {'featseli-naivebc', 'featself-naivebc', 'featseli-mi', 'featself-mi', 'featself-naivebc30'};
 
 
 % methodNames = {'featself-naivebc',...
@@ -214,7 +223,7 @@ for i = 1:size(res, 2)
     table = {'Method', 'Tanimoto', 'Consistency', 'SpearmanCC', 'FsDuration', 'ClfMeanAcc'}; %, 'ClfMeanAcc', 'ClfMeanAcc', 'ClfMeanAcc'};
     for m = 1:size(res, 1) % use cluster index rather than feature index for FCR
         table(m+1,:) = {methodNames{m}, res{m, i}.TanimotoStability, res{m, i}.Consitency, ...
-            res{m, i}.SpearmanRankCorrCoeffStab, mean(res{m, i}.FsDuration), res{m, i}.ClfMeanAcc(1)}; %, res{m, i}.ClfMeanAcc(2), res{m, i}.ClfMeanAcc(3), res{m, i}.ClfMeanAcc(4)};
+            res{m, i}.SpearmanRankCorrCoeffStab, mean(res{m, i}.FsDuration), res{m, i}.ClfMeanAcc(end)}; %, res{m, i}.ClfMeanAcc(2), res{m, i}.ClfMeanAcc(3), res{m, i}.ClfMeanAcc(4)};
         methodMedianStability(m, i) = res{m, i}.Consitency; %(res{m, i}.TanimotoStability + res{m, i}.Consitency)/2;
         methodMedianAcc(m, i) = mean(res{m, i}.ClfMeanAcc(end));  %3nn accuracy only
         methodMedianFsDuration(m, i) = mean(res{m, i}.FsDuration);
@@ -243,35 +252,73 @@ for m = 1:size(res, 1) % use cluster index rather than feature index for FCR
 end
 disp(table)
 
-% do it again but use cluster index instead of feature index for all FCRs
-resFci = res;
-for i = 1:size(res, 2)
-    table = {'Method', 'Tanimoto', 'Consistency', 'SpearmanCC', 'Duration', 'ClfMeanAcc'}; % , 'ClfMeanAcc', 'ClfMeanAcc', 'ClfMeanAcc'};
-    for m = 1:size(res, 1) % use cluster index rather than feature index for FCR
-        % re-eval stability using cluster indices
-        if (strcmpi(innerMethods{m}.name, 'Feature Clustering and Ranking'))
-            resFci{m, i} = RenumClustAcrossBootstraps(resFci{m, i});
-            featIdx = resFci{m, i}.FeatIdx;
-            try
-                for b = 1:size(resFci{m, i}.FeatIdx, 2)
-                    featClustIdx = resFci{m, i}.FeatClustIdx(:, b);
-                    resFci{m, i}.FeatIdx(:, b) = featClustIdx(resFci{m, i}.FeatIdx(:, b));
+%%NNB create innerMethods above
+if false
+    % do it again but use cluster index instead of feature index for all FCRs
+    resFci = res;
+    for i = 1:size(res, 2)
+        table = {'Method', 'Tanimoto', 'Consistency', 'SpearmanCC', 'Duration', 'ClfMeanAcc'}; % , 'ClfMeanAcc', 'ClfMeanAcc', 'ClfMeanAcc'};
+        for m = 1:size(res, 1) % use cluster index rather than feature index for FCR
+            % re-eval stability using cluster indices
+            if (strcmpi(innerMethods{m}.name, 'Feature Clustering and Ranking'))
+                %DH 2018 - NNB - RenumClustAcrossBootstraps must only be called
+                %once!!! and it is already called in BootstrapFsEval
+                %resFci{m, i} = RenumClustAcrossBootstraps(resFci{m, i});
+                featIdx = resFci{m, i}.FeatIdx;
+                try
+                    for b = 1:size(resFci{m, i}.FeatIdx, 2)
+                        featClustIdx = resFci{m, i}.FeatClustIdx(:, b);
+                        resFci{m, i}.FeatIdx(:, b) = featClustIdx(resFci{m, i}.FeatIdx(:, b));
+                    end
+                    resFci{m, i} = FsStabilityEval(resFci{m, i});
+                catch ex
+                    disp(ex.message);
                 end
-                resFci{m, i} = FsStabilityEval(resFci{m, i});
-            catch ex
-                disp(ex.message);
+    % DH 2018 - the below needs attention - we are re-assigning the orig
+    % FeatIdx after FsStabilityEval
+                if true
+                    resFci{m, i}.FeatIdx_ = resFci{m, i}.FeatIdx;
+                    resFci{m, i}.FeatIdx = featIdx;
+                else
+                    resFci{m, i}.FeatIdxOrig = featIdx;
+                end
             end
-            resFci{m, i}.FeatIdx_ = resFci{m, i}.FeatIdx;
-            resFci{m, i}.FeatIdx = featIdx;
+            table(m+1,:) = {methodNames{m}, resFci{m, i}.TanimotoStability, resFci{m, i}.Consitency, ...
+                resFci{m, i}.SpearmanRankCorrCoeffStab, mean(res{m, i}.FsDuration), resFci{m, i}.ClfMeanAcc(1)}; %, resFci{m, i}.ClfMeanAcc(2), resFci{m, i}.ClfMeanAcc(3), resFci{m, i}.ClfMeanAcc(4)};
+            methodMedianStability(m, i) = resFci{m, i}.Consitency; %(resFci{m, i}.TanimotoStability + resFci{m, i}.Consitency)/2;
+            methodMedianAcc(m, i) = mean(resFci{m, i}.ClfMeanAcc(end));  % 3nn only
+            methodMedianFsDuration(m, i) = mean(res{m, i}.FsDuration);
         end
-        table(m+1,:) = {methodNames{m}, resFci{m, i}.TanimotoStability, resFci{m, i}.Consitency, ...
-            resFci{m, i}.SpearmanRankCorrCoeffStab, mean(res{m, i}.FsDuration), resFci{m, i}.ClfMeanAcc(1)}; %, resFci{m, i}.ClfMeanAcc(2), resFci{m, i}.ClfMeanAcc(3), resFci{m, i}.ClfMeanAcc(4)};
-        methodMedianStability(m, i) = resFci{m, i}.Consitency; %(resFci{m, i}.TanimotoStability + resFci{m, i}.Consitency)/2;
-        methodMedianAcc(m, i) = mean(resFci{m, i}.ClfMeanAcc(end));  % 3nn only
-        methodMedianFsDuration(m, i) = mean(res{m, i}.FsDuration);
+        disp(cdataNames{i})
+        disp(table)
     end
-    disp(cdataNames{i})
-    disp(table)
+else       % Old Oct 2016 code used to gen paper results in CompareFsMethodsHs4.mat
+    resFci = res;
+    for i = 1:size(res, 2)
+        table = {'Method', 'Tanimoto', 'Consistency', 'SpearmanCC', 'Duration', 'ClfMeanAcc'}; %, 'ClfMeanAcc', 'ClfMeanAcc', 'ClfMeanAcc'};
+        for m = 1:size(res, 1) % use cluster index rather than feature index for FCR
+            % re-eval stability using cluster indices
+            if (strcmpi(innerMethods{m}.name, 'Feature Clustering and Ranking'))
+                featIdx = resFci{m, i}.FeatIdx;
+                try
+                    resFci{m, i}.FeatIdx = resFci{m, i}.FeatClustIdx(resFci{m, i}.FeatIdx);
+                    resFci{m, i} = FsStabilityEval(resFci{m, i});
+                catch ex
+                    disp(ex.message);
+                    rethrow(ex)
+                end
+                resFci{m, i}.FeatIdx = featIdx;
+            end
+            table(m+1,:) = {methodNames{m}, resFci{m, i}.TanimotoStability, resFci{m, i}.Consitency, ...
+                resFci{m, i}.SpearmanRankCorrCoeffStab, mean(res{m, i}.FsDuration), resFci{m, i}.ClfMeanAcc(end)};            
+%                 resFci{m, i}.SpearmanRankCorrCoeffStab, mean(res{m, i}.FsDuration), resFci{m, i}.ClfMeanAcc(1), resFci{m, i}.ClfMeanAcc(2), resFci{m, i}.ClfMeanAcc(3), resFci{m, i}.ClfMeanAcc(4)};            methodMedianStability(m, i) = (resFci{m, i}.TanimotoStability + resFci{m, i}.Consitency)/2;
+            methodMedianStability(m, i) = resFci{m, i}.Consitency; %(resFci{m, i}.TanimotoStability + resFci{m, i}.Consitency)/2;
+            methodMedianAcc(m, i) = mean(resFci{m, i}.ClfMeanAcc);
+            methodMedianFsDuration(m, i) = mean(res{m, i}.FsDuration);
+        end
+        disp(cdataNames{i})
+        disp(table)
+    end
 end
 
 table = {'Method', 'Stability', 'Accuracy', 'FsDuration', 'Overall'};

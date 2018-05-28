@@ -11,10 +11,10 @@ rng('default') % so we get the same results every time and the same crossval fol
             % apparently uses its own randomiser (I guess unsuprisingly).
             % There doesn't seem to be any mexopencv access to the c++
             % random number generator
-randreset;
-g = RandStream('twister'); % this should make it work inside parfor
+%randreset;
+g = RandStream('twister', 'Seed', 1); % this should make it work inside parfor
 RandStream.setGlobalStream(g);
-s = RandStream('twister', 'Seed', 1); % NB make a local randstream that should make same bootstraps each time
+% s = RandStream('twister', 'Seed', 1); % NB make a local randstream that should make same bootstraps each time
 
     
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -27,7 +27,7 @@ res.FeatScore = zeros(size(data, 2), numBootStraps);
 res.FeatRank = zeros(size(data, 2), numBootStraps); 
 for i = 1:numBootStraps
     fprintf('Boot strap %i of %i\n', i, numBootStraps);
-    if true
+    if false
         [subData1, subData2] = gendat(data, 0.5);  % TO DO: seed the sampling so that the same bootstraps can be repeated for different clfrs
         %[subData1, subData2] = gendat2(data, 0.5, i);  % give same random seeds on each call so that we get identical bootstraps for different calls and threahds
         %randi(10,1,10)
@@ -145,15 +145,36 @@ end
 % they get the same numbers, if not they get new numbers
 
 if strcmpi(struct(w).name, 'Feature Clustering and Ranking')
-    res = RenumClustAcrossBootstraps(res);
-
     if false
-        featIdx = res.FeatIdx;
-        for i = 1:length(res.FeatIdx)
-            res.FeatIdx{i} = res.FeatClustIdx(res.FeatIdx{i}, i);
+        res = RenumClustAcrossBootstraps(res);
+        if false
+            featIdx = res.FeatIdx;
+            for i = 1:length(res.FeatIdx)
+                res.FeatIdx{i} = res.FeatClustIdx(res.FeatIdx{i}, i);
+            end
+            res.FeatIdxOrig = featIdx;
+        end    
+    else   %this is the Oct 2016 code that generated the CompareFsMethodsHs4.mat (paper) results
+        newClusterNum = length(res.ClustFeatNLab{1})+1;
+        for b = 2:numBootStraps
+            clustReNum = zeros(1, length(res.ClustFeatNLab{b}));
+            for c1 = 1:length(res.ClustFeatNLab{1})
+                for c = 1:length(res.ClustFeatNLab{b})
+                    sd = setxor(res.ClustFeatNLab{1}{c1}, res.ClustFeatNLab{b}{c});  % nb dont use setdiff
+                    if isempty(sd)  %clusters are identical, give them the same number
+                        clustReNum(c) = c1;
+                        break;
+                    end
+                end
+            end
+            numNewClusters = sum(clustReNum == 0);
+            clustReNum(clustReNum==0) = newClusterNum:(newClusterNum + numNewClusters - 1);
+            newClusterNum = newClusterNum + numNewClusters;
+            %this assumes that FeatClustIdx is numbered from 1 and
+            %corresponding to order of ClustFeatNLab
+            res.FeatClustIdx(:, b) = clustReNum(res.FeatClustIdx(:, b));
         end
-        res.FeatIdxOrig = featIdx;
-    end    
+    end
 end
 
 res.ClfMeanAcc = mean(res.ClfAcc, 1);
