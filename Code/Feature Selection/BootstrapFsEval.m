@@ -145,7 +145,7 @@ end
 % they get the same numbers, if not they get new numbers
 
 if strcmpi(struct(w).name, 'Feature Clustering and Ranking')
-    if false
+    if true
         res = RenumClustAcrossBootstraps(res);
         if false
             featIdx = res.FeatIdx;
@@ -153,8 +153,8 @@ if strcmpi(struct(w).name, 'Feature Clustering and Ranking')
                 res.FeatIdx{i} = res.FeatClustIdx(res.FeatIdx{i}, i);
             end
             res.FeatIdxOrig = featIdx;
-        end    
-    else   %this is the Oct 2016 code that generated the CompareFsMethodsHs4.mat (paper) results
+        end
+    else  %this is the Oct 2016 code that generated the CompareFsMethodsHs4.mat (paper) results
         newClusterNum = length(res.ClustFeatNLab{1})+1;
         for b = 2:numBootStraps
             clustReNum = zeros(1, length(res.ClustFeatNLab{b}));

@@ -171,3 +171,4 @@ end
 res = struct;
 res.FeatClustIdx = [1 1 1 2 2 3; 1 1 2 3 3 4; 1 1 1 2 3 3; 1 1 1 2 3 4; 1 1 2 3 3 4; 1 2 3 4 5 5]';
 res2 = RenumClustAcrossBootstraps(res)
+res = FsStabilityEval(res)

@@ -40,6 +40,7 @@ Notes
 - resFci from CompareFsMethodsHs4.mat has a FeatIdx_ field, which comes from CompareFsMethodsHs4.mat
 - Digging into CompareFsMethodsHs4.mat, I see res.FsMapping which contains version which tells you the date (of training) = 6 Oct 2016, and prtools version: 5.3.1.  This matches the current prtools, but does not match the code date I have been comparing against! 
 
+
 Notes
 ------
 - Min accuracy vs exemplar vs median accuracy to rank features from each cluster:

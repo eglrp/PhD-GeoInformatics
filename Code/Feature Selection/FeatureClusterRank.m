@@ -233,7 +233,7 @@ end
 clustAcc = [];
 for i = 1:nclust
     if exist('exemplars', 'var')
-        clustAcc(i) = median(featAcc(lab==i));  %featAcc(exemplars(i));  %
+        clustAcc(i) = featAcc(exemplars(i));  %min(featAcc(lab==i));  %featAcc(exemplars(i));  %
     else
         clustAcc(i) = median(featAcc(lab==i));
     end
