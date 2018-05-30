@@ -13,6 +13,8 @@ from csv import DictWriter
 from collections import OrderedDict
 fontSize = 16
 
+
+
 def EvalRecordCs(allometricModels, record):
     # vars = [model['vars'] for model in allometricModels.values()]
     if not allometricModels.__contains__(record['species']):
@@ -110,6 +112,37 @@ wb = None
 # Read in trial woody measurements
 
 wb = load_workbook(woodyFileName)
+
+# populate notFoundSpecies
+notFoundSpecies = {}
+for ws in wb:
+    print ws.title, ' rows: ', ws.max_row
+    first_row = ws[1]
+    header = []
+    for c in first_row:
+        header.append(c.value)
+
+    for r in ws[2:ws.max_row]:
+        if r[0].value is None:
+            break
+        species = str(r[2].value).strip()
+
+        if not allometricModels.__contains__(species):
+            print species, " not found"
+            if notFoundSpecies.has_key(species):
+                notFoundSpecies[species] += 1
+            else:
+                notFoundSpecies[species] = 1
+
+outFileName = 'C:\Data\Development\Projects\PhD GeoInformatics\Data\GEF Sampling\Sampling Dec 2017\Unknown Species.csv'
+import csv
+with open(outFileName, 'wb') as outfile:
+    writer = csv.writer(outfile, delimiter=',',
+                            quotechar='\'', quoting=csv.QUOTE_MINIMAL)
+    writer.writerow(['Species', 'N'])
+    for species, N in notFoundSpecies.iteritems():
+        writer.writerow([species, N])
+
 
 nestedPlots = {}
 for ws in wb:
