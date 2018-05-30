@@ -11,6 +11,7 @@ showFigures = false;
 useCorrelation = true;
 clusterType = 'average';
 jmiFormulation = false;  % use MI to rank features in clusters and JMI to choose clusters
+fsFormulation = false;  % use FS to rank clusters
 
 ModifyDefaultArgs(varargin);
 
@@ -38,7 +39,7 @@ if strcmpi(clusterMethod, 'ap')  % affinity propagation
     % redundant too but they are not close.  Then there are non-lin dependencies too.
 %     dataNorm = (data*scalem(data, 'domain'));  % according to chen et al 2017
 %     dataNorm = (data*scalem(data, 'variance'));
-    dataNorm = (data*scalem(data, 'variance'));
+    dataNorm = 10*(data*scalem(data, 'domain'));
     S = -((+dataNorm)' * proxm2((+dataNorm)', apclusterCrit, apclusterParam));
 %     S = -distm((+dataNorm)'); % -ve euclidean distance betw feats
     n = size(S, 1); % num feats
@@ -59,14 +60,14 @@ if strcmpi(clusterMethod, 'ap')  % affinity propagation
 %         [idx, netsim, i, unconverged, dpsim, expref] = apcluster(S, 0.8*median(S(:)), 'maxits', 10000, 'dampfact', 0.8);
 %     end
 %     [idx, netsim, i, unconverged, dpsim, expref] = apcluster(S, pref);
-%     if unconverged
-%         print('unconverged\n')
-%         S = S + 1e-9 * randn(size(S, 1), size(S, 2));
-%         [idx, netsim, i, unconverged, dpsim, expref] = apcluster(S, pref, 'maxits', 1000, 'dampfact', 0.8);
+    if unconverged
+        print('unconverged\n')
+        S = S + 1e-9 * randn(size(S, 1), size(S, 2));
+        [idx, netsim, i, unconverged, dpsim, expref] = apcluster(S, pref, 'maxits', 100000, 'dampfact', 0.65);
         if unconverged
             error('ERROR: unconverged');
         end
-%     end
+    end
     nclust = length(unique(idx));
     tmp(unique(idx)) = 1:nclust;
     lab = tmp(idx); % labels 1 indexed
@@ -198,7 +199,9 @@ fprintf('Ranking individual features:\n-----------------------------\n');
 for i = 1:length(fl)
     fprintf('%d,',i);
     try
-        if ~ismapping(criterion)
+        if ~ismapping(criterion) && strcmpi(criterion, 'distcorr')
+            featAcc(i) = -FaDCor(+dataNorm(:, i), getnlab(dataNorm));
+        elseif ~ismapping(criterion)
             featAcc(i) = -FeatEvalMi(dataNorm(:, i), criterion);
         else
             %featAcc is error rate
@@ -233,7 +236,7 @@ end
 clustAcc = [];
 for i = 1:nclust
     if exist('exemplars', 'var')
-        clustAcc(i) = featAcc(exemplars(i));  %min(featAcc(lab==i));  %featAcc(exemplars(i));  %
+        clustAcc(i) = min(featAcc(lab==i));  %featAcc(exemplars(i));  %min(featAcc(lab==i));  %
     else
         clustAcc(i) = median(featAcc(lab==i));
     end
@@ -285,7 +288,7 @@ for i = 1:length(res.ClustAcc)
         end
     end
     if bestFeats(i) == 0  % else use the "best" (highest scored) feature
-        if exist('exemplars', 'var')
+        if false %exist('exemplars', 'var')
             bestFeats(i) = exemplars(i);
         else
             [featAcc_ sortClusterFeatIdx] = sort(res.FeatIndividualAcc(clusterFeatIdx));
@@ -298,6 +301,16 @@ if jmiFormulation    % select clusters using JMI rather than plain ranking
     dataNorm = (10*(data*scalem(data, 'domain')));
     jmiFeats = feast('jmi', length(bestFeats), +dataNorm(:, bestFeats), getnlab(dataNorm));
     clustIdx = jmiFeats;
+end
+
+if fsFormulation    % select clusters using forward selection with the spec'd criterion
+    dataNorm = (10*(data*scalem(data, 'domain')));
+    if ismapping(criterion)
+        w = featself(dataNorm(:, bestFeats), criterion, length(bestFeats), 5);
+    else
+        w = featself(dataNorm(:, bestFeats), criterion, length(bestFeats));
+    end
+    clustIdx = +w;
 end
 
 if showFigures

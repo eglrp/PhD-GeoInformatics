@@ -163,6 +163,8 @@ else
 			for j = 1:size(a, 2)-1 
 				J = J + mi(round(+a(:, [j end])), getnlab(a));  % assumes the added feature is in end 
 			end
+        elseif strcmp(crit,'distcorr') % Distance correlation
+            J = FaDCor(+a, getnlab(a));
         else
             error('Criterion undefined');
         end

@@ -136,7 +136,7 @@ for i = 1:numBootStraps
     end
 end
 
-%use cluster indices rather than feature indices for FCR stability eval
+% use cluster indices rather than feature indices for FCR stability eval
 % the problem with this is that the clusters and their numbers may change
 % from one bootstrap to the next, so the indexing is not consistent, if we
 % wanted to go this way, we would have to do the clustering once and then

@@ -1,11 +1,12 @@
 % test apcluster and compare to hierarchical
 
 %% manually load data from CompareFsMethods
-ii = 3;
+ii = 2;
 data = cdata{ii};
 clusterThresh_ = clusterThresh(ii);
 numFeatures(ii)
 preferredFeatures{ii}
+fl = cellstr(getfeatlab(data))
 % ii=5, for pref > median(S), num clusters = num features
 % ii=4, for pref = 1.35*median(S), num ap clusters << num hier. clusters (49)
 % ii=6, for pref = 1.35*median(S), num ap clusters is quite sensitive to
@@ -16,8 +17,8 @@ preferredFeatures{ii}
 %%
 fl = cellstr(getfeatlab(data));
 
-dataNorm = gendat(data*scalem(data, 'variance'));
-S = -((+dataNorm)' * proxm2((+dataNorm)', 'correlation'));
+dataNorm = 10*gendat(data*scalem(data, 'variance'));
+S = -((+dataNorm)' * proxm2((+dataNorm)', 'distcorr'));
 [prefmin, prefmax] = preferenceRange(S, 'exact')
 % c = corr(+data);
 % S = abs(c);
@@ -29,7 +30,7 @@ pref = 2.5*sum(tmp(:)) / (n * (n - 1)); % from paper but inc slightly otherwise 
 % pref = 0.99;
 pref = median(S(:));
 
-S = S + 1e-9 * randn(size(S, 1), size(S, 2));
+% S = S + 1e-9 * randn(size(S, 1), size(S, 2));
 [idx, netsim, i, unconverged, dpsim, expref] = apcluster(S, pref, 'maxits', 10000, 'dampfact', 0.9);
 %     [idx, netsim, i, unconverged, dpsim, expref] = apcluster(S, pref);
 %     if unconverged
@@ -172,3 +173,14 @@ res = struct;
 res.FeatClustIdx = [1 1 1 2 2 3; 1 1 2 3 3 4; 1 1 1 2 3 3; 1 1 1 2 3 4; 1 1 2 3 3 4; 1 2 3 4 5 5]';
 res2 = RenumClustAcrossBootstraps(res)
 res = FsStabilityEval(res)
+
+%% 
+load('D:\Data\Development\Projects\PhD GeoInformatics\Data\Feature Selection\Synthetic.mat');
+bestFeats = [1,2,3,4,5];
+
+dataNorm = (10*(data*scalem(data, 'domain')));
+jmiFeats = feast('jmi', length(bestFeats), +dataNorm(:, bestFeats), getnlab(dataNorm));
+clustIdx = jmiFeats;
+
+w = featself(dataNorm(:, bestFeats), naivebc)
+[w,r] = featselo(dataNorm(:, [bestFeats bestFeats]), 'mi', length(bestFeats)-1)
