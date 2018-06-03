@@ -236,7 +236,7 @@ end
 clustAcc = [];
 for i = 1:nclust
     if exist('exemplars', 'var')
-        clustAcc(i) = min(featAcc(lab==i));  %featAcc(exemplars(i));  %min(featAcc(lab==i));  %
+        clustAcc(i) = featAcc(exemplars(i));  %min(featAcc(lab==i));  %featAcc(exemplars(i));  %min(featAcc(lab==i));  %
     else
         clustAcc(i) = median(featAcc(lab==i));
     end
@@ -288,7 +288,7 @@ for i = 1:length(res.ClustAcc)
         end
     end
     if bestFeats(i) == 0  % else use the "best" (highest scored) feature
-        if false %exist('exemplars', 'var')
+        if exist('exemplars', 'var')
             bestFeats(i) = exemplars(i);
         else
             [featAcc_ sortClusterFeatIdx] = sort(res.FeatIndividualAcc(clusterFeatIdx));
@@ -304,11 +304,17 @@ if jmiFormulation    % select clusters using JMI rather than plain ranking
 end
 
 if fsFormulation    % select clusters using forward selection with the spec'd criterion
-    dataNorm = (10*(data*scalem(data, 'domain')));
-    if ismapping(criterion)
-        w = featself(dataNorm(:, bestFeats), criterion, length(bestFeats), 5);
+    if false
+        dataNorm = (10*(data*scalem(data, 'variance')));
+        w = featself(dataNorm(:, bestFeats), opencvknnc([], 3), length(bestFeats));
     else
-        w = featself(dataNorm(:, bestFeats), criterion, length(bestFeats));
+        if ismapping(criterion)
+            dataNorm = (10*(data*scalem(data, 'variance')));
+            w = featself(dataNorm(:, bestFeats), criterion, length(bestFeats), 5);
+        else
+            dataNorm = (10*(data*scalem(data, 'domain')));
+            w = featself(dataNorm(:, bestFeats), criterion, length(bestFeats));
+        end
     end
     clustIdx = +w;
 end
