@@ -37,46 +37,40 @@ if strcmpi(clusterMethod, 'ap')  % affinity propagation
     % is a weakness as closely spaced features are not the only redundant
     % ones, features that are linearly scaled versions of each will be
     % redundant too but they are not close.  Then there are non-lin dependencies too.
-%     dataNorm = (data*scalem(data, 'domain'));  % according to chen et al 2017
-%     dataNorm = (data*scalem(data, 'variance'));
-    dataNorm = 10*(data*scalem(data, 'domain'));
-    S = -((+dataNorm)' * proxm2((+dataNorm)', apclusterCrit, apclusterParam));
-%     S = -distm((+dataNorm)'); % -ve euclidean distance betw feats
-    n = size(S, 1); % num feats
-    tmp = triu(S, 1) + tril(S, -1); % kind of unnecessary as Sii = 0 already
-    pref = 2.5*sum(tmp(:)) / (n * (n - 1)); % from paper but inc slightly otherwise we dont get enough features
-    pref = median(S(:));
-    %pref = 1.4*median(S(:));
-%     if strcmpi(apclusterCrit, 'correlation')
-%         pref = 0.99;
-%     else
-%         pref = 2*median(S(:))
-%     end
-    
-%     S = S + 1e-9 * randn(size(S, 1), size(S, 2));
-    [idx, netsim, i, unconverged, dpsim, expref] = apcluster(S, pref, 'maxits', 10000, 'dampfact', 0.9);
-    
-%     if length(unique(idx)) > size(+data, 2)/2  % if there are too many clusters, do it again with default pref
-%         [idx, netsim, i, unconverged, dpsim, expref] = apcluster(S, 0.8*median(S(:)), 'maxits', 10000, 'dampfact', 0.8);
-%     end
-%     [idx, netsim, i, unconverged, dpsim, expref] = apcluster(S, pref);
-    if unconverged
-        print('unconverged\n')
-        S = S + 1e-9 * randn(size(S, 1), size(S, 2));
-        [idx, netsim, i, unconverged, dpsim, expref] = apcluster(S, pref, 'maxits', 100000, 'dampfact', 0.65);
+
+    dataNorm = (data*scalem(data, 'variance'));
+    %dataNorm = 10*(data*scalem(data, 'domain'));
+    if true
+        S = -((+dataNorm)' * proxm2((+dataNorm)', apclusterCrit, apclusterParam));
+    %     S = -distm((+dataNorm)'); % -ve euclidean distance betw feats
+        n = size(S, 1); % num feats
+        tmp = triu(S, 1) + tril(S, -1); % kind of unnecessary as Sii = 0 already
+        pref = 2.5*sum(tmp(:)) / (n * (n - 1)); % from paper but inc slightly otherwise we dont get enough features
+        pref = median(S(:));
+        [idx, netsim, i, unconverged, dpsim, expref] = apcluster(S, pref, 'maxits', 10000, 'dampfact', 0.6);
         if unconverged
-            error('ERROR: unconverged');
+            print('unconverged\n')
+            S = S + 1e-9 * randn(size(S, 1), size(S, 2));
+            [idx, netsim, i, unconverged, dpsim, expref] = apcluster(S, pref, 'maxits', 100000, 'dampfact', 0.5);
+            if unconverged
+                error('ERROR: unconverged');
+            end
         end
+    else
+        c = 1-abs(corr(+dataNorm));
+        lab = dcluste(c);
+        idx = lab(:, ceil(size(lab,2)/2+1));
     end
-    nclust = length(unique(idx));
-    tmp(unique(idx)) = 1:nclust;
+    exemplars = unique(idx);
+    nclust = length(exemplars);
+    tmp(exemplars) = 1:nclust;
     lab = tmp(idx); % labels 1 indexed
-    fprintf('Number of clusters: %d\n', length(unique(idx)));
+    fprintf('Number of clusters: %d\n', length(exemplars));
     
     if showFigures
-        fprintf('Fitness (net similarity): %f\n', netsim);
+%         fprintf('Fitness (net similarity): %f\n', netsim);
 
-        exemplars = unique(idx);
+%         exemplars = unique(idx);
         count = 1;
         for i = exemplars'
             ii = find(idx == i);
@@ -236,7 +230,7 @@ end
 clustAcc = [];
 for i = 1:nclust
     if exist('exemplars', 'var')
-        clustAcc(i) = featAcc(exemplars(i));  %min(featAcc(lab==i));  %featAcc(exemplars(i));  %min(featAcc(lab==i));  %
+        clustAcc(i) = featAcc(exemplars(i));  %min(featAcc(lab==i));  %
     else
         clustAcc(i) = median(featAcc(lab==i));
     end
@@ -253,12 +247,12 @@ if true
     lab = clustRank(lab);  % equivalent?
     res.FeatClusterNLab = lab; % cluster numbers for each feature
     %res.ClustFeatNLab = res.ClustFeatNLab{clustIdx};
-    clustIdx_ = clustIdx;
-    clustIdx = 1:nclust;  % DH 2018 this is dodgy and leading to a bug where features are not in order of clustAcc see line 348
-    res.ClustAcc = clustAcc_;
     if exist('exemplars', 'var')
-        exemplars = exemplars(clustRank);
+        exemplars = exemplars(clustIdx);
     end
+    clustIdx_ = clustIdx;
+    clustIdx = 1:nclust;  % 
+    res.ClustAcc = clustAcc_;
 else
     res.ClustAcc = clustAcc;
 end

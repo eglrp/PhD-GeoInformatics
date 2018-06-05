@@ -1,7 +1,7 @@
 % test apcluster and compare to hierarchical
 
 %% manually load data from CompareFsMethods
-ii = 2;
+ii = 1;
 data = cdata{ii};
 clusterThresh_ = clusterThresh(ii);
 numFeatures(ii)
@@ -18,7 +18,7 @@ fl = cellstr(getfeatlab(data))
 fl = cellstr(getfeatlab(data));
 
 dataNorm = 10*gendat(data*scalem(data, 'variance'));
-S = -((+dataNorm)' * proxm2((+dataNorm)', 'distcorr'));
+S = -((+dataNorm)' * proxm2((+dataNorm)', 'correlation'));
 [prefmin, prefmax] = preferenceRange(S, 'exact')
 % c = corr(+data);
 % S = abs(c);
@@ -31,7 +31,7 @@ pref = 2.5*sum(tmp(:)) / (n * (n - 1)); % from paper but inc slightly otherwise 
 pref = median(S(:));
 
 % S = S + 1e-9 * randn(size(S, 1), size(S, 2));
-[idx, netsim, i, unconverged, dpsim, expref] = apcluster(S, pref, 'maxits', 10000, 'dampfact', 0.9);
+[idx, netsim, i, unconverged, dpsim, expref] = apcluster(S, pref, 'maxits', 10000, 'dampfact', 0.5);
 %     [idx, netsim, i, unconverged, dpsim, expref] = apcluster(S, pref);
 %     if unconverged
 %         print('unconverged\n')
@@ -111,10 +111,58 @@ for i = 1:nclust
         disp(fl(lab==i)')
     end
 end
+%% compare to exemplar
+dataNorm = 10*gendat(data*scalem(data, 'variance'));
+c = 1-abs(corr(+gendat(dataNorm)));
+r = drankm(c);
+pref = median(r(:));
+
+% dataNorm = 10*gendat(data*scalem(data, 'variance'));
+% S = -((+dataNorm)' * proxm2((+dataNorm)', 'correlation'));
+% pref = median(S(:));
+
+idx = exemplar(r, pref, 0.5);
+
+nclust = length(unique(idx));
+tmp(unique(idx)) = 1:nclust;
+lab = tmp(idx); % labels 1 indexed
+fprintf('Number of clusters: %d\n', length(unique(idx)));
+
+for i = 1:nclust
+    if true
+        fprintf('\nCluster %d\n', i);
+        disp(fl(lab==i)')
+    end
+end
+%% compare to dcluste
+dataNorm = 10*gendat(data*scalem(data, 'variance'));
+c = 1-abs(corr(+gendat(dataNorm)));
+r = drankm(c);
+pref = median(r(:));
+
+% dataNorm = 10*gendat(data*scalem(data, 'variance'));
+% S = -((+dataNorm)' * proxm2((+dataNorm)', 'correlation'));
+% pref = median(S(:));
+
+lab = dcluste(c);
+idx = lab(:, floor(size(lab,2)/2));
+
+nclust = length(unique(idx));
+tmp(unique(idx)) = 1:nclust;
+lab = tmp(idx); % labels 1 indexed
+fprintf('Number of clusters: %d\n', length(unique(idx)));
+
+for i = 1:nclust
+    if true
+        fprintf('\nCluster %d\n', i);
+        disp(fl(lab==i)')
+    end
+end
+
 
 %% FCR 
-w = FeatSelClusterRankM([], naivebc([], 25), 0, [], 'clusterThresh', clusterThresh(ii), 'showFigures', true, ...
-        'jmiFormulation', false, 'clusterMethod', 'ap'); %,'preferredFeatures', preferredFeatures{i});...
+w = FeatSelClusterRankM([], 'mi', 0, [], 'clusterThresh', clusterThresh(ii), 'showFigures', true, ...
+        'jmiFormulation', true, 'clusterMethod', 'ap'); %,'preferredFeatures', preferredFeatures{i});...
 w = data*w
 
 %% Debugging gen of orig results

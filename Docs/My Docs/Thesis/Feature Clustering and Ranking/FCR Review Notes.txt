@@ -51,6 +51,7 @@ x - Digging into CompareFsMethodsHs4.mat, I see res.FsMapping which contains ver
 - using mi instead of correlation for clustering makes things worse 
 - NB distcorr works ok as a feature importance measure and gives the best stability of any option w/o featidx=clustidx (NB), but mi is more accurate and faster 
 - NB FCR-ap-mi-nopref has similar stability to JMI w/o featidx=clustidx, which sadly means we are in reality not actually bettering JMI for stability.  But, FCR-ap-mi-nopref with jmiFormulation/fsFormulation does improve on JMI stability w/o featidx=clustidx.  And also see note above.   
+- NB due to a bug in the code, the exemplars weren't being used for best clust or best feat for evals 1-12 below.  When I do use them, the stability improves dramatically, but the accuracy decreases a bit.   
 
 Notes
 ------
@@ -257,7 +258,33 @@ Some results
 		'FCR-ap-nopref'           [  0.3302]    [     0.4512]    [    1.0000]    [    1.0682]    [    0.8752]
 		'FCR-ap-nopref-jmiF…'    [  0.3305]    [     0.4479]    [    0.9622]    [    1.0560]    [    0.8761]
 		'JMI'                     [  0.3608]    [     0.4876]    [    0.9411]    [    1.1886]    [    0.8547]
-		
+
+13) so like a real dumbass, none of the above "acc = exemplar and bestFeat = exemplar" weren't actually using the exemplars.  The below now does...		
+    'Method'                       'Stability'    'Accuracy'    'FsDuration'    'Overall'
+    'FCR-ap-nopref'                [   0.8278]    [  0.8672]    [    0.9039]    [ 0.7206]
+    'FCR-ap-nopref-jmiFormul…'    [   0.7013]    [  0.8245]    [    0.9454]    [ 0.6088]
+    'JMI'                          [   0.5999]    [  0.8600]    [    0.6859]    [ 0.5184]
+14) using dcluste 
+    'Method'                       'Stability'    'Accuracy'    'FsDuration'    'Overall'
+    'FCR-ap-nopref'                [   0.9056]    [  0.8420]    [    3.6514]    [ 0.7624]
+    'FCR-ap-nopref-jmiFormul…'    [   0.8892]    [  0.7915]    [    3.3000]    [ 0.7065]
+    'JMI'                          [   0.5999]    [  0.8600]    [    0.6916]    [ 0.5184]
+
+    'Method'                       'Stability'    'Accuracy'    'FsDuration'    'Overall'
+    'FCR-ap-nopref'                [   0.9308]    [  0.8338]    [    4.1088]    [ 0.7799]
+    'FCR-ap-nopref-jmiFormul…'    [   0.8544]    [  0.7782]    [    3.9549]    [ 0.6677]
+    'JMI'                          [   0.5999]    [  0.8600]    [    0.7153]    [ 0.5184]	
+	
+    'Method'                       'Stability'    'Accuracy'    'FsDuration'    'Overall'
+    'FCR-ap-nopref'                [   0.8278]    [  0.8672]    [    0.9399]    [ 0.7206]
+    'FCR-ap-nopref-jmiFormul…'    [   0.8227]    [  0.8653]    [    0.8795]    [ 0.7177]
+    'JMI'                          [   0.5999]    [  0.8600]    [    0.7165]    [ 0.5184]	
+	
+	with best clust = min acc and best feat = exemplar
+	'Method'                       'Stability'    'Accuracy'    'FsDuration'    'Overall'
+    'FCR-ap-nopref'                [   0.8297]    [  0.8681]    [    0.9148]    [ 0.7229]
+    'FCR-ap-nopref-jmiFormul…'    [   0.8227]    [  0.8653]    [    0.8602]    [ 0.7177]
+    'JMI'                          [   0.5999]    [  0.8600]    [    0.6757]    [ 0.5184]
 -----------------------------------------------------------------------------------------------------------------------	
 
 Letter to editor:   
