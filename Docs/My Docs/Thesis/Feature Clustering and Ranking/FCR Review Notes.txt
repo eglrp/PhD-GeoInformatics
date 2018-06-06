@@ -34,6 +34,15 @@ x - Can we speed things up for some fS algorithms by specifying the num features
 - Consider restructuring intro along the lines of "Salient Band Selection for Hyperspectral Image Classification via Manifold Ranking" where method is introduced first, then related methods described
 - COuld a routine from ClustTools provide more stable prototypes than AP?  Could we exploit multilevel clustering somehow?  
 - make an experiment that just checks the stability of cluster modes 
+- think about varying the num of features selected 
+- do a solid debug of the exemplars option to make sure the right features are making it through 
+- if we're using only acc of exemplar for ranking clusters and choosing feats, then we don't need to eval the feat criterion on each feat but only on each exemplar 
+- rather than clustering on feature similarity, how about clustering on similarity of feat performance.  eg make the "features" to find dissimilarities on, a vector of the errors for each object found with eg a naivebc classifier.
+the idea of this is that the exemplar may then be a better feature for classification than if we cluster purely on feature dissimilarities
+- what makes an examplar an exemplar?  
+- how does dcluste make a stable clustering but exemplar does not?  
+- do a thorough run through to make sure feat indices are getting through correctly 
+
 
 Notes 
 ------------------
@@ -52,6 +61,7 @@ x - Digging into CompareFsMethodsHs4.mat, I see res.FsMapping which contains ver
 - NB distcorr works ok as a feature importance measure and gives the best stability of any option w/o featidx=clustidx (NB), but mi is more accurate and faster 
 - NB FCR-ap-mi-nopref has similar stability to JMI w/o featidx=clustidx, which sadly means we are in reality not actually bettering JMI for stability.  But, FCR-ap-mi-nopref with jmiFormulation/fsFormulation does improve on JMI stability w/o featidx=clustidx.  And also see note above.   
 - NB due to a bug in the code, the exemplars weren't being used for best clust or best feat for evals 1-12 below.  When I do use them, the stability improves dramatically, but the accuracy decreases a bit.   
+- An exp with ClustTools showed dcluste (~ap) to have best stability - it is actually very robust to bootstrapped data.  The same does not quite apply to apcluster somehow.  The reclustering etc done by dcluste somehow improves stability significantly.
 
 Notes
 ------
@@ -285,6 +295,92 @@ Some results
     'FCR-ap-nopref'                [   0.8297]    [  0.8681]    [    0.9148]    [ 0.7229]
     'FCR-ap-nopref-jmiFormul…'    [   0.8227]    [  0.8653]    [    0.8602]    [ 0.7177]
     'JMI'                          [   0.5999]    [  0.8600]    [    0.6757]    [ 0.5184]
+	
+	with best clust = exemplar and best feat = exemplar
+    'FCR-ap-naivebc-nopref'        [   0.7461]    [  0.8641]    [   21.2499]    [ 0.6508]
+    'FCR-ap-naivebc-nopref-j…'    [   0.7679]    [  0.8638]    [   20.2687]    [ 0.6699]	
+	
+15) with clust acc = exemplar and best feat = exemplar, 
+
+    'Method'              'Stability'    'Accuracy'    'FsDuration'    'Overall'
+    'FCR-H-mi'            [   0.7894]    [  0.8703]    [    1.9622]    [ 0.6859]
+    'FCR-ap-mi-nopref'    [   0.8278]    [  0.8672]    [    0.8519]    [ 0.7206]
+    'featself-naivebc'    [   0.2541]    [  0.8763]    [   98.7476]    [ 0.2254]
+    'featself-mi'         [   0.4407]    [  0.8605]    [    3.3595]    [ 0.3883]
+    'featseli-naivebc'    [   0.6631]    [  0.7955]    [   19.5070]    [ 0.5371]
+    'featseli-mi'         [   0.7990]    [  0.7732]    [    1.0863]    [ 0.6220]
+details 
+	Spekboom
+		'Method'              'Tanimoto'    'Consistency'    'SpearmanCC'    'FsDuration'    'ClfMeanAcc'
+		'FCR-H-mi'            [       1]    [          1]    [    0.9985]    [    1.9050]    [    0.9140]
+		'FCR-ap-mi-nopref'    [  0.9000]    [     0.9233]    [    0.9836]    [    1.5218]    [    0.9332]
+		'featself-naivebc'    [  0.3254]    [     0.3909]    [    0.3516]    [  116.6373]    [    0.9061]
+		'featself-mi'         [  0.6249]    [     0.7189]    [    0.7249]    [    6.6711]    [    0.9068]
+		'featseli-naivebc'    [       1]    [          1]    [    0.9945]    [   16.0853]    [    0.8191]
+		'featseli-mi'         [       1]    [          1]    [    0.9992]    [    1.1193]    [    0.7376]
+
+	Synthetic
+		'Method'              'Tanimoto'    'Consistency'    'SpearmanCC'    'FsDuration'    'ClfMeanAcc'
+		'FCR-H-mi'            [       1]    [          1]    [    0.9991]    [    0.8126]    [    0.8973]
+		'FCR-ap-mi-nopref'    [       1]    [          1]    [    0.9987]    [    0.2994]    [    0.8974]
+		'featself-naivebc'    [  0.4856]    [     0.4711]    [    0.3955]    [   11.3000]    [    0.8988]
+		'featself-mi'         [  0.6000]    [     0.6159]    [    0.5258]    [    0.4145]    [    0.9004]
+		'featseli-naivebc'    [       1]    [          1]    [    0.9791]    [    2.7558]    [    0.8802]
+		'featseli-mi'         [       1]    [          1]    [    0.9919]    [    0.2309]    [    0.8800]
+
+	Statlog Landsat
+		'Method'              'Tanimoto'    'Consistency'    'SpearmanCC'    'FsDuration'    'ClfMeanAcc'
+		'FCR-H-mi'            [       1]    [          1]    [         1]    [    1.2330]    [    0.8219]
+		'FCR-ap-mi-nopref'    [       1]    [          1]    [         1]    [    0.4162]    [    0.8513]
+		'featself-naivebc'    [  0.2258]    [     0.2562]    [    0.2308]    [   23.3352]    [    0.8602]
+		'featself-mi'         [  0.2961]    [     0.3625]    [    0.3176]    [    0.6707]    [    0.8595]
+		'featseli-naivebc'    [  0.5644]    [     0.6687]    [    0.9541]    [    6.5999]    [    0.7804]
+		'featseli-mi'         [  0.9200]    [     0.9437]    [    0.9913]    [    0.4182]    [    0.8324]
+
+	Urban Land Cover
+		'Method'              'Tanimoto'    'Consistency'    'SpearmanCC'    'FsDuration'    'ClfMeanAcc'
+		'FCR-H-mi'            [  0.6444]    [     0.7716]    [    0.8808]    [    2.8379]    [    0.8161]
+		'FCR-ap-mi-nopref'    [  0.5568]    [     0.6802]    [    0.8734]    [    0.8200]    [    0.7567]
+		'featself-naivebc'    [  0.0847]    [     0.1205]    [    0.1174]    [   98.3030]    [    0.8161]
+		'featself-mi'         [  0.0916]    [     0.1262]    [    0.1214]    [    2.1013]    [    0.7425]
+		'featseli-naivebc'    [  0.2618]    [     0.3661]    [    0.8207]    [   28.7487]    [    0.7973]
+		'featseli-mi'         [  0.4057]    [     0.5260]    [    0.9328]    [    1.3854]    [    0.7958]
+
+	Botswana
+		'Method'              'Tanimoto'    'Consistency'    'SpearmanCC'    'FsDuration'    'ClfMeanAcc'
+		'FCR-H-mi'            [  0.3079]    [     0.4243]    [    0.9621]    [    2.2355]    [    0.9078]
+		'FCR-ap-mi-nopref'    [  0.4185]    [     0.5518]    [    0.9332]    [    0.9581]    [    0.8989]
+		'featself-naivebc'    [  0.1289]    [     0.1848]    [    0.1793]    [  152.1223]    [    0.9146]
+		'featself-mi'         [  0.2800]    [     0.3896]    [    0.3816]    [    4.2808]    [    0.9165]
+		'featseli-naivebc'    [  0.3368]    [     0.4398]    [    0.8951]    [   30.2641]    [    0.6949]
+		'featseli-mi'         [  0.7376]    [     0.8300]    [    0.9607]    [    1.5914]    [    0.6605]
+
+	KSC
+		'Method'              'Tanimoto'    'Consistency'    'SpearmanCC'    'FsDuration'    'ClfMeanAcc'
+		'FCR-H-mi'            [  0.4005]    [     0.5405]    [    0.9732]    [    2.7490]    [    0.8645]
+		'FCR-ap-mi-nopref'    [  0.7148]    [     0.8116]    [    0.9800]    [    1.0960]    [    0.8658]
+		'featself-naivebc'    [  0.0780]    [     0.1007]    [    0.0969]    [  190.7876]    [    0.8618]
+		'featself-mi'         [  0.3035]    [     0.4314]    [    0.4365]    [    6.0184]    [    0.8376]
+		'featseli-naivebc'    [  0.3676]    [     0.5041]    [    0.9065]    [   32.5882]    [    0.8012]
+		'featseli-mi'         [  0.3631]    [     0.4942]    [    0.9892]    [    1.7725]    [    0.7328]
+ 
+ 16) using apClusterCrit=nmi with exemplar clustering 
+
+    'Method'              'Stability'    'Accuracy'    'FsDuration'    'Overall'
+    'FCR-H-mi-nopref'     [   0.6543]    [  0.8767]    [    2.0138]    [ 0.5770]
+    'FCR-ap-mi-nopref'    [   0.5502]    [  0.8517]    [   25.7386]    [ 0.4822]
+	
+---- 
+pref=0.2 with exemplar
+     'Method'              'Stability'    'Accuracy'    'FsDuration'    'Overall'
+    'FCR-H-mi-nopref'     [   0.6543]    [  0.8767]    [    1.9732]    [ 0.5770]
+    'FCR-ap-mi-nopref'    [   0.7772]    [  0.8542]    [    1.0331]    [ 0.6701]
+	
+pref=0.1 with exemplar
+    'Method'              'Stability'    'Accuracy'    'FsDuration'    'Overall'
+    'FCR-H-mi-nopref'     [   0.6543]    [  0.8767]    [    2.1582]    [ 0.5770]
+    'FCR-ap-mi-nopref'    [   0.7349]    [  0.8470]    [    1.0727]    [ 0.6296]	
+
 -----------------------------------------------------------------------------------------------------------------------	
 
 Letter to editor:   

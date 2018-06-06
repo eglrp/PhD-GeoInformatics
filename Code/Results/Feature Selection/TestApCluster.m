@@ -1,7 +1,7 @@
 % test apcluster and compare to hierarchical
 
 %% manually load data from CompareFsMethods
-ii = 1;
+ii = 6;
 data = cdata{ii};
 clusterThresh_ = clusterThresh(ii);
 numFeatures(ii)
@@ -114,14 +114,14 @@ end
 %% compare to exemplar
 dataNorm = 10*gendat(data*scalem(data, 'variance'));
 c = 1-abs(corr(+gendat(dataNorm)));
-r = drankm(c);
-pref = median(r(:));
+% c = drankm(c);
+% pref = median(c(:));
 
 % dataNorm = 10*gendat(data*scalem(data, 'variance'));
 % S = -((+dataNorm)' * proxm2((+dataNorm)', 'correlation'));
 % pref = median(S(:));
 
-idx = exemplar(r, pref, 0.5);
+idx = exemplar(c, 0.2, 0.5);
 
 nclust = length(unique(idx));
 tmp(unique(idx)) = 1:nclust;
@@ -161,9 +161,60 @@ end
 
 
 %% FCR 
-w = FeatSelClusterRankM([], 'mi', 0, [], 'clusterThresh', clusterThresh(ii), 'showFigures', true, ...
-        'jmiFormulation', true, 'clusterMethod', 'ap'); %,'preferredFeatures', preferredFeatures{i});...
+w = FeatSelClusterRankM([], 'mi', 0, [], 'clusterThresh', clusterThresh(ii), 'showFigures', false, ...
+        'jmiFormulation', false, 'clusterMethod', 'ap', 'apclusterCrit', 'correlation'); %,'preferredFeatures', preferredFeatures{i});...
 w = data*w
+%%
+i = 4;
+w = FeatSelClusterRankM([], 'mi', 0, [], 'clusterThresh', clusterThresh(ii), 'showFigures', false, ...
+        'jmiFormulation', true, 'clusterMethod', 'ap', 'apclusterCrit', 'correlation'); %,'preferredFeatures', preferredFeatures{i});...
+    
+tres = BootstrapFsEval(gendat(cdata{i}), w, 'numBootStraps', 1);
+
+%% try clustering on a relevance signature
+close all
+dataNorm = gendat(data);
+dataNorm = dataNorm*scalem(dataNorm, 'variance');
+
+nc = getsize(data,3);
+featSig = zeros(size(data,1)*nc, size(data,2));
+featAcc = zeros(size(data,2), 1);
+crit = naivebc([], 10);
+for i = 1:size(data, 2)
+    fprintf('%d,',i);
+    out = dataNorm(:,i)*(dataNorm(:,i)*crit);
+    featAcc(i) = out*testc;
+    featSig(:,i) = +out(:);
+%     out = nlabeld(out) == getnlab(dataNorm);
+end
+fprintf('\n');
+
+% figure
+% plot(featSig)
+% legend(cellstr(getfeatlab(data)))
+
+S = featSig'*proxm2(featSig', 'correlation');
+S(eye(size(S))==1)=0;
+figure
+imagesc(S)
+
+idx = exemplar(S, 0.2, 0.5);
+
+tmp=[];
+nclust = length(unique(idx));
+tmp(unique(idx)) = 1:nclust;
+lab = tmp(idx); % labels 1 indexed
+fprintf('Number of clusters: %d\n', length(unique(idx)));
+
+for i = 1:nclust
+    if true
+        fprintf('\nCluster %d\n', i);
+        disp(fl(lab==i)')
+    end
+end
+exemplars = unique(idx);
+[~, fidx] = sort(featAcc(exemplars));
+disp({'Exemplars: ', fl{exemplars(fidx)}});
 
 %% Debugging gen of orig results
 load 'D:\Data\Development\Projects\PhD GeoInformatics\Data\Feature Selection\CompareFsMethodsHs4.mat'

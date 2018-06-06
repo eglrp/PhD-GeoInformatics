@@ -56,10 +56,16 @@ if strcmpi(clusterMethod, 'ap')  % affinity propagation
                 error('ERROR: unconverged');
             end
         end
-    else
-        c = 1-abs(corr(+dataNorm));
-        lab = dcluste(c);
+    elseif false
+%         c = 1-abs(corr(+dataNorm));
+        S = ((+dataNorm)' * proxm2((+dataNorm)', apclusterCrit, apclusterParam));
+        lab = dcluste(S);
         idx = lab(:, ceil(size(lab,2)/2+1));
+    else
+        S = ((+dataNorm)' * proxm2((+dataNorm)', apclusterCrit, apclusterParam));
+%         c = 1-abs(corr(+dataNorm));
+        idx = exemplar(S, 0.2, 0.5);
+        
     end
     exemplars = unique(idx);
     nclust = length(exemplars);
@@ -74,7 +80,7 @@ if strcmpi(clusterMethod, 'ap')  % affinity propagation
         count = 1;
         for i = exemplars'
             ii = find(idx == i);
-            fprintf('Cluster %d, Exemplar %sf\n', count, fl{i});
+            fprintf('Cluster %d, Exemplar %s\n', count, fl{i});
             fprintf('%s, ',fl{ii});
             fprintf('\n');
             count = count + 1;
@@ -190,20 +196,28 @@ if ~ismapping(criterion)
 end
 % clear featAcc featAccComb w
 fprintf('Ranking individual features:\n-----------------------------\n');
-for i = 1:length(fl)
-    fprintf('%d,',i);
+if exist('exemplars', 'var')
+    nf = length(exemplars);
+    fi = exemplars;
+else
+    nf = length(fl);
+    fi = 1:nf;
+end
+featAcc = inf*ones(length(fl), 1);
+for i = 1:nf
+    fprintf('%d,',fi(i));
     try
         if ~ismapping(criterion) && strcmpi(criterion, 'distcorr')
-            featAcc(i) = -FaDCor(+dataNorm(:, i), getnlab(dataNorm));
+            featAcc(fi(i)) = -FaDCor(+dataNorm(:, fi(i)), getnlab(dataNorm));
         elseif ~ismapping(criterion)
-            featAcc(i) = -FeatEvalMi(dataNorm(:, i), criterion);
+            featAcc(fi(i)) = -FeatEvalMi(dataNorm(:, fi(i)), criterion);
         else
             %featAcc is error rate
-            [featAcc(i), cerr, nlabOut, stds, r] = prcrossval(data(:, i), criterion, 5);
+            [featAcc(fi(i)), cerr, nlabOut, stds, r] = prcrossval(data(:, fi(i)), criterion, 5);
         end
     catch
         fprintf('Error');
-        featAcc(i) = 0;
+        featAcc(fi(i)) = inf;
     end
 end
 fprintf('\n');
@@ -215,14 +229,14 @@ res.FeatIndividualAcc = featAcc;
 %% Combine feature ranking with clustering
 
 fprintf('Feature ranking and clustering:\n-----------------------------\n');
-fprintf('Name\tCluster\tAcc\n');
-clear table;
-table(1, :) = {'Name','Cluster', 'Acc'};
-for i = 1:length(featAcc)
-    table(i+1,:) = {fl{featIdx(i)}, lab(featIdx(i)), featAcc(featIdx(i))};
-    %fprintf('%s\t%d\t%.2f\n', fl{featIdx(i)}, lab(featIdx(i)), featAcc(featIdx(i)));
-end
 if showFigures
+    fprintf('Name\tCluster\tAcc\n');
+    clear table;
+    table(1, :) = {'Name','Cluster', 'Acc'};
+    for i = 1:length(featAcc)
+        table(i+1,:) = {fl{featIdx(i)}, lab(featIdx(i)), featAcc(featIdx(i))};
+        %fprintf('%s\t%d\t%.2f\n', fl{featIdx(i)}, lab(featIdx(i)), featAcc(featIdx(i)));
+    end
     disp(table);
 end
 
