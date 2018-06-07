@@ -36,7 +36,7 @@ for i = 1:numBootStraps
         if i == 1
             subData1 = data;
         else
-            [subData1] = gendat(data);
+            [subData1] = gendat2(data,[], i);
         end
         subData2 = subData1;
     end

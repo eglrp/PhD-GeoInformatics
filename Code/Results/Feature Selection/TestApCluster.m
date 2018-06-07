@@ -1,7 +1,7 @@
 % test apcluster and compare to hierarchical
 
 %% manually load data from CompareFsMethods
-ii = 6;
+ii = 4;
 data = cdata{ii};
 clusterThresh_ = clusterThresh(ii);
 numFeatures(ii)
@@ -112,8 +112,12 @@ for i = 1:nclust
     end
 end
 %% compare to exemplar
-dataNorm = 10*gendat(data*scalem(data, 'variance'));
-c = 1-abs(corr(+gendat(dataNorm)));
+clear lab alf idx c dataNorm
+dataNorm = 10*(data*scalem(data, 'variance'));
+didx = randi(size(dataNorm, 1), size(dataNorm, 1), 1);
+% dataNorm = gendat(dataNorm);
+dataNorm = dataNorm(didx,:);
+c = 1-abs(corr(+dataNorm));
 % c = drankm(c);
 % pref = median(c(:));
 
@@ -121,43 +125,59 @@ c = 1-abs(corr(+gendat(dataNorm)));
 % S = -((+dataNorm)' * proxm2((+dataNorm)', 'correlation'));
 % pref = median(S(:));
 
-idx = exemplar(c, 0.2, 0.5);
+if false
+    idx = exemplar(c, 0.2684, 0.5);
+else
+    [lab, alf] = exemplar(c);
+    li = ceil(size(lab,2)/2);
+    idx = lab(:, li);
+    alf(li)
+%     nclust = length(unique(idx));
+%     tmp(unique(idx)) = 1:nclust;
+%     lab = tmp(idx); % labels 1 indexed
+end
 
 nclust = length(unique(idx));
 tmp(unique(idx)) = 1:nclust;
-lab = tmp(idx); % labels 1 indexed
+% lab = tmp(idx); % labels 1 indexed
 fprintf('Number of clusters: %d\n', length(unique(idx)));
 
-for i = 1:nclust
-    if true
-        fprintf('\nCluster %d\n', i);
-        disp(fl(lab==i)')
-    end
-end
+% for i = 1:nclust
+%     if true
+%         fprintf('\nCluster %d\n', i);
+%         disp(fl(lab==i)')
+%     end
+% end
+exemplars = unique(idx, 'sorted');
+disp({'Exemplars: ', fl{exemplars}});
+
 %% compare to dcluste
 dataNorm = 10*gendat(data*scalem(data, 'variance'));
-c = 1-abs(corr(+gendat(dataNorm)));
-r = drankm(c);
-pref = median(r(:));
+c = 1-abs(corr(+dataNorm));
+% r = drankm(c);
+% pref = median(r(:));
 
 % dataNorm = 10*gendat(data*scalem(data, 'variance'));
 % S = -((+dataNorm)' * proxm2((+dataNorm)', 'correlation'));
 % pref = median(S(:));
 
 lab = dcluste(c);
-idx = lab(:, floor(size(lab,2)/2));
+idx = lab(:, ceil(size(lab,2)/2));
 
 nclust = length(unique(idx));
 tmp(unique(idx)) = 1:nclust;
 lab = tmp(idx); % labels 1 indexed
 fprintf('Number of clusters: %d\n', length(unique(idx)));
 
-for i = 1:nclust
-    if true
-        fprintf('\nCluster %d\n', i);
-        disp(fl(lab==i)')
-    end
-end
+% for i = 1:nclust
+%     if true
+%         fprintf('\nCluster %d\n', i);
+%         disp(fl(lab==i)')
+%     end
+% end
+exemplars = unique(idx, 'sorted');
+% [~, fidx] = sort(featAcc(exemplars));
+disp({'Exemplars: ', fl{exemplars}});
 
 
 %% FCR 

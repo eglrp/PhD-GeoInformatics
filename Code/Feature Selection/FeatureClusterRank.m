@@ -3,6 +3,7 @@ function res = FeatureClusterRank(data, varargin)
 clusterMethod = 'ap';  %'ap'
 apclusterCrit = 'correlation';  % proxm distance criterion for AP clustering 
 apclusterParam = [];  % proxm distance criterion for AP clustering 
+useExemplars = true;
 
 clusterThresh = 0.2; %for hierarchical only
 criterion = naivebc;
@@ -47,10 +48,11 @@ if strcmpi(clusterMethod, 'ap')  % affinity propagation
         tmp = triu(S, 1) + tril(S, -1); % kind of unnecessary as Sii = 0 already
         pref = 2.5*sum(tmp(:)) / (n * (n - 1)); % from paper but inc slightly otherwise we dont get enough features
         pref = median(S(:));
-        [idx, netsim, i, unconverged, dpsim, expref] = apcluster(S, pref, 'maxits', 10000, 'dampfact', 0.6);
+        [idx, netsim, i, unconverged, dpsim, expref] = apcluster(S, pref, 'maxits', 100000, 'dampfact', 0.7);
         if unconverged
-            print('unconverged\n')
-            S = S + 1e-9 * randn(size(S, 1), size(S, 2));
+            fprintf('unconverged\n')
+%             S = S + 1e-9 * randn(size(S, 1), size(S, 2));
+%             pref = pref*1.2;
             [idx, netsim, i, unconverged, dpsim, expref] = apcluster(S, pref, 'maxits', 100000, 'dampfact', 0.5);
             if unconverged
                 error('ERROR: unconverged');
@@ -64,9 +66,9 @@ if strcmpi(clusterMethod, 'ap')  % affinity propagation
     else
         S = ((+dataNorm)' * proxm2((+dataNorm)', apclusterCrit, apclusterParam));
 %         c = 1-abs(corr(+dataNorm));
-        idx = exemplar(S, 0.2, 0.5);
-        
+        idx = exemplar(S, 0.2, 0.5);        
     end
+
     exemplars = unique(idx);
     nclust = length(exemplars);
     tmp(exemplars) = 1:nclust;
@@ -135,7 +137,7 @@ else
         axis square
     end
     %heirarchical clustering
-    fprintf('Heirarchical Clustering')
+    fprintf('Heirarchical Clustering\n')
 
     if useCorrelation
         dendg = hclust(1-abs(c), clusterType); % dendrogra
@@ -145,6 +147,7 @@ else
     %threshold correlation at 0.2
     nclust = sum(dendg(2, :) > clusterThresh); %13
     lab = hclust(1-abs(c), clusterType, nclust); % labels
+    fprintf('Number of clusters: %d\n', nclust);
 
     if showFigures
         figure;
@@ -196,7 +199,7 @@ if ~ismapping(criterion)
 end
 % clear featAcc featAccComb w
 fprintf('Ranking individual features:\n-----------------------------\n');
-if exist('exemplars', 'var')
+if useExemplars && exist('exemplars', 'var')
     nf = length(exemplars);
     fi = exemplars;
 else
@@ -243,7 +246,7 @@ end
 %find average accuracy per cluster
 clustAcc = [];
 for i = 1:nclust
-    if exist('exemplars', 'var')
+    if useExemplars && exist('exemplars', 'var')
         clustAcc(i) = featAcc(exemplars(i));  %min(featAcc(lab==i));  %
     else
         clustAcc(i) = median(featAcc(lab==i));
@@ -261,7 +264,7 @@ if true
     lab = clustRank(lab);  % equivalent?
     res.FeatClusterNLab = lab; % cluster numbers for each feature
     %res.ClustFeatNLab = res.ClustFeatNLab{clustIdx};
-    if exist('exemplars', 'var')
+    if useExemplars && exist('exemplars', 'var')
         exemplars = exemplars(clustIdx);
     end
     clustIdx_ = clustIdx;
@@ -296,7 +299,7 @@ for i = 1:length(res.ClustAcc)
         end
     end
     if bestFeats(i) == 0  % else use the "best" (highest scored) feature
-        if exist('exemplars', 'var')
+        if useExemplars && exist('exemplars', 'var')
             bestFeats(i) = exemplars(i);
         else
             [featAcc_ sortClusterFeatIdx] = sort(res.FeatIndividualAcc(clusterFeatIdx));

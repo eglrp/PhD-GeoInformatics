@@ -5,7 +5,7 @@ load 'D:\Data\Development\Projects\PhD GeoInformatics\Data\Feature Selection\Com
 close all
 clear my*
 clear i m tr ts subData uci* hs* data feats cs idx fl res* cres
-
+randreset
 clustMethods = {dclustm, dcluste, dclusth([],[],'a'), dclustk([],[],'kmedoids')};  %dclustf([], 18), 
 numBootStraps = 10;
 nClust = [12, 7, 10, 10, 20, 20];  %obtained from crude examination of clust output w/o spec'ing num clusters
