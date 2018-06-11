@@ -22,15 +22,15 @@ Review 2 To Do
 ----------------
 x - Compare AP with single pref param to hierarchical clustering 
 - Compare hist MI to kernel MI for cluster ranking 
-- Do AP exemplar features work better than naivebc etc ranked features
-- Compare correlation to distance correlation (to kernelmi)
-- Consider other cluster rankings like performance on exemplar or distance correlation with class labs 
-- Dataset 2 should maybe only get 4 features 
-- Is min accuracy feature more stable than the exemplar 
-- Sometimes the the preferred features are not in the top ranked clusters.  Would a FS type formulation help this.  Or possibly branch and bound on exemplars.  
+x - Do AP exemplar features work better than naivebc etc ranked features
+x - Compare correlation to distance correlation (to kernelmi)
+x - Consider other cluster rankings like performance on exemplar or distance correlation with class labs 
+x - Dataset 2 should maybe only get 4 features 
+x - Is min accuracy feature more stable than the exemplar 
+x - Sometimes the the preferred features are not in the top ranked clusters.  Would a FS type formulation help this.  Or possibly branch and bound on exemplars.  
 x - Can we speed things up for some fS algorithms by specifying the num features??  I think I didn't specify because something was needed for FsStabilityEval but this shouldn't be necessary anymore...
 
-- Include another fs method in the comparison 
+x - Include another fs method in the comparison 
 - Consider restructuring intro along the lines of "Salient Band Selection for Hyperspectral Image Classification via Manifold Ranking" where method is introduced first, then related methods described
 x - COuld a routine from ClustTools provide more stable prototypes than AP?  Could we exploit multilevel clustering somehow?  
 x - make an experiment that just checks the stability of cluster modes 
@@ -40,8 +40,9 @@ x - if we're using only acc of exemplar for ranking clusters and choosing feats,
 - rather than clustering on feature similarity, how about clustering on similarity of feat performance.  eg make the "features" to find dissimilarities on, a vector of the errors for each object found with eg a naivebc classifier.
 the idea of this is that the exemplar may then be a better feature for classification than if we cluster purely on feature dissimilarities
 x - what makes an examplar an exemplar?  
-- how does dcluste make a stable clustering but exemplar does not?  
+x - how does dcluste make a stable clustering but exemplar does not?  (because of a randreset bug)
 x - do a thorough run through to make sure feat indices are getting through correctly 
+- find an automated way to specify the threshold for hierarchical clustering 
 
 
 Notes 
@@ -76,6 +77,20 @@ x - RenumClustAcrossBootstraps is done in BootstrapFsEval - the stuff in Compare
 x - Naivebc with more bins improves things across all data seemingly - not always
 ~ - One should NOT call RenumClustAcrossBootstraps > 1x
 - NB Something is very wrong with FeatIdx (and therefore stability measures) of featself-mi in the orig results: CompareFsMethodsHs4.mat.  Latest results do not share this problem 
+
+
+Intro Structure
+---------------------
+A Why do we need feature reduction?
+B Differences between feature selection and feature extraction 
+C Overview of feature selection (ranking, forward selection and backward elimination)
+D Filter / wrapper / embedded 
+E Intro to redundancy (it exists in RS data)
+F Redundancy causes instability and sub-optimality 
+G Related methods that deal with redundancy and stability 
+H The need to consider measurement and computation costs 
+I Intro to FCR and the study (positioning and contributions)
+
 
 
 Some results

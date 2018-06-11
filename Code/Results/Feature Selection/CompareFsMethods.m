@@ -431,6 +431,7 @@ if false   %orig
     methodIdx = [7, 1, 2, 3, 10, 8, 4, 5, 11];
 
 else
+    load 'D:\Data\Development\Projects\PhD GeoInformatics\Data\Feature Selection\CompareFsMethodsFCR_AP_Exemplar2.mat'
     methodNamesAbbr = methodNames
 
 %     methodNamesAbbr = {'FCR-H-MI', 'FCR-AP-MI', 'FCR-AP-NaiveBC', 'FS-NaiveBC', 'FS-MI', 'Rank-NaiveBC', 'Rank-MI'};
@@ -483,9 +484,10 @@ disp([methodNamesAbbr(methodIdx(durationIndex))' num2cell(durationTtl(methodIdx(
 figure;
 bar(consistency(methodIdx(consistencyIdx), :))
 h = legend(cdataNamesAbbr, 'Location', 'NorthEastOutside');
+legend('boxoff');
 v = get(h, 'title');
 set(v, 'string','Data Sets');
-grid on;
+grid off;
 ax = gca;
 ax.XTick = 1:length(methodIdx);
 ax.XTickLabel = methodNamesAbbr(methodIdx(consistencyIdx));
@@ -496,7 +498,9 @@ ylabel('Stability', 'FontWeight', 'Bold')
 %title('Consistency by Method')
 fontsize(9)
 print('C:\Data\Development\Projects\PhD GeoInformatics\Docs\My Docs\Thesis\Feature Clustering and Ranking\Figure 2 - Method stability per data set (featidx).eps', ...
-    '-depsc', '-r1200')
+    '-depsc', '-r600')
+print('C:\Data\Development\Projects\PhD GeoInformatics\Docs\My Docs\Thesis\Feature Clustering and Ranking\Figure 2 - Method stability per data set (featidx).png', ...
+    '-dpng', '-r600')
 
 
 figure;
@@ -513,9 +517,10 @@ ylabel('Stability')
 figure;
 bar(100*knnAcc(methodIdx(knnAccIdx), :))
 h = legend(cdataNamesAbbr, 'Location', 'NorthEastOutside');
+legend('boxoff')
 v = get(h, 'title');
 set(v, 'string','Data Sets');
-grid on
+grid off
 ax = gca;
 ax.XTick = 1:length(methodIdx);
 ax.XTickLabel = methodNamesAbbr(methodIdx(knnAccIdx));
@@ -524,8 +529,10 @@ xlabel('Method', 'FontWeight', 'Bold')
 ylabel('Accuracy (%)', 'FontWeight', 'Bold')
 %title('Consistency by Method')
 fontsize(9)
-print('C:\Data\Development\Projects\PhD GeoInformatics\Docs\My Docs\Thesis\Feature Clustering and Ranking\Figure 3 - Method accuracy per data set (tmp).eps', ...
-    '-depsc', '-r1200')
+print('C:\Data\Development\Projects\PhD GeoInformatics\Docs\My Docs\Thesis\Feature Clustering and Ranking\Figure 3 - Method accuracy per data set (rev3).eps', ...
+    '-depsc', '-r600')
+print('C:\Data\Development\Projects\PhD GeoInformatics\Docs\My Docs\Thesis\Feature Clustering and Ranking\Figure 3 - Method accuracy per data set (rev3).png', ...
+    '-dpng', '-r600')
 
 figure;
 bar(knnAcc(methodIdx(knnAccIdx), :)')

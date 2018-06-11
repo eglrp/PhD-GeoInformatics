@@ -70,11 +70,12 @@ end
 %% compare to hierarchical clustering
 
 c = corr(+data);
-dendg = hclust(1-abs(c), 'average'); % dendrogra
+dendg = hclust(1-abs(c), 'average');        % dendrogra
 
 %threshold correlation at 0.2
 nclust = sum(dendg(2, :) > clusterThresh_); %13
-lab = hclust(1-abs(c), 'average', nclust); % labels
+% nclust = sum(dendg(2, :) > mean(abs(c(eye(size(c))==0)))); %13
+lab = hclust(1-abs(c), 'average', nclust);  % labels
 
 if false
     figure;
