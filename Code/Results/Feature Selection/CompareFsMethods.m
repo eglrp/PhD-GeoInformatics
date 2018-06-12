@@ -435,10 +435,16 @@ else
     methodNamesAbbr = methodNames
 
 %     methodNamesAbbr = {'FCR-H-MI', 'FCR-AP-MI', 'FCR-AP-NaiveBC', 'FS-NaiveBC', 'FS-MI', 'Rank-NaiveBC', 'Rank-MI'};
+    %nb these are the names reflecting which are ap and heirarchical and
+    %which do not select exemplars (='XX')
     methodNamesAbbr = {'FCR-H-MI', 'FCR-AP-MI', 'FCR-AP-MI-XX', 'FCR-AP-NaiveBC', 'FCR-AP-NaiveBC-XX', ...
     'JMI', 'MRMR', 'FS-MI', 'FS-NaiveBC', 'Rank-MI', 'Rank-NaiveBC', 'BE-MI', 'BE-NaiveBC'}; %, 'FCR-ap-mi-jmi-nopref'};
+    %nb these are the names for the paper
+    methodNamesAbbr = {'FCR-H-MI', 'FCR-AP-MI-X', 'FCR-MI', 'FCR-AP-NaiveBC-X', 'FCR-NaiveBC', ...
+    'FS-JMI', 'FS-MRMR', 'FS-MI', 'FS-NaiveBC', 'Rank-MI', 'Rank-NaiveBC', 'BE-MI', 'BE-NaiveBC'}; %, 'FCR-ap-mi-jmi-nopref'};
     
     methodIdx = 1:length(methodNames);
+    methodIdx = [3,5,6:13];  %for paper
 end
 cdataNamesAbbr = {'Spekboom', 'Synthetic', 'Landsat', 'Urban', 'Botswana', 'KSC'};
 
@@ -497,9 +503,9 @@ xlabel('Method', 'FontWeight', 'Bold')
 ylabel('Stability', 'FontWeight', 'Bold')
 %title('Consistency by Method')
 fontsize(9)
-print('C:\Data\Development\Projects\PhD GeoInformatics\Docs\My Docs\Thesis\Feature Clustering and Ranking\Figure 2 - Method stability per data set (featidx).eps', ...
+print('C:\Data\Development\Projects\PhD GeoInformatics\Docs\My Docs\Thesis\Feature Clustering and Ranking\Figure 2 - Method stability per data set (rev3).eps', ...
     '-depsc', '-r600')
-print('C:\Data\Development\Projects\PhD GeoInformatics\Docs\My Docs\Thesis\Feature Clustering and Ranking\Figure 2 - Method stability per data set (featidx).png', ...
+print('C:\Data\Development\Projects\PhD GeoInformatics\Docs\My Docs\Thesis\Feature Clustering and Ranking\Figure 2 - Method stability per data set (rev3).png', ...
     '-dpng', '-r600')
 
 
@@ -615,8 +621,12 @@ overallBs = (consistency.*knnAcc);
 %find non dominant rank of each method (includes both acc and stability) as
 %in Brown et al
 R = [];
-for i = 1:size(consistency, 2)
-    R(:, i) = NonDominantRank(-[knnAcc(methodIdx, i) consistency(methodIdx, i)]);
+if true %average of the performance rankings for each dataset
+    for i = 1:size(consistency, 2)
+        R(:, i) = NonDominantRank(-[knnAcc(methodIdx, i) consistency(methodIdx, i)]);
+    end
+else  %rank of the average performances over the datasets
+    R = NonDominantRank(-[mean(knnAcc(methodIdx, :), 2) mean(consistency(methodIdx, :), 2)]);
 end
 Rm = mean(R, 2);
 [Rs Ridx] = sort(Rm);
