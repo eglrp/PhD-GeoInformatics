@@ -3,7 +3,7 @@ function res = BootstrapFsEval(data, fs, varargin)
 %   Evaluates feature selection accuracy and stability for std prtools
 %   approaches featsel* 
 
-numBootStraps = 10;
+numBootStraps = 20;
 numFeatures = 6;  % limit the number of features for Tanimoto dist and Clfr accuracy, =0 will use the num of features as resturned by the featsel
 ModifyDefaultArgs(varargin)
 rng('default') % so we get the same results every time and the same crossval folds.  

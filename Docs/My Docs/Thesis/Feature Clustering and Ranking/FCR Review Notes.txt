@@ -471,3 +471,10 @@ I hope that this revision
 
 The attention to and quantification of stability has not been addressed in any remote sensing journal that I have seen.  The combination of hierarchical clustering and naive Bayes criterion has also never been published, although feature selection methods with other forms of clustering and importance measure have been published.  It also has an element of novelty in that it compares traditional methods on remote sensing data sets which has only been done in a few papers that I have seen and not with the methods or data in my paper.  Admittedly, it is far from revolutionary, but don't these things make it novel enough?
 
+--------------------------------------------------
+what is the incentive for the satellite owner to provide valid info 
+what is the incentive for the insurer to prevent fraud 
+other than avoiding regulation, what problems does this solve
+what is a third world farmer in the midst of a drought going to with his bitcoin?  stop farming and move to the city
+the regulator becomes "the satellite" - the costs are non-trivial 
+perverse incentives - the driver of value becomes my farm broke 
