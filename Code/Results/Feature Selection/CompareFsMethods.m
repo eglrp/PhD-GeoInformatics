@@ -178,11 +178,17 @@ for m = 1:numMethods
 % 
         fprintf('Data: %s, Method: %s, clusterThresh: %d, numFeatures: %d\n', ...
             cdataNames{i}, struct(innerMethods{m}).name, innerClusterThresh, innerNumFeatures);
-        res{m, i} = BootstrapFsEval(cdata{i}, innerMethods{m}, 'numBootStraps', 50, ...
-            'numFeatures', innerNumFeatures);
+        if  (m <= 11)
+            res{m, i} = BootstrapFsEval(cdata{i}, innerMethods{m}, 'numBootStraps', 50, ...
+                'numFeatures', innerNumFeatures);
+        else
+            res{m, i} = BootstrapFsEval(cdata{i}, innerMethods{m}, 'numBootStraps', 10, ...
+                'numFeatures', innerNumFeatures);
+        end
     end
 end
 delete(gcp('nocreate'))
+save 'D:\Data\Development\Projects\PhD GeoInformatics\Data\Feature Selection\CompareFsMethodsFCR_AP_Exemplar4.mat'
 
 %%
 if false
