@@ -43,6 +43,7 @@ x - what makes an examplar an exemplar?
 x - how does dcluste make a stable clustering but exemplar does not?  (because of a randreset bug)
 x - do a thorough run through to make sure feat indices are getting through correctly 
 - find an automated way to specify the threshold for hierarchical clustering 
+- try proper MRMR or JMI in a BE formulation on the best features from each cluster 
 
 
 Notes 

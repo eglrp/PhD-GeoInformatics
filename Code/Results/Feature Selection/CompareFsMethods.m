@@ -479,20 +479,20 @@ clfMeanAccMean = mean(clfMeanAcc, 2);
 [dum consistencyIdx] = sort(consistencyMean(methodIdx));
 [dum overallIdx] = sort(overallMean(methodIdx));
 
-% consistencyIdx(methodIdx)
-%find data set difficulties\
-for i = 1:length(cdata)
-    s = size(cdata{i});
-    s(3) = getsize(cdata{i}, 3);
-    df(i) = s(1)/(s(2)*s(3));
-end
-disp('Difficulty ratio')
-disp([cdataNamesAbbr' num2cell(df(:))])
+    % consistencyIdx(methodIdx)
+    %find data set difficulties\
+    for i = 1:length(cdata)
+        s = size(cdata{i});
+        s(3) = getsize(cdata{i}, 3);
+        df(i) = s(1)/(s(2)*s(3));
+    end
+    disp('Difficulty ratio')
+    disp([cdataNamesAbbr' num2cell(df(:))])
 
-durationTtl = sum(duration, 2);
-[durationTtlSort, durationIndex] = sort(durationTtl(methodIdx));
-disp('Cumularive execution time')
-disp([methodNamesAbbr(methodIdx(durationIndex))' num2cell(durationTtl(methodIdx(durationIndex)))])
+    durationTtl = sum(duration, 2);
+    [durationTtlSort, durationIndex] = sort(durationTtl(methodIdx));
+    disp('Cumularive execution time')
+    disp([methodNamesAbbr(methodIdx(durationIndex))' num2cell(durationTtl(methodIdx(durationIndex)))])
 
 figure;
 bar(consistency(methodIdx(consistencyIdx), :))
