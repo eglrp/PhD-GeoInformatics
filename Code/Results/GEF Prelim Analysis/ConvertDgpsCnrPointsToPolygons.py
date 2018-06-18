@@ -16,7 +16,8 @@ from PIL import ImageDraw
 # |layerid=0|subset="Comment" LIKE 'H%'
 correctedShapeFileNames = [
     'C:\Data\Development\Projects\PhD GeoInformatics\Data\GEF Field Trial\DGPS Sept 2017\Corrected\Point_ge.shp',
-    'C:\Data\Development\Projects\PhD GeoInformatics\Data\GEF Sampling\DGPS Dec 2017\Corrected\Point_ge.shp']
+    'C:\Data\Development\Projects\PhD GeoInformatics\Data\GEF Sampling\Sampling Dec 2017\DGPS Dec 2017\Corrected\Point_ge.shp',
+    'C:\Data\Development\Projects\PhD GeoInformatics\Data\GEF Sampling\Sampling March 2018\DGPS\Corrected\Point_ge.shp']
 
 outShapeFileName = 'C:\Data\Development\Projects\PhD GeoInformatics\Data\GEF Sampling\GEF Plot Polygons with Yc.shp'
 
@@ -81,7 +82,8 @@ from csv import DictReader
 
 plotCsGt = {}
 csGtFilenames = ['C:\Data\Development\Projects\PhD GeoInformatics\Code\Results\Baviaans2017FieldTrialAnalysis\Summary - Woody2.csv',
-                 'C:\Data\Development\Projects\PhD GeoInformatics\Data\GEF Sampling\Sampling Dec 2017\Summary - Woody.csv']
+                 'C:\Data\Development\Projects\PhD GeoInformatics\Data\GEF Sampling\Sampling Dec 2017\Summary - Woody.csv',
+                 'C:\Data\Development\Projects\PhD GeoInformatics\Data\GEF Sampling\Sampling March 2018\Summary - Woody.csv']
 for csGtFilename in csGtFilenames:
     with open(csGtFilename, 'rb') as csGtFile:
         reader = DictReader(csGtFile)

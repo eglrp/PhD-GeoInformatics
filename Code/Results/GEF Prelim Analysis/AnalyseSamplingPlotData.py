@@ -166,7 +166,6 @@ def ExtractAllFeatures(ds, csGtSpatialRef, csGtDict, plotFigures=False):  # , ax
 
     return plot_dict
 
-
 def ScatterD(x, y, labels=None, class_labels=None, thumbnails=None, regress=True, xlabel=None, ylabel=None):
     if class_labels is None:
         class_labels = np.zeros(x.__len__())
@@ -210,6 +209,13 @@ def ScatterD(x, y, labels=None, class_labels=None, thumbnails=None, regress=True
         (slope, intercept, r, p, stde) = stats.linregress(x, y)
         pylab.text((xlim[0] + xd * 0.7), (ylim[0] + yd * 0.05), str.format('$R^2$ = {0:.2f}', np.round(r ** 2, 2)),
                    fontdict={'size': 12})
+        print str.format('$R^2$ = {0:.2f}', np.round(r ** 2, 2))
+        print str.format('P (slope=0) = {0:.2f}', np.round(p, 3))
+        print str.format('Slope = {0:.2f}', np.round(slope, 3))
+        print str.format('Std error of slope = {0:.2f}', np.round(stde, 3))
+        yhat = x*slope + intercept
+        print str.format('RMS error = {0:.2f}', np.round(np.sqrt(np.mean((y-yhat)**2)), 3))
+
 
     if xlabel is not None:
         pylab.xlabel(xlabel, fontdict={'size': 12})
@@ -303,8 +309,8 @@ plotDict = tchnuganuPlotDict.copy()
 plotDict.update(vdwPlotDict.copy())
 
 
-gn = np.log10(np.array([plot['g_n'] for plot in plotDict.values()]))
-ndvi = np.log10(np.array([plot['NDVI'] for plot in plotDict.values()]))
+gn = np.array([plot['g_n'] for plot in plotDict.values()])
+ndvi = np.array([plot['NDVI'] for plot in plotDict.values()])
 id = np.array([plot['ID'] for plot in plotDict.values()])
 yc = np.array([plot['Yc'] for plot in plotDict.values()])*(100.**2)/(0.5**2)
 classes = np.array([plot['DegrClass'] for plot in plotDict.values()])
@@ -314,6 +320,70 @@ thumbnails = [plot['thumbnail'] for plot in plotDict.values()]
 # class_labels = ['Severe', 'Moderate', 'Pristine'] #np.unique(classes)
 
 fig = pylab.figure()
-ScatterD(ndvi, yc/1000., class_labels=classes, labels=None, thumbnails=thumbnails, regress=True, xlabel='log(NDVI)', ylabel='AGB (t/ha)')
+ScatterD(np.log10(ndvi), yc/1000., class_labels=classes, labels=None, thumbnails=thumbnails, regress=True, xlabel='log(NDVI)', ylabel='AGB (t/ha)')
 pylab.grid()
 # fig.tight_layout()
+
+fig = pylab.figure()
+ScatterD(np.log10(gn), yc/1000., class_labels=classes, labels=None, thumbnails=thumbnails, regress=True, xlabel='log(gN)', ylabel='AGB (t/ha)')
+pylab.grid()
+
+##############################################################################################################
+# play with regression analysis
+
+import statsmodels.api as sm
+
+x = sm.add_constant(np.log10(ndvi))
+model = sm.OLS(yc,x).fit()
+predictions = model.predict(x)
+rms = np.sqrt(((yc-predictions)**2).mean())
+print 'rms=%.3f'%(rms)
+model.summary()
+
+x = sm.add_constant(np.array(np.log10([ndvi, gn])).transpose())
+model = sm.OLS(yc,x).fit_regularized(method='elastic_net', alpha=5, L1_wt=1.0)
+predictions = model.predict(x)
+rms = np.sqrt(((yc-predictions)**2).mean())
+print 'rms=%.3f'%(rms)
+model.summary()
+print (model.params)
+
+
+x = np.log10(ndvi)
+model = sm.OLS(yc, x).fit()
+predictions = model.predict(x)
+rms = np.sqrt(((yc-predictions)**2).mean())
+print 'rms=%.3f'%(rms)
+# Print out the statistics
+model.summary()
+
+
+(slope, intercept, r, p, stde) = stats.linregress(ndvi, yc)
+##################################
+
+from sklearn import datasets
+from sklearn.model_selection import cross_val_predict
+from sklearn import linear_model
+from sklearn import metrics
+import matplotlib.pyplot as plt
+
+lr = linear_model.LinearRegression()
+y = yc
+
+# cross_val_predict returns an array of the same size as `y` where each entry
+# is a prediction obtained by cross validation:
+x = sm.add_constant(np.log10(ndvi))
+# x = np.column_stack(([ndvi]))
+predicted = cross_val_predict(lr, x, yc, cv=10)
+
+fig, ax = plt.subplots()
+ax.scatter(y, predicted, edgecolors=(0, 0, 0))
+ax.plot([y.min(), y.max()], [y.min(), y.max()], 'k--', lw=4)
+ax.set_xlabel('Measured')
+ax.set_ylabel('Predicted')
+plt.show()
+
+rms = np.sqrt(((y-predicted)**2).mean())
+r2 = metrics.r2_score(yc, predicted)
+print '$R^2$ = %.3f'%r2
+print 'rms = %.3f'%rms
