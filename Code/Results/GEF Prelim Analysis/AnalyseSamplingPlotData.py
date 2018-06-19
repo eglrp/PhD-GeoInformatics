@@ -116,7 +116,8 @@ def ExtractAllFeatures(ds, csGtSpatialRef, csGtDict, plotFigures=False):  # , ax
 
             # adjust yc if it exists
             if plot.has_key('Yc'):
-                plot['Yc'] = plot['Yc'] / plotMask.sum()
+                plot['YcPp'] = plot['Yc'] / plotMask.sum()  # the average per pixel in the mask
+                plot['YcPm2'] = plot['Yc'] / (plot['Size']**2)  # the average per m2 in the theoretical plot size
             else:
                 print '%s - no yc' % (plot['ID'])
 
@@ -311,8 +312,10 @@ plotDict.update(vdwPlotDict.copy())
 
 gn = np.array([plot['g_n'] for plot in plotDict.values()])
 ndvi = np.array([plot['NDVI'] for plot in plotDict.values()])
+rn = np.array([plot['r_n'] for plot in plotDict.values()])
+bn = np.array([plot['b_n'] for plot in plotDict.values()])
 id = np.array([plot['ID'] for plot in plotDict.values()])
-yc = np.array([plot['Yc'] for plot in plotDict.values()])*(100.**2)/(0.5**2)
+yc = np.array([plot['YcPp'] for plot in plotDict.values()])*(100.**2)/(0.5**2)
 classes = np.array([plot['DegrClass'] for plot in plotDict.values()])
 
 thumbnails = [plot['thumbnail'] for plot in plotDict.values()]
@@ -326,6 +329,9 @@ pylab.grid()
 
 fig = pylab.figure()
 ScatterD(np.log10(gn), yc/1000., class_labels=classes, labels=None, thumbnails=thumbnails, regress=True, xlabel='log(gN)', ylabel='AGB (t/ha)')
+
+fig = pylab.figure()
+ScatterD(np.log10(rn), yc/1000., class_labels=classes, labels=None, thumbnails=thumbnails, regress=True, xlabel='log(rN)', ylabel='AGB (t/ha)')
 pylab.grid()
 
 ##############################################################################################################
@@ -359,14 +365,140 @@ model.summary()
 
 
 (slope, intercept, r, p, stde) = stats.linregress(ndvi, yc)
-##################################
+##############################################################################################################
+# play with sklearn
 
 from sklearn import datasets
-from sklearn.model_selection import cross_val_predict
+from sklearn.model_selection import cross_val_predict, cross_validate, GridSearchCV
 from sklearn import linear_model
 from sklearn import metrics
+from sklearn.feature_selection import f_regression, mutual_info_regression, RFECV, RFE
+from sklearn.svm import SVR, NuSVR
 import matplotlib.pyplot as plt
 
+# make an np.array of features
+featKeysOrig = ['i', 'r_n', 'g_n', 'b_n', 'ir_n', 'ir_rat', 'SAVI', 'NDVI', 'i_std', 'NDVI_std']
+X = []
+featKeys = []
+for featKey in featKeysOrig:
+    f = np.array([plot[featKey] for plot in plotDict.values()])
+    X.append(f)
+    featKeys.append(featKey)
+for featKey in featKeysOrig:
+    f = np.array([plot[featKey] for plot in plotDict.values()])
+    X.append(np.log10(f))
+    featKeys.append(str.format('log10({0})', featKey))
+for featKey in featKeysOrig:
+    f = np.array([plot[featKey] for plot in plotDict.values()])
+    X.append(f**2)
+    featKeys.append(str.format('{0}^2', featKey))
+for featKey in featKeysOrig:
+    f = np.array([plot[featKey] for plot in plotDict.values()])
+    X.append(np.sqrt(f))
+    featKeys.append(str.format('{0}^.5', featKey))
+
+featKeys = np.array(featKeys)
+X = np.array(X).transpose()
+# plot['Yc'] is the mean Yc per pixel in the plot
+y = np.array([plot['YcPp'] for plot in plotDict.values()])*(100.**2)/(0.5**2)
+
+f_test, _ = f_regression(X, y)
+f_test /= np.max(f_test)
+print 'Best F test feature: ' + featKeys[np.argmax(f_test)]
+idx = np.argsort(-f_test)
+print 'Features ranked by F test: %s'%(featKeys[idx])
+
+mi = mutual_info_regression(X, y)
+mi /= np.max(mi)
+print 'Best MI feature: ' + featKeys[np.argmax(mi)]
+idx = np.argsort(-mi)
+print 'Features ranked by MI: %s' % (featKeys[idx])
+
+rfe = RFE(linear_model.LinearRegression(), 2, step=1)
+rfe.fit(X, y)
+print 'Features ranked by RFE: %s' % (featKeys[rfe.ranking_.argsort()])
+print 'Model selected by RFE: %s' % (featKeys[rfe.support_])
+
+lasso = linear_model.Lasso(alpha=100)
+lasso.fit(X,y)
+print 'Best Lasso feature: ' + featKeys[np.argmax(np.abs(lasso.coef_))]
+print 'Main Lasso features: %s' % (featKeys[np.abs(lasso.coef_)>10])
+print 'Features ranked by Lasso: %s' % (featKeys[np.argsort(-np.abs(lasso.coef_))])
+
+from sklearn.feature_selection import SelectKBest
+from sklearn.feature_selection import chi2
+
+skb = SelectKBest(mutual_info_regression, k=2)   #this is just a ranking
+skb.fit(X, y)
+predicted = cross_val_predict(linear_model.LinearRegression(), X[:, skb.get_support()], y, cv=y.__len__()-1)
+print 'Main Lasso SelectKBest: %s' % (featKeys[skb.get_support()])
+print 'Features ranked by SelectKBest: %s' % (featKeys[np.argsort(-np.abs(skb.scores_))])
+
+
+from sklearn import neighbors
+from sklearn import preprocessing
+knn = neighbors.KNeighborsRegressor(3)
+predicted = cross_val_predict(knn, preprocessing.scale(X[:, [11, 17]]), y, cv=y.__len__()-1)
+
+
+svr = GridSearchCV(SVR(kernel='rbf', gamma=0.1), cv=5,
+                   param_grid={"C": [1e1, 1e2, 1e3, 1e4, 1e5, 1e6, 1e7, 1e8],
+                               "gamma": np.logspace(-2, 4, 5)})
+svr.fit(X[:, [11, 17]], y)
+svr.best_params_
+
+
+predicted = cross_val_predict(linear_model.LinearRegression(), X[:, [19, 25]], y, cv=y.__len__()-1)
+predicted = cross_val_predict(linear_model.LinearRegression(), X[:, [24, 19, 10, 25]], y, cv=y.__len__()-1)
+predicted = cross_val_predict(linear_model.LinearRegression(), X[:, [1,11]], y, cv=y.__len__()-1)
+predicted = cross_val_predict(linear_model.LassoCV(), X, y, cv=y.__len__() - 1)
+predicted = cross_val_predict(svr.best_estimator_, X[:, [11, 17]], y, cv=y.__len__() - 1)
+rms = np.sqrt(((y-predicted)**2).mean())
+r2 = metrics.r2_score(yc, predicted)
+print 'R2 = %.3f'%r2
+print 'rms = %.3f'%rms
+
+
+fig, ax = plt.subplots()
+ax.scatter(y, predicted, edgecolors=(0, 0, 0))
+ax.plot([y.min(), y.max()], [y.min(), y.max()], 'k--', lw=4)
+ax.set_xlabel('Measured')
+ax.set_ylabel('Predicted')
+plt.show()
+
+
+
+############################################################
+# results for report
+# cross validation for score variance
+feats = [24, 19, 10, 25]
+feats = [11, 17]
+# feats = [11, 17]
+feats = np.arange(0, X.shape[1])
+yt = y/1000.
+est = linear_model.RidgeCV()
+est = SVR(kernel='rbf', C=1e6, gamma=0.01)
+est = linear_model.LinearRegression()
+scores = cross_validate(est, X[:, feats], yt, scoring=('r2', 'neg_mean_squared_error'), cv=yt.__len__()-1)
+predicted = cross_val_predict(est, X[:, feats], yt, cv=yt.__len__()-1)
+r2 = metrics.r2_score(yt, predicted)
+print 'Features: %s' % (featKeys[feats])
+print 'R2: {0:.4f}'.format(r2)
+mse = (-scores['test_neg_mean_squared_error'])
+print 'Method 1: RMS: {0:.3f}, 5-95% CI: {1:.3f} - {2:.3f}'.format(np.sqrt(mse.mean()), np.sqrt(np.percentile(mse,5)), np.sqrt(np.percentile(mse,95)))
+rms = np.sqrt(-scores['test_neg_mean_squared_error'])
+print 'Method 2: RMS: {0:.3f}, 5-95% CI: {1:.3f} - {2:.3f}'.format(rms.mean(), np.percentile(rms,5), np.percentile(rms,95))
+
+
+fig, ax = plt.subplots()
+ax.scatter(yt, predicted, edgecolors=(0, 0, 0))
+ax.plot([yt.min(), yt.max()], [yt.min(), yt.max()], 'k--', lw=4)
+ax.set_xlabel('Measured Woody C (t/ha)')
+ax.set_ylabel('Predicted Woody C (t/ha)')
+plt.show()
+
+
+#####################################################
 lr = linear_model.LinearRegression()
 y = yc
 
