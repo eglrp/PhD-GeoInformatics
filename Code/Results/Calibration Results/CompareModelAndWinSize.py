@@ -10,8 +10,8 @@ spotFileName = "D:\Data\Development\Projects\PhD GeoInformatics\Data\SPOT\S13102
 modisFileName = 'D:\Data\Development\Projects\PhD GeoInformatics\Data\MODIS\MCD43A4.A2010025.h19v12.005.2010043064233.Lo23.RGBN.tif'
 calibRootDir = 'D:\Data\Development\Projects\PhD GeoInformatics\Data\NGI\XCalib Experiments\Calibrated2\\'
 
-mosaicFileName = "D:\Data\Development\Projects\PhD GeoInformatics\Data\NGI\XCalib Experiments\Calibrated\w11p1\w33p1_Mosaic10m.tif"
-mosaicFileName = "D:\Data\Development\Projects\PhD GeoInformatics\Data\NGI\XCalib Experiments\Calibrated\w44p2\w44p2_Mosaic10m.tif"
+# mosaicFileName = "D:\Data\Development\Projects\PhD GeoInformatics\Data\NGI\XCalib Experiments\Calibrated\w11p1\w33p1_Mosaic10m.tif"
+# mosaicFileName = "D:\Data\Development\Projects\PhD GeoInformatics\Data\NGI\XCalib Experiments\Calibrated\w44p2\w44p2_Mosaic10m.tif"
 reflScale = 5000.
 plotFigures = True
 
@@ -202,6 +202,28 @@ pylab.ylabel('RMS error (%)')
 pylab.grid()
 # pylab.title('RMS error vs window size')
 pylab.tight_layout()
+
+
+# for GEF report
+labels = ['Gain only model', 'Gain and offset model']
+pylab.figure()
+hv = []
+for i,model in enumerate(np.unique(models)):
+    modelIdx = models == model
+    modelWinAreas = winAreas[modelIdx]
+    sortIdx = np.argsort(modelWinAreas)
+    if i==0:
+        sortIdx = sortIdx[:-1]
+    h = pylab.plot(modelWinAreas[sortIdx], (maes[modelIdx])[sortIdx], 'x-', label=labels[i])
+    hv.append(h)
+
+pylab.xlabel('Win. area (pixels)')
+pylab.ylabel('Mean abs. refl. error (%)')
+# pylab.title('Effect of model and win. size on SPOT comparison')
+pylab.grid()
+pylab.legend()
+pylab.tight_layout()
+
 
 
 

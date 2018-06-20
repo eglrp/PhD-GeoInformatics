@@ -48,7 +48,7 @@ def ExtractPatchFeatures(imbuf, mask):
         imbuf_mask[:, i] = np.float64(band[mask]) / 5000.  # 5000 is scale for MODIS / XCALIB
     # imbuf_mask[:, 3] = imbuf_mask[:,  3]/2.
     s = np.sum(imbuf_mask[:,:3], 1)   # NNB only sum r,g,b as ir confuses things in g_n
-    # s = np.sum(imbuf_mask[:,:4], 1)   # ??? check this
+    #  s = np.sum(imbuf_mask[:,:4], 1)   # ??? check this
     cn = imbuf_mask / np.tile(s[:, None], (1, imbuf_mask.shape[1]))
     b_i = 2
     g_i = 1
@@ -419,15 +419,18 @@ rfe.fit(X, y)
 print 'Features ranked by RFE: %s' % (featKeys[rfe.ranking_.argsort()])
 print 'Model selected by RFE: %s' % (featKeys[rfe.support_])
 
-lasso = linear_model.Lasso(alpha=100)
-lasso.fit(X,y)
+lasso = linear_model.LassoCV()
+lasso.fit(X,y/1000)
 print 'Best Lasso feature: ' + featKeys[np.argmax(np.abs(lasso.coef_))]
 print 'Main Lasso features: %s' % (featKeys[np.abs(lasso.coef_)>10])
 print 'Features ranked by Lasso: %s' % (featKeys[np.argsort(-np.abs(lasso.coef_))])
 
+lasso.coef_[np.argsort(-np.abs(lasso.coef_))]
+
 from sklearn.feature_selection import SelectKBest
 from sklearn.feature_selection import chi2
 
+# SelectKBest
 skb = SelectKBest(mutual_info_regression, k=2)   #this is just a ranking
 skb.fit(X, y)
 predicted = cross_val_predict(linear_model.LinearRegression(), X[:, skb.get_support()], y, cv=y.__len__()-1)
@@ -435,17 +438,30 @@ print 'Main Lasso SelectKBest: %s' % (featKeys[skb.get_support()])
 print 'Features ranked by SelectKBest: %s' % (featKeys[np.argsort(-np.abs(skb.scores_))])
 
 
+# KNN
 from sklearn import neighbors
 from sklearn import preprocessing
 knn = neighbors.KNeighborsRegressor(3)
 predicted = cross_val_predict(knn, preprocessing.scale(X[:, [11, 17]]), y, cv=y.__len__()-1)
 
 
+# SVR
 svr = GridSearchCV(SVR(kernel='rbf', gamma=0.1), cv=5,
                    param_grid={"C": [1e1, 1e2, 1e3, 1e4, 1e5, 1e6, 1e7, 1e8],
                                "gamma": np.logspace(-2, 4, 5)})
 svr.fit(X[:, [11, 17]], y)
 svr.best_params_
+
+# PCA
+from sklearn.decomposition import PCA
+pca = PCA(n_components=.9, whiten=False)
+pca.fit(X, y)
+Xpca = pca.transform(X)
+predicted = cross_val_predict(linear_model.LinearRegression(), Xpca, y, cv=y.__len__()-1)
+rms = np.sqrt(((y-predicted)**2).mean())
+r2 = metrics.r2_score(yc, predicted)
+print 'R2 = %.3f'%r2
+print 'rms = %.3f'%rms
 
 
 predicted = cross_val_predict(linear_model.LinearRegression(), X[:, [19, 25]], y, cv=y.__len__()-1)
@@ -471,19 +487,22 @@ plt.show()
 ############################################################
 # results for report
 # cross validation for score variance
+# feats = [19, 10, 25]
 feats = [24, 19, 10, 25]
-feats = [11, 17]
 # feats = [11, 17]
-feats = np.arange(0, X.shape[1])
+# feats = [11]
+# feats = np.arange(0, X.shape[1])
 yt = y/1000.
-est = linear_model.RidgeCV()
-est = SVR(kernel='rbf', C=1e6, gamma=0.01)
+# est = linear_model.RidgeCV()
+# est = SVR(kernel='rbf', C=1e6, gamma=0.01)
 est = linear_model.LinearRegression()
 scores = cross_validate(est, X[:, feats], yt, scoring=('r2', 'neg_mean_squared_error'), cv=yt.__len__()-1)
 predicted = cross_val_predict(est, X[:, feats], yt, cv=yt.__len__()-1)
 r2 = metrics.r2_score(yt, predicted)
+rmse = np.sqrt(metrics.mean_squared_error(yt, predicted))
 print 'Features: %s' % (featKeys[feats])
 print 'R2: {0:.4f}'.format(r2)
+print 'RMSE: {0:.2f}'.format(rmse)
 mse = (-scores['test_neg_mean_squared_error'])
 print 'Method 1: RMS: {0:.3f}, 5-95% CI: {1:.3f} - {2:.3f}'.format(np.sqrt(mse.mean()), np.sqrt(np.percentile(mse,5)), np.sqrt(np.percentile(mse,95)))
 rms = np.sqrt(-scores['test_neg_mean_squared_error'])
@@ -495,7 +514,19 @@ ax.scatter(yt, predicted, edgecolors=(0, 0, 0))
 ax.plot([yt.min(), yt.max()], [yt.min(), yt.max()], 'k--', lw=4)
 ax.set_xlabel('Measured Woody C (t/ha)')
 ax.set_ylabel('Predicted Woody C (t/ha)')
+plt.xlim(0, yt.max())
+plt.ylim(0, yt.max())
+plt.grid()
+plt.text(42, 15, str.format('$R^2$ = {0:.2f}', r2),
+           fontdict={'size': 11})
+plt.text(42, 11, str.format('RMSE = {0:.2f} t/ha', rmse),
+           fontdict={'size': 11})
 plt.show()
+
+
+fig = pylab.figure()
+ScatterD(rn, yc/1000., class_labels=classes, labels=None, thumbnails=thumbnails, regress=False, xlabel='$R/(R+G+B)$', ylabel='Woody C (t/ha)')
+pylab.grid()
 
 
 #####################################################
@@ -513,6 +544,7 @@ ax.scatter(y, predicted, edgecolors=(0, 0, 0))
 ax.plot([y.min(), y.max()], [y.min(), y.max()], 'k--', lw=4)
 ax.set_xlabel('Measured')
 ax.set_ylabel('Predicted')
+
 plt.show()
 
 rms = np.sqrt(((y-predicted)**2).mean())
