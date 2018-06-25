@@ -17,7 +17,8 @@ from PIL import ImageDraw
 correctedShapeFileNames = [
     'C:\Data\Development\Projects\PhD GeoInformatics\Data\GEF Field Trial\DGPS Sept 2017\Corrected\Point_ge.shp',
     'C:\Data\Development\Projects\PhD GeoInformatics\Data\GEF Sampling\Sampling Dec 2017\DGPS Dec 2017\Corrected\Point_ge.shp',
-    'C:\Data\Development\Projects\PhD GeoInformatics\Data\GEF Sampling\Sampling March 2018\DGPS\Corrected\Point_ge.shp']
+    'C:\Data\Development\Projects\PhD GeoInformatics\Data\GEF Sampling\Sampling March 2018\DGPS\Corrected\Point_ge.shp',
+    'C:\Data\Development\Projects\PhD GeoInformatics\Data\GEF Sampling\Sampling June 2018\DGPS\Corrected\Point_ge.shp']
 
 outShapeFileName = 'C:\Data\Development\Projects\PhD GeoInformatics\Data\GEF Sampling\GEF Plot Polygons with Yc.shp'
 
@@ -115,7 +116,7 @@ for plotName in np.unique(plotNames):
     idx = plotNames == plotName
     plotPoints = np.array(dgpsDict.values())[idx]
     comments = [plotPoint['Comment'] for plotPoint in plotPoints]
-    cnrIdx = [comment.startswith('H') for comment in comments]
+    cnrIdx = [comment.startswith('H') and 'FPP' not in comment for comment in comments]
     plotCnrs = plotPoints[cnrIdx]
     print plotName,
     feature = ogr.Feature(layer.GetLayerDefn())
@@ -126,7 +127,9 @@ for plotName in np.unique(plotNames):
             feature.SetField(f, plotCsGt[plotName][f])
     else:
         print 'Yc not found for %s'
-        feature.SetField("Yc", 0.)
+        fields = ['Yc','YcHa','Size','N']
+        for f in fields:
+            feature.SetField(f, 0)
 
     # plotLinRing = ogr.Geometry(ogr.wkbLinearRing)
     # OGR / GDAL has very unintuitive behaviour with making polygon from points - the below is the best/only way I could get it done
