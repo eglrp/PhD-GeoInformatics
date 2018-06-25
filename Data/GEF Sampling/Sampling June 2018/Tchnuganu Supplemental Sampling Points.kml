@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="Tchnuganu_Supplemental_Sampling_Points" id="Tchnuganu_Supplemental_Sampling_Points">
+	<SimpleField name="Num" type="float"></SimpleField>
+	<SimpleField name="DegrClass" type="string"></SimpleField>
+	<SimpleField name="Farm" type="string"></SimpleField>
+	<SimpleField name="ID" type="string"></SimpleField>
+</Schema>
+<Folder><name>Tchnuganu_Supplemental_Sampling_Points</name>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Tchnuganu_Supplemental_Sampling_Points">
+		<SimpleData name="Num">0</SimpleData>
+		<SimpleData name="DegrClass">Severe</SimpleData>
+		<SimpleData name="Farm">Tchnuganu</SimpleData>
+		<SimpleData name="ID">ST51</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.9925998901531,-33.5713494154767</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Tchnuganu_Supplemental_Sampling_Points">
+		<SimpleData name="Num">1</SimpleData>
+		<SimpleData name="DegrClass">Severe</SimpleData>
+		<SimpleData name="Farm">Tchnuganu</SimpleData>
+		<SimpleData name="ID">ST52</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.992951740357,-33.5680200214867</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Tchnuganu_Supplemental_Sampling_Points">
+		<SimpleData name="Num">2</SimpleData>
+		<SimpleData name="DegrClass">Severe</SimpleData>
+		<SimpleData name="Farm">Tchnuganu</SimpleData>
+		<SimpleData name="ID">ST53</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.995130230919,-33.5645973971331</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Tchnuganu_Supplemental_Sampling_Points">
+		<SimpleData name="Num">3</SimpleData>
+		<SimpleData name="DegrClass">Severe</SimpleData>
+		<SimpleData name="Farm">Tchnuganu</SimpleData>
+		<SimpleData name="ID">ST54</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.9890420994389,-33.5692147351377</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Tchnuganu_Supplemental_Sampling_Points">
+		<SimpleData name="Num">4</SimpleData>
+		<SimpleData name="DegrClass">Severe</SimpleData>
+		<SimpleData name="Farm">Tchnuganu</SimpleData>
+		<SimpleData name="ID">ST55</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.989714063324,-33.5696434342244</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Tchnuganu_Supplemental_Sampling_Points">
+		<SimpleData name="Num">5</SimpleData>
+		<SimpleData name="DegrClass">Severe</SimpleData>
+		<SimpleData name="Farm">Tchnuganu</SimpleData>
+		<SimpleData name="ID">ST56</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.9918288470757,-33.5715456281964</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Tchnuganu_Supplemental_Sampling_Points">
+		<SimpleData name="Num">6</SimpleData>
+		<SimpleData name="DegrClass">Severe</SimpleData>
+		<SimpleData name="Farm">Tchnuganu</SimpleData>
+		<SimpleData name="ID">ST57</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.9886660203748,-33.5722216727963</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Tchnuganu_Supplemental_Sampling_Points">
+		<SimpleData name="Num">7</SimpleData>
+		<SimpleData name="DegrClass">Severe</SimpleData>
+		<SimpleData name="Farm">Tchnuganu</SimpleData>
+		<SimpleData name="ID">ST58</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.9905524197166,-33.5655628401723</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Tchnuganu_Supplemental_Sampling_Points">
+		<SimpleData name="Num">8</SimpleData>
+		<SimpleData name="DegrClass">Severe</SimpleData>
+		<SimpleData name="Farm">Tchnuganu</SimpleData>
+		<SimpleData name="ID">ST59</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.9881609028862,-33.571277715155</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Tchnuganu_Supplemental_Sampling_Points">
+		<SimpleData name="Num">9</SimpleData>
+		<SimpleData name="DegrClass">Severe</SimpleData>
+		<SimpleData name="Farm">Tchnuganu</SimpleData>
+		<SimpleData name="ID">ST60</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.9919873926288,-33.5663512891557</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Tchnuganu_Supplemental_Sampling_Points">
+		<SimpleData name="Num">10</SimpleData>
+		<SimpleData name="DegrClass">Severe</SimpleData>
+		<SimpleData name="Farm">Tchnuganu</SimpleData>
+		<SimpleData name="ID">ST61</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.9873126413142,-33.5721087625602</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Tchnuganu_Supplemental_Sampling_Points">
+		<SimpleData name="Num">11</SimpleData>
+		<SimpleData name="DegrClass">Severe</SimpleData>
+		<SimpleData name="Farm">Tchnuganu</SimpleData>
+		<SimpleData name="ID">ST62</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.9909108893171,-33.5666626080085</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Tchnuganu_Supplemental_Sampling_Points">
+		<SimpleData name="Num">12</SimpleData>
+		<SimpleData name="DegrClass">Severe</SimpleData>
+		<SimpleData name="Farm">Tchnuganu</SimpleData>
+		<SimpleData name="ID">ST63</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.9896002086135,-33.5673460520712</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Tchnuganu_Supplemental_Sampling_Points">
+		<SimpleData name="Num">13</SimpleData>
+		<SimpleData name="DegrClass">Severe</SimpleData>
+		<SimpleData name="Farm">Tchnuganu</SimpleData>
+		<SimpleData name="ID">ST64</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.9915825372899,-33.5672329762046</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Tchnuganu_Supplemental_Sampling_Points">
+		<SimpleData name="Num">14</SimpleData>
+		<SimpleData name="DegrClass">Severe</SimpleData>
+		<SimpleData name="Farm">Tchnuganu</SimpleData>
+		<SimpleData name="ID">ST65</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.9924735659746,-33.5684736090818</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Tchnuganu_Supplemental_Sampling_Points">
+		<SimpleData name="Num">15</SimpleData>
+		<SimpleData name="DegrClass">Severe</SimpleData>
+		<SimpleData name="Farm">Tchnuganu</SimpleData>
+		<SimpleData name="ID">ST66</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.9916238421216,-33.5695484125663</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Tchnuganu_Supplemental_Sampling_Points">
+		<SimpleData name="Num">16</SimpleData>
+		<SimpleData name="DegrClass">Severe</SimpleData>
+		<SimpleData name="Farm">Tchnuganu</SimpleData>
+		<SimpleData name="ID">ST67</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.9907397693974,-33.5672042255656</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Tchnuganu_Supplemental_Sampling_Points">
+		<SimpleData name="Num">17</SimpleData>
+		<SimpleData name="DegrClass">Severe</SimpleData>
+		<SimpleData name="Farm">Tchnuganu</SimpleData>
+		<SimpleData name="ID">ST68</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.9939469455456,-33.5642658621477</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Tchnuganu_Supplemental_Sampling_Points">
+		<SimpleData name="Num">18</SimpleData>
+		<SimpleData name="DegrClass">Severe</SimpleData>
+		<SimpleData name="Farm">Tchnuganu</SimpleData>
+		<SimpleData name="ID">ST69</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.994484733629,-33.5643103934661</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#Tchnuganu_Supplemental_Sampling_Points">
+		<SimpleData name="Num">19</SimpleData>
+		<SimpleData name="DegrClass">Severe</SimpleData>
+		<SimpleData name="Farm">Tchnuganu</SimpleData>
+		<SimpleData name="ID">ST70</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>23.9874726738569,-33.5731452816459</coordinates></Point>
+  </Placemark>
+</Folder>
+</Document></kml>
