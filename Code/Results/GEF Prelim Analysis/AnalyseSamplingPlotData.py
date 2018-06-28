@@ -93,11 +93,12 @@ def ExtractAllFeatures(ds, csGtSpatialRef, csGtDict, plotFigures=False):  # , ax
             point.Transform(transform)  # xform into im projection
             (pixel, line) = World2Pixel(geotransform, point.GetX(), point.GetY())
             plotCnrsPixel.append((pixel,line))
+
         plotCnrsPixel = np.array(plotCnrsPixel)
 
         # not all the point fall inside the image
         if np.all(plotCnrsPixel >=0) and  np.all(plotCnrsPixel[:,0] < ds.RasterXSize) \
-                and np.all(plotCnrsPixel[:,1] < ds.RasterYSize):
+                and np.all(plotCnrsPixel[:,1] < ds.RasterYSize) and plot.has_key('Yc') and plot['Yc'] > 0.:
 
             # get winddow extents
             ulCnr = np.floor(np.min(plotCnrsPixel, 0))
@@ -115,11 +116,13 @@ def ExtractAllFeatures(ds, csGtSpatialRef, csGtDict, plotFigures=False):  # , ax
             plotMask = np.asarray(img)
 
             # adjust yc if it exists
-            if plot.has_key('Yc'):
+            if plot.has_key('Yc') and plot['Yc']>0:
                 plot['YcPp'] = plot['Yc'] / plotMask.sum()  # the average per pixel in the mask
                 plot['YcPm2'] = plot['Yc'] / (plot['Size']**2)  # the average per m2 in the theoretical plot size
             else:
                 print '%s - no yc' % (plot['ID'])
+                # plot['YcPp'] = 0.
+                # plot['YcPm2'] = 0.
 
             # extract image patch with mask
             imbuf = np.zeros((plotSizePixel[1], plotSizePixel[0], 4), dtype=float)
@@ -333,6 +336,49 @@ ScatterD(np.log10(gn), yc/1000., class_labels=classes, labels=None, thumbnails=t
 fig = pylab.figure()
 ScatterD(np.log10(rn), yc/1000., class_labels=classes, labels=None, thumbnails=thumbnails, regress=True, xlabel='log(rN)', ylabel='AGB (t/ha)')
 pylab.grid()
+
+# lock at ycha KDS density
+from scipy.stats import gaussian_kde
+class_labels = np.unique(classes)
+ycGrid = np.linspace(yc.min(), yc.max(), 50)
+
+# class_num = [30, 30, 30]
+# featureValSub = np.array([])
+fontSize=12
+pylab.figure()
+for i, cl in enumerate(class_labels):
+    idx = classes == cl
+    #idx = idx[:class_num[i]]
+    #allIdx.append(idx)
+    classYc = yc[idx]
+    kde = gaussian_kde(classYc)  # , bw_method=bandwidth / height.std(ddof=1))
+    # ndviGrid = np.linspace(ndvi.min(), ndvi.max(), 100)
+    ycKde = kde.evaluate(ycGrid)
+
+    pylab.subplot(2, 2, i+1)
+    pylab.plot(ycGrid, ycKde)
+    pylab.xlabel('Yc (t/ha)', fontdict={'size':fontSize})
+    pylab.ylabel('Prob. Density', fontdict={'size':fontSize})
+    pylab.title(cl, fontdict={'size':fontSize})
+    pylab.grid()
+    pylab.axis('tight')
+    pylab.text(0.9*ycGrid.max(), 0.9*ycGrid.max(),'N=%d'%(idx.sum()), fontdict={'size':fontSize})
+
+kde = gaussian_kde(np.array(yc))  # , bw_method=bandwidth / height.std(ddof=1))
+ycKde = kde.evaluate(ycGrid)
+
+pylab.subplot(2, 2, 4)
+pylab.plot(ycGrid, ycKde)
+pylab.xlabel('Yc (t/ha)', fontdict={'size': fontSize})
+pylab.ylabel('Prob. Density', fontdict={'size': fontSize})
+pylab.title('All', fontdict={'size': fontSize})
+pylab.grid()
+pylab.axis('tight')
+pylab.text(0.9 * ycGrid.max(), 0.9 * ycGrid.max(), 'N=%d' % (idx.sum()), fontdict={'size': fontSize})
+
+fig.tight_layout()
+
+
 
 ##############################################################################################################
 # play with regression analysis
