@@ -1322,9 +1322,24 @@ Integration into NGI processes
   C) Take the "raw rect" imagery above and implement a semi-automated process that fetches appropriate MODIS image for each block, applies xcalib.  Then make a finished xcalib product available to user.  
   
 
+Notes on GPS and Post-processing 
 -------------------------------
-
-
+- GNSS is the generic term used for Global Navigation Satellite Systems and includes the United States of America Global Positioning System (GPS), the Russian Global'naya Navigatsionnaya Sputnikovaya Sistema (GLONASS), the Chinese Beidou or Compass system, the European Union Galileo system and other similar systems.
+- GLONASS + GPS gives better accuracy than either alone.  NGI gives corrections for both.
+- "What is the purpose of TrigNet?  In order to achieve sub-metre positioning accuracy using GNSS, users must operate at least two receivers one of which must be placed on a point of known position which implies that users must purchase two or more GNSS receivers. TrigNet effectively provides the second receiver thus eliminating the need for the user to purchase more than one receiver which reduces the capital outlay to get started in high accuracy GNSS positioning."
+- NGI: Real Time data is provided using the Networked Transport of RTCM via Internet Protocols (NTRIP): DGPS (~0.35m accuracy) countrywide;
+- NGI: Post processing data provided in RINEX format: 1 sec L1, L2 1 hourly data available within 30 minutes after the hour;
+- NGI: Post processing data is made available in the Receiver Independent Exchange (RINEX) format and real time data is made available in the Radio Technical Commission for Maritime Services (RTCM) format and as the names imply, both formats are independent of any specific receiver manufacturer. Real time data is made available to users via the cell phone connections to the internet while in the field.
+- Trimble: If you are using the TerraSync software, use accuracy-based logging to ensure that only GNSS positions that meet the specified estimated accuracy are logged
+- Trimble: The GeoXT handheld uses EVEREST multipath rejection technology to provide < 1 meter accuracy with real-time or < 0.5 meters postprocessed differential correction
+- Trimble: Use differential GNSS to correct errors in your collected data. Differential GNSS (DGNSS) requires one or more additional receivers, called base stations or reference stations, which are located at known points. Data collected at the base stations is used to determine GNSS measurement errors and compute corrections to these errors. An unlimited number of mobile GNSS receivers, called rovers, collect GNSS data at unknown locations within the vicinity of the base station. Errors common at both the base station and the rover receiver are corrected with DGNSS either in real time or during postprocessing.
+- Real time corrections can be delivered via satellite i.e. SBAS.  I doubt if NGI integrates with SBAS.  It would require them to send all their base station data to SBAS in real time. 
+- Trimble: SBAS and VRS networks use multiple base stations to calculate the DGNSS corrections that are then delivered to the user from a Geostationary satellite (SBAS) or from a radio or cellular phone (VRS networks)
+- Trimble: In postprocessed DGNSS, the collected GNSS data is transferred to an office computer, and measurements from the base station are downloaded. You can postprocess GNSS data collected with Trimble GNSS field software using: • the GPS Pathfinder Office software version 5.10 (with the latest updates) or later.
+		 • the Trimble GPS Analyst™ extension for Esri ArcGIS Desktop software version 2.40 (with the latest updates) or later.
+   Typically, postprocessed DGNSS uses only one base station. However, when differentially correcting data collected with GeoXH receivers using H-Star technology, you can select multiple base stations to correct the file against for improved accuracy. Factors that affect the accuracy of postprocessed DGNSS include the type of receiver and antenna used at the base station, the distance between the base station and the location where the rover data was collected, the accuracy of the base station position, and the logging interval at the base station.
+   
+   
 
 Funding
 --------
