@@ -84,7 +84,9 @@ from csv import DictReader
 plotCsGt = {}
 csGtFilenames = ['C:\Data\Development\Projects\PhD GeoInformatics\Code\Results\Baviaans2017FieldTrialAnalysis\Summary - Woody2.csv',
                  'C:\Data\Development\Projects\PhD GeoInformatics\Data\GEF Sampling\Sampling Dec 2017\Summary - Woody.csv',
-                 'C:\Data\Development\Projects\PhD GeoInformatics\Data\GEF Sampling\Sampling March 2018\Summary - Woody.csv']
+                 'C:\Data\Development\Projects\PhD GeoInformatics\Data\GEF Sampling\Sampling March 2018\Summary - Woody.csv',
+                 'C:\Data\Development\Projects\PhD GeoInformatics\Data\GEF Sampling\Sampling June 2018\Summary - MV Woody.csv',
+                 'C:\Data\Development\Projects\PhD GeoInformatics\Data\GEF Sampling\Sampling June 2018\Summary - SS Woody.csv']
 for csGtFilename in csGtFilenames:
     with open(csGtFilename, 'rb') as csGtFile:
         reader = DictReader(csGtFile)
@@ -149,7 +151,6 @@ for plotName in np.unique(plotNames):
     feature = None
 
 ds = None
-
 
 
 if False:

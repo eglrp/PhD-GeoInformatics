@@ -192,7 +192,7 @@ def ScatterD(x, y, labels=None, class_labels=None, thumbnails=None, regress=True
         for xyi, (xx, yy) in enumerate(zip(x[class_idx], y[class_idx])):  # , np.array(plot_names)[class_idx]):
             if labels is not None:
                 pylab.text(xx - .0015, yy - .0015, np.array(labels)[class_idx][xyi],
-                           fontdict={'size': 8, 'color': colour})
+                           fontdict={'size': 9, 'color': colour, 'weight': 'bold'})
 
             if thumbnails is not None:
                 imbuf = np.array(thumbnails)[class_idx][xyi]
@@ -334,7 +334,7 @@ fig = pylab.figure()
 ScatterD(np.log10(gn), yc/1000., class_labels=classes, labels=None, thumbnails=thumbnails, regress=True, xlabel='log(gN)', ylabel='AGB (t/ha)')
 
 fig = pylab.figure()
-ScatterD(np.log10(rn), yc/1000., class_labels=classes, labels=None, thumbnails=thumbnails, regress=True, xlabel='log(rN)', ylabel='AGB (t/ha)')
+ScatterD(np.log10(rn), yc/1000., class_labels=classes, labels=id, thumbnails=thumbnails, regress=True, xlabel='log(rN)', ylabel='AGB (t/ha)')
 pylab.grid()
 
 # lock at ycha KDS density
@@ -535,6 +535,8 @@ plt.show()
 # cross validation for score variance
 # feats = [19, 10, 25]
 feats = [24, 19, 10, 25]
+feats = [10, 24, 18]
+
 # feats = [11, 17]
 # feats = [11]
 # feats = np.arange(0, X.shape[1])
