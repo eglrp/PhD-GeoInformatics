@@ -5,16 +5,19 @@
 # Read in Allometric model parameters
 
 allometryFileName = "C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Field Trial/AllometricModels.xlsx"
-# woodyFileName = "C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/Sampling March 2018/GEF_Woody spp_INTACT_2018.04.24_Mdoda.xlsx"
-# woodyFileName = "C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/Sampling March 2018/GEF_Woody spp_INTACT_2018.04.24_Mdoda.xlsx"
 
-# woodyFileName = "C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/Sampling June 2018/GEF_MV_Woody spp_2018.07.06.Mdoda.xlsx"
-# litterFileName = "C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/Sampling June 2018/GEF_Litter_MV plots_2018.07.23_Cos.xlsx"
-woodyFileName = "C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/Sampling June 2018/GEF_SS_Woody spp_2018.07.13.Mdoda.xlsx"
-litterFileName = "C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/Sampling June 2018/GEF_Litter_SS plots_2018.07.23_Cos.xlsx"
+# woodyFileName =  "C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/Sampling Dec 2017/GEF_Woody spp_2018.03.10_MdodaQC.xlsx"
+# litterFileName = "C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/Sampling Dec 2017/GEF_Litter_2018.03.09_Cos.xlsx"
 
-woodyFileName =  "C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/Sampling Dec 2017/GEF_Woody spp_2018.03.10_MdodaQC.xlsx"
-litterFileName = "C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/Sampling Dec 2017/GEF_Litter_2018.03.09_Cos.xlsx"
+# woodyFileName = "C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/Sampling March 2018/GEF_Woody spp_INTACT_2018.04.24_Mdoda.xlsx"
+# litterFileName = None
+
+woodyFileName = "C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/Sampling June 2018/GEF_MV_Woody spp_2018.07.06.Mdoda.xlsx"
+litterFileName = "C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/Sampling June 2018/GEF_Litter_MV plots_2018.07.23_Cos.xlsx"
+
+# woodyFileName = "C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/Sampling June 2018/GEF_SS_Woody spp_2018.07.13.Mdoda.xlsx"
+# litterFileName = "C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/Sampling June 2018/GEF_Litter_SS plots_2018.07.23_Cos.xlsx"
+
 
 from openpyxl import load_workbook
 import numpy as np
@@ -266,25 +269,30 @@ for ws in wb:
 wb = None
 #----------------------------------------------------------------------------------------------------------------
 # read in litter data
-wb = load_workbook(litterFileName, data_only=True)
+if litterFileName is not None:
+    wb = load_workbook(litterFileName, data_only=True)
 
-litterDict = {}
-ws = wb['Litter dry wts']
-for r in ws[3:ws.max_row]:
-    id = str(r[0].value).strip()
-    id = id.replace('-0','')
-    id = id.replace('-','')
-    if id == '' or id is None or id == 'None':
-        print 'No ID, breaking'
-        break
-    else:
-        print id,
-    dryWeight = r[12].value
-    if litterDict.has_key(id):
-        litterDict[id]['dryWeight'] += dryWeight
-    else:
-        litterDict[id] = {'dryWeight': dryWeight}
-wb = None
+    litterDict = {}
+    ws = wb['Litter dry wts']
+    for r in ws[3:ws.max_row]:
+        id = str(r[0].value).strip()
+        id = id.replace('-0','')
+        id = id.replace('-','')
+        if id == '' or id is None or id == 'None':
+            print 'No ID, breaking'
+            break
+        else:
+            print id,
+        dryWeight = r[12].value
+        if litterDict.has_key(id):
+            litterDict[id]['dryWeight'] += dryWeight
+        else:
+            litterDict[id] = {'dryWeight': dryWeight}
+    wb = None
+else:
+    litterDict = {}
+    for id, plot in nestedPlots['5x5m'].iteritems():
+        litterDict[id] = {'dryWeight': -1.}
 
 #---------------------------------------------------------------------------------------------------------------
 # extrapolate 5x5m subplots to full size
@@ -318,9 +326,14 @@ for id, subPlot in subPlots.iteritems():
     summaryPlots[id]['Size'] = outerSize
     summaryPlots[id]['YcHa'] = (100.**2) * summaryYc/(outerSize**2)
     summaryPlots[id]['N'] = ((outerSize/5.)**2) * smallIdx.sum() + (subYc.__len__() - smallIdx.sum()) + outerYc.__len__()
-    summaryPlots[id]['LitterDryWeight'] = litterDict[id]['dryWeight']/1000  # g to kg
-    summaryPlots[id]['LitterHa'] = summaryPlots[id]['LitterDryWeight'] * (100.**2) / (4 * (0.5**2))
-    summaryPlots[id]['AgbHa'] = summaryPlots[id]['LitterHa'] + summaryPlots[id]['YcHa']
+    if litterDict[id]['dryWeight'] > 0.:
+        summaryPlots[id]['Litter'] = litterDict[id]['dryWeight']/1000  # g to kg
+        summaryPlots[id]['LitterHa'] = summaryPlots[id]['Litter'] * (100.**2) / (4 * (0.5**2))
+        summaryPlots[id]['AgbHa'] = summaryPlots[id]['LitterHa'] + summaryPlots[id]['YcHa']
+    else:
+        summaryPlots[id]['Litter'] = -1.
+        summaryPlots[id]['LitterHa'] = -1.
+        summaryPlots[id]['AgbHa'] = summaryPlots[id]['YcHa']
 
 # write out summary ground truth for each plot
 # if MV:

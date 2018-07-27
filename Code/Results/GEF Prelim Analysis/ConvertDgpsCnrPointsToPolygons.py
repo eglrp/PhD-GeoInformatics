@@ -82,11 +82,11 @@ ds = None
 from csv import DictReader
 
 plotCsGt = {}
-csGtFilenames = ['C:\Data\Development\Projects\PhD GeoInformatics\Code\Results\Baviaans2017FieldTrialAnalysis\Summary - Woody2.csv',
-                 'C:\Data\Development\Projects\PhD GeoInformatics\Data\GEF Sampling\Sampling Dec 2017\Summary - Woody.csv',
-                 'C:\Data\Development\Projects\PhD GeoInformatics\Data\GEF Sampling\Sampling March 2018\Summary - Woody.csv',
-                 'C:\Data\Development\Projects\PhD GeoInformatics\Data\GEF Sampling\Sampling June 2018\Summary - MV Woody.csv',
-                 'C:\Data\Development\Projects\PhD GeoInformatics\Data\GEF Sampling\Sampling June 2018\Summary - SS Woody.csv']
+csGtFilenames = ['C:\Data\Development\Projects\PhD GeoInformatics\Code\Results\Baviaans2017FieldTrialAnalysis\Summary - Woody & Litter.csv',
+                 'C:\Data\Development\Projects\PhD GeoInformatics\Data\GEF Sampling\Sampling Dec 2017\GEF_Woody spp_2018.03.10_MdodaQC - Summary Woody & Litter.csv',
+                 'C:\Data\Development\Projects\PhD GeoInformatics\Data\GEF Sampling\Sampling March 2018\GEF_Woody spp_INTACT_2018.04.24_Mdoda - Summary Woody & Litter.csv',
+                 'C:\Data\Development\Projects\PhD GeoInformatics\Data\GEF Sampling\Sampling June 2018\GEF_SS_Woody spp_2018.07.13.Mdoda - Summary Woody & Litter.csv',
+                 'C:\Data\Development\Projects\PhD GeoInformatics\Data\GEF Sampling\Sampling June 2018\GEF_MV_Woody spp_2018.07.06.Mdoda - Summary Woody & Litter.csv']
 for csGtFilename in csGtFilenames:
     with open(csGtFilename, 'rb') as csGtFile:
         reader = DictReader(csGtFile)
@@ -110,6 +110,9 @@ layer.CreateField(ogr.FieldDefn("Yc", ogr.OFTReal))
 layer.CreateField(ogr.FieldDefn("YcHa", ogr.OFTReal))
 layer.CreateField(ogr.FieldDefn("Size", ogr.OFTReal))
 layer.CreateField(ogr.FieldDefn("N", ogr.OFTReal))
+layer.CreateField(ogr.FieldDefn("Litter", ogr.OFTReal))
+layer.CreateField(ogr.FieldDefn("LitterHa", ogr.OFTReal))
+layer.CreateField(ogr.FieldDefn("AgbHa", ogr.OFTReal))
 
 
 plotNames = np.array([f['PlotName'] for f in dgpsDict.values()])
@@ -124,12 +127,12 @@ for plotName in np.unique(plotNames):
     feature = ogr.Feature(layer.GetLayerDefn())
     feature.SetField("ID", plotName)
     if plotCsGt.has_key(plotName):
-        fields = ['Yc','YcHa','Size','N']
+        fields = ['Yc','YcHa','Size','N', 'Litter', 'LitterHa', 'AgbHa']
         for f in fields:
             feature.SetField(f, plotCsGt[plotName][f])
     else:
         print 'Yc not found for %s'
-        fields = ['Yc','YcHa','Size','N']
+        fields = ['Yc', 'YcHa', 'Size', 'N', 'Litter', 'LitterHa', 'AgbHa']
         for f in fields:
             feature.SetField(f, 0)
 

@@ -165,11 +165,13 @@ for id, plot in plots.iteritems():
     summaryPlots[id]['Size'] = outerSize
     summaryPlots[id]['YcHa'] = (100.**2) * summaryYc/(outerSize**2)
     summaryPlots[id]['N'] = yc.__len__()
-
+    summaryPlots[id]['Litter'] = -1.
+    summaryPlots[id]['LitterHa'] = -1.
+    summaryPlots[id]['AgbHa'] = summaryPlots[id]['YcHa']
 
 # write out summary ground truth for each plot
 # write out summary ground truth for each plot
-outFileName = 'C:\Data\Development\Projects\PhD GeoInformatics\Code\Results\Baviaans2017FieldTrialAnalysis\Summary - Woody2.csv'
+outFileName = 'C:\Data\Development\Projects\PhD GeoInformatics\Code\Results\Baviaans2017FieldTrialAnalysis\Summary - Woody & Litter.csv'
 with open(outFileName, 'wb') as outfile:
     writer = DictWriter(outfile, summaryPlots.values()[0].keys())
     writer.writeheader()

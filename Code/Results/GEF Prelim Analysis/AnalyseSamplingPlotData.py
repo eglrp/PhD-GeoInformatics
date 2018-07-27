@@ -318,8 +318,12 @@ ndvi = np.array([plot['NDVI'] for plot in plotDict.values()])
 rn = np.array([plot['r_n'] for plot in plotDict.values()])
 bn = np.array([plot['b_n'] for plot in plotDict.values()])
 id = np.array([plot['ID'] for plot in plotDict.values()])
-yc = np.array([plot['YcPp'] for plot in plotDict.values()])*(100.**2)/(0.5**2)
+ycpp = np.array([plot['YcPp'] for plot in plotDict.values()])*(100.**2)/(0.5**2)
+yc = np.array([plot['YcHa'] for plot in plotDict.values()])
 classes = np.array([plot['DegrClass'] for plot in plotDict.values()])
+
+abg = np.array([plot['AgbHa'] for plot in plotDict.values()])
+litter = np.array([plot['LitterHa'] for plot in plotDict.values()])
 
 thumbnails = [plot['thumbnail'] for plot in plotDict.values()]
 # classes = np.array([p['DegrClass'] for p in plotDict.values()])
@@ -336,6 +340,11 @@ ScatterD(np.log10(gn), yc/1000., class_labels=classes, labels=None, thumbnails=t
 fig = pylab.figure()
 ScatterD(np.log10(rn), yc/1000., class_labels=classes, labels=id, thumbnails=thumbnails, regress=True, xlabel='log(rN)', ylabel='AGB (t/ha)')
 pylab.grid()
+
+fig = pylab.figure()
+ScatterD(np.log10(rn), litter/1000., class_labels=classes, labels=id, thumbnails=thumbnails, regress=True, xlabel='log(rN)', ylabel='AGB (t/ha)')
+pylab.grid()
+
 
 # lock at ycha KDS density
 from scipy.stats import gaussian_kde
@@ -535,7 +544,7 @@ plt.show()
 # cross validation for score variance
 # feats = [19, 10, 25]
 feats = [24, 19, 10, 25]
-feats = [10, 24, 18]
+feats = [10, 24, 18, 25]  # for june data from Lasso
 
 # feats = [11, 17]
 # feats = [11]
@@ -552,9 +561,9 @@ print 'Features: %s' % (featKeys[feats])
 print 'R2: {0:.4f}'.format(r2)
 print 'RMSE: {0:.2f}'.format(rmse)
 mse = (-scores['test_neg_mean_squared_error'])
-print 'Method 1: RMS: {0:.3f}, 5-95% CI: {1:.3f} - {2:.3f}'.format(np.sqrt(mse.mean()), np.sqrt(np.percentile(mse,5)), np.sqrt(np.percentile(mse,95)))
+print 'Method 1: RMSE: {0:.3f}, 5-95% CI: {1:.3f} - {2:.3f}'.format(np.sqrt(mse.mean()), np.sqrt(np.percentile(mse,5)), np.sqrt(np.percentile(mse,95)))
 rms = np.sqrt(-scores['test_neg_mean_squared_error'])
-print 'Method 2: RMS: {0:.3f}, 5-95% CI: {1:.3f} - {2:.3f}'.format(rms.mean(), np.percentile(rms,5), np.percentile(rms,95))
+print 'Method 2: RMSE: {0:.3f}, 5-95% CI: {1:.3f} - {2:.3f}'.format(rms.mean(), np.percentile(rms,5), np.percentile(rms,95))
 
 
 fig, ax = plt.subplots()
