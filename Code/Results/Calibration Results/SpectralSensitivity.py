@@ -424,6 +424,7 @@ f1.savefig('C:/Data/Development/Projects/PhD GeoInformatics/Docs/My Docs/Thesis/
 f1 = pylab.figure('MODIS and DMC Spectral Sensitivities')
 f1.set_size_inches(6, 4.5, forward=True)
 colors = ['k', 'r', 'g', 'b']
+bandLabels = ['NIR', 'Red', 'Green', 'Blue']
 hModis = []
 hDmc = []
 for i in range(0, 4):
@@ -433,6 +434,10 @@ for i in range(0, 4):
     mask = dmcRsr[:, i] > 0.001
 #    hDmc.append(pylab.plot(dmcWaveLen[mask], dmcRsr[mask, i], color=colors[i], linestyle='--'))
     hDmc.append(pylab.plot(dmcWaveLen[mask], dmcRsr[mask, i], color='k', linestyle='--'))
+    ym = np.max(modisRsr[i])
+    xm = modisWaveLen[i][np.argmax(modisRsr[i])]
+    pylab.text(xm+15, ym*.95, bandLabels[i], fontsize=fontSize)
+
 pylab.legend((hModis[0][0], hDmc[0][0]), ('MODIS', 'DMC'), fontsize=fontSize-2.)
 pylab.xlabel('Wavelength ($\mu m$)')
 pylab.ylabel('Relative spectral response')
@@ -440,6 +445,11 @@ pylab.tight_layout()
 
 f1.savefig('C:/Data/Development/Projects/PhD GeoInformatics/Docs/My Docs/Thesis/Retrieval of Surface Reflectance '
            'from Aerial Imagery/Figure 2 - MODIS and DMC RSRs.eps', dpi=600)
+
+f1.savefig('C:/Data/Development/Projects/PhD GeoInformatics/Docs/My Docs/Thesis/VHR Spekboom Canopy Cover Mapping/'
+            'Figure 2 - MODIS and DMC RSRs.png', dpi=600)
+f1.savefig('C:/Data/Development/Projects/PhD GeoInformatics/Docs/My Docs/Thesis/VHR Spekboom Canopy Cover Mapping/'
+            'Figure 2 - MODIS and DMC RSRs.eps', dpi=600)
 
 
 pylab.figure('MODIS, DMC and SPOT Spectral Sensitivities')
