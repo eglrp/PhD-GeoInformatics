@@ -5,7 +5,7 @@
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <LocalDebuggerCommandArguments>"G:\MSc GeoInformatics\Data\NGI\My Rectified\3322c_322_04_0143_rgbn_XCALIB.tif" "G:\MSc GeoInformatics\Data\NGI\My Rectified\3322c_322_04_0143_rgbn_XCALIB_Out.tif"-o -t 4</LocalDebuggerCommandArguments>
+    <LocalDebuggerCommandArguments>"W:\PhD GeoInformatics\Data\NGI\My Rectified\3322c_322_04_0143_rgbn_XCALIB.tif" "W:\PhD GeoInformatics\Data\NGI\My Rectified\3322c_322_04_0143_rgbn_XCALIB_Out_Tmp.tif" -o -t 1</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
 </Project>

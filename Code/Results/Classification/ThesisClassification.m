@@ -14,6 +14,7 @@ fl(feats)
 % subData = changelablist(subData, 'Default');
 % subData = setprior(subData, 0);
 
+randreset(5)  %4 / 5
 cs = classsizes(dataAll);
 cs(1) = cs(2);
 subData = gendat(dataAll, cs);
