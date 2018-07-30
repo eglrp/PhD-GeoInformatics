@@ -25,29 +25,40 @@ subData = setprior(subData, 0);
 % d = gendat(dataAll, [2000 2000 2000]);
 % d = setprior(d, 0);
 d = subData;
-tic
+% tic
 p = [1 1 1];
-[err, cerr, nlabOut] = prcrossval(d(:, feats), opencvdtreec([], 12, {'Priors', p./sum(p), 'MaxDepth', 12, 'Use1seRule', false, ...
-        'UseSurrogates', false, 'CVFolds', 5, 'TruncatePrunedTree', true, 'MinSampleCount', min(classsizes(subData))/100}), 10);
-toc
-[cc ccr] = ClfrPerfMeas(d, nlabOut);
+% [err, cerr, nlabOut] = prcrossval(d(:, feats), opencvdtreec([], 12, {'Priors', p./sum(p), 'MaxDepth', 12, 'Use1seRule', false, ...
+%         'UseSurrogates', false, 'CVFolds', 5, 'TruncatePrunedTree', true, 'MinSampleCount', min(classsizes(subData))/100}), 10);
+% toc
+% [cc ccr] = ClfrPerfMeas(d, nlabOut);
+
+[C Cr] = ClfrPerfMeasCrosValidation(d(:, feats), opencvdtreec([], 12, {'Priors', p./sum(p), 'MaxDepth', 12, 'Use1seRule', false, ...
+        'UseSurrogates', false, 'CVFolds', 5, 'TruncatePrunedTree', true, 'MinSampleCount', min(classsizes(subData))/100}), true);
 
 %% ----------------------------- KNN
 % [d, dts] = gendat(dataAll, [2000 2000 2000]);
 d = subData;
 
+if false
 [err, cerr, nlabOut, stds, r] = prcrossval(d(:, feats), scalem([], 'variance')*knnc([], 5), 10);
 
 ClfrPerfMeas(d, nlabOut);
+else
+   prmemory(500e6)
+    [C Cr] = ClfrPerfMeasCrosValidation(d(:, feats), scalem([], 'variance')*knnc([], 5), true);
+end
 
 %% ----------------------------- Random forest on selected features
 d = subData;
-
+if false
 [err, cerr, nlabOut, stds, r] = prcrossval(d(:, feats), opencvrtreec([], [], {'Priors', [1 2 1]/4, ...
      'MaxNumOfTreesInTheForest', 5, 'NActiveVars', 4, 'CalcVarImportance', false, 'MaxDepth', 10, 'ForestAccuracy', 0.025}), 10);
 
 ClfrPerfMeas(d, nlabOut);
-
+else
+    [C Cr] = ClfrPerfMeasCrosValidation(d(:, feats), opencvrtreec([], [], {'Priors', [1 2 1]/4, ...
+     'MaxNumOfTreesInTheForest', 5, 'NActiveVars', 4, 'CalcVarImportance', false, 'MaxDepth', 10, 'ForestAccuracy', 0.025}), true);    
+end
 %% ----------------------------- Random forest on full feature set
 d = subData;
 p = [1 1.5 1];
@@ -68,20 +79,28 @@ ClfrPerfMeas(d, nlabOut);
 
 %% ----------------------------- opencvsvc on selected features
 d = subData;
-
+if false
 [err, cerr, nlabOut, stds, r] = prcrossval(d(:, feats), scalem([], 'variance')*opencvsvc([], [], ...
     {'SVMType', 'C_SVC', 'KernelType', 'RBF', 'Gamma', 25, 'C', 1, 'ClassWeights', double([1; 1; 1])}), 10);
 
 ClfrPerfMeas(d, nlabOut);
+else
+    [C Cr] = ClfrPerfMeasCrosValidation(d(:, feats), scalem([], 'variance')*opencvsvc([], [], ...
+        {'SVMType', 'C_SVC', 'KernelType', 'RBF', 'Gamma', 25, 'C', 1, 'ClassWeights', double([1; 1; 1])}), true);    
+end
 %% ----------------------------- qdc on selected features
 d = subData;
 p = [1 1 1];
 d = setprior(d, p./sum(p))
+if false
 tic
 [err, cerr, nlabOut, stds, r] = prcrossval(d(:, feats), qdc, 10);
 toc
 
 ClfrPerfMeas(d, nlabOut);
+else
+    [C Cr] = ClfrPerfMeasCrosValidation(d(:, feats), qdc, true);    
+end
 
 %% ----------------------------- test externally gen output tifs against field GT
 %% Validation - get results for all jan vlok gt
