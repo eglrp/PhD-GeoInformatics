@@ -3,8 +3,9 @@ if nargin < 3
     doCv = true;
 end
 nFolds = 10;
-
-randreset;
+% randreset(9);   %6 i think this is done in prcrossval anyway - no it is
+% not and it needs rng below 
+rng(7, 'twister');  %2 7
 r = prcrossval(data, [], nFolds, 0);
 fprintf('\n')
 for f = 1:nFolds
@@ -134,15 +135,15 @@ function cc = DispConfMatCrossValidation(cV, ll)
 
     cc(2:size(cAvg,1)+1, 2:size(cAvg,2)+1) = mat2cell(cAvg, ones(1, size(cAvg,1)), ones(1, size(cAvg,2)));
     
-    cc(1, end+1) = {'PA Std %'};
-    cc(end+1, 1) = {'CA Std %'}; 
-    cc(2:size(prodAccV, 2)+1, end) =  mat2cell(100*std(prodAccV, [], 1)', ones(size(prodAccV, 2), 1), 1);
-    cc(end, 2:size(consAccV, 2)+1) =  mat2cell(100*std(consAccV, [], 1), 1, ones(1, size(consAccV, 2)));
-    cc(2:size(cAvg,1)+1, 2:size(cAvg,2)+1) = mat2cell(cAvg, ones(1, size(cAvg,1)), ones(1, size(cAvg,2)));
+    cc(1, end+1) = {'PA SE %'};
+    cc(end+1, 1) = {'CA SE %'}; 
+    cc(2:size(prodAccV, 2)+1, end) =  mat2cell(100*std(prodAccV, [], 1)'/sqrt(size(c,3)), ones(size(prodAccV, 2), 1), 1);
+    cc(end, 2:size(consAccV, 2)+1) =  mat2cell(100*std(consAccV, [], 1)/sqrt(size(c,3)), 1, ones(1, size(consAccV, 2)));
+%     cc(2:size(cAvg,1)+1, 2:size(cAvg,2)+1) = mat2cell(cAvg, ones(1, size(cAvg,1)), ones(1, size(cAvg,2)));
     
-    cc(end+1,1:3) = {'Kappa (Std)', kappa, std(kappaV)};
-    cc(end+1,1:3) = {'Overall acc (Std%)', 100*(1-overallErr), 100*std(overallErrV)};
-    cc(end+1,1:3) = {'Overall =prior acc (Std%)', 100*(1-overallWErr), 100*std(overallWErrV)};
+    cc(end+1,1:3) = {'Kappa (SE)', kappa, std(kappaV)/sqrt(size(c,3))};
+    cc(end+1,1:3) = {'Overall acc (SE%)', 100*(1-overallErr), 100*std(overallErrV)/sqrt(size(c,3))};
+    cc(end+1,1:3) = {'Overall =prior acc (SE%)', 100*(1-overallWErr), 100*std(overallWErrV)/sqrt(size(c,3))};
     %estimate the canopy cover error from the conf mat
     cr = cAvg_./repmat(sum(cAvg_,2), 1, size(cAvg_,2));
     pActual = sum(cAvg_, 1)./sum(cAvg_(:)); %actual priors
@@ -160,6 +161,24 @@ function cc = DispConfMatCrossValidation(cV, ll)
     cc(end+1,1:4) = {'CC abs err (all prior combos)', 100*mean(ccErr), 100*std(ccErr), 100*max(ccErr)};
 
     disp(cc);
+    
+    %format for paper
+    fprintf('Overall error (SE): %.2f %c %.2f\n', 100*(1-overallWErr), 177, 100*std(overallWErrV)/sqrt(size(c,3)));
+    cam = 100*mean(consAccV, 1);
+    cas = 100*std(consAccV, [], 1)/sqrt(size(c,3));
+    fprintf('CA: ');
+    for i = 1:length(ll)
+        fprintf('%.2f %c %.2f / ',cam(i), 177, cas(i));
+    end
+    fprintf('\n');
+    pam = 100*mean(prodAccV, 1);
+    pas = 100*std(prodAccV, [], 1)/sqrt(size(c,3));
+    fprintf('PA: ');
+    for i = 1:length(ll)
+        fprintf('%.2f %c %.2f / ',pam(i), 177, pas(i));
+    end
+    fprintf('\n');    
+    fprintf('Kappa (SE): %.3f %c %.3f\n', kappa, 177, std(kappaV)/sqrt(size(c,3)));
 %     fprintf('Kappa: %f\n', kappa);
 %     fprintf('Overall acc: %f\n', overallErr);
 %     fprintf('Overall =prior acc: %f\n\n', overallWErr);

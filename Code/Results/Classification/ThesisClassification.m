@@ -35,6 +35,35 @@ p = [1 1 1];
 [C Cr] = ClfrPerfMeasCrosValidation(d(:, feats), opencvdtreec([], 12, {'Priors', p./sum(p), 'MaxDepth', 12, 'Use1seRule', false, ...
         'UseSurrogates', false, 'CVFolds', 5, 'TruncatePrunedTree', true, 'MinSampleCount', min(classsizes(subData))/100}), true);
 
+    
+%     ''                       'Background'    'Spekboom'    'Tree'       'Total'    'Prod Acc'    'PA SE %'
+%     'Background'             [     24773]    [     332]    [   2155]    [27260]    [ 90.8767]    [ 0.5159]
+%     'Spekboom'               [       304]    [   25759]    [   1197]    [27260]    [ 94.4938]    [ 0.5067]
+%     'Tree'                   [       284]    [     186]    [   2887]    [ 3357]    [ 85.9994]    [ 1.3648]
+%     'Total'                  [     25361]    [   26277]    [   6239]    [57877]    [     100]    [      0]
+%     'Cons Acc'               [   97.6815]    [ 98.0287]    [46.2734]    [  100]    [     NaN]           []
+%     'CA SE %'                [    0.2890]    [  0.3664]    [ 1.5007]    [    0]            []           []
+%     'Kappa (SE)'             [    0.8657]    [  0.0070]           []         []            []           []
+%     'Overall acc (SE%)'      [    7.7025]    [  0.4244]           []         []            []           []
+%     'Overall =prior ac…'    [    9.5434]    [  0.4913]           []         []            []           []
+%     'CC abs err (all p…'    [    2.1916]    [  1.4790]    [ 5.5407]         []            []           []
+% 166     fprintf('Overall error (SE): %.2f %c %.2f\n', 100*(1-overallWErr), 177, 100*std(overallWErrV)/sqrt(size(c,3)));
+% Overall error (SE): 9.54 ± 0.49
+% CA: 97.68 ± 0.29 / 98.03 ± 0.37 / 46.32 ± 1.50 / 
+% PA: 90.88 ± 0.52 / 94.49 ± 0.51 / 86.00 ± 1.36 / 
+% Kappa (SE): 0.866 ± 0.007
+%     ''                       'Background'    'Spekboom'    'Total'     'Prod Acc'    'PA SE %'
+%     'Background'             [     30099]    [     518]    [ 30617]    [ 98.3081]    [ 0.3192]
+%     'Spekboom'               [      1501]    [   25759]    [ 27260]    [ 94.4938]    [ 0.5067]
+%     'Total'                  [     31600]    [   26277]    [ 57877]    [     100]    [      0]
+%     'Cons Acc'               [   95.2500]    [ 98.0287]    [   100]    [     NaN]           []
+%     'CA SE %'                [    0.4169]    [  0.3664]    [     0]            []           []
+%     'Kappa (SE)'             [    0.9299]    [  0.0061]          []            []           []
+%     'Overall acc (SE%)'      [    3.4884]    [  0.3038]          []            []           []
+%     'Overall =prior ac…'    [    3.5991]    [  0.3107]          []            []           []
+%     'CC abs err (all p…'    [    2.4374]    [  1.7792]    [5.5062]            []           []
+% Overall error (SE): 3.60 ± 0.31
+% CA: 95.25 ± 0.42 / 98.03 ± 0.37 /     
 %% ----------------------------- KNN
 % [d, dts] = gendat(dataAll, [2000 2000 2000]);
 d = subData;
