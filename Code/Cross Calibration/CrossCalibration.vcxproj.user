@@ -13,7 +13,7 @@
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <LocalDebuggerCommandArguments>-o -w 3 3 -p 4 "D:\Data\Development\Projects\PhD GeoInformatics\Data\MODIS\MCD43A4.A2010025.h19v12.005.2010043064233.Lo23.RGBN.tif" "D:\Data\Development\Projects\PhD GeoInformatics\Data\NGI\XCalib Experiments\Source\3322a_320_09_0295_rgbn_CMP.tif"</LocalDebuggerCommandArguments>
+    <LocalDebuggerCommandArguments>-o -w 1 1 -p 1 "D:\Data\Development\Projects\PhD GeoInformatics\Data\MODIS\MCD43A4.A2010025.h19v12.005.2010043064233.Lo21.RGBN.tif" "W:\PhD GeoInformatics\Data\NGI\My Rectified\3321B_2010_317\RGBN\3321b_3172_12_0415_rgbn_CMP.tif"</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
 </Project>

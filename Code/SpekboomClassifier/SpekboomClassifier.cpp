@@ -17,6 +17,7 @@ SpekboomClassifier::SpekboomClassifier(ClassifierType _clfrType = ClassifierType
 	GDALAllRegister();
 	CPLSetConfigOption("GDAL_DISABLE_READDIR_ON_OPEN", "FALSE");
 	CPLSetConfigOption("CPL_DEBUG", "ON");
+	CPLSetConfigOption("GDAL_CACHEMAX", "2048");//?
 	OGRRegisterAll();
 #if LOG
 	this->blockSize = cv::Size(128, 128);
@@ -276,6 +277,7 @@ void SpekboomClassifier::Classify(const string& inputFileName, const string& out
     char **papszOptions = NULL;
 	papszOptions = CSLSetNameValue( papszOptions, "COMPRESS", "LZW");
 	papszOptions = CSLSetNameValue( papszOptions, "TILED", "YES");
+	papszOptions = CSLSetNameValue(papszOptions, "NUM_THREADS", "ALL_CPUS");
 
 	int cacheVal = GDALGetCacheMax();
 	GDALSetCacheMax(1024*1024*1024); //for fast reading and GDALCLose (in bytes)
@@ -319,6 +321,7 @@ void SpekboomClassifier::Classify(const string& inputFileName, const string& out
 	int blockProgressUpdate = 0;
 	int blockCount = 0;
 	int64 startTick = 0, processTicks[10]={};
+	int64 clfStartTick = cv::getTickCount();
 
 	Mat strEl = getStructuringElement(MORPH_ELLIPSE, Size(3, 3), Point(-1, -1));
 	Mat strEl5 = getStructuringElement(MORPH_ELLIPSE, Size(3, 3), Point(-1, -1));
@@ -545,6 +548,8 @@ void SpekboomClassifier::Classify(const string& inputFileName, const string& out
 	outputBoundDataSet->FlushCache();
 	GDALClose(outputBoundDataSet);
 #endif
+	int64 clfTicks = (cv::getTickCount() - clfStartTick);
+	cout << "Total classification time (incl rw): " << (clfTicks / cv::getTickFrequency())  << " secs" << endl;
 }
 
 vector<Mat> SpekboomClassifier::ExtractFeatures(const Mat& image)

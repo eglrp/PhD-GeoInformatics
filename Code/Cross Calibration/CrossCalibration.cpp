@@ -83,7 +83,7 @@ using namespace std;
 #define XCALIB_DEBUG 0
 #define MAX_PATH 1024
 #define SEAMLINE_COVERAGE_FIX 1					// excludes partially covered ref pixels
-#define SEAMLINE_EXTRAP_FIX 1					// erodes away one boundary pixel to exclude extrapolated params, SEAMLINE_COVERAGE_FIX must be 1
+#define SEAMLINE_EXTRAP_FIX 0					// erodes away one boundary pixel to exclude extrapolated params, SEAMLINE_COVERAGE_FIX must be 1
 #define DO_COMPRESS_OUTPUT 1
 #define BIGTIFF 1
 #define COVERAGE_PORTION 0.95
@@ -1044,7 +1044,10 @@ int main(int argc, char* argv[])
 	CPLSetConfigOption("GDAL_CACHEMAX", "2048");//?
 	try
 	{
+		int64 startTick = cv::getTickCount();
 		res = CrossCalib(refFileName, srcFileName, winSize, modelForm);
+		int64 endTick = (cv::getTickCount() - startTick);
+		cout << "Total calibration time (incl rw): " << (endTick / cv::getTickFrequency()) << " secs" << endl;
 	}
 	catch(string ex) //catch exceptions thrown by CrossCalib
 	{
