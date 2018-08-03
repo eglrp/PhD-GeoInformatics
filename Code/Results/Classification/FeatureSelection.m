@@ -68,7 +68,7 @@ fl = cellstr(getfeatlab(dataAll));
 subData = gendat(dataAll, cs);
 subData = setprior(subData, 0);
 % FeatureClusterRankBe(subData);
-resFeatureClusterRank(subData, 'clusterThresh', 0.2, 'showFigures', true);
+res = FeatureClusterRank(subData, 'clusterThresh', 0.2, 'showFigures', true, 'clusterMethod', 'hierarchical');
 
 % Cluster 7, Accuracy 0.003
 % 	rN, 	nirN, 	NDVI, 	RVI, 	tc2, 	pc2, 	rc1, 	MeanRVI, 	MedianRVI, 	MeanNDVI, 	MedianNDVI, 
