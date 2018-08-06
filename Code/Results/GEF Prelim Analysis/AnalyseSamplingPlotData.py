@@ -342,7 +342,15 @@ ScatterD(np.log10(rn), yc/1000., class_labels=classes, labels=id, thumbnails=thu
 pylab.grid()
 
 fig = pylab.figure()
-ScatterD(np.log10(rn), litter/1000., class_labels=classes, labels=id, thumbnails=thumbnails, regress=True, xlabel='log(rN)', ylabel='AGB (t/ha)')
+ScatterD(np.log10(rn), yc/1000., class_labels=classes, labels=id, thumbnails=thumbnails, regress=True, xlabel='log(rN)', ylabel='AGB (t/ha)')
+pylab.grid()
+
+fig = pylab.figure()
+ScatterD(np.log10(rn), abg/1000., class_labels=classes, labels=id, thumbnails=thumbnails, regress=True, xlabel='log(rN)', ylabel='AGB (t/ha)')
+pylab.grid()
+
+fig = pylab.figure()
+ScatterD(np.log10(ndvi), abg/1000., class_labels=classes, labels=id, thumbnails=thumbnails, regress=True, xlabel='log(rN)', ylabel='AGB (t/ha)')
 pylab.grid()
 
 
@@ -456,6 +464,7 @@ featKeys = np.array(featKeys)
 X = np.array(X).transpose()
 # plot['Yc'] is the mean Yc per pixel in the plot
 y = np.array([plot['YcPp'] for plot in plotDict.values()])*(100.**2)/(0.5**2)
+y = np.array([plot['AgbHa'] for plot in plotDict.values()])
 
 f_test, _ = f_regression(X, y)
 f_test /= np.max(f_test)
@@ -477,7 +486,7 @@ print 'Model selected by RFE: %s' % (featKeys[rfe.support_])
 lasso = linear_model.LassoCV()
 lasso.fit(X,y/1000)
 print 'Best Lasso feature: ' + featKeys[np.argmax(np.abs(lasso.coef_))]
-print 'Main Lasso features: %s' % (featKeys[np.abs(lasso.coef_)>10])
+print 'Main Lasso features: %s' % (featKeys[np.abs(lasso.coef_)>5])
 print 'Features ranked by Lasso: %s' % (featKeys[np.argsort(-np.abs(lasso.coef_))])
 
 lasso.coef_[np.argsort(-np.abs(lasso.coef_))]
@@ -545,6 +554,7 @@ plt.show()
 # feats = [19, 10, 25]
 feats = [24, 19, 10, 25]
 feats = [10, 24, 18, 25]  # for june data from Lasso
+# 10, 24, 18, 25,
 
 # feats = [11, 17]
 # feats = [11]

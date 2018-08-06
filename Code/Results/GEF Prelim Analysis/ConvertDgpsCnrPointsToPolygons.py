@@ -82,11 +82,12 @@ ds = None
 from csv import DictReader
 
 plotCsGt = {}
-csGtFilenames = ['C:\Data\Development\Projects\PhD GeoInformatics\Code\Results\Baviaans2017FieldTrialAnalysis\Summary - Woody & Litter.csv',
-                 'C:\Data\Development\Projects\PhD GeoInformatics\Data\GEF Sampling\Sampling Dec 2017\GEF_Woody spp_2018.03.10_MdodaQC - Summary Woody & Litter.csv',
-                 'C:\Data\Development\Projects\PhD GeoInformatics\Data\GEF Sampling\Sampling March 2018\GEF_Woody spp_INTACT_2018.04.24_Mdoda - Summary Woody & Litter.csv',
-                 'C:\Data\Development\Projects\PhD GeoInformatics\Data\GEF Sampling\Sampling June 2018\GEF_SS_Woody spp_2018.07.13.Mdoda - Summary Woody & Litter.csv',
-                 'C:\Data\Development\Projects\PhD GeoInformatics\Data\GEF Sampling\Sampling June 2018\GEF_MV_Woody spp_2018.07.06.Mdoda - Summary Woody & Litter.csv']
+# csGtFilenames = ['C:\Data\Development\Projects\PhD GeoInformatics\Code\Results\Baviaans2017FieldTrialAnalysis\Summary - Woody & Litter.csv',
+#                  'C:\Data\Development\Projects\PhD GeoInformatics\Data\GEF Sampling\Sampling Dec 2017\GEF_Woody spp_2018.03.10_MdodaQC - Summary Woody & Litter.csv',
+#                  'C:\Data\Development\Projects\PhD GeoInformatics\Data\GEF Sampling\Sampling March 2018\GEF_Woody spp_INTACT_2018.04.24_Mdoda - Summary Woody & Litter.csv',
+#                  'C:\Data\Development\Projects\PhD GeoInformatics\Data\GEF Sampling\Sampling June 2018\GEF_SS_Woody spp_2018.07.13.Mdoda - Summary Woody & Litter.csv',
+#                  'C:\Data\Development\Projects\PhD GeoInformatics\Data\GEF Sampling\Sampling June 2018\GEF_MV_Woody spp_2018.07.06.Mdoda - Summary Woody & Litter.csv']
+csGtFilenames = ['C:\Data\Development\Projects\PhD GeoInformatics\Data\GEF Sampling\GEF_Woody spp_Consolidated_ALL plots_2018.07.31_Mdoda - Summary Woody & Litter.csv']
 for csGtFilename in csGtFilenames:
     with open(csGtFilename, 'rb') as csGtFile:
         reader = DictReader(csGtFile)
@@ -123,7 +124,18 @@ for plotName in np.unique(plotNames):
     comments = [plotPoint['Comment'] for plotPoint in plotPoints]
     cnrIdx = [comment.startswith('H') and 'FPP' not in comment for comment in comments]
     plotCnrs = plotPoints[cnrIdx]
+
     print plotName,
+    if plotName.__contains__('_') or plotName.__contains__('_'):
+        sepIdx = str(plotName).find('_')
+        if sepIdx < 0:
+            sepIdx = str(plotName).find('-')
+        lbl = plotName[:sepIdx]
+        num = np.int32(plotName[sepIdx+1:])
+        plotName = '%s%d'%(lbl,num)
+
+    plotName = str(plotName).replace('_','')
+    plotName = str(plotName).replace('-', '')
     feature = ogr.Feature(layer.GetLayerDefn())
     feature.SetField("ID", plotName)
     if plotCsGt.has_key(plotName):
@@ -131,7 +143,7 @@ for plotName in np.unique(plotNames):
         for f in fields:
             feature.SetField(f, plotCsGt[plotName][f])
     else:
-        print 'Yc not found for %s'
+        print 'Yc not found for ' + plotName
         fields = ['Yc', 'YcHa', 'Size', 'N', 'Litter', 'LitterHa', 'AgbHa']
         for f in fields:
             feature.SetField(f, 0)

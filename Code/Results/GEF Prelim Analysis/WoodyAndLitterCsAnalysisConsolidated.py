@@ -1,11 +1,11 @@
-# ----------------------------------------------------------------------------------------------------------------------
 # this is now a generic script to process any sampling data
+# ----------------------------------------------------------------------------------------------------------------------
 # includes woody and litter where available
 # ----------------------------------------------------------------------------------------------------------------------
 # Read in Allometric model parameters
 
 allometryFileName = "C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Field Trial/AllometricModels.xlsx"
-unknownSpeciesFileName = "C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/Cos_guilds_Unknown Species MV.xlsm"
+unknownSpeciesFileName = "C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/Cos_guilds_Unknown Species MV.xlsx"
 
 # woodyFileName =  "C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/Sampling Dec 2017/GEF_Woody spp_2018.03.10_MdodaQC.xlsx"
 # litterFileName = "C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/Sampling Dec 2017/GEF_Litter_2018.03.09_Cos.xlsx"
@@ -50,22 +50,22 @@ def EvalRecordCs(allometricModels, record):
         x = CD*record['height']
     elif model['vars'] == 'Hgt':
         x = record['height']
+    elif model['vars'] == 'CA':
+        x = CA
     else:
         print model['vars'], " unknown variable"
         return 0.
-    if record['species'] == 'S.longispina':   # MP's model Log10 y (C (kg) = 1.1012(Log10 canopy area (m2)) - 0.2938
-        x = CA
-        Yc = 10**((model['ay'] * x) + model['by'])  # "naive"
-    else:
-        yn = np.exp(model['ay'])*x**model['by']     # "naive"
-        Yc = yn*model['MB']
+    # if record['species'] == 'S.longispina':   # MP's model Log10 y (C (kg) = 1.1012(Log10 canopy area (m2)) - 0.2938
+    #     Yc = 10**((model['ay'] * np.log10(x)) + model['by'])
+    # else:
+    yn = np.exp(model['ay'])*x**model['by']     # "naive"
+    Yc = yn*model['MB']
 
     if model['useWdRatio']:
         if model.__contains__('wdRatio'):
             Yc = Yc * model['wdRatio']
         # else:
         #     print "WD Ratio for ", record['species'], " not found - using 1."
-
     return Yc
 
 def EvalPlotCs(allometricModels, plot):
@@ -76,6 +76,57 @@ def EvalPlotCs(allometricModels, plot):
             plotYc.append(Yc)
         print record['species'], " - ", str(Yc)
     return plotYc
+
+def MyUnknownSpeciesMap(species):
+    mapSpecies = None
+    if species == 'A.ferox' or species.__contains__('Aloe') or species.__contains__('A.ferox'):
+        mapSpecies = 'A.speciosa'
+    # if species.__contains__('unk'):
+    if species.__contains__('Asparagus') or species.__contains__('hairy'):
+        mapSpecies = 'A.capensis'
+    if species.__contains__('Crassula') or species.__contains__('rupestris'):
+        mapSpecies = 'C.ovata'
+    if species.__contains__('Crassula') or species.__contains__('horns'):
+        mapSpecies = 'C.perforata'
+    if species == 'Euclea sp1' or species.__contains__('Euclea'):
+        mapSpecies = 'E.undulata'
+    if species.__contains__('Euphorbia') or species.__contains__('Euphorbia') or species.__contains__('Eurphobia'):
+        mapSpecies = 'E.coerulescens'
+    if species == 'Schotia sp1':
+        mapSpecies = 'S.afra'
+    if str.lower(species).__contains__('grewia'):
+        mapSpecies = 'G.robusta'
+    if species.__contains__('Lycium'):
+        mapSpecies = 'L.ferocissimum'
+    if species.__contains__('Ysterhout') or species.__contains__('Acacia'):  # very crude guesses
+        mapSpecies = 'P.capensis'
+    if species.__contains__('Gymnosporia'):  # very crude guesses
+        mapSpecies = 'G.polyacantha'
+    if species.__contains__('Boscia'):
+        mapSpecies = 'B.oleoides'
+    if species == 'A.striatus':
+        mapSpecies = 'A.capensis'
+    if species.__contains__('Rhigozum'):  # very crude guesses
+        mapSpecies = 'R.obovatum'
+    if species.__contains__('Searsia') or species == 'S.longspina' or species == 'S.longispina':
+        mapSpecies = 'S.longispina'
+    if species.__contains__('Crassula'):
+        mapSpecies = 'C.ovata'
+    if species.__contains__('Polygala'):
+        mapSpecies = 'S.longispina'
+    if species.__contains__('karroo'):
+        mapSpecies = 'V.karoo'
+    if species.__contains__('cancer'):
+        mapSpecies = 'P.incana'
+    if species.__contains__('Slangbossie'):
+        mapSpecies = 'P.incana'
+    if species.__contains__('oak'):
+        mapSpecies = 'V.karoo'
+    if species.__contains__('four star'):
+        mapSpecies = 'S.longispina'
+
+    return mapSpecies
+
 
 # ---------------------------------------------------------------------------------------------------------------------
 # load allometric models
@@ -127,13 +178,30 @@ for r in ws[2:ws.max_row]:  #how to find num rows?
 ws = None
 
 wb = None
+#----------------------------------------------------------------------------------------------------------------------
+# read in unknown species map
+wb = load_workbook(unknownSpeciesFileName)
+
+unknownSpeciesMap = {}
+ws = wb.worksheets[0]
+first_row = ws[1]
+header = []
+for c in first_row:
+    header.append(c.value)
+for r in ws[2:ws.max_row]:
+    if r[2].value is None:  # no mapping yet
+        continue
+    unknownSpecies = str(r[0].value).strip()
+    mapSpecies = str(r[2].value).strip().replace('. ', '.')
+    unknownSpeciesMap[unknownSpecies] = mapSpecies
+wb = None
 
 # ----------------------------------------------------------------------------------------------------------------------
 # Read in woody measurements
 
 wb = load_workbook(woodyFileName)
 
-# make a list of "not found" species i.e. species without allometric models
+# modify above map with my guesses and then, make a list of "not found" species i.e. species without allometric models, without any map
 notFoundSpecies = {}
 for ws in wb:
     print ws.title, ' rows: ', ws.max_row
@@ -143,16 +211,24 @@ for ws in wb:
         header.append(c.value)
 
     for r in ws[2:ws.max_row]:
-        if r[0].value is None:
-            break
-        species = str(r[2].value).strip().replace('. ','.')
+        if r[2].value is None:
+            continue
+        species = str(r[4].value).strip().replace('. ','.')
+        print '.',
 
         if not allometricModels.__contains__(species):
-            print species, " not found"
-            if notFoundSpecies.has_key(species):
-                notFoundSpecies[species] += 1
-            else:
-                notFoundSpecies[species] = 1
+            print species, " not found in allometric models"
+            if not unknownSpeciesMap.__contains__(species):
+                print species, " not found in guild map"
+                mapSpecies = MyUnknownSpeciesMap(species)
+                if mapSpecies is not None:
+                    unknownSpeciesMap[species] = mapSpecies
+
+                print species, " not found in models or maps"
+                if notFoundSpecies.has_key(species):
+                    notFoundSpecies[species] += 1
+                else:
+                    notFoundSpecies[species] = 1
 
 # if MV:
 #     outFileName = 'C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/Sampling June 2018/Unknown Species MV.csv'
@@ -170,6 +246,23 @@ with open(outFileName, 'wb') as outfile:
 
 print '------------------------------------------------------'
 
+#
+# for ws in wb:
+#     print ws.title, ' rows: ', ws.max_row
+#     header = []
+#
+#     for r in ws[2:ws.max_row]:
+#         if r[0].value is None:
+#             break
+#         species = str(r[2].value).strip().replace('. ','.')
+#
+#         if not allometricModels.__contains__(species):
+#             print species, " not found"
+#             if notFoundSpecies.has_key(species):
+#                 notFoundSpecies[species] += 1
+#             else:
+#                 notFoundSpecies[species] = 1
+
 
 # read in allometry and find woody cs
 nestedPlots = {}
@@ -182,58 +275,32 @@ for ws in wb:
 
     plots = collections.OrderedDict()
     for r in ws[2:ws.max_row]:
-        if r[0].value is None:
-            break
+        if r is None or r[2].value is None:
+            continue
+        # print  r[2].value
         record = OrderedDict()
-        species = str(r[2].value).strip().replace('. ','.')
-
-        # hack for unknown plants
-        if species == 'A.ferox' or species.__contains__('Aloe') or species.__contains__('A.ferox'):
-            species = 'A.speciosa'
-        # if species.__contains__('unk'):
-        if species.__contains__('Asparagus') or species.__contains__('hairy'):
-            species = 'A.capensis'
-        if species.__contains__('Crassula') or species.__contains__('horns') or species.__contains__('rupestris'):
-            species = 'C.ovata'
-        if species == 'Euclea sp1':
-            species = 'E.undulata'
-        if species.__contains__('Euphorbia') or species.__contains__('Euphorbia'):
-            species = 'E.coerulescens'
-        if species == 'Schotia sp1':
-            species = 'S.afra'
-        if str.lower(species).__contains__('grewia'):
-            species = 'G.robusta'
-        if species.__contains__('Lycium'):
-            species = 'L.ferocissimum'
-        if species.__contains__('Ysterhout') or species.__contains__('Acacia'):   # very crude guesses
-            species = 'P.capensis'
-        if species.__contains__('Gymnosporia'):   # very crude guesses
-            species = 'G.polyacantha'
-        if species.__contains__('Boscia'):
-            species = 'B.oleoides'
-        if species == 'A.striatus':
-            species = 'A.striata'
-        if species.__contains__('Rhigozum'):   # very crude guesses
-            species = 'R.obovatum'
-        if species.__contains__('Searsia') or species == 'S.longspina' or species == 'S.longispina':
-            species = 'S.longispina'
-        if species.__contains__('Crassula'):
-            species = 'C.ovata'
-
-        if not allometricModels.__contains__(species):
-            print species, " not found, no subs"
-
-
-        id = str(r[0].value).strip().replace('-','')
-        idNum = np.int32(id[2:])  # get rid of leading zeros
-        id = '%s%d' % (id[:2], idNum)
+        species = str(r[4].value).strip().replace('. ','.')
+        id = str(r[2].value).strip()
+        dashLoc = str(id).find('-')
+        if dashLoc < 0:
+            dashLoc = 2
+        id = id.replace('-', '')
+        idNum = np.int32(id[dashLoc:])  # get rid of leading zeros
+        id = '%s%d' % (id[:dashLoc], idNum)
 
         record['ID'] = id
-        record['degrClass'] = str(r[1].value)
+        record['degrClass'] = str(r[3].value)
+        record['orig. species'] = str(species).strip()
+        record['canopyWidth'] = r[5].value
+        record['canopyLength'] = r[6].value
+        record['height'] = r[7].value
+
+        if not allometricModels.__contains__(species):
+            if not unknownSpeciesMap.__contains__(species):
+                print species, " not found, no subs"
+            else:
+                species = unknownSpeciesMap[species]
         record['species'] = str(species).strip()
-        record['canopyWidth'] = r[3].value
-        record['canopyLength'] = r[4].value
-        record['height'] = r[5].value
 
         # zerp empty records
         fields = ['canopyWidth', 'canopyLength', 'height']
@@ -241,8 +308,8 @@ for ws in wb:
             if record[f] is None:
                 record[f] = 0
 
-        if r.__len__() > 6:
-            record['bsd'] = str(r[6].value)
+        if r.__len__() > 8:
+            record['bsd'] = str(r[8].value)
         else:
             record['bsd'] = ""
         yc = EvalRecordCs(allometricModels, record)
@@ -262,8 +329,10 @@ for ws in wb:
     #     outFileName = 'C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/Sampling June 2018/%s - MV Woody.csv' % (ws.title)
     # else:
     #     outFileName = 'C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/Sampling June 2018/%s - SS Woody.csv' % (ws.title)
-    outFileName = str.format('{0}/{1} - Woody.csv', os.path.dirname(woodyFileName),
-                             os.path.splitext(os.path.basename(woodyFileName))[0])
+    # outFileName = str.format('{0} - {1} - Woody.csv', os.path.dirname(woodyFileName),
+    #                          os.path.splitext(os.path.basename(woodyFileName))[0])
+    outFileName = str.format('{0}/{1} - {2} - Woody.csv', os.path.dirname(woodyFileName),
+                             os.path.splitext(os.path.basename(woodyFileName))[0], ws.title)
 
     with open(outFileName,'wb') as outfile:
         writer = DictWriter(outfile, plots.values()[0][0].keys())
@@ -274,21 +343,22 @@ for ws in wb:
 wb = None
 #----------------------------------------------------------------------------------------------------------------
 # read in litter data
+litterDict = {}
 if litterFileName is not None:
     wb = load_workbook(litterFileName, data_only=True)
 
     litterDict = {}
-    ws = wb['Litter dry wts']
-    for r in ws[3:ws.max_row]:
+    ws = wb['Litter summary']
+    for r in ws[2:ws.max_row]:
         id = str(r[0].value).strip()
         id = id.replace('-0','')
         id = id.replace('-','')
-        if id == '' or id is None or id == 'None':
-            print 'No ID, breaking'
-            break
+        if id == '' or id is None or id == 'None' or r[1].value == 0:
+            print 'No ID, continue'
+            continue
         else:
             print id,
-        dryWeight = r[12].value
+        dryWeight = r[1].value
         if litterDict.has_key(id):
             litterDict[id]['dryWeight'] += dryWeight
         else:
@@ -302,58 +372,89 @@ else:
 #---------------------------------------------------------------------------------------------------------------
 # extrapolate 5x5m subplots to full size
 # (separate contributions from 5x5m plants ><50cm high, extrap <50 to full size, add >50 to full size)
-subPlots = nestedPlots['5x5m']
-if nestedPlots.has_key('10 x 10m'):
-    outerPlots = nestedPlots['10 x 10m']
-    outerSize = 10.
-else:
-    outerPlots = nestedPlots['20 x 20m']
-    outerSize = 20.
+pairedPlots = {}
+
+for key, plots in nestedPlots.iteritems():
+    print key
+    dashLoc = str(key).find('-')
+    if dashLoc < 0:
+        dashLoc = str(key).find('_')
+    id = key[:dashLoc]
+    plotSizeStr = key[dashLoc+1:]
+    xLoc = str(plotSizeStr).find('x')
+    plotSize = np.int32(plotSizeStr[:xLoc])
+    if not pairedPlots.has_key(id):
+        pairedPlots[id] = {}
+    if plotSize == 5:
+        pairedPlots[id]['innerPlots'] = plots
+        pairedPlots[id]['innerPlotSize'] = 5
+    else:
+        pairedPlots[id]['outerPlots'] = plots
+        pairedPlots[id]['outerPlotSize'] = plotSize
 
 summaryPlots = {}
-for id, subPlot in subPlots.iteritems():
-    subHeight = np.array([r['height'] for r in subPlot])
-    subYc = np.array([r['yc'] for r in subPlot])
-    smallIdx = subHeight < 50
-    outerPlot = outerPlots[id]
-    # outerHeight = np.array([r['height'] for r in outerPlot])
-    outerYc = np.array([r['yc'] for r in outerPlot])
-    summaryPlots[id] = {}
-    # nb the 4 needs to change for other plot sizes
-    # if MV:
-    #     outerSize = 10
-    # else:
-    #     outerSize = 20
-    summaryYc = ((outerSize/5.)**2) * subYc[smallIdx].sum() + subYc[np.logical_not(smallIdx)].sum() + outerYc.sum()
-
-    summaryPlots[id]['ID'] = id
-    summaryPlots[id]['Yc'] = summaryYc
-    summaryPlots[id]['Size'] = outerSize
-    summaryPlots[id]['YcHa'] = (100.**2) * summaryYc/(outerSize**2)
-    summaryPlots[id]['N'] = ((outerSize/5.)**2) * smallIdx.sum() + (subYc.__len__() - smallIdx.sum()) + outerYc.__len__()
-    if litterDict[id]['dryWeight'] > 0.:
-        summaryPlots[id]['Litter'] = litterDict[id]['dryWeight']/1000  # g to kg
-        summaryPlots[id]['LitterHa'] = summaryPlots[id]['Litter'] * (100.**2) / (4 * (0.5**2))
-        summaryPlots[id]['AgbHa'] = summaryPlots[id]['LitterHa'] + summaryPlots[id]['YcHa']
+for pairedId, pairedPlot in pairedPlots.iteritems():
+    outerPlots = pairedPlot['outerPlots']
+    outerSize = pairedPlot['outerPlotSize']
+    if pairedPlot.has_key('innerPlotSize'):
+        subPlots = pairedPlot['innerPlots']
     else:
-        summaryPlots[id]['Litter'] = -1.
-        summaryPlots[id]['LitterHa'] = -1.
-        summaryPlots[id]['AgbHa'] = summaryPlots[id]['YcHa']
+        subPlots = None
+
+    for id, outerPlot in outerPlots.iteritems():
+        summaryPlots[id] = {}
+        if subPlots is not None:
+            subPlot = subPlots[id]
+            subHeight = np.array([r['height'] for r in subPlot])
+            subYc = np.array([r['yc'] for r in subPlot])
+            smallIdx = subHeight < 50
+            # outerHeight = np.array([r['height'] for r in outerPlot])
+            outerYc = np.array([r['yc'] for r in outerPlot])
+            summaryYc = ((outerSize/5.)**2) * subYc[smallIdx].sum() + subYc[np.logical_not(smallIdx)].sum() + outerYc.sum()
+            summaryPlots[id]['N'] = ((outerSize / 5.) ** 2) * smallIdx.sum() + (subYc.__len__() - smallIdx.sum()) + outerYc.__len__()
+        else:
+            outerYc = np.array([r['yc'] for r in outerPlot])
+            summaryYc = outerYc.sum()
+            summaryPlots[id]['N'] = outerYc.__len__()
+
+        summaryPlots[id]['ID'] = id
+        summaryPlots[id]['Yc'] = summaryYc
+        summaryPlots[id]['Size'] = outerSize
+        summaryPlots[id]['Degr. Class'] = outerPlot[0]['degrClass']
+        summaryPlots[id]['YcHa'] = (100.**2) * summaryYc/(outerSize**2)
+        if litterDict.has_key(id) and litterDict[id]['dryWeight'] > 0.:
+            summaryPlots[id]['Litter'] = litterDict[id]['dryWeight']/1000  # g to kg
+            summaryPlots[id]['LitterHa'] = summaryPlots[id]['Litter'] * 0.48 * (100.**2) / (4 * (0.5**2))
+            summaryPlots[id]['AgbHa'] = summaryPlots[id]['LitterHa'] + summaryPlots[id]['YcHa']
+        else:
+            summaryPlots[id]['Litter'] = -1.
+            summaryPlots[id]['LitterHa'] = -1.
+            summaryPlots[id]['AgbHa'] = summaryPlots[id]['YcHa']
+
 
 # write out summary ground truth for each plot
 # if MV:
 #     outFileName = 'C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/Sampling June 2018/Summary - MV Woody.csv'
 # else:
 #     outFileName = 'C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/Sampling June 2018/Summary - SS Woody.csv'
-    outFileName = str.format('{0}/{1} - Summary Woody & Litter.csv', os.path.dirname(woodyFileName),
-                             os.path.splitext(os.path.basename(woodyFileName))[0])
+outFileName = str.format('{0}/{1} - Summary Woody & Litter.csv', os.path.dirname(woodyFileName),
+                         os.path.splitext(os.path.basename(woodyFileName))[0])
 
 with open(outFileName, 'wb') as outfile:
     writer = DictWriter(outfile, summaryPlots.values()[0].keys())
     writer.writeheader()
     writer.writerows(summaryPlots.values())
 
+#---------------------------------------------------------------------------------------------------------------
+# get stats and std errors per stratum
 
+id = np.array([plot['ID'] for plot in summaryPlots.values()])
+ycHa = np.array([plot['YcHa'] for plot in summaryPlots.values()])
+agbHa = np.array([plot['AgbHa'] for plot in summaryPlots.values()])
+litterHa = np.array([plot['LitterHa'] for plot in summaryPlots.values()])
+degrClass = np.array([plot['Degr. Class'] for plot in summaryPlots.values()])
+
+degrClasses = np.unique(degrClass)
 
 #-----------------------------------------------------------------------------------------------------------------
 #  look at height & yc distribution for 5x5m plots
