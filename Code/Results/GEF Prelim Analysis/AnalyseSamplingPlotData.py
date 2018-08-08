@@ -380,6 +380,7 @@ for i, cl in enumerate(class_labels):
     pylab.grid()
     pylab.axis('tight')
     pylab.text(0.9*ycGrid.max(), 0.9*ycGrid.max(),'N=%d'%(idx.sum()), fontdict={'size':fontSize})
+    print '%s N: %d' % (cl, idx.sum())
 
 kde = gaussian_kde(np.array(yc))  # , bw_method=bandwidth / height.std(ddof=1))
 ycKde = kde.evaluate(ycGrid)
@@ -393,7 +394,48 @@ pylab.grid()
 pylab.axis('tight')
 pylab.text(0.9 * ycGrid.max(), 0.9 * ycGrid.max(), 'N=%d' % (idx.sum()), fontdict={'size': fontSize})
 
-fig.tight_layout()
+pylab.tight_layout()
+
+#--------------------------------------------------------------------------------------------------------------
+# simulate more plots to see spread of yc
+
+ycBs = np.array([])
+nClasses = [20, 30, 30]    #['Moderate', 'Pristine', 'Severe']
+pylab.figure()
+for i, cl in enumerate(class_labels):
+    idx = classes == cl
+    #idx = idx[:class_num[i]]
+    #allIdx.append(idx)
+    classYc = yc[idx]
+    classYcBs = np.random.choice(classYc, nClasses[i], replace=True)   #generate a bootstrap sample N[i]
+    ycBs = np.concatenate((ycBs, classYcBs))
+
+    kde = gaussian_kde(classYcBs)  # , bw_method=bandwidth / height.std(ddof=1))
+    # ndviGrid = np.linspace(ndvi.min(), ndvi.max(), 100)
+    ycKde = kde.evaluate(ycGrid)
+
+    pylab.subplot(2, 2, i+1)
+    pylab.plot(ycGrid, ycKde)
+    pylab.xlabel('Yc (t/ha)', fontdict={'size':fontSize})
+    pylab.ylabel('Prob. Density', fontdict={'size':fontSize})
+    pylab.title(cl, fontdict={'size':fontSize})
+    pylab.grid()
+    pylab.axis('tight')
+    pylab.text(0.9*ycGrid.max(), 0.9*ycGrid.max(),'N=%d'%(idx.sum()), fontdict={'size':fontSize})
+    print '%s N: %d' % (cl, idx.sum())
+
+kde = gaussian_kde(np.array(ycBs))  # , bw_method=bandwidth / height.std(ddof=1))
+ycKde = kde.evaluate(ycGrid)
+
+pylab.subplot(2, 2, 4)
+pylab.plot(ycGrid, ycKde)
+pylab.xlabel('Yc (t/ha)', fontdict={'size': fontSize})
+pylab.ylabel('Prob. Density', fontdict={'size': fontSize})
+pylab.title('All', fontdict={'size': fontSize})
+pylab.grid()
+pylab.axis('tight')
+pylab.text(0.9 * ycGrid.max(), 0.9 * ycGrid.max(), 'N=%d' % (idx.sum()), fontdict={'size': fontSize})
+
 
 
 

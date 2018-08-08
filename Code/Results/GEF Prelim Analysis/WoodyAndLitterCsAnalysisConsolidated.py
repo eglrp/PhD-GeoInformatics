@@ -448,13 +448,78 @@ with open(outFileName, 'wb') as outfile:
 #---------------------------------------------------------------------------------------------------------------
 # get stats and std errors per stratum
 
-id = np.array([plot['ID'] for plot in summaryPlots.values()])
-ycHa = np.array([plot['YcHa'] for plot in summaryPlots.values()])
-agbHa = np.array([plot['AgbHa'] for plot in summaryPlots.values()])
-litterHa = np.array([plot['LitterHa'] for plot in summaryPlots.values()])
-degrClass = np.array([plot['Degr. Class'] for plot in summaryPlots.values()])
+ids = np.array([plot['ID'] for plot in summaryPlots.values()])
+ycHas = np.array([plot['YcHa'] for plot in summaryPlots.values()])
+agbHas = np.array([plot['AgbHa'] for plot in summaryPlots.values()])
+litterHas = np.array([plot['LitterHa'] for plot in summaryPlots.values()])
+degrClasses = np.array([plot['Degr. Class'] for plot in summaryPlots.values()])
 
-degrClasses = np.unique(degrClass)
+statsDict={}
+for degrClass in np.unique(degrClasses):
+    classIdx = degrClass == degrClasses
+    stats = {}
+    stats['MeanYcHa'] = ycHas[classIdx].mean()
+    stats['StdYcHa'] = ycHas[classIdx].std()
+    stats['SeYcHa'] = ycHas[classIdx].std()/np.sqrt(classIdx.sum())
+    stats['Se:MeanYcHa'] = 100*stats['SeYcHa']/stats['MeanYcHa']
+
+    stats['MeanAgbHa'] = agbHas[classIdx].mean()
+    stats['StdAgbHa'] = agbHas[classIdx].std()
+    stats['SeAgbHa'] = agbHas[classIdx].std() / np.sqrt(classIdx.sum())
+    stats['Se:MeanAgbHa'] = 100*stats['SeAgbHa']/stats['MeanAgbHa']
+
+    stats['MeanLitterHa'] = litterHas[classIdx].mean()
+    stats['StdLitterHa'] = litterHas[classIdx].std()
+    stats['SeLitterHa'] = litterHas[classIdx].std() / np.sqrt(classIdx.sum())
+    stats['Se:MeanLitterHa'] = 100 * stats['SeLitterHa'] / stats['MeanLitterHa']
+
+    statsDict[degrClass] = stats
+
+    print 'Degradation Class: %s'%(degrClass)
+    print '--------------------------------------'
+    print 'Mean (Std) Woody C (kg/ha): %.0f (%.0f)'%(stats['MeanYcHa'], stats['StdYcHa'])
+    print 'Mean (Std) Litter C (kg/ha): %.0f (%.0f)' % (stats['MeanLitterHa'], stats['StdLitterHa'])
+    print 'Mean (Std) AGB C (kg/ha): %.0f (%.0f)' % (stats['MeanAgbHa'], stats['StdAgbHa'])
+    print 'SE/Mean Woody (%%): %.2f' % (stats['Se:MeanYcHa'])
+    print 'SE/Mean Litter (%%): %.2f' % (stats['Se:MeanLitterHa'])
+    print 'SE/Mean AGB (%%): %.2f' % (stats['Se:MeanAgbHa'])
+    print ''
+
+severeIdx = degrClasses == 'Severe'
+svfIdx = np.array([str(id).startswith('SS') for id in ids])
+tchIdx = (~svfIdx) & severeIdx
+farmNames = ['Sewefontein', 'Tchnuganu']
+farmDict = {}
+for idx, farmName in zip([svfIdx, tchIdx], farmNames):
+    stats = {}
+    stats['MeanYcHa'] = ycHas[idx].mean()
+    stats['StdYcHa'] = ycHas[idx].std()
+    stats['SeYcHa'] = ycHas[idx].std()/np.sqrt(idx.sum())
+    stats['Se:MeanYcHa'] = 100*stats['SeYcHa']/stats['MeanYcHa']
+
+    stats['MeanAgbHa'] = agbHas[idx].mean()
+    stats['StdAgbHa'] = agbHas[idx].std()
+    stats['SeAgbHa'] = agbHas[idx].std() / np.sqrt(idx.sum())
+    stats['Se:MeanAgbHa'] = 100*stats['SeAgbHa']/stats['MeanAgbHa']
+
+    stats['MeanLitterHa'] = litterHas[idx].mean()
+    stats['StdLitterHa'] = litterHas[idx].std()
+    stats['SeLitterHa'] = litterHas[idx].std() / np.sqrt(idx.sum())
+    stats['Se:MeanLitterHa'] = 100 * stats['SeLitterHa'] / stats['MeanLitterHa']
+
+    farmDict[farmName] = stats
+
+    print 'Farm: %s' % (farmName)
+    print '--------------------------------------'
+    print 'Mean (Std) Woody C (kg/ha): %.0f (%.0f)' % (stats['MeanYcHa'], stats['StdYcHa'])
+    print 'Mean (Std) Litter C (kg/ha): %.0f (%.0f)' % (stats['MeanLitterHa'], stats['StdLitterHa'])
+    print 'Mean (Std) AGB C (kg/ha): %.0f (%.0f)' % (stats['MeanAgbHa'], stats['StdAgbHa'])
+    print 'SE/Mean Woody (%%): %.2f' % (stats['Se:MeanYcHa'])
+    print 'SE/Mean Litter (%%): %.2f' % (stats['Se:MeanLitterHa'])
+    print 'SE/Mean AGB (%%): %.2f' % (stats['Se:MeanAgbHa'])
+    print ''
+
+# statsDict['All'] = stats
 
 #-----------------------------------------------------------------------------------------------------------------
 #  look at height & yc distribution for 5x5m plots

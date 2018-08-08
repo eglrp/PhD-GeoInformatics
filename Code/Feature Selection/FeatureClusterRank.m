@@ -174,10 +174,15 @@ else
 %         xlabel('Features', 'FontSize', 11)
     %     view(90, 90)
         hl = legend(hp, 'Dissimilarity threshold', 'Location', 'NorthWest')
+        %title(hl, '')
+        legend(gca, 'boxoff')
         fontsize(11)
         set(hl,'FontSize',11);
         view(90,90)   % for paper
-
+%         grid off
+%         print("C:\Data\Development\Projects\PhD GeoInformatics\Docs\My Docs\Thesis\VHR Spekboom Canopy Cover Mapping\Fig. 6  Clustering of correlated features.png",...
+%             '-dpng', '-r600')
+        
     end
 end % hierarchical clustering
 
