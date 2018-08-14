@@ -475,7 +475,7 @@ for degrClass in np.unique(degrClasses):
 
     statsDict[degrClass] = stats
 
-    print 'Degradation Class: %s'%(degrClass)
+    print 'Degradation Class: %s , N: %d'%(degrClass, classIdx.sum())
     print '--------------------------------------'
     print 'Mean (Std) Woody C (kg/ha): %.0f (%.0f)'%(stats['MeanYcHa'], stats['StdYcHa'])
     print 'Mean (Std) Litter C (kg/ha): %.0f (%.0f)' % (stats['MeanLitterHa'], stats['StdLitterHa'])
@@ -487,7 +487,7 @@ for degrClass in np.unique(degrClasses):
 
 severeIdx = degrClasses == 'Severe'
 svfIdx = np.array([str(id).startswith('SS') for id in ids])
-tchIdx = (~svfIdx) & severeIdx
+tchIdx = (~svfIdx) & severeIdx & (litterHas > 0)
 farmNames = ['Sewefontein', 'Tchnuganu']
 farmDict = {}
 for idx, farmName in zip([svfIdx, tchIdx], farmNames):
