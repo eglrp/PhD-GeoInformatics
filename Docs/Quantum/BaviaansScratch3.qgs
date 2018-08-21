@@ -27,9 +27,21 @@
     <layer-tree-layer checked="Qt::Checked" providerKey="ogr" expanded="1" id="GefStudyAreaGCPs_4a4f892a_5c2f_4433_9ae5_6431b7ef01dc" name="GefStudyAreaGCPs" source="../../Data/GEF GCPs/GefStudyAreaGCPs.shp">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-group checked="Qt::Unchecked" expanded="0" name="Baviaans Vector Data">
+    <layer-tree-group checked="Qt::Checked" expanded="1" name="Baviaans Vector Data">
       <customproperties/>
-      <layer-tree-group checked="Qt::Checked" expanded="1" name="GEF">
+      <layer-tree-group checked="Qt::Checked" expanded="1" name="GEF GCPs">
+        <customproperties/>
+        <layer-tree-layer checked="Qt::Checked" providerKey="ogr" expanded="1" id="Point_ge_07619ac6_2087_4469_be48_a0145b2d3f30" name="Point_ge" source="../../Data/GEF GCPs/DGPS/gef-gcp-tch/Point_ge.shp">
+          <customproperties/>
+        </layer-tree-layer>
+        <layer-tree-layer checked="Qt::Checked" providerKey="ogr" expanded="1" id="Point_ge_59c1b773_d190_4b49_86f3_7dd201205a9f" name="Point_ge" source="../../Data/GEF GCPs/DGPS/gef-gcp-swftn/Point_ge.shp">
+          <customproperties/>
+        </layer-tree-layer>
+        <layer-tree-layer checked="Qt::Checked" providerKey="ogr" expanded="1" id="Point_ge_096e3bdc_33df_4ccd_b2f9_611b7c7b9ffa" name="Point_ge" source="../../Data/GEF GCPs/DGPS/gef-gcp-main-road/Point_ge.shp">
+          <customproperties/>
+        </layer-tree-layer>
+      </layer-tree-group>
+      <layer-tree-group checked="Qt::Unchecked" expanded="1" name="GEF">
         <customproperties/>
         <layer-tree-group checked="Qt::Checked" expanded="1" name="June 2018 Sampling Points">
           <customproperties/>
@@ -509,85 +521,91 @@
       <item>17OCT01084657_M2AS_058217622010_01_P001_OrthoRpcOnlyCmp_8a7948d4_ccbf_48ea_9451_44790b372689</item>
       <item>17OCT01084657_P2AS_058217622010_01_P001_OrthoRpcOnlyCmp_18ea0477_db99_40c3_992e_ada982b04ee5</item>
       <item>GefStudyAreaGCPs_4a4f892a_5c2f_4433_9ae5_6431b7ef01dc</item>
+      <item>Point_ge_096e3bdc_33df_4ccd_b2f9_611b7c7b9ffa</item>
+      <item>Point_ge_59c1b773_d190_4b49_86f3_7dd201205a9f</item>
+      <item>Point_ge_07619ac6_2087_4469_be48_a0145b2d3f30</item>
     </custom-order>
   </layer-tree-group>
   <snapping-settings intersection-snapping="0" mode="1" unit="2" type="1" tolerance="0" enabled="0">
     <individual-layer-settings>
-      <layer-setting type="2" tolerance="0" enabled="0" id="Point_ge20171209220624567" units="2"/>
-      <layer-setting type="1" tolerance="12" enabled="0" id="Point_ge_cd6edf6e_65fd_493a_a1b3_9b07a582409c" units="1"/>
-      <layer-setting type="1" tolerance="12" enabled="0" id="Tchnuganu_Supplemental_Sampling_Points_664699c3_0863_4da9_8a18_512fdc85d7a7" units="1"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="ThnuganuDegradedTrialPointsV220170831101259382" units="2"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="Point_ge20180118150525665" units="2"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="Point_ge20180118150511426" units="2"/>
       <layer-setting type="2" tolerance="0" enabled="0" id="abf_agc_191_plots20170727203413936" units="2"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="gps_coords_191plots20170727205628077" units="2"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="memory_20180118165008962" units="2"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="Point_ge20171209220523330" units="2"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="GEF_Sampling_Areas20171126191058114" units="2"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="Point_ge20180221182521177" units="2"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="initiativesa_spek_20170624101935911" units="2"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="bmr_planning_domain20170304123226862" units="2"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="Point_ge20171209220644583" units="2"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="Point_ge20171209220638859" units="2"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="sewefontein_tchuganu_bound_wgs8420170304123226893" units="2"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="Point_ge20180118150546813" units="2"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="SewefonteinIntactAreaForTrialV220171122105250632" units="2"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="SewefonteinIntactAreaForTrial_copy20171122104324818" units="2"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="memory_20180118163442111" units="2"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="sewefontein20170327111125203" units="2"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="vlokveg2010_Tm2520170304123226893" units="2"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="Point_ge20180118150536778" units="2"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="ZAF_adm120170804001858449" units="2"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="abf_agc_191_plots_bound20170304123330439" units="2"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="initiativessa20170624101501538" units="2"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="Point_ge20170616224351190" units="2"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="Point_ge20170616224852956" units="2"/>
-      <layer-setting type="1" tolerance="12" enabled="0" id="GEF_ROI_d58eca8e_87bd_4399_9d67_efedc2b1d876" units="1"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="BaviiaansPeCorrectedGcpMay2017Combined20170720173845991" units="2"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="Point_ge20171209220619914" units="2"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="Point_ge20171209220613626" units="2"/>
-      <layer-setting type="1" tolerance="12" enabled="0" id="GefStudyAreaGCPs_4a4f892a_5c2f_4433_9ae5_6431b7ef01dc" units="1"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="GEF_Sampling_Points_V220180309142426505" units="2"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="Point_ge20170616222751098" units="2"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="GEF_Property_boundaries20171124113951351" units="2"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="Point_ge20171209220054712" units="2"/>
       <layer-setting type="1" tolerance="12" enabled="0" id="Point_ge_2ebad16d_e65e_4c4b_ab6b_fd54b75253ed" units="1"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="Quickbird_056844553010_01_Gcp20170802213252670" units="2"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="Ngi2015_3324C_ROI20171028185721552" units="2"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="GEF_Sampling_Areas_V220180118154257585" units="2"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="GEF_Sampling_Areas_Bidolph20171124114452284" units="2"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="Point_ge20180221172528422" units="2"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="Point_ge20180118150557517" units="2"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="Baviaans_contract_Data20170304123226846" units="2"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="BMR_ROI20170304123226877" units="2"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="Point_ge20180118150525665" units="2"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="memory_20180118163442111" units="2"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="ZAF_adm120170804001858449" units="2"/>
       <layer-setting type="2" tolerance="0" enabled="0" id="Point_ge20171209220606618" units="2"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="QuickbirdGcp20170720173032402" units="2"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="SewefonteinTchuganuDegrMap20170703140304176" units="2"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="Sheet_50K20170329124416633" units="2"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="bmr_protected_areas20170304123226877" units="2"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="vlokveg2010_Tm2520170304123226893" units="2"/>
       <layer-setting type="2" tolerance="0" enabled="0" id="GEF_Plot_Polygons_with_Yc20180311213016108" units="2"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="SeweTchu_old_spekboomveld2_Vlok_SeweTchu_old_spekboomveld2_Vlok_kmz_Polygon20170811124255553" units="2"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="SewefonteinIntactAreaForTrialV120171122105116574" units="2"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="Point_ge20171209220633507" units="2"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="Point_ge20171209220629268" units="2"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="vlokveg2010_Tm25_Degr_copy20170304124946370" units="2"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="Point_ge20171209220600079" units="2"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="Point_ge20171209220546564" units="2"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="Plantable_Degraded20180118152358212" units="2"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="GEF_Ancillary_Data20180118162638155" units="2"/>
-      <layer-setting type="2" tolerance="0" enabled="0" id="Point_ge20171209220555118" units="2"/>
+      <layer-setting type="1" tolerance="12" enabled="0" id="Point_ge_59c1b773_d190_4b49_86f3_7dd201205a9f" units="1"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="initiativesa_spek_20170624101935911" units="2"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="Quickbird_056844553010_01_Gcp20170802213252670" units="2"/>
       <layer-setting type="1" tolerance="12" enabled="0" id="GEF_ROI2_8fdadac7_59c5_47cc_a16a_1c93f68ba39d" units="1"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="Point_ge20170616222751098" units="2"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="ThnuganuDegradedTrialPointsV220170831101259382" units="2"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="GEF_Sampling_Areas_Bidolph20171124114452284" units="2"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="GEF_Sampling_Areas20171126191058114" units="2"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="memory_20180118165008962" units="2"/>
+      <layer-setting type="1" tolerance="12" enabled="0" id="Point_ge_096e3bdc_33df_4ccd_b2f9_611b7c7b9ffa" units="1"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="SewefonteinIntactAreaForTrialV220171122105250632" units="2"/>
       <layer-setting type="2" tolerance="0" enabled="0" id="SewefonteinIntactTrialPointsV220170831113851977" units="2"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="Point_ge20171209220555118" units="2"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="Point_ge20171209220624567" units="2"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="Point_ge20171209220523330" units="2"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="Point_ge20171209220638859" units="2"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="BaviiaansPeCorrectedGcpMay2017Combined20170720173845991" units="2"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="SewefonteinTchuganuDegrMap20170703140304176" units="2"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="Plantable_Degraded20180118152358212" units="2"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="SewefonteinIntactAreaForTrial_copy20171122104324818" units="2"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="BMR_ROI20170304123226877" units="2"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="Point_ge20171209220054712" units="2"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="GEF_Ancillary_Data20180118162638155" units="2"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="Point_ge20171209220629268" units="2"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="Point_ge20180221182521177" units="2"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="Ngi2015_3324C_ROI20171028185721552" units="2"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="abf_agc_191_plots_bound20170304123330439" units="2"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="Point_ge20170616224351190" units="2"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="SeweTchu_old_spekboomveld2_Vlok_SeweTchu_old_spekboomveld2_Vlok_kmz_Polygon20170811124255553" units="2"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="GEF_Sampling_Areas_V220180118154257585" units="2"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="Point_ge20180118150557517" units="2"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="Point_ge20171209220644583" units="2"/>
+      <layer-setting type="1" tolerance="12" enabled="0" id="GEF_ROI_d58eca8e_87bd_4399_9d67_efedc2b1d876" units="1"/>
+      <layer-setting type="1" tolerance="12" enabled="0" id="GefStudyAreaGCPs_4a4f892a_5c2f_4433_9ae5_6431b7ef01dc" units="1"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="Point_ge20171209220613626" units="2"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="Sheet_50K20170329124416633" units="2"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="Point_ge20171209220546564" units="2"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="Point_ge20180118150546813" units="2"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="Baviaans_contract_Data20170304123226846" units="2"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="sewefontein_tchuganu_bound_wgs8420170304123226893" units="2"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="GEF_Property_boundaries20171124113951351" units="2"/>
+      <layer-setting type="1" tolerance="12" enabled="0" id="Point_ge_cd6edf6e_65fd_493a_a1b3_9b07a582409c" units="1"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="Point_ge20171209220633507" units="2"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="Point_ge20180118150536778" units="2"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="GEF_Sampling_Points_V220180309142426505" units="2"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="initiativessa20170624101501538" units="2"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="SewefonteinIntactAreaForTrialV120171122105116574" units="2"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="Point_ge20180118150511426" units="2"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="bmr_protected_areas20170304123226877" units="2"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="Point_ge20180221172528422" units="2"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="gps_coords_191plots20170727205628077" units="2"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="Point_ge20170616224852956" units="2"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="bmr_planning_domain20170304123226862" units="2"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="Point_ge20171209220619914" units="2"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="QuickbirdGcp20170720173032402" units="2"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="Point_ge20171209220600079" units="2"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="vlokveg2010_Tm25_Degr_copy20170304124946370" units="2"/>
+      <layer-setting type="2" tolerance="0" enabled="0" id="sewefontein20170327111125203" units="2"/>
+      <layer-setting type="1" tolerance="12" enabled="0" id="Point_ge_07619ac6_2087_4469_be48_a0145b2d3f30" units="1"/>
+      <layer-setting type="1" tolerance="12" enabled="0" id="Tchnuganu_Supplemental_Sampling_Points_664699c3_0863_4da9_8a18_512fdc85d7a7" units="1"/>
     </individual-layer-settings>
   </snapping-settings>
   <relations/>
   <mapcanvas annotationsVisible="1" name="theMapCanvas">
     <units>degrees</units>
     <extent>
-      <xmin>23.970936810748384</xmin>
-      <ymin>-33.55926757053592979</ymin>
-      <xmax>23.9904342696256947</xmax>
-      <ymax>-33.54609921319116239</ymax>
+      <xmin>23.98206413129226888</xmin>
+      <ymin>-33.54804419694038131</ymin>
+      <xmax>23.98415350619927011</xmax>
+      <ymax>-33.54663305738749557</ymax>
     </extent>
     <rotation>0</rotation>
     <destinationsrs>
@@ -620,8 +638,25 @@
         <legendlayerfile layerid="GefStudyAreaGCPs_4a4f892a_5c2f_4433_9ae5_6431b7ef01dc" isInOverview="0" visible="1"/>
       </filegroup>
     </legendlayer>
-    <legendgroup checked="Qt::Unchecked" open="false" name="Baviaans Vector Data">
-      <legendgroup checked="Qt::Checked" open="true" name="GEF">
+    <legendgroup checked="Qt::Checked" open="true" name="Baviaans Vector Data">
+      <legendgroup checked="Qt::Checked" open="true" name="GEF GCPs">
+        <legendlayer checked="Qt::Checked" open="true" showFeatureCount="0" name="Point_ge" drawingOrder="-1">
+          <filegroup open="true" hidden="false">
+            <legendlayerfile layerid="Point_ge_07619ac6_2087_4469_be48_a0145b2d3f30" isInOverview="0" visible="1"/>
+          </filegroup>
+        </legendlayer>
+        <legendlayer checked="Qt::Checked" open="true" showFeatureCount="0" name="Point_ge" drawingOrder="-1">
+          <filegroup open="true" hidden="false">
+            <legendlayerfile layerid="Point_ge_59c1b773_d190_4b49_86f3_7dd201205a9f" isInOverview="0" visible="1"/>
+          </filegroup>
+        </legendlayer>
+        <legendlayer checked="Qt::Checked" open="true" showFeatureCount="0" name="Point_ge" drawingOrder="-1">
+          <filegroup open="true" hidden="false">
+            <legendlayerfile layerid="Point_ge_096e3bdc_33df_4ccd_b2f9_611b7c7b9ffa" isInOverview="0" visible="1"/>
+          </filegroup>
+        </legendlayer>
+      </legendgroup>
+      <legendgroup checked="Qt::Unchecked" open="true" name="GEF">
         <legendgroup checked="Qt::Checked" open="true" name="June 2018 Sampling Points">
           <legendlayer checked="Qt::Unchecked" open="true" showFeatureCount="0" name="Point_ge" drawingOrder="-1">
             <filegroup open="true" hidden="false">
@@ -2066,7 +2101,7 @@
             <algorithm>StretchToMinimumMaximum</algorithm>
           </contrastEnhancement>
         </rasterrenderer>
-        <brightnesscontrast contrast="0" brightness="0"/>
+        <brightnesscontrast contrast="1" brightness="0"/>
         <huesaturation colorizeOn="0" colorizeBlue="128" colorizeGreen="128" colorizeStrength="100" colorizeRed="255" saturation="0" grayscaleMode="0"/>
         <rasterresampler maxOversampling="2"/>
       </pipe>
@@ -6865,7 +6900,7 @@ def my_form_open(dialog, layer, feature):
     <maplayer geometry="Point" autoRefreshTime="0" readOnly="0" simplifyAlgorithm="0" refreshOnNotifyEnabled="0" simplifyMaxScale="1" type="vector" autoRefreshEnabled="0" refreshOnNotifyMessage="" maxScale="0" simplifyDrawingHints="0" hasScaleBasedVisibilityFlag="0" minScale="1e+8" simplifyLocal="1" labelsEnabled="0" simplifyDrawingTol="1">
       <extent>
         <xmin>23.92656771076533673</xmin>
-        <ymin>-33.55849964708130528</ymin>
+        <ymin>-33.56287459441441712</ymin>
         <xmax>24.01002898111286399</xmax>
         <ymax>-33.52628175285547485</ymax>
       </extent>
@@ -6975,7 +7010,6 @@ def my_form_open(dialog, layer, feature):
       <customproperties>
         <property key="dualview/previewExpressions">
           <value>id</value>
-          <value>"id"</value>
         </property>
         <property value="0" key="embeddedWidgets/count"/>
         <property key="variableNames"/>
@@ -7055,10 +7089,10 @@ def my_form_open(dialog, layer, feature):
       <attributeactions>
         <defaultAction value="{00000000-0000-0000-0000-000000000000}" key="Canvas"/>
       </attributeactions>
-      <attributetableconfig sortOrder="1" sortExpression="&quot;id&quot;" actionWidgetStyle="dropDown">
+      <attributetableconfig sortOrder="0" sortExpression="&quot;FileName&quot;" actionWidgetStyle="dropDown">
         <columns>
-          <column type="field" width="-1" name="id" hidden="0"/>
-          <column type="field" width="-1" name="Name" hidden="0"/>
+          <column type="field" width="180" name="id" hidden="0"/>
+          <column type="field" width="276" name="Name" hidden="0"/>
           <column type="field" width="307" name="Descriptio" hidden="0"/>
           <column type="actions" width="-1" hidden="1"/>
           <column type="field" width="-1" name="FileName" hidden="0"/>
@@ -12899,6 +12933,352 @@ def my_form_open(dialog, layer, feature):
     </maplayer>
     <maplayer geometry="Point" autoRefreshTime="0" readOnly="0" simplifyAlgorithm="0" refreshOnNotifyEnabled="0" simplifyMaxScale="1" type="vector" autoRefreshEnabled="0" refreshOnNotifyMessage="" maxScale="0" simplifyDrawingHints="1" hasScaleBasedVisibilityFlag="0" minScale="1e+8" simplifyLocal="1" labelsEnabled="0" simplifyDrawingTol="1">
       <extent>
+        <xmin>23.99277359981599744</xmin>
+        <ymin>-33.56343183042189793</ymin>
+        <xmax>23.99868778041809847</xmax>
+        <ymax>-33.55566329537974468</ymax>
+      </extent>
+      <id>Point_ge_07619ac6_2087_4469_be48_a0145b2d3f30</id>
+      <datasource>../../Data/GEF GCPs/DGPS/gef-gcp-tch/Point_ge.shp</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>Point_ge</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+          <srsid>3452</srsid>
+          <srid>4326</srid>
+          <authid>EPSG:4326</authid>
+          <description>WGS 84</description>
+          <projectionacronym>longlat</projectionacronym>
+          <ellipsoidacronym>WGS84</ellipsoidacronym>
+          <geographicflag>true</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <provider encoding="System">ogr</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <dataDependencies/>
+      <expressionfields/>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <auxiliaryLayer/>
+      <renderer-v2 forceraster="0" type="singleSymbol" enableorderby="0" symbollevels="0">
+        <symbols>
+          <symbol clip_to_extent="1" type="marker" name="0" alpha="1">
+            <layer class="SimpleMarker" locked="0" pass="0" enabled="1">
+              <prop v="0" k="angle"/>
+              <prop v="40,241,225,255" k="color"/>
+              <prop v="1" k="horizontal_anchor_point"/>
+              <prop v="bevel" k="joinstyle"/>
+              <prop v="circle" k="name"/>
+              <prop v="0,0" k="offset"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+              <prop v="MM" k="offset_unit"/>
+              <prop v="35,35,35,255" k="outline_color"/>
+              <prop v="solid" k="outline_style"/>
+              <prop v="0" k="outline_width"/>
+              <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
+              <prop v="MM" k="outline_width_unit"/>
+              <prop v="diameter" k="scale_method"/>
+              <prop v="2" k="size"/>
+              <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
+              <prop v="MM" k="size_unit"/>
+              <prop v="1" k="vertical_anchor_point"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option type="QString" name="name" value=""/>
+                  <Option name="properties"/>
+                  <Option type="QString" name="type" value="collection"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+        </symbols>
+        <rotation/>
+        <sizescale/>
+      </renderer-v2>
+      <customproperties/>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerOpacity>1</layerOpacity>
+      <fieldConfiguration>
+        <field name="Comment">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+      </fieldConfiguration>
+      <aliases>
+        <alias index="0" name="" field="Comment"/>
+      </aliases>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <defaults>
+        <default applyOnUpdate="0" expression="" field="Comment"/>
+      </defaults>
+      <constraints>
+        <constraint constraints="0" exp_strength="0" notnull_strength="0" unique_strength="0" field="Comment"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint exp="" desc="" field="Comment"/>
+      </constraintExpressions>
+      <attributeactions>
+        <defaultAction value="{00000000-0000-0000-0000-000000000000}" key="Canvas"/>
+      </attributeactions>
+      <attributetableconfig sortOrder="0" sortExpression="" actionWidgetStyle="dropDown">
+        <columns/>
+      </attributetableconfig>
+      <editform></editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath></editforminitfilepath>
+      <editforminitcode><![CDATA[]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <editable/>
+      <labelOnTop/>
+      <widgets/>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <expressionfields/>
+      <previewExpression></previewExpression>
+      <mapTip></mapTip>
+    </maplayer>
+    <maplayer geometry="Point" autoRefreshTime="0" readOnly="0" simplifyAlgorithm="0" refreshOnNotifyEnabled="0" simplifyMaxScale="1" type="vector" autoRefreshEnabled="0" refreshOnNotifyMessage="" maxScale="0" simplifyDrawingHints="0" hasScaleBasedVisibilityFlag="0" minScale="1e+8" simplifyLocal="1" labelsEnabled="0" simplifyDrawingTol="1">
+      <extent>
+        <xmin>23.98336996377745223</xmin>
+        <ymin>-33.55524882683440779</ymin>
+        <xmax>24.01003456351070042</xmax>
+        <ymax>-33.54500935134938544</ymax>
+      </extent>
+      <id>Point_ge_096e3bdc_33df_4ccd_b2f9_611b7c7b9ffa</id>
+      <datasource>../../Data/GEF GCPs/DGPS/gef-gcp-main-road/Point_ge.shp</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>Point_ge</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+          <srsid>3452</srsid>
+          <srid>4326</srid>
+          <authid>EPSG:4326</authid>
+          <description>WGS 84</description>
+          <projectionacronym>longlat</projectionacronym>
+          <ellipsoidacronym>WGS84</ellipsoidacronym>
+          <geographicflag>true</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent>
+          <spatial crs="" maxx="0" minx="0" maxz="0" dimensions="2" minz="0" miny="0" maxy="0"/>
+          <temporal>
+            <period>
+              <start></start>
+              <end></end>
+            </period>
+          </temporal>
+        </extent>
+        <contact>
+          <name></name>
+          <organization></organization>
+          <position></position>
+          <voice></voice>
+          <fax></fax>
+          <email></email>
+          <role></role>
+        </contact>
+        <links/>
+      </resourceMetadata>
+      <provider encoding="System">ogr</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <dataDependencies/>
+      <expressionfields/>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <auxiliaryLayer/>
+      <renderer-v2 forceraster="0" type="singleSymbol" enableorderby="0" symbollevels="0">
+        <symbols>
+          <symbol clip_to_extent="1" type="marker" name="0" alpha="1">
+            <layer class="SimpleMarker" locked="0" pass="0" enabled="1">
+              <prop v="0" k="angle"/>
+              <prop v="61,163,187,255" k="color"/>
+              <prop v="1" k="horizontal_anchor_point"/>
+              <prop v="bevel" k="joinstyle"/>
+              <prop v="circle" k="name"/>
+              <prop v="0,0" k="offset"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+              <prop v="MM" k="offset_unit"/>
+              <prop v="35,35,35,255" k="outline_color"/>
+              <prop v="solid" k="outline_style"/>
+              <prop v="0" k="outline_width"/>
+              <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
+              <prop v="MM" k="outline_width_unit"/>
+              <prop v="diameter" k="scale_method"/>
+              <prop v="2" k="size"/>
+              <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
+              <prop v="MM" k="size_unit"/>
+              <prop v="1" k="vertical_anchor_point"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option type="QString" name="name" value=""/>
+                  <Option name="properties"/>
+                  <Option type="QString" name="type" value="collection"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+        </symbols>
+        <rotation/>
+        <sizescale/>
+      </renderer-v2>
+      <customproperties>
+        <property value="0" key="embeddedWidgets/count"/>
+        <property key="variableNames"/>
+        <property key="variableValues"/>
+      </customproperties>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerOpacity>1</layerOpacity>
+      <SingleCategoryDiagramRenderer diagramType="Histogram" attributeLegend="1">
+        <DiagramCategory rotationOffset="270" minScaleDenominator="0" maxScaleDenominator="1e+8" width="15" enabled="0" penWidth="0" lineSizeScale="3x:0,0,0,0,0,0" sizeType="MM" penColor="#000000" barWidth="5" penAlpha="255" backgroundColor="#ffffff" scaleDependency="Area" backgroundAlpha="255" opacity="1" labelPlacementMethod="XHeight" height="15" scaleBasedVisibility="0" diagramOrientation="Up" minimumSize="0" lineSizeType="MM" sizeScale="3x:0,0,0,0,0,0">
+          <fontProperties style="" description="MS Shell Dlg 2,7.8,-1,5,50,0,0,0,0,0"/>
+        </DiagramCategory>
+      </SingleCategoryDiagramRenderer>
+      <DiagramLayerSettings linePlacementFlags="18" dist="0" placement="0" obstacle="0" showAll="1" priority="0" zIndex="0">
+        <properties>
+          <Option type="Map">
+            <Option type="QString" name="name" value=""/>
+            <Option name="properties"/>
+            <Option type="QString" name="type" value="collection"/>
+          </Option>
+        </properties>
+      </DiagramLayerSettings>
+      <fieldConfiguration>
+        <field name="Comment">
+          <editWidget type="TextEdit">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+      </fieldConfiguration>
+      <aliases>
+        <alias index="0" name="" field="Comment"/>
+      </aliases>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <defaults>
+        <default applyOnUpdate="0" expression="" field="Comment"/>
+      </defaults>
+      <constraints>
+        <constraint constraints="0" exp_strength="0" notnull_strength="0" unique_strength="0" field="Comment"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint exp="" desc="" field="Comment"/>
+      </constraintExpressions>
+      <attributeactions>
+        <defaultAction value="{00000000-0000-0000-0000-000000000000}" key="Canvas"/>
+      </attributeactions>
+      <attributetableconfig sortOrder="0" sortExpression="" actionWidgetStyle="dropDown">
+        <columns>
+          <column type="field" width="-1" name="Comment" hidden="0"/>
+          <column type="actions" width="-1" hidden="1"/>
+        </columns>
+      </attributetableconfig>
+      <editform></editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath></editforminitfilepath>
+      <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
+"""
+QGIS forms can have a Python function that is called when the form is
+opened.
+
+Use this function to add extra logic to your forms.
+
+Enter the name of the function in the "Python Init function"
+field.
+An example follows:
+"""
+from qgis.PyQt.QtWidgets import QWidget
+
+def my_form_open(dialog, layer, feature):
+	geom = feature.geometry()
+	control = dialog.findChild(QWidget, "MyLineEdit")
+]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <editable>
+        <field editable="1" name="Comment"/>
+      </editable>
+      <labelOnTop>
+        <field labelOnTop="0" name="Comment"/>
+      </labelOnTop>
+      <widgets/>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <expressionfields/>
+      <previewExpression>Comment</previewExpression>
+      <mapTip></mapTip>
+    </maplayer>
+    <maplayer geometry="Point" autoRefreshTime="0" readOnly="0" simplifyAlgorithm="0" refreshOnNotifyEnabled="0" simplifyMaxScale="1" type="vector" autoRefreshEnabled="0" refreshOnNotifyMessage="" maxScale="0" simplifyDrawingHints="1" hasScaleBasedVisibilityFlag="0" minScale="1e+8" simplifyLocal="1" labelsEnabled="0" simplifyDrawingTol="1">
+      <extent>
         <xmin>23.9354336659162712</xmin>
         <ymin>-33.56106231891347136</ymin>
         <xmax>23.94875801137840554</xmax>
@@ -13200,6 +13580,150 @@ def my_form_open(dialog, layer, feature):
       </conditionalstyles>
       <expressionfields/>
       <previewExpression>"Feat_Name"</previewExpression>
+      <mapTip></mapTip>
+    </maplayer>
+    <maplayer geometry="Point" autoRefreshTime="0" readOnly="0" simplifyAlgorithm="0" refreshOnNotifyEnabled="0" simplifyMaxScale="1" type="vector" autoRefreshEnabled="0" refreshOnNotifyMessage="" maxScale="0" simplifyDrawingHints="1" hasScaleBasedVisibilityFlag="0" minScale="1e+8" simplifyLocal="1" labelsEnabled="0" simplifyDrawingTol="1">
+      <extent>
+        <xmin>23.95158405956301095</xmin>
+        <ymin>-33.55909717757992894</ymin>
+        <xmax>23.9729499696926851</xmax>
+        <ymax>-33.54514816829117763</ymax>
+      </extent>
+      <id>Point_ge_59c1b773_d190_4b49_86f3_7dd201205a9f</id>
+      <datasource>../../Data/GEF GCPs/DGPS/gef-gcp-swftn/Point_ge.shp</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>Point_ge</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+          <srsid>3452</srsid>
+          <srid>4326</srid>
+          <authid>EPSG:4326</authid>
+          <description>WGS 84</description>
+          <projectionacronym>longlat</projectionacronym>
+          <ellipsoidacronym>WGS84</ellipsoidacronym>
+          <geographicflag>true</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <provider encoding="System">ogr</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <dataDependencies/>
+      <expressionfields/>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <auxiliaryLayer/>
+      <renderer-v2 forceraster="0" type="singleSymbol" enableorderby="0" symbollevels="0">
+        <symbols>
+          <symbol clip_to_extent="1" type="marker" name="0" alpha="1">
+            <layer class="SimpleMarker" locked="0" pass="0" enabled="1">
+              <prop v="0" k="angle"/>
+              <prop v="33,184,116,255" k="color"/>
+              <prop v="1" k="horizontal_anchor_point"/>
+              <prop v="bevel" k="joinstyle"/>
+              <prop v="circle" k="name"/>
+              <prop v="0,0" k="offset"/>
+              <prop v="3x:0,0,0,0,0,0" k="offset_map_unit_scale"/>
+              <prop v="MM" k="offset_unit"/>
+              <prop v="35,35,35,255" k="outline_color"/>
+              <prop v="solid" k="outline_style"/>
+              <prop v="0" k="outline_width"/>
+              <prop v="3x:0,0,0,0,0,0" k="outline_width_map_unit_scale"/>
+              <prop v="MM" k="outline_width_unit"/>
+              <prop v="diameter" k="scale_method"/>
+              <prop v="2" k="size"/>
+              <prop v="3x:0,0,0,0,0,0" k="size_map_unit_scale"/>
+              <prop v="MM" k="size_unit"/>
+              <prop v="1" k="vertical_anchor_point"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option type="QString" name="name" value=""/>
+                  <Option name="properties"/>
+                  <Option type="QString" name="type" value="collection"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+        </symbols>
+        <rotation/>
+        <sizescale/>
+      </renderer-v2>
+      <customproperties/>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerOpacity>1</layerOpacity>
+      <fieldConfiguration>
+        <field name="Comment">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+      </fieldConfiguration>
+      <aliases>
+        <alias index="0" name="" field="Comment"/>
+      </aliases>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <defaults>
+        <default applyOnUpdate="0" expression="" field="Comment"/>
+      </defaults>
+      <constraints>
+        <constraint constraints="0" exp_strength="0" notnull_strength="0" unique_strength="0" field="Comment"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint exp="" desc="" field="Comment"/>
+      </constraintExpressions>
+      <attributeactions>
+        <defaultAction value="{00000000-0000-0000-0000-000000000000}" key="Canvas"/>
+      </attributeactions>
+      <attributetableconfig sortOrder="0" sortExpression="" actionWidgetStyle="dropDown">
+        <columns/>
+      </attributetableconfig>
+      <editform></editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath></editforminitfilepath>
+      <editforminitcode><![CDATA[]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <editable/>
+      <labelOnTop/>
+      <widgets/>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <expressionfields/>
+      <previewExpression></previewExpression>
       <mapTip></mapTip>
     </maplayer>
     <maplayer geometry="Point" autoRefreshTime="0" readOnly="0" simplifyAlgorithm="0" refreshOnNotifyEnabled="0" simplifyMaxScale="1" type="vector" autoRefreshEnabled="0" refreshOnNotifyMessage="" maxScale="0" simplifyDrawingHints="0" hasScaleBasedVisibilityFlag="0" minScale="1e+8" simplifyLocal="1" labelsEnabled="1" simplifyDrawingTol="1">
@@ -24791,6 +25315,9 @@ def my_form_open(dialog, layer, feature):
     <layer id="17OCT01084657_M2AS_058217622010_01_P001_OrthoRpcOnlyCmp_8a7948d4_ccbf_48ea_9451_44790b372689"/>
     <layer id="17OCT01084657_P2AS_058217622010_01_P001_OrthoRpcOnlyCmp_18ea0477_db99_40c3_992e_ada982b04ee5"/>
     <layer id="GefStudyAreaGCPs_4a4f892a_5c2f_4433_9ae5_6431b7ef01dc"/>
+    <layer id="Point_ge_096e3bdc_33df_4ccd_b2f9_611b7c7b9ffa"/>
+    <layer id="Point_ge_59c1b773_d190_4b49_86f3_7dd201205a9f"/>
+    <layer id="Point_ge_07619ac6_2087_4469_be48_a0145b2d3f30"/>
   </layerorder>
   <properties>
     <WPhDontactPhone type="QString"></WPhDontactPhone>
