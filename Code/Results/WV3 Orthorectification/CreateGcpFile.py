@@ -6,6 +6,9 @@ import osr
 import pylab
 from scipy import stats as stats
 from collections import OrderedDict
+import os
+os.environ['GDAL_DATA'] = "C:\ProgramData\Anaconda3\envs\py27\Library\share\gdal"
+os.environ['GDAL_DRIVER_PATH']="C:\ProgramData\Anaconda3\envs\py27\Library\\bin\gdalplugins"
 
 
 # This makes a text file for using in PCI that has the Geo co-ords and image locs of my GCP's
@@ -13,13 +16,15 @@ from collections import OrderedDict
 # to be converted back to image pixel locs
 
 # file containing actual GCP locs in WGS84
-gcpGeoLocFile = "C:/Data/Development/Projects/PhD GeoInformatics/Docs/Misc/Baviaanskloof/BaviiaansPeCorrectedGcpMay2017Combined.shp"
+doEllipsoidalHeight = True
+gcpGeoLocFile = "C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF GCPs/DGPS Aug 2018/Corrected/GefStudyAreaGpsGCPs.shp"
 
 # file containing image locations of GCP locs in UTM 35S
-gcpImLocFile = "C:/Data/Development/Projects/PhD GeoInformatics/Docs/Misc/Baviaanskloof/QuickbirdGcpUtmZ35SZ.shp"
+gcpImLocFile = "C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF GCPs/GefStudyAreaImageGCPs.shp"
 
-# imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056549293010_01/PanSharpen/03NOV18082012-P2AS_R1C12-056549293010_01_P001_GdalPanSharp.tif"
-imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056549293010_01/056549293010_01_P001_PAN/03NOV18082012-P2AS_R1C1-056549293010_01_P001.TIF"
+# nb the im is in wgs84
+imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/058217622010_01/PCI Output/AssembleTiles/17OCT01084657-P2AS_R1C12-058217622010_01_P001.TIF.pix"
+
 # read in Geo CoOrds of GCP's (and height!)
 ds = gdal.OpenEx(gcpGeoLocFile, gdal.OF_VECTOR)
 if ds is None:
@@ -27,8 +32,7 @@ if ds is None:
 
 lyr = ds.GetLayerByIndex(0)
 lyr.ResetReading()
-spatialRef = lyr.GetSpatialRef()
-
+gcpSpatialRef = lyr.GetSpatialRef()
 
 # gcpList = []
 gcpDict = {}
@@ -42,16 +46,19 @@ for (i, feat) in enumerate(lyr):
         field_defn = feat_defn.GetFieldDefn(i)
         f[field_defn.GetName()] = feat.GetField(i)
     geom = feat.GetGeometryRef()
-    if geom is not None and (geom.GetGeometryType() == ogr.wkbPoint or geom.GetGeometryType() == ogr.wkbPoint25D):
+    if geom is not None and (geom.GetGeometryType() == ogr.wkbPoint or geom.GetGeometryType() == ogr.wkbPoint25D
+                             or geom.GetGeometryType() == ogr.wkbPointZM):
         print "%s %.6f, %.6f" % (f['Comment'], geom.GetX(), geom.GetY())
-        f['geom'] = geom
+        f['geom'] = geom.Clone()
         f['X'] = geom.GetX()
         f['Y'] = geom.GetY()
         f['Z'] = f['GNSS_Heigh']   #? - should be able to get this from geom
     else:
         print "no point geometry/n"
     # gcpList.append(f)
-    gcpDict[f['Comment']] = f
+
+    key = f['Datafile'].split('.')[0] + str(f['ID'])
+    gcpDict[key] = f
 print ' '
 ds = None
 
@@ -78,9 +85,10 @@ for (i, feat) in enumerate(lyr):
         field_defn = feat_defn.GetFieldDefn(i)
         f[field_defn.GetName()] = feat.GetField(i)
     geom = feat.GetGeometryRef()
-    if geom is not None and (geom.GetGeometryType() == ogr.wkbPoint or geom.GetGeometryType() == ogr.wkbPoint25D):
+    if geom is not None and (geom.GetGeometryType() == ogr.wkbPoint or geom.GetGeometryType() == ogr.wkbPoint25D
+                             or geom.GetGeometryType() == ogr.wkbPointZM):
         print "%s %.6f, %.6f" % (f['Comment'], geom.GetX(), geom.GetY())
-        f['geom'] = geom
+        f['geom'] = geom.Clone()
         f['X'] = geom.GetX()
         f['Y'] = geom.GetY()
         f['Xi'] = 0   # im locs
@@ -88,7 +96,8 @@ for (i, feat) in enumerate(lyr):
     else:
         print "no point geometry/n"
     # imGcpList.append(f)
-    imGcpDict[f['Comment']] = f
+    key = f['FileName'] + str(f['id'])
+    imGcpDict[key] = f
 print ' '
 ds = None
 
@@ -103,10 +112,12 @@ print 'Driver: ', ds.GetDriver().ShortName,'/', \
 print 'Size is ',ds.RasterXSize,'x',ds.RasterYSize, \
       'x',ds.RasterCount
 print 'Projection is ',ds.GetProjection()
-geotransform = ds.GetGeoTransform()
-if not geotransform is None:
-    print 'Origin = (',geotransform[0], ',',geotransform[3],')'
-    print 'Pixel Size = (',geotransform[1], ',',geotransform[5],')'
+imSpatialRef = osr.SpatialReference(ds.GetProjection())
+
+imGeoTransform = ds.GetGeoTransform()
+if not imGeoTransform is None:
+    print 'Origin = (', imGeoTransform[0], ',', imGeoTransform[3], ')'
+    print 'Pixel Size = (', imGeoTransform[1], ',', imGeoTransform[5], ')'
 
 def world2Pixel(geoMatrix, x, y):
   """
@@ -123,11 +134,17 @@ def world2Pixel(geoMatrix, x, y):
   line = ((y - ulY) / yDist)
   return (pixel, line)
 
+
+transform = osr.CoordinateTransformation(gcpSpatialRef, imSpatialRef)
+
 for f in imGcpDict.values():
-    (xi, yi) = world2Pixel(geotransform, f['X'], f['Y'])
+    imGeom = f['geom'].Clone()
+    imGeom.Transform(transform)
+    imPoint = imGeom.GetPoint()
+    (xi, yi) = world2Pixel(imGeoTransform, imPoint[0], imPoint[1])
     f['Xi'] = xi
     f['Yi'] = yi
-    print "%s %i, %i" % (f['Comment'], xi, yi)
+    print "%s %i, %i" % (f['FileName'] + str(f['id']), xi, yi)
     if xi < 0 or xi > ds.RasterXSize:
         print '-------------------------------xi out of bounds'
     if yi < 0 or yi > ds.RasterYSize:
@@ -157,17 +174,18 @@ for f in imGcpDict.values():
 
 
 #pci format
-gcpFile = open("C:/Data/Development/Projects/PhD GeoInformatics/Docs/Misc/Baviaanskloof/QuickbirdGcp3.txt", 'w')
+gcpFile = open("C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF GCPs/Worldview3Gcp.txt", 'w')
 gcpFile.write("I\tP\tL\tX\tY\tE\n")
 id = 1
-for key in imGcpDict:
+for key in imGcpDict.keys():
     # key = f['Comment']
-    fgcp = gcpDict[key]
-    fim = imGcpDict[key]
-    #print "%s %.6f, %.6f" % (f['Comment'], geom.GetX(), geom.GetY())
-    gcpFile.write("%s\t%.3f\t%.3f\t%.9f\t%.9f\t%.2f\n" % (key, fim['Xi'], fim['Yi'], fgcp['X'], fgcp['Y'], fgcp['Z']))
-    id = id + 1
-    print "%s" % (key)
+    if gcpDict.has_key(key) and imGcpDict.has_key(key):
+        fgcp = gcpDict[key]
+        fim = imGcpDict[key]
+        #print "%s %.6f, %.6f" % (f['Comment'], geom.GetX(), geom.GetY())
+        gcpFile.write("%s\t%.3f\t%.3f\t%.9f\t%.9f\t%.2f\n" % (key, fim['Xi'], fim['Yi'], fgcp['X'], fgcp['Y'], fgcp['Z']))
+        id = id + 1
+        print "%s" % (key)
 gcpFile.close()
 
 

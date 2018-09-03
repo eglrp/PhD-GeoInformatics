@@ -45,7 +45,7 @@
         </layer-tree-group>
         <layer-tree-group checked="Qt::Checked" name="Corrected" expanded="1">
           <customproperties/>
-          <layer-tree-layer source="../../Data/GEF GCPs/DGPS Aug 2018/gef-gcp-swftn/GefStudyAreaGpsGCPs.shp" providerKey="ogr" checked="Qt::Checked" id="GefStudyAreaGpsGCPs_260efc00_d305_4f0b_bd94_5fe17a7ab136" name="GefStudyAreaGpsGCPs" expanded="1">
+          <layer-tree-layer source="../../Data/GEF GCPs/DGPS Aug 2018/Corrected/GefStudyAreaGpsGCPs.shp" providerKey="ogr" checked="Qt::Checked" id="GefStudyAreaGpsGCPs_ab046d00_8504_4833_a04a_4bccf6820611" name="GefStudyAreaGpsGCPs" expanded="1">
             <customproperties/>
           </layer-tree-layer>
         </layer-tree-group>
@@ -532,8 +532,8 @@
       <item>Point_ge_096e3bdc_33df_4ccd_b2f9_611b7c7b9ffa</item>
       <item>Point_ge_59c1b773_d190_4b49_86f3_7dd201205a9f</item>
       <item>Point_ge_07619ac6_2087_4469_be48_a0145b2d3f30</item>
-      <item>GefStudyAreaGpsGCPs_260efc00_d305_4f0b_bd94_5fe17a7ab136</item>
       <item>GefStudyAreaImageGCPs_babce511_4ed3_4b56_bbf1_d08898693281</item>
+      <item>GefStudyAreaGpsGCPs_ab046d00_8504_4833_a04a_4bccf6820611</item>
     </custom-order>
   </layer-tree-group>
   <snapping-settings mode="1" tolerance="0" unit="2" enabled="0" intersection-snapping="0" type="1">
@@ -559,7 +559,6 @@
       <layer-setting tolerance="0" id="Point_ge20171209220638859" enabled="0" units="2" type="2"/>
       <layer-setting tolerance="0" id="SeweTchu_old_spekboomveld2_Vlok_SeweTchu_old_spekboomveld2_Vlok_kmz_Polygon20170811124255553" enabled="0" units="2" type="2"/>
       <layer-setting tolerance="0" id="GEF_Plot_Polygons_with_Yc20180311213016108" enabled="0" units="2" type="2"/>
-      <layer-setting tolerance="12" id="GefStudyAreaGpsGCPs_260efc00_d305_4f0b_bd94_5fe17a7ab136" enabled="0" units="1" type="1"/>
       <layer-setting tolerance="0" id="Baviaans_contract_Data20170304123226846" enabled="0" units="2" type="2"/>
       <layer-setting tolerance="0" id="abf_agc_191_plots_bound20170304123330439" enabled="0" units="2" type="2"/>
       <layer-setting tolerance="0" id="GEF_Sampling_Areas_Bidolph20171124114452284" enabled="0" units="2" type="2"/>
@@ -593,6 +592,7 @@
       <layer-setting tolerance="12" id="Point_ge_096e3bdc_33df_4ccd_b2f9_611b7c7b9ffa" enabled="0" units="1" type="1"/>
       <layer-setting tolerance="0" id="sewefontein_tchuganu_bound_wgs8420170304123226893" enabled="0" units="2" type="2"/>
       <layer-setting tolerance="0" id="SewefonteinIntactAreaForTrialV120171122105116574" enabled="0" units="2" type="2"/>
+      <layer-setting tolerance="12" id="GefStudyAreaGpsGCPs_ab046d00_8504_4833_a04a_4bccf6820611" enabled="0" units="1" type="1"/>
       <layer-setting tolerance="0" id="bmr_planning_domain20170304123226862" enabled="0" units="2" type="2"/>
       <layer-setting tolerance="0" id="Point_ge20171209220054712" enabled="0" units="2" type="2"/>
       <layer-setting tolerance="0" id="Point_ge20171209220624567" enabled="0" units="2" type="2"/>
@@ -614,9 +614,9 @@
     <units>degrees</units>
     <extent>
       <xmin>23.94425078983189437</xmin>
-      <ymin>-33.56860387991281414</ymin>
+      <ymin>-33.56860387991280703</ymin>
       <xmax>24.00562417149446404</xmax>
-      <ymax>-33.54926388522922309</ymax>
+      <ymax>-33.54926388522921599</ymax>
     </extent>
     <rotation>0</rotation>
     <destinationsrs>
@@ -671,7 +671,7 @@
         <legendgroup checked="Qt::Checked" open="true" name="Corrected">
           <legendlayer checked="Qt::Checked" showFeatureCount="0" open="true" name="GefStudyAreaGpsGCPs" drawingOrder="-1">
             <filegroup open="true" hidden="false">
-              <legendlayerfile isInOverview="0" visible="1" layerid="GefStudyAreaGpsGCPs_260efc00_d305_4f0b_bd94_5fe17a7ab136"/>
+              <legendlayerfile isInOverview="0" visible="1" layerid="GefStudyAreaGpsGCPs_ab046d00_8504_4833_a04a_4bccf6820611"/>
             </filegroup>
           </legendlayer>
         </legendgroup>
@@ -6924,8 +6924,8 @@ def my_form_open(dialog, layer, feature):
         <xmax>24.01002909054990653</xmax>
         <ymax>-33.54501268593860885</ymax>
       </extent>
-      <id>GefStudyAreaGpsGCPs_260efc00_d305_4f0b_bd94_5fe17a7ab136</id>
-      <datasource>../../Data/GEF GCPs/DGPS Aug 2018/gef-gcp-swftn/GefStudyAreaGpsGCPs.shp</datasource>
+      <id>GefStudyAreaGpsGCPs_ab046d00_8504_4833_a04a_4bccf6820611</id>
+      <datasource>../../Data/GEF GCPs/DGPS Aug 2018/Corrected/GefStudyAreaGpsGCPs.shp</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -6966,7 +6966,7 @@ def my_form_open(dialog, layer, feature):
         <extent/>
         <links/>
       </resourceMetadata>
-      <provider encoding="UTF-8">ogr</provider>
+      <provider encoding="System">ogr</provider>
       <vectorjoins/>
       <layerDependencies/>
       <dataDependencies/>
@@ -6980,7 +6980,7 @@ def my_form_open(dialog, layer, feature):
           <symbol alpha="1" name="0" type="marker" clip_to_extent="1">
             <layer enabled="1" pass="0" locked="0" class="SimpleMarker">
               <prop k="angle" v="0"/>
-              <prop k="color" v="253,239,83,255"/>
+              <prop k="color" v="195,215,78,255"/>
               <prop k="horizontal_anchor_point" v="1"/>
               <prop k="joinstyle" v="bevel"/>
               <prop k="name" v="circle"/>
@@ -7010,11 +7010,7 @@ def my_form_open(dialog, layer, feature):
         <rotation/>
         <sizescale/>
       </renderer-v2>
-      <customproperties>
-        <property key="dualview/previewExpressions">
-          <value>"Feat_Name"</value>
-        </property>
-      </customproperties>
+      <customproperties/>
       <blendMode>0</blendMode>
       <featureBlendMode>0</featureBlendMode>
       <layerOpacity>1</layerOpacity>
@@ -7220,27 +7216,8 @@ def my_form_open(dialog, layer, feature):
       <attributeactions>
         <defaultAction value="{00000000-0000-0000-0000-000000000000}" key="Canvas"/>
       </attributeactions>
-      <attributetableconfig actionWidgetStyle="dropDown" sortOrder="0" sortExpression="concat(&quot;Datafile&quot;,&quot;ID&quot;)">
-        <columns>
-          <column width="170" name="ID" hidden="0" type="field"/>
-          <column width="-1" name="Datafile" hidden="0" type="field"/>
-          <column width="224" name="Comment" hidden="0" type="field"/>
-          <column width="-1" name="Corr_Type" hidden="0" type="field"/>
-          <column width="-1" name="GPS_Date" hidden="0" type="field"/>
-          <column width="-1" name="GPS_Time" hidden="0" type="field"/>
-          <column width="-1" name="Update_Sta" hidden="0" type="field"/>
-          <column width="-1" name="Feat_Name" hidden="0" type="field"/>
-          <column width="-1" name="Unfilt_Pos" hidden="0" type="field"/>
-          <column width="-1" name="Filt_Pos" hidden="0" type="field"/>
-          <column width="-1" name="GNSS_Heigh" hidden="0" type="field"/>
-          <column width="-1" name="Vert_Prec" hidden="0" type="field"/>
-          <column width="-1" name="Horz_Prec" hidden="0" type="field"/>
-          <column width="-1" name="Std_Dev" hidden="0" type="field"/>
-          <column width="-1" name="Latitude" hidden="0" type="field"/>
-          <column width="-1" name="Longitude" hidden="0" type="field"/>
-          <column width="-1" name="Point_ID" hidden="0" type="field"/>
-          <column width="-1" hidden="1" type="actions"/>
-        </columns>
+      <attributetableconfig actionWidgetStyle="dropDown" sortOrder="0" sortExpression="">
+        <columns/>
       </attributetableconfig>
       <editform></editform>
       <editforminit/>
@@ -7257,7 +7234,7 @@ def my_form_open(dialog, layer, feature):
         <fieldstyles/>
       </conditionalstyles>
       <expressionfields/>
-      <previewExpression>"Feat_Name"</previewExpression>
+      <previewExpression></previewExpression>
       <mapTip></mapTip>
     </maplayer>
     <maplayer autoRefreshTime="0" labelsEnabled="0" simplifyLocal="1" autoRefreshEnabled="0" simplifyAlgorithm="0" simplifyDrawingHints="1" refreshOnNotifyMessage="" simplifyMaxScale="1" readOnly="0" refreshOnNotifyEnabled="0" hasScaleBasedVisibilityFlag="0" minScale="1e+8" geometry="Point" maxScale="0" type="vector" simplifyDrawingTol="1">
@@ -25612,8 +25589,8 @@ def my_form_open(dialog, layer, feature):
     <layer id="Point_ge_096e3bdc_33df_4ccd_b2f9_611b7c7b9ffa"/>
     <layer id="Point_ge_59c1b773_d190_4b49_86f3_7dd201205a9f"/>
     <layer id="Point_ge_07619ac6_2087_4469_be48_a0145b2d3f30"/>
-    <layer id="GefStudyAreaGpsGCPs_260efc00_d305_4f0b_bd94_5fe17a7ab136"/>
     <layer id="GefStudyAreaImageGCPs_babce511_4ed3_4b56_bbf1_d08898693281"/>
+    <layer id="GefStudyAreaGpsGCPs_ab046d00_8504_4833_a04a_4bccf6820611"/>
   </layerorder>
   <properties>
     <DefaultStyles>
