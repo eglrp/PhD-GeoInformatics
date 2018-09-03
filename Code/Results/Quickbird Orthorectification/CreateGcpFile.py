@@ -7,10 +7,10 @@ import osr
 
 # file containing actual GCP locs in WGS84
 doEllipsoidalHeight = True
-gcpGeoLocFile = "C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF GCPs/DGPS Aug 2018/Corrected/Point_ge.shp"
+gcpGeoLocFile = "C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF GCPs/DGPS Aug 2018/Corrected/GefStudyAreaGpsGCPs.shp"
 
 # file containing image locations of GCP locs in UTM 35S
-gcpImLocFile = "C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF GCPs/GefStudyAreaGCPs.shp"
+gcpImLocFile = "C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF GCPs/GefStudyAreaImageGCPs.shp"
 
 # nb the im is in wgs84
 imFile = "D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/056844553010_01/056844553010_01_P001_PAN/03NOV18082012-P1BS-056844553010_01_P001.TIF"
