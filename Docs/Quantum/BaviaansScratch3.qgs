@@ -24,13 +24,13 @@
     <layer-tree-layer source="../../Data/GEF Sampling/GEF ROI2.kml" providerKey="ogr" checked="Qt::Unchecked" id="GEF_ROI2_8fdadac7_59c5_47cc_a16a_1c93f68ba39d" name="GEF ROI2 GEF_ROI2" expanded="1">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer source="../../Data/GEF GCPs/GefStudyAreaImageGCPs.shp" providerKey="ogr" checked="Qt::Checked" id="GefStudyAreaImageGCPs_babce511_4ed3_4b56_bbf1_d08898693281" name="GefStudyAreaImageGCPs" expanded="1">
-      <customproperties/>
-    </layer-tree-layer>
-    <layer-tree-group checked="Qt::Checked" name="Baviaans Vector Data" expanded="1">
+    <layer-tree-group checked="Qt::Checked" name="Baviaans Vector Data" expanded="0">
       <customproperties/>
       <layer-tree-group checked="Qt::Checked" name="GEF GCPs" expanded="1">
         <customproperties/>
+        <layer-tree-layer source="../../Data/GEF GCPs/GefStudyAreaImageGCPs.shp" providerKey="ogr" checked="Qt::Checked" id="GefStudyAreaImageGCPs_babce511_4ed3_4b56_bbf1_d08898693281" name="GefStudyAreaImageGCPs" expanded="1">
+          <customproperties/>
+        </layer-tree-layer>
         <layer-tree-group checked="Qt::Unchecked" name="Uncorrected" expanded="1">
           <customproperties/>
           <layer-tree-layer source="../../Data/GEF GCPs/DGPS Aug 2018/gef-gcp-tch/Point_ge.shp" providerKey="ogr" checked="Qt::Checked" id="Point_ge_07619ac6_2087_4469_be48_a0145b2d3f30" name="Point_ge" expanded="1">
@@ -309,8 +309,14 @@
         <customproperties/>
       </layer-tree-layer>
     </layer-tree-group>
-    <layer-tree-group checked="Qt::Unchecked" name="WV3" expanded="1">
+    <layer-tree-group checked="Qt::Checked" name="WV3" expanded="1">
       <customproperties/>
+      <layer-tree-layer source="D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/058217622010_01/PCI Output/Ortho/o17OCT01084657-M2AS_R1C12-058217622010_01_P001.TIF" providerKey="gdal" checked="Qt::Unchecked" id="o17OCT01084657_M2AS_R1C12_058217622010_01_P001_1ab50858_51b3_43e9_b9f6_4606ee8e78b8" name="o17OCT01084657-M2AS_R1C12-058217622010_01_P001" expanded="1">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer source="D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/058217622010_01/PCI Output/Ortho/o17OCT01084657-P2AS_R1C12-058217622010_01_P001.TIF.tif" providerKey="gdal" checked="Qt::Checked" id="o17OCT01084657_P2AS_R1C12_058217622010_01_P001_TIF_a03e7a87_bde9_460e_a832_7edf6eba04d0" name="o17OCT01084657-P2AS_R1C12-058217622010_01_P001.TIF" expanded="1">
+        <customproperties/>
+      </layer-tree-layer>
       <layer-tree-layer source="D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/058217622010_01/PCI Output/Ortho/17OCT01084657-M2AS-058217622010_01_P001_OrthoRpcOnlyCmp.tif" providerKey="gdal" checked="Qt::Unchecked" id="17OCT01084657_M2AS_058217622010_01_P001_OrthoRpcOnlyCmp_8a7948d4_ccbf_48ea_9451_44790b372689" name="17OCT01084657-M2AS-058217622010_01_P001_OrthoRpcOnlyCmp" expanded="1">
         <customproperties/>
       </layer-tree-layer>
@@ -534,6 +540,8 @@
       <item>Point_ge_07619ac6_2087_4469_be48_a0145b2d3f30</item>
       <item>GefStudyAreaImageGCPs_babce511_4ed3_4b56_bbf1_d08898693281</item>
       <item>GefStudyAreaGpsGCPs_ab046d00_8504_4833_a04a_4bccf6820611</item>
+      <item>o17OCT01084657_P2AS_R1C12_058217622010_01_P001_TIF_a03e7a87_bde9_460e_a832_7edf6eba04d0</item>
+      <item>o17OCT01084657_M2AS_R1C12_058217622010_01_P001_1ab50858_51b3_43e9_b9f6_4606ee8e78b8</item>
     </custom-order>
   </layer-tree-group>
   <snapping-settings mode="1" tolerance="0" unit="2" enabled="0" intersection-snapping="0" type="1">
@@ -613,10 +621,10 @@
   <mapcanvas annotationsVisible="1" name="theMapCanvas">
     <units>degrees</units>
     <extent>
-      <xmin>23.94425078983189437</xmin>
-      <ymin>-33.56860387991280703</ymin>
-      <xmax>24.00562417149446404</xmax>
-      <ymax>-33.54926388522921599</ymax>
+      <xmin>23.99117732353562715</xmin>
+      <ymin>-33.56537587452996263</ymin>
+      <xmax>24.00158208282966044</xmax>
+      <ymax>-33.56063690852144532</ymax>
     </extent>
     <rotation>0</rotation>
     <destinationsrs>
@@ -644,13 +652,13 @@
         <legendlayerfile isInOverview="0" visible="0" layerid="GEF_ROI2_8fdadac7_59c5_47cc_a16a_1c93f68ba39d"/>
       </filegroup>
     </legendlayer>
-    <legendlayer checked="Qt::Checked" showFeatureCount="0" open="true" name="GefStudyAreaImageGCPs" drawingOrder="-1">
-      <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" visible="1" layerid="GefStudyAreaImageGCPs_babce511_4ed3_4b56_bbf1_d08898693281"/>
-      </filegroup>
-    </legendlayer>
-    <legendgroup checked="Qt::Checked" open="true" name="Baviaans Vector Data">
+    <legendgroup checked="Qt::Checked" open="false" name="Baviaans Vector Data">
       <legendgroup checked="Qt::Checked" open="true" name="GEF GCPs">
+        <legendlayer checked="Qt::Checked" showFeatureCount="0" open="true" name="GefStudyAreaImageGCPs" drawingOrder="-1">
+          <filegroup open="true" hidden="false">
+            <legendlayerfile isInOverview="0" visible="1" layerid="GefStudyAreaImageGCPs_babce511_4ed3_4b56_bbf1_d08898693281"/>
+          </filegroup>
+        </legendlayer>
         <legendgroup checked="Qt::Unchecked" open="true" name="Uncorrected">
           <legendlayer checked="Qt::Checked" showFeatureCount="0" open="true" name="Point_ge" drawingOrder="-1">
             <filegroup open="true" hidden="false">
@@ -1077,7 +1085,17 @@
         </filegroup>
       </legendlayer>
     </legendgroup>
-    <legendgroup checked="Qt::Unchecked" open="true" name="WV3">
+    <legendgroup checked="Qt::Checked" open="true" name="WV3">
+      <legendlayer checked="Qt::Unchecked" showFeatureCount="0" open="true" name="o17OCT01084657-M2AS_R1C12-058217622010_01_P001" drawingOrder="-1">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" visible="0" layerid="o17OCT01084657_M2AS_R1C12_058217622010_01_P001_1ab50858_51b3_43e9_b9f6_4606ee8e78b8"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer checked="Qt::Checked" showFeatureCount="0" open="true" name="o17OCT01084657-P2AS_R1C12-058217622010_01_P001.TIF" drawingOrder="-1">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" visible="1" layerid="o17OCT01084657_P2AS_R1C12_058217622010_01_P001_TIF_a03e7a87_bde9_460e_a832_7edf6eba04d0"/>
+        </filegroup>
+      </legendlayer>
       <legendlayer checked="Qt::Unchecked" showFeatureCount="0" open="true" name="17OCT01084657-M2AS-058217622010_01_P001_OrthoRpcOnlyCmp" drawingOrder="-1">
         <filegroup open="true" hidden="false">
           <legendlayerfile isInOverview="0" visible="0" layerid="17OCT01084657_M2AS_058217622010_01_P001_OrthoRpcOnlyCmp_8a7948d4_ccbf_48ea_9451_44790b372689"/>
@@ -1105,12 +1123,12 @@
       </legendlayer>
       <legendlayer checked="Qt::Checked" showFeatureCount="0" open="true" name="17OCT01084657-P2AS_R1C1-058217622010_01_P001" drawingOrder="-1">
         <filegroup open="true" hidden="false">
-          <legendlayerfile isInOverview="0" visible="0" layerid="17OCT01084657_P2AS_R1C1_058217622010_01_P001_97d51b1a_522c_4b22_8c08_83c1af627469"/>
+          <legendlayerfile isInOverview="0" visible="1" layerid="17OCT01084657_P2AS_R1C1_058217622010_01_P001_97d51b1a_522c_4b22_8c08_83c1af627469"/>
         </filegroup>
       </legendlayer>
       <legendlayer checked="Qt::Checked" showFeatureCount="0" open="true" name="17OCT01084657-P2AS_R1C2-058217622010_01_P001" drawingOrder="-1">
         <filegroup open="true" hidden="false">
-          <legendlayerfile isInOverview="0" visible="0" layerid="17OCT01084657_P2AS_R1C2_058217622010_01_P001_397b6d0e_a8ed_430c_9cee_9e8580e98f14"/>
+          <legendlayerfile isInOverview="0" visible="1" layerid="17OCT01084657_P2AS_R1C2_058217622010_01_P001_397b6d0e_a8ed_430c_9cee_9e8580e98f14"/>
         </filegroup>
       </legendlayer>
     </legendgroup>
@@ -7010,7 +7028,11 @@ def my_form_open(dialog, layer, feature):
         <rotation/>
         <sizescale/>
       </renderer-v2>
-      <customproperties/>
+      <customproperties>
+        <property key="dualview/previewExpressions">
+          <value>"Feat_Name"</value>
+        </property>
+      </customproperties>
       <blendMode>0</blendMode>
       <featureBlendMode>0</featureBlendMode>
       <layerOpacity>1</layerOpacity>
@@ -7217,7 +7239,26 @@ def my_form_open(dialog, layer, feature):
         <defaultAction value="{00000000-0000-0000-0000-000000000000}" key="Canvas"/>
       </attributeactions>
       <attributetableconfig actionWidgetStyle="dropDown" sortOrder="0" sortExpression="">
-        <columns/>
+        <columns>
+          <column width="206" name="Comment" hidden="0" type="field"/>
+          <column width="-1" name="Corr_Type" hidden="0" type="field"/>
+          <column width="-1" name="GPS_Date" hidden="0" type="field"/>
+          <column width="-1" name="GPS_Time" hidden="0" type="field"/>
+          <column width="-1" name="Update_Sta" hidden="0" type="field"/>
+          <column width="-1" name="Feat_Name" hidden="0" type="field"/>
+          <column width="151" name="Datafile" hidden="0" type="field"/>
+          <column width="-1" name="Unfilt_Pos" hidden="0" type="field"/>
+          <column width="-1" name="Filt_Pos" hidden="0" type="field"/>
+          <column width="-1" name="GNSS_Heigh" hidden="0" type="field"/>
+          <column width="-1" name="Vert_Prec" hidden="0" type="field"/>
+          <column width="-1" name="Horz_Prec" hidden="0" type="field"/>
+          <column width="-1" name="Std_Dev" hidden="0" type="field"/>
+          <column width="-1" name="Latitude" hidden="0" type="field"/>
+          <column width="-1" name="Longitude" hidden="0" type="field"/>
+          <column width="-1" name="Point_ID" hidden="0" type="field"/>
+          <column width="-1" name="ID" hidden="0" type="field"/>
+          <column width="-1" hidden="1" type="actions"/>
+        </columns>
       </attributetableconfig>
       <editform></editform>
       <editforminit/>
@@ -7234,7 +7275,7 @@ def my_form_open(dialog, layer, feature):
         <fieldstyles/>
       </conditionalstyles>
       <expressionfields/>
-      <previewExpression></previewExpression>
+      <previewExpression>"Feat_Name"</previewExpression>
       <mapTip></mapTip>
     </maplayer>
     <maplayer autoRefreshTime="0" labelsEnabled="0" simplifyLocal="1" autoRefreshEnabled="0" simplifyAlgorithm="0" simplifyDrawingHints="1" refreshOnNotifyMessage="" simplifyMaxScale="1" readOnly="0" refreshOnNotifyEnabled="0" hasScaleBasedVisibilityFlag="0" minScale="1e+8" geometry="Point" maxScale="0" type="vector" simplifyDrawingTol="1">
@@ -7389,8 +7430,8 @@ def my_form_open(dialog, layer, feature):
       <attributetableconfig actionWidgetStyle="dropDown" sortOrder="0" sortExpression="">
         <columns>
           <column width="-1" name="id" hidden="0" type="field"/>
-          <column width="-1" name="FileName" hidden="0" type="field"/>
-          <column width="-1" name="Comment" hidden="0" type="field"/>
+          <column width="275" name="FileName" hidden="0" type="field"/>
+          <column width="243" name="Comment" hidden="0" type="field"/>
           <column width="-1" hidden="1" type="actions"/>
         </columns>
       </attributetableconfig>
@@ -22136,6 +22177,207 @@ def my_form_open(dialog, layer, feature):
       <previewExpression>"Name"</previewExpression>
       <mapTip></mapTip>
     </maplayer>
+    <maplayer autoRefreshTime="0" autoRefreshEnabled="0" refreshOnNotifyMessage="" refreshOnNotifyEnabled="0" hasScaleBasedVisibilityFlag="0" minScale="1e+8" maxScale="0" type="raster">
+      <extent>
+        <xmin>86190</xmin>
+        <ymin>-3717096</ymin>
+        <xmax>93517.19999999999708962</xmax>
+        <ymax>-3713161.20000000018626451</ymax>
+      </extent>
+      <id>o17OCT01084657_M2AS_R1C12_058217622010_01_P001_1ab50858_51b3_43e9_b9f6_4606ee8e78b8</id>
+      <datasource>D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/058217622010_01/PCI Output/Ortho/o17OCT01084657-M2AS_R1C12-058217622010_01_P001.TIF</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>o17OCT01084657-M2AS_R1C12-058217622010_01_P001</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=23 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100027</srsid>
+          <srid>0</srid>
+          <authid>USER:100027</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=23 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent>
+          <spatial minx="0" minz="0" maxz="0" maxx="0" crs="" miny="0" dimensions="2" maxy="0"/>
+          <temporal>
+            <period>
+              <start></start>
+              <end></end>
+            </period>
+          </temporal>
+        </extent>
+        <contact>
+          <name></name>
+          <organization></organization>
+          <position></position>
+          <voice></voice>
+          <fax></fax>
+          <email></email>
+          <role></role>
+        </contact>
+        <links/>
+      </resourceMetadata>
+      <customproperties>
+        <property value="false" key="WMSBackgroundLayer"/>
+        <property value="false" key="WMSPublishDataSourceUrl"/>
+        <property value="0" key="embeddedWidgets/count"/>
+        <property value="Value" key="identify/format"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="1"/>
+        <noDataList bandNo="2" useSrcNoData="1"/>
+        <noDataList bandNo="3" useSrcNoData="1"/>
+        <noDataList bandNo="4" useSrcNoData="1"/>
+        <noDataList bandNo="5" useSrcNoData="1"/>
+        <noDataList bandNo="6" useSrcNoData="1"/>
+        <noDataList bandNo="7" useSrcNoData="1"/>
+        <noDataList bandNo="8" useSrcNoData="1"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer alphaBand="-1" blueBand="2" opacity="1" greenBand="3" redBand="5" type="multibandcolor">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>MinMax</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.01</cumulativeCutLower>
+            <cumulativeCutUpper>0.99</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <redContrastEnhancement>
+            <minValue>0</minValue>
+            <maxValue>664</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>0</minValue>
+            <maxValue>769</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>0</minValue>
+            <maxValue>519</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeStrength="100" colorizeRed="255" grayscaleMode="0" saturation="0" colorizeOn="0" colorizeBlue="128" colorizeGreen="128"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer autoRefreshTime="0" autoRefreshEnabled="0" refreshOnNotifyMessage="" refreshOnNotifyEnabled="0" hasScaleBasedVisibilityFlag="0" minScale="1e+8" maxScale="0" type="raster">
+      <extent>
+        <xmin>86191.19999999999708962</xmin>
+        <ymin>-3717095.69999999972060323</ymin>
+        <xmax>93516.89999999999417923</xmax>
+        <ymax>-3713158.79999999981373549</ymax>
+      </extent>
+      <id>o17OCT01084657_P2AS_R1C12_058217622010_01_P001_TIF_a03e7a87_bde9_460e_a832_7edf6eba04d0</id>
+      <datasource>D:/Data/Development/Projects/PhD GeoInformatics/Data/Digital Globe/058217622010_01/PCI Output/Ortho/o17OCT01084657-P2AS_R1C12-058217622010_01_P001.TIF.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>o17OCT01084657-P2AS_R1C12-058217622010_01_P001.TIF</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=23 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100027</srsid>
+          <srid>0</srid>
+          <authid>USER:100027</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=23 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <customproperties>
+        <property value="Value" key="identify/format"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="1"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer alphaBand="-1" grayBand="1" opacity="1" gradient="BlackToWhite" type="singlebandgray">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>MinMax</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <contrastEnhancement>
+            <minValue>0</minValue>
+            <maxValue>603</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </contrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeStrength="100" colorizeRed="255" grayscaleMode="0" saturation="0" colorizeOn="0" colorizeBlue="128" colorizeGreen="128"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
     <maplayer autoRefreshTime="0" autoRefreshEnabled="0" refreshOnNotifyMessage="" refreshOnNotifyEnabled="0" hasScaleBasedVisibilityFlag="0" minScale="1e+8" maxScale="1000" type="raster">
       <extent>
         <xmin>83708.5</xmin>
@@ -25591,6 +25833,8 @@ def my_form_open(dialog, layer, feature):
     <layer id="Point_ge_07619ac6_2087_4469_be48_a0145b2d3f30"/>
     <layer id="GefStudyAreaImageGCPs_babce511_4ed3_4b56_bbf1_d08898693281"/>
     <layer id="GefStudyAreaGpsGCPs_ab046d00_8504_4833_a04a_4bccf6820611"/>
+    <layer id="o17OCT01084657_P2AS_R1C12_058217622010_01_P001_TIF_a03e7a87_bde9_460e_a832_7edf6eba04d0"/>
+    <layer id="o17OCT01084657_M2AS_R1C12_058217622010_01_P001_1ab50858_51b3_43e9_b9f6_4606ee8e78b8"/>
   </layerorder>
   <properties>
     <DefaultStyles>

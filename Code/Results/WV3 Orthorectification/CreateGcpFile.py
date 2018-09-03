@@ -147,6 +147,7 @@ for f in imGcpDict.values():
     print "%s %i, %i" % (f['FileName'] + str(f['id']), xi, yi)
     if xi < 0 or xi > ds.RasterXSize:
         print '-------------------------------xi out of bounds'
+
     if yi < 0 or yi > ds.RasterYSize:
         print '--------------------------------yi out of bounds'
 
