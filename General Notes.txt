@@ -1348,9 +1348,53 @@ WV3 Orthorectification
   A) Pan-sharpen with the raw images assuming co-registration, then orthorectify with RPC and GCPs 
   B) - Orthorect the pan image with the DGPS GCPs 
      - Auto find GCPs between the raw MS and orthorect PAN image.  Use these to orthorectify the MS image.  This is probably the preferred option as it doesn't require co-registration and also leaves pan-sharpening as an option on the orthorectified images.  
-	 
+- From above: "The options->import GCP does not work to import an external file of GCPs.  Use the toolbar button "GCP input" and then select "text/pci" input option."
+- Option B seems to work pretty well.  I get pan rms accuracy ~0.15m and MS accuracy ~ 0.15m (relative to pan).  The orthorect pan-sharpened image looks decent.
+- I don't think the raw MS and pan images are co-registered very well.  The spatial match looks better after orthorectifcation. 
+- NB note that the 2015 NGI imagery compares well spatially to the orthorect WV3 image i.e. the NGI orthorect appears very accurate (say ~1m).  This bodes well for using the NGI DEM for vegetation heights.  
+
+WV3 ATCOR
+-----------
+- There does not seem to be any specific recommendation on whether onwe should orthorect or atcor first.  If you orthorect first, you are interpolating pixels, so it may be better to atcor first from this perspective.  But if you are doing atcor3 with terrain compensation, you need to have your image referenced to a DEM which means you need to atcor first.  
+- Using the SUDEM is not recommended as it is too noisy and creates lighting artefacts.  (Especially on places that have changed or spatially shifted between the time of DEM and time of WV3 image).  So rather use SRTM 30m.
+- Not using BRDF still uses a lambertian model that compensates for terrain lighting if a DEM is specified.  This actually does a better job of getting rid of terrain shadows than the BRDF option (as far as I have experimented - the BRDF model is very crude).
+- The problem with the terrain compensation is that while the lighting intensity is improved/more uniform for terrain shadows, the colour looks suspect.  This is particularly apparent in deeply shadowed areas which come out very blue in the atcor image.  This is likely due to the scattering of blue light and that being the dominant mode of illumination for shadowed areas.  Could haze removal help with this?  I think the haze removal is more intended for quite misty conditions.  Again it needs specification of parameters that are really unknown (the % haze cover).  
+- Haze removal does not appear helpful for this image.  The haze mask is more related to land cover than anything else and the terrain compensation still exagerrates blue in shadowed areas. 
+- Adjacency compensation / correction seems to further normalise out intensity variations and may be a good thing.
+- There are so many options to choose with ATCOR that the whole affair is quite hit and miss. 
+- The spectral plotting tool is interesting but not especially useful AFAIAC.  Adjusting the visibility param helps some spectra match the library while makes others worse...
+- We should compare regression results with the different options.  And also with my homogenisation method.  May be a good selling point for that.  
+
+Sourcing MODIS data for XCALIB
+-------------------------------
+- The MODIS I want is MCD43A4 from earthexplorer or https://search.earthdata.nasa.gov/.  I think the download process can be automated from earthdata.  
+
+WV3 Xcalib
+-----------
+- Remember that WV3 has 8 bands and these are not all covered by MODIS, so calibrating with a MODIS reference will limit the number of bands.  Or perhaps we can hack it to use the closest band. 
+- A better option is perhaps Sentinel which has matching bands except for the yellow.  The surface reflectance is not BRDF corrected but so be it.  
+- Sentinel 2 Level2A is atmospherically corrected BOA reflectance data i.e. the data we want.  This is only available for Europe.  For the rest of the world the Level1C data must be obtained and corrected with the Sentinel Toolbox. 
+
+Sentinel
+---------
+- Level 1C is TOA refl etc 
+- ESA provides tools to do their own at correction to get BOA reflectance 
+- You can use the ESA SNAP and Sentinel Toolboxes but they are cumbersome and use Sen2Cor in the background.  So preferably just use Sen2Cor http://step.esa.int/main/third-party-plugins-2/sen2cor/.  The SNAP tool etc is really just a basic frontend to the Sen2Cor command line tool.   
+- PCI ATCOR can also be used - see https://support.pcigeomatics.com/hc/en-us/articles/115002140723-Working-with-Sentinel-2-Data for PCI ATCOR of Sentinel.  The Sen2Cor params look v similar to ATCOR...
+- The Level 1C orthorect is ok but not great.  Ideally is should be improved with PCI (?).
+- Get Sentinel data from https://scihub.copernicus.eu/dhus/#/home.  This site is very suspect and will crash if you don't do things right.
+  - Specify "MSI" in text box for Sentinel 2 nulti-spectral 
+  - Click the square icon on the right and draw a rectangle where the ROI is
+  - Press the menu icon under the search and specify the date range 
+  - Press search icon 
+  - The above may or may not work
+- To use Sen2Cor, edit the L2A_GIPP.xml file to specify DEM and any other options.  I don't think you can specify a custom dem, it needs to use the SRTM 90m which it downloads into "DEM_Directory" i.e. DEM_Directory is a place to download dems and not where your own dems are located.  The DEM_Directory is created in the C:\Users\dugalh\Documents\sen2cor\2.5 folder. Note that this is also actually where the default config is stored.
+	Then execute:
+	L2A_Process.bat --GIP_L2A <path to L2A_GIPP.xml> <root Sentinel data dir> eg:  
+		L2A_Process.bat --GIP_L2A "C:\ProgramData\Sen2Cor-02.05.05-win64\Lib\site-packages\sen2cor\cfg\L2A_GIPP.xml" "D:\Data\Development\Projects\PhD GeoInformatics\Data\Sentinel\S2A_MSIL1C_20171002T075741_N0205_R035_T34HGH_20171002T081741.SAFE"
   
-   
+
+
 
 Funding
 --------
