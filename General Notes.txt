@@ -1185,8 +1185,7 @@ Vertical Datum Practicalities
 - NB The SUDEM is in Hartebeeshoek94 - should we not convert it to WGS84 (vertically???)  Yes it is ref to geoid relative to hartebeeshoek94 - we should convert to rel to wgs84. ??
 x - The above does not improve things.  The errors between GCP and DEM we are seeing vary over the study area.  The sa geoid hardly varies at all over this area and it is highly unlikely the wgs or whatever datum will vary either.  i.e. the errors we are seeing are inherent in SUDEM (at least in part).  Fiddling with datums etc is not going to fix that.  
 - NB So... I tried comparing GCP's to SUDEM and SRTM and they are closer to SRTM - SUDEM looks to be warped with height somehow.  The SRTM is relative to geoid EGM96.  The SAGEOID2010 and EGM96 differ by ~0.5m in my study area seemingly quite constantly.  
-- SUDEM l3 from NGI stereo aerials is a lot more accurate than SUDEM l2.  Compared to SA GEOID 2010 GCP's, I get RMSE 0.8m
-
+- SUDEM l3 from NGI stereo aerials is a lot more accurate than SUDEM l2.  Compared to SA GEOID 2010 GCP's, I get RMSE 0.8m.
 
 
 Notes on pan-sharpening quickbird 
@@ -1218,6 +1217,8 @@ As a rule of thumb, a plot should be large enough to contain enough trees per pl
 It follows that small plots should be employed for dense stands with small trees, and large ones for open stands and large trees"  see "Designing a National Forest Inventory in the context of REDD +"
 - 10x10m plots are amongst the smallest used in lit.  
 - Stratification only helps if there is real separation between strata - in this case, each stratum can be modelled separately using less plots in ttl than would have been required if all strata were modelled together.  In MP 2005 gt, there is not great separation between strata - which points in part to the need to increase at least DST plot sizes.  But it also means that modelling is best done on all data, not on strata.  
+
+
 
 Combining NGI RGB and NIR
 --------------------------
