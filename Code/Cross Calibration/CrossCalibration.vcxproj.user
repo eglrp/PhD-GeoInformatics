@@ -9,7 +9,7 @@
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <LocalDebuggerCommandArguments>-o -w 7 7 -p 2 "D:\Data\Development\Projects\PhD GeoInformatics\Data\MODIS\MCD43A4.A2010025.h19v12.005.2010043064233.Lo23.RGBN.tif" "D:\Data\Development\Projects\PhD GeoInformatics\Data\NGI\XCalib Experiments\Source\3322a_320_09_0295_rgbn_CMP.tif"</LocalDebuggerCommandArguments>
+    <LocalDebuggerCommandArguments>-o -w 3 3 -p 1 "D:\\Data\\Development\\Projects\\PhD GeoInformatics\\Data\\Sentinel\\S2A_MSIL2A_20171002T075741_N0205_R035_T34HGH_20171002T081741.SAFE - with SRTM90 all res\\GRANULE\\L2A_T34HGH_A011901_20171002T081741\\IMG_DATA\\R10m\\L2A_T34HGH_20171002T075741_Wv3Bands_10m_CmpWv3Proj.tif" "D:\\Data\\Development\\Projects\\PhD GeoInformatics\\Data\\Sentinel\\S2A_MSIL2A_20171002T075741_N0205_R035_T34HGH_20171002T081741.SAFE - with SRTM90 all res\\GRANULE\\L2A_T34HGH_A011901_20171002T081741\\IMG_DATA\\R10m\\L2A_T34HGH_20171002T075741_Wv3Bands_10m_CmpWv3Proj.tif"</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">

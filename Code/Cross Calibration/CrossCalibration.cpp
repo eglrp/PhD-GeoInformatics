@@ -782,8 +782,9 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 
 	calibDataSet->SetGeoTransform(srcGeoTransform);
 	calibDataSet->SetProjection(srcDataSet->GetProjectionRef());
+#if 0
 	res = calibDataSet->SetMetadataItem("BitsPerSample", "12", NULL);
-
+#endif //dh hack
 	//find ROI of source image in upsampled param image
 	double paramInvGeoTransform[6], paramGeoTransform[6];
 	paramDataSet->GetGeoTransform(paramGeoTransform);

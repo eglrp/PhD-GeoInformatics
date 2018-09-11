@@ -1366,15 +1366,22 @@ WV3 ATCOR
 - The spectral plotting tool is interesting but not especially useful AFAIAC.  Adjusting the visibility param helps some spectra match the library while makes others worse...
 - We should compare regression results with the different options.  And also with my homogenisation method.  May be a good selling point for that.  
 
+
 Sourcing MODIS data for XCALIB
 -------------------------------
 - The MODIS I want is MCD43A4 from earthexplorer or https://search.earthdata.nasa.gov/.  I think the download process can be automated from earthdata.  
+
 
 WV3 Xcalib
 -----------
 - Remember that WV3 has 8 bands and these are not all covered by MODIS, so calibrating with a MODIS reference will limit the number of bands.  Or perhaps we can hack it to use the closest band. 
 - A better option is perhaps Sentinel which has matching bands except for the yellow.  The surface reflectance is not BRDF corrected but so be it.  
 - Sentinel 2 Level2A is atmospherically corrected BOA reflectance data i.e. the data we want.  This is only available for Europe.  For the rest of the world the Level1C data must be obtained and corrected with the Sentinel Toolbox. 
+- Follow the procedure below.  
+- XCalib of WV3 opens up a lot of things to experiment with again like model and win size (because of small Sentinel pixels).  And it will be interesting to see if and how it all works. 
+- NB it is questionable if XCalib will offer any advantage over ATCOR as the Sentinel reference is also only ATCOR'd (their own atmospheric correction).  There is no BRDF correction for Sentinel, but perhaps a more vertical view angle is helpful compared to WV3.  The XCalib could actually make it worse due to differing RSR's
+- It is also questionable if Sentinel ref of 10m vs 60m will have any advantage.  
+- It is much faster to xcalib the orig res MS image rather than pan sharp 
 
 Sentinel
 ---------

@@ -79,8 +79,8 @@ for res in (20, 60):
 #
 
 
-sentinelBandDir = "D:\Data\Development\Projects\PhD GeoInformatics\Data\Sentinel\S2A_MSIL2A_20171002T075741_N0205_R035_T34HGH_20171002T081741.SAFE - No DEM all res\GRANULE\L2A_T34HGH_A011901_20171002T081741\IMG_DATA\R10m"
-sentinelBandDir = "D:\Data\Development\Projects\PhD GeoInformatics\Data\Sentinel\S2A_MSIL2A_20171002T075741_N0205_R035_T34HGH_20171002T081741.SAFE - with SRTM90 all res\GRANULE\L2A_T34HGH_A011901_20171002T081741\IMG_DATA\R10m"
+sentinelBandDir = "D:\Data\Development\Projects\PhD GeoInformatics\Data\Sentinel\S2A_MSIL2A_20171002T075741_N0205_R035_T34HGH_20171002T081741.SAFE - No DEM all res\GRANULE\L2A_T34HGH_A011901_20171002T081741\IMG_DATA\R60m"
+sentinelBandDir = "D:\Data\Development\Projects\PhD GeoInformatics\Data\Sentinel\S2A_MSIL2A_20171002T075741_N0205_R035_T34HGH_20171002T081741.SAFE - with SRTM90 all res\GRANULE\L2A_T34HGH_A011901_20171002T081741\IMG_DATA\R60m"
 # L2A_T34HGH_20171002T075741_B01_60m.jp2
 sentinelOutFileName = sentinelBandDir + "\L2A_T34HGH_20171002T075741_Wv3Bands_10m.tif"
 
@@ -90,6 +90,9 @@ sentinelOutFileName = sentinelBandDir + "\L2A_T34HGH_20171002T075741_Wv3Bands_10
 # gdal_merge -of Gtiff -separate -a_nodata 0 -o "MCD43A4.A2015241.h20v12.005.2015260133130.NgiBandOrder.tif" ModisBand_1.tif ModisBand_4.tif ModisBand_3.tif ModisBand_2.tif
 senBandMap = ['B01_60to10m.tif', 'B02_10m.jp2', 'B03_10m.jp2', 'B03_10m.jp2', 'B04_10m.jp2',
               'MeanOfB05AndB06_20to10m.tif', 'B08_10m.jp2', 'MeanOfB8AandB09_20to10m.tif']   # how sentinel bands will be ordered to macth wv3
+
+senBandMap = ['B01_60m.jp2', 'B02_10m.jp2', 'B03_60m.jp2', 'B03_60m.jp2', 'B04_60m.jp2',
+              'MeanOfB05AndB06_60m.tif', 'B08_60m.jp2', 'MeanOfB8AandB09_60m.tif']   # how sentinel bands will be ordered to macth wv3
 
 mergeCmdStr = '{0} -of Gtiff -separate -a_nodata 0 -o "{1}" '.format(gdalmergeExe, sentinelOutFileName)
 
