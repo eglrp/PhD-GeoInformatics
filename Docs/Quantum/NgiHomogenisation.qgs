@@ -1,0 +1,3979 @@
+<!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
+<qgis version="3.0.1-Girona" projectname="">
+  <title></title>
+  <autotransaction active="0"/>
+  <evaluateDefaultValues active="0"/>
+  <trust active="0"/>
+  <projectCrs>
+    <spatialrefsys>
+      <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+      <srsid>3452</srsid>
+      <srid>4326</srid>
+      <authid>EPSG:4326</authid>
+      <description>WGS 84</description>
+      <projectionacronym>longlat</projectionacronym>
+      <ellipsoidacronym>WGS84</ellipsoidacronym>
+      <geographicflag>true</geographicflag>
+    </spatialrefsys>
+  </projectCrs>
+  <layer-tree-group>
+    <customproperties/>
+    <layer-tree-group expanded="1" checked="Qt::Checked" name="3318B Rectified">
+      <customproperties/>
+      <layer-tree-layer id="o3318B_2016_1142_01_0034_RGB_5542dcdb_bdc7_4788_a881_f79c586b03ea" source="E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0034_RGB.tif" expanded="1" checked="Qt::Checked" providerKey="gdal" name="o3318B_2016_1142_01_0034_RGB">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer id="o3318B_2016_1142_01_0033_RGB_b2a013a9_8445_4fc9_91bc_a5d6f94530ca" source="E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0033_RGB.tif" expanded="1" checked="Qt::Checked" providerKey="gdal" name="o3318B_2016_1142_01_0033_RGB">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer id="o3318B_2016_1142_01_0032_RGB_ffb1db27_de4c_4c9f_a2db_d31e8779dc09" source="E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0032_RGB.tif" expanded="1" checked="Qt::Checked" providerKey="gdal" name="o3318B_2016_1142_01_0032_RGB">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer id="o3318B_2016_1142_01_0031_RGB_a6df7ec7_e27a_495a_902c_367f1753142e" source="E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0031_RGB.tif" expanded="1" checked="Qt::Checked" providerKey="gdal" name="o3318B_2016_1142_01_0031_RGB">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer id="o3318B_2016_1142_01_0030_RGB_58a752ce_4a97_4577_8eb6_76a398b6b79f" source="E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0030_RGB.tif" expanded="1" checked="Qt::Checked" providerKey="gdal" name="o3318B_2016_1142_01_0030_RGB">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer id="o3318B_2016_1142_01_0029_RGB_24452cf3_9bde_4a7e_a1b9_dfecde53ddeb" source="E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0029_RGB.tif" expanded="1" checked="Qt::Checked" providerKey="gdal" name="o3318B_2016_1142_01_0029_RGB">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer id="o3318B_2016_1142_01_0028_RGB_cdcac915_8c9e_4077_b89e_895e9cb5ae12" source="E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0028_RGB.tif" expanded="1" checked="Qt::Checked" providerKey="gdal" name="o3318B_2016_1142_01_0028_RGB">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer id="o3318B_2016_1142_01_0027_RGB_2c69aeee_2e3e_4f00_915f_15db63b7bdad" source="E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0027_RGB.tif" expanded="1" checked="Qt::Checked" providerKey="gdal" name="o3318B_2016_1142_01_0027_RGB">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer id="o3318B_2016_1142_01_0026_RGB_44822e62_5fca_4e14_9e73_f92c5602ae09" source="E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0026_RGB.tif" expanded="1" checked="Qt::Checked" providerKey="gdal" name="o3318B_2016_1142_01_0026_RGB">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer id="o3318B_2016_1142_01_0025_RGB_d75cbbf2_c251_44d6_9d36_f81ed7c73e87" source="E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0025_RGB.tif" expanded="1" checked="Qt::Checked" providerKey="gdal" name="o3318B_2016_1142_01_0025_RGB">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer id="o3318B_2016_1142_01_0024_RGB_6c78d3eb_b1ed_4889_a05f_6a79149e144d" source="E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0024_RGB.tif" expanded="1" checked="Qt::Checked" providerKey="gdal" name="o3318B_2016_1142_01_0024_RGB">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer id="o3318B_2016_1142_01_0023_RGB_2b2abeb6_bff6_49df_ad64_822b06de89f3" source="E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0023_RGB.tif" expanded="1" checked="Qt::Checked" providerKey="gdal" name="o3318B_2016_1142_01_0023_RGB">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer id="o3318B_2016_1142_01_0022_RGB_432c8337_068d_4b09_b6d9_ab1229fcf99e" source="E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0022_RGB.tif" expanded="1" checked="Qt::Checked" providerKey="gdal" name="o3318B_2016_1142_01_0022_RGB">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer id="o3318B_2016_1142_01_0021_RGB_ce0384ef_eac7_43cb_981e_1618ac1d9cee" source="E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0021_RGB.tif" expanded="1" checked="Qt::Checked" providerKey="gdal" name="o3318B_2016_1142_01_0021_RGB">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer id="o3318B_2016_1142_01_0020_RGB_db490342_4e83_4e90_936f_93d744a66dc4" source="E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0020_RGB.tif" expanded="1" checked="Qt::Checked" providerKey="gdal" name="o3318B_2016_1142_01_0020_RGB">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer id="o3318B_2016_1142_01_0019_RGB_4f461a74_86d5_4a6d_96ec_8e93508ab675" source="E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0019_RGB.tif" expanded="1" checked="Qt::Checked" providerKey="gdal" name="o3318B_2016_1142_01_0019_RGB">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer id="o3318B_2016_1142_01_0018_RGB_6fcc8be6_93a8_4310_9fd1_6067a0593c11" source="E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0018_RGB.tif" expanded="1" checked="Qt::Checked" providerKey="gdal" name="o3318B_2016_1142_01_0018_RGB">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer id="o3318B_2016_1142_01_0017_RGB_4a7ddd29_b86a_46eb_a872_c86944961ade" source="E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0017_RGB.tif" expanded="1" checked="Qt::Checked" providerKey="gdal" name="o3318B_2016_1142_01_0017_RGB">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer id="o3318B_2016_1142_01_0016_RGB_6a572114_175b_4c75_9adf_04f61c01abe8" source="E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0016_RGB.tif" expanded="1" checked="Qt::Checked" providerKey="gdal" name="o3318B_2016_1142_01_0016_RGB">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer id="o3318B_2016_1142_01_0015_RGB_02500f38_bcbc_40a8_ae1e_f97abd7dadb0" source="E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0015_RGB.tif" expanded="1" checked="Qt::Checked" providerKey="gdal" name="o3318B_2016_1142_01_0015_RGB">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer id="o3318B_2016_1142_01_0014_RGB_b5629d3b_7bf2_4b51_8bc6_0f5c75c55a69" source="E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0014_RGB.tif" expanded="1" checked="Qt::Checked" providerKey="gdal" name="o3318B_2016_1142_01_0014_RGB">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer id="o3318B_2016_1142_01_0013_RGB_caf199a4_899e_4361_a61e_126f1b5a8035" source="E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0013_RGB.tif" expanded="1" checked="Qt::Checked" providerKey="gdal" name="o3318B_2016_1142_01_0013_RGB">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer id="o3318B_2016_1142_01_0012_RGB_b88681e0_8240_42b7_8c2f_3a87ee7771fe" source="E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0012_RGB.tif" expanded="1" checked="Qt::Checked" providerKey="gdal" name="o3318B_2016_1142_01_0012_RGB">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer id="o3318B_2016_1142_01_0011_RGB_bbd21e21_c6d7_4dd2_9b26_898920608ebd" source="E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0011_RGB.tif" expanded="1" checked="Qt::Checked" providerKey="gdal" name="o3318B_2016_1142_01_0011_RGB">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer id="o3318B_2016_1142_01_0010_RGB_abaebbdc_68f4_4e07_89a2_b3c5e4c9c6f9" source="E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0010_RGB.tif" expanded="1" checked="Qt::Checked" providerKey="gdal" name="o3318B_2016_1142_01_0010_RGB">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer id="o3318B_2016_1142_01_0009_RGB_f86ef3ac_ae77_4737_8bed_b19a1325fb54" source="E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0009_RGB.tif" expanded="1" checked="Qt::Checked" providerKey="gdal" name="o3318B_2016_1142_01_0009_RGB">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer id="o3318B_2016_1142_01_0008_RGB_90a6b65e_e899_4272_8471_f79c1d85cdb8" source="E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0008_RGB.tif" expanded="1" checked="Qt::Checked" providerKey="gdal" name="o3318B_2016_1142_01_0008_RGB">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer id="o3318B_2016_1142_01_0007_RGB_34c7ccec_d89d_41c9_b74b_e83e4056e9d1" source="E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0007_RGB.tif" expanded="1" checked="Qt::Checked" providerKey="gdal" name="o3318B_2016_1142_01_0007_RGB">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer id="o3318B_2016_1142_01_0006_RGB_5368f1e9_25dd_43f1_b3b4_fd221cba5e17" source="E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0006_RGB.tif" expanded="1" checked="Qt::Checked" providerKey="gdal" name="o3318B_2016_1142_01_0006_RGB">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer id="o3318B_2016_1142_01_0005_RGB_e0e258cb_ef63_4c26_9d92_0e79c420b83a" source="E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0005_RGB.tif" expanded="1" checked="Qt::Checked" providerKey="gdal" name="o3318B_2016_1142_01_0005_RGB">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer id="o3318B_2016_1142_01_0004_RGB_5eff1fba_d94c_4e5c_9d13_460d0f476b7b" source="E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0004_RGB.tif" expanded="1" checked="Qt::Checked" providerKey="gdal" name="o3318B_2016_1142_01_0004_RGB">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer id="o3318B_2016_1142_01_0003_RGB_d67379f6_a734_4ac3_b698_a09c125b90e4" source="E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0003_RGB.tif" expanded="1" checked="Qt::Checked" providerKey="gdal" name="o3318B_2016_1142_01_0003_RGB">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer id="o3318B_2016_1142_01_0002_RGB_17509079_2367_4f3d_8f3a_d5c585643537" source="E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0002_RGB.tif" expanded="1" checked="Qt::Checked" providerKey="gdal" name="o3318B_2016_1142_01_0002_RGB">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer id="o3318B_2016_1142_01_0001_RGB_94f5b231_7849_41fb_bcf0_00dbb9b5efe7" source="E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0001_RGB.tif" expanded="1" checked="Qt::Checked" providerKey="gdal" name="o3318B_2016_1142_01_0001_RGB">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer id="o3318B_2016_1142_01_0035_RGB_fb40522a_3a85_4413_b329_a5d3b4746970" source="E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0035_RGB.tif" expanded="1" checked="Qt::Checked" providerKey="gdal" name="o3318B_2016_1142_01_0035_RGB">
+        <customproperties/>
+      </layer-tree-layer>
+    </layer-tree-group>
+    <layer-tree-group expanded="1" checked="Qt::Unchecked" name="DEM">
+      <customproperties/>
+      <layer-tree-layer id="s33_35_e018_19_1arc_v3_Mosaic_cb627b60_2476_421e_8a07_989f0c959eb2" source="D:/Data/Development/Projects/PhD GeoInformatics/Data/CGA/SRTM/s33-35_e018-19_1arc_v3_Mosaic.tif" expanded="1" checked="Qt::Checked" providerKey="gdal" name="s33-35_e018-19_1arc_v3_Mosaic">
+        <customproperties/>
+      </layer-tree-layer>
+    </layer-tree-group>
+    <layer-tree-layer id="Google_Satellite_Hybrid_f8402a0b_e6fd_4166_9764_d8bd93ccb5ea" source="type=xyz&amp;zmin=0&amp;zmax=19&amp;url=https://mt1.google.com/vt/lyrs%3Dy%26x%3D{x}%26y%3D{y}%26z%3D{z}" expanded="1" checked="Qt::Checked" providerKey="wms" name="Google Satellite Hybrid">
+      <customproperties/>
+    </layer-tree-layer>
+    <custom-order enabled="0">
+      <item>Google_Satellite_Hybrid_f8402a0b_e6fd_4166_9764_d8bd93ccb5ea</item>
+      <item>o3318B_2016_1142_01_0035_RGB_fb40522a_3a85_4413_b329_a5d3b4746970</item>
+      <item>o3318B_2016_1142_01_0001_RGB_94f5b231_7849_41fb_bcf0_00dbb9b5efe7</item>
+      <item>o3318B_2016_1142_01_0002_RGB_17509079_2367_4f3d_8f3a_d5c585643537</item>
+      <item>o3318B_2016_1142_01_0003_RGB_d67379f6_a734_4ac3_b698_a09c125b90e4</item>
+      <item>o3318B_2016_1142_01_0004_RGB_5eff1fba_d94c_4e5c_9d13_460d0f476b7b</item>
+      <item>o3318B_2016_1142_01_0005_RGB_e0e258cb_ef63_4c26_9d92_0e79c420b83a</item>
+      <item>o3318B_2016_1142_01_0006_RGB_5368f1e9_25dd_43f1_b3b4_fd221cba5e17</item>
+      <item>o3318B_2016_1142_01_0007_RGB_34c7ccec_d89d_41c9_b74b_e83e4056e9d1</item>
+      <item>o3318B_2016_1142_01_0008_RGB_90a6b65e_e899_4272_8471_f79c1d85cdb8</item>
+      <item>o3318B_2016_1142_01_0009_RGB_f86ef3ac_ae77_4737_8bed_b19a1325fb54</item>
+      <item>o3318B_2016_1142_01_0010_RGB_abaebbdc_68f4_4e07_89a2_b3c5e4c9c6f9</item>
+      <item>o3318B_2016_1142_01_0011_RGB_bbd21e21_c6d7_4dd2_9b26_898920608ebd</item>
+      <item>o3318B_2016_1142_01_0012_RGB_b88681e0_8240_42b7_8c2f_3a87ee7771fe</item>
+      <item>o3318B_2016_1142_01_0013_RGB_caf199a4_899e_4361_a61e_126f1b5a8035</item>
+      <item>o3318B_2016_1142_01_0014_RGB_b5629d3b_7bf2_4b51_8bc6_0f5c75c55a69</item>
+      <item>o3318B_2016_1142_01_0015_RGB_02500f38_bcbc_40a8_ae1e_f97abd7dadb0</item>
+      <item>o3318B_2016_1142_01_0016_RGB_6a572114_175b_4c75_9adf_04f61c01abe8</item>
+      <item>o3318B_2016_1142_01_0017_RGB_4a7ddd29_b86a_46eb_a872_c86944961ade</item>
+      <item>o3318B_2016_1142_01_0018_RGB_6fcc8be6_93a8_4310_9fd1_6067a0593c11</item>
+      <item>o3318B_2016_1142_01_0019_RGB_4f461a74_86d5_4a6d_96ec_8e93508ab675</item>
+      <item>o3318B_2016_1142_01_0020_RGB_db490342_4e83_4e90_936f_93d744a66dc4</item>
+      <item>o3318B_2016_1142_01_0021_RGB_ce0384ef_eac7_43cb_981e_1618ac1d9cee</item>
+      <item>o3318B_2016_1142_01_0022_RGB_432c8337_068d_4b09_b6d9_ab1229fcf99e</item>
+      <item>o3318B_2016_1142_01_0023_RGB_2b2abeb6_bff6_49df_ad64_822b06de89f3</item>
+      <item>o3318B_2016_1142_01_0024_RGB_6c78d3eb_b1ed_4889_a05f_6a79149e144d</item>
+      <item>o3318B_2016_1142_01_0025_RGB_d75cbbf2_c251_44d6_9d36_f81ed7c73e87</item>
+      <item>o3318B_2016_1142_01_0026_RGB_44822e62_5fca_4e14_9e73_f92c5602ae09</item>
+      <item>o3318B_2016_1142_01_0027_RGB_2c69aeee_2e3e_4f00_915f_15db63b7bdad</item>
+      <item>o3318B_2016_1142_01_0028_RGB_cdcac915_8c9e_4077_b89e_895e9cb5ae12</item>
+      <item>o3318B_2016_1142_01_0029_RGB_24452cf3_9bde_4a7e_a1b9_dfecde53ddeb</item>
+      <item>o3318B_2016_1142_01_0030_RGB_58a752ce_4a97_4577_8eb6_76a398b6b79f</item>
+      <item>o3318B_2016_1142_01_0031_RGB_a6df7ec7_e27a_495a_902c_367f1753142e</item>
+      <item>o3318B_2016_1142_01_0032_RGB_ffb1db27_de4c_4c9f_a2db_d31e8779dc09</item>
+      <item>o3318B_2016_1142_01_0033_RGB_b2a013a9_8445_4fc9_91bc_a5d6f94530ca</item>
+      <item>o3318B_2016_1142_01_0034_RGB_5542dcdb_bdc7_4788_a881_f79c586b03ea</item>
+      <item>s33_35_e018_19_1arc_v3_Mosaic_cb627b60_2476_421e_8a07_989f0c959eb2</item>
+    </custom-order>
+  </layer-tree-group>
+  <snapping-settings tolerance="12" type="1" intersection-snapping="0" enabled="0" unit="1" mode="2">
+    <individual-layer-settings/>
+  </snapping-settings>
+  <relations/>
+  <mapcanvas annotationsVisible="1" name="theMapCanvas">
+    <units>degrees</units>
+    <extent>
+      <xmin>18.57765442432130953</xmin>
+      <ymin>-33.22415688753343943</ymin>
+      <xmax>18.94280572647565464</xmax>
+      <ymax>-32.87200453439206171</ymax>
+    </extent>
+    <rotation>0</rotation>
+    <destinationsrs>
+      <spatialrefsys>
+        <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+        <srsid>3452</srsid>
+        <srid>4326</srid>
+        <authid>EPSG:4326</authid>
+        <description>WGS 84</description>
+        <projectionacronym>longlat</projectionacronym>
+        <ellipsoidacronym>WGS84</ellipsoidacronym>
+        <geographicflag>true</geographicflag>
+      </spatialrefsys>
+    </destinationsrs>
+    <rendermaptile>0</rendermaptile>
+  </mapcanvas>
+  <legend updateDrawingOrder="true">
+    <legendgroup open="true" checked="Qt::Checked" name="3318B Rectified">
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" showFeatureCount="0" name="o3318B_2016_1142_01_0034_RGB">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" visible="1" layerid="o3318B_2016_1142_01_0034_RGB_5542dcdb_bdc7_4788_a881_f79c586b03ea"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" showFeatureCount="0" name="o3318B_2016_1142_01_0033_RGB">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" visible="1" layerid="o3318B_2016_1142_01_0033_RGB_b2a013a9_8445_4fc9_91bc_a5d6f94530ca"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" showFeatureCount="0" name="o3318B_2016_1142_01_0032_RGB">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" visible="1" layerid="o3318B_2016_1142_01_0032_RGB_ffb1db27_de4c_4c9f_a2db_d31e8779dc09"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" showFeatureCount="0" name="o3318B_2016_1142_01_0031_RGB">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" visible="1" layerid="o3318B_2016_1142_01_0031_RGB_a6df7ec7_e27a_495a_902c_367f1753142e"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" showFeatureCount="0" name="o3318B_2016_1142_01_0030_RGB">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" visible="1" layerid="o3318B_2016_1142_01_0030_RGB_58a752ce_4a97_4577_8eb6_76a398b6b79f"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" showFeatureCount="0" name="o3318B_2016_1142_01_0029_RGB">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" visible="1" layerid="o3318B_2016_1142_01_0029_RGB_24452cf3_9bde_4a7e_a1b9_dfecde53ddeb"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" showFeatureCount="0" name="o3318B_2016_1142_01_0028_RGB">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" visible="1" layerid="o3318B_2016_1142_01_0028_RGB_cdcac915_8c9e_4077_b89e_895e9cb5ae12"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" showFeatureCount="0" name="o3318B_2016_1142_01_0027_RGB">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" visible="1" layerid="o3318B_2016_1142_01_0027_RGB_2c69aeee_2e3e_4f00_915f_15db63b7bdad"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" showFeatureCount="0" name="o3318B_2016_1142_01_0026_RGB">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" visible="1" layerid="o3318B_2016_1142_01_0026_RGB_44822e62_5fca_4e14_9e73_f92c5602ae09"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" showFeatureCount="0" name="o3318B_2016_1142_01_0025_RGB">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" visible="1" layerid="o3318B_2016_1142_01_0025_RGB_d75cbbf2_c251_44d6_9d36_f81ed7c73e87"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" showFeatureCount="0" name="o3318B_2016_1142_01_0024_RGB">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" visible="1" layerid="o3318B_2016_1142_01_0024_RGB_6c78d3eb_b1ed_4889_a05f_6a79149e144d"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" showFeatureCount="0" name="o3318B_2016_1142_01_0023_RGB">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" visible="1" layerid="o3318B_2016_1142_01_0023_RGB_2b2abeb6_bff6_49df_ad64_822b06de89f3"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" showFeatureCount="0" name="o3318B_2016_1142_01_0022_RGB">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" visible="1" layerid="o3318B_2016_1142_01_0022_RGB_432c8337_068d_4b09_b6d9_ab1229fcf99e"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" showFeatureCount="0" name="o3318B_2016_1142_01_0021_RGB">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" visible="1" layerid="o3318B_2016_1142_01_0021_RGB_ce0384ef_eac7_43cb_981e_1618ac1d9cee"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" showFeatureCount="0" name="o3318B_2016_1142_01_0020_RGB">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" visible="1" layerid="o3318B_2016_1142_01_0020_RGB_db490342_4e83_4e90_936f_93d744a66dc4"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" showFeatureCount="0" name="o3318B_2016_1142_01_0019_RGB">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" visible="1" layerid="o3318B_2016_1142_01_0019_RGB_4f461a74_86d5_4a6d_96ec_8e93508ab675"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" showFeatureCount="0" name="o3318B_2016_1142_01_0018_RGB">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" visible="1" layerid="o3318B_2016_1142_01_0018_RGB_6fcc8be6_93a8_4310_9fd1_6067a0593c11"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" showFeatureCount="0" name="o3318B_2016_1142_01_0017_RGB">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" visible="1" layerid="o3318B_2016_1142_01_0017_RGB_4a7ddd29_b86a_46eb_a872_c86944961ade"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" showFeatureCount="0" name="o3318B_2016_1142_01_0016_RGB">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" visible="1" layerid="o3318B_2016_1142_01_0016_RGB_6a572114_175b_4c75_9adf_04f61c01abe8"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" showFeatureCount="0" name="o3318B_2016_1142_01_0015_RGB">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" visible="1" layerid="o3318B_2016_1142_01_0015_RGB_02500f38_bcbc_40a8_ae1e_f97abd7dadb0"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" showFeatureCount="0" name="o3318B_2016_1142_01_0014_RGB">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" visible="1" layerid="o3318B_2016_1142_01_0014_RGB_b5629d3b_7bf2_4b51_8bc6_0f5c75c55a69"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" showFeatureCount="0" name="o3318B_2016_1142_01_0013_RGB">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" visible="1" layerid="o3318B_2016_1142_01_0013_RGB_caf199a4_899e_4361_a61e_126f1b5a8035"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" showFeatureCount="0" name="o3318B_2016_1142_01_0012_RGB">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" visible="1" layerid="o3318B_2016_1142_01_0012_RGB_b88681e0_8240_42b7_8c2f_3a87ee7771fe"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" showFeatureCount="0" name="o3318B_2016_1142_01_0011_RGB">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" visible="1" layerid="o3318B_2016_1142_01_0011_RGB_bbd21e21_c6d7_4dd2_9b26_898920608ebd"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" showFeatureCount="0" name="o3318B_2016_1142_01_0010_RGB">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" visible="1" layerid="o3318B_2016_1142_01_0010_RGB_abaebbdc_68f4_4e07_89a2_b3c5e4c9c6f9"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" showFeatureCount="0" name="o3318B_2016_1142_01_0009_RGB">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" visible="1" layerid="o3318B_2016_1142_01_0009_RGB_f86ef3ac_ae77_4737_8bed_b19a1325fb54"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" showFeatureCount="0" name="o3318B_2016_1142_01_0008_RGB">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" visible="1" layerid="o3318B_2016_1142_01_0008_RGB_90a6b65e_e899_4272_8471_f79c1d85cdb8"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" showFeatureCount="0" name="o3318B_2016_1142_01_0007_RGB">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" visible="1" layerid="o3318B_2016_1142_01_0007_RGB_34c7ccec_d89d_41c9_b74b_e83e4056e9d1"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" showFeatureCount="0" name="o3318B_2016_1142_01_0006_RGB">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" visible="1" layerid="o3318B_2016_1142_01_0006_RGB_5368f1e9_25dd_43f1_b3b4_fd221cba5e17"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" showFeatureCount="0" name="o3318B_2016_1142_01_0005_RGB">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" visible="1" layerid="o3318B_2016_1142_01_0005_RGB_e0e258cb_ef63_4c26_9d92_0e79c420b83a"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" showFeatureCount="0" name="o3318B_2016_1142_01_0004_RGB">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" visible="1" layerid="o3318B_2016_1142_01_0004_RGB_5eff1fba_d94c_4e5c_9d13_460d0f476b7b"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" showFeatureCount="0" name="o3318B_2016_1142_01_0003_RGB">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" visible="1" layerid="o3318B_2016_1142_01_0003_RGB_d67379f6_a734_4ac3_b698_a09c125b90e4"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" showFeatureCount="0" name="o3318B_2016_1142_01_0002_RGB">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" visible="1" layerid="o3318B_2016_1142_01_0002_RGB_17509079_2367_4f3d_8f3a_d5c585643537"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" showFeatureCount="0" name="o3318B_2016_1142_01_0001_RGB">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" visible="1" layerid="o3318B_2016_1142_01_0001_RGB_94f5b231_7849_41fb_bcf0_00dbb9b5efe7"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" showFeatureCount="0" name="o3318B_2016_1142_01_0035_RGB">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" visible="1" layerid="o3318B_2016_1142_01_0035_RGB_fb40522a_3a85_4413_b329_a5d3b4746970"/>
+        </filegroup>
+      </legendlayer>
+    </legendgroup>
+    <legendgroup open="true" checked="Qt::Unchecked" name="DEM">
+      <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" showFeatureCount="0" name="s33-35_e018-19_1arc_v3_Mosaic">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" visible="0" layerid="s33_35_e018_19_1arc_v3_Mosaic_cb627b60_2476_421e_8a07_989f0c959eb2"/>
+        </filegroup>
+      </legendlayer>
+    </legendgroup>
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" showFeatureCount="0" name="Google Satellite Hybrid">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile isInOverview="0" visible="1" layerid="Google_Satellite_Hybrid_f8402a0b_e6fd_4166_9764_d8bd93ccb5ea"/>
+      </filegroup>
+    </legendlayer>
+  </legend>
+  <mapViewDocks/>
+  <mapViewDocks3D/>
+  <projectlayers>
+    <maplayer refreshOnNotifyMessage="" autoRefreshTime="0" maxScale="0" minScale="1e+8" autoRefreshEnabled="0" type="raster" hasScaleBasedVisibilityFlag="0" refreshOnNotifyEnabled="0">
+      <extent>
+        <xmin>-20037508.34278924390673637</xmin>
+        <ymin>-20037508.34278925508260727</ymin>
+        <xmax>20037508.34278924390673637</xmax>
+        <ymax>20037508.34278924390673637</ymax>
+      </extent>
+      <id>Google_Satellite_Hybrid_f8402a0b_e6fd_4166_9764_d8bd93ccb5ea</id>
+      <datasource>type=xyz&amp;zmin=0&amp;zmax=19&amp;url=https://mt1.google.com/vt/lyrs%3Dy%26x%3D{x}%26y%3D{y}%26z%3D{z}</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>Google Satellite Hybrid</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs</proj4>
+          <srsid>3857</srsid>
+          <srid>3857</srid>
+          <authid>EPSG:3857</authid>
+          <description>WGS 84 / Pseudo Mercator</description>
+          <projectionacronym>merc</projectionacronym>
+          <ellipsoidacronym>WGS84</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <customproperties>
+        <property key="identify/format" value="Undefined"/>
+      </customproperties>
+      <provider>wms</provider>
+      <noData>
+        <noDataList useSrcNoData="0" bandNo="1"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer band="1" type="singlebandcolordata" opacity="1" alphaBand="-1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>None</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" saturation="0" colorizeBlue="128" grayscaleMode="0" colorizeRed="255" colorizeOn="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer refreshOnNotifyMessage="" autoRefreshTime="0" maxScale="0" minScale="1e+8" autoRefreshEnabled="0" type="raster" hasScaleBasedVisibilityFlag="0" refreshOnNotifyEnabled="0">
+      <extent>
+        <xmin>-52334</xmin>
+        <ymin>-3657480</ymin>
+        <xmax>-48234.5</xmax>
+        <ymax>-3650245</ymax>
+      </extent>
+      <id>o3318B_2016_1142_01_0001_RGB_94f5b231_7849_41fb_bcf0_00dbb9b5efe7</id>
+      <datasource>E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0001_RGB.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>o3318B_2016_1142_01_0001_RGB</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100035</srsid>
+          <srid>0</srid>
+          <authid>USER:100035</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList useSrcNoData="1" bandNo="1"/>
+        <noDataList useSrcNoData="1" bandNo="2"/>
+        <noDataList useSrcNoData="1" bandNo="3"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer greenBand="2" type="multibandcolor" blueBand="3" opacity="1" alphaBand="-1" redBand="1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>CumulativeCut</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <redContrastEnhancement>
+            <minValue>815</minValue>
+            <maxValue>2460</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>787</minValue>
+            <maxValue>2438</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>739</minValue>
+            <maxValue>2069</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" saturation="0" colorizeBlue="128" grayscaleMode="0" colorizeRed="255" colorizeOn="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer refreshOnNotifyMessage="" autoRefreshTime="0" maxScale="0" minScale="1e+8" autoRefreshEnabled="0" type="raster" hasScaleBasedVisibilityFlag="0" refreshOnNotifyEnabled="0">
+      <extent>
+        <xmin>-50819.5</xmin>
+        <ymin>-3657529.5</ymin>
+        <xmax>-46736.5</xmax>
+        <ymax>-3650284.5</ymax>
+      </extent>
+      <id>o3318B_2016_1142_01_0002_RGB_17509079_2367_4f3d_8f3a_d5c585643537</id>
+      <datasource>E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0002_RGB.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>o3318B_2016_1142_01_0002_RGB</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100035</srsid>
+          <srid>0</srid>
+          <authid>USER:100035</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList useSrcNoData="1" bandNo="1"/>
+        <noDataList useSrcNoData="1" bandNo="2"/>
+        <noDataList useSrcNoData="1" bandNo="3"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer greenBand="2" type="multibandcolor" blueBand="3" opacity="1" alphaBand="-1" redBand="1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>CumulativeCut</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <redContrastEnhancement>
+            <minValue>815</minValue>
+            <maxValue>2460</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>787</minValue>
+            <maxValue>2438</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>739</minValue>
+            <maxValue>2069</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" saturation="0" colorizeBlue="128" grayscaleMode="0" colorizeRed="255" colorizeOn="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer refreshOnNotifyMessage="" autoRefreshTime="0" maxScale="0" minScale="1e+8" autoRefreshEnabled="0" type="raster" hasScaleBasedVisibilityFlag="0" refreshOnNotifyEnabled="0">
+      <extent>
+        <xmin>-49321.5</xmin>
+        <ymin>-3657459.5</ymin>
+        <xmax>-45225</xmax>
+        <ymax>-3650220.5</ymax>
+      </extent>
+      <id>o3318B_2016_1142_01_0003_RGB_d67379f6_a734_4ac3_b698_a09c125b90e4</id>
+      <datasource>E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0003_RGB.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>o3318B_2016_1142_01_0003_RGB</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100035</srsid>
+          <srid>0</srid>
+          <authid>USER:100035</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList useSrcNoData="1" bandNo="1"/>
+        <noDataList useSrcNoData="1" bandNo="2"/>
+        <noDataList useSrcNoData="1" bandNo="3"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer greenBand="2" type="multibandcolor" blueBand="3" opacity="1" alphaBand="-1" redBand="1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>CumulativeCut</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <redContrastEnhancement>
+            <minValue>815</minValue>
+            <maxValue>2460</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>787</minValue>
+            <maxValue>2438</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>739</minValue>
+            <maxValue>2069</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" saturation="0" colorizeBlue="128" grayscaleMode="0" colorizeRed="255" colorizeOn="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer refreshOnNotifyMessage="" autoRefreshTime="0" maxScale="0" minScale="1e+8" autoRefreshEnabled="0" type="raster" hasScaleBasedVisibilityFlag="0" refreshOnNotifyEnabled="0">
+      <extent>
+        <xmin>-47796.5</xmin>
+        <ymin>-3657484</ymin>
+        <xmax>-43701.5</xmax>
+        <ymax>-3650266.5</ymax>
+      </extent>
+      <id>o3318B_2016_1142_01_0004_RGB_5eff1fba_d94c_4e5c_9d13_460d0f476b7b</id>
+      <datasource>E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0004_RGB.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>o3318B_2016_1142_01_0004_RGB</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100035</srsid>
+          <srid>0</srid>
+          <authid>USER:100035</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList useSrcNoData="1" bandNo="1"/>
+        <noDataList useSrcNoData="1" bandNo="2"/>
+        <noDataList useSrcNoData="1" bandNo="3"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer greenBand="2" type="multibandcolor" blueBand="3" opacity="1" alphaBand="-1" redBand="1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>CumulativeCut</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <redContrastEnhancement>
+            <minValue>815</minValue>
+            <maxValue>2460</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>787</minValue>
+            <maxValue>2438</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>739</minValue>
+            <maxValue>2069</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" saturation="0" colorizeBlue="128" grayscaleMode="0" colorizeRed="255" colorizeOn="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer refreshOnNotifyMessage="" autoRefreshTime="0" maxScale="0" minScale="1e+8" autoRefreshEnabled="0" type="raster" hasScaleBasedVisibilityFlag="0" refreshOnNotifyEnabled="0">
+      <extent>
+        <xmin>-46199.5</xmin>
+        <ymin>-3657623.5</ymin>
+        <xmax>-42113.5</xmax>
+        <ymax>-3650418.5</ymax>
+      </extent>
+      <id>o3318B_2016_1142_01_0005_RGB_e0e258cb_ef63_4c26_9d92_0e79c420b83a</id>
+      <datasource>E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0005_RGB.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>o3318B_2016_1142_01_0005_RGB</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100035</srsid>
+          <srid>0</srid>
+          <authid>USER:100035</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList useSrcNoData="1" bandNo="1"/>
+        <noDataList useSrcNoData="1" bandNo="2"/>
+        <noDataList useSrcNoData="1" bandNo="3"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer greenBand="2" type="multibandcolor" blueBand="3" opacity="1" alphaBand="-1" redBand="1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>CumulativeCut</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <redContrastEnhancement>
+            <minValue>815</minValue>
+            <maxValue>2460</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>787</minValue>
+            <maxValue>2438</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>739</minValue>
+            <maxValue>2069</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" saturation="0" colorizeBlue="128" grayscaleMode="0" colorizeRed="255" colorizeOn="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer refreshOnNotifyMessage="" autoRefreshTime="0" maxScale="0" minScale="1e+8" autoRefreshEnabled="0" type="raster" hasScaleBasedVisibilityFlag="0" refreshOnNotifyEnabled="0">
+      <extent>
+        <xmin>-44653</xmin>
+        <ymin>-3657731.5</ymin>
+        <xmax>-40576</xmax>
+        <ymax>-3650490</ymax>
+      </extent>
+      <id>o3318B_2016_1142_01_0006_RGB_5368f1e9_25dd_43f1_b3b4_fd221cba5e17</id>
+      <datasource>E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0006_RGB.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>o3318B_2016_1142_01_0006_RGB</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100035</srsid>
+          <srid>0</srid>
+          <authid>USER:100035</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList useSrcNoData="1" bandNo="1"/>
+        <noDataList useSrcNoData="1" bandNo="2"/>
+        <noDataList useSrcNoData="1" bandNo="3"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer greenBand="2" type="multibandcolor" blueBand="3" opacity="1" alphaBand="-1" redBand="1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>CumulativeCut</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <redContrastEnhancement>
+            <minValue>815</minValue>
+            <maxValue>2460</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>787</minValue>
+            <maxValue>2438</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>739</minValue>
+            <maxValue>2069</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" saturation="0" colorizeBlue="128" grayscaleMode="0" colorizeRed="255" colorizeOn="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer refreshOnNotifyMessage="" autoRefreshTime="0" maxScale="0" minScale="1e+8" autoRefreshEnabled="0" type="raster" hasScaleBasedVisibilityFlag="0" refreshOnNotifyEnabled="0">
+      <extent>
+        <xmin>-43243.5</xmin>
+        <ymin>-3657569.5</ymin>
+        <xmax>-39187.5</xmax>
+        <ymax>-3650368</ymax>
+      </extent>
+      <id>o3318B_2016_1142_01_0007_RGB_34c7ccec_d89d_41c9_b74b_e83e4056e9d1</id>
+      <datasource>E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0007_RGB.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>o3318B_2016_1142_01_0007_RGB</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100035</srsid>
+          <srid>0</srid>
+          <authid>USER:100035</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList useSrcNoData="1" bandNo="1"/>
+        <noDataList useSrcNoData="1" bandNo="2"/>
+        <noDataList useSrcNoData="1" bandNo="3"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer greenBand="2" type="multibandcolor" blueBand="3" opacity="1" alphaBand="-1" redBand="1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>CumulativeCut</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <redContrastEnhancement>
+            <minValue>815</minValue>
+            <maxValue>2460</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>787</minValue>
+            <maxValue>2438</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>739</minValue>
+            <maxValue>2069</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" saturation="0" colorizeBlue="128" grayscaleMode="0" colorizeRed="255" colorizeOn="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer refreshOnNotifyMessage="" autoRefreshTime="0" maxScale="0" minScale="1e+8" autoRefreshEnabled="0" type="raster" hasScaleBasedVisibilityFlag="0" refreshOnNotifyEnabled="0">
+      <extent>
+        <xmin>-41594</xmin>
+        <ymin>-3657466</ymin>
+        <xmax>-37544</xmax>
+        <ymax>-3650300.5</ymax>
+      </extent>
+      <id>o3318B_2016_1142_01_0008_RGB_90a6b65e_e899_4272_8471_f79c1d85cdb8</id>
+      <datasource>E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0008_RGB.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>o3318B_2016_1142_01_0008_RGB</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100035</srsid>
+          <srid>0</srid>
+          <authid>USER:100035</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList useSrcNoData="1" bandNo="1"/>
+        <noDataList useSrcNoData="1" bandNo="2"/>
+        <noDataList useSrcNoData="1" bandNo="3"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer greenBand="2" type="multibandcolor" blueBand="3" opacity="1" alphaBand="-1" redBand="1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>CumulativeCut</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <redContrastEnhancement>
+            <minValue>815</minValue>
+            <maxValue>2460</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>787</minValue>
+            <maxValue>2438</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>739</minValue>
+            <maxValue>2069</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" saturation="0" colorizeBlue="128" grayscaleMode="0" colorizeRed="255" colorizeOn="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer refreshOnNotifyMessage="" autoRefreshTime="0" maxScale="0" minScale="1e+8" autoRefreshEnabled="0" type="raster" hasScaleBasedVisibilityFlag="0" refreshOnNotifyEnabled="0">
+      <extent>
+        <xmin>-40041.5</xmin>
+        <ymin>-3657470.5</ymin>
+        <xmax>-35991.5</xmax>
+        <ymax>-3650316</ymax>
+      </extent>
+      <id>o3318B_2016_1142_01_0009_RGB_f86ef3ac_ae77_4737_8bed_b19a1325fb54</id>
+      <datasource>E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0009_RGB.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>o3318B_2016_1142_01_0009_RGB</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100035</srsid>
+          <srid>0</srid>
+          <authid>USER:100035</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList useSrcNoData="1" bandNo="1"/>
+        <noDataList useSrcNoData="1" bandNo="2"/>
+        <noDataList useSrcNoData="1" bandNo="3"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer greenBand="2" type="multibandcolor" blueBand="3" opacity="1" alphaBand="-1" redBand="1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>CumulativeCut</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <redContrastEnhancement>
+            <minValue>815</minValue>
+            <maxValue>2460</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>787</minValue>
+            <maxValue>2438</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>739</minValue>
+            <maxValue>2069</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" saturation="0" colorizeBlue="128" grayscaleMode="0" colorizeRed="255" colorizeOn="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer refreshOnNotifyMessage="" autoRefreshTime="0" maxScale="0" minScale="1e+8" autoRefreshEnabled="0" type="raster" hasScaleBasedVisibilityFlag="0" refreshOnNotifyEnabled="0">
+      <extent>
+        <xmin>-38614.5</xmin>
+        <ymin>-3657484</ymin>
+        <xmax>-34597</xmax>
+        <ymax>-3650359</ymax>
+      </extent>
+      <id>o3318B_2016_1142_01_0010_RGB_abaebbdc_68f4_4e07_89a2_b3c5e4c9c6f9</id>
+      <datasource>E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0010_RGB.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>o3318B_2016_1142_01_0010_RGB</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100035</srsid>
+          <srid>0</srid>
+          <authid>USER:100035</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList useSrcNoData="1" bandNo="1"/>
+        <noDataList useSrcNoData="1" bandNo="2"/>
+        <noDataList useSrcNoData="1" bandNo="3"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer greenBand="2" type="multibandcolor" blueBand="3" opacity="1" alphaBand="-1" redBand="1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>CumulativeCut</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <redContrastEnhancement>
+            <minValue>815</minValue>
+            <maxValue>2460</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>787</minValue>
+            <maxValue>2438</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>739</minValue>
+            <maxValue>2069</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" saturation="0" colorizeBlue="128" grayscaleMode="0" colorizeRed="255" colorizeOn="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer refreshOnNotifyMessage="" autoRefreshTime="0" maxScale="0" minScale="1e+8" autoRefreshEnabled="0" type="raster" hasScaleBasedVisibilityFlag="0" refreshOnNotifyEnabled="0">
+      <extent>
+        <xmin>-36998.5</xmin>
+        <ymin>-3657511</ymin>
+        <xmax>-33006.5</xmax>
+        <ymax>-3650370</ymax>
+      </extent>
+      <id>o3318B_2016_1142_01_0011_RGB_bbd21e21_c6d7_4dd2_9b26_898920608ebd</id>
+      <datasource>E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0011_RGB.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>o3318B_2016_1142_01_0011_RGB</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100035</srsid>
+          <srid>0</srid>
+          <authid>USER:100035</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList useSrcNoData="1" bandNo="1"/>
+        <noDataList useSrcNoData="1" bandNo="2"/>
+        <noDataList useSrcNoData="1" bandNo="3"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer greenBand="2" type="multibandcolor" blueBand="3" opacity="1" alphaBand="-1" redBand="1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>CumulativeCut</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <redContrastEnhancement>
+            <minValue>815</minValue>
+            <maxValue>2460</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>787</minValue>
+            <maxValue>2438</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>739</minValue>
+            <maxValue>2069</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" saturation="0" colorizeBlue="128" grayscaleMode="0" colorizeRed="255" colorizeOn="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer refreshOnNotifyMessage="" autoRefreshTime="0" maxScale="0" minScale="1e+8" autoRefreshEnabled="0" type="raster" hasScaleBasedVisibilityFlag="0" refreshOnNotifyEnabled="0">
+      <extent>
+        <xmin>-35439.5</xmin>
+        <ymin>-3657530</ymin>
+        <xmax>-31500.5</xmax>
+        <ymax>-3650427.5</ymax>
+      </extent>
+      <id>o3318B_2016_1142_01_0012_RGB_b88681e0_8240_42b7_8c2f_3a87ee7771fe</id>
+      <datasource>E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0012_RGB.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>o3318B_2016_1142_01_0012_RGB</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100035</srsid>
+          <srid>0</srid>
+          <authid>USER:100035</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList useSrcNoData="1" bandNo="1"/>
+        <noDataList useSrcNoData="1" bandNo="2"/>
+        <noDataList useSrcNoData="1" bandNo="3"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer greenBand="2" type="multibandcolor" blueBand="3" opacity="1" alphaBand="-1" redBand="1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>CumulativeCut</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <redContrastEnhancement>
+            <minValue>815</minValue>
+            <maxValue>2460</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>787</minValue>
+            <maxValue>2438</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>739</minValue>
+            <maxValue>2069</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" saturation="0" colorizeBlue="128" grayscaleMode="0" colorizeRed="255" colorizeOn="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer refreshOnNotifyMessage="" autoRefreshTime="0" maxScale="0" minScale="1e+8" autoRefreshEnabled="0" type="raster" hasScaleBasedVisibilityFlag="0" refreshOnNotifyEnabled="0">
+      <extent>
+        <xmin>-33982</xmin>
+        <ymin>-3657439</ymin>
+        <xmax>-29985.5</xmax>
+        <ymax>-3650347.5</ymax>
+      </extent>
+      <id>o3318B_2016_1142_01_0013_RGB_caf199a4_899e_4361_a61e_126f1b5a8035</id>
+      <datasource>E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0013_RGB.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>o3318B_2016_1142_01_0013_RGB</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100035</srsid>
+          <srid>0</srid>
+          <authid>USER:100035</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList useSrcNoData="1" bandNo="1"/>
+        <noDataList useSrcNoData="1" bandNo="2"/>
+        <noDataList useSrcNoData="1" bandNo="3"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer greenBand="2" type="multibandcolor" blueBand="3" opacity="1" alphaBand="-1" redBand="1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>CumulativeCut</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <redContrastEnhancement>
+            <minValue>815</minValue>
+            <maxValue>2460</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>787</minValue>
+            <maxValue>2438</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>739</minValue>
+            <maxValue>2069</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" saturation="0" colorizeBlue="128" grayscaleMode="0" colorizeRed="255" colorizeOn="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer refreshOnNotifyMessage="" autoRefreshTime="0" maxScale="0" minScale="1e+8" autoRefreshEnabled="0" type="raster" hasScaleBasedVisibilityFlag="0" refreshOnNotifyEnabled="0">
+      <extent>
+        <xmin>-32438</xmin>
+        <ymin>-3657422.5</ymin>
+        <xmax>-28429.5</xmax>
+        <ymax>-3650330.5</ymax>
+      </extent>
+      <id>o3318B_2016_1142_01_0014_RGB_b5629d3b_7bf2_4b51_8bc6_0f5c75c55a69</id>
+      <datasource>E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0014_RGB.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>o3318B_2016_1142_01_0014_RGB</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100035</srsid>
+          <srid>0</srid>
+          <authid>USER:100035</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList useSrcNoData="1" bandNo="1"/>
+        <noDataList useSrcNoData="1" bandNo="2"/>
+        <noDataList useSrcNoData="1" bandNo="3"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer greenBand="2" type="multibandcolor" blueBand="3" opacity="1" alphaBand="-1" redBand="1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>CumulativeCut</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <redContrastEnhancement>
+            <minValue>815</minValue>
+            <maxValue>2460</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>787</minValue>
+            <maxValue>2438</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>739</minValue>
+            <maxValue>2069</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" saturation="0" colorizeBlue="128" grayscaleMode="0" colorizeRed="255" colorizeOn="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer refreshOnNotifyMessage="" autoRefreshTime="0" maxScale="0" minScale="1e+8" autoRefreshEnabled="0" type="raster" hasScaleBasedVisibilityFlag="0" refreshOnNotifyEnabled="0">
+      <extent>
+        <xmin>-30902</xmin>
+        <ymin>-3657422.5</ymin>
+        <xmax>-26892.5</xmax>
+        <ymax>-3650300</ymax>
+      </extent>
+      <id>o3318B_2016_1142_01_0015_RGB_02500f38_bcbc_40a8_ae1e_f97abd7dadb0</id>
+      <datasource>E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0015_RGB.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>o3318B_2016_1142_01_0015_RGB</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100035</srsid>
+          <srid>0</srid>
+          <authid>USER:100035</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList useSrcNoData="1" bandNo="1"/>
+        <noDataList useSrcNoData="1" bandNo="2"/>
+        <noDataList useSrcNoData="1" bandNo="3"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer greenBand="2" type="multibandcolor" blueBand="3" opacity="1" alphaBand="-1" redBand="1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>CumulativeCut</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <redContrastEnhancement>
+            <minValue>815</minValue>
+            <maxValue>2460</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>787</minValue>
+            <maxValue>2438</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>739</minValue>
+            <maxValue>2069</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" saturation="0" colorizeBlue="128" grayscaleMode="0" colorizeRed="255" colorizeOn="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer refreshOnNotifyMessage="" autoRefreshTime="0" maxScale="0" minScale="1e+8" autoRefreshEnabled="0" type="raster" hasScaleBasedVisibilityFlag="0" refreshOnNotifyEnabled="0">
+      <extent>
+        <xmin>-29400</xmin>
+        <ymin>-3657455</ymin>
+        <xmax>-25363</xmax>
+        <ymax>-3650328.5</ymax>
+      </extent>
+      <id>o3318B_2016_1142_01_0016_RGB_6a572114_175b_4c75_9adf_04f61c01abe8</id>
+      <datasource>E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0016_RGB.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>o3318B_2016_1142_01_0016_RGB</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100035</srsid>
+          <srid>0</srid>
+          <authid>USER:100035</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList useSrcNoData="1" bandNo="1"/>
+        <noDataList useSrcNoData="1" bandNo="2"/>
+        <noDataList useSrcNoData="1" bandNo="3"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer greenBand="2" type="multibandcolor" blueBand="3" opacity="1" alphaBand="-1" redBand="1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>CumulativeCut</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <redContrastEnhancement>
+            <minValue>815</minValue>
+            <maxValue>2460</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>787</minValue>
+            <maxValue>2438</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>739</minValue>
+            <maxValue>2069</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" saturation="0" colorizeBlue="128" grayscaleMode="0" colorizeRed="255" colorizeOn="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer refreshOnNotifyMessage="" autoRefreshTime="0" maxScale="0" minScale="1e+8" autoRefreshEnabled="0" type="raster" hasScaleBasedVisibilityFlag="0" refreshOnNotifyEnabled="0">
+      <extent>
+        <xmin>-27851.5</xmin>
+        <ymin>-3657542</ymin>
+        <xmax>-23821.5</xmax>
+        <ymax>-3650383.5</ymax>
+      </extent>
+      <id>o3318B_2016_1142_01_0017_RGB_4a7ddd29_b86a_46eb_a872_c86944961ade</id>
+      <datasource>E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0017_RGB.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>o3318B_2016_1142_01_0017_RGB</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100035</srsid>
+          <srid>0</srid>
+          <authid>USER:100035</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList useSrcNoData="1" bandNo="1"/>
+        <noDataList useSrcNoData="1" bandNo="2"/>
+        <noDataList useSrcNoData="1" bandNo="3"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer greenBand="2" type="multibandcolor" blueBand="3" opacity="1" alphaBand="-1" redBand="1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>CumulativeCut</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <redContrastEnhancement>
+            <minValue>815</minValue>
+            <maxValue>2460</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>787</minValue>
+            <maxValue>2438</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>739</minValue>
+            <maxValue>2069</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" saturation="0" colorizeBlue="128" grayscaleMode="0" colorizeRed="255" colorizeOn="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer refreshOnNotifyMessage="" autoRefreshTime="0" maxScale="0" minScale="1e+8" autoRefreshEnabled="0" type="raster" hasScaleBasedVisibilityFlag="0" refreshOnNotifyEnabled="0">
+      <extent>
+        <xmin>-26347</xmin>
+        <ymin>-3657494</ymin>
+        <xmax>-22298.5</xmax>
+        <ymax>-3650313</ymax>
+      </extent>
+      <id>o3318B_2016_1142_01_0018_RGB_6fcc8be6_93a8_4310_9fd1_6067a0593c11</id>
+      <datasource>E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0018_RGB.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>o3318B_2016_1142_01_0018_RGB</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100035</srsid>
+          <srid>0</srid>
+          <authid>USER:100035</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList useSrcNoData="1" bandNo="1"/>
+        <noDataList useSrcNoData="1" bandNo="2"/>
+        <noDataList useSrcNoData="1" bandNo="3"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer greenBand="2" type="multibandcolor" blueBand="3" opacity="1" alphaBand="-1" redBand="1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>CumulativeCut</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <redContrastEnhancement>
+            <minValue>815</minValue>
+            <maxValue>2460</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>787</minValue>
+            <maxValue>2438</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>739</minValue>
+            <maxValue>2069</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" saturation="0" colorizeBlue="128" grayscaleMode="0" colorizeRed="255" colorizeOn="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer refreshOnNotifyMessage="" autoRefreshTime="0" maxScale="0" minScale="1e+8" autoRefreshEnabled="0" type="raster" hasScaleBasedVisibilityFlag="0" refreshOnNotifyEnabled="0">
+      <extent>
+        <xmin>-24806.5</xmin>
+        <ymin>-3657480</ymin>
+        <xmax>-20763.5</xmax>
+        <ymax>-3650320</ymax>
+      </extent>
+      <id>o3318B_2016_1142_01_0019_RGB_4f461a74_86d5_4a6d_96ec_8e93508ab675</id>
+      <datasource>E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0019_RGB.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>o3318B_2016_1142_01_0019_RGB</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100035</srsid>
+          <srid>0</srid>
+          <authid>USER:100035</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList useSrcNoData="1" bandNo="1"/>
+        <noDataList useSrcNoData="1" bandNo="2"/>
+        <noDataList useSrcNoData="1" bandNo="3"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer greenBand="2" type="multibandcolor" blueBand="3" opacity="1" alphaBand="-1" redBand="1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>CumulativeCut</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <redContrastEnhancement>
+            <minValue>815</minValue>
+            <maxValue>2460</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>787</minValue>
+            <maxValue>2438</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>739</minValue>
+            <maxValue>2069</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" saturation="0" colorizeBlue="128" grayscaleMode="0" colorizeRed="255" colorizeOn="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer refreshOnNotifyMessage="" autoRefreshTime="0" maxScale="0" minScale="1e+8" autoRefreshEnabled="0" type="raster" hasScaleBasedVisibilityFlag="0" refreshOnNotifyEnabled="0">
+      <extent>
+        <xmin>-23366</xmin>
+        <ymin>-3657433</ymin>
+        <xmax>-19316</xmax>
+        <ymax>-3650288.5</ymax>
+      </extent>
+      <id>o3318B_2016_1142_01_0020_RGB_db490342_4e83_4e90_936f_93d744a66dc4</id>
+      <datasource>E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0020_RGB.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>o3318B_2016_1142_01_0020_RGB</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100035</srsid>
+          <srid>0</srid>
+          <authid>USER:100035</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList useSrcNoData="1" bandNo="1"/>
+        <noDataList useSrcNoData="1" bandNo="2"/>
+        <noDataList useSrcNoData="1" bandNo="3"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer greenBand="2" type="multibandcolor" blueBand="3" opacity="1" alphaBand="-1" redBand="1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>CumulativeCut</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <redContrastEnhancement>
+            <minValue>815</minValue>
+            <maxValue>2460</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>787</minValue>
+            <maxValue>2438</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>739</minValue>
+            <maxValue>2069</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" saturation="0" colorizeBlue="128" grayscaleMode="0" colorizeRed="255" colorizeOn="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer refreshOnNotifyMessage="" autoRefreshTime="0" maxScale="0" minScale="1e+8" autoRefreshEnabled="0" type="raster" hasScaleBasedVisibilityFlag="0" refreshOnNotifyEnabled="0">
+      <extent>
+        <xmin>-21816</xmin>
+        <ymin>-3657446</ymin>
+        <xmax>-17764.5</xmax>
+        <ymax>-3650294</ymax>
+      </extent>
+      <id>o3318B_2016_1142_01_0021_RGB_ce0384ef_eac7_43cb_981e_1618ac1d9cee</id>
+      <datasource>E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0021_RGB.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>o3318B_2016_1142_01_0021_RGB</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100035</srsid>
+          <srid>0</srid>
+          <authid>USER:100035</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList useSrcNoData="1" bandNo="1"/>
+        <noDataList useSrcNoData="1" bandNo="2"/>
+        <noDataList useSrcNoData="1" bandNo="3"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer greenBand="2" type="multibandcolor" blueBand="3" opacity="1" alphaBand="-1" redBand="1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>CumulativeCut</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <redContrastEnhancement>
+            <minValue>815</minValue>
+            <maxValue>2460</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>787</minValue>
+            <maxValue>2438</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>739</minValue>
+            <maxValue>2069</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" saturation="0" colorizeBlue="128" grayscaleMode="0" colorizeRed="255" colorizeOn="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer refreshOnNotifyMessage="" autoRefreshTime="0" maxScale="0" minScale="1e+8" autoRefreshEnabled="0" type="raster" hasScaleBasedVisibilityFlag="0" refreshOnNotifyEnabled="0">
+      <extent>
+        <xmin>-20228</xmin>
+        <ymin>-3657448</ymin>
+        <xmax>-16230</xmax>
+        <ymax>-3650275.5</ymax>
+      </extent>
+      <id>o3318B_2016_1142_01_0022_RGB_432c8337_068d_4b09_b6d9_ab1229fcf99e</id>
+      <datasource>E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0022_RGB.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>o3318B_2016_1142_01_0022_RGB</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100035</srsid>
+          <srid>0</srid>
+          <authid>USER:100035</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList useSrcNoData="1" bandNo="1"/>
+        <noDataList useSrcNoData="1" bandNo="2"/>
+        <noDataList useSrcNoData="1" bandNo="3"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer greenBand="2" type="multibandcolor" blueBand="3" opacity="1" alphaBand="-1" redBand="1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>CumulativeCut</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <redContrastEnhancement>
+            <minValue>815</minValue>
+            <maxValue>2460</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>787</minValue>
+            <maxValue>2438</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>739</minValue>
+            <maxValue>2069</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" saturation="0" colorizeBlue="128" grayscaleMode="0" colorizeRed="255" colorizeOn="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer refreshOnNotifyMessage="" autoRefreshTime="0" maxScale="0" minScale="1e+8" autoRefreshEnabled="0" type="raster" hasScaleBasedVisibilityFlag="0" refreshOnNotifyEnabled="0">
+      <extent>
+        <xmin>-18702.5</xmin>
+        <ymin>-3657441.5</ymin>
+        <xmax>-14660</xmax>
+        <ymax>-3650275</ymax>
+      </extent>
+      <id>o3318B_2016_1142_01_0023_RGB_2b2abeb6_bff6_49df_ad64_822b06de89f3</id>
+      <datasource>E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0023_RGB.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>o3318B_2016_1142_01_0023_RGB</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100035</srsid>
+          <srid>0</srid>
+          <authid>USER:100035</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList useSrcNoData="1" bandNo="1"/>
+        <noDataList useSrcNoData="1" bandNo="2"/>
+        <noDataList useSrcNoData="1" bandNo="3"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer greenBand="2" type="multibandcolor" blueBand="3" opacity="1" alphaBand="-1" redBand="1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>CumulativeCut</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <redContrastEnhancement>
+            <minValue>815</minValue>
+            <maxValue>2460</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>787</minValue>
+            <maxValue>2438</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>739</minValue>
+            <maxValue>2069</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" saturation="0" colorizeBlue="128" grayscaleMode="0" colorizeRed="255" colorizeOn="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer refreshOnNotifyMessage="" autoRefreshTime="0" maxScale="0" minScale="1e+8" autoRefreshEnabled="0" type="raster" hasScaleBasedVisibilityFlag="0" refreshOnNotifyEnabled="0">
+      <extent>
+        <xmin>-17161.5</xmin>
+        <ymin>-3657589</ymin>
+        <xmax>-13125</xmax>
+        <ymax>-3650442.5</ymax>
+      </extent>
+      <id>o3318B_2016_1142_01_0024_RGB_6c78d3eb_b1ed_4889_a05f_6a79149e144d</id>
+      <datasource>E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0024_RGB.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>o3318B_2016_1142_01_0024_RGB</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100035</srsid>
+          <srid>0</srid>
+          <authid>USER:100035</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList useSrcNoData="1" bandNo="1"/>
+        <noDataList useSrcNoData="1" bandNo="2"/>
+        <noDataList useSrcNoData="1" bandNo="3"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer greenBand="2" type="multibandcolor" blueBand="3" opacity="1" alphaBand="-1" redBand="1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>CumulativeCut</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <redContrastEnhancement>
+            <minValue>815</minValue>
+            <maxValue>2460</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>787</minValue>
+            <maxValue>2438</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>739</minValue>
+            <maxValue>2069</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" saturation="0" colorizeBlue="128" grayscaleMode="0" colorizeRed="255" colorizeOn="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer refreshOnNotifyMessage="" autoRefreshTime="0" maxScale="0" minScale="1e+8" autoRefreshEnabled="0" type="raster" hasScaleBasedVisibilityFlag="0" refreshOnNotifyEnabled="0">
+      <extent>
+        <xmin>-15662.5</xmin>
+        <ymin>-3657537</ymin>
+        <xmax>-11645</xmax>
+        <ymax>-3650380.5</ymax>
+      </extent>
+      <id>o3318B_2016_1142_01_0025_RGB_d75cbbf2_c251_44d6_9d36_f81ed7c73e87</id>
+      <datasource>E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0025_RGB.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>o3318B_2016_1142_01_0025_RGB</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100035</srsid>
+          <srid>0</srid>
+          <authid>USER:100035</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList useSrcNoData="1" bandNo="1"/>
+        <noDataList useSrcNoData="1" bandNo="2"/>
+        <noDataList useSrcNoData="1" bandNo="3"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer greenBand="2" type="multibandcolor" blueBand="3" opacity="1" alphaBand="-1" redBand="1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>CumulativeCut</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <redContrastEnhancement>
+            <minValue>815</minValue>
+            <maxValue>2460</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>787</minValue>
+            <maxValue>2438</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>739</minValue>
+            <maxValue>2069</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" saturation="0" colorizeBlue="128" grayscaleMode="0" colorizeRed="255" colorizeOn="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer refreshOnNotifyMessage="" autoRefreshTime="0" maxScale="0" minScale="1e+8" autoRefreshEnabled="0" type="raster" hasScaleBasedVisibilityFlag="0" refreshOnNotifyEnabled="0">
+      <extent>
+        <xmin>-14188.5</xmin>
+        <ymin>-3657254</ymin>
+        <xmax>-10181</xmax>
+        <ymax>-3650125</ymax>
+      </extent>
+      <id>o3318B_2016_1142_01_0026_RGB_44822e62_5fca_4e14_9e73_f92c5602ae09</id>
+      <datasource>E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0026_RGB.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>o3318B_2016_1142_01_0026_RGB</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100035</srsid>
+          <srid>0</srid>
+          <authid>USER:100035</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList useSrcNoData="1" bandNo="1"/>
+        <noDataList useSrcNoData="1" bandNo="2"/>
+        <noDataList useSrcNoData="1" bandNo="3"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer greenBand="2" type="multibandcolor" blueBand="3" opacity="1" alphaBand="-1" redBand="1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>CumulativeCut</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <redContrastEnhancement>
+            <minValue>815</minValue>
+            <maxValue>2460</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>787</minValue>
+            <maxValue>2438</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>739</minValue>
+            <maxValue>2069</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" saturation="0" colorizeBlue="128" grayscaleMode="0" colorizeRed="255" colorizeOn="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer refreshOnNotifyMessage="" autoRefreshTime="0" maxScale="0" minScale="1e+8" autoRefreshEnabled="0" type="raster" hasScaleBasedVisibilityFlag="0" refreshOnNotifyEnabled="0">
+      <extent>
+        <xmin>-12594.5</xmin>
+        <ymin>-3657484</ymin>
+        <xmax>-8588</xmax>
+        <ymax>-3650365.5</ymax>
+      </extent>
+      <id>o3318B_2016_1142_01_0027_RGB_2c69aeee_2e3e_4f00_915f_15db63b7bdad</id>
+      <datasource>E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0027_RGB.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>o3318B_2016_1142_01_0027_RGB</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100035</srsid>
+          <srid>0</srid>
+          <authid>USER:100035</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList useSrcNoData="1" bandNo="1"/>
+        <noDataList useSrcNoData="1" bandNo="2"/>
+        <noDataList useSrcNoData="1" bandNo="3"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer greenBand="2" type="multibandcolor" blueBand="3" opacity="1" alphaBand="-1" redBand="1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>CumulativeCut</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <redContrastEnhancement>
+            <minValue>815</minValue>
+            <maxValue>2460</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>787</minValue>
+            <maxValue>2438</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>739</minValue>
+            <maxValue>2069</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" saturation="0" colorizeBlue="128" grayscaleMode="0" colorizeRed="255" colorizeOn="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer refreshOnNotifyMessage="" autoRefreshTime="0" maxScale="0" minScale="1e+8" autoRefreshEnabled="0" type="raster" hasScaleBasedVisibilityFlag="0" refreshOnNotifyEnabled="0">
+      <extent>
+        <xmin>-11119</xmin>
+        <ymin>-3657329</ymin>
+        <xmax>-7123.5</xmax>
+        <ymax>-3650228</ymax>
+      </extent>
+      <id>o3318B_2016_1142_01_0028_RGB_cdcac915_8c9e_4077_b89e_895e9cb5ae12</id>
+      <datasource>E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0028_RGB.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>o3318B_2016_1142_01_0028_RGB</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100035</srsid>
+          <srid>0</srid>
+          <authid>USER:100035</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList useSrcNoData="1" bandNo="1"/>
+        <noDataList useSrcNoData="1" bandNo="2"/>
+        <noDataList useSrcNoData="1" bandNo="3"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer greenBand="2" type="multibandcolor" blueBand="3" opacity="1" alphaBand="-1" redBand="1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>CumulativeCut</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <redContrastEnhancement>
+            <minValue>815</minValue>
+            <maxValue>2460</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>787</minValue>
+            <maxValue>2438</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>739</minValue>
+            <maxValue>2069</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" saturation="0" colorizeBlue="128" grayscaleMode="0" colorizeRed="255" colorizeOn="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer refreshOnNotifyMessage="" autoRefreshTime="0" maxScale="0" minScale="1e+8" autoRefreshEnabled="0" type="raster" hasScaleBasedVisibilityFlag="0" refreshOnNotifyEnabled="0">
+      <extent>
+        <xmin>-9545</xmin>
+        <ymin>-3657668</ymin>
+        <xmax>-5528.5</xmax>
+        <ymax>-3650580.5</ymax>
+      </extent>
+      <id>o3318B_2016_1142_01_0029_RGB_24452cf3_9bde_4a7e_a1b9_dfecde53ddeb</id>
+      <datasource>E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0029_RGB.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>o3318B_2016_1142_01_0029_RGB</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100035</srsid>
+          <srid>0</srid>
+          <authid>USER:100035</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList useSrcNoData="1" bandNo="1"/>
+        <noDataList useSrcNoData="1" bandNo="2"/>
+        <noDataList useSrcNoData="1" bandNo="3"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer greenBand="2" type="multibandcolor" blueBand="3" opacity="1" alphaBand="-1" redBand="1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>CumulativeCut</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <redContrastEnhancement>
+            <minValue>815</minValue>
+            <maxValue>2460</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>787</minValue>
+            <maxValue>2438</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>739</minValue>
+            <maxValue>2069</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" saturation="0" colorizeBlue="128" grayscaleMode="0" colorizeRed="255" colorizeOn="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer refreshOnNotifyMessage="" autoRefreshTime="0" maxScale="0" minScale="1e+8" autoRefreshEnabled="0" type="raster" hasScaleBasedVisibilityFlag="0" refreshOnNotifyEnabled="0">
+      <extent>
+        <xmin>-8062.5</xmin>
+        <ymin>-3657294.5</ymin>
+        <xmax>-4080</xmax>
+        <ymax>-3650211</ymax>
+      </extent>
+      <id>o3318B_2016_1142_01_0030_RGB_58a752ce_4a97_4577_8eb6_76a398b6b79f</id>
+      <datasource>E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0030_RGB.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>o3318B_2016_1142_01_0030_RGB</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100035</srsid>
+          <srid>0</srid>
+          <authid>USER:100035</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList useSrcNoData="1" bandNo="1"/>
+        <noDataList useSrcNoData="1" bandNo="2"/>
+        <noDataList useSrcNoData="1" bandNo="3"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer greenBand="2" type="multibandcolor" blueBand="3" opacity="1" alphaBand="-1" redBand="1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>CumulativeCut</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <redContrastEnhancement>
+            <minValue>815</minValue>
+            <maxValue>2460</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>787</minValue>
+            <maxValue>2438</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>739</minValue>
+            <maxValue>2069</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" saturation="0" colorizeBlue="128" grayscaleMode="0" colorizeRed="255" colorizeOn="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer refreshOnNotifyMessage="" autoRefreshTime="0" maxScale="0" minScale="1e+8" autoRefreshEnabled="0" type="raster" hasScaleBasedVisibilityFlag="0" refreshOnNotifyEnabled="0">
+      <extent>
+        <xmin>-6492.5</xmin>
+        <ymin>-3657406</ymin>
+        <xmax>-2502.5</xmax>
+        <ymax>-3650305</ymax>
+      </extent>
+      <id>o3318B_2016_1142_01_0031_RGB_a6df7ec7_e27a_495a_902c_367f1753142e</id>
+      <datasource>E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0031_RGB.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>o3318B_2016_1142_01_0031_RGB</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100035</srsid>
+          <srid>0</srid>
+          <authid>USER:100035</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList useSrcNoData="1" bandNo="1"/>
+        <noDataList useSrcNoData="1" bandNo="2"/>
+        <noDataList useSrcNoData="1" bandNo="3"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer greenBand="2" type="multibandcolor" blueBand="3" opacity="1" alphaBand="-1" redBand="1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>CumulativeCut</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <redContrastEnhancement>
+            <minValue>815</minValue>
+            <maxValue>2460</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>787</minValue>
+            <maxValue>2438</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>739</minValue>
+            <maxValue>2069</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" saturation="0" colorizeBlue="128" grayscaleMode="0" colorizeRed="255" colorizeOn="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer refreshOnNotifyMessage="" autoRefreshTime="0" maxScale="0" minScale="1e+8" autoRefreshEnabled="0" type="raster" hasScaleBasedVisibilityFlag="0" refreshOnNotifyEnabled="0">
+      <extent>
+        <xmin>-4983</xmin>
+        <ymin>-3657291.5</ymin>
+        <xmax>-1017</xmax>
+        <ymax>-3650220.5</ymax>
+      </extent>
+      <id>o3318B_2016_1142_01_0032_RGB_ffb1db27_de4c_4c9f_a2db_d31e8779dc09</id>
+      <datasource>E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0032_RGB.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>o3318B_2016_1142_01_0032_RGB</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100035</srsid>
+          <srid>0</srid>
+          <authid>USER:100035</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList useSrcNoData="1" bandNo="1"/>
+        <noDataList useSrcNoData="1" bandNo="2"/>
+        <noDataList useSrcNoData="1" bandNo="3"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer greenBand="2" type="multibandcolor" blueBand="3" opacity="1" alphaBand="-1" redBand="1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>CumulativeCut</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <redContrastEnhancement>
+            <minValue>815</minValue>
+            <maxValue>2460</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>787</minValue>
+            <maxValue>2438</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>739</minValue>
+            <maxValue>2069</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" saturation="0" colorizeBlue="128" grayscaleMode="0" colorizeRed="255" colorizeOn="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer refreshOnNotifyMessage="" autoRefreshTime="0" maxScale="0" minScale="1e+8" autoRefreshEnabled="0" type="raster" hasScaleBasedVisibilityFlag="0" refreshOnNotifyEnabled="0">
+      <extent>
+        <xmin>-3436.5</xmin>
+        <ymin>-3657390.5</ymin>
+        <xmax>537</xmax>
+        <ymax>-3650355.5</ymax>
+      </extent>
+      <id>o3318B_2016_1142_01_0033_RGB_b2a013a9_8445_4fc9_91bc_a5d6f94530ca</id>
+      <datasource>E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0033_RGB.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>o3318B_2016_1142_01_0033_RGB</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100035</srsid>
+          <srid>0</srid>
+          <authid>USER:100035</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList useSrcNoData="1" bandNo="1"/>
+        <noDataList useSrcNoData="1" bandNo="2"/>
+        <noDataList useSrcNoData="1" bandNo="3"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer greenBand="2" type="multibandcolor" blueBand="3" opacity="1" alphaBand="-1" redBand="1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>CumulativeCut</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <redContrastEnhancement>
+            <minValue>815</minValue>
+            <maxValue>2460</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>787</minValue>
+            <maxValue>2438</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>739</minValue>
+            <maxValue>2069</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" saturation="0" colorizeBlue="128" grayscaleMode="0" colorizeRed="255" colorizeOn="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer refreshOnNotifyMessage="" autoRefreshTime="0" maxScale="0" minScale="1e+8" autoRefreshEnabled="0" type="raster" hasScaleBasedVisibilityFlag="0" refreshOnNotifyEnabled="0">
+      <extent>
+        <xmin>-1926</xmin>
+        <ymin>-3657452</ymin>
+        <xmax>2013.5</xmax>
+        <ymax>-3650425</ymax>
+      </extent>
+      <id>o3318B_2016_1142_01_0034_RGB_5542dcdb_bdc7_4788_a881_f79c586b03ea</id>
+      <datasource>E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0034_RGB.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>o3318B_2016_1142_01_0034_RGB</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100035</srsid>
+          <srid>0</srid>
+          <authid>USER:100035</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList useSrcNoData="1" bandNo="1"/>
+        <noDataList useSrcNoData="1" bandNo="2"/>
+        <noDataList useSrcNoData="1" bandNo="3"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer greenBand="2" type="multibandcolor" blueBand="3" opacity="1" alphaBand="-1" redBand="1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>CumulativeCut</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <redContrastEnhancement>
+            <minValue>815</minValue>
+            <maxValue>2460</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>787</minValue>
+            <maxValue>2438</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>739</minValue>
+            <maxValue>2069</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" saturation="0" colorizeBlue="128" grayscaleMode="0" colorizeRed="255" colorizeOn="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer refreshOnNotifyMessage="" autoRefreshTime="0" maxScale="0" minScale="1e+8" autoRefreshEnabled="0" type="raster" hasScaleBasedVisibilityFlag="0" refreshOnNotifyEnabled="0">
+      <extent>
+        <xmin>-342.5</xmin>
+        <ymin>-3657421</ymin>
+        <xmax>3537.5</xmax>
+        <ymax>-3650435</ymax>
+      </extent>
+      <id>o3318B_2016_1142_01_0035_RGB_fb40522a_3a85_4413_b329_a5d3b4746970</id>
+      <datasource>E:/Rectified/3318B_2016_1142/o3318B_2016_1142_01_0035_RGB.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>o3318B_2016_1142_01_0035_RGB</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100035</srsid>
+          <srid>0</srid>
+          <authid>USER:100035</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=19 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList useSrcNoData="1" bandNo="1"/>
+        <noDataList useSrcNoData="1" bandNo="2"/>
+        <noDataList useSrcNoData="1" bandNo="3"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer greenBand="2" type="multibandcolor" blueBand="3" opacity="1" alphaBand="-1" redBand="1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>CumulativeCut</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <redContrastEnhancement>
+            <minValue>815</minValue>
+            <maxValue>2460</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </redContrastEnhancement>
+          <greenContrastEnhancement>
+            <minValue>787</minValue>
+            <maxValue>2438</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </greenContrastEnhancement>
+          <blueContrastEnhancement>
+            <minValue>739</minValue>
+            <maxValue>2069</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </blueContrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" saturation="0" colorizeBlue="128" grayscaleMode="0" colorizeRed="255" colorizeOn="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer refreshOnNotifyMessage="" autoRefreshTime="0" maxScale="0" minScale="1e+8" autoRefreshEnabled="0" type="raster" hasScaleBasedVisibilityFlag="0" refreshOnNotifyEnabled="0">
+      <extent>
+        <xmin>17.99986111111111242</xmin>
+        <ymin>-35.00013888888889113</ymin>
+        <xmax>20.00013888888889113</xmax>
+        <ymax>-31.99986111111111242</ymax>
+      </extent>
+      <id>s33_35_e018_19_1arc_v3_Mosaic_cb627b60_2476_421e_8a07_989f0c959eb2</id>
+      <datasource>D:/Data/Development/Projects/PhD GeoInformatics/Data/CGA/SRTM/s33-35_e018-19_1arc_v3_Mosaic.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>s33-35_e018-19_1arc_v3_Mosaic</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+          <srsid>3452</srsid>
+          <srid>4326</srid>
+          <authid>EPSG:4326</authid>
+          <description>WGS 84</description>
+          <projectionacronym>longlat</projectionacronym>
+          <ellipsoidacronym>WGS84</ellipsoidacronym>
+          <geographicflag>true</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+        <links/>
+      </resourceMetadata>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList useSrcNoData="1" bandNo="1"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer type="singlebandgray" gradient="BlackToWhite" opacity="1" grayBand="1" alphaBand="-1">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>MinMax</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <contrastEnhancement>
+            <minValue>0</minValue>
+            <maxValue>2080</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </contrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" saturation="0" colorizeBlue="128" grayscaleMode="0" colorizeRed="255" colorizeOn="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+  </projectlayers>
+  <layerorder>
+    <layer id="Google_Satellite_Hybrid_f8402a0b_e6fd_4166_9764_d8bd93ccb5ea"/>
+    <layer id="o3318B_2016_1142_01_0035_RGB_fb40522a_3a85_4413_b329_a5d3b4746970"/>
+    <layer id="o3318B_2016_1142_01_0001_RGB_94f5b231_7849_41fb_bcf0_00dbb9b5efe7"/>
+    <layer id="o3318B_2016_1142_01_0002_RGB_17509079_2367_4f3d_8f3a_d5c585643537"/>
+    <layer id="o3318B_2016_1142_01_0003_RGB_d67379f6_a734_4ac3_b698_a09c125b90e4"/>
+    <layer id="o3318B_2016_1142_01_0004_RGB_5eff1fba_d94c_4e5c_9d13_460d0f476b7b"/>
+    <layer id="o3318B_2016_1142_01_0005_RGB_e0e258cb_ef63_4c26_9d92_0e79c420b83a"/>
+    <layer id="o3318B_2016_1142_01_0006_RGB_5368f1e9_25dd_43f1_b3b4_fd221cba5e17"/>
+    <layer id="o3318B_2016_1142_01_0007_RGB_34c7ccec_d89d_41c9_b74b_e83e4056e9d1"/>
+    <layer id="o3318B_2016_1142_01_0008_RGB_90a6b65e_e899_4272_8471_f79c1d85cdb8"/>
+    <layer id="o3318B_2016_1142_01_0009_RGB_f86ef3ac_ae77_4737_8bed_b19a1325fb54"/>
+    <layer id="o3318B_2016_1142_01_0010_RGB_abaebbdc_68f4_4e07_89a2_b3c5e4c9c6f9"/>
+    <layer id="o3318B_2016_1142_01_0011_RGB_bbd21e21_c6d7_4dd2_9b26_898920608ebd"/>
+    <layer id="o3318B_2016_1142_01_0012_RGB_b88681e0_8240_42b7_8c2f_3a87ee7771fe"/>
+    <layer id="o3318B_2016_1142_01_0013_RGB_caf199a4_899e_4361_a61e_126f1b5a8035"/>
+    <layer id="o3318B_2016_1142_01_0014_RGB_b5629d3b_7bf2_4b51_8bc6_0f5c75c55a69"/>
+    <layer id="o3318B_2016_1142_01_0015_RGB_02500f38_bcbc_40a8_ae1e_f97abd7dadb0"/>
+    <layer id="o3318B_2016_1142_01_0016_RGB_6a572114_175b_4c75_9adf_04f61c01abe8"/>
+    <layer id="o3318B_2016_1142_01_0017_RGB_4a7ddd29_b86a_46eb_a872_c86944961ade"/>
+    <layer id="o3318B_2016_1142_01_0018_RGB_6fcc8be6_93a8_4310_9fd1_6067a0593c11"/>
+    <layer id="o3318B_2016_1142_01_0019_RGB_4f461a74_86d5_4a6d_96ec_8e93508ab675"/>
+    <layer id="o3318B_2016_1142_01_0020_RGB_db490342_4e83_4e90_936f_93d744a66dc4"/>
+    <layer id="o3318B_2016_1142_01_0021_RGB_ce0384ef_eac7_43cb_981e_1618ac1d9cee"/>
+    <layer id="o3318B_2016_1142_01_0022_RGB_432c8337_068d_4b09_b6d9_ab1229fcf99e"/>
+    <layer id="o3318B_2016_1142_01_0023_RGB_2b2abeb6_bff6_49df_ad64_822b06de89f3"/>
+    <layer id="o3318B_2016_1142_01_0024_RGB_6c78d3eb_b1ed_4889_a05f_6a79149e144d"/>
+    <layer id="o3318B_2016_1142_01_0025_RGB_d75cbbf2_c251_44d6_9d36_f81ed7c73e87"/>
+    <layer id="o3318B_2016_1142_01_0026_RGB_44822e62_5fca_4e14_9e73_f92c5602ae09"/>
+    <layer id="o3318B_2016_1142_01_0027_RGB_2c69aeee_2e3e_4f00_915f_15db63b7bdad"/>
+    <layer id="o3318B_2016_1142_01_0028_RGB_cdcac915_8c9e_4077_b89e_895e9cb5ae12"/>
+    <layer id="o3318B_2016_1142_01_0029_RGB_24452cf3_9bde_4a7e_a1b9_dfecde53ddeb"/>
+    <layer id="o3318B_2016_1142_01_0030_RGB_58a752ce_4a97_4577_8eb6_76a398b6b79f"/>
+    <layer id="o3318B_2016_1142_01_0031_RGB_a6df7ec7_e27a_495a_902c_367f1753142e"/>
+    <layer id="o3318B_2016_1142_01_0032_RGB_ffb1db27_de4c_4c9f_a2db_d31e8779dc09"/>
+    <layer id="o3318B_2016_1142_01_0033_RGB_b2a013a9_8445_4fc9_91bc_a5d6f94530ca"/>
+    <layer id="o3318B_2016_1142_01_0034_RGB_5542dcdb_bdc7_4788_a881_f79c586b03ea"/>
+    <layer id="s33_35_e018_19_1arc_v3_Mosaic_cb627b60_2476_421e_8a07_989f0c959eb2"/>
+  </layerorder>
+  <properties>
+    <SpatialRefSys>
+      <ProjectionsEnabled type="int">1</ProjectionsEnabled>
+    </SpatialRefSys>
+    <WMSContactMail type="QString"></WMSContactMail>
+    <WMSKeywordList type="QStringList">
+      <value></value>
+    </WMSKeywordList>
+    <WMSServiceAbstract type="QString"></WMSServiceAbstract>
+    <WMSUseLayerIDs type="bool">false</WMSUseLayerIDs>
+    <Measure>
+      <Ellipsoid type="QString">WGS84</Ellipsoid>
+    </Measure>
+    <WFSTLayers>
+      <Update type="QStringList"/>
+      <Insert type="QStringList"/>
+      <Delete type="QStringList"/>
+    </WFSTLayers>
+    <WMSServiceCapabilities type="bool">false</WMSServiceCapabilities>
+    <WMSPrecision type="QString">8</WMSPrecision>
+    <Paths>
+      <Absolute type="bool">false</Absolute>
+    </Paths>
+    <WFSUrl type="QString"></WFSUrl>
+    <WMSContactPhone type="QString"></WMSContactPhone>
+    <WMSRequestDefinedDataSources type="bool">false</WMSRequestDefinedDataSources>
+    <WMSImageQuality type="int">90</WMSImageQuality>
+    <WMSAccessConstraints type="QString">None</WMSAccessConstraints>
+    <WMSSegmentizeFeatureInfoGeometry type="bool">false</WMSSegmentizeFeatureInfoGeometry>
+    <WMSContactOrganization type="QString"></WMSContactOrganization>
+    <WMSContactPosition type="QString"></WMSContactPosition>
+    <WCSUrl type="QString"></WCSUrl>
+    <PositionPrecision>
+      <Automatic type="bool">true</Automatic>
+      <DecimalPlaces type="int">2</DecimalPlaces>
+      <DegreeFormat type="QString">MU</DegreeFormat>
+    </PositionPrecision>
+    <Macros>
+      <pythonCode type="QString"></pythonCode>
+    </Macros>
+    <Measurement>
+      <AreaUnits type="QString">m2</AreaUnits>
+      <DistanceUnits type="QString">meters</DistanceUnits>
+    </Measurement>
+    <WMSOnlineResource type="QString"></WMSOnlineResource>
+    <PAL>
+      <SearchMethod type="int">0</SearchMethod>
+      <DrawRectOnly type="bool">false</DrawRectOnly>
+      <ShowingPartialsLabels type="bool">true</ShowingPartialsLabels>
+      <ShowingAllLabels type="bool">false</ShowingAllLabels>
+      <DrawOutlineLabels type="bool">true</DrawOutlineLabels>
+      <CandidatesLine type="int">50</CandidatesLine>
+      <CandidatesPoint type="int">16</CandidatesPoint>
+      <ShowingCandidates type="bool">false</ShowingCandidates>
+      <CandidatesPolygon type="int">30</CandidatesPolygon>
+    </PAL>
+    <Identify>
+      <disabledLayers type="QStringList"/>
+    </Identify>
+    <WMSFees type="QString">conditions unknown</WMSFees>
+    <Legend>
+      <filterByMap type="bool">false</filterByMap>
+    </Legend>
+    <WFSLayers type="QStringList"/>
+    <WMSAddWktGeometry type="bool">false</WMSAddWktGeometry>
+    <WCSLayers type="QStringList"/>
+    <DefaultStyles>
+      <Marker type="QString"></Marker>
+      <Line type="QString"></Line>
+      <RandomColors type="bool">true</RandomColors>
+      <Fill type="QString"></Fill>
+      <ColorRamp type="QString"></ColorRamp>
+      <Opacity type="double">1</Opacity>
+    </DefaultStyles>
+    <Gui>
+      <SelectionColorBluePart type="int">0</SelectionColorBluePart>
+      <CanvasColorRedPart type="int">255</CanvasColorRedPart>
+      <SelectionColorRedPart type="int">255</SelectionColorRedPart>
+      <SelectionColorAlphaPart type="int">255</SelectionColorAlphaPart>
+      <CanvasColorGreenPart type="int">255</CanvasColorGreenPart>
+      <SelectionColorGreenPart type="int">255</SelectionColorGreenPart>
+      <CanvasColorBluePart type="int">255</CanvasColorBluePart>
+    </Gui>
+    <WMSUrl type="QString"></WMSUrl>
+    <WMSServiceTitle type="QString"></WMSServiceTitle>
+    <WMSContactPerson type="QString"></WMSContactPerson>
+  </properties>
+  <visibility-presets/>
+  <transformContext/>
+  <Annotations/>
+  <Layouts/>
+</qgis>

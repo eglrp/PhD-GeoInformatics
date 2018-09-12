@@ -267,6 +267,7 @@ pylab.close('all')
 mpl.rcParams.update({'font.size': fontSize})
 f = pylab.figure('Effect of sliding win size')
 f.set_size_inches(9./1.5, 4./1.5, forward=True)
+ax = pylab.subplot(111)
 for model in [1]:
     modelIdx = models == model
     modelWinAreas = winAreas[modelIdx]
@@ -287,15 +288,22 @@ for i, winSize in enumerate(modelWinSizes):
     else:
         xytext = (5, -10)
 
-    pylab.annotate(str.format('{0:1d}x{1:1d}', winSize[0], winSize[1]), xy=(modelWinAreas[i], modelMaes[i]),
-                   xytext=xytext, textcoords='offset points', fontsize = fontSize/1.2)
+    pylab.annotate(str.format(r'{0:1d}$\times${1:1d}', winSize[0], winSize[1]), xy=(modelWinAreas[i], modelMaes[i]),
+                   xytext=xytext, textcoords='offset points', fontsize = fontSize/1.3)
 
 # pylab.xticks(modelWinAreas, xtickLabels, fontsize=fontSize/2.)
 # xticks(np.arange(5), ('Tom', 'Dick', 'Harry', 'Sally', 'Sue'))
-pylab.xlabel('Window area (pixels)')
-pylab.ylabel('Mean Absolute Difference (%)')
-pylab.grid()
+pylab.xlabel('Window area (pixel)')
+pylab.ylabel('Mean absolute difference (%)')
+# pylab.grid()
 pylab.tight_layout()
+al = pylab.axis()
+pylab.axis([al[0]-2, al[1]+2, al[2]-.02, al[3]+.02])
+ax.spines['right'].set_visible(False)
+ax.spines['top'].set_visible(False)
+# Only show ticks on the left and bottom spines
+ax.yaxis.set_ticks_position('left')
+ax.xaxis.set_ticks_position('bottom')
 
 f.savefig('C:/Data/Development/Projects/PhD GeoInformatics/Docs/My Docs/Thesis/Retrieval of Surface Reflectance'
            ' from Aerial Imagery/Figure 15 - Effect of sliding window size on SPOT 5 comparison.eps', dpi=600)

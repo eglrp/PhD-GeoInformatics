@@ -75,6 +75,7 @@ pylab.close('all')
 bands = (3, 0, 1, 2)
 colors = ('r', 'g', 'b', 'orange')
 legend = ('Red', 'Green', 'Blue', 'NIR')
+titles = ['(b)', '(c)', '(d)', '(a)']
 step = 5
 fn = pylab.gcf().number
 pn = 1
@@ -85,9 +86,13 @@ from matplotlib import pyplot
 mpl.rcParams.update({'font.size': fontSize})
 
 f1 = pylab.figure('Uncalibrated')
-f1.set_size_inches(6, 4.5, forward=True)
+f1.set_size_inches(6*1.2, 4.5*1.2, forward=True)
 f2 = pylab.figure('Calibrated')
-f2.set_size_inches(6, 4.5, forward=True)
+f2.set_size_inches(6*1.2, 4.5*1.2, forward=True)
+
+mlim = [modisIm.min(), modisIm.max()]
+drlim = [ngiRawIm.min(), ngiRawIm.max()]
+dclim = [ngiCalibIm.min(), ngiCalibIm.max()]
 
 ePixels = []
 for b in bands:
@@ -102,45 +107,62 @@ for b in bands:
 
     (slope, intercept, r, p, stde) = scipy.stats.linregress(mPixels, dRawPixels)
     pylab.figure('Uncalibrated')
-    pylab.subplot(2, 2, pn)
+    ax = pylab.subplot(2, 2, pn)
     pylab.plot(mPixels[::step], dRawPixels[::step], color='k', marker='.', linestyle='', markersize=.5)
+    pylab.axis(mlim + drlim)
     xl = pylab.gca().get_xlim()
     yl = pylab.gca().get_ylim()
     pylab.text((xl[0] + np.diff(xl)*0.05)[0], (yl[0] + np.diff(yl)*0.8)[0], str.format('$R^2$ = {0:.2f}',
                                                                                        np.round(r**2, 2)))
     #pylab.xlabel(r'MODIS $\rho_t$')
-    pylab.xlabel(r'MODIS surface refl.')
+    pylab.xlabel(r'MODIS surface reflectance')
     pylab.ylabel('DMC DN')
-    pylab.title(legend[b])
-    pylab.grid('on')
+    pylab.title(titles[b])
+    # pylab.grid('on')
     pylab.tight_layout()
+    # Hide the right and top spines
+    ax.spines['right'].set_visible(False)
+    ax.spines['top'].set_visible(False)
+    # Only show ticks on the left and bottom spines
+    ax.yaxis.set_ticks_position('left')
+    ax.xaxis.set_ticks_position('bottom')
+
     pyplot.locator_params(axis='y', nbins=5)  #to specify number of ticks on both or any single axes
     pyplot.locator_params(axis='x', nbins=6)
     #pylab.hold('on')
 
     (slope, intercept, r, p, stde) = scipy.stats.linregress(mPixels, dCalibPixels)
     pylab.figure('Calibrated')
-    pylab.subplot(2, 2, pn)
+    ax = pylab.subplot(2, 2, pn)
     pylab.plot(mPixels[::step], dCalibPixels[::step], color='k', marker='.', linestyle='', markersize=.5)
+
     pylab.hold(True)
-    m = np.max([mPixels.max(), dCalibPixels.max()])
+    # m = np.max([mPixels.max(), dCalibPixels.max()])
+    m = np.max([mlim + dclim])
     oneLineH, = pylab.plot([0, m], [0, m], color='k', marker='', linestyle='--', label='1:1')
+    pylab.axis(mlim + dclim)
     pylab.gca().set_xlim([0, m])
     pylab.gca().set_ylim([0, m])
     xl = pylab.gca().get_xlim()
     yl = pylab.gca().get_ylim()
     pylab.text((xl[0] + np.diff(xl)*0.05)[0], (yl[0] + np.diff(yl)*0.8)[0], str.format('$R^2$ = {0:.2f}',
                                                                                        np.round(r**2, 2)))
-    pylab.title(legend[b])
+    pylab.title(titles[b])
     #pylab.xlabel(r'MODIS $\rho_t$')
-    pylab.xlabel(r'MODIS surface refl.')
+    pylab.xlabel(r'MODIS surface reflectance')
     #pylab.ylabel(r'DMC $\rho_t$')
-    pylab.ylabel(r'DMC surface refl.')
-    pylab.legend(handles=[oneLineH], prop={'size':fontSize-2}, loc=4)
-    pylab.grid('on')
+    pylab.ylabel(r'DMC surface reflectance')
+    pylab.legend(handles=[oneLineH], prop={'size':fontSize-2}, loc=4, frameon=False)
+    # pylab.grid('on')
 
     pylab.tight_layout()
-    pyplot.locator_params(axis='y', nbins=5)#to specify number of ticks on both or any single axes
+    # Hide the right and top spines
+    ax.spines['right'].set_visible(False)
+    ax.spines['top'].set_visible(False)
+    # Only show ticks on the left and bottom spines
+    ax.yaxis.set_ticks_position('left')
+    ax.xaxis.set_ticks_position('bottom')
+    pyplot.locator_params(axis='y', nbins=5)   # to specify number of ticks on both or any single axes
     pyplot.locator_params(axis='x', nbins=5)
 
     #pylab.hold('on')
@@ -160,7 +182,7 @@ for b in bands:
     pylab.plot(mX, dCalibH, linestyle=':', color=colors[b])
     pylab.plot(dRawX, dRawH, linestyle='--', color=colors[b])
     pylab.tight_layout()
-    pyplot.locator_params(axis='y', nbins=5)#to specify number of ticks on both or any single axes
+    pyplot.locator_params(axis='y', nbins=5)    #to specify number of ticks on both or any single axes
     pyplot.locator_params(axis='x', nbins=5)
     #title(str.format('Calib r = {}', r))
 
@@ -190,7 +212,8 @@ spotFileName = "D:\Data\Development\Projects\PhD GeoInformatics\Data\NGI\My Rect
 spotFileNameNew = "D:\Data\Development\Projects\PhD GeoInformatics\Data\SPOT\S131022114824832\Orthorectification\oATCORCorrected_METADATA_00812098_AutoGCP_NgiFormat.tif"  #improved orthorect
 ngiRawFileName = "D:\Data\Development\Projects\PhD GeoInformatics\Data\NGI\Cross Calibration\Mosaics\StudyAreaUncalibratedMosaicSpotMask.tif"
 ngiCalibFileName = "D:\Data\Development\Projects\PhD GeoInformatics\Data\NGI\My Rectified\StudyAreaXCalibMosaicSpotMask.tif"
-ngiCalibFileName = "W:\PhD GeoInformatics\Data\NGI\Cross Calibration\XCalibMosaic10m_SpotExtent.tif"   #seamline fix mosaic
+# ngiCalibFileName = "W:\PhD GeoInformatics\Data\NGI\Cross Calibration\XCalibMosaic10m_SpotExtent.tif"   #seamline fix mosaic
+ngiCalibFileName = "D:\Data\Development\Projects\PhD GeoInformatics\Data\NGI\Cross Calibration\XCalibMosaic10m_SpotExtent.tif"
 
 # ngiCalibFileName = "W:\PhD GeoInformatics\Data\NGI\Cross Calibration\XCalibMosaic10m.tif"
 
@@ -326,9 +349,15 @@ fontSize = 12.
 mpl.rcParams.update({'font.size': fontSize})
 
 f1 = pylab.figure('Uncalibrated')
-f1.set_size_inches(8., 5.25/2, forward=True)
+f1.set_size_inches(8.*1.2, 5.25/2*1.2, forward=True)
 f2 = pylab.figure('Calibrated')
-f2.set_size_inches(8., 5.25/2, forward=True)
+f2.set_size_inches(8.*1.2, 5.25/2*1.2, forward=True)
+
+titles = ['(a)', '(b)', '(c)', '(d)']
+mlim = [0, 1]
+drlim = [0, 2500]
+dclim = [ngiCalibIm.min(), ngiCalibIm.max()]
+
 
 ## NB
 spotIm = spotNewIm
@@ -345,9 +374,9 @@ for b in bands:
 
     (slope, intercept, r, p, stde) = scipy.stats.linregress(sPixels.flatten(), dRawPixels.flatten())
     pylab.figure('Uncalibrated')
-    pylab.subplot(1, 3, pn)
+    ax = pylab.subplot(1, 3, pn)
     pylab.plot(sPixels[::step], dRawPixels[::step], color='k', marker='.', linestyle='', markersize=.5)
-
+    pylab.axis(mlim + drlim)
     xl = pylab.gca().get_xlim()
     yl = pylab.gca().get_ylim()
     # pylab.xticks(np.arange(xl[0], xl[1], 0.2))
@@ -356,11 +385,17 @@ for b in bands:
     pylab.text((xl[0] + np.diff(xl)*0.05)[0], (yl[0] + np.diff(yl)*0.8)[0], str.format('$R^2$ = {0:.2f}',
                                                                                        np.round(r**2, 2)))
     # pylab.xlabel(r'SPOT5 $\rho_t$')
-    pylab.xlabel(r'SPOT5 surface refl.')
+    pylab.xlabel(r'SPOT 5 surface reflectance')
     pylab.ylabel('DMC DN')
-    pylab.title(legend[b])
-    pylab.grid('on')
+    pylab.title(titles[b])
+    # pylab.grid('on')
     pylab.tight_layout()
+    ax.spines['right'].set_visible(False)
+    ax.spines['top'].set_visible(False)
+    # Only show ticks on the left and bottom spines
+    ax.yaxis.set_ticks_position('left')
+    ax.xaxis.set_ticks_position('bottom')
+
     pyplot.locator_params(axis='y', nbins=5)#to specify number of ticks on both or any single axes
     pyplot.locator_params(axis='x', nbins=5)
 
@@ -370,11 +405,12 @@ for b in bands:
     slopes.append(slope)
     intercepts.append(intercept)
     pylab.figure('Calibrated')
-    pylab.subplot(1, 3, pn)
+    ax =pylab.subplot(1, 3, pn)
     pylab.plot(sPixels[::step], dCalibPixels[::step], color='k', marker='.', linestyle='', markersize=.5)
     pylab.hold(True)
     m = 1. #np.min([np.max([np.percentile(sPixels[::step], 99.99), np.percentile(dCalibPixels[::step], 99.99)]), 1.])
     oneLineH, = pylab.plot([0, m], [0, m], color='k', marker='', linestyle='--', label='1:1')
+    # pylab.axis(mlim + dclim)
     pylab.gca().set_xlim([0, m])
     pylab.gca().set_ylim([0, m])
     xl = pylab.gca().get_xlim()
@@ -384,14 +420,20 @@ for b in bands:
                                                                                        np.round(r**2, 2)))
     # pylab.text((xl[0] + np.diff(xl)*0.05)[0], (yl[0] + np.diff(yl)*0.9)[0], str.format('y = {0:.2f} x + {1:.3f}',
     #                                                                                    slope, intercept))
-    pylab.title(legend[b])
+    pylab.title(titles[b])
     # pylab.xlabel(r'SPOT5 $\rho_t$')
     # pylab.ylabel(r'DMC $\rho_t$')
-    pylab.xlabel(r'SPOT5 surface refl.')
-    pylab.ylabel(r'DMC surface refl.')
-    pylab.grid('on')
-    pylab.legend(handles=[oneLineH], prop={'size':fontSize-2}, loc=4)
+    pylab.xlabel(r'SPOT 5 surface reflectance')
+    pylab.ylabel(r'DMC surface reflectance')
+    # pylab.grid('on')
+    pylab.legend(handles=[oneLineH], prop={'size':fontSize-2}, loc=4, frameon=False)
     pylab.tight_layout()
+    ax.spines['right'].set_visible(False)
+    ax.spines['top'].set_visible(False)
+    # Only show ticks on the left and bottom spines
+    ax.yaxis.set_ticks_position('left')
+    ax.xaxis.set_ticks_position('bottom')
+
     pyplot.locator_params(axis='y', nbins=5)#to specify number of ticks on both or any single axes
     pyplot.locator_params(axis='x', nbins=5)
     #pylab.hold('on')
@@ -509,6 +551,7 @@ pylab.close('all')
 bands = (0, 1, 2)
 colors = ( 'orange', 'r', 'g')
 legend = ('NIR', 'Red', 'Green')
+titles = ['(a)', '(b)', '(c)']
 step = 2
 fn = pylab.gcf().number
 pn = 1
@@ -523,7 +566,7 @@ from matplotlib import pyplot
 mpl.rcParams.update({'font.size': fontSize})
 
 f1 = pylab.figure('MODIS vs SPOT')
-f1.set_size_inches(16./2, 5.25/2, forward=True)
+f1.set_size_inches(16./2*1.2, 5.25/2*1.2, forward=True)
 
 ePixels = []
 spotModisSlope = []
@@ -539,7 +582,7 @@ for b in bands:
     spotModisSlope.append(slope)
     spotModisIntercept.append(intercept)
     pylab.figure('MODIS vs SPOT')
-    pylab.subplot(1, 3, pn)
+    ax = pylab.subplot(1, 3, pn)
     pylab.plot(sPixels[::step], mPixels[::step], color='k', marker='.', linestyle='', markersize=.5)
     pylab.hold(True)
     m = 1. #np.min([np.max([np.percentile(sPixels[::step], 99.99), np.percentile(mPixels[::step], 99.99)]), 1.])
@@ -553,14 +596,19 @@ for b in bands:
                                                                                        np.round(r**2, 2)))
     # pylab.text((xl[0] + np.diff(xl)*0.05)[0], (yl[0] + np.diff(yl)*0.9)[0], str.format('y = {0:.2f} x + {1:.3f}',
     #                                                                                     slope, intercept))
-    pylab.title(legend[b])
+    pylab.title(titles[b])
     # pylab.xlabel(r'SPOT5 $\rho_t$')
     # pylab.ylabel(r'DMC $\rho_t$')
-    pylab.xlabel(r'SPOT5 surface refl.')
-    pylab.ylabel(r'MODIS surface refl.')
-    pylab.grid('on')
-    pylab.legend(handles=[oneLineH], prop={'size':fontSize-2}, loc=4)
+    pylab.xlabel(r'SPOT 5 surface reflectance')
+    pylab.ylabel(r'MODIS surface reflectance')
+    # pylab.grid('on')
+    pylab.legend(handles=[oneLineH], prop={'size':fontSize-2}, loc=4, frameon=False)
     pylab.tight_layout()
+    ax.spines['right'].set_visible(False)
+    ax.spines['top'].set_visible(False)
+    # Only show ticks on the left and bottom spines
+    ax.yaxis.set_ticks_position('left')
+    ax.xaxis.set_ticks_position('bottom')
     pyplot.locator_params(axis='y', nbins=5)#to specify number of ticks on both or any single axes
     pyplot.locator_params(axis='x', nbins=5)
     #pylab.hold('on')

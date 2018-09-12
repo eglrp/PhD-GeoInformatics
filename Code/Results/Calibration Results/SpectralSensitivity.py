@@ -283,35 +283,51 @@ fontSize = 12.
 mpl.rcParams.update({'font.size': fontSize})
 
 f1=pylab.figure('MODIS vs DMC')
-f1.set_size_inches(6, 4.5, forward=True)
+f1.set_size_inches(6*1.2, 4.5*1.2, forward=True)
 f2=pylab.figure('MODIS vs DMC 2')
 f2.set_size_inches(6, 4.5, forward=True)
 colors = ['orange', 'red', 'green', 'blue']
 legend = ['NIR', 'Red', 'Green', 'Blue']
+titles = ['(a)', '(b)', '(c)', '(d)']
 markers = ['v', 'o', '^', 's']
 hf2=[]
+lim = [np.asarray(modisMeas + dmcMeas).min()-0.05, np.asarray(modisMeas + dmcMeas).max()+0.05]
+lim = [0, 0.6]
+
 for i in range(0, np.shape(modisMeas)[1]):
     x = np.asarray(modisMeas)[:,i]
     y = np.asarray(dmcMeas)[:,i]
     (slope, intercept, r, p, stde) = scipy.stats.linregress(x, y)
     pylab.figure('MODIS vs DMC')
-    pylab.subplot(221+i)
+    ax = pylab.subplot(221+i)
     pylab.plot(x, y , 'kx', markersize=12.)
     pylab.hold('on')
-    xi = np.linspace(x.min(), x.max(), 10)
+    # xi = np.linspace(x.min(), x.max(), 10)
+    xi = np.linspace(lim[0], lim[1], 10)
     yi = slope*xi + intercept
     pylab.plot(xi, yi, 'k-')
-    pylab.title(legend[i])
-    pylab.text(xi.mean()*1.0, yi.mean()*0.6, '$R^2$ = ' + str.format('{0:.2f}', np.round(r**2, 2)), fontsize=fontSize+1)
+    pylab.title(titles[i])
+    pylab.text(xi.mean()*1.05, yi.mean()*0.6, '$R^2$ = ' + str.format('{0:.2f}', np.round(r**2, 2)), fontsize=fontSize+1)
     # pylab.xlabel(r'MODIS $\rho_t$')
     # pylab.ylabel(r'DMC $\rho_t$')
-    pylab.xlabel(r'MODIS surface refl.')
-    pylab.ylabel(r'DMC surface refl.')
-    pylab.grid('on')
+    pylab.xlabel(r'MODIS surface reflectance')
+    pylab.ylabel(r'DMC surface reflectance')
+    pylab.grid('off')
+    pylab.box('on')
+
     # for j in range(asterFnF.__len__()):
     #     pylab.text(x[j]+.2, y[j], asterFnF[j])
     pylab.tight_layout()
-    pyplot.locator_params(axis='y', nbins=5)#to specify number of ticks on both or any single axes
+    pylab.axis(lim + lim)
+    # Hide the right and top spines
+    ax.spines['right'].set_visible(False)
+    ax.spines['top'].set_visible(False)
+
+    # Only show ticks on the left and bottom spines
+    ax.yaxis.set_ticks_position('left')
+    ax.xaxis.set_ticks_position('bottom')
+
+    pyplot.locator_params(axis='y', nbins=5)  #to specify number of ticks on both or any single axes
     pyplot.locator_params(axis='x', nbins=4)
 
     pylab.figure('MODIS vs DMC 2')
@@ -425,10 +441,12 @@ f1 = pylab.figure('MODIS and DMC Spectral Sensitivities')
 f1.set_size_inches(6, 4.5, forward=True)
 colors = ['k', 'r', 'g', 'b']
 bandLabels = ['NIR', 'Red', 'Green', 'Blue']
+titles = ['(a)', '(b)', '(c)', '(d)']
 hModis = []
 hDmc = []
 for i in range(0, 4):
 #    hModis.append(pylab.plot(modisWaveLen[i], modisRsr[i], color=colors[i], linestyle='-'))
+    ax = pylab.subplot(111)
     hModis.append(pylab.plot(modisWaveLen[i], modisRsr[i], color='k', linestyle='-'))
     pylab.hold('on')
     mask = dmcRsr[:, i] > 0.001
@@ -436,10 +454,18 @@ for i in range(0, 4):
     hDmc.append(pylab.plot(dmcWaveLen[mask], dmcRsr[mask, i], color='k', linestyle='--'))
     ym = np.max(modisRsr[i])
     xm = modisWaveLen[i][np.argmax(modisRsr[i])]
-    pylab.text(xm+15, ym*.95, bandLabels[i], fontsize=fontSize)
+    # Hide the right and top spines
+    ax.spines['right'].set_visible(False)
+    ax.spines['top'].set_visible(False)
 
-pylab.legend((hModis[0][0], hDmc[0][0]), ('MODIS', 'DMC'), fontsize=fontSize-2.)
-pylab.xlabel('Wavelength ($\mu m$)')
+    # Only show ticks on the left and bottom spines
+    ax.yaxis.set_ticks_position('left')
+    ax.xaxis.set_ticks_position('bottom')
+
+# pylab.text(xm+15, ym*.95, bandLabels[i], fontsize=fontSize)
+
+pylab.legend((hModis[0][0], hDmc[0][0]), ('MODIS', 'DMC'), fontsize=fontSize-2., frameon=False)
+pylab.xlabel(r'Wavelength ($\mathrm{\mu m}$)')  #r'$s(t) = \mathcal{A}\mathrm{sin}(2 \omega t)$'
 pylab.ylabel('Relative spectral response')
 pylab.tight_layout()
 
@@ -504,15 +530,24 @@ for i in range(0, 4):
     # hModis.append(pylab.plot(modisWaveLen[i], modisRsr[i], color=colors[i], linestyle='-'))
     mask = dmcRsr[:, i] > 0.001
     # hDmc.append(pylab.plot(dmcWaveLen[mask], dmcRsr[mask, i], color=colors[i], linestyle='--'))
+    ax = pylab.subplot(111)
     hDmc.append(pylab.plot(dmcWaveLen[mask], dmcRsr[mask, i], color='k', linestyle='--'))
     pylab.hold('on')
     if i<np.shape(spotRsr)[1]:
         mask = np.array(spotRsr)[:, i] > 0.001
         # hSpot.append(pylab.plot(np.array(spotWaveLen)[mask], np.array(spotRsr)[mask, i], color=colors[i], linestyle='-'))
         hSpot.append(pylab.plot(np.array(spotWaveLen)[mask], np.array(spotRsr)[mask, i], color='k', linestyle='-'))
+    # Hide the right and top spines
+    ax.spines['right'].set_visible(False)
+    ax.spines['top'].set_visible(False)
 
-pylab.legend((hDmc[0][0], hSpot[0][0]), ('DMC', 'SPOT5'), fontsize=fontSize-2.)
-pylab.xlabel('Wavelength ($\mu m$)')
+    # Only show ticks on the left and bottom spines
+    ax.yaxis.set_ticks_position('left')
+    ax.xaxis.set_ticks_position('bottom')
+
+
+pylab.legend((hDmc[0][0], hSpot[0][0]), ('DMC', 'SPOT 5'), fontsize=fontSize-2., frameon=False)
+pylab.xlabel('Wavelength ($\mathrm{\mu m}$)')
 pylab.ylabel('Relative spectral response')
 pylab.tight_layout()
 
