@@ -407,16 +407,22 @@ bandIdx = [3 2 1];
 bandLabels = {'Green', 'Red', 'NIR'};
 specIdx = [1 4 8 3 10];
 fontSize = 12;
+titles = {'(a)', '(b)', '(c)', '(d)', '(e)', '(f)'};
 % close all;
-figure
+fig = figure;
+left_color = zeros(1,3);
+right_color = zeros(1,3);
+set(fig,'defaultAxesColorOrder',[left_color; right_color]);
+
 for i = 1:length(specIdx)
     subplot(2, 3, i)
+
     yyaxis left
-    plot(Spectra{1}(specIdx(i), bandIdx), '-x', 'LineWidth', 1, 'MarkerSize', 7);
+    plot(Spectra{1}(specIdx(i), bandIdx), 'k-x', 'LineWidth', 1, 'MarkerSize', 7);
     hold on
-    plot(Spectra{2}(specIdx(i), bandIdx), '-.x', 'LineWidth', 1, 'MarkerSize', 7);
+    plot(Spectra{2}(specIdx(i), bandIdx), 'k-.x', 'LineWidth', 1, 'MarkerSize', 7);
     yyaxis right
-    plot(SpectraDn{2}(specIdx(i), bandIdx), '--x', 'LineWidth', 1, 'MarkerSize', 7);
+    plot(SpectraDn{2}(specIdx(i), bandIdx), 'k--x', 'LineWidth', 1, 'MarkerSize', 7);
     ylim([0 2048]);
     ylabel('DN')
     %set(gca, 'Font', 'arial')
@@ -424,21 +430,27 @@ for i = 1:length(specIdx)
     yyaxis left
     %grid on
     ylim([0 1]);
-    ylabel('Reflectance')
+    ylabel('Surface reflectance')
     ax = gca;
     ax.YTick = [0:0.2:1];
     ax.XTick = [1 2 3];
     ax.XTickLabels = bandLabels;
-    title(labels(specIdx(i)), 'FontWeight', 'Normal', 'FontSize', fontSize)
+%     title(labels(specIdx(i)), 'FontWeight', 'Normal', 'FontSize', fontSize)
+    title(titles{i}, 'FontWeight', 'Normal', 'FontSize', fontSize)
     set(gca, 'FontName', 'Arial')
     set(gca, 'FontSize', fontSize-1)
+    ax = gca;
+    ax.TickDir = 'in';
+    ax.TickLength = ax.TickLength*2;
+    set(gca, 'box', 'off')
 end
-legend({'SPOT 5 Surface Refl.', 'DMC Surface Refl.', 'DMC DN'}, 'Location', 'NorthWest', 'FontSize', fontSize)
+legend({['SPOT 5 surface' newline 'reflectance'], ['DMC surface' newline 'reflectance'], 'DMC DN'}, 'Location', 'NorthWest', 'FontSize', fontSize)
+legend boxoff
 subplot(2,3,6)
 axis off
 mad = mean(mean(abs(Spectra{2}(specIdx,:)-Spectra{1}(specIdx,:))))
 rms = sqrt(mean(mean((Spectra{2}(specIdx,:)-Spectra{1}(specIdx,:)).^2)))
-s = sprintf('MAD: %1.2f %%\nRMS: %1.2f %%', mad*100, rms*100)
+s = sprintf('MAD = %1.2f %%\nRMS = %1.2f %%', mad*100, rms*100)
 % text(0, 0, s, 'FontName', 'Arial', 'FontSize', 14)
 t = annotation('textbox');
 t.String = s;
@@ -447,6 +459,10 @@ t.FontSize = fontSize;
 t.FontName = 'Arial';
 t.BackgroundColor = 'white';
 t.Position(1:2) = [0.7 0.1];
+t.LineStyle = 'none';
+% t.LineWidth = 0;
+
+legend boxoff
 
 print('C:\Data\Development\Projects\PhD GeoInformatics\Docs\My Docs\Thesis\Retrieval of Surface Reflectance from Aerial Imagery\Figure 16 - Comparison of DMC and SPOT Spectra.eps',... 
     '-depsc', '-r600')
