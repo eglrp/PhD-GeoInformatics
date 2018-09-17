@@ -83,7 +83,7 @@ using namespace std;
 #define XCALIB_DEBUG 0
 #define MAX_PATH 1024
 #define SEAMLINE_COVERAGE_FIX 1					// excludes partially covered ref pixels
-#define SEAMLINE_EXTRAP_FIX 0					// erodes away one boundary pixel to exclude extrapolated params, SEAMLINE_COVERAGE_FIX must be 1
+#define SEAMLINE_EXTRAP_FIX 1					// erodes away one boundary pixel to exclude extrapolated params, SEAMLINE_COVERAGE_FIX must be 1
 #define DO_COMPRESS_OUTPUT 1
 #define BIGTIFF 1
 #define COVERAGE_PORTION 0.95
@@ -299,8 +299,8 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 #if XCALIB_DEBUG
 	string srcDsFileName = srcFileName.substr(0, srcFileName.length() - 4) + "_DS.tif"; //make separate files for each source file
 #else
-	//string srcDsFileName = string(CPLGetCurrentDir()) + "\\SourceDs.tif"; //reuse the same file
-	string srcDsFileName = srcFileName.substr(0, srcFileName.length() - 4) + "_DS.tif"; //make separate files for each source file
+	string srcDsFileName = string(CPLGetCurrentDir()) + "\\SourceDs.tif"; //reuse the same file
+	//string srcDsFileName = srcFileName.substr(0, srcFileName.length() - 4) + "_DS.tif"; //make separate files for each source file
 #endif
 	//
 
@@ -354,8 +354,8 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 #if XCALIB_DEBUG
 	string paramDsFileName = srcDsFileName.substr(0, srcDsFileName.length() - 4) + "_PARAMS.tif"; //make separate files for each source file
 #else
-	//string paramDsFileName = string(CPLGetCurrentDir()) + "\\ParamDs.tif"; //reuse the same file
-	string paramDsFileName = srcDsFileName.substr(0, srcDsFileName.length() - 4) + "_PARAMS.tif"; //HACK for now - these files are tiny
+	string paramDsFileName = string(CPLGetCurrentDir()) + "\\ParamDs.tif"; //reuse the same file
+	//string paramDsFileName = srcDsFileName.substr(0, srcDsFileName.length() - 4) + "_PARAMS.tif"; //HACK for now - these files are tiny
 #endif
 
 	std::cout << "Calculating calibration params (" << paramDsFileName << ")" << endl << endl;
@@ -735,19 +735,33 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	if (paramDataSet == NULL)
 		throw string("Could not open: " + paramUsFileName);
 	char **papszOptions = NULL;
+	int nSrcBands = srcDataSet->GetRasterCount();
+	int xBlockSize = 0, yBlockSize = 0;
+	srcDataSet->GetRasterBand(1)->GetBlockSize(&xBlockSize, &yBlockSize);
+
 #if DO_COMPRESS_OUTPUT
-	// make block size same as src?  to speed writing?
-	// the bottleneck in the xcalib creation below is mostly in the deflate compression, then in disk access - threading helps a lot
-	papszOptions = CSLSetNameValue(papszOptions, "COMPRESS", "DEFLATE");  //LZW faster than DEFLATE
-	papszOptions = CSLSetNameValue(papszOptions, "PREDICTOR", "2");
+	//if (nSrcBands == 3)
+	//{
+	//	// make block size same as src?  to speed writing?
+	//	// the bottleneck in the xcalib creation below is mostly in the deflate compression, then in disk access - threading helps a lot
+	//	papszOptions = CSLSetNameValue(papszOptions, "COMPRESS", "JPEG");  //LZW faster than DEFLATE
+	//	papszOptions = CSLSetNameValue(papszOptions, "INTERLEAVE", "PIXEL");
+	//	papszOptions = CSLSetNameValue(papszOptions, "PHOTOMETRIC", "YCbCr");
+	//	papszOptions = CSLSetNameValue(papszOptions, "NBITS", "12");
+	//}
+	//else
+	{
+		// make block size same as src?  to speed writing?
+		// the bottleneck in the xcalib creation below is mostly in the deflate compression, then in disk access - threading helps a lot
+		papszOptions = CSLSetNameValue(papszOptions, "COMPRESS", "DEFLATE");  //LZW faster than DEFLATE
+		papszOptions = CSLSetNameValue(papszOptions, "PREDICTOR", "2");
+	}
 #endif
 	//it seems tiff creates a default block size of a row though for large tiffs (if TILED=NO or not specified I think).
 	//the above options seem to force this default behaviour which is what we want for now 
 	//we may be better of copying the original dataset though as in gdal_translate for both param and xcalib files. 
 	//this way, they all have same block size which we need for efficiency below
 	//even if the tiff is not specifically tiled, it is "tiled" by row by default
-	int xBlockSize = 0, yBlockSize = 0;
-	srcDataSet->GetRasterBand(1)->GetBlockSize(&xBlockSize, &yBlockSize);
 	papszOptions = CSLSetNameValue(papszOptions, "BLOCKXSIZE", std::to_string(xBlockSize).c_str());
 	papszOptions = CSLSetNameValue(papszOptions, "BLOCKYSIZE", std::to_string(yBlockSize).c_str());
 	if (yBlockSize > 1)
@@ -758,7 +772,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 #endif
 
 	GDALDataset* calibDataSet = srcDataSet->GetDriver()->Create(calibFileName.c_str(), srcDataSet->GetRasterXSize(),
-		srcDataSet->GetRasterYSize(), 4, GDALDataType::GDT_Int16, papszOptions);  //int16 to allow -ve values for offset models gone wrong
+		srcDataSet->GetRasterYSize(), nSrcBands, GDALDataType::GDT_UInt16, papszOptions);  //NB int16 to allow -ve values for offset models gone wrong
 	if (calibDataSet == NULL)
 		throw string("Could not create: " + calibFileName);
 	//err = srcDataSet->SetMetadata(pMetaData, "TIFFTAG_GDAL_METADATA");
@@ -782,7 +796,7 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 
 	calibDataSet->SetGeoTransform(srcGeoTransform);
 	calibDataSet->SetProjection(srcDataSet->GetProjectionRef());
-#if 0
+#if 1
 	res = calibDataSet->SetMetadataItem("BitsPerSample", "12", NULL);
 #endif //dh hack
 	//find ROI of source image in upsampled param image
@@ -798,7 +812,6 @@ int CrossCalib(const string& refFileName, const string& srcFileName_, const int*
 	GDALApplyGeoTransform(paramInvGeoTransform, ulX, ulY, &paramUlJ, &paramUlI);
 	GDALApplyGeoTransform(paramInvGeoTransform, brX, brY, &paramBrJ, &paramBrI);
 
-	int nSrcBands = srcDataSet->GetRasterCount();
 	nRows = srcDataSet->GetRasterYSize(); nCols = srcDataSet->GetRasterXSize();
 
 	cv::Mat_<float> srcData(nSrcBands, nCols);
