@@ -450,7 +450,7 @@ subplot(2,3,6)
 axis off
 mad = mean(mean(abs(Spectra{2}(specIdx,:)-Spectra{1}(specIdx,:))))
 rms = sqrt(mean(mean((Spectra{2}(specIdx,:)-Spectra{1}(specIdx,:)).^2)))
-s = sprintf('MAD = %1.2f %%\nRMS = %1.2f %%', mad*100, rms*100)
+s = sprintf('MAD = %1.2f%%\nRMS = %1.2f%%', mad*100, rms*100)
 % text(0, 0, s, 'FontName', 'Arial', 'FontSize', 14)
 t = annotation('textbox');
 t.String = s;

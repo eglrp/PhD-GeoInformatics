@@ -355,7 +355,7 @@ f2.set_size_inches(8.*1.2, 5.25/2*1.2, forward=True)
 
 titles = ['(a)', '(b)', '(c)', '(d)']
 mlim = [0, 1]
-drlim = [0, 2500]
+drlim = [0, 3000]
 dclim = [ngiCalibIm.min(), ngiCalibIm.max()]
 
 
@@ -382,7 +382,7 @@ for b in bands:
     # pylab.xticks(np.arange(xl[0], xl[1], 0.2))
     # pylab.yticks(np.arange(yl[0], yl[1], 500))
 
-    pylab.text((xl[0] + np.diff(xl)*0.05)[0], (yl[0] + np.diff(yl)*0.8)[0], str.format('$R^2$ = {0:.2f}',
+    pylab.text((xl[0] + np.diff(xl)*0.05)[0], (yl[0] + np.diff(yl)*0.9)[0], str.format('$R^2$ = {0:.2f}',
                                                                                        np.round(r**2, 2)))
     # pylab.xlabel(r'SPOT5 $\rho_t$')
     pylab.xlabel(r'SPOT 5 surface reflectance')
@@ -416,7 +416,7 @@ for b in bands:
     xl = pylab.gca().get_xlim()
     xl = pylab.gca().set_xlim()
     yl = pylab.gca().get_ylim()
-    pylab.text((xl[0] + np.diff(xl)*0.05)[0], (yl[0] + np.diff(yl)*0.8)[0], str.format('$R^2$ = {0:.2f}',
+    pylab.text((xl[0] + np.diff(xl)*0.05)[0], (yl[0] + np.diff(yl)*0.9)[0], str.format('$R^2$ = {0:.2f}',
                                                                                        np.round(r**2, 2)))
     # pylab.text((xl[0] + np.diff(xl)*0.05)[0], (yl[0] + np.diff(yl)*0.9)[0], str.format('y = {0:.2f} x + {1:.3f}',
     #                                                                                    slope, intercept))
