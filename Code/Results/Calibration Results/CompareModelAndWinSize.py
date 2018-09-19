@@ -282,13 +282,13 @@ for i, winSize in enumerate(modelWinSizes):
     # xtickLabels.append('{0:1d}x{1:1d}'.format(winSize[0], winSize[1]))
     # pylab.text(modelWinAreas[i], modelMaes[i], str.format('({0:1d}x{1:1d})', winSize[0], winSize[1]), fontsize = fontSize/2.)
     if i == 0:
-        xytext = (-15, 5)
+        xytext = (-17, -12)
     elif i == 1:
-        xytext = (-3, 5)
+        xytext = (-5, 7)
     else:
         xytext = (5, -10)
 
-    pylab.annotate(str.format(r'{0:1d}$\times${1:1d}', winSize[0], winSize[1]), xy=(modelWinAreas[i], modelMaes[i]),
+    pylab.annotate(str.format(r'{0:1d} $\times$ {1:1d}', winSize[0], winSize[1]), xy=(modelWinAreas[i], modelMaes[i]),
                    xytext=xytext, textcoords='offset points', fontsize = fontSize/1.3)
 
 # pylab.xticks(modelWinAreas, xtickLabels, fontsize=fontSize/2.)
@@ -298,7 +298,7 @@ pylab.ylabel('Mean absolute difference (%)')
 # pylab.grid()
 pylab.tight_layout()
 al = pylab.axis()
-pylab.axis([al[0]-2, al[1]+2, al[2]-.02, al[3]+.02])
+pylab.axis([al[0]-2, al[1]+2, al[2]-.03, al[3]+.02])
 ax.spines['right'].set_visible(False)
 ax.spines['top'].set_visible(False)
 # Only show ticks on the left and bottom spines
