@@ -22,11 +22,6 @@ gdaltranslateExe = "C:\ProgramData\Anaconda3\envs\py27\Library\\bin\gdal_transla
 gdalmergeExe = "C:\ProgramData\Anaconda3\envs\py27\Scripts\gdal_merge.py"  # Use anaconda version as osgeo4w wont run under Anaconda
 
 
-# if not os.path.exists(tileIndexFileName):
-#     for file in glob.glob(os.path.join(sourceDir, tileIndexWildCard)):
-#         subprocess.call('{0} "{1}" "{2}"'.format(gdaltindexExe, tileIndexFileName, file), shell=True, env=os.environ)
-#         print 'Adding ' + file
-
 
 ##############################################################################################
 # So the mapping should look something like
@@ -45,6 +40,7 @@ gdalmergeExe = "C:\ProgramData\Anaconda3\envs\py27\Scripts\gdal_merge.py"  # Use
 # upsample 20 and 60m bands to 10m so that these can be merged into one file
 
 sentinelRootBandDir = "D:\Data\Development\Projects\PhD GeoInformatics\Data\Sentinel\S2A_MSIL2A_20171002T075741_N0205_R035_T34HGH_20171002T081741.SAFE - with SRTM90 all res\GRANULE\L2A_T34HGH_A011901_20171002T081741\IMG_DATA"
+sentinelRootBandDir = "D:\Data\Development\Projects\PhD GeoInformatics\Data\Sentinel\S2A_MSIL2A_20171002T075741_N0205_R035_T34HGH_20171002T081741.SAFE - no DEM all res\GRANULE\L2A_T34HGH_A011901_20171002T081741\IMG_DATA"
 sentinel10mBandDir = os.path.join(sentinelRootBandDir, 'R10m')
 resBandFileWildCard = 'L2A_T34HGH_20171002T075741_B*m.jp2'
 
@@ -66,35 +62,49 @@ for res in (20, 60):
             print 'Upsampling {0} to {1}'.format(os.path.split(file)[-1], os.path.split(outFileName)[-1])
             cmdString = '"{0}" -of GTiff -co "COMPRESS=DEFLATE" -multi -wo NUM_THREADS=ALL_CPUS -overwrite -srcnodata 0 -dstnodata 0 -wm 2048 -r cubicspline -tr 10 10 "{1}" "{2}"'.format(
                 gdalwarpExe, file, os.path.join(sentinel10mBandDir, outFileName))
-            subprocess.call(cmdString, shell=True, env=os.environ)
+            subprocess.call(cmdString, shell=False, env=os.environ)
             # break
 
 # after this has run, you can delete the 60to10m bands that have 20to10m equivalents.
 # then use qgis to make (b5+b6)/2 and (b8a + b9)/2
 
-#
-# sprintf_s(gdalString, MAX_PATH,
-#           "gdalwarp~-multi~-wo~NUM_THREADS=ALL_CPUS~-co~BIGTIFF=YES~-multi~-wo~NUM_THREADS=ALL_CPUS~-overwrite~-srcnodata~0~-dstnodata~0~-wm~2048~-r~cubicspline~-tr~%f~%f~%s~%s~",
-#           fabs(srcGeoTransform[1]), fabs(srcGeoTransform[5]), paramDsFileName.c_str(), paramUsFileName.c_str());
-#
+############################################################################
+# Find (b5+b6)/2 and (b8a + b9)/2
+sentinelRootBandDir = "D:\Data\Development\Projects\PhD GeoInformatics\Data\Sentinel\S2A_MSIL2A_20171002T075741_N0205_R035_T34HGH_20171002T081741.SAFE - with SRTM90 all res\GRANULE\L2A_T34HGH_A011901_20171002T081741\IMG_DATA"
+sentinelRootBandDir = "D:\Data\Development\Projects\PhD GeoInformatics\Data\Sentinel\S2A_MSIL2A_20171002T075741_N0205_R035_T34HGH_20171002T081741.SAFE - no DEM all res\GRANULE\L2A_T34HGH_A011901_20171002T081741\IMG_DATA"
+sentinel10mBandDir = os.path.join(sentinelRootBandDir, 'R10m')
+resBandFileWildCard = 'L2A_T34HGH_20171002T075741_B*m.jp2'
+
+senBandMap = ['B01_60to10m.tif', 'B02_10m.jp2', 'B03_10m.jp2', 'B03_10m.jp2', 'B04_10m.jp2',
+              'MeanOfB05AndB06_20to10m.tif', 'B08_10m.jp2', 'MeanOfB8AandB09_20to10m.tif']   # how sentinel bands will be ordered to macth wv3
 
 
-sentinelBandDir = "D:\Data\Development\Projects\PhD GeoInformatics\Data\Sentinel\S2A_MSIL2A_20171002T075741_N0205_R035_T34HGH_20171002T081741.SAFE - No DEM all res\GRANULE\L2A_T34HGH_A011901_20171002T081741\IMG_DATA\R60m"
-sentinelBandDir = "D:\Data\Development\Projects\PhD GeoInformatics\Data\Sentinel\S2A_MSIL2A_20171002T075741_N0205_R035_T34HGH_20171002T081741.SAFE - with SRTM90 all res\GRANULE\L2A_T34HGH_A011901_20171002T081741\IMG_DATA\R60m"
+
+############################################################################
+# Merge sentinel bands into a single file that matches wv3 order
+
+res = 60
+sentinelBandDir = r"D:\Data\Development\Projects\PhD GeoInformatics\Data\Sentinel\S2A_MSIL2A_20171002T075741_N0205_R035_T34HGH_20171002T081741.SAFE - No DEM all res\GRANULE\L2A_T34HGH_A011901_20171002T081741\IMG_DATA\R{0}m".format(res)
+sentinelBandDir = r"D:\Data\Development\Projects\PhD GeoInformatics\Data\Sentinel\S2A_MSIL2A_20171002T075741_N0205_R035_T34HGH_20171002T081741.SAFE - with SRTM90 all res\GRANULE\L2A_T34HGH_A011901_20171002T081741\IMG_DATA\R{0}m".format(res)
 # L2A_T34HGH_20171002T075741_B01_60m.jp2
-sentinelOutFileName = sentinelBandDir + "\L2A_T34HGH_20171002T075741_Wv3Bands_10m.tif"
+sentinelOutFileName = sentinelBandDir + r"\L2A_T34HGH_20171002T075741_Wv3Bands_{0}m.tif".format(res)
 
 # CRS EPSG:32734 - WGS 84 / UTM zone 34S - Projected
 # USER:100027 - * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=23 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs) - Projected
 
 # gdal_merge -of Gtiff -separate -a_nodata 0 -o "MCD43A4.A2015241.h20v12.005.2015260133130.NgiBandOrder.tif" ModisBand_1.tif ModisBand_4.tif ModisBand_3.tif ModisBand_2.tif
+# for 10m upsampled files
 senBandMap = ['B01_60to10m.tif', 'B02_10m.jp2', 'B03_10m.jp2', 'B03_10m.jp2', 'B04_10m.jp2',
               'MeanOfB05AndB06_20to10m.tif', 'B08_10m.jp2', 'MeanOfB8AandB09_20to10m.tif']   # how sentinel bands will be ordered to macth wv3
 
+# for 60m files
 senBandMap = ['B01_60m.jp2', 'B02_10m.jp2', 'B03_60m.jp2', 'B03_60m.jp2', 'B04_60m.jp2',
               'MeanOfB05AndB06_60m.tif', 'B08_60m.jp2', 'MeanOfB8AandB09_60m.tif']   # how sentinel bands will be ordered to macth wv3
 
-mergeCmdStr = '{0} -of Gtiff -separate -a_nodata 0 -o "{1}" '.format(gdalmergeExe, sentinelOutFileName)
+senBandMap = ['B01_60m.jp2', 'B02_10m.jp2', 'B03_60m.jp2', 'B03_60m.jp2', 'B04_60m.jp2',
+              'B05_60m.tif', 'B08_60m.jp2', 'B8A_60m.jp2']   # how sentinel bands will be ordered to macth wv3
+
+mergeCmdStr = '{0} -of Gtiff -separate -a_nodata 0  -co "COMPRESS=DEFLATE" -o "{1}" '.format(gdalmergeExe, sentinelOutFileName)
 
 for senBand in senBandMap:
     mergeCmdStr += '"{0}\{1}" '.format(sentinelBandDir, 'L2A_T34HGH_20171002T075741_{0}'.format(senBand))
@@ -102,26 +112,24 @@ for senBand in senBandMap:
 if os.path.exists(sentinelOutFileName):
         os.remove(sentinelOutFileName)
 
-subprocess.call(mergeCmdStr, shell=True, env=os.environ)
+subprocess.check_output(mergeCmdStr, shell=True, env=os.environ)
 
-sentinelOutFileName2 = os.path.splitext(sentinelOutFileName)[0] + '_Cmp.tif'
 
-# subprocess.call('{0} -co "COMPRESS=DEFLATE" "{1}" "{2}"'.format(gdaltranslateExe, sentinelOutFileName, sentinelOutFileName2),
-#                 shell=True, env=os.environ)
-# project to wv3 and compress
-subprocess.call('{0} -t_srs "+proj=tmerc +lat_0=0 +lon_0=23 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs" -tr 10.0 10.0 '
-                '-r cubic -tap -co "COMPRESS=DEFLATE" "{1}" "{2}"'.format(gdalwarpExe, sentinelOutFileName, sentinelOutFileName2),
-                shell=True, env=os.environ)
+# project to wv3 at resxres and compress
+sentinelOutFileName2 = os.path.splitext(sentinelOutFileName)[0] + '_TmLo23_Cmp.tif'
 
+reprojCmdString = r'{0} -t_srs "+proj=tmerc +lat_0=0 +lon_0=23 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs" -tr {3:.1f} {4:.1f} -r cubic -tap -co "COMPRESS=DEFLATE" "{1}" "{2}"'.format(gdalwarpExe, sentinelOutFileName, sentinelOutFileName2, res, res)
+subprocess.check_output(reprojCmdString, shell=True, env=os.environ)
 
 #gdalwarp -t_srs "+proj=tmerc +lat_0=0 +lon_0=23 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs" -tr 10.0 10.0 -r cubic -tap -co "COMPRESS=DEFLATE" L2A_T34HGH_20171002T075741_Wv3Bands_10m_Cmp.tif L2A_T34HGH_20171002T075741_Wv3Bands_10m_CmpWv3Proj.tif
 
-
 ###################################################################################
 # call xcalib for wv3 image
-refFile = "D:\Data\Development\Projects\PhD GeoInformatics\Data\Sentinel\S2A_MSIL2A_20171002T075741_N0205_R035_T34HGH_20171002T081741.SAFE - with SRTM90 all res\GRANULE\L2A_T34HGH_A011901_20171002T081741\IMG_DATA\R10m\L2A_T34HGH_20171002T075741_Wv3Bands_10m_CmpWv3Proj.tif"
+refFile = "\\?\D:\Data\Development\Projects\PhD GeoInformatics\Data\Sentinel\S2A_MSIL2A_20171002T075741_N0205_R035_T34HGH_20171002T081741.SAFE - with SRTM90 all res\GRANULE\L2A_T34HGH_A011901_20171002T081741\IMG_DATA\R10m\L2A_T34HGH_20171002T075741_Wv3Bands_10m_TmLo23_Cmp.tif"
 inputFile = "D:\Data\Development\Projects\PhD GeoInformatics\Data\Sentinel\S2A_MSIL2A_20171002T075741_N0205_R035_T34HGH_20171002T081741.SAFE - with SRTM90 all res\GRANULE\L2A_T34HGH_A011901_20171002T081741\IMG_DATA\R10m\L2A_T34HGH_20171002T075741_Wv3Bands_10m_CmpWv3Proj.tif"
 
-xcalibExe = 'C:/Data/Development/Projects/PhD GeoInformatics/Code/Cross Calibration//x64/Release/CrossCalibration'
+xcalibExe = 'C:/Data/Development/Projects/PhD GeoInformatics/Code/Cross Calibration//x64/Release/CrossCalibration.exe'
 
-subprocess.call('"{0}" -o -w 3 3 -p 1 "{1}" "{2}"'.format(xcalibExe, refFile, inputFile), shell=True)
+# use SSD working dir to speed things up
+os.chdir("C:\Temp\")
+subprocess.call('"{0}" -o -w 1 1 -p 1 "{1}" "{2}"'.format(xcalibExe, refFile, inputFile), shell=True)

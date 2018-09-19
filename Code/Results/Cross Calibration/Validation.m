@@ -421,8 +421,10 @@ for i = 1:length(specIdx)
     plot(Spectra{1}(specIdx(i), bandIdx), 'k-x', 'LineWidth', 1, 'MarkerSize', 7);
     hold on
     plot(Spectra{2}(specIdx(i), bandIdx), 'k-.x', 'LineWidth', 1, 'MarkerSize', 7);
+    ytickformat('%.1f')
     yyaxis right
     plot(SpectraDn{2}(specIdx(i), bandIdx), 'k--x', 'LineWidth', 1, 'MarkerSize', 7);
+    ytickformat('%g')
     ylim([0 2048]);
     ylabel('DN')
     %set(gca, 'Font', 'arial')

@@ -1,4 +1,5 @@
 # compare wv3 and sentinel rsr's for xcalib
+%matplotlib
 
 import numpy as np
 import pylab
@@ -38,7 +39,7 @@ sentinelFileName = "C:/Data/Development/Projects/PhD GeoInformatics/Data/Spectra
 
 wv3Wavelen,wv3Rsr, wv3Labels = ReadRsr(wv3FileName, 'Sheet1')
 senWavelen,senRsr, senLabels = ReadRsr(sentinelFileName, 'Spectral Responses (S2A)')
-
+#%%
 pylab.figure()
 pylab.plot(wv3Wavelen, wv3Rsr, '-')
 pylab.legend(wv3Labels)
