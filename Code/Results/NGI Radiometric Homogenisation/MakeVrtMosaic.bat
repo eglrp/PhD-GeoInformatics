@@ -8,8 +8,13 @@ CALL %OSGEO4W_ROOT%bin\o4w_env.bat
 echo Paths....
 setlocal EnableDelayedExpansion
 
-
+E:
 cd "E:\Rectified\3318D_2016_1143"
-dir /b *.tif > dirlist.txt
+dir /b *RGB.tif > dirlist.txt
 gdalbuildvrt -input_file_list dirlist.txt 3318D_2016_1143_OrthoRect.vrt -srcnodata 0 -vrtnodata 0
-gdaladdo -r average -ro --COMPRESS_OVERVIEW DEFLATE 3318D_2016_1143_OrthoRect.vrt 32 64 128 256 512
+gdaladdo -r average -ro --config COMPRESS_OVERVIEW DEFLATE 3318D_2016_1143_OrthoRect.vrt 32 64 128 256 512
+
+cd "E:\Homogenised\3318D_2016_1143"
+dir /b *XCALIB.tif > dirlist.txt
+gdalbuildvrt -input_file_list dirlist.txt 3318D_2016_1143_Homog.vrt -srcnodata 0 -vrtnodata 0
+gdaladdo -r average -ro --config COMPRESS_OVERVIEW DEFLATE 3318D_2016_1143_Homog.vrt 32 64 128 256 512

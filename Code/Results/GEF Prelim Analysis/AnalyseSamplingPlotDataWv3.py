@@ -18,6 +18,8 @@ from PIL import ImageDraw
 
 imageFile = r"D:\Data\Development\Projects\PhD GeoInformatics\Data\Digital Globe\058217622010_01\PCI Output\ATCOR\Basic\ATCORCorrected_o17OCT01084657_R1C12-058217622010_01_P001_14368025_PanSharp.tif"
 imageFile = r"D:\Data\Development\Projects\PhD GeoInformatics\Data\Digital Globe\058217622010_01\PCI Output\ATCOR\Basic\ATCORCorrected_o17OCT01084657-M2AS_R1C12-058217622010_01_P001_14368025.pix"
+imageFile = r"D:\Data\Development\Projects\PhD GeoInformatics\Data\Digital Globe\058217622010_01\PCI Output\ATCOR\SRTM\ATCORCorrected_o17OCT01084657-M2AS_R1C12-058217622010_01_P001_14368011.pix"
+imageFile = r"D:\Data\Development\Projects\PhD GeoInformatics\Data\Digital Globe\058217622010_01\PCI Output\ATCOR\SRTM+BRDF1\ATCORCorrected_o17OCT01084657-M2AS_R1C12-058217622010_01_P001_14344011.pix"
 imageFile = r"D:\Data\Development\Projects\PhD GeoInformatics\Data\Digital Globe\058217622010_01\PCI Output\ATCOR\SRTM+AdjCorr\ATCORCorrected_o17OCT01084657-M2AS_R1C12-058217622010_01_P001_14368043.pix"
 
 samplingPlotGtFile = "C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/GEF Plot Polygons with Yc.shp"
@@ -51,14 +53,14 @@ def ExtractPatchFeatures(imbuf, mask):
     if np.any(imbuf_mask<0):
         print 'imbuf_mask < 0'
         # print np.where(imbuf_mask<0)
-    s = np.sum(imbuf_mask[:,[1,2,4]], 1)   # NNB only sum r,g,b as ir confuses things in g_n
+    s = np.sum(imbuf_mask[:,[1,2,4,6]], 1)   # NNB only sum r,g,b as ir confuses things in g_n
     #  s = np.sum(imbuf_mask[:,:4], 1)   # ??? check this
     cn = imbuf_mask / np.tile(s[:, None], (1, imbuf_mask.shape[1]))
     # wv 3 channels
     b_i = 1
     g_i = 2
     r_i = 4
-    ir_i = 7
+    ir_i = 6
     ndvi = (imbuf_mask[:, ir_i] - imbuf_mask[:, r_i]) / (imbuf_mask[:, ir_i] + imbuf_mask[:, r_i])
     ir_rat = imbuf_mask[:, ir_i] / imbuf_mask[:, r_i]
     L = 0.05
@@ -601,6 +603,26 @@ feats = [10, 24, 18, 25]  # for june data from Lasso
 
 feats = [17, 11]  # wv ms (atcor basic) abg
 feats = [7, 11, 17, 24]  # wv ms (atcor srtm+adjcorr) abg
+# Features: ['NDVI' 'log10(r_n)' 'log10(NDVI)' 'ir_n^2']
+# R2: 0.8298
+# RMSE: 7.89
+# Method 1: RMSE: 7.956, 5-95% CI: 0.297 - 16.288
+# Method 2: RMSE: 6.129, 5-95% CI: 0.296 - 16.288
+
+
+feats = [11, 17,  5,  7]  # wv ms nir=b6 (atcor srtm+adjcorr) abg
+# R2: 0.8333
+# RMSE: 7.81
+# Method 1: RMSE: 7.870, 5-95% CI: 0.633 - 15.172
+# Method 2: RMSE: 6.262, 5-95% CI: 0.625 - 15.172
+
+
+feats = [11,  5, 17, 25]  # wv ms nir=b6, s=sum(r,g,b,nir) (atcor srtm+adjcorr) abg
+# Features: ['log10(r_n)' 'ir_rat' 'log10(NDVI)' 'ir_rat^2']
+# R2: 0.8419
+# RMSE: 7.61
+# Method 1: RMSE: 7.666, 5-95% CI: 0.994 - 15.103
+# Method 2: RMSE: 6.175, 5-95% CI: 0.993 - 15.103
 
 
 # 10, 24, 18, 25,
