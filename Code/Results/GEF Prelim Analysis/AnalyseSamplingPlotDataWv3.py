@@ -20,8 +20,10 @@ imageFile = r"D:\Data\Development\Projects\PhD GeoInformatics\Data\Digital Globe
 imageFile = r"D:\Data\Development\Projects\PhD GeoInformatics\Data\Digital Globe\058217622010_01\PCI Output\ATCOR\Basic\ATCORCorrected_o17OCT01084657-M2AS_R1C12-058217622010_01_P001_14368025.pix"
 imageFile = r"D:\Data\Development\Projects\PhD GeoInformatics\Data\Digital Globe\058217622010_01\PCI Output\ATCOR\SRTM\ATCORCorrected_o17OCT01084657-M2AS_R1C12-058217622010_01_P001_14368011.pix"
 imageFile = r"D:\Data\Development\Projects\PhD GeoInformatics\Data\Digital Globe\058217622010_01\PCI Output\ATCOR\SRTM+BRDF1\ATCORCorrected_o17OCT01084657-M2AS_R1C12-058217622010_01_P001_14344011.pix"
+imageFile = r"D:\Data\Development\Projects\PhD GeoInformatics\Data\Digital Globe\058217622010_01\PCI Output\Ortho\o17OCT01084657-M2AS_R1C12-058217622010_01_P001.TIF"
 imageFile = r"D:\Data\Development\Projects\PhD GeoInformatics\Data\Digital Globe\058217622010_01\PCI Output\ATCOR\SRTM+AdjCorr\ATCORCorrected_o17OCT01084657-M2AS_R1C12-058217622010_01_P001_14368043.pix"
 
+# imageFile = r"D:\Data\Development\Projects\PhD GeoInformatics\Data\Digital Globe\058217622010_01\PCI Output\ATCOR\SRTM+AdjCorr\ATCORCorrected_o17OCT01084657_R1C12-058217622010_01_P001_14368043_PanSharpen.pix"
 samplingPlotGtFile = "C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/GEF Plot Polygons with Yc.shp"
 
 pylab.close('all')
@@ -300,6 +302,7 @@ geotransform = imageDs.GetGeoTransform()
 if not geotransform is None:
     print 'Origin = (', geotransform[0], ',', geotransform[3], ')'
     print 'Pixel Size = (', geotransform[1], ',', geotransform[5], ')'
+    pixelSize = geotransform[1]
 
 
 plotDict = ExtractAllFeatures(imageDs, samplingPlotSpatialRef, samplingPlotGtDict, plotFigures=True)
@@ -317,7 +320,7 @@ bn = np.array([plot['b_n'] for plot in plotDict.values()])
 ir_rat = np.array([plot['ir_rat'] for plot in plotDict.values()])
 ir_n = np.array([plot['ir_n'] for plot in plotDict.values()])
 id = np.array([plot['ID'] for plot in plotDict.values()])
-ycpp = np.array([plot['YcPp'] for plot in plotDict.values()])*(100.**2)/(0.5**2)
+ycpp = np.array([plot['YcPp'] for plot in plotDict.values()])*(100.**2)/(pixelSize**2)
 yc = np.array([plot['YcHa'] for plot in plotDict.values()])
 classes = np.array([plot['DegrClass'] for plot in plotDict.values()])
 
@@ -349,8 +352,13 @@ ScatterD(np.log10(rn), abg/1000., class_labels=classes, labels=id, thumbnails=th
 pylab.grid()
 
 fig = pylab.figure()
-ScatterD(np.log10(ndvi), abg/1000., class_labels=classes, labels=id, thumbnails=thumbnails, regress=True, xlabel='log(rN)', ylabel='AGB (t/ha)')
+ScatterD(np.sqrt(ndvi), abg/1000., class_labels=classes, labels=id, thumbnails=thumbnails, regress=True, xlabel='log(NDVI)', ylabel='AGB (t/ha)')
 pylab.grid()
+
+fig = pylab.figure()
+ScatterD(rn**2, abg/1000., class_labels=classes, labels=None, thumbnails=thumbnails, regress=True, xlabel='log(rN)', ylabel='AGB (t/ha)')
+pylab.grid()
+
 
 
 # lock at ycha KDS density
@@ -509,8 +517,16 @@ np.isnan(X).sum()
 X[np.isnan(X)] = -1000  # NB HACK wv3 weirdness for now
 
 # plot['Yc'] is the mean Yc per pixel in the plot
-y = np.array([plot['YcPp'] for plot in plotDict.values()])*(100.**2)/(0.3**2)
-y = np.array([plot['AgbHa'] for plot in plotDict.values()])
+if False:
+    y = np.array([plot['YcPp'] for plot in plotDict.values()])*(100.**2)/(pixelSize**2)
+    y = np.array([plot['YcHa'] for plot in plotDict.values()])
+else:
+    y = np.array([plot['AgbHa'] for plot in plotDict.values()])
+    litterHa = np.array([plot['LitterHa'] for plot in plotDict.values()])
+    agbIdx = litterHa>=0.
+    # exclude plots with no litter data
+    # y = y[agbIdx]
+    # X = X[agbIdx, :]
 
 f_test, _ = f_regression(X, y)
 f_test /= np.max(f_test)
@@ -530,12 +546,13 @@ print 'Features ranked by RFE: %s' % (featKeys[rfe.ranking_.argsort()])
 print 'Model selected by RFE: %s' % (featKeys[rfe.support_])
 
 lasso = linear_model.LassoCV()
-lasso.fit(X,y)
+lasso.fit(X,y/1000.)
 print 'Best Lasso feature: ' + featKeys[np.argmax(np.abs(lasso.coef_))]
 print 'Main Lasso features: %s' % (featKeys[np.abs(lasso.coef_)>5])
 print 'Features ranked by Lasso: %s' % (featKeys[np.argsort(-np.abs(lasso.coef_))])
 
 lasso.coef_[np.argsort(-np.abs(lasso.coef_))]
+np.argsort(-np.abs(lasso.coef_))
 
 from sklearn.feature_selection import SelectKBest
 from sklearn.feature_selection import chi2
@@ -602,7 +619,7 @@ feats = [24, 19, 10, 25]
 feats = [10, 24, 18, 25]  # for june data from Lasso
 
 feats = [17, 11]  # wv ms (atcor basic) abg
-feats = [7, 11, 17, 24]  # wv ms (atcor srtm+adjcorr) abg
+feats = [7, 11, 17, 24]  # wv ms (atcor srtm+adjcorr) y=abg
 # Features: ['NDVI' 'log10(r_n)' 'log10(NDVI)' 'ir_n^2']
 # R2: 0.8298
 # RMSE: 7.89
@@ -610,20 +627,52 @@ feats = [7, 11, 17, 24]  # wv ms (atcor srtm+adjcorr) abg
 # Method 2: RMSE: 6.129, 5-95% CI: 0.296 - 16.288
 
 
-feats = [11, 17,  5,  7]  # wv ms nir=b6 (atcor srtm+adjcorr) abg
+feats = [11, 17,  5,  7]  # wv ms nir=b6 (atcor srtm+adjcorr) y=abg
 # R2: 0.8333
 # RMSE: 7.81
 # Method 1: RMSE: 7.870, 5-95% CI: 0.633 - 15.172
 # Method 2: RMSE: 6.262, 5-95% CI: 0.625 - 15.172
 
 
-feats = [11,  5, 17, 25]  # wv ms nir=b6, s=sum(r,g,b,nir) (atcor srtm+adjcorr) abg
+feats = [11,  5, 17, 25]  # wv ms nir=b6, s=sum(r,g,b,nir) (atcor srtm+adjcorr) y=abg
 # Features: ['log10(r_n)' 'ir_rat' 'log10(NDVI)' 'ir_rat^2']
 # R2: 0.8419
 # RMSE: 7.61
 # Method 1: RMSE: 7.666, 5-95% CI: 0.994 - 15.103
 # Method 2: RMSE: 6.175, 5-95% CI: 0.993 - 15.103
 
+feats = [11,  5, 17, 25]  # wv ms nir=b6, s=sum(r,g,b,nir) (ortho) y=abg
+# Features: ['log10(r_n)' 'ir_rat' 'log10(NDVI)' 'ir_rat^2']
+# R2: 0.8413
+# RMSE: 7.62
+# Method 1: RMSE: 7.662, 5-95% CI: 0.746 - 14.831
+# Method 2: RMSE: 6.177, 5-95% CI: 0.743 - 14.829
+
+feats = [11,  9, 17,  5]  # wv ms nir=b6, s=sum(r,g,b,nir) (atcor srtm+adjcorr) y = ycpp
+# Features: ['log10(r_n)' 'ir_rat' 'log10(NDVI)' 'ir_rat^2']
+# R2: 0.7566
+# RMSE: 7.45
+# Method 1: RMSE: 7.512, 5-95% CI: 0.511 - 14.360
+# Method 2: RMSE: 6.084, 5-95% CI: 0.508 - 14.360
+
+#[11, 17,  5,  9, 10, 18,
+feats = [11, 17,  5]  # wv ms nir=b6, s=sum(r,g,b,nir) (atcor srtm+adjcorr) y = ycha
+# Features: ['log10(r_n)' 'log10(NDVI)' 'ir_rat']
+# R2: 0.7941
+# RMSE: 6.98
+# Method 1: RMSE: 7.035, 5-95% CI: 0.515 - 13.139
+# Method 2: RMSE: 5.724, 5-95% CI: 0.515 - 13.139
+
+
+feats = [11, 17,  9,  5] # wv ms nir=b6, s=sum(r,g,b,nir) (atcor srtm+adjcorr) y = agb, incl trial litter data
+# Features: ['log10(r_n)' 'log10(NDVI)' 'NDVI_std' 'ir_rat']
+# R2: 0.8469
+# RMSE: 7.22
+# Method 1: RMSE: 7.273, 5-95% CI: 0.809 - 13.621
+# Method 2: RMSE: 6.034, 5-95% CI: 0.809 - 13.613
+
+
+# feats = [11, 17, 25, 9]
 
 # 10, 24, 18, 25,
 
@@ -650,8 +699,8 @@ print 'Method 2: RMSE: {0:.3f}, 5-95% CI: {1:.3f} - {2:.3f}'.format(rms.mean(), 
 fig, ax = plt.subplots()
 ax.scatter(yt, predicted, edgecolors=(0, 0, 0))
 ax.plot([yt.min(), yt.max()], [yt.min(), yt.max()], 'k--', lw=4)
-ax.set_xlabel('Measured Woody C (t/ha)')
-ax.set_ylabel('Predicted Woody C (t/ha)')
+ax.set_xlabel('Measured AGB (t/ha)')
+ax.set_ylabel('Predicted AGB (t/ha)')
 plt.xlim(0, yt.max())
 plt.ylim(0, yt.max())
 plt.grid()

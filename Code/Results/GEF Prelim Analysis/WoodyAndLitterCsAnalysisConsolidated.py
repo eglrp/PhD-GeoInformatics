@@ -358,7 +358,7 @@ if litterFileName is not None:
             continue
         else:
             print id,
-        dryWeight = r[1].value
+        dryWeight = r[2].value
         if litterDict.has_key(id):
             litterDict[id]['dryWeight'] += dryWeight
         else:
@@ -424,7 +424,14 @@ for pairedId, pairedPlot in pairedPlots.iteritems():
         summaryPlots[id]['YcHa'] = (100.**2) * summaryYc/(outerSize**2)
         if litterDict.has_key(id) and litterDict[id]['dryWeight'] > 0.:
             summaryPlots[id]['Litter'] = litterDict[id]['dryWeight']/1000  # g to kg
-            summaryPlots[id]['LitterHa'] = summaryPlots[id]['Litter'] * 0.48 * (100.**2) / (4 * (0.5**2))
+            # the litter quadrats are uniform across all plot sizes.  the dry weight is converted to carbon using the factor 0.48 (according to Cos)
+            # or 0.37 (according to James / CDM)
+            # current the trial plots have no litter data (INT* and TCH*)
+            # NB note, there is a factor of 44/12 in the CDM equations that I don't quite understand.  I think it is a conversion from C weight to
+            # CO2 weight (i.e. a chemical thing that represents not how much carbon is stored by how much C02 was captured out the atmosphere).
+            # we should make sure that we are using the same units in the woody and litter C i.e. we need to check what units Marius eq give
+            # summaryPlots[id]['LitterHa'] = summaryPlots[id]['Litter'] * 0.48 * (100.**2) / (4 * (0.5**2))
+            summaryPlots[id]['LitterHa'] = summaryPlots[id]['Litter'] * 0.37 * (100. ** 2) / (4 * (0.5 ** 2))
             summaryPlots[id]['AgbHa'] = summaryPlots[id]['LitterHa'] + summaryPlots[id]['YcHa']
         else:
             summaryPlots[id]['Litter'] = -1.
