@@ -1,3 +1,19 @@
+2018 Q4 Planning 
+----------------
+
+- Tasks + est times 
+1) Apply differential correction to field DGPS data acquired during Q3&4.					- 1 day 
+2) Process Q3&4 field allometric data to produce woody carbon stock (CS) estimates.			- 2 days
+3) Perform comprehensive feature selection study.											- 5 days 
+4) Generate a high resolution DSM of the study area using NGI aerial imagery. 				- 1 day
+5) Investigate the possibility of deriving vegetation height features from the above DSM.	- 5 days 
+6) Perform a regression analysis to model carbon stocks from satellite image/DSM features.	- 10 days 
+7) Write a report (draft paper) documenting the final carbon stock model.					- 15 days 
+----------------------------------------------------------------------------------------------------------
+Total																						- 39 days
+
+- If we exclude the last task, then we need to work 24 days (8 weeks at 3 days/week) which is realistic if we are submitting in Dec 
+
 NB see "C:\Data\Development\Projects\PhD GeoInformatics\Code\Results\Budget2018.py" for calcs
 
 - 2018 AWP to do :
