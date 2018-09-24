@@ -1,3 +1,29 @@
+2018 Q4 Planning Take 2
+-------------------------
+- After Cos reminded me of the importance of applying this thing and looking at ways of extending it over space and time
+- This changes the focus from making the current WV3 model as good as possible, to looking at ways of calibrating over space/time, as we already have a pretty decent model
+- One way of avoiding lighting/spectral variation (over space/time) is to use height features from a DSM, so we should investigate using an NGI DSM for this.  We could look at pure, DSM features like height/vol difference, texture, finding bare earth pixels with the MS spectral data to tell us where the bottom of the veg is.  
+- Another way would be to have quite a simple regression model (say just using r_n), then use some "calibration" plots to fit a linear r_n calibration model between different images.  "Calibration" plots would be ones that have little real change between images eg pristine. 
+- As Cos is planning sampling into 2019 Q1, we should stretch our timeline to Q2 too.
+- A side task for testing veg volume from DSM would be to see if we measure veg volume/height somehow from Cos' allometric data - is that well correlated with carbon stock?  This then also serves as ground truth for the DSM measurements.
+
+Remaining tasks 
+1) Apply differential correction to field DGPS data acquired during Q3&4.					- 1 day 
+2) Process field allometric data to produce woody carbon stock (CS) estimates.				- 1 day
+3) Perform comprehensive feature selection study.											- 5 days
+4) Investigate the correlation between veg volume est and AGB C from allometric data		- 2 days
+5) Generate a high resolution DSM of the study area using NGI aerial imagery. 				- 2 days
+6) Investigate the possibility of deriving vegetation height/vol features from the above DSM. - 10 days
+7) Perform a regression analysis to model carbon stocks from satellite image/DSM features.	- 4 days 
+8) Investigate ways of calibrating between NGI and WV3 images / regression models 			- 9 days 
+9) Write a report (draft paper) documenting the final carbon stock model.					- 15 days 
+----------------------------------------------------------------------------------------------------------
+Total																						- 49 days
+
+- For Q4 lets do 1,2,4,5,6 = 16 days 
+
+
+
 2018 Q4 Planning 
 ----------------
 
@@ -5,12 +31,21 @@
 1) Apply differential correction to field DGPS data acquired during Q3&4.					- 1 day 
 2) Process Q3&4 field allometric data to produce woody carbon stock (CS) estimates.			- 2 days
 3) Perform comprehensive feature selection study.											- 5 days 
-4) Generate a high resolution DSM of the study area using NGI aerial imagery. 				- 1 day
-5) Investigate the possibility of deriving vegetation height features from the above DSM.	- 5 days 
+4) Generate a high resolution DSM of the study area using NGI aerial imagery. 				- 2 days
+5) Investigate the possibility of deriving vegetation height features from the above DSM.	- 10 days 
 6) Perform a regression analysis to model carbon stocks from satellite image/DSM features.	- 10 days 
 7) Write a report (draft paper) documenting the final carbon stock model.					- 15 days 
 ----------------------------------------------------------------------------------------------------------
-Total																						- 39 days
+Total																						- 45 days
+
+- We have budget for 49 days 
+
+- PhD planning (draft submission for March 2019 should be early Oct which is not going to happen.  Submission for Dec 2019 should be July 2019 which is very doable.  Diss to ext examiners by Aug 19 for Dec grad and 1 Nov for March grad) - I guess I need about 2 months full time to complete the last chapters.  Then we need ~6 weeks between avn and me.  
+- Basically, the phd is not going to happen this year and i will have to submit next year round May/June.  So I can afford to focus on GEF exclusively for now, although I think my preference is to keep both going simultaneously.  That way I don't lose touch with either and have the flexibility to shuffle things around a bit.  
+- Will GEF actually fund me writing a paper?  
+- So if we are going to extend to 2019, it makes sense to leave task 7 and perhaps some of 5/6
+- Lets leave tasks 5 & 7 to 2019, that gives 20 days for 2018 and 25 days for 29.  
+
 
 - If we exclude the last task, then we need to work 24 days (8 weeks at 3 days/week) which is realistic if we are submitting in Dec 
 

@@ -5,7 +5,8 @@ myTtlBudget = 22807.*dollarRandConv
 myRate = 300.
 #  3*4*7*2  #the no hours I should work in a quarter
 my2017Invoices = np.array([24300, 41700, 3*4*7*2.*myRate])   # last amount is a guess for Dec
-fixedCosts2018 = 0.    #30*32.50*14.5      # 30km2 x $32.50/km2   # worst case costs for imagery
+# fixedCosts2018 = 30*32.50*14.5      # 30km2 x $32.50/km2   # worst case costs for imagery
+fixedCosts2018 = 0.                 # we got a grant from dg, so we can do something with the time now
 varCosts2018 = myTtlBudget - my2017Invoices.sum() - fixedCosts2018
 hoursPerDay = 7.
 
@@ -19,8 +20,9 @@ print "2018 var (time worked) costs: ", varCosts2018
 print "2018 time: %f (hrs), %f (days), %f (wks), %f (months)" % (varCosts2018/myRate, varCosts2018/(myRate*hoursPerDay), varCosts2018/(myRate*hoursPerDay*2), varCosts2018/(myRate*hoursPerDay*2*4))
 
 # how to split time over quarters?
-daysPerWeekForQtr = np.array([1., 1., 1.5, 4.5])
 # daysPerWeekForQtr = np.array([1., 2., 2.5, 2.5])
+# daysPerWeekForQtr = np.array([1., 1., 1.5, 4.5])
+daysPerWeekForQtr = np.array([1., 1., 1.5, 1.5, 1.5, 2.])        # extend to 2019
 (daysPerWeekForQtr*hoursPerDay*4*3).cumsum()
 (daysPerWeekForQtr*hoursPerDay*4*3).cumsum() - varCosts2018/myRate   #in which quarter do we complete the ttl hours?
 
@@ -51,3 +53,6 @@ print 'all costs budgetPerQuarter: ', budgetPerQuarter
 print '$ all costs budgetPerQuarter: ', budgetPerQuarter/dollarRandConv
 
 budgetPerQuarter.sum()  #check we sum to "2018 remainder"
+
+# how many days can we fund with the remaining budget?
+(budgetPerQuarter.sum() - budgetPerQuarter[:3].sum())/(hoursPerDay*myRate)
