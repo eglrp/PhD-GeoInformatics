@@ -1383,6 +1383,7 @@ WV3 Xcalib
 - It is also questionable if Sentinel ref of 10m vs 60m will have any advantage.  
 - It is much faster to xcalib the orig res MS image rather than pan sharp 
 
+
 Sentinel
 ---------
 - Level 1C is TOA refl etc 

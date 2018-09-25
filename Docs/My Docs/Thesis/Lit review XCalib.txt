@@ -44,7 +44,7 @@ General To Do:
   - another thing: radiometric calibration is seeming used to refer to different things in literature which is again confusing - we mean calibration to surf reflectance.  is there a standard terminology for this?  
   - terminology is "cross calib" used elsewhere, is "tandem data" used elsewhere - in what contexts?  
   - Ref ESTARFM as using local lin rel of reflectance !
-  
+
 Plots to make:
   - Orientation of study area (LK outline)  
   - New hotspot + seamline image
@@ -53,12 +53,11 @@ Plots to make:
   - Histograms before and after (all on one plot?)
   - DMC, MODIS spec sens.  DMC, MODIS, SPOT spec sens.  + Typical land covers
   - DMC-MODIS rel betw land cover DNs
-  
+
 Editing To Do
   - Discuss other results 
   - Mention fusion
-  
-  
+
 Defns/Terminology
 - Image/raster/photograph:
 	Use image - it is far more common than raster and they mean the same thing as far as I can tell.  Photograph is ambiguous.

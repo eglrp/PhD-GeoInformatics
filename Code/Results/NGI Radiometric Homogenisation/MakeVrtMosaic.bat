@@ -24,3 +24,7 @@ cd "E:\Rectified\3318B_2016_1142"
 dir /b *RGB.tif > dirlist.txt
 gdalbuildvrt -input_file_list dirlist.txt 3318B_2016_1142_OrthoRect.vrt -srcnodata 0 -vrtnodata 0
 gdaladdo -r average -ro --config COMPRESS_OVERVIEW DEFLATE 3318B_2016_1142_OrthoRect.vrt 16 32 64 128 256 512
+
+REM gdaltindex 3318B_2016_1142_RGB_Homogenised_TileIndex.shp o*RGB_XCALIB.tif
+
+
