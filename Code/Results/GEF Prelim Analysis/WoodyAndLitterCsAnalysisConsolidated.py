@@ -28,18 +28,26 @@ import collections
 from csv import DictWriter
 from collections import OrderedDict
 import os.path
+from scipy import stats as stats
+
 fontSize = 16
 
 
 def EvalRecordCs(allometricModels, record):
     # vars = [model['vars'] for model in allometricModels.values()]
+    res = {'yc':0., 'area': 0., 'vol':0.}
     if not allometricModels.__contains__(record['species']):
         print record['species'], " not found"
-        return 0.
+        return res
     model = allometricModels[record['species']]
     x = 0.
     CD = np.mean([record['canopyLength'], record['canopyWidth']])
     CA = np.pi*(CD/2)**2
+    res['height'] = record['height']
+    res['area'] = CA
+    res['vol'] = CA*record['height']   # volume of a cylinder
+    # res['vol'] = (np.pi*4./3) * record['canopyLength'] * record['canopyWidth'] * record['height']/2.   # volume of an ellipse
+
     if model['vars'] == 'CA.H':
         x = CA*record['height']
     elif model['vars'] == 'CA.SL':
@@ -50,15 +58,10 @@ def EvalRecordCs(allometricModels, record):
         x = CD*record['height']
     elif model['vars'] == 'Hgt':
         x = record['height']
-    elif model['vars'] == 'CA':
-        x = CA
     else:
         print model['vars'], " unknown variable"
         return 0.
-    # if record['species'] == 'S.longispina':   # MP's model Log10 y (C (kg) = 1.1012(Log10 canopy area (m2)) - 0.2938
-    #     Yc = 10**((model['ay'] * np.log10(x)) + model['by'])
-    # else:
-    yn = np.exp(model['ay'])*x**model['by']     # "naive"
+    yn = np.exp(model['ay'])*x**model['by']   # "naive"
     Yc = yn*model['MB']
 
     if model['useWdRatio']:
@@ -66,7 +69,46 @@ def EvalRecordCs(allometricModels, record):
             Yc = Yc * model['wdRatio']
         # else:
         #     print "WD Ratio for ", record['species'], " not found - using 1."
-    return Yc
+    res['yc'] = Yc
+
+    return res
+
+# def EvalRecordCs(allometricModels, record):
+#     # vars = [model['vars'] for model in allometricModels.values()]
+#     if not allometricModels.__contains__(record['species']):
+#         print record['species'], " not found"
+#         return 0.
+#     model = allometricModels[record['species']]
+#     x = 0.
+#     CD = np.mean([record['canopyLength'], record['canopyWidth']])
+#     CA = np.pi*(CD/2)**2
+#     if model['vars'] == 'CA.H':
+#         x = CA*record['height']
+#     elif model['vars'] == 'CA.SL':
+#         x = CA*record['height']
+#     elif model['vars'] == 'CD':
+#         x = CD
+#     elif model['vars'] == 'CD.H':
+#         x = CD*record['height']
+#     elif model['vars'] == 'Hgt':
+#         x = record['height']
+#     elif model['vars'] == 'CA':
+#         x = CA
+#     else:
+#         print model['vars'], " unknown variable"
+#         return 0.
+#     # if record['species'] == 'S.longispina':   # MP's model Log10 y (C (kg) = 1.1012(Log10 canopy area (m2)) - 0.2938
+#     #     Yc = 10**((model['ay'] * np.log10(x)) + model['by'])
+#     # else:
+#     yn = np.exp(model['ay'])*x**model['by']     # "naive"
+#     Yc = yn*model['MB']
+#
+#     if model['useWdRatio']:
+#         if model.__contains__('wdRatio'):
+#             Yc = Yc * model['wdRatio']
+#         # else:
+#         #     print "WD Ratio for ", record['species'], " not found - using 1."
+#     return Yc
 
 def EvalPlotCs(allometricModels, plot):
     plotYc = []
@@ -127,6 +169,64 @@ def MyUnknownSpeciesMap(species):
 
     return mapSpecies
 
+def ScatterD(x, y, labels=None, class_labels=None, thumbnails=None, regress=True, xlabel=None, ylabel=None):
+    if class_labels is None:
+        class_labels = np.zeros(x.__len__())
+    classes = np.unique(class_labels)
+    colours = ['r', 'm', 'b', 'g', 'y', 'k', 'o']
+    ylim = [np.min(y), np.max(y)]
+    xlim = [np.min(x), np.max(x)]
+    xd = np.diff(xlim)[0]
+    yd = np.diff(ylim)[0]
+    pylab.axis([np.min(x), np.max(x), np.min(y), np.max(y)])
+    pylab.hold('on')
+    ax = pylab.gca()
+    handles = [0, 0, 0]
+
+    for ci, (class_label, colour) in enumerate(zip(classes, colours[:classes.__len__()])):
+        class_idx = class_labels == class_label
+        if thumbnails is None:
+            pylab.plot(x[class_idx], y[class_idx], colour + 'x')
+
+        for xyi, (xx, yy) in enumerate(zip(x[class_idx], y[class_idx])):  # , np.array(plot_names)[class_idx]):
+            if labels is not None:
+                pylab.text(xx - .0015, yy - .0015, np.array(labels)[class_idx][xyi],
+                           fontdict={'size': 9, 'color': colour, 'weight': 'bold'})
+
+            if thumbnails is not None:
+                imbuf = np.array(thumbnails)[class_idx][xyi]
+                ims = 20.
+                extent = [xx - xd / (2 * ims), xx + xd / (2 * ims), yy - yd / (2 * ims), yy + yd / (2 * ims)]
+                pylab.imshow(imbuf[:, :, :3], extent=extent, aspect='auto')  # zorder=-1,
+                handles[ci] = ax.add_patch(
+                    patches.Rectangle((xx - xd / (2 * ims), yy - yd / (2 * ims)), xd / ims, yd / ims, fill=False,
+                                      edgecolor=colour, linewidth=2.))
+                # pylab.plot(mPixels[::step], dRawPixels[::step], color='k', marker='.', linestyle='', markersize=.5)
+        if regress and classes.__len__() > 1 and False:
+            (slope, intercept, r, p, stde) = stats.linregress(x[class_idx], y[class_idx])
+            pylab.text(xlim[0] + xd * 0.7, ylim[0] + yd * 0.05 * (ci + 2),
+                       str.format('{1}: $R^2$ = {0:.2f}', np.round(r ** 2, 2), classes[ci]),
+                       fontdict={'size': 10, 'color': colour})
+
+    if regress:
+        (slope, intercept, r, p, stde) = stats.linregress(x, y)
+        pylab.text((xlim[0] + xd * 0.7), (ylim[0] + yd * 0.05), str.format('$R^2$ = {0:.2f}', np.round(r ** 2, 2)),
+                   fontdict={'size': 12})
+        print str.format('$R^2$ = {0:.2f}', np.round(r ** 2, 2))
+        print str.format('P (slope=0) = {0:.2f}', np.round(p, 3))
+        print str.format('Slope = {0:.2f}', np.round(slope, 3))
+        print str.format('Std error of slope = {0:.2f}', np.round(stde, 3))
+        yhat = x*slope + intercept
+        print str.format('RMS error = {0:.2f}', np.round(np.sqrt(np.mean((y-yhat)**2)), 3))
+
+
+    if xlabel is not None:
+        pylab.xlabel(xlabel, fontdict={'size': 12})
+    if ylabel is not None:
+        pylab.ylabel(ylabel, fontdict={'size': 12})
+    # pylab.ylabel(yf)
+    if classes.__len__() > 1:
+        pylab.legend(handles, classes, fontsize=12)
 
 # ---------------------------------------------------------------------------------------------------------------------
 # load allometric models
@@ -312,8 +412,11 @@ for ws in wb:
             record['bsd'] = str(r[8].value)
         else:
             record['bsd'] = ""
-        yc = EvalRecordCs(allometricModels, record)
-        record['yc'] = yc
+        res = EvalRecordCs(allometricModels, record)
+        record['yc'] = res['yc']
+        record['area'] = res['area']
+        record['vol'] = res['vol']
+
         if plots.has_key(id):
             plots[id].append(record)
         else:
@@ -407,21 +510,44 @@ for pairedId, pairedPlot in pairedPlots.iteritems():
             subPlot = subPlots[id]
             subHeight = np.array([r['height'] for r in subPlot])
             subYc = np.array([r['yc'] for r in subPlot])
+            subArea = np.array([r['area'] for r in subPlot])
+            subVol = np.array([r['vol'] for r in subPlot])
             smallIdx = subHeight < 50
             # outerHeight = np.array([r['height'] for r in outerPlot])
             outerYc = np.array([r['yc'] for r in outerPlot])
+            outerArea = np.array([r['area'] for r in outerPlot])
+            outerVol = np.array([r['vol'] for r in outerPlot])
+            outerHeight = np.array([r['height'] for r in outerPlot])
             summaryYc = ((outerSize/5.)**2) * subYc[smallIdx].sum() + subYc[np.logical_not(smallIdx)].sum() + outerYc.sum()
             summaryPlots[id]['N'] = ((outerSize / 5.) ** 2) * smallIdx.sum() + (subYc.__len__() - smallIdx.sum()) + outerYc.__len__()
+            summaryArea = ((outerSize/5.)**2) * subArea[smallIdx].sum() + subArea[np.logical_not(smallIdx)].sum() + outerArea.sum()
+            summaryVol = ((outerSize/5.)**2) * subVol[smallIdx].sum() + subVol[np.logical_not(smallIdx)].sum() + outerVol.sum()
+            summaryHeights = np.array(np.int32((outerSize/5.)**2) * (subHeight[smallIdx].tolist()) + subHeight[np.logical_not(smallIdx)].tolist() + outerHeight.tolist())
         else:
             outerYc = np.array([r['yc'] for r in outerPlot])
+            outerArea = np.array([r['area'] for r in outerPlot])
+            outerVol = np.array([r['vol'] for r in outerPlot])
+            summaryHeights = np.array([r['height'] for r in outerPlot])
             summaryYc = outerYc.sum()
             summaryPlots[id]['N'] = outerYc.__len__()
+            summaryArea = outerArea.sum()
+            summaryVol = outerVol.sum()
 
         summaryPlots[id]['ID'] = id
         summaryPlots[id]['Yc'] = summaryYc
         summaryPlots[id]['Size'] = outerSize
         summaryPlots[id]['Degr. Class'] = outerPlot[0]['degrClass']
         summaryPlots[id]['YcHa'] = (100.**2) * summaryYc/(outerSize**2)
+        summaryPlots[id]['Area'] = summaryArea
+        summaryPlots[id]['AreaHa'] = (100.**2) * summaryArea/(outerSize**2)
+        summaryPlots[id]['Vol'] = summaryVol
+        summaryPlots[id]['VolHa'] = (100.**2) * summaryVol/(outerSize**2)
+        summaryPlots[id]['MaxHeight'] = summaryHeights.max()
+        summaryPlots[id]['MeanHeight'] = summaryHeights.mean()
+        summaryPlots[id]['MedianHeight'] = np.median(summaryHeights)
+        summaryPlots[id]['SumHeight'] = summaryHeights.sum()
+        summaryPlots[id]['SumHeightHa'] = (100.**2) * summaryHeights.sum()/(outerSize**2)
+
         if litterDict.has_key(id) and litterDict[id]['dryWeight'] > 0.:
             summaryPlots[id]['Litter'] = litterDict[id]['dryWeight']/1000  # g to kg
             # the litter quadrats are uniform across all plot sizes.  the dry weight is converted to carbon using the factor 0.48 (according to Cos)
@@ -464,32 +590,32 @@ degrClasses = np.array([plot['Degr. Class'] for plot in summaryPlots.values()])
 statsDict={}
 for degrClass in np.unique(degrClasses):
     classIdx = degrClass == degrClasses
-    stats = {}
-    stats['MeanYcHa'] = ycHas[classIdx].mean()
-    stats['StdYcHa'] = ycHas[classIdx].std()
-    stats['SeYcHa'] = ycHas[classIdx].std()/np.sqrt(classIdx.sum())
-    stats['Se:MeanYcHa'] = 100*stats['SeYcHa']/stats['MeanYcHa']
+    plotStats = {}
+    plotStats['MeanYcHa'] = ycHas[classIdx].mean()
+    plotStats['StdYcHa'] = ycHas[classIdx].std()
+    plotStats['SeYcHa'] = ycHas[classIdx].std()/np.sqrt(classIdx.sum())
+    plotStats['Se:MeanYcHa'] = 100*plotStats['SeYcHa']/plotStats['MeanYcHa']
 
-    stats['MeanAgbHa'] = agbHas[classIdx].mean()
-    stats['StdAgbHa'] = agbHas[classIdx].std()
-    stats['SeAgbHa'] = agbHas[classIdx].std() / np.sqrt(classIdx.sum())
-    stats['Se:MeanAgbHa'] = 100*stats['SeAgbHa']/stats['MeanAgbHa']
+    plotStats['MeanAgbHa'] = agbHas[classIdx].mean()
+    plotStats['StdAgbHa'] = agbHas[classIdx].std()
+    plotStats['SeAgbHa'] = agbHas[classIdx].std() / np.sqrt(classIdx.sum())
+    plotStats['Se:MeanAgbHa'] = 100*plotStats['SeAgbHa']/plotStats['MeanAgbHa']
 
-    stats['MeanLitterHa'] = litterHas[classIdx].mean()
-    stats['StdLitterHa'] = litterHas[classIdx].std()
-    stats['SeLitterHa'] = litterHas[classIdx].std() / np.sqrt(classIdx.sum())
-    stats['Se:MeanLitterHa'] = 100 * stats['SeLitterHa'] / stats['MeanLitterHa']
+    plotStats['MeanLitterHa'] = litterHas[classIdx].mean()
+    plotStats['StdLitterHa'] = litterHas[classIdx].std()
+    plotStats['SeLitterHa'] = litterHas[classIdx].std() / np.sqrt(classIdx.sum())
+    plotStats['Se:MeanLitterHa'] = 100 * plotStats['SeLitterHa'] / plotStats['MeanLitterHa']
 
-    statsDict[degrClass] = stats
+    statsDict[degrClass] = plotStats
 
     print 'Degradation Class: %s , N: %d'%(degrClass, classIdx.sum())
     print '--------------------------------------'
-    print 'Mean (Std) Woody C (kg/ha): %.0f (%.0f)'%(stats['MeanYcHa'], stats['StdYcHa'])
-    print 'Mean (Std) Litter C (kg/ha): %.0f (%.0f)' % (stats['MeanLitterHa'], stats['StdLitterHa'])
-    print 'Mean (Std) AGB C (kg/ha): %.0f (%.0f)' % (stats['MeanAgbHa'], stats['StdAgbHa'])
-    print 'SE/Mean Woody (%%): %.2f' % (stats['Se:MeanYcHa'])
-    print 'SE/Mean Litter (%%): %.2f' % (stats['Se:MeanLitterHa'])
-    print 'SE/Mean AGB (%%): %.2f' % (stats['Se:MeanAgbHa'])
+    print 'Mean (Std) Woody C (kg/ha): %.0f (%.0f)'%(plotStats['MeanYcHa'], plotStats['StdYcHa'])
+    print 'Mean (Std) Litter C (kg/ha): %.0f (%.0f)' % (plotStats['MeanLitterHa'], plotStats['StdLitterHa'])
+    print 'Mean (Std) AGB C (kg/ha): %.0f (%.0f)' % (plotStats['MeanAgbHa'], plotStats['StdAgbHa'])
+    print 'SE/Mean Woody (%%): %.2f' % (plotStats['Se:MeanYcHa'])
+    print 'SE/Mean Litter (%%): %.2f' % (plotStats['Se:MeanLitterHa'])
+    print 'SE/Mean AGB (%%): %.2f' % (plotStats['Se:MeanAgbHa'])
     print ''
 
 severeIdx = degrClasses == 'Severe'
@@ -498,35 +624,74 @@ tchIdx = (~svfIdx) & severeIdx & (litterHas > 0)
 farmNames = ['Sewefontein', 'Tchnuganu']
 farmDict = {}
 for idx, farmName in zip([svfIdx, tchIdx], farmNames):
-    stats = {}
-    stats['MeanYcHa'] = ycHas[idx].mean()
-    stats['StdYcHa'] = ycHas[idx].std()
-    stats['SeYcHa'] = ycHas[idx].std()/np.sqrt(idx.sum())
-    stats['Se:MeanYcHa'] = 100*stats['SeYcHa']/stats['MeanYcHa']
+    plotStats = {}
+    plotStats['MeanYcHa'] = ycHas[idx].mean()
+    plotStats['StdYcHa'] = ycHas[idx].std()
+    plotStats['SeYcHa'] = ycHas[idx].std()/np.sqrt(idx.sum())
+    plotStats['Se:MeanYcHa'] = 100*plotStats['SeYcHa']/plotStats['MeanYcHa']
 
-    stats['MeanAgbHa'] = agbHas[idx].mean()
-    stats['StdAgbHa'] = agbHas[idx].std()
-    stats['SeAgbHa'] = agbHas[idx].std() / np.sqrt(idx.sum())
-    stats['Se:MeanAgbHa'] = 100*stats['SeAgbHa']/stats['MeanAgbHa']
+    plotStats['MeanAgbHa'] = agbHas[idx].mean()
+    plotStats['StdAgbHa'] = agbHas[idx].std()
+    plotStats['SeAgbHa'] = agbHas[idx].std() / np.sqrt(idx.sum())
+    plotStats['Se:MeanAgbHa'] = 100*plotStats['SeAgbHa']/plotStats['MeanAgbHa']
 
-    stats['MeanLitterHa'] = litterHas[idx].mean()
-    stats['StdLitterHa'] = litterHas[idx].std()
-    stats['SeLitterHa'] = litterHas[idx].std() / np.sqrt(idx.sum())
-    stats['Se:MeanLitterHa'] = 100 * stats['SeLitterHa'] / stats['MeanLitterHa']
+    plotStats['MeanLitterHa'] = litterHas[idx].mean()
+    plotStats['StdLitterHa'] = litterHas[idx].std()
+    plotStats['SeLitterHa'] = litterHas[idx].std() / np.sqrt(idx.sum())
+    plotStats['Se:MeanLitterHa'] = 100 * plotStats['SeLitterHa'] / plotStats['MeanLitterHa']
 
-    farmDict[farmName] = stats
+    farmDict[farmName] = plotStats
 
     print 'Farm: %s' % (farmName)
     print '--------------------------------------'
-    print 'Mean (Std) Woody C (kg/ha): %.0f (%.0f)' % (stats['MeanYcHa'], stats['StdYcHa'])
-    print 'Mean (Std) Litter C (kg/ha): %.0f (%.0f)' % (stats['MeanLitterHa'], stats['StdLitterHa'])
-    print 'Mean (Std) AGB C (kg/ha): %.0f (%.0f)' % (stats['MeanAgbHa'], stats['StdAgbHa'])
-    print 'SE/Mean Woody (%%): %.2f' % (stats['Se:MeanYcHa'])
-    print 'SE/Mean Litter (%%): %.2f' % (stats['Se:MeanLitterHa'])
-    print 'SE/Mean AGB (%%): %.2f' % (stats['Se:MeanAgbHa'])
+    print 'Mean (Std) Woody C (kg/ha): %.0f (%.0f)' % (plotStats['MeanYcHa'], plotStats['StdYcHa'])
+    print 'Mean (Std) Litter C (kg/ha): %.0f (%.0f)' % (plotStats['MeanLitterHa'], plotStats['StdLitterHa'])
+    print 'Mean (Std) AGB C (kg/ha): %.0f (%.0f)' % (plotStats['MeanAgbHa'], plotStats['StdAgbHa'])
+    print 'SE/Mean Woody (%%): %.2f' % (plotStats['Se:MeanYcHa'])
+    print 'SE/Mean Litter (%%): %.2f' % (plotStats['Se:MeanLitterHa'])
+    print 'SE/Mean AGB (%%): %.2f' % (plotStats['Se:MeanAgbHa'])
     print ''
 
-# statsDict['All'] = stats
+# statsDict['All'] = plotStats
+
+#-----------------------------------------------------------------------------------------------------------------
+#  look at correlation between yc / agb and height/area/vol
+
+ycHa = np.array([plot['YcHa'] for plot in summaryPlots.values()])
+agbHa = np.array([plot['AgbHa'] for plot in summaryPlots.values()])
+maxHeight = np.array([plot['MaxHeight'] for plot in summaryPlots.values()])
+meanHeight = np.array([plot['MeanHeight'] for plot in summaryPlots.values()])
+medianHeight = np.array([plot['MedianHeight'] for plot in summaryPlots.values()])
+sumHeightHa = np.array([plot['SumHeightHa'] for plot in summaryPlots.values()])
+areaHa = np.array([plot['AreaHa'] for plot in summaryPlots.values()])
+volHa = np.array([plot['VolHa'] for plot in summaryPlots.values()])
+n = np.array([plot['N'] for plot in summaryPlots.values()])
+id  = np.array([plot['ID'] for plot in summaryPlots.values()])
+
+pylab.close('all')
+fig = pylab.figure()
+ScatterD(volHa/1.e6, ycHa, regress=True, labels=ids, xlabel='vol (m3/ha)', ylabel='yc (t/ha)')
+pylab.grid()
+
+fig = pylab.figure()
+ScatterD((volHa**1)/1.e6, agbHa, regress=True, labels=ids, xlabel='vol (m3/ha)', ylabel='AGB (t/ha)')
+pylab.grid()
+
+fig = pylab.figure()
+ScatterD(areaHa, ycHa, regress=True, xlabel='area (m2/ha)', ylabel='yc (t/ha)')
+pylab.grid()
+
+fig = pylab.figure()
+ScatterD(areaHa*meanHeight/1e6, ycHa, regress=True, xlabel='area*mean(height) (m3/ha)', ylabel='yc (t/ha)')
+pylab.grid()
+
+fig = pylab.figure()
+ScatterD(areaHa*(meanHeight**.5)/1e6, agbHa, regress=True, xlabel='area*sqrt(mean(height)) (m3/ha)', ylabel='AGB (t/ha)')
+pylab.grid()
+
+fig = pylab.figure()
+ScatterD(np.sqrt(sumHeightHa/1.e2), ycHa, regress=True, xlabel='sum(height) (m/ha)', ylabel='yc (t/ha)')
+pylab.grid()
 
 #-----------------------------------------------------------------------------------------------------------------
 #  look at height & yc distribution for 5x5m plots

@@ -25,13 +25,18 @@ fontSize = 16
 
 def EvalRecordCs(allometricModels, record):
     # vars = [model['vars'] for model in allometricModels.values()]
+    res = {'yc':0., 'area': 0., 'vol':0.}
     if not allometricModels.__contains__(record['species']):
         print record['species'], " not found"
-        return 0.
+        return res
     model = allometricModels[record['species']]
     x = 0.
     CD = np.mean([record['canopyLength'], record['canopyWidth']])
     CA = np.pi*(CD/2)**2
+    res['height'] = record['height']
+    res['area'] = CA
+    res['vol'] = CA*record['height']
+
     if model['vars'] == 'CA.H':
         x = CA*record['height']
     elif model['vars'] == 'CA.SL':
@@ -53,17 +58,18 @@ def EvalRecordCs(allometricModels, record):
             Yc = Yc * model['wdRatio']
         # else:
         #     print "WD Ratio for ", record['species'], " not found - using 1."
+    res['yc'] = Yc
 
-    return Yc
+    return res
 
-def EvalPlotCs(allometricModels, plot):
-    plotYc = []
-    for record in plot:
-        Yc = EvalRecordCs(allometricModels, record)
-        if Yc > 0.:
-            plotYc.append(Yc)
-        print record['species'], " - ", str(Yc)
-    return plotYc
+# def EvalPlotCs(allometricModels, plot):
+#     plotYc = []
+#     for record in plot:
+#         res = EvalRecordCs(allometricModels, record)
+#         if Yc > 0.:
+#             plotYc.append(Yc)
+#         print record['species'], " - ", str(Yc)
+#     return plotYc
 
 # ---------------------------------------------------------------------------------------------------------------------
 
@@ -231,8 +237,10 @@ for ws in wb:
             record['bsd'] = str(r[6].value)
         else:
             record['bsd'] = ""
-        yc = EvalRecordCs(allometricModels, record)
-        record['yc'] = yc
+        res = EvalRecordCs(allometricModels, record)
+        record['yc'] = res['yc']
+        record['area'] = res['area']
+        record['vol'] = res['vol']
         if plots.has_key(id):
             plots[id].append(record)
         else:
@@ -486,9 +494,9 @@ for specie in topSpecies:
         record['canopyWidth'] = edgeSection*2
 
         # get yc for full canopy
-        ycFull = EvalRecordCs(allometricModels, record)   # find c for full canopy
+        res = EvalRecordCs(allometricModels, record)   # find c for full canopy
 
-        ycs.append(ycFull)
+        ycs.append(res['yc'])
 
     ycs = np.array(ycs)
     pylab.subplot(2, 2, pi + 1)
@@ -506,8 +514,8 @@ for specie in topSpecies:
         sectionArea, ySection = CircleSectionArea(record['canopyLength']/2, record['canopyWidth']/2, edgeSection)
         record['canopyLength'] = record['canopyLength'] - edgeSection
         record['canopyWidth'] = ySection
-        ycSectionApprox = EvalRecordCs(allometricModels, record)   #find c for approx inside area of canopy
-
+        res = EvalRecordCs(allometricModels, record)   #find c for approx inside area of canopy
+        ycSectionApprox = res['yc']
         # get yc for actual portion of canopy
         model = allometricModels[record['species']]
         x = 0.

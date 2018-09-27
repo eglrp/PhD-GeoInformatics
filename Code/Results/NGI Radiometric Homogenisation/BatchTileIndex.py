@@ -27,10 +27,13 @@ os.environ['PATH'] += "C:\Data\Development\Toolboxes\OpenCV-2.4.8\\build\\x64\\v
 xcalibExe = "C:\Data\Development\Projects\PhD GeoInformatics\Code\Cross Calibration\\x64\Release\CrossCalibration.exe"
 # modisFileName = "D:\Data\Development\Projects\PhD GeoInformatics\Data\MODIS\MCD43A4.A2016298.h19v12.006.2016307063215\MCD43A4.A2016302.h19v12.006.2016311094217.NgiBandOrder.TmLo19.tif"
 batchDir = r"E:\Homogenised\3318B_2016_1142"
+batchDir = r"V:\Data\NGI\Rectified\3324C_2015_1004\RGBN"
+
 tileIndexFileName = r"E:\Homogenised\3318B_2016_1142\3318B_2016_1142_RGB_XCALIB_TileIndex.shp"
+tileIndexFileName = r"E:\Homogenised\3324C_2015_1004\RGBN\3324C_2015_1004_RGBN_TileIndex.shp"
 # make the working dir on the ssd drive, this speeds things up significantly
 os.chdir("C:\Data\Development\Projects\PhD GeoInformatics\Code\Results\NGI Radiometric Homogenisation")
-for tifFileName in glob.glob(os.path.join(batchDir, 'o*RGB_XCALIB.tif')):
+for tifFileName in glob.glob(os.path.join(batchDir, '*RGBN.tif')):
     baseFileName = os.path.split(tifFileName)[-1]
     print 'Adding tile index for {0}'.format(os.path.join(batchDir, baseFileName))
     cmdString = '"{0}" "{1}" "{2}"'.format(gdaltindexExe, tileIndexFileName,
