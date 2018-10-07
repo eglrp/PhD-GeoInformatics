@@ -2432,437 +2432,437 @@ PhotoCutline:
 ;
 EpipolarImages:
 {
-	LEpipolarImageFile: "C:\Temp\NGI DEM\el_3323d_2015_1001_15_0583_RGBN_3323d_2015_1001_15_0584_RGBN.pix"
-	REpipolarImageFile: "C:\Temp\NGI DEM\er_3323d_2015_1001_15_0583_RGBN_3323d_2015_1001_15_0584_RGBN.pix"
-	LeftImageFile: "3323d_2015_1001_15_0583_RGBN"
-	RightImageFile: "3323d_2015_1001_15_0584_RGBN"
-	EpipNumChannel: 1 
-	LEpipChannel: 2 
-	REpipChannel: 2 
-	EpipDownSample: 1 
-	EpipFilter: Average 
-	AddDate: 09/26/2018 
-	EpipOutFolder: "C:\Temp\NGI DEM\"
-}
-
-EpipolarImages:
-{
-	LEpipolarImageFile: "C:\Temp\NGI DEM\el_3323d_2015_1001_01_0032_RGBN_3323d_2015_1001_01_0033_RGBN.pix"
-	REpipolarImageFile: "C:\Temp\NGI DEM\er_3323d_2015_1001_01_0032_RGBN_3323d_2015_1001_01_0033_RGBN.pix"
-	LeftImageFile: "3323d_2015_1001_01_0032_RGBN"
-	RightImageFile: "3323d_2015_1001_01_0033_RGBN"
-	EpipNumChannel: 1 
-	LEpipChannel: 2 
-	REpipChannel: 2 
-	EpipDownSample: 1 
-	EpipFilter: Average 
-	AddDate: 09/26/2018 
-	EpipOutFolder: "C:\Temp\NGI DEM\"
-}
-
-EpipolarImages:
-{
-	LEpipolarImageFile: "C:\Temp\NGI DEM\el_3323d_2015_1001_01_0033_RGBN_3323d_2015_1001_01_0034_RGBN.pix"
-	REpipolarImageFile: "C:\Temp\NGI DEM\er_3323d_2015_1001_01_0033_RGBN_3323d_2015_1001_01_0034_RGBN.pix"
-	LeftImageFile: "3323d_2015_1001_01_0033_RGBN"
-	RightImageFile: "3323d_2015_1001_01_0034_RGBN"
-	EpipNumChannel: 1 
-	LEpipChannel: 2 
-	REpipChannel: 2 
-	EpipDownSample: 1 
-	EpipFilter: Average 
-	AddDate: 09/26/2018 
-	EpipOutFolder: "C:\Temp\NGI DEM\"
-}
-
-EpipolarImages:
-{
-	LEpipolarImageFile: "C:\Temp\NGI DEM\el_3323d_2015_1001_01_0034_RGBN_3323d_2015_1001_01_0035_RGBN.pix"
-	REpipolarImageFile: "C:\Temp\NGI DEM\er_3323d_2015_1001_01_0034_RGBN_3323d_2015_1001_01_0035_RGBN.pix"
-	LeftImageFile: "3323d_2015_1001_01_0034_RGBN"
-	RightImageFile: "3323d_2015_1001_01_0035_RGBN"
-	EpipNumChannel: 1 
-	LEpipChannel: 2 
-	REpipChannel: 2 
-	EpipDownSample: 1 
-	EpipFilter: Average 
-	AddDate: 09/26/2018 
-	EpipOutFolder: "C:\Temp\NGI DEM\"
-}
-
-EpipolarImages:
-{
-	LEpipolarImageFile: "C:\Temp\NGI DEM\el_3323d_2015_1001_01_0035_RGBN_3323d_2015_1001_01_0036_RGBN.pix"
-	REpipolarImageFile: "C:\Temp\NGI DEM\er_3323d_2015_1001_01_0035_RGBN_3323d_2015_1001_01_0036_RGBN.pix"
-	LeftImageFile: "3323d_2015_1001_01_0035_RGBN"
-	RightImageFile: "3323d_2015_1001_01_0036_RGBN"
-	EpipNumChannel: 1 
-	LEpipChannel: 2 
-	REpipChannel: 2 
-	EpipDownSample: 1 
-	EpipFilter: Average 
-	AddDate: 09/26/2018 
-	EpipOutFolder: "C:\Temp\NGI DEM\"
-}
-
-EpipolarImages:
-{
-	LEpipolarImageFile: "C:\Temp\NGI DEM\el_3323d_2015_1001_01_0036_RGBN_3323d_2015_1001_01_0037_RGBN.pix"
-	REpipolarImageFile: "C:\Temp\NGI DEM\er_3323d_2015_1001_01_0036_RGBN_3323d_2015_1001_01_0037_RGBN.pix"
-	LeftImageFile: "3323d_2015_1001_01_0036_RGBN"
-	RightImageFile: "3323d_2015_1001_01_0037_RGBN"
-	EpipNumChannel: 1 
-	LEpipChannel: 2 
-	REpipChannel: 2 
-	EpipDownSample: 1 
-	EpipFilter: Average 
-	AddDate: 09/26/2018 
-	EpipOutFolder: "C:\Temp\NGI DEM\"
-}
-
-EpipolarImages:
-{
-	LEpipolarImageFile: "C:\Temp\NGI DEM\el_3323d_2015_1001_01_0037_RGBN_3323d_2015_1001_01_0038_RGBN.pix"
-	REpipolarImageFile: "C:\Temp\NGI DEM\er_3323d_2015_1001_01_0037_RGBN_3323d_2015_1001_01_0038_RGBN.pix"
-	LeftImageFile: "3323d_2015_1001_01_0037_RGBN"
-	RightImageFile: "3323d_2015_1001_01_0038_RGBN"
-	EpipNumChannel: 1 
-	LEpipChannel: 2 
-	REpipChannel: 2 
-	EpipDownSample: 1 
-	EpipFilter: Average 
-	AddDate: 09/26/2018 
-	EpipOutFolder: "C:\Temp\NGI DEM\"
-}
-
-EpipolarImages:
-{
-	LEpipolarImageFile: "C:\Temp\NGI DEM\el_3323d_2015_1001_01_0038_RGBN_3323d_2015_1001_01_0039_RGBN.pix"
-	REpipolarImageFile: "C:\Temp\NGI DEM\er_3323d_2015_1001_01_0038_RGBN_3323d_2015_1001_01_0039_RGBN.pix"
-	LeftImageFile: "3323d_2015_1001_01_0038_RGBN"
-	RightImageFile: "3323d_2015_1001_01_0039_RGBN"
-	EpipNumChannel: 1 
-	LEpipChannel: 2 
-	REpipChannel: 2 
-	EpipDownSample: 1 
-	EpipFilter: Average 
-	AddDate: 09/26/2018 
-	EpipOutFolder: "C:\Temp\NGI DEM\"
-}
-
-EpipolarImages:
-{
-	LEpipolarImageFile: "C:\Temp\NGI DEM\el_3323d_2015_1001_01_0039_RGBN_3323d_2015_1001_01_0040_RGBN.pix"
-	REpipolarImageFile: "C:\Temp\NGI DEM\er_3323d_2015_1001_01_0039_RGBN_3323d_2015_1001_01_0040_RGBN.pix"
-	LeftImageFile: "3323d_2015_1001_01_0039_RGBN"
-	RightImageFile: "3323d_2015_1001_01_0040_RGBN"
-	EpipNumChannel: 1 
-	LEpipChannel: 2 
-	REpipChannel: 2 
-	EpipDownSample: 1 
-	EpipFilter: Average 
-	AddDate: 09/26/2018 
-	EpipOutFolder: "C:\Temp\NGI DEM\"
-}
-
-EpipolarImages:
-{
-	LEpipolarImageFile: "C:\Temp\NGI DEM\el_3323d_2015_1001_02_0075_RGBN_3323d_2015_1001_02_0076_RGBN.pix"
-	REpipolarImageFile: "C:\Temp\NGI DEM\er_3323d_2015_1001_02_0075_RGBN_3323d_2015_1001_02_0076_RGBN.pix"
-	LeftImageFile: "3323d_2015_1001_02_0075_RGBN"
-	RightImageFile: "3323d_2015_1001_02_0076_RGBN"
-	EpipNumChannel: 1 
-	LEpipChannel: 2 
-	REpipChannel: 2 
-	EpipDownSample: 1 
-	EpipFilter: Average 
-	AddDate: 09/26/2018 
-	EpipOutFolder: "C:\Temp\NGI DEM\"
-}
-
-EpipolarImages:
-{
-	LEpipolarImageFile: "C:\Temp\NGI DEM\el_3323d_2015_1001_02_0076_RGBN_3323d_2015_1001_02_0077_RGBN.pix"
-	REpipolarImageFile: "C:\Temp\NGI DEM\er_3323d_2015_1001_02_0076_RGBN_3323d_2015_1001_02_0077_RGBN.pix"
-	LeftImageFile: "3323d_2015_1001_02_0076_RGBN"
-	RightImageFile: "3323d_2015_1001_02_0077_RGBN"
-	EpipNumChannel: 1 
-	LEpipChannel: 2 
-	REpipChannel: 2 
-	EpipDownSample: 1 
-	EpipFilter: Average 
-	AddDate: 09/26/2018 
-	EpipOutFolder: "C:\Temp\NGI DEM\"
-}
-
-EpipolarImages:
-{
-	LEpipolarImageFile: "C:\Temp\NGI DEM\el_3323d_2015_1001_02_0077_RGBN_3323d_2015_1001_02_0078_RGBN.pix"
-	REpipolarImageFile: "C:\Temp\NGI DEM\er_3323d_2015_1001_02_0077_RGBN_3323d_2015_1001_02_0078_RGBN.pix"
-	LeftImageFile: "3323d_2015_1001_02_0077_RGBN"
-	RightImageFile: "3323d_2015_1001_02_0078_RGBN"
-	EpipNumChannel: 1 
-	LEpipChannel: 2 
-	REpipChannel: 2 
-	EpipDownSample: 1 
-	EpipFilter: Average 
-	AddDate: 09/26/2018 
-	EpipOutFolder: "C:\Temp\NGI DEM\"
-}
-
-EpipolarImages:
-{
-	LEpipolarImageFile: "C:\Temp\NGI DEM\el_3323d_2015_1001_02_0078_RGBN_3323d_2015_1001_02_0079_RGBN.pix"
-	REpipolarImageFile: "C:\Temp\NGI DEM\er_3323d_2015_1001_02_0078_RGBN_3323d_2015_1001_02_0079_RGBN.pix"
-	LeftImageFile: "3323d_2015_1001_02_0078_RGBN"
-	RightImageFile: "3323d_2015_1001_02_0079_RGBN"
-	EpipNumChannel: 1 
-	LEpipChannel: 2 
-	REpipChannel: 2 
-	EpipDownSample: 1 
-	EpipFilter: Average 
-	AddDate: 09/26/2018 
-	EpipOutFolder: "C:\Temp\NGI DEM\"
-}
-
-EpipolarImages:
-{
-	LEpipolarImageFile: "C:\Temp\NGI DEM\el_3323d_2015_1001_02_0079_RGBN_3323d_2015_1001_02_0080_RGBN.pix"
-	REpipolarImageFile: "C:\Temp\NGI DEM\er_3323d_2015_1001_02_0079_RGBN_3323d_2015_1001_02_0080_RGBN.pix"
-	LeftImageFile: "3323d_2015_1001_02_0079_RGBN"
-	RightImageFile: "3323d_2015_1001_02_0080_RGBN"
-	EpipNumChannel: 1 
-	LEpipChannel: 2 
-	REpipChannel: 2 
-	EpipDownSample: 1 
-	EpipFilter: Average 
-	AddDate: 09/26/2018 
-	EpipOutFolder: "C:\Temp\NGI DEM\"
-}
-
-EpipolarImages:
-{
-	LEpipolarImageFile: "C:\Temp\NGI DEM\el_3323d_2015_1001_02_0080_RGBN_3323d_2015_1001_02_0081_RGBN.pix"
-	REpipolarImageFile: "C:\Temp\NGI DEM\er_3323d_2015_1001_02_0080_RGBN_3323d_2015_1001_02_0081_RGBN.pix"
-	LeftImageFile: "3323d_2015_1001_02_0080_RGBN"
-	RightImageFile: "3323d_2015_1001_02_0081_RGBN"
-	EpipNumChannel: 1 
-	LEpipChannel: 2 
-	REpipChannel: 2 
-	EpipDownSample: 1 
-	EpipFilter: Average 
-	AddDate: 09/26/2018 
-	EpipOutFolder: "C:\Temp\NGI DEM\"
-}
-
-EpipolarImages:
-{
-	LEpipolarImageFile: "C:\Temp\NGI DEM\el_3323d_2015_1001_02_0081_RGBN_3323d_2015_1001_02_0082_RGBN.pix"
-	REpipolarImageFile: "C:\Temp\NGI DEM\er_3323d_2015_1001_02_0081_RGBN_3323d_2015_1001_02_0082_RGBN.pix"
-	LeftImageFile: "3323d_2015_1001_02_0081_RGBN"
-	RightImageFile: "3323d_2015_1001_02_0082_RGBN"
-	EpipNumChannel: 1 
-	LEpipChannel: 2 
-	REpipChannel: 2 
-	EpipDownSample: 1 
-	EpipFilter: Average 
-	AddDate: 09/26/2018 
-	EpipOutFolder: "C:\Temp\NGI DEM\"
-}
-
-EpipolarImages:
-{
-	LEpipolarImageFile: "C:\Temp\NGI DEM\el_3323d_2015_1001_02_0082_RGBN_3323d_2015_1001_02_0083_RGBN.pix"
-	REpipolarImageFile: "C:\Temp\NGI DEM\er_3323d_2015_1001_02_0082_RGBN_3323d_2015_1001_02_0083_RGBN.pix"
-	LeftImageFile: "3323d_2015_1001_02_0082_RGBN"
-	RightImageFile: "3323d_2015_1001_02_0083_RGBN"
-	EpipNumChannel: 1 
-	LEpipChannel: 2 
-	REpipChannel: 2 
-	EpipDownSample: 1 
-	EpipFilter: Average 
-	AddDate: 09/26/2018 
-	EpipOutFolder: "C:\Temp\NGI DEM\"
-}
-
-EpipolarImages:
-{
-	LEpipolarImageFile: "C:\Temp\NGI DEM\el_3323d_2015_1001_03_0086_RGBN_3323d_2015_1001_03_0087_RGBN.pix"
-	REpipolarImageFile: "C:\Temp\NGI DEM\er_3323d_2015_1001_03_0086_RGBN_3323d_2015_1001_03_0087_RGBN.pix"
-	LeftImageFile: "3323d_2015_1001_03_0086_RGBN"
-	RightImageFile: "3323d_2015_1001_03_0087_RGBN"
-	EpipNumChannel: 1 
-	LEpipChannel: 2 
-	REpipChannel: 2 
-	EpipDownSample: 1 
-	EpipFilter: Average 
-	AddDate: 09/26/2018 
-	EpipOutFolder: "C:\Temp\NGI DEM\"
-}
-
-EpipolarImages:
-{
-	LEpipolarImageFile: "C:\Temp\NGI DEM\el_3323d_2015_1001_03_0087_RGBN_3323d_2015_1001_03_0088_RGBN.pix"
-	REpipolarImageFile: "C:\Temp\NGI DEM\er_3323d_2015_1001_03_0087_RGBN_3323d_2015_1001_03_0088_RGBN.pix"
-	LeftImageFile: "3323d_2015_1001_03_0087_RGBN"
-	RightImageFile: "3323d_2015_1001_03_0088_RGBN"
-	EpipNumChannel: 1 
-	LEpipChannel: 2 
-	REpipChannel: 2 
-	EpipDownSample: 1 
-	EpipFilter: Average 
-	AddDate: 09/26/2018 
-	EpipOutFolder: "C:\Temp\NGI DEM\"
-}
-
-EpipolarImages:
-{
-	LEpipolarImageFile: "C:\Temp\NGI DEM\el_3323d_2015_1001_03_0088_RGBN_3323d_2015_1001_03_0089_RGBN.pix"
-	REpipolarImageFile: "C:\Temp\NGI DEM\er_3323d_2015_1001_03_0088_RGBN_3323d_2015_1001_03_0089_RGBN.pix"
-	LeftImageFile: "3323d_2015_1001_03_0088_RGBN"
-	RightImageFile: "3323d_2015_1001_03_0089_RGBN"
-	EpipNumChannel: 1 
-	LEpipChannel: 2 
-	REpipChannel: 2 
-	EpipDownSample: 1 
-	EpipFilter: Average 
-	AddDate: 09/26/2018 
-	EpipOutFolder: "C:\Temp\NGI DEM\"
-}
-
-EpipolarImages:
-{
-	LEpipolarImageFile: "C:\Temp\NGI DEM\el_3323d_2015_1001_03_0089_RGBN_3323d_2015_1001_03_0090_RGBN.pix"
-	REpipolarImageFile: "C:\Temp\NGI DEM\er_3323d_2015_1001_03_0089_RGBN_3323d_2015_1001_03_0090_RGBN.pix"
-	LeftImageFile: "3323d_2015_1001_03_0089_RGBN"
-	RightImageFile: "3323d_2015_1001_03_0090_RGBN"
-	EpipNumChannel: 1 
-	LEpipChannel: 2 
-	REpipChannel: 2 
-	EpipDownSample: 1 
-	EpipFilter: Average 
-	AddDate: 09/26/2018 
-	EpipOutFolder: "C:\Temp\NGI DEM\"
-}
-
-EpipolarImages:
-{
-	LEpipolarImageFile: "C:\Temp\NGI DEM\el_3323d_2015_1001_03_0090_RGBN_3323d_2015_1001_03_0091_RGBN.pix"
-	REpipolarImageFile: "C:\Temp\NGI DEM\er_3323d_2015_1001_03_0090_RGBN_3323d_2015_1001_03_0091_RGBN.pix"
-	LeftImageFile: "3323d_2015_1001_03_0090_RGBN"
-	RightImageFile: "3323d_2015_1001_03_0091_RGBN"
-	EpipNumChannel: 1 
-	LEpipChannel: 2 
-	REpipChannel: 2 
-	EpipDownSample: 1 
-	EpipFilter: Average 
-	AddDate: 09/26/2018 
-	EpipOutFolder: "C:\Temp\NGI DEM\"
-}
-
-EpipolarImages:
-{
-	LEpipolarImageFile: "C:\Temp\NGI DEM\el_3323d_2015_1001_03_0091_RGBN_3323d_2015_1001_03_0092_RGBN.pix"
-	REpipolarImageFile: "C:\Temp\NGI DEM\er_3323d_2015_1001_03_0091_RGBN_3323d_2015_1001_03_0092_RGBN.pix"
-	LeftImageFile: "3323d_2015_1001_03_0091_RGBN"
-	RightImageFile: "3323d_2015_1001_03_0092_RGBN"
-	EpipNumChannel: 1 
-	LEpipChannel: 2 
-	REpipChannel: 2 
-	EpipDownSample: 1 
-	EpipFilter: Average 
-	AddDate: 09/26/2018 
-	EpipOutFolder: "C:\Temp\NGI DEM\"
-}
-
-EpipolarImages:
-{
-	LEpipolarImageFile: "C:\Temp\NGI DEM\el_3323d_2015_1001_03_0092_RGBN_3323d_2015_1001_03_0093_RGBN.pix"
-	REpipolarImageFile: "C:\Temp\NGI DEM\er_3323d_2015_1001_03_0092_RGBN_3323d_2015_1001_03_0093_RGBN.pix"
-	LeftImageFile: "3323d_2015_1001_03_0092_RGBN"
-	RightImageFile: "3323d_2015_1001_03_0093_RGBN"
-	EpipNumChannel: 1 
-	LEpipChannel: 2 
-	REpipChannel: 2 
-	EpipDownSample: 1 
-	EpipFilter: Average 
-	AddDate: 09/26/2018 
-	EpipOutFolder: "C:\Temp\NGI DEM\"
-}
-
-EpipolarImages:
-{
-	LEpipolarImageFile: "C:\Temp\NGI DEM\el_3323d_2015_1001_03_0093_RGBN_3323d_2015_1001_03_0094_RGBN.pix"
-	REpipolarImageFile: "C:\Temp\NGI DEM\er_3323d_2015_1001_03_0093_RGBN_3323d_2015_1001_03_0094_RGBN.pix"
-	LeftImageFile: "3323d_2015_1001_03_0093_RGBN"
-	RightImageFile: "3323d_2015_1001_03_0094_RGBN"
-	EpipNumChannel: 1 
-	LEpipChannel: 2 
-	REpipChannel: 2 
-	EpipDownSample: 1 
-	EpipFilter: Average 
-	AddDate: 09/26/2018 
-	EpipOutFolder: "C:\Temp\NGI DEM\"
-}
-
-EpipolarImages:
-{
-	LEpipolarImageFile: "C:\Temp\NGI DEM\el_3323d_2015_1001_15_0580_RGBN_3323d_2015_1001_15_0581_RGBN.pix"
-	REpipolarImageFile: "C:\Temp\NGI DEM\er_3323d_2015_1001_15_0580_RGBN_3323d_2015_1001_15_0581_RGBN.pix"
+	LEpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\el_3323d_2015_1001_15_0580_RGBN_3323d_2015_1001_15_0581_RGBN.pix"
+	REpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\er_3323d_2015_1001_15_0580_RGBN_3323d_2015_1001_15_0581_RGBN.pix"
 	LeftImageFile: "3323d_2015_1001_15_0580_RGBN"
 	RightImageFile: "3323d_2015_1001_15_0581_RGBN"
-	EpipNumChannel: 1 
-	LEpipChannel: 2 
-	REpipChannel: 2 
+	EpipNumChannel: 3 
+	LEpipChannel: 1 2 3 
+	REpipChannel: 1 2 3 
 	EpipDownSample: 1 
 	EpipFilter: Average 
-	AddDate: 09/26/2018 
-	EpipOutFolder: "C:\Temp\NGI DEM\"
+	AddDate: 10/05/2018 
+	EpipOutFolder: "V:\Data\NGI\DEM Working Folder\"
 }
 
 EpipolarImages:
 {
-	LEpipolarImageFile: "C:\Temp\NGI DEM\el_3323d_2015_1001_15_0581_RGBN_3323d_2015_1001_15_0582_RGBN.pix"
-	REpipolarImageFile: "C:\Temp\NGI DEM\er_3323d_2015_1001_15_0581_RGBN_3323d_2015_1001_15_0582_RGBN.pix"
+	LEpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\el_3323d_2015_1001_15_0581_RGBN_3323d_2015_1001_15_0582_RGBN.pix"
+	REpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\er_3323d_2015_1001_15_0581_RGBN_3323d_2015_1001_15_0582_RGBN.pix"
 	LeftImageFile: "3323d_2015_1001_15_0581_RGBN"
 	RightImageFile: "3323d_2015_1001_15_0582_RGBN"
-	EpipNumChannel: 1 
-	LEpipChannel: 2 
-	REpipChannel: 2 
+	EpipNumChannel: 3 
+	LEpipChannel: 1 2 3 
+	REpipChannel: 1 2 3 
 	EpipDownSample: 1 
 	EpipFilter: Average 
-	AddDate: 09/26/2018 
-	EpipOutFolder: "C:\Temp\NGI DEM\"
+	AddDate: 10/05/2018 
+	EpipOutFolder: "V:\Data\NGI\DEM Working Folder\"
 }
 
 EpipolarImages:
 {
-	LEpipolarImageFile: "C:\Temp\NGI DEM\el_3323d_2015_1001_15_0582_RGBN_3323d_2015_1001_15_0583_RGBN.pix"
-	REpipolarImageFile: "C:\Temp\NGI DEM\er_3323d_2015_1001_15_0582_RGBN_3323d_2015_1001_15_0583_RGBN.pix"
+	LEpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\el_3323d_2015_1001_15_0582_RGBN_3323d_2015_1001_15_0583_RGBN.pix"
+	REpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\er_3323d_2015_1001_15_0582_RGBN_3323d_2015_1001_15_0583_RGBN.pix"
 	LeftImageFile: "3323d_2015_1001_15_0582_RGBN"
 	RightImageFile: "3323d_2015_1001_15_0583_RGBN"
-	EpipNumChannel: 1 
-	LEpipChannel: 2 
-	REpipChannel: 2 
+	EpipNumChannel: 3 
+	LEpipChannel: 1 2 3 
+	REpipChannel: 1 2 3 
 	EpipDownSample: 1 
 	EpipFilter: Average 
-	AddDate: 09/26/2018 
-	EpipOutFolder: "C:\Temp\NGI DEM\"
+	AddDate: 10/05/2018 
+	EpipOutFolder: "V:\Data\NGI\DEM Working Folder\"
 }
 
 EpipolarImages:
 {
-	LEpipolarImageFile: "C:\Temp\NGI DEM\el_3323d_2015_1001_15_0584_RGBN_3323d_2015_1001_15_0585_RGBN.pix"
-	REpipolarImageFile: "C:\Temp\NGI DEM\er_3323d_2015_1001_15_0584_RGBN_3323d_2015_1001_15_0585_RGBN.pix"
-	LeftImageFile: "3323d_2015_1001_15_0584_RGBN"
-	RightImageFile: "3323d_2015_1001_15_0585_RGBN"
-	EpipNumChannel: 1 
-	LEpipChannel: 2 
-	REpipChannel: 2 
+	LEpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\el_3323d_2015_1001_15_0583_RGBN_3323d_2015_1001_15_0584_RGBN.pix"
+	REpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\er_3323d_2015_1001_15_0583_RGBN_3323d_2015_1001_15_0584_RGBN.pix"
+	LeftImageFile: "3323d_2015_1001_15_0583_RGBN"
+	RightImageFile: "3323d_2015_1001_15_0584_RGBN"
+	EpipNumChannel: 3 
+	LEpipChannel: 1 2 3 
+	REpipChannel: 1 2 3 
 	EpipDownSample: 1 
 	EpipFilter: Average 
-	AddDate: 09/26/2018 
-	EpipOutFolder: "C:\Temp\NGI DEM\"
+	AddDate: 10/05/2018 
+	EpipOutFolder: "V:\Data\NGI\DEM Working Folder\"
+}
+
+EpipolarImages:
+{
+	LEpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\el_3323d_2015_1001_01_0032_RGBN_3323d_2015_1001_01_0033_RGBN.pix"
+	REpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\er_3323d_2015_1001_01_0032_RGBN_3323d_2015_1001_01_0033_RGBN.pix"
+	LeftImageFile: "3323d_2015_1001_01_0032_RGBN"
+	RightImageFile: "3323d_2015_1001_01_0033_RGBN"
+	EpipNumChannel: 3 
+	LEpipChannel: 1 2 3 
+	REpipChannel: 1 2 3 
+	EpipDownSample: 1 
+	EpipFilter: Average 
+	AddDate: 10/05/2018 
+	EpipOutFolder: "V:\Data\NGI\DEM Working Folder\"
+}
+
+EpipolarImages:
+{
+	LEpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\el_3323d_2015_1001_01_0033_RGBN_3323d_2015_1001_01_0034_RGBN.pix"
+	REpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\er_3323d_2015_1001_01_0033_RGBN_3323d_2015_1001_01_0034_RGBN.pix"
+	LeftImageFile: "3323d_2015_1001_01_0033_RGBN"
+	RightImageFile: "3323d_2015_1001_01_0034_RGBN"
+	EpipNumChannel: 3 
+	LEpipChannel: 1 2 3 
+	REpipChannel: 1 2 3 
+	EpipDownSample: 1 
+	EpipFilter: Average 
+	AddDate: 10/05/2018 
+	EpipOutFolder: "V:\Data\NGI\DEM Working Folder\"
+}
+
+EpipolarImages:
+{
+	LEpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\el_3323d_2015_1001_01_0034_RGBN_3323d_2015_1001_01_0035_RGBN.pix"
+	REpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\er_3323d_2015_1001_01_0034_RGBN_3323d_2015_1001_01_0035_RGBN.pix"
+	LeftImageFile: "3323d_2015_1001_01_0034_RGBN"
+	RightImageFile: "3323d_2015_1001_01_0035_RGBN"
+	EpipNumChannel: 3 
+	LEpipChannel: 1 2 3 
+	REpipChannel: 1 2 3 
+	EpipDownSample: 1 
+	EpipFilter: Average 
+	AddDate: 10/05/2018 
+	EpipOutFolder: "V:\Data\NGI\DEM Working Folder\"
+}
+
+EpipolarImages:
+{
+	LEpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\el_3323d_2015_1001_01_0035_RGBN_3323d_2015_1001_01_0036_RGBN.pix"
+	REpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\er_3323d_2015_1001_01_0035_RGBN_3323d_2015_1001_01_0036_RGBN.pix"
+	LeftImageFile: "3323d_2015_1001_01_0035_RGBN"
+	RightImageFile: "3323d_2015_1001_01_0036_RGBN"
+	EpipNumChannel: 3 
+	LEpipChannel: 1 2 3 
+	REpipChannel: 1 2 3 
+	EpipDownSample: 1 
+	EpipFilter: Average 
+	AddDate: 10/05/2018 
+	EpipOutFolder: "V:\Data\NGI\DEM Working Folder\"
+}
+
+EpipolarImages:
+{
+	LEpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\el_3323d_2015_1001_01_0036_RGBN_3323d_2015_1001_01_0037_RGBN.pix"
+	REpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\er_3323d_2015_1001_01_0036_RGBN_3323d_2015_1001_01_0037_RGBN.pix"
+	LeftImageFile: "3323d_2015_1001_01_0036_RGBN"
+	RightImageFile: "3323d_2015_1001_01_0037_RGBN"
+	EpipNumChannel: 3 
+	LEpipChannel: 1 2 3 
+	REpipChannel: 1 2 3 
+	EpipDownSample: 1 
+	EpipFilter: Average 
+	AddDate: 10/05/2018 
+	EpipOutFolder: "V:\Data\NGI\DEM Working Folder\"
+}
+
+EpipolarImages:
+{
+	LEpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\el_3323d_2015_1001_01_0037_RGBN_3323d_2015_1001_01_0038_RGBN.pix"
+	REpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\er_3323d_2015_1001_01_0037_RGBN_3323d_2015_1001_01_0038_RGBN.pix"
+	LeftImageFile: "3323d_2015_1001_01_0037_RGBN"
+	RightImageFile: "3323d_2015_1001_01_0038_RGBN"
+	EpipNumChannel: 3 
+	LEpipChannel: 1 2 3 
+	REpipChannel: 1 2 3 
+	EpipDownSample: 1 
+	EpipFilter: Average 
+	AddDate: 10/05/2018 
+	EpipOutFolder: "V:\Data\NGI\DEM Working Folder\"
+}
+
+EpipolarImages:
+{
+	LEpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\el_3323d_2015_1001_01_0038_RGBN_3323d_2015_1001_01_0039_RGBN.pix"
+	REpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\er_3323d_2015_1001_01_0038_RGBN_3323d_2015_1001_01_0039_RGBN.pix"
+	LeftImageFile: "3323d_2015_1001_01_0038_RGBN"
+	RightImageFile: "3323d_2015_1001_01_0039_RGBN"
+	EpipNumChannel: 3 
+	LEpipChannel: 1 2 3 
+	REpipChannel: 1 2 3 
+	EpipDownSample: 1 
+	EpipFilter: Average 
+	AddDate: 10/05/2018 
+	EpipOutFolder: "V:\Data\NGI\DEM Working Folder\"
+}
+
+EpipolarImages:
+{
+	LEpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\el_3323d_2015_1001_01_0039_RGBN_3323d_2015_1001_01_0040_RGBN.pix"
+	REpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\er_3323d_2015_1001_01_0039_RGBN_3323d_2015_1001_01_0040_RGBN.pix"
+	LeftImageFile: "3323d_2015_1001_01_0039_RGBN"
+	RightImageFile: "3323d_2015_1001_01_0040_RGBN"
+	EpipNumChannel: 3 
+	LEpipChannel: 1 2 3 
+	REpipChannel: 1 2 3 
+	EpipDownSample: 1 
+	EpipFilter: Average 
+	AddDate: 10/05/2018 
+	EpipOutFolder: "V:\Data\NGI\DEM Working Folder\"
+}
+
+EpipolarImages:
+{
+	LEpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\el_3323d_2015_1001_02_0075_RGBN_3323d_2015_1001_02_0076_RGBN.pix"
+	REpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\er_3323d_2015_1001_02_0075_RGBN_3323d_2015_1001_02_0076_RGBN.pix"
+	LeftImageFile: "3323d_2015_1001_02_0075_RGBN"
+	RightImageFile: "3323d_2015_1001_02_0076_RGBN"
+	EpipNumChannel: 3 
+	LEpipChannel: 1 2 3 
+	REpipChannel: 1 2 3 
+	EpipDownSample: 1 
+	EpipFilter: Average 
+	AddDate: 10/05/2018 
+	EpipOutFolder: "V:\Data\NGI\DEM Working Folder\"
+}
+
+EpipolarImages:
+{
+	LEpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\el_3323d_2015_1001_02_0076_RGBN_3323d_2015_1001_02_0077_RGBN.pix"
+	REpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\er_3323d_2015_1001_02_0076_RGBN_3323d_2015_1001_02_0077_RGBN.pix"
+	LeftImageFile: "3323d_2015_1001_02_0076_RGBN"
+	RightImageFile: "3323d_2015_1001_02_0077_RGBN"
+	EpipNumChannel: 3 
+	LEpipChannel: 1 2 3 
+	REpipChannel: 1 2 3 
+	EpipDownSample: 1 
+	EpipFilter: Average 
+	AddDate: 10/05/2018 
+	EpipOutFolder: "V:\Data\NGI\DEM Working Folder\"
+}
+
+EpipolarImages:
+{
+	LEpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\el_3323d_2015_1001_02_0077_RGBN_3323d_2015_1001_02_0078_RGBN.pix"
+	REpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\er_3323d_2015_1001_02_0077_RGBN_3323d_2015_1001_02_0078_RGBN.pix"
+	LeftImageFile: "3323d_2015_1001_02_0077_RGBN"
+	RightImageFile: "3323d_2015_1001_02_0078_RGBN"
+	EpipNumChannel: 3 
+	LEpipChannel: 1 2 3 
+	REpipChannel: 1 2 3 
+	EpipDownSample: 1 
+	EpipFilter: Average 
+	AddDate: 10/05/2018 
+	EpipOutFolder: "V:\Data\NGI\DEM Working Folder\"
+}
+
+EpipolarImages:
+{
+	LEpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\el_3323d_2015_1001_02_0078_RGBN_3323d_2015_1001_02_0079_RGBN.pix"
+	REpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\er_3323d_2015_1001_02_0078_RGBN_3323d_2015_1001_02_0079_RGBN.pix"
+	LeftImageFile: "3323d_2015_1001_02_0078_RGBN"
+	RightImageFile: "3323d_2015_1001_02_0079_RGBN"
+	EpipNumChannel: 3 
+	LEpipChannel: 1 2 3 
+	REpipChannel: 1 2 3 
+	EpipDownSample: 1 
+	EpipFilter: Average 
+	AddDate: 10/05/2018 
+	EpipOutFolder: "V:\Data\NGI\DEM Working Folder\"
+}
+
+EpipolarImages:
+{
+	LEpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\el_3323d_2015_1001_02_0079_RGBN_3323d_2015_1001_02_0080_RGBN.pix"
+	REpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\er_3323d_2015_1001_02_0079_RGBN_3323d_2015_1001_02_0080_RGBN.pix"
+	LeftImageFile: "3323d_2015_1001_02_0079_RGBN"
+	RightImageFile: "3323d_2015_1001_02_0080_RGBN"
+	EpipNumChannel: 3 
+	LEpipChannel: 1 2 3 
+	REpipChannel: 1 2 3 
+	EpipDownSample: 1 
+	EpipFilter: Average 
+	AddDate: 10/05/2018 
+	EpipOutFolder: "V:\Data\NGI\DEM Working Folder\"
+}
+
+EpipolarImages:
+{
+	LEpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\el_3323d_2015_1001_02_0080_RGBN_3323d_2015_1001_02_0081_RGBN.pix"
+	REpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\er_3323d_2015_1001_02_0080_RGBN_3323d_2015_1001_02_0081_RGBN.pix"
+	LeftImageFile: "3323d_2015_1001_02_0080_RGBN"
+	RightImageFile: "3323d_2015_1001_02_0081_RGBN"
+	EpipNumChannel: 3 
+	LEpipChannel: 1 2 3 
+	REpipChannel: 1 2 3 
+	EpipDownSample: 1 
+	EpipFilter: Average 
+	AddDate: 10/05/2018 
+	EpipOutFolder: "V:\Data\NGI\DEM Working Folder\"
+}
+
+EpipolarImages:
+{
+	LEpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\el_3323d_2015_1001_02_0081_RGBN_3323d_2015_1001_02_0082_RGBN.pix"
+	REpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\er_3323d_2015_1001_02_0081_RGBN_3323d_2015_1001_02_0082_RGBN.pix"
+	LeftImageFile: "3323d_2015_1001_02_0081_RGBN"
+	RightImageFile: "3323d_2015_1001_02_0082_RGBN"
+	EpipNumChannel: 3 
+	LEpipChannel: 1 2 3 
+	REpipChannel: 1 2 3 
+	EpipDownSample: 1 
+	EpipFilter: Average 
+	AddDate: 10/05/2018 
+	EpipOutFolder: "V:\Data\NGI\DEM Working Folder\"
+}
+
+EpipolarImages:
+{
+	LEpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\el_3323d_2015_1001_02_0082_RGBN_3323d_2015_1001_02_0083_RGBN.pix"
+	REpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\er_3323d_2015_1001_02_0082_RGBN_3323d_2015_1001_02_0083_RGBN.pix"
+	LeftImageFile: "3323d_2015_1001_02_0082_RGBN"
+	RightImageFile: "3323d_2015_1001_02_0083_RGBN"
+	EpipNumChannel: 3 
+	LEpipChannel: 1 2 3 
+	REpipChannel: 1 2 3 
+	EpipDownSample: 1 
+	EpipFilter: Average 
+	AddDate: 10/05/2018 
+	EpipOutFolder: "V:\Data\NGI\DEM Working Folder\"
+}
+
+EpipolarImages:
+{
+	LEpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\el_3323d_2015_1001_03_0086_RGBN_3323d_2015_1001_03_0087_RGBN.pix"
+	REpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\er_3323d_2015_1001_03_0086_RGBN_3323d_2015_1001_03_0087_RGBN.pix"
+	LeftImageFile: "3323d_2015_1001_03_0086_RGBN"
+	RightImageFile: "3323d_2015_1001_03_0087_RGBN"
+	EpipNumChannel: 3 
+	LEpipChannel: 1 2 3 
+	REpipChannel: 1 2 3 
+	EpipDownSample: 1 
+	EpipFilter: Average 
+	AddDate: 10/05/2018 
+	EpipOutFolder: "V:\Data\NGI\DEM Working Folder\"
+}
+
+EpipolarImages:
+{
+	LEpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\el_3323d_2015_1001_03_0087_RGBN_3323d_2015_1001_03_0088_RGBN.pix"
+	REpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\er_3323d_2015_1001_03_0087_RGBN_3323d_2015_1001_03_0088_RGBN.pix"
+	LeftImageFile: "3323d_2015_1001_03_0087_RGBN"
+	RightImageFile: "3323d_2015_1001_03_0088_RGBN"
+	EpipNumChannel: 3 
+	LEpipChannel: 1 2 3 
+	REpipChannel: 1 2 3 
+	EpipDownSample: 1 
+	EpipFilter: Average 
+	AddDate: 10/05/2018 
+	EpipOutFolder: "V:\Data\NGI\DEM Working Folder\"
+}
+
+EpipolarImages:
+{
+	LEpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\el_3323d_2015_1001_03_0088_RGBN_3323d_2015_1001_03_0089_RGBN.pix"
+	REpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\er_3323d_2015_1001_03_0088_RGBN_3323d_2015_1001_03_0089_RGBN.pix"
+	LeftImageFile: "3323d_2015_1001_03_0088_RGBN"
+	RightImageFile: "3323d_2015_1001_03_0089_RGBN"
+	EpipNumChannel: 3 
+	LEpipChannel: 1 2 3 
+	REpipChannel: 1 2 3 
+	EpipDownSample: 1 
+	EpipFilter: Average 
+	AddDate: 10/05/2018 
+	EpipOutFolder: "V:\Data\NGI\DEM Working Folder\"
+}
+
+EpipolarImages:
+{
+	LEpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\el_3323d_2015_1001_03_0089_RGBN_3323d_2015_1001_03_0090_RGBN.pix"
+	REpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\er_3323d_2015_1001_03_0089_RGBN_3323d_2015_1001_03_0090_RGBN.pix"
+	LeftImageFile: "3323d_2015_1001_03_0089_RGBN"
+	RightImageFile: "3323d_2015_1001_03_0090_RGBN"
+	EpipNumChannel: 3 
+	LEpipChannel: 1 2 3 
+	REpipChannel: 1 2 3 
+	EpipDownSample: 1 
+	EpipFilter: Average 
+	AddDate: 10/05/2018 
+	EpipOutFolder: "V:\Data\NGI\DEM Working Folder\"
+}
+
+EpipolarImages:
+{
+	LEpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\el_3323d_2015_1001_03_0090_RGBN_3323d_2015_1001_03_0091_RGBN.pix"
+	REpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\er_3323d_2015_1001_03_0090_RGBN_3323d_2015_1001_03_0091_RGBN.pix"
+	LeftImageFile: "3323d_2015_1001_03_0090_RGBN"
+	RightImageFile: "3323d_2015_1001_03_0091_RGBN"
+	EpipNumChannel: 3 
+	LEpipChannel: 1 2 3 
+	REpipChannel: 1 2 3 
+	EpipDownSample: 1 
+	EpipFilter: Average 
+	AddDate: 10/05/2018 
+	EpipOutFolder: "V:\Data\NGI\DEM Working Folder\"
+}
+
+EpipolarImages:
+{
+	LEpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\el_3323d_2015_1001_03_0091_RGBN_3323d_2015_1001_03_0092_RGBN.pix"
+	REpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\er_3323d_2015_1001_03_0091_RGBN_3323d_2015_1001_03_0092_RGBN.pix"
+	LeftImageFile: "3323d_2015_1001_03_0091_RGBN"
+	RightImageFile: "3323d_2015_1001_03_0092_RGBN"
+	EpipNumChannel: 3 
+	LEpipChannel: 1 2 3 
+	REpipChannel: 1 2 3 
+	EpipDownSample: 1 
+	EpipFilter: Average 
+	AddDate: 10/05/2018 
+	EpipOutFolder: "V:\Data\NGI\DEM Working Folder\"
+}
+
+EpipolarImages:
+{
+	LEpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\el_3323d_2015_1001_03_0092_RGBN_3323d_2015_1001_03_0093_RGBN.pix"
+	REpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\er_3323d_2015_1001_03_0092_RGBN_3323d_2015_1001_03_0093_RGBN.pix"
+	LeftImageFile: "3323d_2015_1001_03_0092_RGBN"
+	RightImageFile: "3323d_2015_1001_03_0093_RGBN"
+	EpipNumChannel: 3 
+	LEpipChannel: 1 2 3 
+	REpipChannel: 1 2 3 
+	EpipDownSample: 1 
+	EpipFilter: Average 
+	AddDate: 10/05/2018 
+	EpipOutFolder: "V:\Data\NGI\DEM Working Folder\"
+}
+
+EpipolarImages:
+{
+	LEpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\el_3323d_2015_1001_03_0093_RGBN_3323d_2015_1001_03_0094_RGBN.pix"
+	REpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\er_3323d_2015_1001_03_0093_RGBN_3323d_2015_1001_03_0094_RGBN.pix"
+	LeftImageFile: "3323d_2015_1001_03_0093_RGBN"
+	RightImageFile: "3323d_2015_1001_03_0094_RGBN"
+	EpipNumChannel: 3 
+	LEpipChannel: 1 2 3 
+	REpipChannel: 1 2 3 
+	EpipDownSample: 1 
+	EpipFilter: Average 
+	AddDate: 10/05/2018 
+	EpipOutFolder: "V:\Data\NGI\DEM Working Folder\"
+}
+
+EpipolarImages:
+{
+	LEpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\el_3323d_2015_1001_15_0584_RGBN_3323d_2015_1001_15_0585_RGBN.pix"
+	REpipolarImageFile: "V:\Data\NGI\DEM Working Folder\\er_3323d_2015_1001_15_0584_RGBN_3323d_2015_1001_15_0585_RGBN.pix"
+	LeftImageFile: "3323d_2015_1001_15_0584_RGBN"
+	RightImageFile: "3323d_2015_1001_15_0585_RGBN"
+	EpipNumChannel: 3 
+	LEpipChannel: 1 2 3 
+	REpipChannel: 1 2 3 
+	EpipDownSample: 1 
+	EpipFilter: Average 
+	AddDate: 10/05/2018 
+	EpipOutFolder: "V:\Data\NGI\DEM Working Folder\"
 }
 
 ; Preferences
