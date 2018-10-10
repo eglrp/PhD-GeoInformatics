@@ -19,6 +19,8 @@ from PIL import ImageDraw
 import cv2
 
 demFile = r"V:\Data\NGI\GEF DEM\3323d_2015_1001_GEF_DEM_SGM3_clip.tif"
+filtDemFile = r"V:\Data\NGI\GEF DEM\3323d_2015_1001_GEF_DEM_SGM3_clip_filt.tif"
+plantHeightFile = r"V:\Data\NGI\GEF DEM\3323d_2015_1001_GEF_DEM_SGM3_clip_hgt.tif"
 
 demDs = gdal.OpenEx(demFile, gdal.OF_RASTER)
 if demDs is None:
@@ -36,21 +38,13 @@ if not geotransform is None:
     pixelSize = geotransform[1]
 
 dem = demDs.GetRasterBand(1).ReadAsArray()
-demDs = None
+# demDs = None
 
 pylab.close('all')
 
 se = morphology.disk(15)
 # filtDem = morphology.opening(dem, se)           # opencv will be faster
 filtDem = cv2.morphologyEx(dem, cv2.MORPH_OPEN, se)
-
-se = morphology.disk(10)
-# filtDem = morphology.opening(dem, se)           # opencv will be faster
-filtDem = cv2.morphologyEx(filtDem, cv2.MORPH_OPEN, se)
-
-se = morphology.disk(5)
-# filtDem = morphology.opening(dem, se)           # opencv will be faster
-filtDem = cv2.morphologyEx(filtDem, cv2.MORPH_OPEN, se)
 
 pylab.figure()
 ax1 = pylab.subplot(211)
@@ -68,17 +62,18 @@ pylab.imshow(ls.hillshade(filtDem, vert_exag=1., dx=.5, dy=.5), cmap='gray')
 pylab.subplot(313, sharex=ax1, sharey=ax1)
 pylab.imshow(ls.hillshade(dem-filtDem, vert_exag=1., dx=.5, dy=.5), cmap='gray')
 
-# filtDem15to5 = filtDem
-# filtDem5to15 = filtDem
-# filtDem15 = filtDem
 
-ls = LightSource(azdeg=315, altdeg=45)
-pylab.figure()
-ax1 = pylab.subplot(221)
-pylab.imshow(ls.hillshade(dem, vert_exag=1., dx=.5, dy=.5), cmap='gray')
-pylab.subplot(222, sharex=ax1, sharey=ax1)
-pylab.imshow(ls.hillshade(filtDem15, vert_exag=1., dx=.5, dy=.5), cmap='gray')
-pylab.subplot(223, sharex=ax1, sharey=ax1)
-pylab.imshow(ls.hillshade(filtDem15to5, vert_exag=1., dx=.5, dy=.5), cmap='gray')
-pylab.subplot(224, sharex=ax1, sharey=ax1)
-pylab.imshow(ls.hillshade(filtDem5to15, vert_exag=1., dx=.5, dy=.5), cmap='gray')
+###########################################################################################
+#  write filtered DEM & plant height files
+
+filtDemDs = gdal.GetDriverByName('GTiff').CreateCopy(filtDemFile, demDs, options=["TILED=YES", "COMPRESS=DEFLATE"])
+filtDemDs.GetRasterBand(1).WriteArray(filtDem)   # Writes my array to the raster
+filtDemDs.FlushCache()
+filtDemDs = None
+
+plantHeightDs = gdal.GetDriverByName('GTiff').CreateCopy(plantHeightFile, demDs, options=["TILED=YES", "COMPRESS=DEFLATE"])
+plantHeightDs.GetRasterBand(1).WriteArray(dem-filtDem)   # Writes my array to the raster
+plantHeightDs.FlushCache()
+plantHeightDs = None
+
+(dem - filtDem < 0).sum()

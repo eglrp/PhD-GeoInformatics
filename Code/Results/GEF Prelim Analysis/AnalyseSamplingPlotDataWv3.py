@@ -25,6 +25,7 @@ imageFile = r"D:\Data\Development\Projects\PhD GeoInformatics\Data\Digital Globe
 
 demFile = r"V:\Data\NGI\GEF DEM\3323d_2015_1001_GEF_DEM_SGM3.tif"
 slopeFile = r"V:\Data\NGI\GEF DEM\3323d_2015_1001_GEF_DEM_SGM3_slope.pix"
+heightFile = r"V:\Data\NGI\GEF DEM\3323d_2015_1001_GEF_DEM_SGM3_clip_hgt.tif"
 # imageFile = r"D:\Data\Development\Projects\PhD GeoInformatics\Data\Digital Globe\058217622010_01\PCI Output\ATCOR\SRTM+AdjCorr\ATCORCorrected_o17OCT01084657_R1C12-058217622010_01_P001_14368043_PanSharpen.pix"
 samplingPlotGtFile = "C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/GEF Plot Polygons with Yc.shp"
 
@@ -484,37 +485,37 @@ pylab.grid()
 
 ####################################################################################################################
 # Read in the slope/dem
-slopeDs = gdal.OpenEx(slopeFile, gdal.OF_RASTER)
-if slopeDs is None:
+heightDs = gdal.OpenEx(heightFile, gdal.OF_RASTER)
+if heightDs is None:
     print "Open failed./n"
 
-print 'Driver: ', slopeDs.GetDriver().ShortName, '/', \
-    slopeDs.GetDriver().LongName
-print 'Size is ', slopeDs.RasterXSize, 'x', slopeDs.RasterYSize, \
-    'x', slopeDs.RasterCount
-print 'Projection is ', slopeDs.GetProjection()
-geotransform = slopeDs.GetGeoTransform()
+print 'Driver: ', heightDs.GetDriver().ShortName, '/', \
+    heightDs.GetDriver().LongName
+print 'Size is ', heightDs.RasterXSize, 'x', heightDs.RasterYSize, \
+    'x', heightDs.RasterCount
+print 'Projection is ', heightDs.GetProjection()
+geotransform = heightDs.GetGeoTransform()
 if not geotransform is None:
     print 'Origin = (', geotransform[0], ',', geotransform[3], ')'
     print 'Pixel Size = (', geotransform[1], ',', geotransform[5], ')'
     pixelSize = geotransform[1]
 
-slopePlotDict = ExtractAllDemFeatures(slopeDs, samplingPlotSpatialRef, samplingPlotGtDict, plotFigures=True)
-slopeDs = None
+heightPlotDict = ExtractAllDemFeatures(heightDs, samplingPlotSpatialRef, samplingPlotGtDict, plotFigures=True)
+heightDs = None
 
 
-mean = np.array([plot['mean'] for plot in slopePlotDict.values()])
-std = np.array([plot['std'] for plot in slopePlotDict.values()])
-hgt = np.array([plot['mean-min'] for plot in slopePlotDict.values()])
-ycpp = np.array([plot['YcPp'] for plot in slopePlotDict.values()])*(100.**2)/(pixelSize**2)
-yc = np.array([plot['YcHa'] for plot in slopePlotDict.values()])
-classes = np.array([plot['DegrClass'] for plot in slopePlotDict.values()])
-abg = np.array([plot['AgbHa'] for plot in slopePlotDict.values()])
-litter = np.array([plot['LitterHa'] for plot in slopePlotDict.values()])
-thumbnails = [plot['thumbnail'] for plot in slopePlotDict.values()]
+mean = np.array([plot['mean'] for plot in heightPlotDict.values()])
+std = np.array([plot['std'] for plot in heightPlotDict.values()])
+hgt = np.array([plot['mean-min'] for plot in heightPlotDict.values()])
+ycpp = np.array([plot['YcPp'] for plot in heightPlotDict.values()])*(100.**2)/(pixelSize**2)
+yc = np.array([plot['YcHa'] for plot in heightPlotDict.values()])
+classes = np.array([plot['DegrClass'] for plot in heightPlotDict.values()])
+abg = np.array([plot['AgbHa'] for plot in heightPlotDict.values()])
+litter = np.array([plot['LitterHa'] for plot in heightPlotDict.values()])
+thumbnails = [plot['thumbnail'] for plot in heightPlotDict.values()]
 
 fig = pylab.figure()
-ScatterD(hgt, ycpp/1000., class_labels=classes, labels=None, thumbnails=thumbnails, regress=True, xlabel='log(mean(slope))', ylabel='AGB (t/ha)')
+ScatterD(mean, abg/1000., class_labels=classes, labels=None, thumbnails=thumbnails, regress=True, xlabel='log(mean(height))', ylabel='AGB (t/ha)')
 pylab.grid()
 
 ####################################################################################################################
