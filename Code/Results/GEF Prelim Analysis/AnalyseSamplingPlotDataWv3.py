@@ -23,6 +23,8 @@ imageFile = r"D:\Data\Development\Projects\PhD GeoInformatics\Data\Digital Globe
 imageFile = r"D:\Data\Development\Projects\PhD GeoInformatics\Data\Digital Globe\058217622010_01\PCI Output\Ortho\o17OCT01084657-M2AS_R1C12-058217622010_01_P001.TIF"
 imageFile = r"D:\Data\Development\Projects\PhD GeoInformatics\Data\Digital Globe\058217622010_01\PCI Output\ATCOR\SRTM+AdjCorr\ATCORCorrected_o17OCT01084657-M2AS_R1C12-058217622010_01_P001_14368043.pix"
 
+demFile = r"V:\Data\NGI\GEF DEM\3323d_2015_1001_GEF_DEM_SGM3.tif"
+slopeFile = r"V:\Data\NGI\GEF DEM\3323d_2015_1001_GEF_DEM_SGM3_slope.pix"
 # imageFile = r"D:\Data\Development\Projects\PhD GeoInformatics\Data\Digital Globe\058217622010_01\PCI Output\ATCOR\SRTM+AdjCorr\ATCORCorrected_o17OCT01084657_R1C12-058217622010_01_P001_14368043_PanSharpen.pix"
 samplingPlotGtFile = "C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/GEF Plot Polygons with Yc.shp"
 
@@ -78,6 +80,26 @@ def ExtractPatchFeatures(imbuf, mask):
     feat['i'] = (s / imbuf_mask.shape[1]).mean()
     feat['i_std'] = (s / imbuf_mask.shape[1]).std()
     feat['NDVI_std'] = ndvi.std()
+
+    return feat
+
+
+def ExtractDemPatchFeatures(imbuf, mask):
+    mask = np.bool8(mask)
+    imbuf_mask = np.ndarray(shape=(np.int32(mask.sum()), imbuf.shape[2]), dtype=np.float64)
+    for i in range(0, imbuf.shape[2]):
+        band = imbuf[:, :, i]
+        imbuf_mask[:, i] = np.float64(band[mask])   # / 5000.  # 5000 is scale for MODIS / XCALIB
+    # imbuf_mask[:, 3] = imbuf_mask[:,  3]/2.
+    # wv3 bands
+    if np.any(imbuf_mask<0):
+        print 'imbuf_mask < 0'
+        # print np.where(imbuf_mask<0)
+    feat = {}
+
+    feat['mean'] = imbuf_mask.mean()
+    feat['std'] = imbuf_mask.std()
+    feat['mean-min'] = (imbuf_mask-imbuf_mask.min()).mean()     #assuming flat which is wrong
 
     return feat
 
@@ -179,6 +201,105 @@ def ExtractAllFeatures(ds, csGtSpatialRef, csGtDict, plotFigures=False):  # , ax
 
     return plot_dict
 
+
+def ExtractAllDemFeatures(ds, csGtSpatialRef, csGtDict, plotFigures=False):  # , axis_signs=[1, 1]):
+    # Note         A way around all this confusion may to be to layout plot co-ords in world co-ords and then convert to
+    #              to pixel co-ords using world2pixel.  this would avoid all the fiddling and confusion in pixel space
+
+    geotransform = ds.GetGeoTransform()
+    transform = osr.CoordinateTransformation(csGtSpatialRef, osr.SpatialReference(ds.GetProjection()))
+    i = 0
+    plot_dict = {}
+    # plotTagcDict = {}
+    # class_labels = ['Pristine', 'Moderate', 'Severe']
+    max_im_vals = np.zeros((ds.RasterCount))
+    for plot in csGtDict.values():
+        # transform plot corners into ds pixel space
+        plotCnrsWorld = plot['points']
+        plotCnrsPixel = []
+        for cnr in plotCnrsWorld:
+            point = ogr.Geometry(ogr.wkbPoint)
+            point.AddPoint(cnr[0], cnr[1])
+            point.Transform(transform)  # xform into im projection
+            (pixel, line) = World2Pixel(geotransform, point.GetX(), point.GetY())
+            plotCnrsPixel.append((pixel,line))
+
+        plotCnrsPixel = np.array(plotCnrsPixel)
+
+        # not all the point fall inside the image
+        if np.all(plotCnrsPixel >=0) and  np.all(plotCnrsPixel[:,0] < ds.RasterXSize) \
+                and np.all(plotCnrsPixel[:,1] < ds.RasterYSize) and plot.has_key('Yc') and plot['Yc'] > 0.:
+
+            # get winddow extents
+            ulCnr = np.floor(np.min(plotCnrsPixel, 0))
+            lrCnr = np.ceil(np.max(plotCnrsPixel, 0))
+            plotSizePixel = np.int32(lrCnr - ulCnr)
+
+            # make a mask for this plot
+            img = Image.fromarray(np.zeros((plotSizePixel[1], plotSizePixel[0])))
+
+            # Draw a rotated rectangle on the image.
+            draw = ImageDraw.Draw(img)
+            # rect = get_rect(x=120, y=80, width=100, height=40, angle=30.0)
+            draw.polygon([tuple((p - ulCnr)) for p in plotCnrsPixel], fill=1)
+            # Convert the Image data to a numpy array.
+            plotMask = np.asarray(img)
+
+            # adjust yc if it exists
+            if plot.has_key('Yc') and plot['Yc']>0:
+                plot['YcPp'] = plot['Yc'] / plotMask.sum()  # the average per pixel in the mask
+                plot['YcPm2'] = plot['Yc'] / (plot['Size']**2)  # the average per m2 in the theoretical plot size
+            else:
+                print '%s - no yc' % (plot['ID'])
+                # plot['YcPp'] = 0.
+                # plot['YcPm2'] = 0.
+
+            # extract image patch with mask
+            imbuf = np.zeros((plotSizePixel[1], plotSizePixel[0], ds.RasterCount), dtype=float)
+            for b in range(1, ds.RasterCount+1):
+                imbuf[:, :, b - 1] = ds.GetRasterBand(b).ReadAsArray(ulCnr[0], ulCnr[1], plotSizePixel[0],
+                                                                     plotSizePixel[1])
+
+            # imbuf[:, :, 3] = imbuf[:, :, 3] / 2  # hack for NGI XCALIB
+            if np.all(imbuf == 0):
+                print plot['ID'] + ": imbuf zero, assume NODATA ommitting"
+                break
+            # for b in range(0, 4):
+            #     imbuf[:, :, b] = imbuf[:, :, b] / max_im_vals_[b]
+            if not plotMask.shape == imbuf.shape[0:2]:
+                print "error - mask and buf different sizes"
+                raise Exception("error - mask and buf different sizes")
+            feat = ExtractDemPatchFeatures(imbuf.copy(), plotMask)
+
+            fields = plot.keys()
+            for f in fields:
+                feat[f] = csGtDict[plot['ID']][f]
+            feat['thumbnail'] = np.float32(imbuf.copy())
+            plot_dict[plot['ID']] = feat
+            # plotTagcDict[plot['PLOT']] = csGtDict[plot['PLOT']]['TAGC']
+            tmp = np.reshape(feat['thumbnail'], (np.prod(plotSizePixel), ds.RasterCount))
+            # max_tmp = tmp.max(axis=0)
+            max_tmp = np.percentile(tmp, 98., axis=0)
+            max_im_vals[max_tmp > max_im_vals] = max_tmp[max_tmp > max_im_vals]
+            # print plot['PLOT']
+            i = i + 1
+        else:
+            print "x-" + plot['ID']
+
+    print i
+    for k, v in plot_dict.iteritems():
+        thumb = v['thumbnail']
+        # max_im_vals[1] = max_im_vals[1]
+        for b in range(0, ds.RasterCount):
+            thumb[:, :, b] = thumb[:, :, b] / max_im_vals[b]
+            thumb[:, :, b][thumb[:, :, b] > 1.] = 1.
+        # thumb[:, :, 0] = thumb[:, :, 0] / 1.5
+        # thumb[:, :, 1] = thumb[:, :, 1] * 1.2
+        # thumb[:, :, 1][thumb[:, :, 1] > 1.] = 1.
+        plot_dict[k]['thumbnail'] = thumb.squeeze()
+
+    return plot_dict
+
 def ScatterD(x, y, labels=None, class_labels=None, thumbnails=None, regress=True, xlabel=None, ylabel=None):
     if class_labels is None:
         class_labels = np.zeros(x.__len__())
@@ -207,7 +328,8 @@ def ScatterD(x, y, labels=None, class_labels=None, thumbnails=None, regress=True
                 imbuf = np.array(thumbnails)[class_idx][xyi]
                 ims = 20.
                 extent = [xx - xd / (2 * ims), xx + xd / (2 * ims), yy - yd / (2 * ims), yy + yd / (2 * ims)]
-                pylab.imshow(imbuf[:, :, :3], extent=extent, aspect='auto')  # zorder=-1,
+                #pylab.imshow(imbuf[:, :, :3], extent=extent, aspect='auto')  # zorder=-1,
+                pylab.imshow(imbuf, extent=extent, aspect='auto')  # zorder=-1,
                 handles[ci] = ax.add_patch(
                     patches.Rectangle((xx - xd / (2 * ims), yy - yd / (2 * ims)), xd / ims, yd / ims, fill=False,
                                       edgecolor=colour, linewidth=2.))
@@ -360,6 +482,42 @@ ScatterD(rn**2, abg/1000., class_labels=classes, labels=None, thumbnails=thumbna
 pylab.grid()
 
 
+####################################################################################################################
+# Read in the slope/dem
+slopeDs = gdal.OpenEx(slopeFile, gdal.OF_RASTER)
+if slopeDs is None:
+    print "Open failed./n"
+
+print 'Driver: ', slopeDs.GetDriver().ShortName, '/', \
+    slopeDs.GetDriver().LongName
+print 'Size is ', slopeDs.RasterXSize, 'x', slopeDs.RasterYSize, \
+    'x', slopeDs.RasterCount
+print 'Projection is ', slopeDs.GetProjection()
+geotransform = slopeDs.GetGeoTransform()
+if not geotransform is None:
+    print 'Origin = (', geotransform[0], ',', geotransform[3], ')'
+    print 'Pixel Size = (', geotransform[1], ',', geotransform[5], ')'
+    pixelSize = geotransform[1]
+
+slopePlotDict = ExtractAllDemFeatures(slopeDs, samplingPlotSpatialRef, samplingPlotGtDict, plotFigures=True)
+slopeDs = None
+
+
+mean = np.array([plot['mean'] for plot in slopePlotDict.values()])
+std = np.array([plot['std'] for plot in slopePlotDict.values()])
+hgt = np.array([plot['mean-min'] for plot in slopePlotDict.values()])
+ycpp = np.array([plot['YcPp'] for plot in slopePlotDict.values()])*(100.**2)/(pixelSize**2)
+yc = np.array([plot['YcHa'] for plot in slopePlotDict.values()])
+classes = np.array([plot['DegrClass'] for plot in slopePlotDict.values()])
+abg = np.array([plot['AgbHa'] for plot in slopePlotDict.values()])
+litter = np.array([plot['LitterHa'] for plot in slopePlotDict.values()])
+thumbnails = [plot['thumbnail'] for plot in slopePlotDict.values()]
+
+fig = pylab.figure()
+ScatterD(hgt, ycpp/1000., class_labels=classes, labels=None, thumbnails=thumbnails, regress=True, xlabel='log(mean(slope))', ylabel='AGB (t/ha)')
+pylab.grid()
+
+####################################################################################################################
 
 # lock at ycha KDS density
 from scipy.stats import gaussian_kde

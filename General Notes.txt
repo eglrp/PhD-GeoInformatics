@@ -1404,6 +1404,43 @@ Sentinel
 - Note that it seems that for 20 / 60m processing, the 10m B08 band is not used but replaced with B08A.  This is not great for WV3 xcalib as B08 is needed for WV3 band 7.  So perhaps we can manually upsample B08 to 60m... 
 
 
+DSM / plant height from DTM
+-----------------
+- Pix4D and Photoscan have options for making DSM from drone imagery.  The Pix4D trial version does not allow images > 55 MP though which is smaller than NGI.  
+- PCI has a DSM2DTM algorithm but there are a hell of a lot of parameters and I have not had much success with it.  
+- Possible filters:
+  - Grayscale opening:  (min followed by max) with a stucturing element bigger than the average bush / tree.  The problem with this is general slope trends will bias the min/max. 
+  - Slope based filtering (see http://fgg-web.fgg.uni-lj.si/~/alisec/ISPRS_SS_2007/gradivo/ISPRS_SS2007/doc/PRESENTATIONS-LECTURES/4_Norbert%20Pfeifer/DTM_pfeifer.pdf)
+    There is a height difference with distance characteristic that is used to exlude pixels that exceed this difference.  It must be pretty slow to find height differences between all pixels (within a specified radius).  This may work for buildings on a pretty flat terrain but is not going to work so good for pristine thicket.  
+- "Robust interpolation":
+  - Classify ground pixels using multispectral data and interpolate these.  Or triangulate them (?).  For pristine areas this is not really going to work as there is very little to no ground visible.  
+  - Other approaches based on LIDAR
+- My thoughts:
+  - In severly degraded areas, the veg should be able to be removed from DSM fairly easily.  In pristine areas, this is more tricky as we don't know where the ground is.  But as a rough assumption we can assume that the smoothed veg follows the slope of the ground.  So we could heavily smooth the vegetation and treat this as local DTM with offset.  The offset can be simple adjusted to 0 locally or using the closest known ground pixel.  
+  - Try subtract NGI DSM from SRTM DSM (?).  Probably there are systematic offsets between the two, so this wont work.  Offsets could be compensated for by adjusting the min diff betw NGIDEM and SRTM to 0.
+  - Try subtract NGI DSM from a heavily filtered version of NGI DSM.  Aagain, perhaps adjust this difference so that min = 0.  Or adjust the difference so that the nearest known ground pixel is 0.  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Funding
 --------
