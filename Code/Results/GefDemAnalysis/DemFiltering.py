@@ -46,6 +46,10 @@ se = morphology.disk(15)
 # filtDem = morphology.opening(dem, se)           # opencv will be faster
 filtDem = cv2.morphologyEx(dem, cv2.MORPH_OPEN, se)
 
+
+# filtDem = cv2.medianBlur(dem, 5)  # 5 is the biggest size for use with float32
+filtDem = cv2.bilateralFilter(dem, 13, 150, 150)
+
 pylab.figure()
 ax1 = pylab.subplot(211)
 pylab.imshow(dem)
@@ -77,3 +81,61 @@ plantHeightDs.FlushCache()
 plantHeightDs = None
 
 (dem - filtDem < 0).sum()
+
+
+#############################################################################################
+# experiment with srtm
+
+srtmFile = r"D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SRTM\s34_e023-e024_1arc_v3_Mosaic_NGI_ProjGrid.tif"
+plantHeightFile = r"V:\Data\NGI\GEF DEM\3323d_2015_1001_GEF_DEM_SGM3_clip_hgt2.tif"
+
+srtmDs = gdal.OpenEx(srtmFile, gdal.OF_RASTER)
+if srtmDs is None:
+    print "Open failed./n"
+
+print 'Driver: ', srtmDs.GetDriver().ShortName, '/', \
+    srtmDs.GetDriver().LongName
+print 'Size is ', srtmDs.RasterXSize, 'x', srtmDs.RasterYSize, \
+    'x', srtmDs.RasterCount
+print 'Projection is ', srtmDs.GetProjection()
+geotransform = srtmDs.GetGeoTransform()
+if not geotransform is None:
+    print 'Origin = (', geotransform[0], ',', geotransform[3], ')'
+    print 'Pixel Size = (', geotransform[1], ',', geotransform[5], ')'
+    pixelSize = geotransform[1]
+
+srtm = srtmDs.GetRasterBand(1).ReadAsArray()
+
+pylab.figure()
+ax1 = pylab.subplot(311)
+pylab.imshow(dem)
+pylab.subplot(312, sharex=ax1, sharey=ax1)
+pylab.imshow(srtm)
+pylab.subplot(313, sharex=ax1, sharey=ax1)
+pylab.imshow(dem-srtm)
+# pylab.colorbar()
+
+
+se = morphology.disk(15)
+# filtDem = morphology.opening(dem, se)           # opencv will be faster
+filtDem2 = cv2.morphologyEx(dem-srtm, cv2.MORPH_OPEN, se)
+filtDem2 += srtm
+
+ls = LightSource(azdeg=315, altdeg=45)
+pylab.figure()
+ax1 = pylab.subplot(311)
+pylab.imshow(ls.hillshade(dem, vert_exag=1., dx=.5, dy=.5), cmap='gray')
+pylab.subplot(312, sharex=ax1, sharey=ax1)
+pylab.imshow(ls.hillshade(filtDem2, vert_exag=1., dx=.5, dy=.5), cmap='gray')
+pylab.subplot(313, sharex=ax1, sharey=ax1)
+pylab.imshow(ls.hillshade(dem-filtDem2, vert_exag=1., dx=.5, dy=.5), cmap='gray')
+
+
+plantHeightDs = gdal.GetDriverByName('GTiff').CreateCopy(plantHeightFile, demDs, options=["TILED=YES", "COMPRESS=DEFLATE"])
+plantHeightDs.GetRasterBand(1).WriteArray(dem-filtDem2)   # Writes my array to the raster
+plantHeightDs.FlushCache()
+plantHeightDs = None
+
+(dem - filtDem < 0).sum()
+
+
