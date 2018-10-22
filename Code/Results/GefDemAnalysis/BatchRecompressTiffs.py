@@ -34,7 +34,7 @@ for imFileName in glob.glob(os.path.join(imDir, '*RGBN.tif')):
     baseFileName = os.path.split(imFileName)[-1]
     outFileName = baseFileName[:-4] + '_DCMP.tif'
     print 'Recompressing {0}'.format(os.path.join(imDir, baseFileName))
-    cmdString = '"{0}" -co COMPRESS=DEFLATE -co NBITS=16 "{1}" "{2}"'.format(gdaltranslateExe,
+    cmdString = '"{0}" -co COMPRESS=DEFLATE -co NBITS=16 -scale 0 4096 0 65536 "{1}" "{2}"'.format(gdaltranslateExe,
         os.path.join(imDir, baseFileName), os.path.join(imDir, outFileName))
     print cmdString
     subprocess.call(cmdString, shell=True, env=os.environ)

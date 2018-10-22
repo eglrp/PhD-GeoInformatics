@@ -1,3 +1,6 @@
+
+
+
 Dr stella de kok - neurologist 
 
 
@@ -1407,6 +1410,8 @@ Sentinel
 DSM / plant height from DTM
 -----------------
 - Pix4D and Photoscan have options for making DSM from drone imagery.  The Pix4D trial version does not allow images > 55 MP though which is smaller than NGI.  
+- Photoscan uses the point cloud to classify DTM i.e. points are classified as ground using: "Automatic classification procedure consists of two steps. At the first step the dense cloud is divided into cells of a certain size. In each cell the lowest point is detected. Triangulation of these points gives the first approximation of the terrain model.  At the second step new point is added to the ground class, providing that it satisfies two conditions: it lies within a certain distance from the terrain model and that the angle between terrain model and the line to connect this new point with a point from a ground class is less than a certain angle. The second step is repeated while there still are points to be checked."
+	- This is v unlikely to work for the GEF site as (1) there are v few ground points in the pristine areas, (2) the terrain is v rugged so max angle is hard to define in a way that will separate ground from veg.  
 - PCI has a DSM2DTM algorithm but there are a hell of a lot of parameters and I have not had much success with it.  
 - Possible filters:
   - Grayscale opening:  (min followed by max) with a stucturing element bigger than the average bush / tree.  The problem with this is general slope trends will bias the min/max. 
@@ -1415,32 +1420,13 @@ DSM / plant height from DTM
 - "Robust interpolation":
   - Classify ground pixels using multispectral data and interpolate these.  Or triangulate them (?).  For pristine areas this is not really going to work as there is very little to no ground visible.  
   - Other approaches based on LIDAR
+- Note that SRTM is affected by vegetation: "Carabajal and Harding (2005) validated the SRTM DEM using ICESat, a satellite laser altimeter, and discovered that the errors in SRTM increased with increasing tree cover. This was because the C-band radar used by SRTM could not fully penetrate the vegetation canopy to the ground. This finding was also supported by another study that utilized satellite radar altimeters to validate the SRTM DEM (Berry, Garlick, and Smith, 2007). While these errors can clearly be attributed to vegetation, their correction requires knowledge about canopy heights and radar penetration depths."  
+    OR "The radar does not "see" through thick vegetation canopies. It probably penetrated a little way into some canopies, but in general it followed near the top of the canopy. "
 - My thoughts:
   - In severly degraded areas, the veg should be able to be removed from DSM fairly easily.  In pristine areas, this is more tricky as we don't know where the ground is.  But as a rough assumption we can assume that the smoothed veg follows the slope of the ground.  So we could heavily smooth the vegetation and treat this as local DTM with offset.  The offset can be simple adjusted to 0 locally or using the closest known ground pixel.  
   - Try subtract NGI DSM from SRTM DSM (?).  Probably there are systematic offsets between the two, so this wont work.  Offsets could be compensated for by adjusting the min diff betw NGIDEM and SRTM to 0.
   - Try subtract NGI DSM from a heavily filtered version of NGI DSM.  Aagain, perhaps adjust this difference so that min = 0.  Or adjust the difference so that the nearest known ground pixel is 0.  
   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 Funding
 --------

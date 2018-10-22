@@ -678,3 +678,49 @@ ax1.set_ylabel('Relative spectral response (RSR)')
 ax2.set_ylabel('Reflectance (%)')
 mpl.rcParams.update({'font.size': fontSize})
 pylab.tight_layout()
+
+
+##############################################################################################
+fontSize = 12
+mpl.rcParams.update({'font.size': fontSize})
+pylab.close('all')
+
+f1 = pylab.figure('MODIS and DMC Spectral Sensitivities')
+f1.set_size_inches(6, 4.5, forward=True)
+colors = ['k', 'r', 'g', 'b']
+bandLabels = ['NIR', 'Red', 'Green', 'Blue']
+titles = ['(a)', '(b)', '(c)', '(d)']
+hModis = []
+hDmc = []
+for i in range(0, 4):
+#    hModis.append(pylab.plot(modisWaveLen[i], modisRsr[i], color=colors[i], linestyle='-'))
+    ax = pylab.subplot(111)
+    hModis.append(pylab.plot(modisWaveLen[i], modisRsr[i], color='k', linestyle='-'))
+    pylab.hold('on')
+    mask = dmcRsr[:, i] > 0.001
+#    hDmc.append(pylab.plot(dmcWaveLen[mask], dmcRsr[mask, i], color=colors[i], linestyle='--'))
+    hDmc.append(pylab.plot(dmcWaveLen[mask], dmcRsr[mask, i], color='k', linestyle='--'))
+    ym = np.max(modisRsr[i])
+    xm = modisWaveLen[i][np.argmax(modisRsr[i])]
+    pylab.text(xm + 13, ym - .05, bandLabels[i], fontsize=fontSize)
+    # Hide the right and top spines
+    ax.spines['right'].set_visible(True)
+    ax.spines['top'].set_visible(True)
+
+    # Only show ticks on the left and bottom spines
+    ax.yaxis.set_ticks_position('left')
+    ax.xaxis.set_ticks_position('bottom')
+
+# pylab.text(xm+15, ym*.95, bandLabels[i], fontsize=fontSize)
+axs = np.array(pylab.axis())
+axs[1] *= 1.05
+pylab.axis(axs)
+pylab.legend((hModis[0][0], hDmc[0][0]), ('MODIS', 'DMC'), fontsize=fontSize-2., frameon=False)
+pylab.xlabel(r'Wavelength ($\mathrm{\mu m}$)')  #r'$s(t) = \mathcal{A}\mathrm{sin}(2 \omega t)$'
+pylab.ylabel('Relative spectral response')
+pylab.tight_layout()
+
+f1.savefig('C:/Data/Development/Projects/PhD GeoInformatics/Docs/My Docs/Thesis/VHR Spekboom Canopy Cover Mapping/'
+            'Fig. 5  MODIS and DMC RSRs.eps', dpi=600)
+f1.savefig('C:/Data/Development/Projects/PhD GeoInformatics/Docs/My Docs/Thesis/VHR Spekboom Canopy Cover Mapping/'
+            'Fig. 5  MODIS and DMC RSRs.png', dpi=600)

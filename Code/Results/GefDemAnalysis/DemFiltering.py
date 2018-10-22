@@ -19,8 +19,9 @@ from PIL import ImageDraw
 import cv2
 
 demFile = r"V:\Data\NGI\GEF DEM\3323d_2015_1001_GEF_DEM_SGM3_clip.tif"
-filtDemFile = r"V:\Data\NGI\GEF DEM\3323d_2015_1001_GEF_DEM_SGM3_clip_filt.tif"
-plantHeightFile = r"V:\Data\NGI\GEF DEM\3323d_2015_1001_GEF_DEM_SGM3_clip_hgt.tif"
+demFile = r"V:/Data/NGI/GEF DEM/3323d_2015_1001_GEF_DEM_Photoscan_clip.tif"
+filtDemFile = r"V:\Data\NGI\GEF DEM\3323d_2015_1001_GEF_DEM_Photoscan_clip_filt.tif"
+plantHeightFile = r"V:\Data\NGI\GEF DEM\3323d_2015_1001_GEF_DEM_Photoscan_clip_hgt.tif"
 
 demDs = gdal.OpenEx(demFile, gdal.OF_RASTER)
 if demDs is None:
@@ -42,13 +43,15 @@ dem = demDs.GetRasterBand(1).ReadAsArray()
 
 pylab.close('all')
 
-se = morphology.disk(15)
+se = morphology.disk(5)
 # filtDem = morphology.opening(dem, se)           # opencv will be faster
-filtDem = cv2.morphologyEx(dem, cv2.MORPH_OPEN, se)
+filtDem = cv2.morphologyEx(dem, cv2.MORPH_ERODE, se)
+se = morphology.disk(5)
+filtDem = cv2.morphologyEx(filtDem, cv2.MORPH_ERODE, se)
 
 
 # filtDem = cv2.medianBlur(dem, 5)  # 5 is the biggest size for use with float32
-filtDem = cv2.bilateralFilter(dem, 13, 150, 150)
+# filtDem = cv2.bilateralFilter(dem, 13, 150, 150)
 
 pylab.figure()
 ax1 = pylab.subplot(211)
@@ -82,12 +85,32 @@ plantHeightDs = None
 
 (dem - filtDem < 0).sum()
 
+##############################################################################################
+
+
+blurDem = cv2.medianBlur(dem, 5)  # 5 is the biggest size for use with float32
+for i in range(0,20):
+    blurDem = cv2.medianBlur(blurDem, 5)  # 5 is the biggest size for use with float32
+# blurDem = cv2.medianBlur(blurDem, 5)  # 5 is the biggest size for use with float32
+# blurDem = cv2.medianBlur(blurDem, 5)  # 5 is the biggest size for use with float32
+# blurDem = cv2.medianBlur(blurDem, 5)  # 5 is the biggest size for use with float32
+# blurDem = cv2.medianBlur(blurDem, 5)  # 5 is the biggest size for use with float32
+
+ls = LightSource(azdeg=315, altdeg=45)
+pylab.figure()
+ax1 = pylab.subplot(311)
+pylab.imshow(ls.hillshade(dem, vert_exag=1., dx=.5, dy=.5), cmap='gray')
+pylab.subplot(312, sharex=ax1, sharey=ax1)
+pylab.imshow(ls.hillshade(blurDem, vert_exag=1., dx=.5, dy=.5), cmap='gray')
+pylab.subplot(313, sharex=ax1, sharey=ax1)
+pylab.imshow(ls.hillshade(dem-blurDem, vert_exag=1., dx=.5, dy=.5), cmap='gray')
+
 
 #############################################################################################
 # experiment with srtm
 
 srtmFile = r"D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SRTM\s34_e023-e024_1arc_v3_Mosaic_NGI_ProjGrid.tif"
-plantHeightFile = r"V:\Data\NGI\GEF DEM\3323d_2015_1001_GEF_DEM_SGM3_clip_hgt2.tif"
+plantHeightFile = r"V:\Data\NGI\GEF DEM\3323d_2015_1001_GEF_DEM_Photoscan_clip_hgt2.tif"
 
 srtmDs = gdal.OpenEx(srtmFile, gdal.OF_RASTER)
 if srtmDs is None:

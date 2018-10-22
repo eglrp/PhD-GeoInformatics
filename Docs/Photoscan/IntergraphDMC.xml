@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<calibration>
+  <projection>frame</projection>
+  <width>7680</width>
+  <height>13824</height>
+  <f>10000</f>
+  <cx>-3840</cx>
+  <cy>-6912</cy>
+  <date>2018-10-15T13:25:58Z</date>
+</calibration>
