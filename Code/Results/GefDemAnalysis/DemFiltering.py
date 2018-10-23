@@ -110,6 +110,7 @@ pylab.imshow(ls.hillshade(dem-blurDem, vert_exag=1., dx=.5, dy=.5), cmap='gray')
 # experiment with srtm
 
 srtmFile = r"D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SRTM\s34_e023-e024_1arc_v3_Mosaic_NGI_ProjGrid.tif"
+srtmFile = "D:\Data\Development\Projects\PhD GeoInformatics\Data\CGA\SRTM\s34_e023-e024_1arc_v3_Mosaic_Photoscan_ProjGrid.tif"
 plantHeightFile = r"V:\Data\NGI\GEF DEM\3323d_2015_1001_GEF_DEM_Photoscan_clip_hgt2.tif"
 
 srtmDs = gdal.OpenEx(srtmFile, gdal.OF_RASTER)
@@ -128,6 +129,7 @@ if not geotransform is None:
     pixelSize = geotransform[1]
 
 srtm = srtmDs.GetRasterBand(1).ReadAsArray()
+srtmDs = None
 
 pylab.figure()
 ax1 = pylab.subplot(311)
@@ -139,7 +141,7 @@ pylab.imshow(dem-srtm)
 # pylab.colorbar()
 
 
-se = morphology.disk(15)
+se = morphology.disk(10)
 # filtDem = morphology.opening(dem, se)           # opencv will be faster
 filtDem2 = cv2.morphologyEx(dem-srtm, cv2.MORPH_OPEN, se)
 filtDem2 += srtm

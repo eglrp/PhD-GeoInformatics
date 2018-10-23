@@ -1,9 +1,4 @@
-
-
-
 Dr stella de kok - neurologist 
-
-
 
 
 Block Labelling
@@ -1426,6 +1421,14 @@ DSM / plant height from DTM
   - In severly degraded areas, the veg should be able to be removed from DSM fairly easily.  In pristine areas, this is more tricky as we don't know where the ground is.  But as a rough assumption we can assume that the smoothed veg follows the slope of the ground.  So we could heavily smooth the vegetation and treat this as local DTM with offset.  The offset can be simple adjusted to 0 locally or using the closest known ground pixel.  
   - Try subtract NGI DSM from SRTM DSM (?).  Probably there are systematic offsets between the two, so this wont work.  Offsets could be compensated for by adjusting the min diff betw NGIDEM and SRTM to 0.
   - Try subtract NGI DSM from a heavily filtered version of NGI DSM.  Aagain, perhaps adjust this difference so that min = 0.  Or adjust the difference so that the nearest known ground pixel is 0.  
+- Notes so far:
+  - Photoscan produces a smoother and apparently more useful DSM than PCI.  The crude correlation results are slightly better with the photoscan DSM.  The photoscan DSM is also orthometrically more accurate than the PCI one, as one can incorporate GCP's 
+  - Morphological filtering to remove veg is suspect in rugged terrain as the terrain will affect measured minima often more than veg.  To get around this, I tried subtracting off the SRTM DEM from the photoscan DSM to give a flatter terrain.  Then applying morphology to remove veg.  Then adding this back to the SRTM dem.  This does produce a better filtering but is still suspect in rugged terrain and dense veg.  This is because (1) SRTM is also affected by veg, (2) SRTM is not high enough res for rugged terrain.  Nevertheless the SRTM flattened plant heights do improve the correlation with yc.  
+  - Limiting classes to severe and moderate improves correlation results.  The pristine class is the most problematic due to rugged terrain and ground coverage i.e. the filtered version does not remove the veg well.  
+- To Do: 
+  (1) Try DSM measures that are independent of ground, like GDAL roughness   
+  (2) Use the multispec data to find ground areas and then interpolate the DSM based on only these areas to produce a DTM.  Then subtract from the DSM to give veg volume.  This may still not work v well for dense/rugged areas.  
+  (3) Find a filter to smooth out veg.  Assume this approximates the DTM + offset locally (i.e. in an area of similar veg cover).  Find what the local offset is by using multispec data to find ground pixels and measuring the offset between the DSM and filtered DSM at these points.  These offsets could be interpolated somehow.  
   
 
 Funding

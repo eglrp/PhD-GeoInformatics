@@ -25,9 +25,9 @@
     <layer-tree-layer providerKey="ogr" source="../../Data/GEF Sampling/GEF ROI.shp" id="GEF_ROI_a22bd0ec_fac2_42b6_b260_ced8c96dc487" name="GEF ROI" checked="Qt::Unchecked" expanded="1">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-group name="Baviaans Vector Data" expanded="0" checked="Qt::Checked">
+    <layer-tree-group name="Baviaans Vector Data" expanded="1" checked="Qt::Checked">
       <customproperties/>
-      <layer-tree-group name="GEF GCPs" expanded="1" checked="Qt::Checked">
+      <layer-tree-group name="GEF GCPs" expanded="0" checked="Qt::Checked">
         <customproperties/>
         <layer-tree-layer providerKey="ogr" source="../../Data/GEF GCPs/GefStudyAreaImageGCPs.shp" id="GefStudyAreaImageGCPs_babce511_4ed3_4b56_bbf1_d08898693281" name="GefStudyAreaImageGCPs" checked="Qt::Unchecked" expanded="1">
           <customproperties/>
@@ -51,7 +51,7 @@
           </layer-tree-layer>
         </layer-tree-group>
       </layer-tree-group>
-      <layer-tree-group name="GEF" expanded="0" checked="Qt::Checked">
+      <layer-tree-group name="GEF" expanded="1" checked="Qt::Checked">
         <customproperties/>
         <layer-tree-group name="June 2018 Sampling Points" expanded="1" checked="Qt::Unchecked">
           <customproperties/>
@@ -158,7 +158,7 @@
         <layer-tree-layer providerKey="ogr" source="D:\Data\Development\Projects\PhD GeoInformatics\Data/Misc/BMR ShapeFiles/sewefontein_tchuganu_bound_wgs84.shp" id="sewefontein_tchuganu_bound_wgs8420170304123226893" name="sewefontein_tchuganu_bound_wgs84" checked="Qt::Unchecked" expanded="1">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-group name="Sept 2018 Sampling Pts" expanded="1" checked="Qt::Checked">
+        <layer-tree-group name="Sept 2018 Sampling Pts" expanded="1" checked="Qt::Unchecked">
           <customproperties/>
           <layer-tree-layer providerKey="ogr" source="../../Data/GEF Sampling/Sampling Sept 2018/DGPS/Corrected/Point_ge.shp" id="Point_ge_43b513e5_5d8e_4cce_887f_77c3c8c278c4" name="Point_ge" checked="Qt::Unchecked" expanded="1">
             <customproperties/>
@@ -170,7 +170,7 @@
         <layer-tree-layer providerKey="ogr" source="../../Data/GEF Sampling/GEF Plot Polygons with Yc.shp" id="GEF_Plot_Polygons_with_Yc20180311213016108" name="GEF Plot Polygons with Yc" checked="Qt::Unchecked" expanded="1">
           <customproperties/>
         </layer-tree-layer>
-        <layer-tree-layer providerKey="ogr" source="../../Data/GEF Sampling/GEF Sampling Points V2.shp" id="GEF_Sampling_Points_V220180309142426505" name="GEF Sampling Points V2" checked="Qt::Unchecked" expanded="1">
+        <layer-tree-layer providerKey="ogr" source="../../Data/GEF Sampling/GEF Sampling Points V2.shp" id="GEF_Sampling_Points_V220180309142426505" name="GEF Sampling Points V2" checked="Qt::Checked" expanded="1">
           <customproperties/>
         </layer-tree-layer>
         <layer-tree-layer providerKey="ogr" source="../../Data/GEF Sampling/GEF Sampling Areas.shp" id="GEF_Sampling_Areas20171126191058114" name="GEF Sampling Areas" checked="Qt::Unchecked" expanded="0">
@@ -279,10 +279,10 @@
     </layer-tree-layer>
     <layer-tree-group name="DEM" expanded="1" checked="Qt::Checked">
       <customproperties/>
-      <layer-tree-layer providerKey="gdal" source="V:/Data/NGI/GEF DEM/3323d_2015_1001_GEF_DEM_PhotoscanTest.tif" id="3323d_2015_1001_GEF_DEM_PhotoscanTest_4743fa2a_7a01_42f6_a2ad_4ab638e2fdcb" name="3323d_2015_1001_GEF_DEM_PhotoscanTest" checked="Qt::Unchecked" expanded="1">
+      <layer-tree-layer providerKey="gdal" source="V:/Data/NGI/GEF DEM/3323d_2015_1001_GEF_DEM_Photoscan_clip_hgt2.tif" id="3323d_2015_1001_GEF_DEM_Photoscan_clip_hgt2_a36244ec_0fe7_47a2_957f_4dd8e9cea48c" name="3323d_2015_1001_GEF_DEM_Photoscan_clip_hgt2" checked="Qt::Unchecked" expanded="1">
         <customproperties/>
       </layer-tree-layer>
-      <layer-tree-layer providerKey="gdal" source="V:/Data/NGI/GEF DEM/3323d_2015_1001_GEF_DEM_Photoscan.tif" id="3323d_2015_1001_GEF_DEM_Photoscan_93464e7f_b9ac_4599_9de2_11d97bac05be" name="3323d_2015_1001_GEF_DEM_Photoscan" checked="Qt::Unchecked" expanded="1">
+      <layer-tree-layer providerKey="gdal" source="V:/Data/NGI/GEF DEM/3323d_2015_1001_GEF_DEM_Photoscan_clip.tif" id="3323d_2015_1001_GEF_DEM_Photoscan_clip_3cf6f9ff_ae47_44f3_899d_fcbc34b48718" name="3323d_2015_1001_GEF_DEM_Photoscan_clip" checked="Qt::Unchecked" expanded="1">
         <customproperties/>
       </layer-tree-layer>
       <layer-tree-layer providerKey="gdal" source="V:/Data/NGI/GEF DEM/3323d_2015_1001_GEF_DEM_SGM3_clip.TIF" id="3323d_2015_1001_GEF_DEM_SGM3_clip_25fa0ca7_b22f_4591_b610_240a801b5897" name="3323d_2015_1001_GEF_DEM_SGM3_clip" checked="Qt::Unchecked" expanded="1">
@@ -646,8 +646,8 @@
       <item>3323d_2015_1001_GEF_DEM_SGM3_slope_e371cd49_4741_41c6_9300_966ab440c698</item>
       <item>GEF_ROI_a22bd0ec_fac2_42b6_b260_ced8c96dc487</item>
       <item>3323d_2015_1001_GEF_DEM_SGM3_clip_25fa0ca7_b22f_4591_b610_240a801b5897</item>
-      <item>3323d_2015_1001_GEF_DEM_Photoscan_93464e7f_b9ac_4599_9de2_11d97bac05be</item>
-      <item>3323d_2015_1001_GEF_DEM_PhotoscanTest_4743fa2a_7a01_42f6_a2ad_4ab638e2fdcb</item>
+      <item>3323d_2015_1001_GEF_DEM_Photoscan_clip_3cf6f9ff_ae47_44f3_899d_fcbc34b48718</item>
+      <item>3323d_2015_1001_GEF_DEM_Photoscan_clip_hgt2_a36244ec_0fe7_47a2_957f_4dd8e9cea48c</item>
     </custom-order>
   </layer-tree-group>
   <snapping-settings unit="2" tolerance="0" type="1" mode="1" intersection-snapping="0" enabled="0">
@@ -730,10 +730,10 @@
   <mapcanvas annotationsVisible="1" name="theMapCanvas">
     <units>meters</units>
     <extent>
-      <xmin>91402.32734712757519446</xmin>
-      <ymin>-3717601.75643691932782531</ymin>
-      <xmax>91688.18458039339748211</xmax>
-      <ymax>-3717355.52005590265616775</ymax>
+      <xmin>87977.32969993626466021</xmin>
+      <ymin>-3715416.55488649429753423</ymin>
+      <xmax>88073.285732949298108</xmax>
+      <ymax>-3715339.24811571137979627</ymax>
     </extent>
     <rotation>0</rotation>
     <destinationsrs>
@@ -761,8 +761,8 @@
         <legendlayerfile isInOverview="0" visible="0" layerid="GEF_ROI_a22bd0ec_fac2_42b6_b260_ced8c96dc487"/>
       </filegroup>
     </legendlayer>
-    <legendgroup name="Baviaans Vector Data" checked="Qt::Checked" open="false">
-      <legendgroup name="GEF GCPs" checked="Qt::Checked" open="true">
+    <legendgroup name="Baviaans Vector Data" checked="Qt::Checked" open="true">
+      <legendgroup name="GEF GCPs" checked="Qt::Checked" open="false">
         <legendlayer name="GefStudyAreaImageGCPs" checked="Qt::Unchecked" open="true" drawingOrder="-1" showFeatureCount="0">
           <filegroup open="true" hidden="false">
             <legendlayerfile isInOverview="0" visible="0" layerid="GefStudyAreaImageGCPs_babce511_4ed3_4b56_bbf1_d08898693281"/>
@@ -793,7 +793,7 @@
           </legendlayer>
         </legendgroup>
       </legendgroup>
-      <legendgroup name="GEF" checked="Qt::Checked" open="false">
+      <legendgroup name="GEF" checked="Qt::Checked" open="true">
         <legendgroup name="June 2018 Sampling Points" checked="Qt::Unchecked" open="true">
           <legendlayer name="Point_ge" checked="Qt::Unchecked" open="true" drawingOrder="-1" showFeatureCount="0">
             <filegroup open="true" hidden="false">
@@ -951,7 +951,7 @@
             <legendlayerfile isInOverview="0" visible="0" layerid="sewefontein_tchuganu_bound_wgs8420170304123226893"/>
           </filegroup>
         </legendlayer>
-        <legendgroup name="Sept 2018 Sampling Pts" checked="Qt::Checked" open="true">
+        <legendgroup name="Sept 2018 Sampling Pts" checked="Qt::Unchecked" open="true">
           <legendlayer name="Point_ge" checked="Qt::Unchecked" open="true" drawingOrder="-1" showFeatureCount="0">
             <filegroup open="true" hidden="false">
               <legendlayerfile isInOverview="0" visible="0" layerid="Point_ge_43b513e5_5d8e_4cce_887f_77c3c8c278c4"/>
@@ -968,9 +968,9 @@
             <legendlayerfile isInOverview="0" visible="0" layerid="GEF_Plot_Polygons_with_Yc20180311213016108"/>
           </filegroup>
         </legendlayer>
-        <legendlayer name="GEF Sampling Points V2" checked="Qt::Unchecked" open="true" drawingOrder="-1" showFeatureCount="0">
+        <legendlayer name="GEF Sampling Points V2" checked="Qt::Checked" open="true" drawingOrder="-1" showFeatureCount="0">
           <filegroup open="true" hidden="false">
-            <legendlayerfile isInOverview="0" visible="0" layerid="GEF_Sampling_Points_V220180309142426505"/>
+            <legendlayerfile isInOverview="0" visible="1" layerid="GEF_Sampling_Points_V220180309142426505"/>
           </filegroup>
         </legendlayer>
         <legendlayer name="GEF Sampling Areas" checked="Qt::Unchecked" open="false" drawingOrder="-1" showFeatureCount="0">
@@ -1140,14 +1140,14 @@
       </filegroup>
     </legendlayer>
     <legendgroup name="DEM" checked="Qt::Checked" open="true">
-      <legendlayer name="3323d_2015_1001_GEF_DEM_PhotoscanTest" checked="Qt::Unchecked" open="true" drawingOrder="-1" showFeatureCount="0">
+      <legendlayer name="3323d_2015_1001_GEF_DEM_Photoscan_clip_hgt2" checked="Qt::Unchecked" open="true" drawingOrder="-1" showFeatureCount="0">
         <filegroup open="true" hidden="false">
-          <legendlayerfile isInOverview="0" visible="0" layerid="3323d_2015_1001_GEF_DEM_PhotoscanTest_4743fa2a_7a01_42f6_a2ad_4ab638e2fdcb"/>
+          <legendlayerfile isInOverview="0" visible="0" layerid="3323d_2015_1001_GEF_DEM_Photoscan_clip_hgt2_a36244ec_0fe7_47a2_957f_4dd8e9cea48c"/>
         </filegroup>
       </legendlayer>
-      <legendlayer name="3323d_2015_1001_GEF_DEM_Photoscan" checked="Qt::Unchecked" open="true" drawingOrder="-1" showFeatureCount="0">
+      <legendlayer name="3323d_2015_1001_GEF_DEM_Photoscan_clip" checked="Qt::Unchecked" open="true" drawingOrder="-1" showFeatureCount="0">
         <filegroup open="true" hidden="false">
-          <legendlayerfile isInOverview="0" visible="0" layerid="3323d_2015_1001_GEF_DEM_Photoscan_93464e7f_b9ac_4599_9de2_11d97bac05be"/>
+          <legendlayerfile isInOverview="0" visible="0" layerid="3323d_2015_1001_GEF_DEM_Photoscan_clip_3cf6f9ff_ae47_44f3_899d_fcbc34b48718"/>
         </filegroup>
       </legendlayer>
       <legendlayer name="3323d_2015_1001_GEF_DEM_SGM3_clip" checked="Qt::Unchecked" open="true" drawingOrder="-1" showFeatureCount="0">
@@ -1885,26 +1885,26 @@ def my_form_open(dialog, layer, feature):
     </maplayer>
     <maplayer refreshOnNotifyMessage="" maxScale="0" type="raster" hasScaleBasedVisibilityFlag="0" refreshOnNotifyEnabled="0" minScale="1e+8" autoRefreshTime="0" autoRefreshEnabled="0">
       <extent>
-        <xmin>83454.68959773470123764</xmin>
-        <ymin>-3718079.08154512010514736</ymin>
-        <xmax>92044.62909873470198363</xmax>
-        <ymax>-3710880.60627412004396319</ymax>
+        <xmin>86421.44424767349846661</xmin>
+        <ymin>-3716890.10855080001056194</ymin>
+        <xmax>93295.94424767349846661</xmax>
+        <ymax>-3713226.10855080001056194</ymax>
       </extent>
-      <id>3323d_2015_1001_GEF_DEM_PhotoscanTest_4743fa2a_7a01_42f6_a2ad_4ab638e2fdcb</id>
-      <datasource>V:/Data/NGI/GEF DEM/3323d_2015_1001_GEF_DEM_PhotoscanTest.tif</datasource>
+      <id>3323d_2015_1001_GEF_DEM_Photoscan_clip_3cf6f9ff_ae47_44f3_899d_fcbc34b48718</id>
+      <datasource>V:/Data/NGI/GEF DEM/3323d_2015_1001_GEF_DEM_Photoscan_clip.tif</datasource>
       <keywordList>
         <value></value>
       </keywordList>
-      <layername>3323d_2015_1001_GEF_DEM_PhotoscanTest</layername>
+      <layername>3323d_2015_1001_GEF_DEM_Photoscan_clip</layername>
       <srs>
         <spatialrefsys>
-          <proj4>+proj=tmerc +lat_0=0 +lon_0=23 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
-          <srsid>100036</srsid>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=23 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100027</srsid>
           <srid>0</srid>
-          <authid>USER:100036</authid>
-          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=23 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs)</description>
+          <authid>USER:100027</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=23 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
           <projectionacronym>tmerc</projectionacronym>
-          <ellipsoidacronym>WGS84</ellipsoidacronym>
+          <ellipsoidacronym></ellipsoidacronym>
           <geographicflag>false</geographicflag>
         </spatialrefsys>
       </srs>
@@ -1976,32 +1976,32 @@ def my_form_open(dialog, layer, feature):
         </rasterrenderer>
         <brightnesscontrast brightness="0" contrast="0"/>
         <huesaturation colorizeRed="255" colorizeOn="0" grayscaleMode="0" saturation="0" colorizeBlue="128" colorizeGreen="128" colorizeStrength="100"/>
-        <rasterresampler maxOversampling="2"/>
+        <rasterresampler maxOversampling="2" zoomedOutResampler="bilinear" zoomedInResampler="bilinear"/>
       </pipe>
       <blendMode>0</blendMode>
     </maplayer>
     <maplayer refreshOnNotifyMessage="" maxScale="0" type="raster" hasScaleBasedVisibilityFlag="0" refreshOnNotifyEnabled="0" minScale="1e+8" autoRefreshTime="0" autoRefreshEnabled="0">
       <extent>
-        <xmin>86189.44424767349846661</xmin>
-        <ymin>-3718255.45540079986676574</ymin>
-        <xmax>94901.2837376734969439</xmax>
-        <ymax>-3710751.10855080001056194</ymax>
+        <xmin>86421.44424767349846661</xmin>
+        <ymin>-3716890.10855080001056194</ymin>
+        <xmax>93295.94424767349846661</xmax>
+        <ymax>-3713226.10855080001056194</ymax>
       </extent>
-      <id>3323d_2015_1001_GEF_DEM_Photoscan_93464e7f_b9ac_4599_9de2_11d97bac05be</id>
-      <datasource>V:/Data/NGI/GEF DEM/3323d_2015_1001_GEF_DEM_Photoscan.tif</datasource>
+      <id>3323d_2015_1001_GEF_DEM_Photoscan_clip_hgt2_a36244ec_0fe7_47a2_957f_4dd8e9cea48c</id>
+      <datasource>V:/Data/NGI/GEF DEM/3323d_2015_1001_GEF_DEM_Photoscan_clip_hgt2.tif</datasource>
       <keywordList>
         <value></value>
       </keywordList>
-      <layername>3323d_2015_1001_GEF_DEM_Photoscan</layername>
+      <layername>3323d_2015_1001_GEF_DEM_Photoscan_clip_hgt2</layername>
       <srs>
         <spatialrefsys>
-          <proj4>+proj=tmerc +lat_0=0 +lon_0=23 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
-          <srsid>100036</srsid>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=23 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100027</srsid>
           <srid>0</srid>
-          <authid>USER:100036</authid>
-          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=23 +k=1 +x_0=0 +y_0=0 +ellps=WGS84 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs)</description>
+          <authid>USER:100027</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=23 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
           <projectionacronym>tmerc</projectionacronym>
-          <ellipsoidacronym>WGS84</ellipsoidacronym>
+          <ellipsoidacronym></ellipsoidacronym>
           <geographicflag>false</geographicflag>
         </spatialrefsys>
       </srs>
@@ -2073,7 +2073,7 @@ def my_form_open(dialog, layer, feature):
         </rasterrenderer>
         <brightnesscontrast brightness="0" contrast="0"/>
         <huesaturation colorizeRed="255" colorizeOn="0" grayscaleMode="0" saturation="0" colorizeBlue="128" colorizeGreen="128" colorizeStrength="100"/>
-        <rasterresampler maxOversampling="2"/>
+        <rasterresampler maxOversampling="1" zoomedOutResampler="bilinear" zoomedInResampler="bilinear"/>
       </pipe>
       <blendMode>0</blendMode>
     </maplayer>
@@ -28850,8 +28850,8 @@ def my_form_open(dialog, layer, feature):
     <layer id="3323d_2015_1001_GEF_DEM_SGM3_slope_e371cd49_4741_41c6_9300_966ab440c698"/>
     <layer id="GEF_ROI_a22bd0ec_fac2_42b6_b260_ced8c96dc487"/>
     <layer id="3323d_2015_1001_GEF_DEM_SGM3_clip_25fa0ca7_b22f_4591_b610_240a801b5897"/>
-    <layer id="3323d_2015_1001_GEF_DEM_Photoscan_93464e7f_b9ac_4599_9de2_11d97bac05be"/>
-    <layer id="3323d_2015_1001_GEF_DEM_PhotoscanTest_4743fa2a_7a01_42f6_a2ad_4ab638e2fdcb"/>
+    <layer id="3323d_2015_1001_GEF_DEM_Photoscan_clip_3cf6f9ff_ae47_44f3_899d_fcbc34b48718"/>
+    <layer id="3323d_2015_1001_GEF_DEM_Photoscan_clip_hgt2_a36244ec_0fe7_47a2_957f_4dd8e9cea48c"/>
   </layerorder>
   <properties>
     <WMSFees type="QString">conditions unknown</WMSFees>
