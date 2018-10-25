@@ -25,7 +25,7 @@ imageFile = r"D:\Data\Development\Projects\PhD GeoInformatics\Data\Digital Globe
 
 demFile = r"V:\Data\NGI\GEF DEM\3323d_2015_1001_GEF_DEM_SGM3.tif"
 slopeFile = r"V:\Data\NGI\GEF DEM\3323d_2015_1001_GEF_DEM_SGM3_slope.pix"
-heightFile = r"V:\Data\NGI\GEF DEM\3323d_2015_1001_GEF_DEM_Photoscan_clip_hgt2.tif"
+heightFile = r"V:\Data\NGI\GEF DEM\3323d_2015_1001_GEF_DEM_Photoscan_clip_hgt2_roughness.tif"
 # imageFile = r"D:\Data\Development\Projects\PhD GeoInformatics\Data\Digital Globe\058217622010_01\PCI Output\ATCOR\SRTM+AdjCorr\ATCORCorrected_o17OCT01084657_R1C12-058217622010_01_P001_14368043_PanSharpen.pix"
 samplingPlotGtFile = "C:/Data/Development/Projects/PhD GeoInformatics/Data/GEF Sampling/GEF Plot Polygons with Yc.shp"
 
@@ -517,12 +517,12 @@ if False:
 
     pylab.close('all')
     fig = pylab.figure()
-    ScatterD(hgt, yc/1000., class_labels=classes, labels=None, thumbnails=thumbnails, regress=True, xlabel='log(mean(height))', ylabel='AGB (t/ha)')
+    ScatterD(mean, yc/1000., class_labels=classes, labels=None, thumbnails=thumbnails, regress=True, xlabel='log(mean(height))', ylabel='AGB (t/ha)')
     pylab.grid()
 
     # try only severe/mod class - this area is easier to find ground because it is flatter and has less vegetation
     fig = pylab.figure()
-    subIdx = (classes == 'Severe') | (classes == 'Moderate')
+    subIdx = (classes == 'Pristine') | (classes == 'Moderate')
     ScatterD(mean[subIdx], yc[subIdx]/1000., class_labels=classes[subIdx], labels=None, thumbnails=thumbnails[subIdx], regress=True, xlabel='log(mean(height))', ylabel='AGB (t/ha)')
     pylab.grid()
 

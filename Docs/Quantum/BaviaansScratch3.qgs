@@ -282,6 +282,18 @@
       <layer-tree-layer providerKey="gdal" source="V:/Data/NGI/GEF DEM/3323d_2015_1001_GEF_DEM_Photoscan_clip_hgt2.tif" id="3323d_2015_1001_GEF_DEM_Photoscan_clip_hgt2_a36244ec_0fe7_47a2_957f_4dd8e9cea48c" name="3323d_2015_1001_GEF_DEM_Photoscan_clip_hgt2" checked="Qt::Unchecked" expanded="1">
         <customproperties/>
       </layer-tree-layer>
+      <layer-tree-layer providerKey="gdal" source="V:/Data/NGI/GEF DEM/3323d_2015_1001_GEF_DEM_Photoscan_clip_TRI.tif" id="3323d_2015_1001_GEF_DEM_Photoscan_clip_TRI_998eac5a_2309_43e8_be29_b80a69db7b6d" name="3323d_2015_1001_GEF_DEM_Photoscan_clip_TRI" checked="Qt::Unchecked" expanded="1">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer providerKey="gdal" source="V:/Data/NGI/GEF DEM/3323d_2015_1001_GEF_DEM_Photoscan_clip_TPI.tif" id="3323d_2015_1001_GEF_DEM_Photoscan_clip_TPI_6c6328bc_3855_4346_bf2b_6742bc3eada9" name="3323d_2015_1001_GEF_DEM_Photoscan_clip_TPI" checked="Qt::Unchecked" expanded="1">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer providerKey="gdal" source="V:/Data/NGI/GEF DEM/3323d_2015_1001_GEF_DEM_Photoscan_clip_roughness.tif" id="3323d_2015_1001_GEF_DEM_Photoscan_clip_roughness_84e45f13_ebff_456f_8704_e8be63153474" name="3323d_2015_1001_GEF_DEM_Photoscan_clip_roughness" checked="Qt::Checked" expanded="1">
+        <customproperties/>
+      </layer-tree-layer>
+      <layer-tree-layer providerKey="gdal" source="V:/Data/NGI/GEF DEM/3323d_2015_1001_GEF_DEM_Photoscan_clip_roughness.tif" id="3323d_2015_1001_GEF_DEM_Photoscan_clip_roughness_c341f34c_65e9_4cd6_896e_e6bed0f07c9d" name="Roughness" checked="Qt::Checked" expanded="1">
+        <customproperties/>
+      </layer-tree-layer>
       <layer-tree-layer providerKey="gdal" source="V:/Data/NGI/GEF DEM/3323d_2015_1001_GEF_DEM_Photoscan_clip.tif" id="3323d_2015_1001_GEF_DEM_Photoscan_clip_3cf6f9ff_ae47_44f3_899d_fcbc34b48718" name="3323d_2015_1001_GEF_DEM_Photoscan_clip" checked="Qt::Unchecked" expanded="1">
         <customproperties/>
       </layer-tree-layer>
@@ -648,6 +660,10 @@
       <item>3323d_2015_1001_GEF_DEM_SGM3_clip_25fa0ca7_b22f_4591_b610_240a801b5897</item>
       <item>3323d_2015_1001_GEF_DEM_Photoscan_clip_3cf6f9ff_ae47_44f3_899d_fcbc34b48718</item>
       <item>3323d_2015_1001_GEF_DEM_Photoscan_clip_hgt2_a36244ec_0fe7_47a2_957f_4dd8e9cea48c</item>
+      <item>3323d_2015_1001_GEF_DEM_Photoscan_clip_roughness_c341f34c_65e9_4cd6_896e_e6bed0f07c9d</item>
+      <item>3323d_2015_1001_GEF_DEM_Photoscan_clip_roughness_84e45f13_ebff_456f_8704_e8be63153474</item>
+      <item>3323d_2015_1001_GEF_DEM_Photoscan_clip_TPI_6c6328bc_3855_4346_bf2b_6742bc3eada9</item>
+      <item>3323d_2015_1001_GEF_DEM_Photoscan_clip_TRI_998eac5a_2309_43e8_be29_b80a69db7b6d</item>
     </custom-order>
   </layer-tree-group>
   <snapping-settings unit="2" tolerance="0" type="1" mode="1" intersection-snapping="0" enabled="0">
@@ -730,10 +746,10 @@
   <mapcanvas annotationsVisible="1" name="theMapCanvas">
     <units>meters</units>
     <extent>
-      <xmin>87977.32969993626466021</xmin>
-      <ymin>-3715416.55488649429753423</ymin>
-      <xmax>88073.285732949298108</xmax>
-      <ymax>-3715339.24811571137979627</ymax>
+      <xmin>87670.29847892241377849</xmin>
+      <ymin>-3715296.02513519348576665</ymin>
+      <xmax>88182.06398832543345634</xmax>
+      <ymax>-3714883.72235768521204591</ymax>
     </extent>
     <rotation>0</rotation>
     <destinationsrs>
@@ -1143,6 +1159,26 @@
       <legendlayer name="3323d_2015_1001_GEF_DEM_Photoscan_clip_hgt2" checked="Qt::Unchecked" open="true" drawingOrder="-1" showFeatureCount="0">
         <filegroup open="true" hidden="false">
           <legendlayerfile isInOverview="0" visible="0" layerid="3323d_2015_1001_GEF_DEM_Photoscan_clip_hgt2_a36244ec_0fe7_47a2_957f_4dd8e9cea48c"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer name="3323d_2015_1001_GEF_DEM_Photoscan_clip_TRI" checked="Qt::Unchecked" open="true" drawingOrder="-1" showFeatureCount="0">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" visible="0" layerid="3323d_2015_1001_GEF_DEM_Photoscan_clip_TRI_998eac5a_2309_43e8_be29_b80a69db7b6d"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer name="3323d_2015_1001_GEF_DEM_Photoscan_clip_TPI" checked="Qt::Unchecked" open="true" drawingOrder="-1" showFeatureCount="0">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" visible="0" layerid="3323d_2015_1001_GEF_DEM_Photoscan_clip_TPI_6c6328bc_3855_4346_bf2b_6742bc3eada9"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer name="3323d_2015_1001_GEF_DEM_Photoscan_clip_roughness" checked="Qt::Checked" open="true" drawingOrder="-1" showFeatureCount="0">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" visible="1" layerid="3323d_2015_1001_GEF_DEM_Photoscan_clip_roughness_84e45f13_ebff_456f_8704_e8be63153474"/>
+        </filegroup>
+      </legendlayer>
+      <legendlayer name="Roughness" checked="Qt::Checked" open="true" drawingOrder="-1" showFeatureCount="0">
+        <filegroup open="true" hidden="false">
+          <legendlayerfile isInOverview="0" visible="1" layerid="3323d_2015_1001_GEF_DEM_Photoscan_clip_roughness_c341f34c_65e9_4cd6_896e_e6bed0f07c9d"/>
         </filegroup>
       </legendlayer>
       <legendlayer name="3323d_2015_1001_GEF_DEM_Photoscan_clip" checked="Qt::Unchecked" open="true" drawingOrder="-1" showFeatureCount="0">
@@ -1987,6 +2023,170 @@ def my_form_open(dialog, layer, feature):
         <xmax>93295.94424767349846661</xmax>
         <ymax>-3713226.10855080001056194</ymax>
       </extent>
+      <id>3323d_2015_1001_GEF_DEM_Photoscan_clip_TPI_6c6328bc_3855_4346_bf2b_6742bc3eada9</id>
+      <datasource>V:/Data/NGI/GEF DEM/3323d_2015_1001_GEF_DEM_Photoscan_clip_TPI.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>3323d_2015_1001_GEF_DEM_Photoscan_clip_TPI</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=23 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100027</srsid>
+          <srid>0</srid>
+          <authid>USER:100027</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=23 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <links/>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+      </resourceMetadata>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="1"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer opacity="1" type="singlebandgray" grayBand="1" alphaBand="-1" gradient="BlackToWhite">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>MinMax</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <contrastEnhancement>
+            <minValue>-0.0279832035303116</minValue>
+            <maxValue>0.0186540279537439</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </contrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeRed="255" colorizeOn="0" grayscaleMode="0" saturation="0" colorizeBlue="128" colorizeGreen="128" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer refreshOnNotifyMessage="" maxScale="0" type="raster" hasScaleBasedVisibilityFlag="0" refreshOnNotifyEnabled="0" minScale="1e+8" autoRefreshTime="0" autoRefreshEnabled="0">
+      <extent>
+        <xmin>86421.44424767349846661</xmin>
+        <ymin>-3716890.10855080001056194</ymin>
+        <xmax>93295.94424767349846661</xmax>
+        <ymax>-3713226.10855080001056194</ymax>
+      </extent>
+      <id>3323d_2015_1001_GEF_DEM_Photoscan_clip_TRI_998eac5a_2309_43e8_be29_b80a69db7b6d</id>
+      <datasource>V:/Data/NGI/GEF DEM/3323d_2015_1001_GEF_DEM_Photoscan_clip_TRI.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>3323d_2015_1001_GEF_DEM_Photoscan_clip_TRI</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=23 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100027</srsid>
+          <srid>0</srid>
+          <authid>USER:100027</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=23 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <links/>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+      </resourceMetadata>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="1"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer opacity="1" type="singlebandgray" grayBand="1" alphaBand="-1" gradient="BlackToWhite">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>MinMax</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <contrastEnhancement>
+            <minValue>0.00577940745279193</minValue>
+            <maxValue>1.288359642028809</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </contrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeRed="255" colorizeOn="0" grayscaleMode="0" saturation="0" colorizeBlue="128" colorizeGreen="128" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer refreshOnNotifyMessage="" maxScale="0" type="raster" hasScaleBasedVisibilityFlag="0" refreshOnNotifyEnabled="0" minScale="1e+8" autoRefreshTime="0" autoRefreshEnabled="0">
+      <extent>
+        <xmin>86421.44424767349846661</xmin>
+        <ymin>-3716890.10855080001056194</ymin>
+        <xmax>93295.94424767349846661</xmax>
+        <ymax>-3713226.10855080001056194</ymax>
+      </extent>
       <id>3323d_2015_1001_GEF_DEM_Photoscan_clip_hgt2_a36244ec_0fe7_47a2_957f_4dd8e9cea48c</id>
       <datasource>V:/Data/NGI/GEF DEM/3323d_2015_1001_GEF_DEM_Photoscan_clip_hgt2.tif</datasource>
       <keywordList>
@@ -2074,6 +2274,170 @@ def my_form_open(dialog, layer, feature):
         <brightnesscontrast brightness="0" contrast="0"/>
         <huesaturation colorizeRed="255" colorizeOn="0" grayscaleMode="0" saturation="0" colorizeBlue="128" colorizeGreen="128" colorizeStrength="100"/>
         <rasterresampler maxOversampling="1" zoomedOutResampler="bilinear" zoomedInResampler="bilinear"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer refreshOnNotifyMessage="" maxScale="0" type="raster" hasScaleBasedVisibilityFlag="0" refreshOnNotifyEnabled="0" minScale="1e+8" autoRefreshTime="0" autoRefreshEnabled="0">
+      <extent>
+        <xmin>86421.44424767349846661</xmin>
+        <ymin>-3716890.10855080001056194</ymin>
+        <xmax>93295.94424767349846661</xmax>
+        <ymax>-3713226.10855080001056194</ymax>
+      </extent>
+      <id>3323d_2015_1001_GEF_DEM_Photoscan_clip_roughness_84e45f13_ebff_456f_8704_e8be63153474</id>
+      <datasource>V:/Data/NGI/GEF DEM/3323d_2015_1001_GEF_DEM_Photoscan_clip_roughness.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>3323d_2015_1001_GEF_DEM_Photoscan_clip_roughness</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=23 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100027</srsid>
+          <srid>0</srid>
+          <authid>USER:100027</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=23 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <links/>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+      </resourceMetadata>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="1"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer opacity="1" type="singlebandgray" grayBand="1" alphaBand="-1" gradient="BlackToWhite">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>MinMax</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <contrastEnhancement>
+            <minValue>0.0195527784526348</minValue>
+            <maxValue>4.2652907371521</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </contrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeRed="255" colorizeOn="0" grayscaleMode="0" saturation="0" colorizeBlue="128" colorizeGreen="128" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer refreshOnNotifyMessage="" maxScale="0" type="raster" hasScaleBasedVisibilityFlag="0" refreshOnNotifyEnabled="0" minScale="1e+8" autoRefreshTime="0" autoRefreshEnabled="0">
+      <extent>
+        <xmin>86421.44424767349846661</xmin>
+        <ymin>-3716890.10855080001056194</ymin>
+        <xmax>93295.94424767349846661</xmax>
+        <ymax>-3713226.10855080001056194</ymax>
+      </extent>
+      <id>3323d_2015_1001_GEF_DEM_Photoscan_clip_roughness_c341f34c_65e9_4cd6_896e_e6bed0f07c9d</id>
+      <datasource>V:/Data/NGI/GEF DEM/3323d_2015_1001_GEF_DEM_Photoscan_clip_roughness.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>Roughness</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=tmerc +lat_0=0 +lon_0=23 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs</proj4>
+          <srsid>100027</srsid>
+          <srid>0</srid>
+          <authid>USER:100027</authid>
+          <description> * Generated CRS (+proj=tmerc +lat_0=0 +lon_0=23 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs)</description>
+          <projectionacronym>tmerc</projectionacronym>
+          <ellipsoidacronym></ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <links/>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+      </resourceMetadata>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="1"/>
+      </noData>
+      <map-layer-style-manager current="default">
+        <map-layer-style name="default"/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer opacity="1" type="singlebandgray" grayBand="1" alphaBand="-1" gradient="BlackToWhite">
+          <rasterTransparency/>
+          <minMaxOrigin>
+            <limits>MinMax</limits>
+            <extent>WholeRaster</extent>
+            <statAccuracy>Estimated</statAccuracy>
+            <cumulativeCutLower>0.02</cumulativeCutLower>
+            <cumulativeCutUpper>0.98</cumulativeCutUpper>
+            <stdDevFactor>2</stdDevFactor>
+          </minMaxOrigin>
+          <contrastEnhancement>
+            <minValue>0.002685546875</minValue>
+            <maxValue>42.7723388671875</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </contrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeRed="255" colorizeOn="0" grayscaleMode="0" saturation="0" colorizeBlue="128" colorizeGreen="128" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
       </pipe>
       <blendMode>0</blendMode>
     </maplayer>
@@ -28852,6 +29216,10 @@ def my_form_open(dialog, layer, feature):
     <layer id="3323d_2015_1001_GEF_DEM_SGM3_clip_25fa0ca7_b22f_4591_b610_240a801b5897"/>
     <layer id="3323d_2015_1001_GEF_DEM_Photoscan_clip_3cf6f9ff_ae47_44f3_899d_fcbc34b48718"/>
     <layer id="3323d_2015_1001_GEF_DEM_Photoscan_clip_hgt2_a36244ec_0fe7_47a2_957f_4dd8e9cea48c"/>
+    <layer id="3323d_2015_1001_GEF_DEM_Photoscan_clip_roughness_c341f34c_65e9_4cd6_896e_e6bed0f07c9d"/>
+    <layer id="3323d_2015_1001_GEF_DEM_Photoscan_clip_roughness_84e45f13_ebff_456f_8704_e8be63153474"/>
+    <layer id="3323d_2015_1001_GEF_DEM_Photoscan_clip_TPI_6c6328bc_3855_4346_bf2b_6742bc3eada9"/>
+    <layer id="3323d_2015_1001_GEF_DEM_Photoscan_clip_TRI_998eac5a_2309_43e8_be29_b80a69db7b6d"/>
   </layerorder>
   <properties>
     <WMSFees type="QString">conditions unknown</WMSFees>
